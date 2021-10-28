@@ -367,7 +367,6 @@ class PE(ServiceBase):
                 if isinstance(v, Dict):
                     gen_res.add_subsection(generate_subsections(v, k))
                 elif isinstance(v, List):
-                    print(v)
                     for item_index, item in enumerate(v):
                         if isinstance(item, Dict):
                             gen_res.add_subsection(generate_subsections(item, f"{k} {item_index + 1}"))

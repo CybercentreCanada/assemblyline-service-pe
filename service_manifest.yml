@@ -2,7 +2,7 @@ name: PE
 version: $SERVICE_TAG
 description: >-
   This service extracts attributes (imports, exports, section names, ...)
-  from windows PE files using the python library pefile.
+  from windows PE files using the python library LIEF.
 
 accepts: executable/windows
 rejects: empty|metadata/.*
