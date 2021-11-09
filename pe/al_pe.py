@@ -1,8 +1,11 @@
 import datetime
+import hashlib
 import os
 from collections import defaultdict
+from io import BytesIO
 
 import lief
+from assemblyline.common.entropy import calculate_partition_entropy
 
 cert_verification_entries = {
     entry.__int__(): entry for entry, txt in lief.PE.x509.VERIFICATION_FLAGS.__entries.values()
@@ -120,11 +123,17 @@ class AL_PE:
         self.nx = binary.has_nx
         self.sections = []
         for section in binary.sections:
+            if section.size > len(section.content):
+                full_section_data = bytearray(section.content) + section.padding
+            else:
+                full_section_data = bytearray(section.content)
             section_dict = {
                 "name": section.name,
                 "characteristics_hash": section.characteristics,
                 "characteristics_list": [char.name for char in section.characteristics_lists],
-                "entropy": section.entropy,
+                "entropy": calculate_partition_entropy(BytesIO(full_section_data))[0],
+                "entropy_without_padding": section.entropy,
+                "md5": hashlib.md5(full_section_data).hexdigest(),
                 "offset": section.offset,
                 "size": section.size,
                 "sizeof_raw_data": section.sizeof_raw_data,

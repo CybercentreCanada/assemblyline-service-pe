@@ -2,14 +2,21 @@ import datetime
 import hashlib
 import json
 import os
+from io import BytesIO
 from typing import Dict, List
 
 import lief
 import ordlookup
 import ssdeep
+from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
-from assemblyline_v4_service.common.result import Heuristic, Result, ResultSection
+from assemblyline_v4_service.common.result import (
+    BODY_FORMAT,
+    Heuristic,
+    Result,
+    ResultSection,
+)
 
 import pe.al_pe
 
@@ -132,7 +139,9 @@ class PE(ServiceBase):
         if hasattr(self.pe, "resources"):
             recurse_resources(self.pe.resources)
 
-        if len(timestamps) > 1:
+        if len(timestamps) > 1 and max(timestamps) - min(timestamps) > self.config.get(
+            "allowed_timestamp_range", 86400
+        ):
             res = ResultSection("Different timestamps", heuristic=Heuristic(11))
             for timestamp in timestamps:
                 hr_timestamp = datetime.datetime.utcfromtimestamp(timestamp).strftime("%Y-%m-%d %H:%M:%S +00:00 (UTC)")
@@ -268,10 +277,29 @@ class PE(ServiceBase):
             sub_res.add_line(f"Entropy: {section['entropy']}")
             if section["entropy"] > 7.5:
                 sub_res.set_heuristic(4)
+            sub_res.add_line(f"Entropy without padding: {section['entropy_without_padding']}")
             sub_res.add_line(f"Offset: {section['offset']}")
             sub_res.add_line(f"Size: {section['size']}")
             sub_res.add_line(f"Virtual Size: {section['virtual_size']}")
             sub_res.add_line(f"Characteristics: {', '.join(section['characteristics_list'])}")
+            sub_res.add_line(f"MD5: {section['md5']}")
+            sub_res.add_tag("file.pe.sections.hash", section["md5"])
+
+            lief_section = self.lief_binary.get_section(section["name"])
+            if lief_section.size > len(lief_section.content):
+                full_section_data = bytearray(lief_section.content) + lief_section.padding
+            else:
+                full_section_data = bytearray(lief_section.content)
+
+            entropy_graph_data = {
+                "type": "colormap",
+                "data": {"domain": [0, 8], "values": calculate_partition_entropy(BytesIO(full_section_data))[1]},
+            }
+            sub_sub_res = ResultSection(
+                "Entropy graph", body_format=BODY_FORMAT.GRAPH_DATA, body=json.dumps(entropy_graph_data)
+            )
+            sub_res.add_subsection(sub_sub_res)
+
             res.add_subsection(sub_res)
         self.file_res.add_section(res)
 

@@ -20,6 +20,7 @@ licence_count: 0
 
 config:
   trusted_certs: ["/usr/share/ca-certificates/mozilla/"]
+  allowed_timestamp_range: 86400
 
 heuristics:
   - description: >-
@@ -99,7 +100,7 @@ heuristics:
     filetype: "executable/windows"
     heur_id: 11
     name: Multiple different non-zero timestamps
-    score: 500
+    score: 250
 
   - description: >-
        At least one resource was detected as an executable.
