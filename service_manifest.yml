@@ -109,6 +109,13 @@ heuristics:
     name: Executable in resources
     score: 800
 
+  - description: >-
+       This file contains heavily corrupted resources.
+    filetype: "executable/windows"
+    heur_id: 13
+    name: Corrupted resources
+    score: 200
+
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG

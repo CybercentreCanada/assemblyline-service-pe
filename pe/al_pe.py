@@ -11,6 +11,8 @@ cert_verification_entries = {
     entry.__int__(): entry for entry, txt in lief.PE.x509.VERIFICATION_FLAGS.__entries.values()
 }
 
+accelerator_flags_entries = {entry.__int__(): entry for entry, txt in lief.PE.ACCELERATOR_FLAGS.__entries.values()}
+
 
 def get_powers(x):
     if x == 0:
@@ -397,9 +399,15 @@ class AL_PE:
                 "sublangs_available": [lang.name for lang in binary.resources_manager.sublangs_available],
             }
             if binary.resources_manager.has_accelerator:
-                # TODO: Find a binary with accelerator, There is no doc for it?
-                print(binary.resources_manager.accelerator)
-                raise Exception("Found a binary with accelerator", self.name)
+                self.resources_manager["accelerator"] = [
+                    {
+                        "ansi": lief.PE.ACCELERATOR_VK_CODES(accelerator.ansi).name,
+                        "flags": " | ".join([accelerator_flags_entries[x].name for x in get_powers(accelerator.flags)]),
+                        "id": accelerator.id,
+                        "padding": accelerator.padding,
+                    }
+                    for accelerator in binary.resources_manager.accelerator
+                ]
             if binary.resources_manager.has_dialogs:
                 self.resources_manager["dialogs"] = [
                     {
@@ -443,20 +451,36 @@ class AL_PE:
                     for dialog in binary.resources_manager.dialogs
                 ]
             if binary.resources_manager.has_html:
-                self.resources_manager["html"] = binary.resources_manager.html
+                try:
+                    self.resources_manager["html"] = binary.resources_manager.html
+                except UnicodeDecodeError:
+                    # Find resource 0x17 (23)
+                    for resource in binary.resources.childs:
+                        if resource.id == 0x17:
+                            assert len(resource.childs) == 1
+                            sub_resource = resource.childs[0]
+                            while len(sub_resource.childs) != 0:
+                                assert len(sub_resource.childs) == 1
+                                sub_resource = sub_resource.childs[0]
+                            self.resources_manager["html"] = bytearray(sub_resource.content).decode(
+                                "utf-8", "backslashreplace"
+                            )
             if binary.resources_manager.has_icons:
-                self.resources_manager["icons"] = [
-                    {
-                        "id": icon.id,
-                        # "pixels": icon.pixels,
-                        "planes": icon.planes,
-                        "height": icon.height,
-                        "width": icon.width,
-                        "lang": icon.lang.name,
-                        "sublang": icon.sublang.name,
-                    }
-                    for icon in binary.resources_manager.icons
-                ]
+                try:
+                    self.resources_manager["icons"] = [
+                        {
+                            "id": icon.id,
+                            # "pixels": icon.pixels,
+                            "planes": icon.planes,
+                            "height": icon.height,
+                            "width": icon.width,
+                            "lang": icon.lang.name,
+                            "sublang": icon.sublang.name,
+                        }
+                        for icon in binary.resources_manager.icons
+                    ]
+                except lief.corrupted:
+                    pass
             if binary.resources_manager.has_manifest:
                 self.resources_manager["manifest"] = binary.resources_manager.manifest
             if binary.resources_manager.has_string_table:

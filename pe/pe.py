@@ -350,11 +350,9 @@ class PE(ServiceBase):
         res = ResultSection("Imports")
         for lib_name, entries in self.pe.imports.items():
             sub_res = ResultSection(f"{lib_name}")
-            for entry in entries:
-                if not entry["is_ordinal"]:
-                    sub_res.add_line(f"{entry['name']}")
-                else:
-                    sub_res.add_line(f"{entry['ordinal']}")
+            sub_res.add_line(
+                ", ".join([str(entry["ordinal"]) if entry["is_ordinal"] else str(entry["name"]) for entry in entries])
+            )
             res.add_subsection(sub_res)
         res.add_tag("file.pe.imports.sorted_sha1", self.calc_imphash_sha1())
         res.add_tag("file.pe.imports.md5", self.pe.imphash)
@@ -375,8 +373,6 @@ class PE(ServiceBase):
             for icon in self.pe.resources_manager["icons"]:
                 sub_res.add_line(f"ID: {icon['id']}, Lang: {icon['lang']}")
             res.add_subsection(sub_res)
-        if "html" in self.pe.resources_manager:
-            res.add_line(f"HTML: {self.pe.resources_manager['html']}")
         if "manifest" in self.pe.resources_manager:
             res.add_line(f"Manifest: {self.pe.resources_manager['manifest']}")
 
@@ -607,12 +603,16 @@ class PE(ServiceBase):
         self.check_exe_resources()
 
         if self.lief_binary.has_resources and self.lief_binary.resources_manager.has_icons:
-            for icon in self.lief_binary.resources_manager.icons:
-                temp_path = os.path.join(self.working_directory, f"icon_{icon.id}.ico")
-                icon.save(temp_path)
-                request.add_supplementary(
-                    temp_path, f"icon_{icon.id}.ico", f"Icon {icon.id} extracted from the PE file"
-                )
+            try:
+                for icon in self.lief_binary.resources_manager.icons:
+                    temp_path = os.path.join(self.working_directory, f"icon_{icon.id}.ico")
+                    icon.save(temp_path)
+                    request.add_supplementary(
+                        temp_path, f"icon_{icon.id}.ico", f"Icon {icon.id} extracted from the PE file"
+                    )
+            except lief.corrupted:
+                res = ResultSection("This file contains heavily corrupted resources.", heuristic=Heuristic(13))
+                self.file_res.add_section(res)
 
         temp_path = os.path.join(self.working_directory, "al_pe.json")
         with open(temp_path, "w") as myfile:
