@@ -285,20 +285,26 @@ class PE(ServiceBase):
             sub_res.add_line(f"MD5: {section['md5']}")
             sub_res.add_tag("file.pe.sections.hash", section["md5"])
 
-            lief_section = self.lief_binary.get_section(section["name"])
-            if lief_section.size > len(lief_section.content):
-                full_section_data = bytearray(lief_section.content) + lief_section.padding
-            else:
-                full_section_data = bytearray(lief_section.content)
+            try:
+                lief_section = self.lief_binary.get_section(section["name"])
+                if lief_section.size > len(lief_section.content):
+                    full_section_data = bytearray(lief_section.content) + lief_section.padding
+                else:
+                    full_section_data = bytearray(lief_section.content)
 
-            entropy_graph_data = {
-                "type": "colormap",
-                "data": {"domain": [0, 8], "values": calculate_partition_entropy(BytesIO(full_section_data))[1]},
-            }
-            sub_sub_res = ResultSection(
-                "Entropy graph", body_format=BODY_FORMAT.GRAPH_DATA, body=json.dumps(entropy_graph_data)
-            )
-            sub_res.add_subsection(sub_sub_res)
+                entropy_graph_data = {
+                    "type": "colormap",
+                    "data": {"domain": [0, 8], "values": calculate_partition_entropy(BytesIO(full_section_data))[1]},
+                }
+                sub_sub_res = ResultSection(
+                    "Entropy graph", body_format=BODY_FORMAT.GRAPH_DATA, body=json.dumps(entropy_graph_data)
+                )
+                sub_res.add_subsection(sub_sub_res)
+            except lief.not_found:
+                sub_sub_res = ResultSection(
+                    "Section could not be retrieved using the section's name.", heuristic=Heuristic(14)
+                )
+                sub_res.add_subsection(sub_sub_res)
 
             res.add_subsection(sub_res)
         self.file_res.add_section(res)

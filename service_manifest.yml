@@ -116,6 +116,13 @@ heuristics:
     name: Corrupted resources
     score: 200
 
+  - description: >-
+       Section could not be retrieved using the section's name.
+    filetype: "executable/windows"
+    heur_id: 14
+    name: Irretrievable section
+    score: 400
+
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG

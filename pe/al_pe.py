@@ -142,8 +142,11 @@ class AL_PE:
                 "virtual_address": section.virtual_address,
                 "virtual_size": section.virtual_size,
             }
-            if hasattr(section, "fullname"):
-                section_dict["fullname"] = section.fullname
+            try:
+                if hasattr(section, "fullname"):
+                    section_dict["fullname"] = section.fullname
+            except UnicodeDecodeError:
+                pass
 
             self.sections.append(section_dict)
 
@@ -629,8 +632,7 @@ class AL_PE:
         self.overlay = bytearray(binary.overlay).hex()
         self.size_of_headers = binary.sizeof_headers
         self.virtual_size = binary.virtual_size
-        if len(binary.symbols) > 0:
-            self.symbols = [symbol.name for symbol in binary.symbols]
+        # Ignore binary.symbols
 
     def get_node_data(self, node):
         data = {}
