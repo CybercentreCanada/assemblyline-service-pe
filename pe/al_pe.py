@@ -402,15 +402,20 @@ class AL_PE:
                 "sublangs_available": [lang.name for lang in binary.resources_manager.sublangs_available],
             }
             if binary.resources_manager.has_accelerator:
-                self.resources_manager["accelerator"] = [
-                    {
-                        "ansi": lief.PE.ACCELERATOR_VK_CODES(accelerator.ansi).name,
-                        "flags": " | ".join([accelerator_flags_entries[x].name for x in get_powers(accelerator.flags)]),
-                        "id": accelerator.id,
-                        "padding": accelerator.padding,
-                    }
-                    for accelerator in binary.resources_manager.accelerator
-                ]
+                try:
+                    self.resources_manager["accelerator"] = [
+                        {
+                            "ansi": lief.PE.ACCELERATOR_VK_CODES(accelerator.ansi).name,
+                            "flags": " | ".join(
+                                [accelerator_flags_entries[x].name for x in get_powers(accelerator.flags)]
+                            ),
+                            "id": accelerator.id,
+                            "padding": accelerator.padding,
+                        }
+                        for accelerator in binary.resources_manager.accelerator
+                    ]
+                except KeyError:
+                    pass
             if binary.resources_manager.has_dialogs:
                 self.resources_manager["dialogs"] = [
                     {
@@ -485,7 +490,10 @@ class AL_PE:
                 except lief.corrupted:
                     pass
             if binary.resources_manager.has_manifest:
-                self.resources_manager["manifest"] = binary.resources_manager.manifest
+                try:
+                    self.resources_manager["manifest"] = binary.resources_manager.manifest
+                except lief.not_found:
+                    pass
             if binary.resources_manager.has_string_table:
                 self.resources_manager["string_table"] = []
                 for string_table in binary.resources_manager.string_table:
@@ -495,46 +503,51 @@ class AL_PE:
                         self.resources_manager["string_table"].append("AL_PE: UnicodeDecodeError")
                         pass
             if binary.resources_manager.has_version:
-                version = binary.resources_manager.version
-                self.resources_manager["version"] = {"type": version.type}
-                if version.has_fixed_file_info:
-                    self.resources_manager["version"]["fixed_file_info"] = {
-                        "file_date_LS": version.fixed_file_info.file_date_LS,
-                        "file_date_MS": version.fixed_file_info.file_date_MS,
-                        "file_flags": version.fixed_file_info.file_flags,
-                        "file_flags_mask": version.fixed_file_info.file_flags_mask,
-                        "file_os": version.fixed_file_info.file_os.name,
-                        "file_subtype": version.fixed_file_info.file_subtype.name,
-                        "file_type": version.fixed_file_info.file_type.name,
-                        "file_version_LS": version.fixed_file_info.file_version_LS,
-                        "file_version_MS": version.fixed_file_info.file_version_MS,
-                        "product_version_LS": version.fixed_file_info.product_version_LS,
-                        "product_version_MS": version.fixed_file_info.product_version_MS,
-                        "signature": version.fixed_file_info.signature,
-                        "struct_version": version.fixed_file_info.struct_version,
-                    }
-                if version.has_string_file_info:
-                    self.resources_manager["version"]["string_file_info"] = {
-                        "key": version.string_file_info.key,
-                        "type": version.string_file_info.type,
-                        "langcode_items": [
-                            {
-                                "key": langcodeitem.key,
-                                "type": langcodeitem.type,
-                                "lang": langcodeitem.lang.name,
-                                "sublang": langcodeitem.sublang.name,
-                                "code_page": langcodeitem.code_page.name,
-                                "items": {k: v.decode() for k, v in langcodeitem.items.items()},
-                            }
-                            for langcodeitem in version.string_file_info.langcode_items
-                        ],
-                    }
-                if version.has_var_file_info:
-                    self.resources_manager["version"]["var_file_info"] = {
-                        "key": version.var_file_info.key,
-                        "type": version.var_file_info.type,
-                        "translations": version.var_file_info.translations,
-                    }
+                try:
+                    version = binary.resources_manager.version
+                    self.resources_manager["version"] = {"type": version.type}
+                    if version.has_fixed_file_info:
+                        self.resources_manager["version"]["fixed_file_info"] = {
+                            "file_date_LS": version.fixed_file_info.file_date_LS,
+                            "file_date_MS": version.fixed_file_info.file_date_MS,
+                            "file_flags": version.fixed_file_info.file_flags,
+                            "file_flags_mask": version.fixed_file_info.file_flags_mask,
+                            "file_os": version.fixed_file_info.file_os.name,
+                            "file_subtype": version.fixed_file_info.file_subtype.name,
+                            "file_type": version.fixed_file_info.file_type.name,
+                            "file_version_LS": version.fixed_file_info.file_version_LS,
+                            "file_version_MS": version.fixed_file_info.file_version_MS,
+                            "product_version_LS": version.fixed_file_info.product_version_LS,
+                            "product_version_MS": version.fixed_file_info.product_version_MS,
+                            "signature": version.fixed_file_info.signature,
+                            "struct_version": version.fixed_file_info.struct_version,
+                        }
+                    if version.has_string_file_info:
+                        self.resources_manager["version"]["string_file_info"] = {
+                            "key": version.string_file_info.key,
+                            "type": version.string_file_info.type,
+                            "langcode_items": [
+                                {
+                                    "key": langcodeitem.key,
+                                    "type": langcodeitem.type,
+                                    "lang": langcodeitem.lang.name,
+                                    "sublang": langcodeitem.sublang.name,
+                                    "code_page": langcodeitem.code_page.name,
+                                    "items": {k: v.decode() for k, v in langcodeitem.items.items()},
+                                }
+                                for langcodeitem in version.string_file_info.langcode_items
+                            ],
+                        }
+                    if version.has_var_file_info:
+                        self.resources_manager["version"]["var_file_info"] = {
+                            "key": version.var_file_info.key,
+                            "type": version.var_file_info.type,
+                            "translations": version.var_file_info.translations,
+                        }
+                except lief.not_found:
+                    pass
+                except lief.read_out_of_bound:
+                    pass
 
             self.resources = self.get_node_data(binary.resources)
 

@@ -123,6 +123,13 @@ heuristics:
     name: Irretrievable section
     score: 400
 
+  - description: >-
+       Some resources directories does not contain any data.
+    filetype: "executable/windows"
+    heur_id: 15
+    name: Dataless resources
+    score: 200
+
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG

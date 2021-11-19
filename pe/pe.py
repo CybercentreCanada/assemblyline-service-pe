@@ -171,6 +171,25 @@ class PE(ServiceBase):
         if self.temp_res is not None:
             self.file_res.add_section(self.temp_res)
 
+    def check_dataless_resources(self):
+        dataless_resources = []
+
+        def recurse_resources(resource, parent_name):
+            if resource["is_directory"]:
+                if "childs" in resource:
+                    for child in resource["childs"]:
+                        recurse_resources(child, f"{parent_name}{resource['id']} -> ")
+                else:
+                    dataless_resources.append(f"{parent_name}{resource['id']}")
+
+        if hasattr(self.pe, "resources"):
+            recurse_resources(self.pe.resources, "")
+
+        if len(dataless_resources) > 0:
+            res = ResultSection("Resource directories that does not contain a leaf data node", heuristic=Heuristic(15))
+            res.add_lines(dataless_resources)
+            self.file_res.add_section(res)
+
     def calc_imphash_sha1(self):
         if not hasattr(self.pe, "imports"):
             return ""
@@ -597,6 +616,10 @@ class PE(ServiceBase):
             extract_relocations=request.deep_scan,
         )
 
+        self.check_timestamps()
+        self.check_exe_resources()
+        self.check_dataless_resources()
+
         self.add_headers()
         self.add_sections()
         self.add_debug()
@@ -605,17 +628,12 @@ class PE(ServiceBase):
         self.add_resources()
         self.add_signatures()
 
-        self.check_timestamps()
-        self.check_exe_resources()
-
         if self.lief_binary.has_resources and self.lief_binary.resources_manager.has_icons:
             try:
-                for icon in self.lief_binary.resources_manager.icons:
-                    temp_path = os.path.join(self.working_directory, f"icon_{icon.id}.ico")
+                for idx, icon in enumerate(self.lief_binary.resources_manager.icons):
+                    temp_path = os.path.join(self.working_directory, f"icon_{idx}.ico")
                     icon.save(temp_path)
-                    request.add_supplementary(
-                        temp_path, f"icon_{icon.id}.ico", f"Icon {icon.id} extracted from the PE file"
-                    )
+                    request.add_supplementary(temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file")
             except lief.corrupted:
                 res = ResultSection("This file contains heavily corrupted resources.", heuristic=Heuristic(13))
                 self.file_res.add_section(res)
