@@ -168,12 +168,16 @@ class AL_PE:
                     "type": debug.type.name,
                 }
                 if debug.has_code_view:
-                    debug_dict["code_view"] = {
+                    cv_dict = {
                         "age": debug.code_view.age,
                         "cv_signature": debug.code_view.cv_signature.name,
-                        "filename": debug.code_view.filename,
                         "signature": debug.code_view.signature,
                     }
+                    try:
+                        cv_dict["filename"] = debug.code_view.filename
+                    except UnicodeDecodeError:
+                        pass
+                    debug_dict["code_view"] = cv_dict
                 if debug.has_pogo:
                     debug_dict["pogo"] = {
                         "entries": [
@@ -402,20 +406,23 @@ class AL_PE:
                 "sublangs_available": [lang.name for lang in binary.resources_manager.sublangs_available],
             }
             if binary.resources_manager.has_accelerator:
-                try:
-                    self.resources_manager["accelerator"] = [
-                        {
-                            "ansi": lief.PE.ACCELERATOR_VK_CODES(accelerator.ansi).name,
-                            "flags": " | ".join(
-                                [accelerator_flags_entries[x].name for x in get_powers(accelerator.flags)]
-                            ),
-                            "id": accelerator.id,
-                            "padding": accelerator.padding,
-                        }
-                        for accelerator in binary.resources_manager.accelerator
-                    ]
-                except KeyError:
-                    pass
+                self.resources_manager["accelerator"] = []
+                for accelerator in binary.resources_manager.accelerator:
+                    accelerator_dict = {
+                        "id": accelerator.id,
+                        "padding": accelerator.padding,
+                    }
+                    try:
+                        accelerator_dict["ansi"] = lief.PE.ACCELERATOR_VK_CODES(accelerator.ansi).name
+                    except TypeError:
+                        pass
+                    try:
+                        accelerator_dict["flags"] = " | ".join(
+                            [accelerator_flags_entries[x].name for x in get_powers(accelerator.flags)]
+                        )
+                    except KeyError:
+                        pass
+                    self.resources_manager["accelerator"].append(accelerator_dict)
             if binary.resources_manager.has_dialogs:
                 self.resources_manager["dialogs"] = [
                     {

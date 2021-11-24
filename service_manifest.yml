@@ -130,6 +130,13 @@ heuristics:
     name: Dataless resources
     score: 200
 
+  - description: >-
+       Unreadable PDB filename.
+    filetype: "executable/windows"
+    heur_id: 16
+    name: Corrupted PDB filename
+    score: 400
+
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG

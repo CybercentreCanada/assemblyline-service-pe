@@ -341,8 +341,17 @@ class PE(ServiceBase):
             sub_res.add_line(f"Version: {debug['major_version']}.{debug['minor_version']}")
             if "code_view" in debug:
                 sub_res.add_line(f"CV_Signature: {debug['code_view']['cv_signature']}")
-                sub_res.add_line(f"Filename: {debug['code_view']['filename']}")
-                sub_res.add_tag("file.pe.pdb_filename", debug["code_view"]["filename"])
+                if "filename" in debug["code_view"]:
+                    sub_res.add_line(f"Filename: {debug['code_view']['filename']}")
+                    sub_res.add_tag("file.pe.pdb_filename", debug["code_view"]["filename"])
+                else:
+                    # No filename specified, test the binary to make sure it's corrupted.
+                    try:
+                        for binary_debug in self.lief_binary.debug:
+                            if binary_debug.has_code_view:
+                                binary_debug.code_view.filename
+                    except UnicodeDecodeError:
+                        sub_res.set_heuristic(16)
             if "pogo" in debug:
                 sub_sub_res = ResultSection(f"POGO - {debug['pogo']['signature']}")
                 for entry in debug["pogo"]["entries"]:
