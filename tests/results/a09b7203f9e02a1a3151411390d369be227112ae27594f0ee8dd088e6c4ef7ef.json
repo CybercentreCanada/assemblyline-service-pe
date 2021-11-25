@@ -1,0 +1,480 @@
+{
+    "classification": "TLP:W",
+    "response": {
+        "milestones": {
+            "service_started": "2021-11-25T18:39:14.299905Z",
+            "service_completed": "2021-11-25T18:39:14.800117Z"
+        },
+        "service_version": "$SERVICE_TAG",
+        "service_name": "pe",
+        "service_tool_version": null,
+        "supplementary": [
+            {
+                "name": "al_pe.json",
+                "sha256": "287c3f239d0cb8941c77ef94f6cb7387bc2c02f86fb77ddcca8dfb835a88cb08",
+                "description": "Features extracted from the PE file, as a JSON file",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpc0areih2/al_pe.json",
+                "is_section_image": false
+            }
+        ],
+        "extracted": [],
+        "service_context": null,
+        "service_debug_info": null
+    },
+    "result": {
+        "score": 0,
+        "sections": [
+            {
+                "body": "Timestamp: 708992537 (1992-06-19 22:22:17 +00:00 (UTC))\nEntrypoint: 0x7f1a8\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 2.25\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nOverlay size: 0",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "linker": {
+                                "timestamp": [
+                                    708992537,
+                                    "1992-06-19 22:22:17 +00:00 (UTC)"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Headers",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "SHA_512: 9db128683fb3525414d21b2abb1caaacc27cac400e8bc66ac14c1c609e91ffa0decc3f11d7af18e3b8ec35f95fd6937e8b70580ebd695f05a7f5a7fc35b693d7\nSHA_384: 6f1ef212a530822f5a5a1802eb77a23b522b58090a33aba4b25a9a3a1480f468c7cb3b076ac08eb77d0455d33b2a54c4\nSHA_256: d5a49abe234f5271252d940c21c37f2cac4a2f7eee2dda8d39b58a7ca7311d7c\nSHA_1: 00f2a72925a8b9da97fe0953f27d8e52216ebbaf\nMD5: b319d4c9798b21db9d5eab06f3b60277",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Authentihash",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Sections",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 6.86983040777606\nEntropy without padding: 6.869948826338041\nOffset: 1024\nSize: 516608\nVirtual Size: 516592\nCharacteristics: CNT_CODE, MEM_EXECUTE, MEM_READ\nMD5: 10d6782d45c1289c0a2b67adc0beae92",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    "CODE"
+                                ],
+                                "hash": [
+                                    "10d6782d45c1289c0a2b67adc0beae92"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - CODE",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.631352210426923, 6.652873145102447, 5.77771292667904, 6.53522331397571, 6.35871774334744, 6.510888477603656, 5.917648269896159, 6.399885250749977, 6.513335532977421, 6.3568420541996815, 6.45429607849724, 6.312244066806353, 6.3828705623385025, 6.563762622113177, 6.460054466923303, 6.349529971810036, 6.3429310510310755, 6.194835822086632, 6.33956998765135, 6.547445447357042, 6.480374641704552, 6.199406155670638, 6.521675633681541, 6.461129177464183, 6.3475315880021, 6.449047504021903, 6.334971332825293, 6.369463738253364, 6.430604078352105, 6.410032649965114, 7.2132420030766475, 6.669806024406198, 6.304717852076425, 6.3790420471280855, 6.432949266907057, 6.506022631272444, 7.027735497837921, 6.488507612637804, 6.508469655801506, 6.520880305917994, 6.538904013805634, 6.490901920084664, 6.820840161098985, 6.694938463517394, 6.652745300169809, 6.362882014208732, 6.265465880768435, 6.724591385743834, 5.833310109333001, 6.099473409773692]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 3.987931546951559\nEntropy without padding: 4.144368175004596\nOffset: 517632\nSize: 4096\nVirtual Size: 3892\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\nMD5: d146c2e24408dc1119c35b0012c581d5",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    "DATA"
+                                ],
+                                "hash": [
+                                    "d146c2e24408dc1119c35b0012c581d5"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - DATA",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.9277249572331616, 3.8688624066897335, 0.7647217570521725, 3.0881339561557235, 3.380111119869565, 2.3653949469045896, 2.1439079482889283, 1.8787277703930816, 1.6985320034250784, 1.2106760677512947, 1.1256062728052316, 1.7405786004630888, 3.0735163485403194, 1.8703548956647404, 2.5510648358421597, 1.9845554812439918, 2.9590397442840155, 3.4259222022183864, 3.302088924950751, 3.2103276713894164, 3.273844053222446, 2.8734469716231863, 2.424466963283695, 2.4897485609723167, 2.7702186349761475, 3.3314429482420165, 3.7590091592194295, 3.2290947555065, 2.239173006343925, 2.3151492972536873, 1.2302375304475368, 0.6471320465850867, 1.5813412659319463, 1.5586523094433653, 1.4702972789819442, 2.4579429027895774, 2.703954430937232, 3.877106433948473, 4.059043932483265, 3.965325077077451, 4.081050551323672, 3.8577457621909876, 4.053579897637416, 4.062835947736479, 3.976540742181646, 3.8555119108058777, 4.09376494263403, 2.129239191940611, -0.0, -0.0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 0.0\nEntropy without padding: -0.0\nOffset: 521728\nSize: 0\nVirtual Size: 3293\nCharacteristics: MEM_READ, MEM_WRITE\nMD5: d41d8cd98f00b204e9800998ecf8427e",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    "BSS"
+                                ],
+                                "hash": [
+                                    "d41d8cd98f00b204e9800998ecf8427e"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - BSS",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 4.99208450646307\nEntropy without padding: 5.0320255412594355\nOffset: 521728\nSize: 8192\nVirtual Size: 8082\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\nMD5: fe74748854cf2640e160733088a6b176",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".idata"
+                                ],
+                                "hash": [
+                                    "fe74748854cf2640e160733088a6b176"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .idata",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.9103419607425622, 2.690403761534695, 3.3932304131917794, 3.5053812290441697, 3.606334805263871, 3.620099728267687, 3.6329844633217867, 3.702616080142066, 3.6382861276116736, 3.603232182320047, 4.238549559165281, 4.036333631673163, 4.376455167889721, 4.150593486285395, 4.032104889002947, 4.480061333535598, 4.304698657260187, 4.363538899346453, 4.057236876323813, 4.0697966026804195, 4.114401361874898, 4.265635206334763, 4.236824601278686, 4.194671763513364, 4.180262729275032, 4.066212110695422, 4.094367148305801, 4.186767589694482, 3.9387735572144225, 4.2943283908051555, 4.436316650777999, 4.110891009625702, 4.093136071979699, 4.11058415927187, 4.3718685761396365, 4.321721117787043, 4.130174652469316, 4.194835409494368, 3.8781940423974475, 4.228512339038753, 4.140918663703125, 4.2561945016694525, 4.186548794233247, 4.294142734211155, 4.496805588402215, 4.23827592259502, 4.249812848274316, 4.2156748183349295, 4.281227127163506, 1.7541141690039286]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 0.0\nEntropy without padding: -0.0\nOffset: 529920\nSize: 0\nVirtual Size: 132\nCharacteristics: MEM_READ, MEM_WRITE\nMD5: d41d8cd98f00b204e9800998ecf8427e",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".tls"
+                                ],
+                                "hash": [
+                                    "d41d8cd98f00b204e9800998ecf8427e"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .tls",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 0.2044881574398449\nEntropy without padding: 2.1638909867280645\nOffset: 529920\nSize: 512\nVirtual Size: 24\nCharacteristics: CNT_INITIALIZED_DATA, MEM_SHARED, MEM_READ\nMD5: efc1f56f70ac8f0c2cf995bd61003fe6",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".rdata"
+                                ],
+                                "hash": [
+                                    "efc1f56f70ac8f0c2cf995bd61003fe6"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .rdata",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.413088436425758, 1.2776134368191157, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 6.6464664972615966\nEntropy without padding: 6.662152045274033\nOffset: 530432\nSize: 21504\nVirtual Size: 21348\nCharacteristics: CNT_INITIALIZED_DATA, MEM_SHARED, MEM_READ\nMD5: 8afcefc757bfaf26f20c3db3ad5e0ce9",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".reloc"
+                                ],
+                                "hash": [
+                                    "8afcefc757bfaf26f20c3db3ad5e0ce9"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .reloc",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.089007085842599, 6.123543821214754, 5.499332166516808, 5.515436839812702, 5.398954234191269, 5.805682973577275, 6.338969440026241, 5.653786423187894, 6.050462041345639, 6.157318891162292, 5.753963196522913, 5.465197146174958, 5.2058119716067, 5.34485767460033, 6.233728855002223, 6.4185090468303025, 6.269798944272921, 6.143466527493688, 5.837905307132489, 5.5895035356657425, 6.331289930669317, 6.172934424616662, 6.334491155499059, 6.132648973055937, 6.168968989525475, 5.246903000796407, 5.874882691632514, 5.266321584093984, 5.335583979262242, 6.214452019549025, 6.189157423168018, 6.169754525340289, 6.268701459828549, 5.570783750075557, 5.9935180598635265, 5.739297995611557, 6.294004922651766, 6.215988727705555, 5.887136829342262, 5.668447962930739, 6.219456682674375, 5.715092976332925, 6.273849348711907, 6.304967314372845, 6.293942846414993, 5.121878752019912, 4.064645500192007, 5.063206657722566, 5.176993287294122, 3.5864845692225846]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 3.869559012209591\nEntropy without padding: 3.869559012209591\nOffset: 551936\nSize: 12800\nVirtual Size: 12800\nCharacteristics: CNT_INITIALIZED_DATA, MEM_SHARED, MEM_READ\nMD5: 51513398137668c0afa916b8c581c2a1",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".rsrc"
+                                ],
+                                "hash": [
+                                    "51513398137668c0afa916b8c581c2a1"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .rsrc",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.1928566496249515, 2.77124425995025, 1.8999245548333616, 1.8111027741738484, 2.3491808810200023, 2.0884973819811505, 2.5101608870692425, 2.4403564396537387, 2.9514436357527045, 3.255790837887655, 2.395182277500114, 2.5151301737683642, 2.7214044847894274, 2.1153275981953987, 3.7372990428769626, 2.877123544688507, 3.4464741068340654, 2.7932849977401837, 3.102236896657174, 3.17834554335375, 3.1836658746778457, 2.960422796279718, 3.231535675878314, 3.0654850246545697, 3.100959692723255, 2.9258919911509085, 3.195308257456542, 3.1754937373181167, 3.0898205331183894, 2.886434666995809, 3.270231063859178, 3.1700944085922385, 3.133707542135114, 3.0000579354489694, 2.685267340694172, 3.082860868156652, 3.2382815946377543, 3.035618103604283, 3.1902301352982203, 3.262701747439782, 3.174457731493506, 2.9647454267300524, 3.2360200156845065, 3.1341358087835975, 5.074935257286152, 5.409332799950799, 5.247570101998916, 2.92803021281496, 3.2463210458439438, 2.801691890046253]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "imports": {
+                                "sorted_sha1": [
+                                    "d2cb38c0873ea4774a57830404624896fb34e293"
+                                ],
+                                "md5": [
+                                    "bb0649334fd2c61aae341df37882178a"
+                                ],
+                                "fuzzy": [
+                                    "96:8cfpdYo3O5cFX4pNw8Rr0+YR4ebuu2D9SUvK9LVsQ1GqE6T39webOQ88N:t3Z03rQjbuuS9SUvK9RsQoqE6+ebOQ8O"
+                                ],
+                                "sorted_fuzzy": [
+                                    "96:6CMf+ffkUZ8V11ekp8cAoBwXNE+NeQObFwM4pWtju2M23kxUvVfbut5T:1MPUZ8A9HeQObFwjWNu2r3kxUvVjut5T"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Imports",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "DeleteCriticalSection, LeaveCriticalSection, EnterCriticalSection, InitializeCriticalSection, VirtualFree, VirtualAlloc, LocalFree, LocalAlloc, GetCurrentThreadId, InterlockedDecrement, InterlockedIncrement, VirtualQuery, WideCharToMultiByte, MultiByteToWideChar, lstrlenA, lstrcpynA, LoadLibraryExA, GetThreadLocale, GetStartupInfoA, GetProcAddress, GetModuleHandleA, GetModuleFileNameA, GetLocaleInfoA, GetLastError, GetCommandLineA, FreeLibrary, FindFirstFileA, FindClose, ExitProcess, WriteFile, UnhandledExceptionFilter, SetFilePointer, SetEndOfFile, RtlUnwind, ReadFile, RaiseException, GetStdHandle, GetFileSize, GetFileType, CreateFileA, CloseHandle, TlsSetValue, TlsGetValue, LocalAlloc, GetModuleHandleA, lstrcpyA, WriteFile, WaitForSingleObject, VirtualQuery, VirtualAlloc, Sleep, SizeofResource, SetThreadLocale, SetFilePointer, SetEvent, SetErrorMode, SetEndOfFile, SetConsoleMode, ResetEvent, ReadFile, MulDiv, MapViewOfFileEx, LockResource, LoadResource, LoadLibraryA, LeaveCriticalSection, InitializeCriticalSection, GlobalUnlock, GlobalReAlloc, GlobalHandle, GlobalLock, GlobalFree, GlobalFindAtomA, GlobalDeleteAtom, GlobalAlloc, GlobalAddAtomA, GetVersionExA, GetVersion, GetTickCount, GetThreadLocale, GetTapePosition, GetSystemInfo, GetStringTypeExA, GetStdHandle, GetProcAddress, GetModuleHandleA, GetModuleFileNameA, GetLocaleInfoA, GetLastError, GetDiskFreeSpaceA, GetCurrentThreadId, GetCurrentProcessId, GetCPInfo, GetACP, FreeResource, FreeLibrary, FreeEnvironmentStringsA, FormatMessageA, FindResourceA, EnumCalendarInfoA, EnterCriticalSection, DeleteCriticalSection, CreateThread, CreateFileA, CreateEventA, CompareStringA, CloseHandle, Sleep",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "kernel32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "GetKeyboardType, LoadStringA, MessageBoxA, CharNextA, WindowFromPoint, WinHelpA, WaitMessage, UpdateWindow, UnregisterClassA, UnhookWindowsHookEx, TranslateMessage, TranslateMDISysAccel, TrackPopupMenu, SystemParametersInfoA, ShowWindow, ShowScrollBar, ShowOwnedPopups, ShowCursor, SetWindowsHookExA, SetWindowPos, SetWindowPlacement, SetWindowLongA, SetTimer, SetScrollRange, SetScrollPos, SetScrollInfo, SetRect, SetPropA, SetMenuItemInfoA, SetMenu, SetForegroundWindow, SetFocus, SetCursor, SetClassLongA, SetCapture, SetActiveWindow, SendMessageA, ScrollWindow, ScreenToClient, RemovePropA, RemoveMenu, ReleaseDC, ReleaseCapture, RegisterWindowMessageA, RegisterClipboardFormatA, RegisterClassA, RedrawWindow, PtInRect, PostQuitMessage, PostMessageA, PeekMessageA, OffsetRect, OemToCharA, MessageBoxA, MapWindowPoints, MapVirtualKeyExW, MapVirtualKeyA, LoadStringA, LoadKeyboardLayoutA, LoadIconA, LoadCursorA, LoadBitmapA, KillTimer, IsZoomed, IsWindowVisible, IsWindowEnabled, IsWindow, IsRectEmpty, IsIconic, IsDialogMessageA, IsChild, InvalidateRect, IntersectRect, InsertMenuItemA, InsertMenuA, InflateRect, GetWindowThreadProcessId, GetWindowTextA, GetWindowRect, GetWindowPlacement, GetWindowLongA, GetWindowDC, GetTopWindow, GetSystemMetrics, GetSystemMenu, GetSysColor, GetSubMenu, GetScrollRange, GetScrollPos, GetScrollInfo, GetPropA, GetParent, GetWindow, GetMenuStringA, GetMenuState, GetMenuItemInfoA, GetMenuItemID, GetMenuItemCount, GetMenu, GetLastActivePopup, GetKeyboardState, GetKeyboardLayoutList, GetKeyboardLayout, GetKeyState, GetKeyNameTextA, GetIconInfo, GetForegroundWindow, GetFocus, GetDesktopWindow, GetDCEx, GetDC, GetCursorPos, GetCursor, GetClientRect, GetClassNameA, GetClassInfoA, GetCapture, GetActiveWindow, FrameRect, FindWindowA, FillRect, EqualRect, EnumWindows, EnumThreadWindows, EndPaint, EnableWindow, EnableScrollBar, EnableMenuItem, DrawTextA, DrawMenuBar, DrawIconEx, DrawIcon, DrawFrameControl, DrawEdge, DispatchMessageA, DestroyWindow, DestroyMenu, DestroyIcon, DestroyCursor, DeleteMenu, DefWindowProcA, DefMDIChildProcA, DefFrameProcA, CreateWindowExA, CreatePopupMenu, CreateMenu, CreateIcon, ClientToScreen, CheckMenuItem, CallWindowProcA, CallNextHookEx, BeginPaint, CharNextA, CharLowerA, CharUpperA, AdjustWindowRectEx, ActivateKeyboardLayout",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "user32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "RegQueryValueExA, RegOpenKeyExA, RegCloseKey, RegQueryValueExA, RegOpenKeyExA, RegCloseKey",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "advapi32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "SysFreeString, SysReAllocStringLen, SysAllocStringLen, SafeArrayPtrOfIndex, SafeArrayPutElement, SafeArrayGetElement, SafeArrayGetUBound, SafeArrayGetLBound, SafeArrayRedim, SafeArrayCreate, VariantChangeTypeEx, VariantCopyInd, VariantCopy, VariantClear, VariantInit",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "oleaut32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "UnrealizeObject, StretchBlt, SetWindowOrgEx, SetViewportOrgEx, SetTextColor, SetStretchBltMode, SetROP2, SetPixel, SetDIBColorTable, SetBrushOrgEx, SetBkMode, SetBkColor, SelectPalette, SelectObject, SaveDC, RestoreDC, RectVisible, RealizePalette, PatBlt, MoveToEx, MaskBlt, LineTo, IntersectClipRect, GetWindowOrgEx, GetTextMetricsA, GetTextExtentPoint32A, GetSystemPaletteEntries, GetStockObject, GetPixel, GetPaletteEntries, GetObjectA, GetDeviceCaps, GetDIBits, GetDIBColorTable, GetDCOrgEx, GetCurrentPositionEx, GetClipBox, GetBrushOrgEx, GetBitmapBits, ExcludeClipRect, DeleteObject, DeleteDC, CreateSolidBrush, CreatePenIndirect, CreatePalette, CreateHalftonePalette, CreateFontIndirectA, CreateDIBitmap, CreateDIBSection, CreateCompatibleDC, CreateCompatibleBitmap, CreateBrushIndirect, CreateBitmap, BitBlt",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "gdi32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "ImageList_SetIconSize, ImageList_GetIconSize, ImageList_Write, ImageList_Read, ImageList_GetDragImage, ImageList_DragShowNolock, ImageList_SetDragCursorImage, ImageList_DragMove, ImageList_DragLeave, ImageList_DragEnter, ImageList_EndDrag, ImageList_BeginDrag, ImageList_Remove, ImageList_DrawEx, ImageList_Draw, ImageList_GetBkColor, ImageList_SetBkColor, ImageList_ReplaceIcon, ImageList_Add, ImageList_GetImageCount, ImageList_Destroy, ImageList_Create",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "comctl32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Languages available: NEUTRAL, ENGLISH\nSublanguages available: ENGLISH_US, DEFAULT",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "resources": {
+                                "language": [
+                                    "NEUTRAL",
+                                    "ENGLISH"
+                                ],
+                                "name": [
+                                    "DVCLAL",
+                                    "PACKAGEINFO",
+                                    "TFAKOK"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Resources",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            }
+        ]
+    },
+    "sha256": "a09b7203f9e02a1a3151411390d369be227112ae27594f0ee8dd088e6c4ef7ef",
+    "drop_file": false,
+    "temp_submission_data": {}
+}
