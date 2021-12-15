@@ -55,8 +55,8 @@ stages:
             displayName: Build containers
           - script: |
               [ ! -d "$(pwd)/tests" ] && echo "No tests found" && exit
-              [ -f "$(pwd)/tests/requirements.txt" ] && docker run -v $(pwd)/tests/:/opt/al_service/tests/ cccs/${BUILD_REPOSITORY_NAME##*/}:latest bash -c 'pip install -U -r tests/requirements.txt; pytest -p no:cacheprovider' && exit
-              docker run -v $(pwd)/tests/:/opt/al_service/tests/ cccs/${BUILD_REPOSITORY_NAME##*/}:latest bash -c 'pytest -p no:cacheprovider'
+              [ -f "$(pwd)/tests/requirements.txt" ] && docker run -e FULL_SELF_LOCATION=/opt/al_service -e FULL_SAMPLES_LOCATION=/opt/samples -v $(pwd)/tests/:/opt/al_service/tests/ -v ${FULL_SAMPLES_LOCATION}:/opt/samples cccs/${BUILD_REPOSITORY_NAME##*/}:latest bash -c 'pip install -U -r tests/requirements.txt; pytest -p no:cacheprovider' && exit
+              docker run -e FULL_SELF_LOCATION=/opt/al_service -e FULL_SAMPLES_LOCATION=/opt/samples -v $(pwd)/tests/:/opt/al_service/tests/ -v ${FULL_SAMPLES_LOCATION}:/opt/samples cccs/${BUILD_REPOSITORY_NAME##*/}:latest bash -c 'pytest -p no:cacheprovider'
             workingDirectory: $(full_self_location)
             displayName: Test containers
           - script: docker push cccs/${BUILD_REPOSITORY_NAME##*/} --all-tags
