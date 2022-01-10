@@ -2,8 +2,8 @@ import datetime
 import hashlib
 import json
 import os
+from collections import defaultdict
 from io import BytesIO
-from typing import Dict, List
 
 import lief
 import ordlookup
@@ -17,8 +17,6 @@ from assemblyline_v4_service.common.result import (
     Result,
     ResultSection,
 )
-
-import pe.al_pe
 
 MZ = [ord(x) for x in "MZ"]
 DOS_MODE = [ord(x) for x in "This program cannot be run in DOS mode"]
@@ -36,6 +34,11 @@ ACCEPTED_ALGORITHMS = [
     "SHA_384_ECDSA",
     "SHA_512_ECDSA",
 ]
+cert_verification_entries = {
+    entry.__int__(): entry for entry, txt in lief.PE.x509.VERIFICATION_FLAGS.__entries.values()
+}
+
+accelerator_flags_entries = {entry.__int__(): entry for entry, txt in lief.PE.ACCELERATOR_FLAGS.__entries.values()}
 
 
 def search_list_in_list(what, into):
@@ -50,18 +53,19 @@ def search_list_in_list(what, into):
         return False
 
 
-def from_msdos(msdos):
+def from_msdos(msdos_t):
     """
     taken from https://0xc0decafe.com/malware-analyst-guide-to-pe-timestamps/ which was
     taken from https://github.com/digitalsleuth/time_decode
     """
-    msdos = hex(msdos)[2:]
+    msdos = hex(msdos_t)[2:]
     binary = "{0:032b}".format(int(msdos, 16))
     stamp = [binary[:7], binary[7:11], binary[11:16], binary[16:21], binary[21:27], binary[27:32]]
     for val in stamp[:]:
         dec = int(val, 2)
         stamp.remove(val)
         stamp.append(dec)
+
     dos_year = stamp[0] + 1980
     dos_month = stamp[1]
     dos_day = stamp[2]
@@ -69,15 +73,99 @@ def from_msdos(msdos):
     dos_min = stamp[4]
     dos_sec = stamp[5] * 2
     if (
-        (dos_year in range(1970, 2100))
-        or not (dos_month in range(1, 13))
-        or not (dos_day in range(1, 32))
-        or not (dos_hour in range(0, 24))
-        or not (dos_min in range(0, 60))
-        or not (dos_sec in range(0, 60))
+        dos_year in range(1970, 2100)
+        and dos_month in range(1, 13)
+        and dos_day in range(1, 32)
+        and dos_hour in range(0, 24)
+        and dos_min in range(0, 60)
+        and dos_sec in range(0, 60)
     ):
-        return int(datetime.datetime(dos_year, dos_month, dos_day, dos_hour, dos_min, dos_sec).timestamp())
-    return msdos  # Not a valid MS DOS timestamp
+        try:
+            return int(datetime.datetime(dos_year, dos_month, dos_day, dos_hour, dos_min, dos_sec).timestamp())
+        except ValueError:
+            pass
+    return msdos_t  # Not a valid MS DOS timestamp
+
+
+def get_powers(x):
+    if x == 0:
+        return [0]
+    powers = []
+    i = 1
+    while i <= x:
+        if i & x:
+            powers.append(i)
+        i <<= 1
+    return powers
+
+
+def extract_cert_info(cert, trusted_certs):
+    cert_struct = {
+        "version": cert.version,
+        "subject": cert.subject,
+        "issuer": cert.issuer,
+        "serial_number": cert.serial_number.hex(),
+        "key_type": cert.key_type.name,
+        "key_usage": [usage.name for usage in cert.key_usage],
+        "certificate_policies": cert.certificate_policies,
+        "ext_key_usage": cert.ext_key_usage,
+        "valid_from": cert.valid_from,
+        "valid_to": cert.valid_to,
+        "signature": cert.signature.hex(),
+        "signature_algorithm": cert.signature_algorithm,
+        "is_trusted": " | ".join(
+            [cert_verification_entries[x].name for x in get_powers(cert.is_trusted_by(trusted_certs).__int__())]
+        ),
+        "raw_hex": cert.raw.hex(),
+    }
+    if cert.rsa_info is not None:
+        cert_struct["rsa_info"] = {
+            "D": cert.rsa_info.D.hex(),
+            "E": cert.rsa_info.E.hex(),
+            "N": cert.rsa_info.N.hex(),
+            "P": cert.rsa_info.P.hex(),
+            "Q": cert.rsa_info.Q.hex(),
+        }
+        cert_struct["key_size"] = cert.rsa_info.key_size
+    return cert_struct
+
+
+def calc_imphash_sha1(imports):
+    sorted_import_list = []
+    for lib_name, entries in imports.items():
+        for entry in entries:
+            if entry["name"] == "":
+                import_name = ordlookup.ordLookup(str.encode(lib_name), entry["ordinal"], make_name=False)
+                sorted_import_list.append(str(entry["ordinal"]) if import_name is None else import_name.decode())
+            else:
+                sorted_import_list.append(entry["name"])
+
+    sorted_import_list.sort()
+    sorted_import_list = [str.encode(x) for x in sorted_import_list]
+    return hashlib.sha1(b" ".join(sorted_import_list)).hexdigest()
+
+
+def calc_impfuzzy(imports, sort=False):
+    impstrs = []
+    exts = ["ocx", "sys", "dll"]
+    for lib_name, entries in imports.items():
+        modified_lib_name = lib_name.lower()
+        parts = modified_lib_name.rsplit(".", 1)
+        if len(parts) > 1 and parts[1] in exts:
+            modified_lib_name = parts[0]
+
+        for entry in entries:
+            if entry["name"] == "":
+                import_name = ordlookup.ordLookup(str.encode(lib_name), entry["ordinal"], make_name=True)
+                impstrs.append(f"{modified_lib_name}.{import_name.decode().lower()}")
+            else:
+                impstrs.append(f"{modified_lib_name}.{entry['name'].lower()}")
+
+    if sort:
+        impstrs.sort()
+
+    apilist = ",".join(impstrs)
+    return ssdeep.hash(apilist)
 
 
 class PE(ServiceBase):
@@ -107,37 +195,37 @@ class PE(ServiceBase):
         """
         timestamps = set()
         delphi = False
-        if self.pe.header["timestamp"] == 708992537:  # Likely a delphi binary
+        if self.binary.header.time_date_stamps == 708992537:  # Likely a delphi binary
             delphi = True
-        elif self.pe.header["timestamp"] != 0:
-            timestamps.add(self.pe.header["timestamp"])
+        elif self.binary.header.time_date_stamps != 0:
+            timestamps.add(self.binary.header.time_date_stamps)
 
-        if hasattr(self.pe, "load_configuration") and self.pe.load_configuration["timedatestamp"] != 0:
-            timestamps.add(self.pe.load_configuration["timedatestamp"])
+        if self.binary.has_configuration and self.binary.load_configuration.timedatestamp != 0:
+            timestamps.add(self.binary.load_configuration.timedatestamp)
 
-        if hasattr(self.pe, "export") and self.pe.export["timestamp"] != 0:
-            timestamps.add(self.pe.export["timestamp"])
+        if self.binary.has_exports and self.binary.get_export().timestamp != 0:
+            timestamps.add(self.binary.get_export().timestamp)
 
-        if hasattr(self.pe, "debug"):
-            for debug in self.pe.debug:
-                if debug["timestamp"] != 0:
-                    timestamps.add(debug["timestamp"])
+        if self.binary.has_debug:
+            for debug in self.binary.debug:
+                if debug.timestamp != 0:
+                    timestamps.add(debug.timestamp)
                 # Will never trigger, but taken from https://0xc0decafe.com/malware-analyst-guide-to-pe-timestamps/
-                if "code_view" in debug and debug["code_view"]["cv_signature"] == "01BN":
-                    timestamps.add(self.pe.debug["code_view"]["signature"])
+                if debug.has_code_view and debug.code_view.cv_signature.name == "01BN":
+                    timestamps.add(debug.code_view.signature)
 
-        def recurse_resources(resource):
-            if "time_date_stamp" in resource and resource["time_date_stamp"] != 0:
-                if delphi:
-                    timestamps.add(from_msdos(resource["time_date_stamp"]))
-                else:
-                    timestamps.add(resource["time_date_stamp"])
-            if "childs" in resource:
-                for child in resource["childs"]:
+        def recurse_resources(node):
+            if isinstance(node, lief.PE.ResourceDirectory):
+                if node.time_date_stamp != 0:
+                    if delphi:
+                        timestamps.add(from_msdos(node.time_date_stamp))
+                    else:
+                        timestamps.add(node.time_date_stamp)
+                for child in node.childs:
                     recurse_resources(child)
 
-        if hasattr(self.pe, "resources"):
-            recurse_resources(self.pe.resources)
+        if self.binary.has_resources:
+            recurse_resources(self.binary.resources)
 
         if len(timestamps) > 1 and max(timestamps) - min(timestamps) > self.config.get(
             "allowed_timestamp_range", 86400
@@ -166,159 +254,265 @@ class PE(ServiceBase):
 
     def check_exe_resources(self):
         self.temp_res = None
-        if self.lief_binary.has_resources:
-            self.recurse_resources(self.lief_binary.resources, "")
+        if self.binary.has_resources:
+            self.recurse_resources(self.binary.resources, "")
         if self.temp_res is not None:
             self.file_res.add_section(self.temp_res)
 
     def check_dataless_resources(self):
         dataless_resources = []
 
-        def recurse_resources(resource, parent_name):
-            if resource["is_directory"]:
-                if "childs" in resource:
-                    for child in resource["childs"]:
-                        recurse_resources(child, f"{parent_name}{resource['id']} -> ")
+        def recurse_resources(node, parent_name):
+            if node.is_directory:
+                if len(node.childs) > 0:
+                    for child in node.childs:
+                        recurse_resources(child, f"{parent_name}{node.id} -> ")
                 else:
-                    dataless_resources.append(f"{parent_name}{resource['id']}")
+                    dataless_resources.append(f"{parent_name}{node.id}")
 
-        if hasattr(self.pe, "resources"):
-            recurse_resources(self.pe.resources, "")
+        if self.binary.has_resources:
+            recurse_resources(self.binary.resources, "")
 
         if len(dataless_resources) > 0:
             res = ResultSection("Resource directories that does not contain a leaf data node", heuristic=Heuristic(15))
             res.add_lines(dataless_resources)
             self.file_res.add_section(res)
 
-    def calc_imphash_sha1(self):
-        if not hasattr(self.pe, "imports"):
-            return ""
-
-        sorted_import_list = []
-        for lib_name, entries in self.pe.imports.items():
-            for entry in entries:
-                if entry["name"] == "":
-                    import_name = ordlookup.ordLookup(str.encode(lib_name), entry["ordinal"], make_name=False)
-                    sorted_import_list.append(str(entry["ordinal"]) if import_name is None else import_name.decode())
-                else:
-                    sorted_import_list.append(entry["name"])
-
-        sorted_import_list.sort()
-        sorted_import_list = [str.encode(x) for x in sorted_import_list]
-        return hashlib.sha1(b" ".join(sorted_import_list)).hexdigest()
-
-    def calc_impfuzzy(self, sort=False):
-        if not hasattr(self.pe, "imports"):
-            return ""
-
-        impstrs = []
-        exts = ["ocx", "sys", "dll"]
-        for lib_name, entries in self.pe.imports.items():
-            modified_lib_name = lib_name.lower()
-            parts = modified_lib_name.rsplit(".", 1)
-            if len(parts) > 1 and parts[1] in exts:
-                modified_lib_name = parts[0]
-
-            for entry in entries:
-                if entry["name"] == "":
-                    import_name = ordlookup.ordLookup(str.encode(lib_name), entry["ordinal"], make_name=True)
-                    impstrs.append(f"{modified_lib_name}.{import_name.decode().lower()}")
-                else:
-                    impstrs.append(f"{modified_lib_name}.{entry['name'].lower()}")
-
-        if sort:
-            impstrs.sort()
-
-        apilist = ",".join(impstrs)
-        return ssdeep.hash(apilist)
-
     def add_headers(self):
-        res = ResultSection("Headers")
-        res.add_line(f"Timestamp: {self.pe.header['timestamp']} ({self.pe.header['hr_timestamp']})")
-        res.add_tag("file.pe.linker.timestamp", self.pe.header["timestamp"])
-        res.add_tag("file.pe.linker.timestamp", self.pe.header["hr_timestamp"])
-        res.add_line(f"Entrypoint: {hex(self.pe.entrypoint)}")
-        res.add_line(f"Machine: {self.pe.header['machine']}")
-        res.add_line(f"Magic: {self.pe.optional_header['magic']}")
-        res.add_line(
-            (
-                f"Image version: {self.pe.optional_header['major_image_version']}."
-                f"{self.pe.optional_header['minor_image_version']}"
-            )
+        self.features["name"] = self.binary.name
+        self.features["format"] = self.binary.format.name
+        self.features["imphash"] = lief.PE.get_imphash(self.binary, mode=lief.PE.IMPHASH_MODE.PEFILE)
+        # Somehow, that is different from binary.entrypoint
+        self.features["entrypoint"] = self.binary.optional_header.addressof_entrypoint
+        hr_timestamp = datetime.datetime.utcfromtimestamp(self.binary.header.time_date_stamps).strftime(
+            "%Y-%m-%d %H:%M:%S +00:00 (UTC)"
         )
-        res.add_line(
-            (
-                f"Linker version: {self.pe.optional_header['major_linker_version']}."
-                f"{self.pe.optional_header['minor_linker_version']}"
-            )
-        )
-        res.add_line(
-            (
-                f"Operating System version: {self.pe.optional_header['major_operating_system_version']}."
-                f"{self.pe.optional_header['minor_operating_system_version']}"
-            )
-        )
-        res.add_line(
-            (
-                f"Subsystem version: {self.pe.optional_header['major_subsystem_version']}."
-                f"{self.pe.optional_header['minor_subsystem_version']}"
-            )
-        )
-        res.add_line(f"Subsystem: {self.pe.optional_header['subsystem']}")
-        res.add_line(f"NX: {self.pe.nx}")
-        if hasattr(self.pe, "rich_header"):
-            sub_res = ResultSection(f"Rich Headers - Key: {self.pe.rich_header['key']}")
-            for entry in self.pe.rich_header["entries"]:
-                sub_res.add_line(f"build_id: {entry['build_id']}, count: {entry['count']}, id: {entry['id']}")
-            res.add_subsection(sub_res)
-        sub_res = ResultSection("Authentihash")
-        for h, v in self.pe.authentihash.items():
-            sub_res.add_line(f"{h}: {v}")
-        res.add_subsection(sub_res)
-        res.add_line(f"Position Independent: {self.pe.position_independent}")
+        self.features["header"] = {
+            "characteristics_hash": self.binary.header.characteristics.__int__(),
+            "characteristics_list": [char.name for char in self.binary.header.characteristics_list],
+            "machine": self.binary.header.machine.name,
+            "numberof_sections": self.binary.header.numberof_sections,
+            "numberof_symbols": self.binary.header.numberof_symbols,
+            "signature": self.binary.header.signature,
+            "timestamp": self.binary.header.time_date_stamps,
+            "hr_timestamp": hr_timestamp,
+        }
+        self.features["optional_header"] = {
+            "addressof_entrypoint": self.binary.optional_header.addressof_entrypoint,
+            "baseof_code": self.binary.optional_header.baseof_code,
+            "checksum": self.binary.optional_header.checksum,
+            "dll_characteristics": self.binary.optional_header.dll_characteristics,
+            "dll_characteristics_lists": [char.name for char in self.binary.optional_header.dll_characteristics_lists],
+            "file_alignment": self.binary.optional_header.file_alignment,
+            "imagebase": self.binary.optional_header.imagebase,
+            "loader_flags": self.binary.optional_header.loader_flags,
+            "magic": self.binary.optional_header.magic.name,
+            "major_image_version": self.binary.optional_header.major_image_version,
+            "major_linker_version": self.binary.optional_header.major_linker_version,
+            "major_operating_system_version": self.binary.optional_header.major_operating_system_version,
+            "major_subsystem_version": self.binary.optional_header.major_subsystem_version,
+            "minor_image_version": self.binary.optional_header.minor_image_version,
+            "minor_linker_version": self.binary.optional_header.minor_linker_version,
+            "minor_operating_system_version": self.binary.optional_header.minor_operating_system_version,
+            "minor_subsystem_version": self.binary.optional_header.minor_subsystem_version,
+            "numberof_rva_and_size": self.binary.optional_header.numberof_rva_and_size,
+            "section_alignment": self.binary.optional_header.section_alignment,
+            "sizeof_code": self.binary.optional_header.sizeof_code,
+            "sizeof_headers": self.binary.optional_header.sizeof_headers,
+            "sizeof_heap_commit": self.binary.optional_header.sizeof_heap_commit,
+            "sizeof_heap_reserve": self.binary.optional_header.sizeof_heap_reserve,
+            "sizeof_image": self.binary.optional_header.sizeof_image,
+            "sizeof_initialized_data": self.binary.optional_header.sizeof_initialized_data,
+            "sizeof_stack_commit": self.binary.optional_header.sizeof_stack_commit,
+            "sizeof_stack_reserve": self.binary.optional_header.sizeof_stack_reserve,
+            "sizeof_uninitialized_data": self.binary.optional_header.sizeof_uninitialized_data,
+            "subsystem": self.binary.optional_header.subsystem.name,
+            "win32_version_value": self.binary.optional_header.win32_version_value,
+        }
+        if self.binary.optional_header.magic == lief.PE.PE_TYPE.PE32:
+            self.features["optional_header"]["baseof_data"] = self.binary.optional_header.baseof_data
+        self.features["dos_header"] = {
+            "addressof_new_exeheader": self.binary.dos_header.addressof_new_exeheader,
+            "addressof_relocation_table": self.binary.dos_header.addressof_relocation_table,
+            "checksum": self.binary.dos_header.checksum,
+            "file_size_in_pages": self.binary.dos_header.file_size_in_pages,
+            "header_size_in_paragraphs": self.binary.dos_header.header_size_in_paragraphs,
+            "initial_ip": self.binary.dos_header.initial_ip,
+            "initial_relative_cs": self.binary.dos_header.initial_relative_cs,
+            "initial_relative_ss": self.binary.dos_header.initial_relative_ss,
+            "initial_sp": self.binary.dos_header.initial_sp,
+            "magic": self.binary.dos_header.magic,
+            "maximum_extra_paragraphs": self.binary.dos_header.maximum_extra_paragraphs,
+            "minimum_extra_paragraphs": self.binary.dos_header.minimum_extra_paragraphs,
+            "numberof_relocation": self.binary.dos_header.numberof_relocation,
+            "oem_id": self.binary.dos_header.oem_id,
+            "oem_info": self.binary.dos_header.oem_info,
+            "overlay_number": self.binary.dos_header.overlay_number,
+            "used_bytes_in_the_last_page": self.binary.dos_header.used_bytes_in_the_last_page,
+        }
 
-        overlay = bytes.fromhex(self.pe.overlay)
-        res.add_line(f"Overlay size: {len(overlay)}")
-        if len(overlay) > 0:
+        if self.binary.has_rich_header:
+            self.features["rich_header"] = {
+                "entries": [
+                    {
+                        "build_id": entry.build_id,
+                        "count": entry.count,
+                        "id": entry.id,
+                    }
+                    for entry in self.binary.rich_header.entries
+                ],
+                "key": self.binary.rich_header.key,
+            }
+        if self.binary.has_exceptions:
+            # TODO: What is this has_exceptions supposed to be linked to?
+            # A lot of executables seems to have this flag set to True
+            pass
+
+        # TODO: Do we want to show them all?
+        # print(self.binary.exception_functions)
+        # print(self.binary.functions)
+        # print(self.binary.imported_functions)
+        # print(self.binary.exported_functions)
+
+        self.features["nx"] = self.binary.has_nx
+
+        self.features["authentihash"] = {}
+
+        if self.binary.has_tls:
+            if self.binary.tls.has_section:
+                self.features["tls"] = {"associated section": self.binary.tls.section.name}
+            elif self.binary.tls.has_data_directory:
+                if self.binary.tls.directory.has_section:
+                    self.features["tls"] = {"associated section": self.binary.tls.directory.section.name}
+
+        # print(self.binary.imagebase) # Doesn't work as documented?
+        self.features["position_independent"] = self.binary.is_pie
+        self.features["is_reproducible_build"] = self.binary.is_reproducible_build
+        # self.features["overlay"] = bytearray(self.binary.overlay).hex()
+        self.features["overlay"] = {"size": len(self.binary.overlay)}
+        self.features["size_of_headers"] = self.binary.sizeof_headers
+        self.features["virtual_size"] = self.binary.virtual_size
+        # Ignore self.binary.symbols
+
+        res = ResultSection("Headers")
+        res.add_line(f"Timestamp: {self.binary.header.time_date_stamps} ({hr_timestamp})")
+        res.add_tag("file.pe.linker.timestamp", self.binary.header.time_date_stamps)
+        res.add_tag("file.pe.linker.timestamp", hr_timestamp)
+        # Somehow, that is different from binary.entrypoint
+        res.add_line(f"Entrypoint: {hex(self.binary.optional_header.addressof_entrypoint)}")
+        res.add_line(f"Machine: {self.binary.header.machine.name}")
+        res.add_line(f"Magic: {self.binary.optional_header.magic.name}")
+        res.add_line(
+            (
+                f"Image version: {self.binary.optional_header.major_image_version}."
+                f"{self.binary.optional_header.minor_image_version}"
+            )
+        )
+        res.add_line(
+            (
+                f"Linker version: {self.binary.optional_header.major_linker_version}."
+                f"{self.binary.optional_header.minor_linker_version}"
+            )
+        )
+        res.add_line(
+            (
+                f"Operating System version: {self.binary.optional_header.major_operating_system_version}."
+                f"{self.binary.optional_header.minor_operating_system_version}"
+            )
+        )
+        res.add_line(
+            (
+                f"Subsystem version: {self.binary.optional_header.major_subsystem_version}."
+                f"{self.binary.optional_header.minor_subsystem_version}"
+            )
+        )
+        res.add_line(f"Subsystem: {self.binary.optional_header.subsystem.name}")
+        res.add_line(f"NX: {self.binary.has_nx}")
+        if self.binary.has_rich_header:
+            sub_res = ResultSection(f"Rich Headers - Key: {self.binary.rich_header.key}")
+            for entry in self.binary.rich_header.entries:
+                sub_res.add_line(f"build_id: {entry.build_id}, count: {entry.count}, id: {entry.id}")
+            res.add_subsection(sub_res)
+
+        sub_res = ResultSection("Authentihash")
+        for i in range(1, 6):
+            try:
+                authentihash = lief.PE.ALGORITHMS(i)
+                authentihash_value = self.binary.authentihash(lief.PE.ALGORITHMS(i)).hex()
+                self.features["authentihash"][authentihash.name] = authentihash_value
+                sub_res.add_line(f"{authentihash.name}: {authentihash_value}")
+            except lief.bad_format:
+                if sub_res.heuristic is None:
+                    sub_res.set_heuristic(17)
+
+        res.add_subsection(sub_res)
+        res.add_line(f"Position Independent: {self.binary.is_pie}")
+
+        res.add_line(f"Overlay size: {self.features['overlay']['size']}")
+        if self.features["overlay"]["size"] > 0:
             file_name = "overlay"
             temp_path = os.path.join(self.working_directory, file_name)
             with open(temp_path, "wb") as myfile:
-                myfile.write(overlay)
+                myfile.write(bytearray(self.binary.overlay))
             self.request.add_extracted(temp_path, file_name, f"{file_name} extracted from binary's resources")
 
         self.file_res.add_section(res)
 
     def add_sections(self):
         res = ResultSection("Sections")
-        for section in self.pe.sections:
-            sub_res = ResultSection(f"Section - {section['name']}")
-            sub_res.add_tag("file.pe.sections.name", section["name"])
-            sub_res.add_line(f"Entropy: {section['entropy']}")
-            if section["entropy"] > 7.5:
+        self.features["sections"] = []
+        for section in self.binary.sections:
+            if section.size > len(section.content):
+                full_section_data = bytearray(section.content) + section.padding
+            else:
+                full_section_data = bytearray(section.content)
+
+            entropy_data = calculate_partition_entropy(BytesIO(full_section_data))
+            section_dict = {
+                "name": section.name,
+                "characteristics_hash": section.characteristics,
+                "characteristics_list": [char.name for char in section.characteristics_lists],
+                "entropy": entropy_data[0],
+                "entropy_without_padding": section.entropy,
+                "md5": hashlib.md5(full_section_data).hexdigest(),
+                "offset": section.offset,
+                "size": section.size,
+                "sizeof_raw_data": section.sizeof_raw_data,
+                "virtual_address": section.virtual_address,
+                "virtual_size": section.virtual_size,
+            }
+            try:
+                if hasattr(section, "fullname"):
+                    section_dict["fullname"] = section.fullname
+            except UnicodeDecodeError:
+                pass
+
+            self.features["sections"].append(section_dict)
+
+            sub_res = ResultSection(f"Section - {section.name}")
+            sub_res.add_tag("file.pe.sections.name", section.name)
+            sub_res.add_line(f"Entropy: {entropy_data[0]}")
+            if entropy_data[0] > 7.5:
                 sub_res.set_heuristic(4)
-            sub_res.add_line(f"Entropy without padding: {section['entropy_without_padding']}")
-            sub_res.add_line(f"Offset: {section['offset']}")
-            sub_res.add_line(f"Size: {section['size']}")
-            sub_res.add_line(f"Virtual Size: {section['virtual_size']}")
-            sub_res.add_line(f"Characteristics: {', '.join(section['characteristics_list'])}")
-            sub_res.add_line(f"MD5: {section['md5']}")
-            sub_res.add_tag("file.pe.sections.hash", section["md5"])
+            sub_res.add_line(f"Entropy without padding: {section.entropy}")
+            sub_res.add_line(f"Offset: {section.offset}")
+            sub_res.add_line(f"Size: {section.size}")
+            sub_res.add_line(f"Virtual Size: {section.virtual_size}")
+            sub_res.add_line(f"Characteristics: {', '.join(section_dict['characteristics_list'])}")
+            sub_res.add_line(f"MD5: {section_dict['md5']}")
+            sub_res.add_tag("file.pe.sections.hash", section_dict["md5"])
+
+            entropy_graph_data = {
+                "type": "colormap",
+                "data": {"domain": [0, 8], "values": entropy_data[1]},
+            }
+            sub_sub_res = ResultSection(
+                "Entropy graph", body_format=BODY_FORMAT.GRAPH_DATA, body=json.dumps(entropy_graph_data)
+            )
+            sub_res.add_subsection(sub_sub_res)
 
             try:
-                lief_section = self.lief_binary.get_section(section["name"])
-                if lief_section.size > len(lief_section.content):
-                    full_section_data = bytearray(lief_section.content) + lief_section.padding
-                else:
-                    full_section_data = bytearray(lief_section.content)
-
-                entropy_graph_data = {
-                    "type": "colormap",
-                    "data": {"domain": [0, 8], "values": calculate_partition_entropy(BytesIO(full_section_data))[1]},
-                }
-                sub_sub_res = ResultSection(
-                    "Entropy graph", body_format=BODY_FORMAT.GRAPH_DATA, body=json.dumps(entropy_graph_data)
-                )
-                sub_res.add_subsection(sub_sub_res)
+                self.binary.get_section(section.name)
             except lief.not_found:
                 sub_sub_res = ResultSection(
                     "Section could not be retrieved using the section's name.", heuristic=Heuristic(14)
@@ -329,206 +523,697 @@ class PE(ServiceBase):
         self.file_res.add_section(res)
 
     def add_debug(self):
-        if not hasattr(self.pe, "debug"):
+        if not self.binary.has_debug:
             return
+        self.features["debug"] = []
         res = ResultSection("Debug")
-        for debug in self.pe.debug:
-            sub_res = ResultSection(f"{debug['type']}")
-            hr_timestamp = datetime.datetime.utcfromtimestamp(debug["timestamp"]).strftime(
+        for debug in self.binary.debug:
+            debug_dict = {
+                "addressof_rawdata": debug.addressof_rawdata,
+                "characteristics": debug.characteristics,
+                "major_version": debug.major_version,
+                "minor_version": debug.minor_version,
+                "pointerto_rawdata": debug.pointerto_rawdata,
+                "sizeof_data": debug.sizeof_data,
+                "timestamp": debug.timestamp,
+                "type": debug.type.name,
+            }
+            sub_res = ResultSection(f"{debug.type.name}")
+            hr_timestamp = datetime.datetime.utcfromtimestamp(debug.timestamp).strftime(
                 "%Y-%m-%d %H:%M:%S +00:00 (UTC)"
             )
-            sub_res.add_line(f"Timestamp: {debug['timestamp']} ({hr_timestamp})")
-            sub_res.add_line(f"Version: {debug['major_version']}.{debug['minor_version']}")
-            if "code_view" in debug:
-                sub_res.add_line(f"CV_Signature: {debug['code_view']['cv_signature']}")
-                if "filename" in debug["code_view"]:
-                    sub_res.add_line(f"Filename: {debug['code_view']['filename']}")
-                    sub_res.add_tag("file.pe.pdb_filename", debug["code_view"]["filename"])
-                else:
-                    # No filename specified, test the binary to make sure it's corrupted.
-                    try:
-                        for binary_debug in self.lief_binary.debug:
-                            if binary_debug.has_code_view:
-                                binary_debug.code_view.filename
-                    except UnicodeDecodeError:
-                        sub_res.set_heuristic(16)
-            if "pogo" in debug:
-                sub_sub_res = ResultSection(f"POGO - {debug['pogo']['signature']}")
-                for entry in debug["pogo"]["entries"]:
-                    sub_sub_res.add_line(f"Name: {entry['name']}, Size: {entry['size']}")
+            sub_res.add_line(f"Timestamp: {debug.timestamp} ({hr_timestamp})")
+            sub_res.add_line(f"Version: {debug.major_version}.{debug.minor_version}")
+            if debug.has_code_view:
+                cv_dict = {
+                    "age": debug.code_view.age,
+                    "cv_signature": debug.code_view.cv_signature.name,
+                    "signature": debug.code_view.signature,
+                }
+                sub_res.add_line(f"CV_Signature: {debug.code_view.cv_signature.name}")
+                try:
+                    cv_dict["filename"] = debug.code_view.filename
+                    sub_res.add_line(f"Filename: {debug.code_view.filename}")
+                    sub_res.add_tag("file.pe.pdb_filename", debug.code_view.filename)
+                except UnicodeDecodeError:
+                    sub_res.set_heuristic(16)
+                debug_dict["code_view"] = cv_dict
+            if debug.has_pogo:
+                debug_dict["pogo"] = {
+                    "entries": [],
+                    "signature": debug.pogo.signature.name,
+                }
+                sub_sub_res = ResultSection(f"POGO - {debug.pogo.signature.name}")
+                for entry in debug.pogo.entries:
+                    debug_dict["pogo"]["entries"].append(
+                        {
+                            "name": entry.name,
+                            "size": entry.size,
+                            "start_rva": entry.start_rva,
+                        }
+                    )
+                    sub_sub_res.add_line(f"Name: {entry.name}, Size: {entry.size}")
                 sub_res.add_subsection(sub_sub_res)
+            self.features["debug"].append(debug_dict)
             res.add_subsection(sub_res)
         self.file_res.add_section(res)
 
     def add_exports(self):
-        if not hasattr(self.pe, "export"):
+        if not self.binary.has_exports:
             return
         res = ResultSection("Exports")
-        res.add_line(f"Name: {self.pe.export['name']}")
-        res.add_tag("file.pe.exports.module_name", self.pe.export["name"])
-        res.add_line(f"Version: {self.pe.export['major_version']}.{self.pe.export['minor_version']}")
-        hr_timestamp = datetime.datetime.utcfromtimestamp(self.pe.export["timestamp"]).strftime(
-            "%Y-%m-%d %H:%M:%S +00:00 (UTC)"
-        )
-        res.add_line(f"Timestamp: {self.pe.export['timestamp']} ({hr_timestamp})")
+
+        export = self.binary.get_export()
+        self.features["export"] = {
+            "entries": [],
+            "export_flags": export.export_flags,
+            "major_version": export.major_version,
+            "minor_version": export.minor_version,
+            "name": export.name,
+            "ordinal_base": export.ordinal_base,
+            "timestamp": export.timestamp,
+        }
+        for entry in export.entries:
+            entry_dict = {
+                "address": entry.address,
+                "forward_information": None,
+                "function_rva": entry.function_rva,
+                "is_extern": entry.is_extern,
+                "name": entry.name,
+                "ordinal": entry.ordinal,
+                # "size": entry.size, #In the docs, but not in the dir()
+                # "value": entry.value, #In the docs, but not in the dir()
+            }
+            try:
+                entry_dict["forward_information"] = {
+                    "function": entry.forward_information.function,
+                    "library": entry.forward_information.library,
+                }
+            except UnicodeDecodeError:
+                del entry_dict["forward_information"]
+                if not res.heuristic:
+                    res.set_heuristic(13)
+            self.features["export"]["entries"].append(entry_dict)
+
+        res.add_line(f"Name: {export.name}")
+        res.add_tag("file.pe.exports.module_name", export.name)
+        res.add_line(f"Version: {export.major_version}.{export.minor_version}")
+        hr_timestamp = datetime.datetime.utcfromtimestamp(export.timestamp).strftime("%Y-%m-%d %H:%M:%S +00:00 (UTC)")
+        res.add_line(f"Timestamp: {export.timestamp} ({hr_timestamp})")
         sub_res = ResultSection("Entries")
-        for entry in self.pe.export["entries"]:
-            sub_res.add_line(f"Name: {entry['name']}, ordinal: {entry['ordinal']}")
-            sub_res.add_tag("file.pe.exports.function_name", entry["name"])
+        for entry in export.entries:
+            sub_res.add_line(f"Name: {entry.name}, ordinal: {entry.ordinal}")
+            sub_res.add_tag("file.pe.exports.function_name", entry.name)
         res.add_subsection(sub_res)
         self.file_res.add_section(res)
 
     def add_imports(self):
-        if not hasattr(self.pe, "imports"):
+        if not self.binary.has_imports:
             return
+
+        self.features["imports"] = defaultdict(list)
+        for lib in self.binary.imports:
+            for entry in lib.entries:
+                entry_dict = {
+                    "data": entry.data,
+                    "hint": entry.hint,
+                    "iat_address": entry.iat_address,
+                    "iat_value": entry.iat_value,
+                    "is_ordinal": entry.is_ordinal,
+                    "name": entry.name,
+                }
+                if entry.is_ordinal:
+                    entry_dict["ordinal"] = entry.ordinal
+                self.features["imports"][lib.name].append(entry_dict)
+
         res = ResultSection("Imports")
-        for lib_name, entries in self.pe.imports.items():
+        for lib_name, entries in self.features["imports"].items():
             sub_res = ResultSection(f"{lib_name}")
             sub_res.add_line(
                 ", ".join([str(entry["ordinal"]) if entry["is_ordinal"] else str(entry["name"]) for entry in entries])
             )
             res.add_subsection(sub_res)
-        res.add_tag("file.pe.imports.sorted_sha1", self.calc_imphash_sha1())
-        res.add_tag("file.pe.imports.md5", self.pe.imphash)
-        res.add_tag("file.pe.imports.fuzzy", self.calc_impfuzzy(sort=False))
-        res.add_tag("file.pe.imports.sorted_fuzzy", self.calc_impfuzzy(sort=True))
+        res.add_tag("file.pe.imports.sorted_sha1", calc_imphash_sha1(self.features["imports"]))
+        res.add_tag("file.pe.imports.md5", self.features["imphash"])
+        res.add_tag("file.pe.imports.fuzzy", calc_impfuzzy(self.features["imports"], sort=False))
+        res.add_tag("file.pe.imports.sorted_fuzzy", calc_impfuzzy(self.features["imports"], sort=True))
         self.file_res.add_section(res)
 
-    def add_resources(self):
-        if not hasattr(self.pe, "resources"):
+    def add_configuration(self):
+        if not self.binary.has_configuration:
             return
+
+        load_configuration = self.binary.load_configuration
+        load_configuration_dict = {
+            "characteristics": load_configuration.characteristics,
+            "critical_section_default_timeout": load_configuration.critical_section_default_timeout,
+            "csd_version": load_configuration.csd_version,
+            "decommit_free_block_threshold": load_configuration.decommit_free_block_threshold,
+            "decommit_total_free_threshold": load_configuration.decommit_total_free_threshold,
+            "editlist": load_configuration.editlist,
+            "global_flags_clear": load_configuration.global_flags_clear,
+            "global_flags_set": load_configuration.global_flags_set,
+            "lock_prefix_table": load_configuration.lock_prefix_table,
+            "major_version": load_configuration.major_version,
+            "maximum_allocation_size": load_configuration.maximum_allocation_size,
+            "minor_version": load_configuration.minor_version,
+            "process_affinity_mask": load_configuration.process_affinity_mask,
+            "process_heap_flags": load_configuration.process_heap_flags,
+            "reserved1": load_configuration.reserved1,
+            "security_cookie": load_configuration.security_cookie,
+            "timedatestamp": load_configuration.timedatestamp,
+            "version": load_configuration.version.name,
+            "virtual_memory_threshold": load_configuration.virtual_memory_threshold,
+        }
+
+        def set_config_v0():
+            load_configuration_dict["se_handler_count"] = load_configuration.se_handler_count
+            load_configuration_dict["se_handler_table"] = load_configuration.se_handler_table
+
+        def set_config_v1():
+            set_config_v0()
+
+            load_configuration_dict[
+                "guard_cf_check_function_pointer"
+            ] = load_configuration.guard_cf_check_function_pointer
+            load_configuration_dict[
+                "guard_cf_dispatch_function_pointer"
+            ] = load_configuration.guard_cf_dispatch_function_pointer
+            load_configuration_dict["guard_cf_flags_list"] = [
+                guard_flag.name for guard_flag in load_configuration.guard_cf_flags_list
+            ]
+            load_configuration_dict["guard_cf_function_count"] = load_configuration.guard_cf_function_count
+            load_configuration_dict["guard_cf_function_table"] = load_configuration.guard_cf_function_table
+            load_configuration_dict["guard_flags"] = load_configuration.guard_flags.name
+
+        def set_config_v2():
+            set_config_v1()
+            load_configuration_dict["code_integrity"] = {
+                "catalog": load_configuration.code_integrity.catalog,
+                "catalog_offset": load_configuration.code_integrity.catalog_offset,
+                "flags": load_configuration.code_integrity.flags,
+                "reserved": load_configuration.code_integrity.reserved,
+            }
+
+        def set_config_v3():
+            set_config_v2()
+            load_configuration_dict[
+                "guard_address_taken_iat_entry_count"
+            ] = load_configuration.guard_address_taken_iat_entry_count
+            load_configuration_dict[
+                "guard_address_taken_iat_entry_table"
+            ] = load_configuration.guard_address_taken_iat_entry_table
+            load_configuration_dict["guard_long_jump_target_count"] = load_configuration.guard_long_jump_target_count
+            load_configuration_dict["guard_long_jump_target_table"] = load_configuration.guard_long_jump_target_table
+
+        def set_config_v4():
+            set_config_v3()
+            load_configuration_dict["dynamic_value_reloc_table"] = load_configuration.dynamic_value_reloc_table
+            load_configuration_dict["hybrid_metadata_pointer"] = load_configuration.hybrid_metadata_pointer
+
+        def set_config_v5():
+            set_config_v4()
+            load_configuration_dict[
+                "dynamic_value_reloctable_offset"
+            ] = load_configuration.dynamic_value_reloctable_offset
+            load_configuration_dict[
+                "dynamic_value_reloctable_section"
+            ] = load_configuration.dynamic_value_reloctable_section
+            load_configuration_dict["guard_rf_failure_routine"] = load_configuration.guard_rf_failure_routine
+            load_configuration_dict[
+                "guard_rf_failure_routine_function_pointer"
+            ] = load_configuration.guard_rf_failure_routine_function_pointer
+            load_configuration_dict["reserved2"] = load_configuration.reserved2
+
+        def set_config_v6():
+            set_config_v5()
+            load_configuration_dict[
+                "guard_rf_verify_stackpointer_function_pointer"
+            ] = load_configuration.guard_rf_verify_stackpointer_function_pointer
+            load_configuration_dict["hotpatch_table_offset"] = load_configuration.hotpatch_table_offset
+
+        def set_config_v7():
+            set_config_v6()
+            load_configuration_dict["addressof_unicode_string"] = load_configuration.addressof_unicode_string
+            load_configuration_dict["reserved3"] = load_configuration.reserved3
+
+        if isinstance(load_configuration, lief.PE.LoadConfigurationV7):
+            set_config_v7()
+        elif isinstance(load_configuration, lief.PE.LoadConfigurationV6):
+            set_config_v6()
+        elif isinstance(load_configuration, lief.PE.LoadConfigurationV5):
+            set_config_v5()
+        elif isinstance(load_configuration, lief.PE.LoadConfigurationV4):
+            set_config_v4()
+        elif isinstance(load_configuration, lief.PE.LoadConfigurationV3):
+            set_config_v3()
+        elif isinstance(load_configuration, lief.PE.LoadConfigurationV2):
+            set_config_v2()
+        elif isinstance(load_configuration, lief.PE.LoadConfigurationV1):
+            set_config_v1()
+        elif isinstance(load_configuration, lief.PE.LoadConfigurationV0):
+            set_config_v0()
+
+        self.features["load_configuration"] = load_configuration_dict
+
+    def add_resources(self):
+        if not self.binary.has_resources:
+            return
+
+        self.features["resources_manager"] = {
+            "langs_available": [lang.name for lang in self.binary.resources_manager.langs_available],
+            "sublangs_available": [lang.name for lang in self.binary.resources_manager.sublangs_available],
+        }
         res = ResultSection("Resources")
-        res.add_line(f"Languages available: {', '.join(self.pe.resources_manager['langs_available'])}")
-        for lang in self.pe.resources_manager["langs_available"]:
+        res.add_line(f"Languages available: {', '.join(self.features['resources_manager']['langs_available'])}")
+        for lang in self.features["resources_manager"]["langs_available"]:
             res.add_tag("file.pe.resources.language", lang)
-        res.add_line(f"Sublanguages available: {', '.join(self.pe.resources_manager['sublangs_available'])}")
-        if "icons" in self.pe.resources_manager:
+        res.add_line(f"Sublanguages available: {', '.join(self.features['resources_manager']['sublangs_available'])}")
+
+        if self.binary.resources_manager.has_accelerator:
+            self.features["resources_manager"]["accelerator"] = []
+            for accelerator in self.binary.resources_manager.accelerator:
+                accelerator_dict = {
+                    "id": accelerator.id,
+                    "padding": accelerator.padding,
+                }
+                try:
+                    accelerator_dict["ansi"] = lief.PE.ACCELERATOR_VK_CODES(accelerator.ansi).name
+                except TypeError:
+                    pass
+                try:
+                    accelerator_dict["flags"] = " | ".join(
+                        [accelerator_flags_entries[x].name for x in get_powers(accelerator.flags)]
+                    )
+                except KeyError:
+                    pass
+                self.features["resources_manager"]["accelerator"].append(accelerator_dict)
+        if self.binary.resources_manager.has_dialogs:
+            try:
+                dialogs_list = []
+                for dialog in self.binary.resources_manager.dialogs:
+                    dialog_dict = {
+                        "charset": dialog.charset,
+                        "cx": dialog.cx,
+                        "cy": dialog.cy,
+                        "dialogbox_style_list": [
+                            dialogbox_style.name for dialogbox_style in dialog.dialogbox_style_list
+                        ],
+                        "extended_style": str(dialog.extended_style),  # .name
+                        "extended_style_list": [extended_style.name for extended_style in dialog.extended_style_list],
+                        "help_id": dialog.help_id,
+                        "items": [],
+                        "lang": dialog.lang.name,
+                        "point_size": dialog.point_size,
+                        "signature": dialog.signature,
+                        "style": str(dialog.style),  # .name
+                        "style_list": [style.name for style in dialog.style_list],
+                        "sub_lang": dialog.sub_lang.name,
+                        "title": dialog.title,
+                        "typeface": dialog.typeface,
+                        "version": dialog.version,
+                        "weight": dialog.weight,
+                        "x": dialog.x,
+                        "y": dialog.y,
+                    }
+                    if dialog.title != "":
+                        res.add_tag("file.string.extracted", dialog.title)
+                    for item in dialog.items:
+                        item_dict = {
+                            "cx": item.cx,
+                            "cy": item.cy,
+                            "extended_style": item.extended_style,
+                            "help_id": item.help_id,
+                            "id": item.id,
+                            "is_extended": item.is_extended,
+                            "style": str(item.style),  # .name
+                            "title": "",
+                            "x": item.x,
+                            "y": item.y,
+                        }
+                        try:
+                            item_dict["title"] = item.title
+                            if item.title != "":
+                                res.add_tag("file.string.extracted", item.title)
+                        except UnicodeDecodeError:
+                            sub_res = ResultSection("Dialog item", heuristic=Heuristic(13))
+                            res.add_subsection(sub_res)
+                        dialog_dict["items"].append(item_dict)
+                    dialogs_list.append(dialog_dict)
+
+                self.features["resources_manager"]["dialogs"] = dialogs_list
+            except lief.read_out_of_bound:
+                sub_res = ResultSection("Dialogs", heuristic=Heuristic(13))
+                res.add_subsection(sub_res)
+
+        if self.binary.resources_manager.has_html:
+            try:
+                self.features["resources_manager"]["html"] = self.binary.resources_manager.html
+            except UnicodeDecodeError:
+                sub_res = ResultSection("HTML", heuristic=Heuristic(13))
+                res.add_subsection(sub_res)
+                # Do our best to find resource 0x17 (23) and save it in the features
+
+                def fetch_last_content(resource):
+                    if len(resource.childs) == 1:
+                        return fetch_last_content(resource.childs[0])
+                    elif len(resource.childs) == 0:
+                        return resource.content
+
+                for resource in self.binary.resources.childs:
+                    if resource.id == 0x17:
+                        content = fetch_last_content(resource)
+                        if content is not None:
+                            self.features["resources_manager"]["html"] = bytearray(content).decode(
+                                "utf-8", "backslashreplace"
+                            )
+
+        if self.binary.resources_manager.has_icons:
             sub_res = ResultSection("Icons")
-            for icon in self.pe.resources_manager["icons"]:
-                sub_res.add_line(f"ID: {icon['id']}, Lang: {icon['lang']}")
-            res.add_subsection(sub_res)
-        if "manifest" in self.pe.resources_manager:
-            res.add_line(f"Manifest: {self.pe.resources_manager['manifest']}")
+            try:
+                icons = []
+                for idx, icon in enumerate(self.binary.resources_manager.icons):
+                    icons.append(
+                        {
+                            "id": icon.id,
+                            # "pixels": icon.pixels,
+                            "planes": icon.planes,
+                            "height": icon.height,
+                            "width": icon.width,
+                            "lang": icon.lang.name,
+                            "sublang": icon.sublang.name,
+                        }
+                    )
+                    sub_res.add_line(f"ID: {icon.id}, Lang: {icon.lang.name}")
+                    temp_path = os.path.join(self.working_directory, f"icon_{idx}.ico")
+                    icon.save(temp_path)
+                    self.request.add_supplementary(
+                        temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file"
+                    )
+                self.features["resources_manager"]["icons"] = icons
+                res.add_subsection(sub_res)
+            except lief.corrupted:
+                sub_res.set_heuristic(13)
+                res.add_subsection(sub_res)
+                pass
 
-        # Not going to put all strings, but will do dialogs titles.
-        if "dialogs" in self.pe.resources_manager:
-            for dialog in self.pe.resources_manager["dialogs"]:
-                if dialog["title"] != "":
-                    res.add_tag("file.string.extracted", dialog["title"])
-                for item in dialog["items"]:
-                    if item["title"] != "":
-                        res.add_tag("file.string.extracted", item["title"])
+        if self.binary.resources_manager.has_manifest:
+            try:
+                self.features["resources_manager"]["manifest"] = self.binary.resources_manager.manifest
+                res.add_line(f"Manifest: {self.binary.resources_manager.manifest}")
+            except lief.not_found:
+                pass
 
-        def generate_subsections(data, title):
-            gen_res = ResultSection(title)
-            for k, v in data.items():
-                if isinstance(v, Dict):
-                    gen_res.add_subsection(generate_subsections(v, k))
-                elif isinstance(v, List):
-                    for item_index, item in enumerate(v):
-                        if isinstance(item, Dict):
-                            gen_res.add_subsection(generate_subsections(item, f"{k} {item_index + 1}"))
-                        else:
-                            gen_res.add_line(f"{k}: {item}")
-                else:
-                    gen_res.add_line(f"{k}: {v}")
-            return gen_res
+        if self.binary.resources_manager.has_string_table:
+            self.features["resources_manager"]["string_table"] = []
+            for string_table in self.binary.resources_manager.string_table:
+                try:
+                    self.features["resources_manager"]["string_table"].append(string_table.name)
+                except UnicodeDecodeError:
+                    self.features["resources_manager"]["string_table"].append("AL_PE: UnicodeDecodeError")
+                    pass
 
-        if "version" in self.pe.resources_manager:
+        if self.binary.resources_manager.has_version:
             sub_res = ResultSection("Version")
-            sub_res.add_line(f"Type: {self.pe.resources_manager['version']['type']}")
-            if "fixed_file_info" in self.pe.resources_manager["version"]:
-                sub_res.add_subsection(
-                    generate_subsections(self.pe.resources_manager["version"]["fixed_file_info"], "fixed_file_info")
-                )
-            if "string_file_info" in self.pe.resources_manager["version"]:
-                string_file_sub_res = generate_subsections(
-                    self.pe.resources_manager["version"]["string_file_info"], "string_file_info"
-                )
-                for langcode_items in self.pe.resources_manager["version"]["string_file_info"]["langcode_items"]:
-                    if "OriginalFilename" in langcode_items["items"]:
-                        string_file_sub_res.add_tag(
-                            "file.pe.versions.filename", langcode_items["items"]["OriginalFilename"]
+            try:
+                version = self.binary.resources_manager.version
+                self.features["resources_manager"]["version"] = {"type": version.type}
+                sub_res.add_line(f"Type: {version.type}")
+                if version.has_fixed_file_info:
+                    self.features["resources_manager"]["version"]["fixed_file_info"] = {
+                        "file_date_LS": version.fixed_file_info.file_date_LS,
+                        "file_date_MS": version.fixed_file_info.file_date_MS,
+                        "file_flags": version.fixed_file_info.file_flags,
+                        "file_flags_mask": version.fixed_file_info.file_flags_mask,
+                        "file_os": version.fixed_file_info.file_os.name,
+                        "file_subtype": version.fixed_file_info.file_subtype.name,
+                        "file_type": version.fixed_file_info.file_type.name,
+                        "file_version_LS": version.fixed_file_info.file_version_LS,
+                        "file_version_MS": version.fixed_file_info.file_version_MS,
+                        "product_version_LS": version.fixed_file_info.product_version_LS,
+                        "product_version_MS": version.fixed_file_info.product_version_MS,
+                        "signature": version.fixed_file_info.signature,
+                        "struct_version": version.fixed_file_info.struct_version,
+                    }
+                    sub_sub_res = ResultSection("fixed_file_info")
+                    sub_sub_res.add_line(f"file_date_LS: {version.fixed_file_info.file_date_LS}")
+                    sub_sub_res.add_line(f"file_date_MS: {version.fixed_file_info.file_date_MS}")
+                    sub_sub_res.add_line(f"file_flags: {version.fixed_file_info.file_flags}")
+                    sub_sub_res.add_line(f"file_flags_mask: {version.fixed_file_info.file_flags_mask}")
+                    sub_sub_res.add_line(f"file_os: {version.fixed_file_info.file_os.name}")
+                    sub_sub_res.add_line(f"file_subtype: {version.fixed_file_info.file_subtype.name}")
+                    sub_sub_res.add_line(f"file_type: {version.fixed_file_info.file_type.name}")
+                    sub_sub_res.add_line(f"file_version_LS: {version.fixed_file_info.file_version_LS}")
+                    sub_sub_res.add_line(f"file_version_MS: {version.fixed_file_info.file_version_MS}")
+                    sub_sub_res.add_line(f"product_version_LS: {version.fixed_file_info.product_version_LS}")
+                    sub_sub_res.add_line(f"product_version_MS: {version.fixed_file_info.product_version_MS}")
+                    sub_sub_res.add_line(f"signature: {version.fixed_file_info.signature}")
+                    sub_sub_res.add_line(f"struct_version: {version.fixed_file_info.struct_version}")
+                    sub_res.add_subsection(sub_sub_res)
+                if version.has_string_file_info:
+                    self.features["resources_manager"]["version"]["string_file_info"] = {
+                        "key": version.string_file_info.key,
+                        "type": version.string_file_info.type,
+                        "langcode_items": [],
+                    }
+                    sub_sub_res = ResultSection("string_file_info")
+                    sub_sub_res.add_line(f"key: {version.string_file_info.key}")
+                    sub_sub_res.add_line(f"type: {version.string_file_info.type}")
+                    for item_index, langcodeitem in enumerate(version.string_file_info.langcode_items):
+                        sub_sub_sub_res = ResultSection(f"langcode_items {item_index + 1}")
+                        sub_sub_sub_res.add_line(f"key: {langcodeitem.key}")
+                        sub_sub_sub_res.add_line(f"type: {langcodeitem.type}")
+                        lancodeitem_dict = {
+                            "key": langcodeitem.key,
+                            "type": langcodeitem.type,
+                            "lang": None,
+                            "sublang": None,
+                            "code_page": None,
+                            "items": {},
+                        }
+                        try:
+                            lancodeitem_dict["lang"] = langcodeitem.lang.name
+                            sub_sub_sub_res.add_line(f"lang: {langcodeitem.lang.name}")
+                            lancodeitem_dict["sublang"] = langcodeitem.sublang.name
+                            sub_sub_sub_res.add_line(f"sublang: {langcodeitem.sublang.name}")
+                            lancodeitem_dict["code_page"] = langcodeitem.code_page.name
+                            sub_sub_sub_res.add_line(f"code_page: {langcodeitem.code_page.name}")
+                        except lief.corrupted:
+                            sub_sub_sub_res.set_heuristic(13)
+                            del lancodeitem_dict["lang"]
+                            del lancodeitem_dict["sublang"]
+                            del lancodeitem_dict["code_page"]
+
+                        sub_sub_sub_sub_res = ResultSection("items")
+                        for k, v in langcodeitem.items.items():
+                            lancodeitem_dict["items"][k] = v.decode()
+                            sub_sub_sub_sub_res.add_line(f"{k}: {v.decode()}")
+                            if k == "OriginalFilename":
+                                sub_sub_res.add_tag("file.pe.versions.filename", v.decode())
+                            elif k == "FileDescription":
+                                sub_sub_res.add_tag("file.pe.versions.description", v.decode())
+                        self.features["resources_manager"]["version"]["string_file_info"]["langcode_items"].append(
+                            lancodeitem_dict
                         )
-                    if "FileDescription" in langcode_items["items"]:
-                        string_file_sub_res.add_tag(
-                            "file.pe.versions.description", langcode_items["items"]["FileDescription"]
-                        )
-                sub_res.add_subsection(string_file_sub_res)
-            if "var_file_info" in self.pe.resources_manager["version"]:
-                sub_res.add_subsection(
-                    generate_subsections(self.pe.resources_manager["version"]["var_file_info"], "var_file_info")
-                )
+                        sub_sub_sub_res.add_subsection(sub_sub_sub_sub_res)
+                        sub_sub_res.add_subsection(sub_sub_sub_res)
+                    sub_res.add_subsection(sub_sub_res)
+                if version.has_var_file_info:
+                    self.features["resources_manager"]["version"]["var_file_info"] = {
+                        "key": version.var_file_info.key,
+                        "type": version.var_file_info.type,
+                        "translations": version.var_file_info.translations,
+                    }
+                    sub_sub_res = ResultSection("var_file_info")
+                    sub_sub_res.add_line(f"key: {version.var_file_info.key}")
+                    sub_sub_res.add_line(f"type: {version.var_file_info.type}")
+                    for translation in version.var_file_info.translations:
+                        sub_sub_res.add_line(f"translations: {translation}")
+                    sub_res.add_subsection(sub_sub_res)
+            except lief.not_found:
+                sub_res.set_heuristic(13)
+            except lief.read_out_of_bound:
+                sub_res.set_heuristic(13)
+            except ValueError:
+                sub_res.set_heuristic(13)
             res.add_subsection(sub_res)
 
-        def recurse_resources(resource):
-            if "name" in resource:
-                res.add_tag("file.pe.resources.name", resource["name"])
-            if "childs" in resource:
-                for child in resource["childs"]:
-                    recurse_resources(child)
+        def get_node_data(node):
+            data = {}
+            if isinstance(node, lief.PE.ResourceDirectory):
+                data["characteristics"] = node.characteristics
+                data["num_childs"] = len(node.childs)
+                data["depth"] = node.depth
+                if node.has_name:
+                    data["name"] = node.name
+                    res.add_tag("file.pe.resources.name", node.name)
+                data["id"] = node.id
+                if node.depth == 1:
+                    data["resource_type"] = lief.PE.RESOURCE_TYPES(node.id).name
+                data["is_data"] = node.is_data
+                data["is_directory"] = node.is_directory
+                data["major_version"] = node.major_version
+                data["minor_version"] = node.minor_version
+                data["numberof_id_entries"] = node.numberof_id_entries
+                data["numberof_name_entries"] = node.numberof_name_entries
+                data["time_date_stamp"] = node.time_date_stamp
+                if data["num_childs"] > 0:
+                    data["childs"] = []
+                    for child in node.childs:
+                        data["childs"].append(get_node_data(child))
+            elif isinstance(node, lief.PE.ResourceData):
+                # We could go deeper and figure out which type of resource it is, to get more information.
+                data["num_child"] = len(node.childs)
+                data["code_page"] = node.code_page
+                # data["content"] = node.content
+                data["depth"] = node.depth
+                if node.has_name:
+                    data["name"] = node.name
+                    res.add_tag("file.pe.resources.name", node.name)
+                data["id"] = node.id
+                data["is_data"] = node.is_data
+                data["is_directory"] = node.is_directory
+                data["offset"] = node.offset
+                data["reserved"] = node.reserved
+            else:
+                raise Exception("Binary with unknown ResourceNode")
 
-        recurse_resources(self.pe.resources)
+            return data
+
+        self.features["resources"] = get_node_data(self.binary.resources)
 
         self.file_res.add_section(res)
 
     def add_signatures(self):
-        if not hasattr(self.pe, "signatures"):
+        self.features["verify_signature"] = self.binary.verify_signature().name()
+
+        if not self.binary.has_signatures:
             return
+
+        all_certs = [
+            lief.PE.x509.parse(f"{trusted_certs_path}{x}")
+            for trusted_certs_path in self.config.get("trusted_certs", [])
+            for x in os.listdir(trusted_certs_path)
+        ]
+        trusted_certs = [item for sublist in all_certs for item in sublist]
 
         res = ResultSection("Signatures")
 
-        if "INVALID_SIGNER" in self.pe.verify_signature:
+        if "INVALID_SIGNER" in self.features["verify_signature"]:
             res.add_subsection(ResultSection("Invalid PE Signature detected", heuristic=Heuristic(10)))
 
-        if self.pe.verify_signature == "OK":
+        if self.features["verify_signature"] == "OK":
             res.add_subsection(ResultSection("This file is signed", heuristic=Heuristic(2)))
 
-        for signature_index, signature in enumerate(self.pe.signatures):
+        self.features["signatures"] = []
+        for signature_index, signature in enumerate(self.binary.signatures):
+            extra_certs = []
+
+            def recurse_cert(issuer):
+                if issuer is None:
+                    return
+                issuer_cert = signature.find_crt_subject(issuer)
+                if issuer_cert is None or issuer_cert.subject == issuer_cert.issuer:
+                    return
+                recurse_cert(issuer_cert.issuer)
+                if issuer_cert.is_trusted_by(trusted_certs + extra_certs) == lief.PE.x509.VERIFICATION_FLAGS.OK:
+                    extra_certs.append(issuer_cert)
+
+            signature_dict = {
+                "version": signature.version,
+                "algorithm": signature.digest_algorithm.name,
+                "signers": [],
+                "certificates": [],
+                "content_info": {
+                    "algorithm": signature.content_info.digest_algorithm.name,
+                    "digest": signature.content_info.digest.hex(),
+                    "content_type": signature.content_info.content_type,
+                },
+                "check": signature.check().name(),
+            }
+
             sub_res = ResultSection(f"Signature - {signature_index + 1}")
-            sub_res.add_line(f"Version: {signature['version']}")
-            sub_res.add_line(f"Algorithm: {signature['algorithm']}")
-            sub_res.add_line(f"Content Info Algorithm: {signature['content_info']['algorithm']}")
-            sub_res.add_line(f"Content Info Digest: {signature['content_info']['digest']}")
-            sub_res.add_line(f"Content Info Content Type: {signature['content_info']['content_type']}")
-            for signer_index, signer in enumerate(signature["signers"]):
+            sub_res.add_line(f"Version: {signature.version}")
+            sub_res.add_line(f"Algorithm: {signature.digest_algorithm.name}")
+            sub_res.add_line(f"Content Info Algorithm: {signature.content_info.digest_algorithm.name}")
+            sub_res.add_line(f"Content Info Digest: {signature_dict['content_info']['digest']}")
+            sub_res.add_line(f"Content Info Content Type: {signature.content_info.content_type}")
+            for signer_index, signer in enumerate(signature.signers):
                 sub_sub_res = ResultSection(f"Signer - {signer_index + 1}")
-                sub_sub_res.add_line(f"Version: {signer['version']}")
-                sub_sub_sub_res = ResultSection("Signer Certificate")
-                sub_sub_sub_res.add_line(f"Version: {signer['cert']['version']}")
-                sub_sub_sub_res.add_line(f"Subject: {signer['cert']['subject']}")
-                sub_sub_sub_res.add_tag("cert.subject", signer["cert"]["subject"])
-                sub_sub_sub_res.add_line(f"Issuer: {signer['cert']['issuer']}")
-                sub_sub_sub_res.add_tag("cert.issuer", signer["cert"]["issuer"])
-                sub_sub_sub_res.add_line(f"Serial Number: {signer['cert']['serial_number']}")
-                sub_sub_sub_res.add_tag("cert.serial_no", signer["cert"]["serial_number"])
-                sub_sub_sub_res.add_line(f"Valid From: {datetime.datetime(*signer['cert']['valid_from']).isoformat()}")
-                sub_sub_sub_res.add_tag(
-                    "cert.valid.start", datetime.datetime(*signer["cert"]["valid_from"]).isoformat()
+                signer_dict = {
+                    "version": signer.version,
+                    "issuer": signer.issuer,
+                    "serial_number": signer.serial_number.hex(),
+                    "encryption_algorithm": signer.encryption_algorithm.name,
+                    "digest_algorithm": signer.digest_algorithm.name,
+                    "encrypted_digest": signer.encrypted_digest.hex(),
+                    "cert": None,
+                    "authenticated_attributes": [
+                        # We could keep parsing each type of attribute
+                        attribute.type.name
+                        for attribute in signer.authenticated_attributes
+                    ],
+                    "unauthenticated_attributes": [
+                        # We could keep parsing each type of attribute
+                        attribute.type.name
+                        for attribute in signer.unauthenticated_attributes
+                    ],
+                }
+                sub_sub_res.add_line(f"Version: {signer.version}")
+                sub_sub_res.add_line(f"Digest Algorithm: {signer.digest_algorithm.name}")
+                sub_sub_res.add_line(f"Authenticated Attributes: {', '.join(signer_dict['authenticated_attributes'])}")
+                sub_sub_res.add_line(
+                    f"Unauthenticated Attributes: {', '.join(signer_dict['unauthenticated_attributes'])}"
                 )
-                sub_sub_sub_res.add_line(f"Valid To: {datetime.datetime(*signer['cert']['valid_to']).isoformat()}")
-                sub_sub_sub_res.add_tag("cert.valid.end", datetime.datetime(*signer["cert"]["valid_to"]).isoformat())
-                # The sha1 thumbprint generated this way match what VirusTotal reports for 'certificate thumbprints'
-                sub_sub_sub_res.add_tag(
-                    "cert.thumbprint", hashlib.sha1(bytes.fromhex(signer["cert"]["raw_hex"])).hexdigest()
-                )
-                sub_sub_sub_res.add_tag(
-                    "cert.thumbprint", hashlib.sha256(bytes.fromhex(signer["cert"]["raw_hex"])).hexdigest()
-                )
-                sub_sub_sub_res.add_tag(
-                    "cert.thumbprint", hashlib.md5(bytes.fromhex(signer["cert"]["raw_hex"])).hexdigest()
-                )
-                sub_sub_res.add_subsection(sub_sub_sub_res)
-                sub_sub_res.add_line(f"Digest Algorithm: {signer['digest_algorithm']}")
-                sub_sub_res.add_line(f"Authenticated Attributes: {', '.join(signer['authenticated_attributes'])}")
-                sub_sub_res.add_line(f"Unauthenticated Attributes: {', '.join(signer['unauthenticated_attributes'])}")
+
+                if signer.cert is not None and signer.cert.issuer is not None:
+                    recurse_cert(signer.cert.issuer)
+                    extracted_cert_info = extract_cert_info(signer.cert, trusted_certs + extra_certs)
+                    signer_dict["cert"] = extracted_cert_info
+
+                    sub_sub_sub_res = ResultSection("Signer Certificate")
+                    sub_sub_sub_res.add_line(f"Version: {extracted_cert_info['version']}")
+                    sub_sub_sub_res.add_line(f"Subject: {extracted_cert_info['subject']}")
+                    sub_sub_sub_res.add_tag("cert.subject", extracted_cert_info["subject"])
+                    sub_sub_sub_res.add_line(f"Issuer: {extracted_cert_info['issuer']}")
+                    sub_sub_sub_res.add_tag("cert.issuer", extracted_cert_info["issuer"])
+                    sub_sub_sub_res.add_line(f"Serial Number: {extracted_cert_info['serial_number']}")
+                    sub_sub_sub_res.add_tag("cert.serial_no", extracted_cert_info["serial_number"])
+                    sub_sub_sub_res.add_line(
+                        f"Valid From: {datetime.datetime(*extracted_cert_info['valid_from']).isoformat()}"
+                    )
+                    sub_sub_sub_res.add_tag(
+                        "cert.valid.start", datetime.datetime(*extracted_cert_info["valid_from"]).isoformat()
+                    )
+                    sub_sub_sub_res.add_line(
+                        f"Valid To: {datetime.datetime(*extracted_cert_info['valid_to']).isoformat()}"
+                    )
+                    sub_sub_sub_res.add_tag(
+                        "cert.valid.end", datetime.datetime(*extracted_cert_info["valid_to"]).isoformat()
+                    )
+                    signer_raw_hex = bytes.fromhex(extracted_cert_info["raw_hex"])
+                    # The sha1 thumbprint generated this way match what VirusTotal reports for 'certificate thumbprints'
+                    sub_sub_sub_res.add_tag("cert.thumbprint", hashlib.sha1(signer_raw_hex).hexdigest())
+                    sub_sub_sub_res.add_tag("cert.thumbprint", hashlib.sha256(signer_raw_hex).hexdigest())
+                    sub_sub_sub_res.add_tag("cert.thumbprint", hashlib.md5(signer_raw_hex).hexdigest())
+                    sub_sub_res.add_subsection(sub_sub_sub_res)
+                else:
+                    sub_sub_sub_res = ResultSection("Signer Certificate", heuristic=Heuristic(13))
+                    sub_sub_res.add_subsection(sub_sub_sub_res)
+                    del signer_dict["cert"]
+
+                signature_dict["signers"].append(signer_dict)
                 sub_res.add_subsection(sub_sub_res)
-            for certificate_index, certificate in enumerate(signature["certificates"]):
+            for certificate_index, certificate in enumerate(signature.certificates):
+                if certificate.is_trusted_by(trusted_certs + extra_certs) != lief.PE.x509.VERIFICATION_FLAGS.OK:
+                    recurse_cert(certificate.issuer)
+                extracted_cert_info = extract_cert_info(certificate, trusted_certs + extra_certs)
+                signature_dict["certificates"].append(extracted_cert_info)
                 sub_sub_res = ResultSection(f"Certificate - {certificate_index + 1}")
-                sub_sub_res.add_line(f"Version: {certificate['version']}")
-                sub_sub_res.add_line(f"Subject: {certificate['subject']}")
-                sub_sub_res.add_line(f"Issuer: {certificate['issuer']}")
-                raw_cert = bytes.fromhex(certificate["raw_hex"])
+                sub_sub_res.add_line(f"Version: {extracted_cert_info['version']}")
+                sub_sub_res.add_line(f"Subject: {extracted_cert_info['subject']}")
+                sub_sub_res.add_line(f"Issuer: {extracted_cert_info['issuer']}")
+                raw_cert = bytes.fromhex(extracted_cert_info["raw_hex"])
                 file_name = f"certificate.{signature_index + 1}.{certificate_index + 1}"
                 temp_path = os.path.join(self.working_directory, file_name)
                 with open(temp_path, "wb") as myfile:
@@ -537,21 +1222,26 @@ class PE(ServiceBase):
                 sub_sub_res.add_line(f"SHA-1: {hashlib.sha1(raw_cert).hexdigest()}")
                 sub_sub_res.add_line(f"SHA-256: {hashlib.sha256(raw_cert).hexdigest()}")
                 sub_sub_res.add_line(f"MD5: {hashlib.md5(raw_cert).hexdigest()}")
-                sub_sub_res.add_line(f"Serial Number: {certificate['serial_number']}")
-                sub_sub_res.add_line(f"Valid From: {datetime.datetime(*certificate['valid_from']).isoformat()}")
-                sub_sub_res.add_line(f"Valid To: {datetime.datetime(*certificate['valid_to']).isoformat()}")
+                sub_sub_res.add_line(f"Serial Number: {extracted_cert_info['serial_number']}")
+                sub_sub_res.add_line(f"Valid From: {datetime.datetime(*extracted_cert_info['valid_from']).isoformat()}")
+                sub_sub_res.add_line(f"Valid To: {datetime.datetime(*extracted_cert_info['valid_to']).isoformat()}")
                 sub_res.add_subsection(sub_sub_res)
 
-            if signature["content_info"]["algorithm"] not in self.pe.authentihash:
+            self.features["signatures"].append(signature_dict)
+
+            if signature.content_info.digest_algorithm.name not in self.features["authentihash"]:
                 sub_res.add_subsection(
                     ResultSection("The signature does not match the program data", heuristic=Heuristic(1))
                 )
-            elif signature["content_info"]["digest"] != self.pe.authentihash[signature["content_info"]["algorithm"]]:
+            elif (
+                signature.content_info.digest.hex()
+                != self.features["authentihash"][signature.content_info.digest_algorithm.name]
+            ):
                 sub_res.add_subsection(
                     ResultSection("The signature does not match the program data", heuristic=Heuristic(1))
                 )
 
-            if len(signature["certificates"]) < 2:
+            if len(signature.certificates) < 2:
                 sub_res.add_subsection(
                     ResultSection(
                         "This is probably an error. Less than 2 certificates were found", heuristic=Heuristic(8)
@@ -562,12 +1252,18 @@ class PE(ServiceBase):
 
             self_signed_signer = False
             denied_algorithm = False
-            for signer in signature["signers"]:
-                if signer["encryption_algorithm"] not in ACCEPTED_ALGORITHMS:
+            for signer in signature.signers:
+                if signer.encryption_algorithm.name not in ACCEPTED_ALGORITHMS:
                     denied_algorithm = True
-                if signer["cert"]["issuer"] == signer["cert"]["subject"] and signer["cert"]["is_trusted"] != "OK":
-                    self_signed_signer = True
-                    break
+                # TODO Do not re-parse it again.
+                if signer.cert is not None:
+                    extracted_cert_info = extract_cert_info(signer.cert, trusted_certs + extra_certs)
+                    if (
+                        extracted_cert_info["issuer"] == extracted_cert_info["subject"]
+                        and extracted_cert_info["is_trusted"] != "OK"
+                    ):
+                        self_signed_signer = True
+                        break
 
             if denied_algorithm:
                 exploit_res = ResultSection("Invalid Encryption Algorithm used for signature", heuristic=Heuristic(9))
@@ -583,10 +1279,10 @@ class PE(ServiceBase):
                 res.add_subsection(sub_res)
                 continue
 
-            first_issuer = signature["certificates"][0]["issuer"]
+            first_issuer = signature.certificates[0].issuer
             all_same_issuer = True
-            for cert in signature["certificates"]:
-                if cert["issuer"] != first_issuer:
+            for cert in signature.certificates:
+                if cert.issuer != first_issuer:
                     all_same_issuer = False
                     break
             if all_same_issuer:
@@ -596,7 +1292,7 @@ class PE(ServiceBase):
                 res.add_subsection(sub_res)
                 continue
 
-            if signature["check"] != "OK":
+            if signature_dict["check"] != "OK":
                 sub_res.add_subsection(
                     ResultSection(
                         "Possibly self signed. "
@@ -608,46 +1304,57 @@ class PE(ServiceBase):
             res.add_subsection(sub_res)
         self.file_res.add_section(res)
 
+    def add_optional(self):
+        if self.request.deep_scan and self.binary.has_relocations:
+            self.features["relocations"] = [
+                {
+                    "virtual_address": relocation.virtual_address,
+                    "entries": [
+                        {
+                            "address": entrie.address,
+                            "data": entrie.data,
+                            "position": entrie.position,
+                            "size": entrie.size,
+                            "type": entrie.type.name,
+                        }
+                        for entrie in relocation.entries
+                    ],
+                }
+                for relocation in self.binary.relocations
+            ]
+
+    def _cleanup(self):
+        self.binary = None
+        self.features = None
+        super()._cleanup()
+
     def execute(self, request: ServiceRequest):
         request.result = Result()
         self.file_res = request.result
         self.request = request
 
-        self.lief_binary = lief.parse(request.file_path)
-        if self.lief_binary is None:
+        self.binary = lief.parse(request.file_path)
+        if self.binary is None:
             res = ResultSection("This file looks like a PE but failed loading.", heuristic=Heuristic(7))
             self.file_res.add_section(res)
             return
-
-        self.pe = pe.al_pe.AL_PE(
-            binary=self.lief_binary,
-            trusted_certs_paths=self.config.get("trusted_certs", []),
-            extract_relocations=request.deep_scan,
-        )
 
         self.check_timestamps()
         self.check_exe_resources()
         self.check_dataless_resources()
 
+        self.features = {}
         self.add_headers()
         self.add_sections()
         self.add_debug()
         self.add_exports()
         self.add_imports()
+        self.add_configuration()
         self.add_resources()
         self.add_signatures()
+        self.add_optional()
 
-        if self.lief_binary.has_resources and self.lief_binary.resources_manager.has_icons:
-            try:
-                for idx, icon in enumerate(self.lief_binary.resources_manager.icons):
-                    temp_path = os.path.join(self.working_directory, f"icon_{idx}.ico")
-                    icon.save(temp_path)
-                    request.add_supplementary(temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file")
-            except lief.corrupted:
-                res = ResultSection("This file contains heavily corrupted resources.", heuristic=Heuristic(13))
-                self.file_res.add_section(res)
-
-        temp_path = os.path.join(self.working_directory, "al_pe.json")
+        temp_path = os.path.join(self.working_directory, "features.json")
         with open(temp_path, "w") as myfile:
-            myfile.write(json.dumps(self.pe.__dict__))
-        request.add_supplementary(temp_path, "al_pe.json", "Features extracted from the PE file, as a JSON file")
+            myfile.write(json.dumps(self.features))
+        request.add_supplementary(temp_path, "features.json", "Features extracted from the PE file, as a JSON file")

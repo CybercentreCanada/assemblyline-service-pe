@@ -1,0 +1,687 @@
+{
+    "classification": "TLP:W",
+    "response": {
+        "milestones": {
+            "service_started": "2021-12-06T20:50:32.751938Z",
+            "service_completed": "2021-12-06T20:50:33.347171Z"
+        },
+        "service_version": "$SERVICE_TAG",
+        "service_name": "pe",
+        "service_tool_version": null,
+        "supplementary": [
+            {
+                "name": "features.json",
+                "sha256": "bbfcb331af9caae2c2d11e7df3eaaa55c24ee078e398b8f691c69b409cc293a9",
+                "description": "Features extracted from the PE file, as a JSON file",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmppyqqr_hg/features.json",
+                "is_section_image": false
+            }
+        ],
+        "extracted": [
+            {
+                "name": "overlay",
+                "sha256": "d989323cb9eafd6068401dc1feab31a59adbd84cdf06f37a422ad3d0a68b5271",
+                "description": "overlay extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmppyqqr_hg/overlay",
+                "is_section_image": false
+            }
+        ],
+        "service_context": null,
+        "service_debug_info": null
+    },
+    "result": {
+        "score": 1250,
+        "sections": [
+            {
+                "body": "Timestamp: 1536793850 (2018-09-12 23:10:50 +00:00 (UTC))\nEntrypoint: 0x5088f0\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 14.0\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_GUI\nNX: True\nPosition Independent: False\nOverlay size: 13504",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "linker": {
+                                "timestamp": [
+                                    1536793850,
+                                    "2018-09-12 23:10:50 +00:00 (UTC)"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Headers",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "build_id: 24215, count: 1, id: 258\nbuild_id: 0, count: 3, id: 151\nbuild_id: 24210, count: 1, id: 255\nbuild_id: 24215, count: 368, id: 261\nbuild_id: 0, count: 720, id: 1\nbuild_id: 30729, count: 41, id: 147\nbuild_id: 30729, count: 1, id: 132\nbuild_id: 30729, count: 16, id: 131\nbuild_id: 24215, count: 203, id: 260\nbuild_id: 24215, count: 35, id: 265\nbuild_id: 8168, count: 1, id: 10\nbuild_id: 7299, count: 3, id: 14\nbuild_id: 24123, count: 42, id: 260\nbuild_id: 24123, count: 67, id: 261\nbuild_id: 24123, count: 27, id: 259\nbuild_id: 41118, count: 1, id: 199\nbuild_id: 23013, count: 2, id: 261\nbuild_id: 40116, count: 33, id: 242\nbuild_id: 40116, count: 198, id: 243\nbuild_id: 40116, count: 26, id: 241",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Rich Headers - Key: 3247001902",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "SHA_512: 99b208641637c34393deb13af7d19789c34bd8c59f735c420bcb61baef24765a39fdf254215184c4139ae060ac262ddb2f099e202a31316bef5c3cd93c8bd23a\nSHA_384: c348a62011e753a4d9cf9034ea6579f16df20183531a227640fe3920acb9180b6ac6a3a1bdf62ee9235a319272661904\nSHA_256: ca4850ac13a9d218e99cc497846022d9abbd8943b11e4b273f578ed60baa778b\nSHA_1: 26f300f550c700a5c9294bebf2d406a05514229c\nMD5: 802dda0fff6f9beb14083e6548a2e2d4",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Authentihash",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Sections",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 0.0\nEntropy without padding: -0.0\nOffset: 1024\nSize: 0\nVirtual Size: 3424256\nCharacteristics: CNT_UNINITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE\nMD5: d41d8cd98f00b204e9800998ecf8427e",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    "UPX0"
+                                ],
+                                "hash": [
+                                    "d41d8cd98f00b204e9800998ecf8427e"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - UPX0",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 7.999887720337854\nEntropy without padding: 7.999887720337853\nOffset: 1024\nSize: 1852928\nVirtual Size: 1855488\nCharacteristics: CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE\nMD5: a04c20d3d0ea9f9b23c3b371480b99f5",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    "UPX1"
+                                ],
+                                "hash": [
+                                    "a04c20d3d0ea9f9b23c3b371480b99f5"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - UPX1",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.994840739564234, 7.99502509601356, 7.995073725171332, 7.995026600793957, 7.995274612322483, 7.99504411456976, 7.995080979775472, 7.995127838828113, 7.9947060083603265, 7.995027656443138, 7.995143814715465, 7.995353043032371, 7.994900233294833, 7.995001515214435, 7.9955389124280964, 7.9953531273256875, 7.9946363194761165, 7.995562070851464, 7.994874749652873, 7.9951571436124915, 7.995080502936287, 7.994636752326909, 7.995256378788262, 7.995717192895054, 7.996048797203445, 7.994667494953702, 7.995215748629032, 7.995862587049601, 7.994767798724516, 7.995038622523455, 7.994767316336845, 7.994727980589568, 7.995268135092911, 7.993725263845603, 7.995403773986126, 7.995007382490875, 7.99540086872182, 7.994329021069604, 7.995947337177543, 7.9950333259088255, 7.994956900438992, 7.9947068680298115, 7.995383595551612, 7.995663314178785, 7.995153829903841, 7.994837671522969, 7.9948125758087345, 7.9951336352316735, 7.995446890395271, 7.958011534092088]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 7.512067529444863\nEntropy without padding: 7.512067529444863\nOffset: 1853952\nSize: 204800\nVirtual Size: 204800\nCharacteristics: CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE\nMD5: 9b63248e98353427871746464b8067e5",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".rsrc"
+                                ],
+                                "hash": [
+                                    "9b63248e98353427871746464b8067e5"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .rsrc",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.751775481467326, 2.8182074171089804, 2.395836097622862, 3.840583794709715, 6.035983949309858, 5.501119726604451, 5.858810928878937, 4.972088600222352, 5.821520744549038, 5.046105131760539, 4.614838576280425, 5.519614963174108, 5.8146409258999, 4.42305583569556, 7.479952237406011, 7.9505983684275385, 7.948771532765251, 7.943707514203236, 7.941602173792288, 7.949054015767594, 7.950437451490524, 7.9444071058182075, 7.939331719120003, 7.9351328621410815, 7.940905117642183, 7.925777153457336, 7.934886849812073, 7.925317752622244, 7.559217879899179, 5.346542850188718, 7.37248500297503, 7.953357961762352, 7.966368325576004, 7.959712926782619, 7.949720926130852, 7.95869132795921, 7.9526037535175425, 7.958562960544229, 7.952524591059506, 7.958019863477806, 7.955579366182225, 7.958308360246956, 7.949362775938434, 7.947644905412281, 7.955347936376653, 7.955015196614053, 7.949741676778225, 7.841629277939418, 7.8472861895152075, 7.838156502949203]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "imports": {
+                                "sorted_sha1": [
+                                    "a74d28d4b1dd173e31a29e5bb50eeff3abfa8313"
+                                ],
+                                "md5": [
+                                    "8336bbd11386249a57e38bfbd5395425"
+                                ],
+                                "fuzzy": [
+                                    "6:dBJAEHGDzyRlbRmVOZ/EW8TJwUPeG/zb655Zh3JsrMQw5/KJug6VlaML1QtYbBn2:VA/DzqYOZDG2cQ5Xgu8CGAITQQXU0um"
+                                ],
+                                "sorted_fuzzy": [
+                                    "6:oI8TJwUPeG/zb655Zh3JsoZ/OEGDYBJAEtmVCyR6I9w5/KJug6VlaML1QtYbBnap:oMG29ZG/DoAPCHj5Xgu8CGAITQQXU0um"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Imports",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "LoadLibraryA, GetProcAddress, VirtualProtect, VirtualAlloc, VirtualFree, ExitProcess",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "KERNEL32.DLL",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "FreeSid",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "ADVAPI32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "412",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "COMCTL32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "GetSaveFileNameW",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "COMDLG32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "DnsFree",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "DNSAPI.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Pie",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "GDI32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "GdipFree",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "gdiplus.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "GetExtendedTcpTable",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "IPHLPAPI.DLL",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "AlphaBlend",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "MSIMG32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "OleRun",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "ole32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "4",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "OLEAUT32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "GetModuleBaseNameW",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "PSAPI.DLL",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "SetupDiGetClassDevsW",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "SETUPAPI.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "DragFinish",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "SHELL32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "176",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "SHLWAPI.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "GetDC",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "USER32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "VerQueryValueW",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "VERSION.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "FindCloseUrlCache",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "WININET.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "3",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "WS2_32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "WTSQuerySessionInformationW",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "WTSAPI32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Languages available: ENGLISH, SWEDISH\nSublanguages available: ENGLISH_US, SWEDISH\nManifest: <?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\">\n  <assemblyIdentity\n      version=\"1.0.0.0\"\n      processorArchitecture=\"*\"\n      name=\"client\"\n      type=\"win32\"\n  />\n  <description>uTorrent</description>\n\n  <!-- Enable Windows XP and higher themes with common controls -->\n  <dependency>\n    <dependentAssembly>\n      <assemblyIdentity\n        type=\"win32\"\n        name=\"Microsoft.Windows.Common-Controls\"\n        version=\"6.0.0.0\"\n        processorArchitecture=\"*\"\n        publicKeyToken=\"6595b64144ccf1df\"\n        language=\"*\"\n      />\n    </dependentAssembly>\n  </dependency>\n\n  <!-- Disable Windows Vista UAC compatability heuristics -->\n  <trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v2\">\n    <security>\n      <requestedPrivileges>\n        <requestedExecutionLevel level=\"asInvoker\"/>\n      </requestedPrivileges>\n    </security>\n  </trustInfo>\n  <compatibility xmlns=\"urn:schemas-microsoft-com:compatibility.v1\">\n    <application>\n      <!-- Windows 10 -->\n      <supportedOS Id=\"{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}\"/>\n      <!-- Windows 8.1 -->\n      <supportedOS Id=\"{1f676c76-80e1-4239-95bb-83d0f6d0da78}\"/>\n      <!-- Windows Vista -->\n      <supportedOS Id=\"{e2011457-1546-43c5-a5fe-008deee3d3f0}\"/>\n      <!-- Windows 7 -->\n      <supportedOS Id=\"{35138b9a-5d96-4fbd-8e2d-a2440225f93a}\"/>\n      <!-- Windows 8 -->\n      <supportedOS Id=\"{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}\"/>\n    </application>\n  </compatibility>\n  <!-- Enable Windows Vista-style font scaling on Vista -->\n  <asmv3:application xmlns:asmv3=\"urn:schemas-microsoft-com:asm.v3\">\n    <asmv3:windowsSettings xmlns=\"http://schemas.microsoft.com/SMI/2005/WindowsSettings\">\n      <dpiAware>false</dpiAware>\n    </asmv3:windowsSettings>\n  </asmv3:application>\n</assembly>\n",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "resources": {
+                                "language": [
+                                    "ENGLISH",
+                                    "SWEDISH"
+                                ],
+                                "name": [
+                                    "CSS",
+                                    "GIF",
+                                    "SPINNER",
+                                    "JS",
+                                    "Q",
+                                    "PNG"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Resources",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 13,
+                    "score": 200,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "HTML",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 13,
+                    "score": 200,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Icons",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Type: 0",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Version",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "file_date_LS: 0\nfile_date_MS: 0\nfile_flags: 32\nfile_flags_mask: 43\nfile_os: UNKNOWN\nfile_subtype: UNKNOWN\nfile_type: UNKNOWN\nfile_version_LS: 306777\nfile_version_MS: 458762\nproduct_version_LS: 306777\nproduct_version_MS: 458762\nsignature: 4277077181\nstruct_version: 65536",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "fixed_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "key: StringFileInfo\ntype: 1",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "versions": {
+                                "filename": [
+                                    "BitTorrent.exe"
+                                ],
+                                "description": [
+                                    "BitTorrent"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "string_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "key: 040904E4\ntype: 1\nlang: ENGLISH\nsublang: ENGLISH_US\ncode_page: WINDOWS_1252",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 3,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "langcode_items 1",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "SpecialBuild: stable34 stable\nProductVersion: 7.10.4.44633\nProductName: BitTorrent\nLegalCopyright: \u00a92018 BitTorrent, Inc. All Rights Reserved.\nOriginalFilename: BitTorrent.exe\nFileVersion: 7.10.4.44633\nFileDescription: BitTorrent\nCompanyName: BitTorrent Inc.\nInternalName: BitTorrent.exe",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 4,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "items",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "key: VarFileInfo\ntype: 1\ntranslations: 82052105",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "var_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Signatures",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 10,
+                    "score": 300,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Invalid PE Signature detected",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Version: 1\nAlgorithm: SHA_1\nContent Info Algorithm: SHA_1\nContent Info Digest: 81662a33778df31021e30202b5654a920dd2a523\nContent Info Content Type: 1.3.6.1.4.1.311.2.1.4",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Signature - 1",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 1,
+                    "score": 300,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "The signature does not match the program data",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 8,
+                    "score": 50,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "This is probably an error. Less than 2 certificates were found",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            }
+        ]
+    },
+    "sha256": "20097126978a3b9a0e1be7bbc474ab984f022c9591109f9c054d8975689bd61b",
+    "drop_file": false,
+    "temp_submission_data": {}
+}

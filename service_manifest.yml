@@ -137,6 +137,12 @@ heuristics:
     name: Corrupted PDB filename
     score: 400
 
+  - description: >-
+       Invalid authentihash.
+    filetype: "executable/windows"
+    heur_id: 17
+    name: Invalid authentihash
+    score: 200
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG

@@ -1,0 +1,994 @@
+{
+    "classification": "TLP:W",
+    "response": {
+        "milestones": {
+            "service_started": "2021-11-25T18:39:16.593080Z",
+            "service_completed": "2021-11-25T18:39:18.268287Z"
+        },
+        "service_version": "$SERVICE_TAG",
+        "service_name": "pe",
+        "service_tool_version": null,
+        "supplementary": [
+            {
+                "name": "features.json",
+                "sha256": "b4a31afe750adaaaccf23f7dcae7f918fe9aad46b5101ff98513f5f0d9d8112d",
+                "description": "Features extracted from the PE file, as a JSON file",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmp7wzjsbdm/features.json",
+                "is_section_image": false
+            }
+        ],
+        "extracted": [
+            {
+                "name": "overlay",
+                "sha256": "4cb72c23c88bbb9e2c89c328162008909a0ffc6a374da2c091cb288697e4db75",
+                "description": "overlay extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmp7wzjsbdm/overlay",
+                "is_section_image": false
+            },
+            {
+                "name": "certificate.1.1",
+                "sha256": "1c1983300c10fb262c0b2304b7be15aaba10ae356ebbbb177583dc44774eb080",
+                "description": "certificate.1.1 extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmp7wzjsbdm/certificate.1.1",
+                "is_section_image": false
+            },
+            {
+                "name": "certificate.1.2",
+                "sha256": "2ade3fa71fa82fed7022b48b5c6dbace27ea4c48b9bfd98db84ee13f7b706fb6",
+                "description": "certificate.1.2 extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmp7wzjsbdm/certificate.1.2",
+                "is_section_image": false
+            },
+            {
+                "name": "certificate.1.3",
+                "sha256": "f38406e540d7a9d90cb4a9479299640ffb6df9e224ecc7a01c0d9558d8dad77d",
+                "description": "certificate.1.3 extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmp7wzjsbdm/certificate.1.3",
+                "is_section_image": false
+            },
+            {
+                "name": "certificate.1.4",
+                "sha256": "6a3c4d89cd6297023831b9c4f718ce71cf8753a2be49e021245ec6ba5066ff00",
+                "description": "certificate.1.4 extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmp7wzjsbdm/certificate.1.4",
+                "is_section_image": false
+            },
+            {
+                "name": "certificate.1.5",
+                "sha256": "31a6d7325c3861ba092bc5d3d25a7d4fef62ebf9a3490f65897b87623ecc1295",
+                "description": "certificate.1.5 extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmp7wzjsbdm/certificate.1.5",
+                "is_section_image": false
+            }
+        ],
+        "service_context": null,
+        "service_debug_info": null
+    },
+    "result": {
+        "score": 0,
+        "sections": [
+            {
+                "body": "Timestamp: 1156763755 (2006-08-28 11:15:55 +00:00 (UTC))\nEntrypoint: 0x153330\nMachine: AMD64\nMagic: PE32_PLUS\nImage version: 5.2\nLinker version: 8.0\nOperating System version: 5.2\nSubsystem version: 5.2\nSubsystem: WINDOWS_CUI\nNX: False\nPosition Independent: False\nOverlay size: 6936",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "linker": {
+                                "timestamp": [
+                                    1156763755,
+                                    "2006-08-28 11:15:55 +00:00 (UTC)"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Headers",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "build_id: 30806, count: 1, id: 120\nbuild_id: 2179, count: 1, id: 94\nbuild_id: 30826, count: 348, id: 110\nbuild_id: 30806, count: 1, id: 122\nbuild_id: 0, count: 401, id: 1\nbuild_id: 30402, count: 27, id: 123\nbuild_id: 30402, count: 17, id: 109\nbuild_id: 30402, count: 1, id: 125\nbuild_id: 30402, count: 3, id: 110\nbuild_id: 30826, count: 1, id: 109",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Rich Headers - Key: 768179967",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "SHA_512: ed19452afb6fb62b2c3e2dffd56eb90ed042cd48d5905ee06cc7c7600424979c79e34646becc133a91b1a9a2d25649bb252aaa5d7007442348993fa98dac857b\nSHA_384: edae6636176faae7e5873c850b0a6736cbc0dd7fe5e4272df60d5dea393403209c5d1e118497d95476a10c9e7025ca4c\nSHA_256: 51e1a99011400a98e93256834ff6351e764f11336f20eba1c74c2a4d849dcbfa\nSHA_1: 34d52afbce6ace2a55f277b5d80ed5f886c79753\nMD5: 96822487ab10269d2f7be84907590047",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Authentihash",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Sections",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 6.1488373655839625\nEntropy without padding: 6.148869952693023\nOffset: 1024\nSize: 2979840\nVirtual Size: 2979814\nCharacteristics: CNT_CODE, MEM_EXECUTE, MEM_READ\nMD5: c17e3acb19a915ecfda0c3cc3d27caa1",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".text"
+                                ],
+                                "hash": [
+                                    "c17e3acb19a915ecfda0c3cc3d27caa1"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .text",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.724635928188912, 5.270495433748227, 4.117036840853755, 3.8132066794338755, 5.893134683427319, 5.019117526742938, 5.170654676410931, 6.201066303024661, 6.173308119184149, 6.14777259158655, 6.157112704991713, 4.963132321530802, 6.150482851244162, 6.2486458721733324, 5.980682398866855, 5.997841340887385, 6.128020139408138, 6.107675561277459, 5.991374041798844, 6.099068676610779, 6.089151593766351, 6.159170897065593, 6.09643362426125, 6.067690971713534, 5.959041980699203, 6.107410131807109, 6.422271415436097, 6.2571380158176675, 6.21318832646039, 6.1051413045632765, 6.187406259224005, 6.273653852717752, 6.1562121667640595, 6.029484984109912, 6.2354325300214475, 6.278732056236953, 6.326077406226008, 6.135903781783693, 6.254646431849384, 6.218291603748722, 6.236132947881881, 5.94309320134681, 4.719722507439608, 4.7912490138088595, 4.614194845699263, 4.766604815083174, 4.817263289635073, 4.831515268103288, 4.812323496432324, 5.475565662012739]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 2.5088630404740013\nEntropy without padding: 2.5088630404740013\nOffset: 2980864\nSize: 88064\nVirtual Size: 135728\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\nMD5: 550c7208417d68a20ab2b8845365c8e1",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".data"
+                                ],
+                                "hash": [
+                                    "550c7208417d68a20ab2b8845365c8e1"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .data",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.696208180478719, 2.72434314752454, 4.09117512704831, 1.818521500704714, 5.275635462090542, 4.5116729264409505, 1.1760361743278944, 2.433703805526984, 3.173300978907096, 1.7235465754135033, 0.5030635753367881, 0.3690735327518387, 0.3990124855654942, 0.5562023752452068, 0.531462112304584, 1.5017583140369661, 0.2942694423593365, 2.389414139751381, 2.5174444534500395, 4.260609355413129, 3.055359960148953, 1.5328557416946458, 0.7232019805185351, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 2.0116166401896853, 2.9668497226193247, 0.19700140432490443, -0.0, 0.25926373699374716, 2.8929416234569256, 3.395348573637008, 2.777791893776355, 3.01760052967645, -0.0, 1.5726340253841882, 1.134526783274329, 3.5831831043277074, 3.6242569312299446, 1.8348159218466324, 3.96501260090281, 2.3245831516486244, 1.5731198552689323, 3.3242464893303594, 2.963946890926458]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 6.429350733856019\nEntropy without padding: 6.435340788787397\nOffset: 3068928\nSize: 196608\nVirtual Size: 196344\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ\nMD5: ccaf2f6fb27322420d3b65a97e110f63",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".pdata"
+                                ],
+                                "hash": [
+                                    "ccaf2f6fb27322420d3b65a97e110f63"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .pdata",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.420604258795088, 5.522847883632776, 5.392906072499502, 5.532548817420494, 5.400465047247765, 5.402559250687348, 5.591798505948224, 5.351118763664974, 5.308930032812283, 5.467353486845798, 5.248917441202994, 5.141133832381509, 5.358492567362544, 5.512370728202282, 5.3868904491956755, 5.329221566802584, 5.410516597996315, 5.374710124851979, 5.517684658947485, 5.310512002823179, 5.51118117079998, 5.4037142676438705, 5.178204880837413, 5.515659091741785, 5.296298871895253, 5.284391488682949, 5.58750134217005, 5.47745728602032, 5.402352286608082, 5.449374137156585, 5.552349710963795, 5.420608548709133, 5.5545031823923905, 5.427562377661199, 5.280570374372006, 5.584373930092427, 5.385009961193721, 5.332770438852132, 5.481506913193398, 5.487764802141275, 5.2859381448086395, 5.531786847745417, 5.554176059407411, 5.3854548100440995, 5.484126237004813, 5.351870209899479, 5.447029270231002, 5.488901922313809, 5.278750858668356, 5.3302674416172]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 4.528870552940497\nEntropy without padding: 4.528870552940497\nOffset: 3265536\nSize: 508416\nVirtual Size: 512000\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ\nMD5: e726ad7174e608de75ef88e0e939a220",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".rsrc"
+                                ],
+                                "hash": [
+                                    "e726ad7174e608de75ef88e0e939a220"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .rsrc",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.439024488886111, 6.0805111397682, 6.370035188620047, 4.287313673486171, 3.400576557837563, 3.3934505071822993, 3.3147845784577123, 3.377013069536518, 3.3098386081831435, 3.339493356525053, 3.9906106906654535, 3.376884796687286, 3.340806759109374, 3.307499274033361, 3.319670464761722, 3.2392703927746997, 3.3150800359781494, 3.994338833020571, 3.328629308668217, 3.3459986259820136, 3.315259333328041, 3.2665825475559345, 3.2679953251337324, 3.293741653703839, 4.0108847625291375, 3.282473302541427, 3.3213286152794796, 3.2384070560542013, 3.296591289996665, 3.2530774745892357, 3.2649471831706443, 4.434999245077296, 5.170928570379335, 5.143021353660067, 5.174159055305867, 5.734951138402708, 5.397867681567536, 5.3583469874353655, 5.468532133848234, 6.191787810708171, 6.143741940618203, 6.2764423359233525, 3.3247756564091935, 3.332348074460983, 3.2752364041105024, 3.270213737236089, 3.2554725708012944, 3.2160348615922105, 3.3233723879169, 3.815763700314676]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 4.304736746299206\nEntropy without padding: 4.312305003235091\nOffset: 3773952\nSize: 24064\nVirtual Size: 24002\nCharacteristics: CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\nMD5: ec2a994e30182af39200e135c6e1e02b",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".reloc"
+                                ],
+                                "hash": [
+                                    "ec2a994e30182af39200e135c6e1e02b"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .reloc",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.05832526747708, 5.206472823646476, 5.254329129600183, 5.249500734078309, 5.2790358815967275, 5.378120672308879, 5.106592712869869, 5.113950183151878, 5.100932665153653, 5.204314471397445, 5.097234960196619, 5.035403278271347, 5.110764167640921, 5.044485605292003, 5.1533524996061875, 5.313353364128566, 5.272385423264116, 5.239326864292489, 5.203519767127801, 5.172840003265559, 5.110658306430321, 5.239309974574958, 5.236910463960595, 5.051754587982783, 4.959923260630784, 5.323476865132889, 5.303432915523503, 5.072683039648157, 4.992150402224891, 4.984173607276802, 5.18097181152305, 5.043873103463797, 0.8477678874862646, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Debug",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Timestamp: 1156763613 (2006-08-28 11:13:33 +00:00 (UTC))\nVersion: 0.0\nCV_Signature: PDB_70\nFilename: d:\\S3FTE_MAIN\\OUTPUT\\Babylon\\NTRETAIL\\amd64\\msfte.pdb",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "pdb_filename": [
+                                "d:\\S3FTE_MAIN\\OUTPUT\\Babylon\\NTRETAIL\\amd64\\msfte.pdb"
+                            ]
+                        }
+                    }
+                },
+                "title_text": "CODEVIEW",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Name: MSFTE.DLL\nVersion: 0.0\nTimestamp: 1156763451 (2006-08-28 11:10:51 +00:00 (UTC))",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "exports": {
+                                "module_name": [
+                                    "MSFTE.DLL"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Exports",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Name: ?CoTaskAllocator@@3VCCoTaskAllocator@@A, ordinal: 253\nName: ??0CDriveInfo@@QEAA@PEBGK@Z, ordinal: 254\nName: ??0CFullPath@@QEAA@PEBG@Z, ordinal: 255\nName: ??0CFullPropSpec@@QEAA@AEBV0@@Z, ordinal: 256\nName: ??0CMainTracer@@QEAA@XZ, ordinal: 257\nName: ??0CMemSerStream@@QEAA@PEAEK@Z, ordinal: 258\nName: ??0CMergeLog@@QEAA@HAEAVPRcovStorageObj@@@Z, ordinal: 259\nName: ??0CMutex@@QEAA@XZ, ordinal: 260\nName: ??0CPersDeCompLatest@@QEAA@PEAVCPersIndex@@AEAUBitOffset@@AEBVCKeyBuf@@PEBVCKey@@KHH@Z, ordinal: 261\nName: ??0CPersDeCompLatest@@QEAA@PEAVCPersIndex@@KHH@Z, ordinal: 262\nName: ??0CPersIndex@@QEAA@AEAVPStorage@@KKW4EDiskIndexType@CDiskIndex@@W4EOpenMode@1@HPEAVCWidSet@@KPEAVCMergeLog@@PEBVCStringNormalizer@@AEAVCStatisticsForMerges@@PEAVCResManager@@@Z, ordinal: 263\nName: ??0CPidLookupTable@@QEAA@XZ, ordinal: 264\nName: ??0CSpyClient@@QEAA@XZ, ordinal: 265\nName: ??0CUnNormalizer@@QEAA@XZ, ordinal: 266\nName: ??0CWin32RegAccess@@QEAA@PEAUHKEY__@@PEBG1@Z, ordinal: 267\nName: ??0CiStorage@@QEAA@PEBGKPEAUICiCAdviseStatus@@KH@Z, ordinal: 268\nName: ??0XAct@@QEAA@XZ, ordinal: 269\nName: ??1CAllocStorageVariant@@IEAA@XZ, ordinal: 270\nName: ??1CMainTracer@@QEAA@XZ, ordinal: 271\nName: ??1CMemSerStream@@UEAA@XZ, ordinal: 272\nName: ??1CMutex@@QEAA@XZ, ordinal: 273\nName: ??1CPersDeComp@@UEAA@XZ, ordinal: 274\nName: ??1CPhysStorage@@UEAA@XZ, ordinal: 275\nName: ??1CPidLookupTable@@QEAA@XZ, ordinal: 276\nName: ??1CSpyClient@@QEAA@XZ, ordinal: 277\nName: ??1CWin32RegAccess@@QEAA@XZ, ordinal: 278\nName: ??1CiStorage@@UEAA@XZ, ordinal: 279\nName: ??4CMainTracer@@QEAAAEAV0@AEBV0@@Z, ordinal: 280\nName: ??4CMutex@@QEAAAEAV0@AEBV0@@Z, ordinal: 281\nName: ??BCMutex@@QEAAPEAXXZ, ordinal: 282\nName: ?CIShutdown@@YAXXZ, ordinal: 283\nName: ChangeToInitialDirectory, ordinal: 284\nName: ?CleanUp@CMainTracer@@AEAAXXZ, ordinal: 285\nName: ?Close@CMutex@@QEAAXXZ, ordinal: 286\nName: ?ComposeTraceMsgComponents@CMainTracer@@AEAAXKPEBDHW4_ERROR_LEVEL@@KPEAGAEAHH@Z, ordinal: 287\nName: ?ContainsDrive@CDriveInfo@@SAHPEBG@Z, ordinal: 288\nName: ?CreateKey@CWin32RegAccess@@QEAAHPEBGAEAH@Z, ordinal: 289\nName: ?CreateOrVerifyDirectory@CMainTracer@@CAXPEBDH@Z, ordinal: 290\nName: ?CurWorkId@CPersDeComp@@UEAAKXZ, ordinal: 291\nName: ?Disable@CMainTracer@@QEAAXXZ, ordinal: 292\nName: ?DoWriteModeSeek@CiDirectory@@IEAAKAEBVCKeyBuf@@KKAEAVCiDirSearchPageSmart@@@Z, ordinal: 293\nName: ?Enable@CMainTracer@@QEAAXPEBDH0H0HH@Z, ordinal: 294\nName: ?Enum@CWin32RegAccess@@QEAAHPEAGK@Z, ordinal: 295\nName: ?EnumerateProperty@CPidLookupTable@@QEAAKAEAVCFullPropSpec@@AEAI@Z, ordinal: 296\nName: FIsExchange, ordinal: 297\nName: ?FTESystemExceptionTranslator@@YAXIPEAU_EXCEPTION_POINTERS@@@Z, ordinal: 298\nName: ?FinishKeyLoad@CPersDeCompLatest@@EEAAXXZ, ordinal: 299\nName: ?Free@CSmartBuffer@@QEAAXXZ, ordinal: 300\nName: ?Get@CWin32RegAccess@@QEAAHPEBGPEAGI@Z, ordinal: 301\nName: ?GetBlob@CMemDeSerStream@@UEAAXPEAEK@Z, ordinal: 302\nName: ?GetByte@CMemDeSerStream@@UEAAEXZ, ordinal: 303\nName: ?GetChar@CMemDeSerStream@@UEAAXPEADK@Z, ordinal: 304\nName: ?GetDefaultDirectory@CMainTracer@@CAXPEAVCAutoString@@@Z, ordinal: 305\nName: ?GetDefaultName@CMainTracer@@CAXPEAVCAutoString@@@Z, ordinal: 306\nName: ?GetDiskSpace@CDriveInfo@@QEAAXAEA_J0@Z, ordinal: 307\nName: ?GetDouble@CMemDeSerStream@@UEAANXZ, ordinal: 308\nName: ?GetDrive@CDriveInfo@@SAXPEBGPEAG@Z, ordinal: 309\nName: ?GetErrorStringFromCode@CMainTracer@@CAKKPEADK@Z, ordinal: 310\nName: ?GetErrorStringFromCode@CMainTracer@@CAKKPEAGK@Z, ordinal: 311\nName: ?GetFlagValue@CMainTracer@@QEBAKK@Z, ordinal: 312\nName: ?GetFloat@CMemDeSerStream@@UEAAMXZ, ordinal: 313\nName: ?GetGUID@CMemDeSerStream@@UEAAXAEAU_GUID@@@Z, ordinal: 314\nName: ?GetKey@CKeyDeComp@@UEAAPEBVCKeyBuf@@PEAUBitOffset@@@Z, ordinal: 315\nName: ?GetKey@CKeyDeComp@@UEAAPEBVCKeyBuf@@XZ, ordinal: 316\nName: ?GetLong@CMemDeSerStream@@UEAAJXZ, ordinal: 317\nName: ?GetNextEventFromQueue@CSpyClient@@QEAAJAEAIAEAKAEAPEAE0@Z, ordinal: 318\nName: ?GetNextKey@CPersDeComp@@UEAAPEBVCKeyBuf@@PEAUBitOffset@@@Z, ordinal: 319\nName: ?GetOffset@CKeyDeComp@@QEAAXAEAUBitOffset@@@Z, ordinal: 320\nName: ?GetRankCursor@CPersDeComp@@UEAAPEAVCRankCursor@@MMAEAV?$XRefPtr@VCAvdlTest@@@@KAEAH@Z, ordinal: 321\nName: ?GetRankVector@CCursor@@UEAAKPEAJK@Z, ordinal: 322\nName: ?GetRankingInfo@CPersDeComp@@UEBAXAEAK0AEAM1@Z, ordinal: 323\nName: ?GetSectorSize@CDriveInfo@@QEAAKXZ, ordinal: 324\nName: ?GetServerVersion@CSpyClient@@QEAAJAEAK@Z, ordinal: 325\nName: ?GetStackTrace@@YAXPEADK@Z, ordinal: 326\nName: ?GetStackTraceW@@YAXPEAGK@Z, ordinal: 327\nName: ?GetString@CMemDeSerStream@@UEAAPEADXZ, ordinal: 328\nName: ?GetTagErrorLevel@CMainTracer@@QEBA?AW4_ERROR_LEVEL@@K@Z, ordinal: 329\nName: ?GetULong@CMemDeSerStream@@UEAAKXZ, ordinal: 330\nName: ?GetUShort@CMemDeSerStream@@UEAAGXZ, ordinal: 331\nName: ?GetWChar@CMemDeSerStream@@UEAAXPEAGK@Z, ordinal: 332\nName: ?GetWString@CMemDeSerStream@@UEAAPEAGXZ, ordinal: 333\nName: ?Init@CMutex@@QEAAXPEAD@Z, ordinal: 334\nName: ?Init@CPidLookupTable@@QEAAHPEAVPRcovStorageObj@@@Z, ordinal: 335\nName: ?Init@CSpyClient@@QEAAJXZ, ordinal: 336\nName: ?IsBadAlloc@CMainTracer@@QEAAHPEAXPEBDH@Z, ordinal: 337\nName: ?IsBadHandle@CMainTracer@@QEAAHPEAXPEBDH@Z, ordinal: 338\nName: ?IsBadResult@CMainTracer@@QEAAHJPEBDH@Z, ordinal: 339\nName: ?IsEnabled@CMainTracer@@QEBAHXZ, ordinal: 340\nName: ?IsFailure@CMainTracer@@QEAAHHPEBDH@Z, ordinal: 341\nName: ?IsInitialized@CMutex@@QEAAHXZ, ordinal: 342\nName: ?IsRunningAsService@CMainTracer@@QEBAHXZ, ordinal: 343\nName: ?IsSameDrive@CDriveInfo@@QEAAHPEBG@Z, ordinal: 344\nName: ?IsWriteProtected@CDriveInfo@@QEAAHXZ, ordinal: 345\nName: ?LoadKey@CPersDeComp@@IEAAXXZ, ordinal: 346\nName: ?LocalIsDebuggerPresent@CMainTracer@@QEAAHPEAH@Z, ordinal: 347\nName: ?MakePath@CFullPath@@QEAAXPEBG@Z, ordinal: 348\nName: ?MapPage@CiDirSearchPageSmart@@QEAAXK@Z, ordinal: 349\nName: ?Next@CPersDeComp@@UEAAKXZ, ordinal: 350\nName: ?NextOccurrence@CPersDeComp@@UEAAKXZ, ordinal: 351\nName: ?NextWorkId@CPersDeComp@@UEAAKXZ, ordinal: 352\nName: ?Occurrence@CPersDeComp@@UEAAKXZ, ordinal: 353\nName: ?OccurrenceCount@CPersDeComp@@UEAAKXZ, ordinal: 354\nName: ?OpenExistingWidSet@CWidSet@@SAPEAV1@AEAVPStorage@@KIHPEAVCResManager@@@Z, ordinal: 355\nName: ?PeekULong@CMemDeSerStream@@UEAAKXZ, ordinal: 356\nName: ?PutBlob@CMemSerStream@@UEAAXPEBEK@Z, ordinal: 357\nName: ?PutByte@CMemSerStream@@UEAAXE@Z, ordinal: 358\nName: ?PutChar@CMemSerStream@@UEAAXPEBDK@Z, ordinal: 359\nName: ?PutDouble@CMemSerStream@@UEAAXN@Z, ordinal: 360\nName: ?PutFloat@CMemSerStream@@UEAAXM@Z, ordinal: 361\nName: ?PutGUID@CMemSerStream@@UEAAXAEBU_GUID@@@Z, ordinal: 362\nName: ?PutLong@CMemSerStream@@UEAAXJ@Z, ordinal: 363\nName: ?PutString@CMemSerStream@@UEAAXPEBD@Z, ordinal: 364\nName: ?PutULong@CMemSerStream@@UEAAXK@Z, ordinal: 365\nName: ?PutUShort@CMemSerStream@@UEAAXG@Z, ordinal: 366\nName: ?PutWChar@CMemSerStream@@UEAAXPEBGK@Z, ordinal: 367\nName: ?PutWString@CMemSerStream@@UEAAXPEBG@Z, ordinal: 368\nName: ?QueryPidLookupTable@CiStorage@@QEAAPEAVPRcovStorageObj@@K@Z, ordinal: 369\nName: ?RatioFinished@CPersDeComp@@UEAAXAEAK0@Z, ordinal: 370\nName: ?RawVaTraceSZ@CMainTracer@@QEAAXPEBDPEAD@Z, ordinal: 371\nName: ?RawVaTraceSZ@CMainTracer@@QEAAXPEBGPEAD@Z, ordinal: 372\nName: ?ReOpenStream@CPhysIndex@@EEAAXXZ, ordinal: 373\nName: ?Read@CCiFile@@QEAAXXZ, ordinal: 374\nName: ?Refill@CSmartBuffer@@QEAAXK@Z, ordinal: 375\nName: ?RegisterTagSZ@CMainTracer@@QEAAXPEBDAEAK@Z, ordinal: 376\nName: ?Release@CMutex@@QEAAXXZ, ordinal: 377\nName: ?ReleaseAll@CMainTracer@@QEAAXXZ, ordinal: 378\nName: ?Remove@CWin32RegAccess@@QEAAHPEBG@Z, ordinal: 379\nName: ?RemoveKey@CWin32RegAccess@@QEAAHPEBG@Z, ordinal: 380\nName: ?RemoveKeyDeep@CWin32RegAccess@@QEAAHPEBG@Z, ordinal: 381\nName: ?ResetType@CAllocStorageVariant@@IEAAXAEAVPMemoryAllocator@@@Z, ordinal: 382\nName: ?ReturnBuffer@CPhysStorage@@QEAAXKHH@Z, ordinal: 383\nName: ?SeekToRankIndex@CPersDeComp@@IEAAXXZ, ordinal: 384\nName: ?SeekWorkId@CPersDeComp@@UEAAKK@Z, ordinal: 385\nName: ?Set@CWin32RegAccess@@QEAAHPEBG0@Z, ordinal: 386\nName: ?SetErrorLevel@CMainTracer@@QEAAJPEBDW4_ERROR_LEVEL@@@Z, ordinal: 387\nName: SetExchange, ordinal: 388\nName: ?SetFlagBitMaskOff@CMainTracer@@QEAAXKK@Z, ordinal: 389\nName: SetInitialDirectory, ordinal: 390\nName: ?SetPosition@CBitStream@@QEAAXK@Z, ordinal: 391\nName: ?SetProperty@CFullPropSpec@@QEAAHPEBG@Z, ordinal: 392\nName: ?SetProperty@CFullPropSpec@@QEAAXK@Z, ordinal: 393\nName: ?SkipBlob@CMemDeSerStream@@UEAAXK@Z, ordinal: 394\nName: ?SkipByte@CMemDeSerStream@@UEAAXXZ, ordinal: 395\nName: ?SkipChar@CMemDeSerStream@@UEAAXK@Z, ordinal: 396\nName: ?SkipDouble@CMemDeSerStream@@UEAAXXZ, ordinal: 397\nName: ?SkipFloat@CMemDeSerStream@@UEAAXXZ, ordinal: 398\nName: ?SkipGUID@CMemDeSerStream@@UEAAXXZ, ordinal: 399\nName: ?SkipLong@CMemDeSerStream@@UEAAXXZ, ordinal: 400\nName: ?SkipULong@CMemDeSerStream@@UEAAXXZ, ordinal: 401\nName: ?SkipUShort@CMemDeSerStream@@UEAAXXZ, ordinal: 402\nName: ?SkipWChar@CMemDeSerStream@@UEAAXK@Z, ordinal: 403\nName: ?TraceAssert@CMainTracer@@QEAAXPEBD0H@Z, ordinal: 404\nName: ?TraceAssertSZ@CMainTracer@@QEAAXPEBD00H@Z, ordinal: 405\nName: ?TraceSZ@CMainTracer@@QEAAXKPEBDHW4_ERROR_LEVEL@@K0ZZ, ordinal: 406\nName: ?TraceSZ@CMainTracer@@QEAAXKPEBDHW4_ERROR_LEVEL@@KPEBGZZ, ordinal: 407\nName: ?TraceWString@CMainTracer@@QEAAXKPEBDHW4_ERROR_LEVEL@@KPEBGH@Z, ordinal: 408\nName: ?TrimDirectory@CMainTracer@@AEAAXAEAKPEBD@Z, ordinal: 409\nName: ?TryToConnect@CSpyClient@@QEAAJXZ, ordinal: 410\nName: ?UnNormalizeKey@CUnNormalizer@@QEAAXAEBVCKeyBuf@@AEAUtagPROPVARIANT@@PEAGK@Z, ordinal: 411\nName: ?VaTraceSZ@CMainTracer@@QEAAXKPEBDHW4_ERROR_LEVEL@@K0PEAD@Z, ordinal: 412\nName: ?VaTraceSZ@CMainTracer@@QEAAXKPEBDHW4_ERROR_LEVEL@@KPEBGPEAD@Z, ordinal: 413\nName: ?WaitForData@CSpyClient@@QEAAJK@Z, ordinal: 414\nName: ?WorkIdCount@CPersDeComp@@UEAAKXZ, ordinal: 415\nName: ?WorkIdCountEstimate@CPersDeComp@@UEAAXAEAUtag_WIDCOUNT_ESTIMATE@@@Z, ordinal: 416\nName: ?ciDelete@@YAXPEAX@Z, ordinal: 417\nName: ?ciNew@@YAPEAX_K@Z, ordinal: 418\nName: ?ciNewNoThrow@@YAPEAX_K@Z, ordinal: 419\nName: AccessDebugTracer, ordinal: 420\nName: AccessRetailTracer, ordinal: 421\nName: CIMakeICommand, ordinal: 422\nName: CIState, ordinal: 423\nName: CITextToFullTreeEx, ordinal: 424\nName: CITextToSelectTree, ordinal: 425\nName: CleanupCOM, ordinal: 426\nName: DllCanUnloadNow, ordinal: 427\nName: DllGetClassObject, ordinal: 428\nName: DllRegisterServer, ordinal: 429\nName: DllUnregisterServer, ordinal: 430\nName: ForceMasterMerge, ordinal: 431\nName: GetFDService, ordinal: 432\nName: GetFTEAdmin, ordinal: 433\nName: GetFTEInstanceInfo, ordinal: 434\nName: GetFilterPool, ordinal: 435\nName: GetLanguageResourcePool, ordinal: 436\nName: LoadIFilter, ordinal: 437\nName: LoadTextFilter, ordinal: 438\nName: PerfmonClose, ordinal: 439\nName: PerfmonCollect, ordinal: 440\nName: PerfmonFDClose, ordinal: 441\nName: PerfmonFDCollect, ordinal: 442\nName: PerfmonFDOpen, ordinal: 443\nName: PerfmonIDXClose, ordinal: 444\nName: PerfmonIDXCollect, ordinal: 445\nName: PerfmonIDXOpen, ordinal: 446\nName: PerfmonOpen, ordinal: 447\nName: RetailTracerDisable, ordinal: 448\nName: RetailTracerEnable, ordinal: 449\nName: RetailTracerReleaseAll, ordinal: 450\nName: SetFDSignatureVerificationPolicy, ordinal: 451\nName: UseLowFragmentationHeap, ordinal: 452",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "exports": {
+                                "function_name": [
+                                    "?CoTaskAllocator@@3VCCoTaskAllocator@@A",
+                                    "??0CDriveInfo@@QEAA@PEBGK@Z",
+                                    "??0CFullPath@@QEAA@PEBG@Z",
+                                    "??0CFullPropSpec@@QEAA@AEBV0@@Z",
+                                    "??0CMainTracer@@QEAA@XZ",
+                                    "??0CMemSerStream@@QEAA@PEAEK@Z",
+                                    "??0CMergeLog@@QEAA@HAEAVPRcovStorageObj@@@Z",
+                                    "??0CMutex@@QEAA@XZ",
+                                    "??0CPersDeCompLatest@@QEAA@PEAVCPersIndex@@AEAUBitOffset@@AEBVCKeyBuf@@PEBVCKey@@KHH@Z",
+                                    "??0CPersDeCompLatest@@QEAA@PEAVCPersIndex@@KHH@Z",
+                                    "??0CPersIndex@@QEAA@AEAVPStorage@@KKW4EDiskIndexType@CDiskIndex@@W4EOpenMode@1@HPEAVCWidSet@@KPEAVCMergeLog@@PEBVCStringNormalizer@@AEAVCStatisticsForMerges@@PEAVCResManager@@@Z",
+                                    "??0CPidLookupTable@@QEAA@XZ",
+                                    "??0CSpyClient@@QEAA@XZ",
+                                    "??0CUnNormalizer@@QEAA@XZ",
+                                    "??0CWin32RegAccess@@QEAA@PEAUHKEY__@@PEBG1@Z",
+                                    "??0CiStorage@@QEAA@PEBGKPEAUICiCAdviseStatus@@KH@Z",
+                                    "??0XAct@@QEAA@XZ",
+                                    "??1CAllocStorageVariant@@IEAA@XZ",
+                                    "??1CMainTracer@@QEAA@XZ",
+                                    "??1CMemSerStream@@UEAA@XZ",
+                                    "??1CMutex@@QEAA@XZ",
+                                    "??1CPersDeComp@@UEAA@XZ",
+                                    "??1CPhysStorage@@UEAA@XZ",
+                                    "??1CPidLookupTable@@QEAA@XZ",
+                                    "??1CSpyClient@@QEAA@XZ",
+                                    "??1CWin32RegAccess@@QEAA@XZ",
+                                    "??1CiStorage@@UEAA@XZ",
+                                    "??4CMainTracer@@QEAAAEAV0@AEBV0@@Z",
+                                    "??4CMutex@@QEAAAEAV0@AEBV0@@Z",
+                                    "??BCMutex@@QEAAPEAXXZ",
+                                    "?CIShutdown@@YAXXZ",
+                                    "ChangeToInitialDirectory",
+                                    "?CleanUp@CMainTracer@@AEAAXXZ",
+                                    "?Close@CMutex@@QEAAXXZ",
+                                    "?ComposeTraceMsgComponents@CMainTracer@@AEAAXKPEBDHW4_ERROR_LEVEL@@KPEAGAEAHH@Z",
+                                    "?ContainsDrive@CDriveInfo@@SAHPEBG@Z",
+                                    "?CreateKey@CWin32RegAccess@@QEAAHPEBGAEAH@Z",
+                                    "?CreateOrVerifyDirectory@CMainTracer@@CAXPEBDH@Z",
+                                    "?CurWorkId@CPersDeComp@@UEAAKXZ",
+                                    "?Disable@CMainTracer@@QEAAXXZ",
+                                    "?DoWriteModeSeek@CiDirectory@@IEAAKAEBVCKeyBuf@@KKAEAVCiDirSearchPageSmart@@@Z",
+                                    "?Enable@CMainTracer@@QEAAXPEBDH0H0HH@Z",
+                                    "?Enum@CWin32RegAccess@@QEAAHPEAGK@Z",
+                                    "?EnumerateProperty@CPidLookupTable@@QEAAKAEAVCFullPropSpec@@AEAI@Z",
+                                    "FIsExchange",
+                                    "?FTESystemExceptionTranslator@@YAXIPEAU_EXCEPTION_POINTERS@@@Z",
+                                    "?FinishKeyLoad@CPersDeCompLatest@@EEAAXXZ",
+                                    "?Free@CSmartBuffer@@QEAAXXZ",
+                                    "?Get@CWin32RegAccess@@QEAAHPEBGPEAGI@Z",
+                                    "?GetBlob@CMemDeSerStream@@UEAAXPEAEK@Z",
+                                    "?GetByte@CMemDeSerStream@@UEAAEXZ",
+                                    "?GetChar@CMemDeSerStream@@UEAAXPEADK@Z",
+                                    "?GetDefaultDirectory@CMainTracer@@CAXPEAVCAutoString@@@Z",
+                                    "?GetDefaultName@CMainTracer@@CAXPEAVCAutoString@@@Z",
+                                    "?GetDiskSpace@CDriveInfo@@QEAAXAEA_J0@Z",
+                                    "?GetDouble@CMemDeSerStream@@UEAANXZ",
+                                    "?GetDrive@CDriveInfo@@SAXPEBGPEAG@Z",
+                                    "?GetErrorStringFromCode@CMainTracer@@CAKKPEADK@Z",
+                                    "?GetErrorStringFromCode@CMainTracer@@CAKKPEAGK@Z",
+                                    "?GetFlagValue@CMainTracer@@QEBAKK@Z",
+                                    "?GetFloat@CMemDeSerStream@@UEAAMXZ",
+                                    "?GetGUID@CMemDeSerStream@@UEAAXAEAU_GUID@@@Z",
+                                    "?GetKey@CKeyDeComp@@UEAAPEBVCKeyBuf@@PEAUBitOffset@@@Z",
+                                    "?GetKey@CKeyDeComp@@UEAAPEBVCKeyBuf@@XZ",
+                                    "?GetLong@CMemDeSerStream@@UEAAJXZ",
+                                    "?GetNextEventFromQueue@CSpyClient@@QEAAJAEAIAEAKAEAPEAE0@Z",
+                                    "?GetNextKey@CPersDeComp@@UEAAPEBVCKeyBuf@@PEAUBitOffset@@@Z",
+                                    "?GetOffset@CKeyDeComp@@QEAAXAEAUBitOffset@@@Z",
+                                    "?GetRankCursor@CPersDeComp@@UEAAPEAVCRankCursor@@MMAEAV?$XRefPtr@VCAvdlTest@@@@KAEAH@Z",
+                                    "?GetRankVector@CCursor@@UEAAKPEAJK@Z",
+                                    "?GetRankingInfo@CPersDeComp@@UEBAXAEAK0AEAM1@Z",
+                                    "?GetSectorSize@CDriveInfo@@QEAAKXZ",
+                                    "?GetServerVersion@CSpyClient@@QEAAJAEAK@Z",
+                                    "?GetStackTrace@@YAXPEADK@Z",
+                                    "?GetStackTraceW@@YAXPEAGK@Z",
+                                    "?GetString@CMemDeSerStream@@UEAAPEADXZ",
+                                    "?GetTagErrorLevel@CMainTracer@@QEBA?AW4_ERROR_LEVEL@@K@Z",
+                                    "?GetULong@CMemDeSerStream@@UEAAKXZ",
+                                    "?GetUShort@CMemDeSerStream@@UEAAGXZ",
+                                    "?GetWChar@CMemDeSerStream@@UEAAXPEAGK@Z",
+                                    "?GetWString@CMemDeSerStream@@UEAAPEAGXZ",
+                                    "?Init@CMutex@@QEAAXPEAD@Z",
+                                    "?Init@CPidLookupTable@@QEAAHPEAVPRcovStorageObj@@@Z",
+                                    "?Init@CSpyClient@@QEAAJXZ",
+                                    "?IsBadAlloc@CMainTracer@@QEAAHPEAXPEBDH@Z",
+                                    "?IsBadHandle@CMainTracer@@QEAAHPEAXPEBDH@Z",
+                                    "?IsBadResult@CMainTracer@@QEAAHJPEBDH@Z",
+                                    "?IsEnabled@CMainTracer@@QEBAHXZ",
+                                    "?IsFailure@CMainTracer@@QEAAHHPEBDH@Z",
+                                    "?IsInitialized@CMutex@@QEAAHXZ",
+                                    "?IsRunningAsService@CMainTracer@@QEBAHXZ",
+                                    "?IsSameDrive@CDriveInfo@@QEAAHPEBG@Z",
+                                    "?IsWriteProtected@CDriveInfo@@QEAAHXZ",
+                                    "?LoadKey@CPersDeComp@@IEAAXXZ",
+                                    "?LocalIsDebuggerPresent@CMainTracer@@QEAAHPEAH@Z",
+                                    "?MakePath@CFullPath@@QEAAXPEBG@Z",
+                                    "?MapPage@CiDirSearchPageSmart@@QEAAXK@Z",
+                                    "?Next@CPersDeComp@@UEAAKXZ",
+                                    "?NextOccurrence@CPersDeComp@@UEAAKXZ",
+                                    "?NextWorkId@CPersDeComp@@UEAAKXZ",
+                                    "?Occurrence@CPersDeComp@@UEAAKXZ",
+                                    "?OccurrenceCount@CPersDeComp@@UEAAKXZ",
+                                    "?OpenExistingWidSet@CWidSet@@SAPEAV1@AEAVPStorage@@KIHPEAVCResManager@@@Z",
+                                    "?PeekULong@CMemDeSerStream@@UEAAKXZ",
+                                    "?PutBlob@CMemSerStream@@UEAAXPEBEK@Z",
+                                    "?PutByte@CMemSerStream@@UEAAXE@Z",
+                                    "?PutChar@CMemSerStream@@UEAAXPEBDK@Z",
+                                    "?PutDouble@CMemSerStream@@UEAAXN@Z",
+                                    "?PutFloat@CMemSerStream@@UEAAXM@Z",
+                                    "?PutGUID@CMemSerStream@@UEAAXAEBU_GUID@@@Z",
+                                    "?PutLong@CMemSerStream@@UEAAXJ@Z",
+                                    "?PutString@CMemSerStream@@UEAAXPEBD@Z",
+                                    "?PutULong@CMemSerStream@@UEAAXK@Z",
+                                    "?PutUShort@CMemSerStream@@UEAAXG@Z",
+                                    "?PutWChar@CMemSerStream@@UEAAXPEBGK@Z",
+                                    "?PutWString@CMemSerStream@@UEAAXPEBG@Z",
+                                    "?QueryPidLookupTable@CiStorage@@QEAAPEAVPRcovStorageObj@@K@Z",
+                                    "?RatioFinished@CPersDeComp@@UEAAXAEAK0@Z",
+                                    "?RawVaTraceSZ@CMainTracer@@QEAAXPEBDPEAD@Z",
+                                    "?RawVaTraceSZ@CMainTracer@@QEAAXPEBGPEAD@Z",
+                                    "?ReOpenStream@CPhysIndex@@EEAAXXZ",
+                                    "?Read@CCiFile@@QEAAXXZ",
+                                    "?Refill@CSmartBuffer@@QEAAXK@Z",
+                                    "?RegisterTagSZ@CMainTracer@@QEAAXPEBDAEAK@Z",
+                                    "?Release@CMutex@@QEAAXXZ",
+                                    "?ReleaseAll@CMainTracer@@QEAAXXZ",
+                                    "?Remove@CWin32RegAccess@@QEAAHPEBG@Z",
+                                    "?RemoveKey@CWin32RegAccess@@QEAAHPEBG@Z",
+                                    "?RemoveKeyDeep@CWin32RegAccess@@QEAAHPEBG@Z",
+                                    "?ResetType@CAllocStorageVariant@@IEAAXAEAVPMemoryAllocator@@@Z",
+                                    "?ReturnBuffer@CPhysStorage@@QEAAXKHH@Z",
+                                    "?SeekToRankIndex@CPersDeComp@@IEAAXXZ",
+                                    "?SeekWorkId@CPersDeComp@@UEAAKK@Z",
+                                    "?Set@CWin32RegAccess@@QEAAHPEBG0@Z",
+                                    "?SetErrorLevel@CMainTracer@@QEAAJPEBDW4_ERROR_LEVEL@@@Z",
+                                    "SetExchange",
+                                    "?SetFlagBitMaskOff@CMainTracer@@QEAAXKK@Z",
+                                    "SetInitialDirectory",
+                                    "?SetPosition@CBitStream@@QEAAXK@Z",
+                                    "?SetProperty@CFullPropSpec@@QEAAHPEBG@Z",
+                                    "?SetProperty@CFullPropSpec@@QEAAXK@Z",
+                                    "?SkipBlob@CMemDeSerStream@@UEAAXK@Z",
+                                    "?SkipByte@CMemDeSerStream@@UEAAXXZ",
+                                    "?SkipChar@CMemDeSerStream@@UEAAXK@Z",
+                                    "?SkipDouble@CMemDeSerStream@@UEAAXXZ",
+                                    "?SkipFloat@CMemDeSerStream@@UEAAXXZ",
+                                    "?SkipGUID@CMemDeSerStream@@UEAAXXZ",
+                                    "?SkipLong@CMemDeSerStream@@UEAAXXZ",
+                                    "?SkipULong@CMemDeSerStream@@UEAAXXZ",
+                                    "?SkipUShort@CMemDeSerStream@@UEAAXXZ",
+                                    "?SkipWChar@CMemDeSerStream@@UEAAXK@Z",
+                                    "?TraceAssert@CMainTracer@@QEAAXPEBD0H@Z",
+                                    "?TraceAssertSZ@CMainTracer@@QEAAXPEBD00H@Z",
+                                    "?TraceSZ@CMainTracer@@QEAAXKPEBDHW4_ERROR_LEVEL@@K0ZZ",
+                                    "?TraceSZ@CMainTracer@@QEAAXKPEBDHW4_ERROR_LEVEL@@KPEBGZZ",
+                                    "?TraceWString@CMainTracer@@QEAAXKPEBDHW4_ERROR_LEVEL@@KPEBGH@Z",
+                                    "?TrimDirectory@CMainTracer@@AEAAXAEAKPEBD@Z",
+                                    "?TryToConnect@CSpyClient@@QEAAJXZ",
+                                    "?UnNormalizeKey@CUnNormalizer@@QEAAXAEBVCKeyBuf@@AEAUtagPROPVARIANT@@PEAGK@Z",
+                                    "?VaTraceSZ@CMainTracer@@QEAAXKPEBDHW4_ERROR_LEVEL@@K0PEAD@Z",
+                                    "?VaTraceSZ@CMainTracer@@QEAAXKPEBDHW4_ERROR_LEVEL@@KPEBGPEAD@Z",
+                                    "?WaitForData@CSpyClient@@QEAAJK@Z",
+                                    "?WorkIdCount@CPersDeComp@@UEAAKXZ",
+                                    "?WorkIdCountEstimate@CPersDeComp@@UEAAXAEAUtag_WIDCOUNT_ESTIMATE@@@Z",
+                                    "?ciDelete@@YAXPEAX@Z",
+                                    "?ciNew@@YAPEAX_K@Z",
+                                    "?ciNewNoThrow@@YAPEAX_K@Z",
+                                    "AccessDebugTracer",
+                                    "AccessRetailTracer",
+                                    "CIMakeICommand",
+                                    "CIState",
+                                    "CITextToFullTreeEx",
+                                    "CITextToSelectTree",
+                                    "CleanupCOM",
+                                    "DllCanUnloadNow",
+                                    "DllGetClassObject",
+                                    "DllRegisterServer",
+                                    "DllUnregisterServer",
+                                    "ForceMasterMerge",
+                                    "GetFDService",
+                                    "GetFTEAdmin",
+                                    "GetFTEInstanceInfo",
+                                    "GetFilterPool",
+                                    "GetLanguageResourcePool",
+                                    "LoadIFilter",
+                                    "LoadTextFilter",
+                                    "PerfmonClose",
+                                    "PerfmonCollect",
+                                    "PerfmonFDClose",
+                                    "PerfmonFDCollect",
+                                    "PerfmonFDOpen",
+                                    "PerfmonIDXClose",
+                                    "PerfmonIDXCollect",
+                                    "PerfmonIDXOpen",
+                                    "PerfmonOpen",
+                                    "RetailTracerDisable",
+                                    "RetailTracerEnable",
+                                    "RetailTracerReleaseAll",
+                                    "SetFDSignatureVerificationPolicy",
+                                    "UseLowFragmentationHeap"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Entries",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "imports": {
+                                "sorted_sha1": [
+                                    "032ab22f077f14f51db863b870c7bf70a36013eb"
+                                ],
+                                "md5": [
+                                    "7ed3774ae9b3c9a35e463d835850be63"
+                                ],
+                                "fuzzy": [
+                                    "192:UeFP3lkF+SUliZJh00PHnHBHwEEIXmeJihx4z/:lFPSF+SuQnBwEEIXmeJihGz/"
+                                ],
+                                "sorted_fuzzy": [
+                                    "192:Hd7AMSfo7PcSraOKJCzXmiBksC3nsXHPeQON/:nX7PcSrgmXmiisC3sPeQON/"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Imports",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "SetEndOfFile, SetFilePointer, FlushFileBuffers, SetFileTime, GetFileSize, ResumeThread, SleepEx, WriteFileEx, ReadFileEx, PeekNamedPipe, QueueUserAPC, SetProcessWorkingSetSize, WaitForMultipleObjectsEx, GetThreadTimes, RaiseException, GlobalFree, GlobalUnlock, GlobalLock, GlobalAlloc, MapViewOfFileEx, CompareStringW, GetStringTypeExW, CompareStringA, WideCharToMultiByte, UnmapViewOfFile, OpenFileMappingW, MapViewOfFile, GetShortPathNameW, DisableThreadLibraryCalls, LoadLibraryW, GetProcAddress, FreeLibrary, GetDriveTypeW, GetDiskFreeSpaceW, GetDiskFreeSpaceExW, GetVolumeInformationW, DeviceIoControl, CreateFileW, LCMapStringW, SetLastError, GetSystemDefaultLCID, GetTickCount, WaitForSingleObjectEx, SetEvent, ResetEvent, CreateEventW, FindFirstFileW, FindClose, GetCurrentThreadId, GetFileAttributesW, FindNextFileW, CopyFileExW, VirtualFree, VirtualAlloc, GetModuleFileNameW, GetFileInformationByHandle, WriteFile, GetCurrentThread, GetCurrentProcess, IsValidLocale, SystemTimeToFileTime, GetCalendarInfoA, FileTimeToSystemTime, lstrlenA, MultiByteToWideChar, GetFileAttributesExW, WaitForSingleObject, GetUserDefaultLCID, SetCurrentDirectoryW, GetLocaleInfoW, SearchPathW, GetSystemTime, InitializeCriticalSectionAndSpinCount, GetModuleHandleW, GetSystemInfo, HeapCreate, HeapDestroy, SetNamedPipeHandleState, WaitNamedPipeW, GetOverlappedResult, TransactNamedPipe, CancelIo, WaitForMultipleObjects, GetComputerNameW, HeapAlloc, HeapFree, HeapSize, CreateMutexW, OpenEventW, DeleteTimerQueueEx, CreateTimerQueue, TlsGetValue, TlsSetValue, GetCurrentProcessId, TlsAlloc, IsValidCodePage, IsDBCSLeadByte, SetFilePointerEx, Sleep, DeleteFileW, GetCPInfoExW, DebugBreak, IsDebuggerPresent, ReleaseMutex, CreateMutexA, GetVersionExA, FormatMessageA, FormatMessageW, GetModuleHandleA, LocalFree, LocalAlloc, FlushViewOfFile, OutputDebugStringA, GetSystemDirectoryA, GetEnvironmentVariableA, GetModuleFileNameA, CreateDirectoryA, CreateFileA, GetLocalTime, DeleteFileA, CopyFileA, CreateFileMappingA, OutputDebugStringW, FindNextFileA, FindFirstFileA, SetErrorMode, SetProcessAffinityMask, GetProcessAffinityMask, GetSystemTimeAsFileTime, lstrcmpW, LoadLibraryExW, GetSystemDirectoryW, DeleteTimerQueueTimer, CreateTimerQueueTimer, VirtualQueryEx, ReadProcessMemory, CreateProcessW, GlobalMemoryStatusEx, TerminateProcess, CompareFileTime, GetFileTime, lstrcpynW, SetThreadLocale, GetThreadLocale, FileTimeToLocalFileTime, CreateFileMappingW, ReleaseSemaphore, CreateSemaphoreW, GetFullPathNameW, GetTempPathW, CreateDirectoryW, RemoveDirectoryW, ConnectNamedPipe, DisconnectNamedPipe, CreateNamedPipeW, BindIoCompletionCallback, QueueUserWorkItem, VerifyVersionInfoW, VerSetConditionMask, CreateThread, TryEnterCriticalSection, GetStringTypeW, IsDBCSLeadByteEx, GetCPInfo, FoldStringW, lstrlenW, EnterCriticalSection, LeaveCriticalSection, InitializeCriticalSection, __C_specific_handler, GetLastError, lstrcmpiW, CloseHandle, ReadFile, DeleteCriticalSection",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "KERNEL32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "LoadStringW, MessageBoxA, wsprintfW, CharUpperBuffW",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "USER32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "RegDeleteKeyW, RegDeleteValueW, RegEnumKeyW, RegSetValueExW, RegOpenKeyW, RegConnectRegistryW, ImpersonateLoggedOnUser, OpenThreadToken, RevertToSelf, RegCreateKeyExW, OpenProcessToken, GetTokenInformation, GetUserNameW, InitializeAcl, InitializeSecurityDescriptor, GetSecurityDescriptorLength, EqualSid, FreeSid, AllocateAndInitializeSid, SetSecurityDescriptorDacl, RegNotifyChangeKeyValue, RegEnumKeyExW, RegCloseKey, RegQueryValueExW, RegOpenKeyExW, SetSecurityDescriptorSacl, GetSidSubAuthority, GetAclInformation, GetAce, AddAce, CopySid, GetLengthSid, IsValidSid, InitializeSid, GetSidLengthRequired, AddAccessAllowedAce, AddAccessDeniedAce, SetSecurityDescriptorOwner, SetSecurityDescriptorGroup, DeregisterEventSource, ReportEventW, RegisterEventSourceW, RegEnumValueW, ConvertStringSidToSidW, LookupAccountNameW",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "ADVAPI32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "CoCreateInstance, CoGetClassObject, CoTaskMemAlloc, CreateStreamOnHGlobal, CoTaskMemFree, StringFromGUID2, StgOpenStorage, CoCreateGuid, StringFromCLSID, CoDisconnectObject, CLSIDFromProgID, CLSIDFromString, CoFileTimeNow, PropVariantCopy, PropVariantClear, CoCreateFreeThreadedMarshaler",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "ole32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "26, 15, 42, 77, 23, 18, 24, 17, 20, 19, 194, 147, 16, 9, 2, 7, 184, 4, 102, 149, 27, 10, 37, 12, 201, 8, 6, 200, 411, 150, 82, 220, 185, 41, 38",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "OLEAUT32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "_vsnprintf, _onexit, __dllonexit, ??1type_info@@UEAA@XZ, ?terminate@@YAXXZ, wcschr, iswspace, memmove, wcsstr, towupper, memchr, swscanf, sprintf, malloc, realloc, _ultow, isalpha, wcsspn, fclose, _strnicmp, fgets, towlower, _wfopen, _errno, exp, strcspn, isdigit, qsort, _wcsupr, _itow, iswdigit, _snwprintf, _wtoi, _ltow, _wcslwr, _ui64tow, strncpy, strncmp, strrchr, _stricmp, _iob, _ltoa, _snprintf, _i64tow, strerror, wcsncmp, logf, div, _HUGE, fprintf, __CxxFrameHandler, _wcsnicmp, wcscspn, iswalpha, wcstol, wcsrchr, _wcsicmp, wcsncpy, wcstoul, _vsnwprintf, memset, _CxxThrowException, free, ?_set_se_translator@@YAP6AXIPEAU_EXCEPTION_POINTERS@@@ZP6AXI0@Z@Z, memcpy, _initterm",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "msvcrt.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "RtlUpcaseUnicodeChar, NtClose, RtlNtStatusToDosError, NtQueryInformationProcess",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "ntdll.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "EnumProcessModules, GetModuleBaseNameW",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "PSAPI.DLL",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "GetFileVersionInfoSizeW, GetFileVersionInfoW, VerQueryValueW",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "VERSION.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "EnumerateLoadedModules64",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "dbghelp.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "WinVerifyTrust",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "WINTRUST.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "RpcStringFreeW, UuidToStringW, UuidCreate, UuidToStringA, RpcStringFreeA, UuidFromStringW",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "RPCRT4.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Languages available: CHINESE, GERMAN, ENGLISH, SPANISH, FRENCH, ITALIAN, JAPANESE, KOREAN\nSublanguages available: ENGLISH_US, CHINESE_SIMPLIFIED, ITALIAN, FRENCH, DEFAULT, GERMAN, SPANISH_MODERN",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "resources": {
+                                "language": [
+                                    "CHINESE",
+                                    "GERMAN",
+                                    "ENGLISH",
+                                    "SPANISH",
+                                    "FRENCH",
+                                    "ITALIAN",
+                                    "JAPANESE",
+                                    "KOREAN"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Resources",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Type: 0",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Version",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "file_date_LS: 0\nfile_date_MS: 0\nfile_flags: 0\nfile_flags_mask: 63\nfile_os: NT_WINDOWS32\nfile_subtype: UNKNOWN\nfile_type: DLL\nfile_version_LS: 447479808\nfile_version_MS: 786432\nproduct_version_LS: 447479808\nproduct_version_MS: 786432\nsignature: 4277077181\nstruct_version: 65536",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "fixed_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "key: StringFileInfo\ntype: 1",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "versions": {
+                                "filename": [
+                                    "msfte.dll"
+                                ],
+                                "description": [
+                                    "PKM \u53ef\u57f7\u884c\u6a94"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "string_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "key: 040404B0\ntype: 1\nlang: CHINESE\nsublang: DEFAULT\ncode_page: UTF_16",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 3,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "langcode_items 1",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Comments: PKM \u53ef\u57f7\u884c\u6a94\nOriginalFilename: msfte.dll\nFileVersion: 12.0.6828.0\nLegalCopyright: Copyright (C) Microsoft Corp. 2001.  All rights reserved.\nInternalName: msfte.dll\nCompanyName: Microsoft Corporation\nFileDescription: PKM \u53ef\u57f7\u884c\u6a94\nProductVersion: 12.0.6828.0\nLegalTrademarks: Microsoft (R) is a registered trademark of Microsoft Corporation.\\x0d\nWindows(TM) is a trademark of Microsoft Corporation.\nProductName: MSSearch",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 4,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "items",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "key: VarFileInfo\ntype: 1\ntranslations: 78644228",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "var_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Signatures",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 2,
+                    "score": 0,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "This file is signed",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Version: 1\nAlgorithm: SHA_1\nContent Info Algorithm: SHA_1\nContent Info Digest: 34d52afbce6ace2a55f277b5d80ed5f886c79753\nContent Info Content Type: 1.3.6.1.4.1.311.2.1.4",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Signature - 1",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Version: 1\nDigest Algorithm: SHA_1\nAuthenticated Attributes: CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST, SPC_SP_OPUS_INFO\nUnauthenticated Attributes: PKCS9_COUNTER_SIGNATURE",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Signer - 1",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Version: 3\nSubject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation\nIssuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, OU=Copyright (c) 2000 Microsoft Corp., CN=Microsoft Code Signing PCA\nSerial Number: 61469ecb000400000065\nValid From: 2006-04-04T19:43:46\nValid To: 2007-10-04T19:53:46",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 3,
+                "heuristic": null,
+                "tags": {
+                    "cert": {
+                        "subject": [
+                            "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation"
+                        ],
+                        "issuer": [
+                            "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, OU=Copyright (c) 2000 Microsoft Corp., CN=Microsoft Code Signing PCA"
+                        ],
+                        "serial_no": [
+                            "61469ecb000400000065"
+                        ],
+                        "valid": {
+                            "start": [
+                                "2006-04-04T19:43:46"
+                            ],
+                            "end": [
+                                "2007-10-04T19:53:46"
+                            ]
+                        },
+                        "thumbprint": [
+                            "564e01066387f26c912010d06bd78d3cf1e845ab",
+                            "31a6d7325c3861ba092bc5d3d25a7d4fef62ebf9a3490f65897b87623ecc1295",
+                            "5fc18a70cd3f8950d5d7ac668e804a71"
+                        ]
+                    }
+                },
+                "title_text": "Signer Certificate",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Version: 3\nSubject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA\nIssuer: C=ZA, ST=Western Cape, L=Durbanville, O=Thawte, OU=Thawte Certification, CN=Thawte Timestamping CA\nSHA-1: f46ac0c6efbb8c6a14f55f09e2d37df4c0de012d\nSHA-256: 1c1983300c10fb262c0b2304b7be15aaba10ae356ebbbb177583dc44774eb080\nMD5: 6823267ab35ec7a5449904bb4d8041a7\nSerial Number: 47bf1995df8d524643f7db6d480d31a4\nValid From: 2003-12-04T00:00:00\nValid To: 2013-12-03T23:59:59",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Certificate - 1",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Version: 3\nSubject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer\nIssuer: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA\nSHA-1: 817e78267300cb0fe5d631357851db366123a690\nSHA-256: 2ade3fa71fa82fed7022b48b5c6dbace27ea4c48b9bfd98db84ee13f7b706fb6\nMD5: 5340e91a17595750554527215846ee71\nSerial Number: 0de92bf0d4d82988183205095e9a7688\nValid From: 2003-12-04T00:00:00\nValid To: 2008-12-03T23:59:59",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Certificate - 2",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Version: 3\nSubject: OU=Copyright (c) 1997 Microsoft Corp., OU=Microsoft Corporation, CN=Microsoft Root Authority\nIssuer: OU=Copyright (c) 1997 Microsoft Corp., OU=Microsoft Corporation, CN=Microsoft Root Authority\nSHA-1: a43489159a520f0d93d032ccaf37e7fe20a8b419\nSHA-256: f38406e540d7a9d90cb4a9479299640ffb6df9e224ecc7a01c0d9558d8dad77d\nMD5: 2a954eca79b2874573d92d90baf99fb6\nSerial Number: 00c1008b3c3c8811d13ef663ecdf40\nValid From: 1997-01-10T07:00:00\nValid To: 2020-12-31T07:00:00",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Certificate - 3",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Version: 3\nSubject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, OU=Copyright (c) 2000 Microsoft Corp., CN=Microsoft Code Signing PCA\nIssuer: OU=Copyright (c) 1997 Microsoft Corp., OU=Microsoft Corporation, CN=Microsoft Root Authority\nSHA-1: d07ea64088a80085f01bd40aa4ead82f470482a6\nSHA-256: 6a3c4d89cd6297023831b9c4f718ce71cf8753a2be49e021245ec6ba5066ff00\nMD5: 90c0f7b4b26ee553f4bd0dad3f58520d\nSerial Number: 6a0b994fc0001dab11dac402a16627ba\nValid From: 2006-04-04T17:44:14\nValid To: 2012-04-26T07:00:00",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Certificate - 4",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Version: 3\nSubject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation\nIssuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, OU=Copyright (c) 2000 Microsoft Corp., CN=Microsoft Code Signing PCA\nSHA-1: 564e01066387f26c912010d06bd78d3cf1e845ab\nSHA-256: 31a6d7325c3861ba092bc5d3d25a7d4fef62ebf9a3490f65897b87623ecc1295\nMD5: 5fc18a70cd3f8950d5d7ac668e804a71\nSerial Number: 61469ecb000400000065\nValid From: 2006-04-04T19:43:46\nValid To: 2007-10-04T19:53:46",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Certificate - 5",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            }
+        ]
+    },
+    "sha256": "cbb751a8b17b5a857b152a188f7981d5eba85a6562de06d4fb5be6cd129b837b",
+    "drop_file": false,
+    "temp_submission_data": {}
+}

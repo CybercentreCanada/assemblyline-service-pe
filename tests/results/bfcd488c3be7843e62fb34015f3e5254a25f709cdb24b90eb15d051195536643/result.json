@@ -1,0 +1,538 @@
+{
+    "classification": "TLP:W",
+    "response": {
+        "milestones": {
+            "service_started": "2021-11-25T18:40:18.047181Z",
+            "service_completed": "2021-11-25T18:40:18.101743Z"
+        },
+        "service_version": "$SERVICE_TAG",
+        "service_name": "pe",
+        "service_tool_version": null,
+        "supplementary": [
+            {
+                "name": "features.json",
+                "sha256": "92cf4726bab5d63fd73c5fc35e2605d0ab0d085d6793d55be9f69eb9e3ea25f8",
+                "description": "Features extracted from the PE file, as a JSON file",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpb9t53nyw/features.json",
+                "is_section_image": false
+            }
+        ],
+        "extracted": [],
+        "service_context": null,
+        "service_debug_info": null
+    },
+    "result": {
+        "score": 200,
+        "sections": [
+            {
+                "body": "0 -> 24 -> 1",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": {
+                    "heur_id": 15,
+                    "score": 200,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Resource directories that does not contain a leaf data node",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Timestamp: 0 (1970-01-01 00:00:00 +00:00 (UTC))\nEntrypoint: 0x1000\nMachine: AMD64\nMagic: PE32_PLUS\nImage version: 0.0\nLinker version: 2.29\nOperating System version: 4.0\nSubsystem version: 5.2\nSubsystem: WINDOWS_CUI\nNX: False\nPosition Independent: False\nOverlay size: 0",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "linker": {
+                                "timestamp": [
+                                    0,
+                                    "1970-01-01 00:00:00 +00:00 (UTC)"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Headers",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "SHA_512: a32f4a7a3bb43f7092328050ec53cd2ef1c17f9f4891817b8696089a0176cc400cfa58ef68e7f8502138efcc757f30a4874681e60f2fcef0a43f73ccd5cc1057\nSHA_384: 6f8006134142ffff4b5b0fb6b521eb7bfc35e054af39407cb5811e903bfcc1df55aa5f2a5ff8ce7bc34b920fdc11b6aa\nSHA_256: b73657999ddf4a94f0bb7de717020aa84e1f2ae928013174f357f1feab5e3216\nSHA_1: 41ef6731217bbadfd241d4f2e24728bc9da43ecb\nMD5: d8eea530ab79d0e0b06bb141267ffdcb",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Authentihash",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Sections",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 5.630429255422935\nEntropy without padding: 5.869324269824714\nOffset: 1024\nSize: 5632\nVirtual Size: 5240\nCharacteristics: CNT_CODE, ALIGN_1BYTES, CNT_INITIALIZED_DATA, ALIGN_4BYTES, ALIGN_8BYTES, ALIGN_16BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_1024BYTES, ALIGN_2048BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_EXECUTE, MEM_READ\nMD5: 36c1bb292382c420d43ed7c09089c48c",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".text"
+                                ],
+                                "hash": [
+                                    "36c1bb292382c420d43ed7c09089c48c"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .text",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.440110456677879, 4.379180299526716, 5.030565972354043, 4.924305809954127, 5.119346414311397, 4.399001175776659, 2.0689447344784746, 2.0866438495227224, 2.391922810389546, 2.314325849254205, 4.138388133726136, 4.317080349782836, 3.6555239653397753, 4.105887580683451, 4.132725975649158, 4.276199771630441, 4.180942978095719, 4.321527196862977, 4.71212994752295, 4.664943256334123, 3.410233849609598, 3.6093473358085824, 4.491979260804489, 4.936898254324409, 5.00008512357915, 5.149894366464999, 5.371076254788165, 5.053642367214763, 5.070776240171682, 5.221981251916645, 5.412808887397505, 4.309551140307014, 4.283238088660593, 4.877702937572765, 5.189923650253343, 5.55063814908421, 5.117274225660371, 4.647509425974337, 4.471349706828425, 4.370694019570741, 4.744786565814763, 5.250290940701924, 4.89851054384051, 4.3984170162359195, 4.344064144295656, 4.355774874671337, 0.9776186769454411, -0.0, -0.0, -0.0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 0.0\nEntropy without padding: -0.0\nOffset: 6656\nSize: 512\nVirtual Size: 96\nCharacteristics: CNT_INITIALIZED_DATA, ALIGN_2BYTES, ALIGN_16BYTES, ALIGN_4BYTES, ALIGN_8BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_2048BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ, MEM_WRITE\nMD5: bf619eac0cdf3f68d496ea9344137e8b",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".data"
+                                ],
+                                "hash": [
+                                    "bf619eac0cdf3f68d496ea9344137e8b"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .data",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [-0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 4.491416065836111\nEntropy without padding: 4.970679217390695\nOffset: 7168\nSize: 2048\nVirtual Size: 1712\nCharacteristics: CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_4BYTES, ALIGN_8BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_1024BYTES, ALIGN_2048BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ\nMD5: 1096be1590b609d70963a31232789a08",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".rdata"
+                                ],
+                                "hash": [
+                                    "1096be1590b609d70963a31232789a08"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .rdata",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.0226969813692905, 4.210733711724087, 4.143541333622539, 4.205862225377264, 4.308294687333843, 3.9555046032677423, 4.006720834246031, 3.9763522367378235, 4.390442627681421, 3.728430357801713, 4.003655053293037, 4.039525174927651, 3.8255338603953186, 3.963374944649056, 3.719472505624666, 4.735362370366207, 4.229145602020757, 4.0305673227506045, 4.1291488832375896, 3.8747718212163473, 4.188865493376777, 4.5586523094433655, 3.843945750691989, 2.9614116191688344, 3.064869077788816, 4.216235235850493, 4.220254675762214, 3.5683264817817126, 4.363530358223853, 3.825634070296774, 3.5986950792899206, 4.421831810066857, 3.4035731280704087, 3.714667945196347, 4.503416638553355, 3.3363807499688605, 4.045980358012784, 4.482569005083273, 3.3732045305622003, 4.274469761774994, 2.411357187070006, 2.2304438906749526, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 0.5354536289388845\nEntropy without padding: 3.2945936588305216\nOffset: 9216\nSize: 512\nVirtual Size: 53\nCharacteristics: CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ\nMD5: 28f5b67d0c54192e722b402520491f63",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".buildid"
+                                ],
+                                "hash": [
+                                    "28f5b67d0c54192e722b402520491f63"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .buildid",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [-0.0, 1.672933031873368, 2.550340709546389, 3.459431618637298, 2.0494520727893946, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 2.107123167898032\nEntropy without padding: 3.3646655081471804\nOffset: 9728\nSize: 512\nVirtual Size: 276\nCharacteristics: CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ\nMD5: 81f06973e8a8aa00f89d2d41136d5ac1",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".pdata"
+                                ],
+                                "hash": [
+                                    "81f06973e8a8aa00f89d2d41136d5ac1"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .pdata",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.4911148500551858, 2.2221915755066783, 1.6171895725927152, 1.8676338909712125, 2.4040097573248604, 2.0403733936884962, 2.0494520727893946, 1.8676338909712125, 2.4040097573248604, 2.2221915755066783, 2.0494520727893946, 1.6858157091530304, 2.2221915755066783, 2.2221915755066783, 2.0494520727893946, 1.8676338909712125, 2.2221915755066783, 1.8676338909712125, 2.0494520727893946, 1.8676338909712125, 2.2221915755066783, 2.2221915755066783, 2.0494520727893946, 2.0494520727893946, 2.2221915755066783, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 1.7126615848590707\nEntropy without padding: 3.4675573668767994\nOffset: 10240\nSize: 512\nVirtual Size: 176\nCharacteristics: CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ\nMD5: ed543a55c102ceaa8c5774b5f44d555c",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".xdata"
+                                ],
+                                "hash": [
+                                    "ed543a55c102ceaa8c5774b5f44d555c"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .xdata",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.1626441180472606, 2.481714572986073, 2.5503407095463886, 2.481714572986073, 3.0957952550009344, 2.663532754804255, 2.368522527728207, 3.2776134368191165, 3.459431618637298, 1.789929075309999, 0.8453509366224365, 2.5503407095463886, 1.676737030052133, 1.4911148500551858, 1.6858157091530304, 2.845350936622437, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 0.0\nEntropy without padding: -0.0\nOffset: 0\nSize: 0\nVirtual Size: 1606496\nCharacteristics: CNT_UNINITIALIZED_DATA, ALIGN_2BYTES, ALIGN_16BYTES, ALIGN_4BYTES, ALIGN_8BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_2048BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ, MEM_WRITE\nMD5: d41d8cd98f00b204e9800998ecf8427e",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".bss"
+                                ],
+                                "hash": [
+                                    "d41d8cd98f00b204e9800998ecf8427e"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .bss",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 3.047169570548708\nEntropy without padding: 3.772051706833411\nOffset: 10752\nSize: 1536\nVirtual Size: 1152\nCharacteristics: CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ, MEM_WRITE\nMD5: 512139c5b723e0fcc68be63a816a5201",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".idata"
+                                ],
+                                "hash": [
+                                    "512139c5b723e0fcc68be63a816a5201"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .idata",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.0280471892440324, 1.4689729236348976, 1.7544076200671745, 1.649726571749867, 1.8344988021472581, 1.8344988021472581, 1.8344988021472581, 1.8344988021472581, 1.8344988021472581, 1.3801055848554311, 1.3801055848554311, 1.649726571749867, 1.8344988021472581, 1.9635310602117741, 1.8344988021472581, 1.8344988021472581, 1.8344988021472581, 1.7544076200671745, 0.9473759016233785, 3.2235032634706418, 3.084061844224388, 3.2195370358443802, 3.7166308917868656, 3.679687439279554, 4.0022680844408445, 3.6877084094565507, 3.7522245384888087, 3.1216596875748186, 3.5908201005000873, 3.844313344046013, 3.3558455032373686, 4.106949132758152, 2.4017683637904854, 1.4815677795996742, 1.4815677795996742, 1.515378280253721, 4.220167681284828, 0.20559250818508304, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 5.2172940428983\nEntropy without padding: 5.2172940428983\nOffset: 12288\nSize: 1536\nVirtual Size: 1256\nCharacteristics: CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ, MEM_WRITE\nMD5: 95e27cb1d412c37ce879e7ae25ab8fea",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".rsrc"
+                                ],
+                                "hash": [
+                                    "95e27cb1d412c37ce879e7ae25ab8fea"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .rsrc",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.699857857026928, 0.699857857026928, 0.7907669479360189, 1.5503407095463881, 4.095795255000932, 4.095795255000933, 3.845350936622436, 3.8453509366224363, 3.845350936622436, 4.004886164091842, 3.8796640049025943, 3.5039975273348483, 4.004886164091841, 3.447401504705914, 3.004886164091842, 3.658993415253805, 3.7499025061628957, 3.658993415253805, 3.3908054820769813, 4.0614821867207755, 4.004886164091842, 3.3908054820769817, 3.6978458230844122, 3.572623663895163, 3.6978458230844113, 3.5160276412662306, 3.4817145729860726, 3.82306798227366, 3.447401504705914, 3.4817145729860726, 3.7499025061628957, 3.4474015047059154, 3.697845823084412, 3.38436414343715, 3.788754913993503, 3.9139770731827506, 3.186704345910024, 3.4251185503571397, 3.6069367321753214, 3.38436414343715, 4.095795255000932, 3.51602764126623, 3.2776134368191143, 3.5726236638951634, 3.4251185503571397, 3.0957952550009336, 4.061482186720775, 3.6978458230844127, 2.0, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 0.0\nEntropy without padding: -0.0\nOffset: 13824\nSize: 512\nVirtual Size: 28\nCharacteristics: CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_DISCARDABLE, MEM_READ\nMD5: d41d8cd98f00b204e9800998ecf8427e",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    "/4"
+                                ],
+                                "hash": [
+                                    "d41d8cd98f00b204e9800998ecf8427e"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - /4",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Debug",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Timestamp: 0 (1970-01-01 00:00:00 +00:00 (UTC))\nVersion: 0.0\nCV_Signature: PDB_70\nFilename: ",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "pdb_filename": [
+                                ""
+                            ]
+                        }
+                    }
+                },
+                "title_text": "CODEVIEW",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "imports": {
+                                "sorted_sha1": [
+                                    "5ce0da2bf7a37f73d0811ac1b8b4615c18733e3d"
+                                ],
+                                "md5": [
+                                    "5e6955ab958f0427686406bc5d4d6248"
+                                ],
+                                "fuzzy": [
+                                    "6:1KOu0lx/xR6katLVn1LvG7G82RKb/mL8jXlkzzqzCfb42mvqVrtoLU/K2Vf7En:cOu0l7RT6VBv6GDKb/dBmzqCDYurJAn"
+                                ],
+                                "sorted_fuzzy": [
+                                    "6:1KOu0lx/xR6katLVn1LvG7G82RKb/mL8jXlkzzqzCfb42mvqVrtoLU/K2Vf7En:cOu0l7RT6VBv6GDKb/dBmzqCDYurJAn"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Imports",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "__cxa_atexit, __errno, __getreent, __main, __memcpy_chk, __stpcpy_chk, __strcpy_chk, _dll_crt0, _impure_ptr, calloc, cygwin_detach_dll, cygwin_internal, dll_dllcrt0, exit, fclose, fflush, fopen, fprintf, free, fwrite, getc, malloc, perror, posix_memalign, putc, realloc, sprintf, strlen, strncpy, strrchr",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "cygwin1.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "GetModuleHandleA",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "KERNEL32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Languages available: \nSublanguages available: ",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Resources",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            }
+        ]
+    },
+    "sha256": "bfcd488c3be7843e62fb34015f3e5254a25f709cdb24b90eb15d051195536643",
+    "drop_file": false,
+    "temp_submission_data": {}
+}

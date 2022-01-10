@@ -29,9 +29,8 @@ def find_sample(locations, sample):
     raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT), sample)
 
 
-def list_results(location, strip_extension=".json"):
-    result_jsons = os.listdir(os.path.join(location, "tests", "results"))
-    return [result[: -len(strip_extension)] for result in result_jsons]
+def list_results(location):
+    return os.listdir(os.path.join(location, "tests", "results"))
 
 
 @pytest.fixture()
@@ -103,9 +102,6 @@ class TestService:
     def setup_class(cls):
         # Setup where the samples can be found
         cls.locations = [SELF_LOCATION, SAMPLES_LOCATION]
-        # Ensure all files in results ends with .json
-        result_jsons = os.listdir(os.path.join(SELF_LOCATION, "tests", "results"))
-        assert all([result.endswith(".json") for result in result_jsons])
 
     @staticmethod
     @pytest.mark.parametrize("sample", list_results(SELF_LOCATION), indirect=True)
@@ -117,14 +113,24 @@ class TestService:
         service_request = ServiceRequest(task)
         cls.execute(service_request)
 
+        correct_features_path = os.path.join(SELF_LOCATION, "tests", "results", sample, "features.json")
+        if os.path.exists(correct_features_path):
+            with open(correct_features_path, "r") as f:
+                correct_features = json.loads(f.read())
+
+            test_features_path = os.path.join(cls.working_directory, "features.json")
+            with open(test_features_path, "r") as f:
+                test_features = json.loads(f.read())
+
+            assert test_features == correct_features
+
         # Get the result of execute() from the test method
         test_result = task.get_service_result()
 
         # Get the assumed "correct" result of the sample
-        correct_result_path = os.path.join(SELF_LOCATION, "tests", "results", f"{task.file_name}.json")
+        correct_result_path = os.path.join(SELF_LOCATION, "tests", "results", sample, "result.json")
         with open(correct_result_path, "r") as f:
             correct_result = json.loads(f.read())
-        f.close()
 
         # Assert values of the class instance are expected
         assert cls.file_res == service_request.result
@@ -132,3 +138,28 @@ class TestService:
         generalize_result(test_result)
         generalize_result(correct_result)
         assert test_result == correct_result
+
+    @staticmethod
+    @pytest.mark.parametrize(
+        "sample", ["019f812bbb2304bbe1ce1dc24cdf6e43d486aff9e14fe0594a8fa17e0f3f5e47"], indirect=True
+    )
+    def generate_test_service(sample):  # remove generate to run it-ish
+        cls = pe.pe.PE()
+        cls.start()
+
+        task = Task(create_service_task(sample=sample))
+        service_request = ServiceRequest(task)
+        cls.execute(service_request)
+
+        import shutil
+
+        if sample != "8e8b38abf230ba9deeccf588c332293440e2b7fc40c62842b8beb2460184e548":
+            os.mkdir(os.path.join(SELF_LOCATION, "tests", "results", sample))
+
+            shutil.copyfile(
+                os.path.join(cls.working_directory, "features.json"),
+                os.path.join(SELF_LOCATION, "tests", "results", sample, "features.json"),
+            )
+
+            with open(os.path.join(SELF_LOCATION, "tests", "results", sample, "result.json"), "w") as result_file:
+                result_file.write(json.dumps(task.get_service_result()))

@@ -1,0 +1,84 @@
+{
+    "classification": "TLP:W",
+    "response": {
+        "milestones": {
+            "service_started": null,
+            "service_completed": null
+        },
+        "service_version": null,
+        "service_name": "Not Important",
+        "service_tool_version": null,
+        "supplementary": [
+            {
+                "name": "features.json",
+                "sha256": "89fb9847efaa2b1fd77d02c67063ce937edb8fa836ad227afd5aca0200847e40",
+                "description": "Features extracted from the PE file, as a JSON file",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpkb2_sdvm/features.json",
+                "is_section_image": false
+            }
+        ],
+        "extracted": [],
+        "service_context": null,
+        "service_debug_info": null
+    },
+    "result": {
+        "score": 200,
+        "sections": [
+            {
+                "body": "Timestamp: 1239670995 (2009-04-14 01:03:15 +00:00 (UTC))\nEntrypoint: 0x0\nMachine: I386\nMagic: ???\nImage version: 0.0\nLinker version: 9.0\nOperating System version: 5.0\nSubsystem version: 5.0\nSubsystem: WINDOWS_CUI\nNX: False\nPosition Independent: False\nOverlay size: 0",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "linker": {
+                                "timestamp": [
+                                    1239670995,
+                                    "2009-04-14 01:03:15 +00:00 (UTC)"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Headers",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 17,
+                    "score": 200,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Authentihash",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Sections",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            }
+        ]
+    },
+    "sha256": "019f812bbb2304bbe1ce1dc24cdf6e43d486aff9e14fe0594a8fa17e0f3f5e47",
+    "drop_file": false,
+    "temp_submission_data": {}
+}

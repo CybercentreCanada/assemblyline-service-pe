@@ -1,0 +1,481 @@
+{
+    "classification": "TLP:W",
+    "response": {
+        "milestones": {
+            "service_started": "2021-12-13T19:39:11.230217Z",
+            "service_completed": "2021-12-13T19:39:11.380686Z"
+        },
+        "service_version": "$SERVICE_TAG",
+        "service_name": "pe",
+        "service_tool_version": null,
+        "supplementary": [
+            {
+                "name": "icon_0.ico",
+                "sha256": "b65b4077fb9bdfe176e22c4848c7ef85cb668c0f18dddd4d414277b92b3f9390",
+                "description": "Icon 0 extracted from the PE file",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpt9c2owin/icon_0.ico",
+                "is_section_image": false
+            },
+            {
+                "name": "icon_1.ico",
+                "sha256": "991eafd590a6db23212e86387edb848b79637156ec4c9dce29d85570604dcb53",
+                "description": "Icon 1 extracted from the PE file",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpt9c2owin/icon_1.ico",
+                "is_section_image": false
+            },
+            {
+                "name": "icon_2.ico",
+                "sha256": "80415827b01b2a20f9bcaac44129b0f5be3062989927d40816e1c99fe44ce1a4",
+                "description": "Icon 2 extracted from the PE file",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpt9c2owin/icon_2.ico",
+                "is_section_image": false
+            },
+            {
+                "name": "features.json",
+                "sha256": "0f3c0676848224fd8bb689f9d4e8982915b9cc1b300c3bad54fec75e0211c63d",
+                "description": "Features extracted from the PE file, as a JSON file",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpt9c2owin/features.json",
+                "is_section_image": false
+            }
+        ],
+        "extracted": [
+            {
+                "name": "overlay",
+                "sha256": "ecb5f5c7916b0d324a279fb13547e9250f132d0d215d0dc5b6b9bf7d6a7faf99",
+                "description": "overlay extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpt9c2owin/overlay",
+                "is_section_image": false
+            }
+        ],
+        "service_context": null,
+        "service_debug_info": null
+    },
+    "result": {
+        "score": 100,
+        "sections": [
+            {
+                "body": "Timestamp: 1529185622 (2018-06-16 21:47:02 +00:00 (UTC))\nEntrypoint: 0x4d4a\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 10.0\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_GUI\nNX: True\nPosition Independent: False\nOverlay size: 9",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "linker": {
+                                "timestamp": [
+                                    1529185622,
+                                    "2018-06-16 21:47:02 +00:00 (UTC)"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Headers",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "build_id: 51141, count: 1, id: 28736\nbuild_id: 30319, count: 1, id: 154\nbuild_id: 32841, count: 1, id: 61080\nbuild_id: 0, count: 92, id: 1\nbuild_id: 30729, count: 11, id: 147\nbuild_id: 30319, count: 103, id: 170\nbuild_id: 30319, count: 40, id: 171\nbuild_id: 30319, count: 26, id: 158",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Rich Headers - Key: 2538287455",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "SHA_512: 23f371f39a3aa98038519613d5655107542932e19a077ac7b75b43cd741db5acda570ff113b7d72fd735cae864808c7178d0bac61e658282cd30028b92829ea3\nSHA_384: 947626d335c43eed383fb3586a22956236393e418ec2382697ad0d9f168bd989da06753a089da07bf89c8725f0ca587e\nSHA_256: 32308df6261085e0f060d46bff06c63d9aba5fbf7a2d47f88795b9333c115b4e\nSHA_1: e1bda7881d6fad2f4d18a6fdca80da06904d293c\nMD5: 152854b3d4fb0e82d3bb00d70bda6645",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Authentihash",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Sections",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 6.684387755166359\nEntropy without padding: 6.693780345255979\nOffset: 1024\nSize: 80896\nVirtual Size: 80666\nCharacteristics: CNT_CODE, MEM_EXECUTE, MEM_READ\nMD5: 2863cee1b91df363f54954b306d483c3",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".text"
+                                ],
+                                "hash": [
+                                    "2863cee1b91df363f54954b306d483c3"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .text",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.131732325424249, 6.23134052330213, 6.241254297052124, 6.2383640003742045, 6.178410843399581, 6.241085968406374, 6.0010044275640295, 6.252398529595472, 6.234998126588512, 6.330188758754565, 6.195168099321532, 6.015768936946046, 6.068857731876353, 5.771526371116968, 6.19352838564418, 6.414581367116898, 5.971223425493201, 6.1522011354563455, 6.491653555062436, 6.191555141549445, 5.969984133406369, 6.157075312262233, 6.282467762534413, 5.301414503611224, 5.290577380721773, 6.1148651790889055, 6.370539129643485, 6.518863027821593, 6.241107248736528, 5.165413308241961, 4.8968913534315215, 4.966360589047029, 6.62821969847446, 6.355009187364107, 6.317967138080446, 6.46716620877451, 4.145493760566714, 6.227519425959625, 6.4495225876964515, 6.3383937604470155, 5.969829011312035, 6.542243892158751, 6.422437700009224, 6.405851134805551, 6.399449407574605, 6.443598244319192, 6.556061806889354, 6.315896694023558, 6.080665615896368, 5.784947473896501]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 5.783433211732331\nEntropy without padding: 5.848288534260511\nOffset: 81920\nSize: 27136\nVirtual Size: 26714\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ\nMD5: ca7fc163d9e669cb448db317e5ab3542",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".rdata"
+                                ],
+                                "hash": [
+                                    "ca7fc163d9e669cb448db317e5ab3542"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .rdata",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.4526066791735115, 5.636391346557547, 2.4897233296190766, 1.813987511240081, 5.722623678735416, 7.700794661715, 3.4760288784268707, 3.273761255375813, 3.131178667625844, 3.137431835424968, 3.5364145450006537, 2.8436598159613995, 4.320696909621625, 4.397374646214423, 4.298803744469989, 4.1477231679328455, 4.605688589609951, 4.572405891877835, 4.397163428736236, 4.2459109699597075, 4.471032661750985, 5.167987692627022, 4.781453829762212, 5.1162596283206145, 6.996600639073546, 7.047353145475429, 6.967289134541516, 7.073136946861764, 7.048211001946955, 7.032619037897613, 6.959658072925076, 6.67610604238355, 6.7351085717892865, 6.937114925815366, 6.352923804321233, 3.3105285541615372, 2.5073567836751156, 2.5691665728664095, 2.6401163635060287, 2.811070319223332, 2.787221170724691, 2.7576436029743143, 2.7413522790040994, 2.846425252125144, 2.3908712263715857, 3.9029567897909767, 5.2044064961676915, 5.0512565400210905, 4.996013347198791, 1.5781749424288218]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 4.1186215389090215\nEntropy without padding: 4.1186215389090215\nOffset: 109056\nSize: 6656\nVirtual Size: 18688\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\nMD5: b9807b61fc7edb7053d47011cea6d469",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".data"
+                                ],
+                                "hash": [
+                                    "b9807b61fc7edb7053d47011cea6d469"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .data",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.913461483742372, 4.256623106209903, 4.905901854697525, 3.4722150397180083, 1.837355746547602, 1.9318419161125633, 2.304587577170549, 3.295201057813728, 3.3424037750277917, 2.8406190690591053, 0.6831620616745209, 3.349302419141194, 3.5057520958360415, 3.001332612249426, 0.4349734800747426, 0.11190990870168403, 0.678114052360606, 0.817051870641597, 1.865747916676627, 1.3763597033648498, 1.1154370803864795, 0.48303068014561806, 2.646616710919854, 0.568156089093885, 2.4913006369366224, 2.8075275060367413, 3.5424292853073336, 4.1491273028323, 4.377237186966426, 4.099796652174481, 4.410832186920838, 4.175867201109905, 4.091713689998185, 4.160740269955239, 4.225211656558017, 3.2983857165551766, 3.1809490021887084, 2.6576697150123065, 2.2942340172715423, 6.39873156385165, 6.331733757667416, 6.427555438149289, 6.681687884455337, 3.8127498381814826, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 7.572896690878167\nEntropy without padding: 7.57323601165223\nOffset: 115712\nSize: 165888\nVirtual Size: 165856\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ\nMD5: e8882e537fbe1083f64adf5590b7aa49",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".rsrc"
+                                ],
+                                "hash": [
+                                    "e8882e537fbe1083f64adf5590b7aa49"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .rsrc",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.39771053430544, 7.942515183998659, 7.945676176836466, 7.9383148736830496, 7.938898517169675, 7.940762394951901, 7.950804857405448, 7.945555380356207, 7.9461694435062675, 7.945123972122061, 7.937157494675907, 7.9454770124835346, 7.937241324949571, 7.940889972378805, 7.94528893644056, 7.947950798477633, 7.950185649777451, 7.933021297218498, 7.94619001886934, 7.937773549649821, 7.949855086713279, 7.9469185916248035, 7.950269671951995, 7.943214674940125, 7.938347469471545, 7.942844802628561, 7.941509886327825, 7.942353142748413, 7.947217248388675, 7.942913581874576, 7.948436640071644, 7.940848665260824, 7.951312806973569, 6.772823525527507, 5.77458700416508, 4.494933678285973, 3.196969836126174, 2.90551142284514, 2.598445659478337, 2.316536113033288, 2.9214953685286993, 3.115449444804309, 4.792899268809034, 5.206018821392362, 4.556004437763437, 4.382263561202541, 4.380372696915965, 4.298113038037192, 4.282977653166378, 4.400111427597479]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 4.993049819405438\nEntropy without padding: 5.081274242950943\nOffset: 281600\nSize: 7680\nVirtual Size: 7496\nCharacteristics: CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\nMD5: f038e298c00acf7ba60337385b321968",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".reloc"
+                                ],
+                                "hash": [
+                                    "f038e298c00acf7ba60337385b321968"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .reloc",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.515989502619532, 5.68435997332623, 5.617431310904478, 5.336395344182511, 5.38532667970236, 5.670123932079341, 5.176149237807394, 5.194670920716238, 5.549499498690614, 5.542852364829487, 5.659634735258693, 5.27611008064951, 5.5324383869444835, 5.479204320788871, 5.098165543264457, 5.440420151280515, 5.538860755903763, 5.119963008260721, 4.77526448379553, 4.49307578650769, 4.528916757854351, 4.444589362578829, 4.431322052242367, 4.692792605970327, 4.774360405296418, 4.642967275809927, 4.676059469562645, 4.8600172241007815, 5.068357549317536, 4.345427922531356, 4.577280590237442, 4.979412847342582, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "imports": {
+                                "sorted_sha1": [
+                                    "5350ce32fe9ffc6d6af2d5e68f08ef3279a21963"
+                                ],
+                                "md5": [
+                                    "1446f309d8929de86352b456ef8da508"
+                                ],
+                                "fuzzy": [
+                                    "24:s4blJcDpvq3+ZCaFok1Ud7H+fcdpOov/GdtUcwHRnlyv0SuS5++GH+SFDxx86+:QvZCldT+fcW4GdtUcUK0SuS5TGH9xx8B"
+                                ],
+                                "sorted_fuzzy": [
+                                    "48:eQyBlTh1AaZ/p1dj2OGkHaxx8xjS5GTjb:eQyHh1r/pXj2OGkHO4"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Imports",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "GetSystemTimeAdjustment, GetMailslotInfo, GetLastError, SetLastError, GetProcAddress, GetProcessShutdownParameters, VirtualProtect, GetCurrentDirectoryA, LoadLibraryW, GetSystemTime, HeapReAlloc, IsValidLocale, EnumSystemLocalesA, GetLocaleInfoA, GetUserDefaultLCID, GlobalAlloc, FindCloseChangeNotification, GetTickCount, FindAtomW, GetNativeSystemInfo, IsValidCodePage, GetOEMCP, GetACP, HeapSize, GetLocaleInfoW, WideCharToMultiByte, InterlockedIncrement, InterlockedDecrement, InterlockedCompareExchange, InterlockedExchange, MultiByteToWideChar, GetStringTypeW, EncodePointer, DecodePointer, Sleep, InitializeCriticalSection, DeleteCriticalSection, EnterCriticalSection, LeaveCriticalSection, HeapFree, GetCommandLineA, HeapSetInformation, GetStartupInfoW, GetCPInfo, RaiseException, RtlUnwind, HeapAlloc, LCMapStringW, TerminateProcess, GetCurrentProcess, UnhandledExceptionFilter, SetUnhandledExceptionFilter, IsDebuggerPresent, IsProcessorFeaturePresent, HeapCreate, TlsAlloc, TlsGetValue, TlsSetValue, TlsFree, GetModuleHandleW, GetCurrentThreadId, ExitProcess, WriteFile, GetStdHandle, GetModuleFileNameW, GetModuleFileNameA, FreeEnvironmentStringsW, GetEnvironmentStringsW, SetHandleCount, InitializeCriticalSectionAndSpinCount, GetFileType, QueryPerformanceCounter, GetCurrentProcessId, GetSystemTimeAsFileTime",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "KERNEL32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "EndPaint, GetNextDlgGroupItem, GetDlgCtrlID, ValidateRect, GetNextDlgTabItem",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "USER32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "EndPath, SetViewportOrgEx",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "GDI32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "ClearEventLogA",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "ADVAPI32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "DragFinish, DragQueryFileW, ShellAboutW, FindExecutableW, ExtractIconW",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "SHELL32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Languages available: NEUTRAL, ENGLISH, ITALIAN\nSublanguages available: ENGLISH_UK, ENGLISH_US, ITALIAN, DEFAULT",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "resources": {
+                                "language": [
+                                    "NEUTRAL",
+                                    "ENGLISH",
+                                    "ITALIAN"
+                                ],
+                                "name": [
+                                    "DORA",
+                                    "FSE",
+                                    "HABUZONOVITEKICOLESE",
+                                    "HOVEMARI",
+                                    "RIJOYANEYEVETUWIPUFEBEDOPI",
+                                    "XIRUBODOXUYE"
+                                ]
+                            }
+                        },
+                        "string": {
+                            "extracted": [
+                                "Dialog",
+                                "OK",
+                                "Cancel"
+                            ]
+                        }
+                    }
+                },
+                "title_text": "Resources",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "ID: 1, Lang: NEUTRAL\nID: 2, Lang: NEUTRAL\nID: 3, Lang: NEUTRAL",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Icons",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Type: 0",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Version",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "file_date_LS: 0\nfile_date_MS: 0\nfile_flags: 0\nfile_flags_mask: 63\nfile_os: ???\nfile_subtype: UNKNOWN\nfile_type: VXD\nfile_version_LS: 0\nfile_version_MS: 720896\nproduct_version_LS: 0\nproduct_version_MS: 786432\nsignature: 4277077181\nstruct_version: 65536",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "fixed_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "key: StringFileInfo\ntype: 1",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "string_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "key: VarFileInfo\ntype: 1",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "var_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            }
+        ]
+    },
+    "sha256": "802bc6cba945da88a2e2966e607c693965db4bfcee5fe3e7fe51936a13714b8b",
+    "drop_file": false,
+    "temp_submission_data": {}
+}
