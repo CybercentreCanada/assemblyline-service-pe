@@ -23,14 +23,21 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 200,
+        "score": 400,
         "sections": [
             {
                 "body": "Timestamp: 1239670995 (2009-04-14 01:03:15 +00:00 (UTC))\nEntrypoint: 0x0\nMachine: I386\nMagic: ???\nImage version: 0.0\nLinker version: 9.0\nOperating System version: 5.0\nSubsystem version: 5.0\nSubsystem: WINDOWS_CUI\nNX: False\nPosition Independent: False\nOverlay size: 0",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
-                "heuristic": null,
+                "heuristic": {
+                    "heur_id": 18,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
                 "tags": {
                     "file": {
                         "pe": {
@@ -70,7 +77,14 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
-                "heuristic": null,
+                "heuristic": {
+                    "heur_id": 19,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
                 "tags": {},
                 "title_text": "Sections",
                 "zeroize_on_tag_safe": false,

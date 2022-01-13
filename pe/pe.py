@@ -40,6 +40,9 @@ cert_verification_entries = {
 
 accelerator_flags_entries = {entry.__int__(): entry for entry, txt in lief.PE.ACCELERATOR_FLAGS.__entries.values()}
 
+PACKED_SECTION_NAMES = [".UPX", ".UPX0", ".UPX1", ".ASPack", ".vmp0"]
+MALICIOUS_SECTION_NAMES = [(".bak", None), (".lol", None), (".rsrc", 3221487648)]
+
 
 def search_list_in_list(what, into):
     try:
@@ -402,6 +405,8 @@ class PE(ServiceBase):
         res.add_line(f"Entrypoint: {hex(self.binary.optional_header.addressof_entrypoint)}")
         res.add_line(f"Machine: {self.binary.header.machine.name}")
         res.add_line(f"Magic: {self.binary.optional_header.magic.name}")
+        if self.binary.optional_header.magic.name == "???":
+            res.set_heuristic(18)
         res.add_line(
             (
                 f"Image version: {self.binary.optional_header.major_image_version}."
@@ -461,6 +466,8 @@ class PE(ServiceBase):
     def add_sections(self):
         res = ResultSection("Sections")
         self.features["sections"] = []
+        if len(self.binary.sections) == 0:
+            res.set_heuristic(19)
         for section in self.binary.sections:
             if section.size > len(section.content):
                 full_section_data = bytearray(section.content) + section.padding
@@ -490,6 +497,14 @@ class PE(ServiceBase):
             self.features["sections"].append(section_dict)
 
             sub_res = ResultSection(f"Section - {section.name}")
+            # TODO: Re-enable after doing the add_heuristic refactoring
+            # if section.name in PACKED_SECTION_NAMES:
+            #    sub_res.set_heuristic(20)
+            # for malicious_section in MALICIOUS_SECTION_NAMES:
+            #    if section.name == malicious_section[0] and (
+            #        malicious_section[1] is None or section.characteristics == malicious_section[1]
+            #    ):
+            #        sub_res.set_heuristic(21)
             sub_res.add_tag("file.pe.sections.name", section.name)
             sub_res.add_line(f"Entropy: {entropy_data[0]}")
             if entropy_data[0] > 7.5:

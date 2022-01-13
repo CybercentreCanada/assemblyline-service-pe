@@ -144,6 +144,34 @@ heuristics:
     name: Invalid authentihash
     score: 200
 
+  - description: >-
+       Invalid Magic.
+    filetype: "executable/windows"
+    heur_id: 18
+    name: Invalid Magic
+    score: 100
+
+  - description: >-
+       A PE file with no section is higly suspicious, or corrupted.
+    filetype: "executable/windows"
+    heur_id: 19
+    name: No section found
+    score: 100
+
+  - description: >-
+       A section name that is commonly found among packed binaries, but is not necessarily a direct correlation to maliciousness.
+    filetype: "executable/windows"
+    heur_id: 20
+    name: Common packed section name
+    score: 100
+
+  - description: >-
+       A section name that is almost never found among benign samples.
+    filetype: "executable/windows"
+    heur_id: 21
+    name: Malicious section name
+    score: 250
+
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
   cpu_cores: 1
