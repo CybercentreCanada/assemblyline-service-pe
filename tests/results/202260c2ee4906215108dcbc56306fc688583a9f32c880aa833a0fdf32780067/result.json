@@ -2,11 +2,11 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2021-12-06T21:03:51.651780Z",
-            "service_completed": "2021-12-06T21:03:51.814188Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "2a2e1b57454fbd5c0813d504dc9a118930a3a3b41e6d4135342b043dad421ff3",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp9ox9ie4j/features.json",
+                "path": "/tmp/working_directory/tmpoh2qz2fa/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "32c014250d2e33b7cbfee7ee6453c6d95177b959cc3109bd8698fd8baa25e4ee",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp9ox9ie4j/overlay",
+                "path": "/tmp/working_directory/tmpoh2qz2fa/overlay",
                 "is_section_image": false
             }
         ],
@@ -199,14 +199,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -222,6 +215,24 @@
                     }
                 },
                 "title_text": "Section - .rsrc",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Section name: .rsrc\nEntropy: 7.925554781643191\nEntropy without padding: 7.928201981051287",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

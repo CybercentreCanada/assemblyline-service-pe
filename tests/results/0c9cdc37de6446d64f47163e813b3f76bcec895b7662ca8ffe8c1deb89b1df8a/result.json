@@ -2,11 +2,11 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2021-11-25T18:40:00.061662Z",
-            "service_completed": "2021-11-25T18:40:01.748720Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "97078f5e93de3208349d1249a997578cdfc6fc29b9f0ccfcee273810fdd6e131",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp8ar_mtr5/icon_0.ico",
+                "path": "/tmp/working_directory/tmp4ieriv59/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "4cdc568f9253e08f4b48bcee0029ea8446b5dbd110b6ddc6c9f63053ccd6f0d9",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp8ar_mtr5/icon_1.ico",
+                "path": "/tmp/working_directory/tmp4ieriv59/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "a24820269bffb7f7fa9a95f0ac9cbed59bb41988580f20ad3b0c44c419cabf20",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp8ar_mtr5/icon_2.ico",
+                "path": "/tmp/working_directory/tmp4ieriv59/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "6a7523d1871523d1c71e7d3a72d97b2f70e7201d6944aedd56966d42d26f6e64",
                 "description": "Icon 3 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp8ar_mtr5/icon_3.ico",
+                "path": "/tmp/working_directory/tmp4ieriv59/icon_3.ico",
                 "is_section_image": false
             },
             {
@@ -46,7 +46,7 @@
                 "sha256": "9ea891e3de89a19b10b440cc863a5d97cb10553a9080dad2402ac3f33b0eb125",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp8ar_mtr5/features.json",
+                "path": "/tmp/working_directory/tmp4ieriv59/features.json",
                 "is_section_image": false
             }
         ],
@@ -56,7 +56,7 @@
                 "sha256": "9d8350bb933007cceefc66b3dac26ab17a7221b85a96f747c0465279a49e79aa",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp8ar_mtr5/overlay",
+                "path": "/tmp/working_directory/tmp4ieriv59/overlay",
                 "is_section_image": false
             },
             {
@@ -64,7 +64,7 @@
                 "sha256": "fd2d7df0220dd65ee23d0090299dfcc356f6f8f7167bae9adf7d08cefaf39d02",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp8ar_mtr5/certificate.1.1",
+                "path": "/tmp/working_directory/tmp4ieriv59/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -72,7 +72,7 @@
                 "sha256": "df5aa7fac68d7b0abf52c404cb0587be2670d4bd8a289691043f5be17fc65373",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp8ar_mtr5/certificate.1.2",
+                "path": "/tmp/working_directory/tmp4ieriv59/certificate.1.2",
                 "is_section_image": false
             }
         ],
@@ -131,14 +131,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -158,6 +151,24 @@
                 "auto_collapse": false
             },
             {
+                "body": "Section name: .code\nEntropy: 7.981870603755994\nEntropy without padding: 7.981870603755994",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
                 "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.602608465210213, 7.690560065144471, 7.467191342380303, 6.6998130053443115, 7.529614503360881, 7.647443316973984, 7.63175622885972, 7.604816856375389, 7.616742263156795, 7.623145522757787, 7.62798243253491, 7.651640448786255, 7.672212341305818, 7.630968352555653, 7.6606890405573465, 7.659340077875113, 7.605811981700866, 7.643780704837989, 7.6155287146472865, 7.631386805278858, 7.608015674299847, 7.608058679070187, 7.667666070702992, 7.65769456959668, 7.626001108313573, 7.61030894049153, 7.683965518235876, 7.63493823322603, 7.621769141529313, 7.667300118354279, 7.632801210041669, 7.656313489802009, 7.620858064516229, 7.67626588914702, 7.578410022860702, 7.654436216013556, 7.620129822342594, 7.536086033758531, 7.631872111614741, 7.639313501311545, 7.585204218166891, 7.642079414802865, 7.644627264956384, 7.585959878886765, 7.67038277085391, 7.628204800912552, 7.672022090040617, 7.601822668084542, 7.628856411199541, 4.274430998719571]}}",
                 "classification": "TLP:W",
                 "body_format": "GRAPH_DATA",
@@ -173,14 +184,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -200,6 +204,24 @@
                 "auto_collapse": false
             },
             {
+                "body": "Section name: .text\nEntropy: 7.99925261956256\nEntropy without padding: 7.999252619562559",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
                 "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.967954784119287, 7.97330388488345, 7.9678799963938705, 7.974208158222908, 7.971760247336456, 7.969915911907361, 7.965013585155313, 7.975808793045828, 7.973292910809452, 7.973412473167016, 7.971921820045023, 7.9731510530179035, 7.97227023581024, 7.971761991441214, 7.965668715711916, 7.969725238394807, 7.968692022061109, 7.971151859688715, 7.971557788920828, 7.972472862758029, 7.972988449432768, 7.969492772769784, 7.974244098936464, 7.973007046585739, 7.9709852538647725, 7.976730054693359, 7.971890392035973, 7.975116236265017, 7.967065630948966, 7.972583118095716, 7.972859644488515, 7.970206060943099, 7.973736465545248, 7.971205505483876, 7.9686504227483335, 7.966508847896629, 7.972766660516726, 7.970768592843512, 7.975465951071115, 7.9730285918781085, 7.972622143012535, 7.969874563535948, 7.972317748960651, 7.97261466838209, 7.973561590382368, 7.966507112391126, 7.9728664307939034, 7.975873706085445, 7.973676437732318, 7.962999977473228]}}",
                 "classification": "TLP:W",
                 "body_format": "GRAPH_DATA",
@@ -215,14 +237,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -242,6 +257,24 @@
                 "auto_collapse": false
             },
             {
+                "body": "Section name: .rdata\nEntropy: 7.994849682328884\nEntropy without padding: 7.9948496823288835",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
                 "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.7751175073485195, 7.705775950035549, 7.737848660170299, 7.685432584140986, 7.538771169408827, 7.700495083805619, 7.708162032805919, 7.743157671692945, 7.762182922424372, 7.721675578449177, 7.646574653143699, 7.7220504403428585, 7.739368092151827, 7.770933780477207, 7.7538037501364245, 7.708838282808569, 7.732166844288066, 7.682069842438443, 7.738014427074629, 7.707232465721322, 7.786881889192945, 7.7774364070630355, 7.815927068165008, 7.780933967798032, 7.771366535495009, 7.772879112074468, 7.782336116923885, 7.737297446875617, 7.682489273113604, 7.739051307012771, 7.717747877898492, 7.761389561789746, 7.783028016608937, 7.771548049864853, 7.778197641862491, 7.769008425793662, 7.70065906049361, 7.759719676246701, 7.7538214260290586, 7.762878924753642, 7.761293634099978, 7.807268301758912, 7.746679636918662, 7.7713838972066185, 7.783141558662599, 7.729237362907948, 7.782263041007468, 7.7198168307414665, 7.756866881034475, 6.9587918782219536]}}",
                 "classification": "TLP:W",
                 "body_format": "GRAPH_DATA",
@@ -257,14 +290,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -280,6 +306,24 @@
                     }
                 },
                 "title_text": "Section - .data",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Section name: .data\nEntropy: 7.999903104818612\nEntropy without padding: 7.999903104818611",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -837,7 +881,7 @@
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "OK found while verifying signature : OK",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
@@ -850,7 +894,7 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "This file is signed",
+                "title_text": "Signed EXE",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -935,7 +979,7 @@
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "Subject/Issuer used : CN=WZTeam",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 2,
@@ -948,7 +992,7 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "File is self-signed (signing cert signed by itself)",
+                "title_text": "Self-signed certificate",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

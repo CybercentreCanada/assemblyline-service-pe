@@ -2,11 +2,11 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2021-11-25T18:40:07.937824Z",
-            "service_completed": "2021-11-25T18:40:08.459246Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "01bbc368eb3c9ebd5ea9c211a3d502a170e952a935b001445e4ef4d59ef7388e",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpo5pk6_20/icon_0.ico",
+                "path": "/tmp/working_directory/tmpa_bg8f42/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "50167ddffd9466800630995304f18d3a5522400c3e8dbeb9d9092ed4b34bbcad",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpo5pk6_20/features.json",
+                "path": "/tmp/working_directory/tmpa_bg8f42/features.json",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
                 "sha256": "19b04b9c1d7d7affa39d767a995660e9a239b480f286a3f57925adce430050cd",
                 "description": "binary_0_10_2147484742_1031 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpo5pk6_20/binary_0_10_2147484742_1031",
+                "path": "/tmp/working_directory/tmpa_bg8f42/binary_0_10_2147484742_1031",
                 "is_section_image": false
             },
             {
@@ -40,7 +40,7 @@
                 "sha256": "e8c94324346a70c2ae8d2320816bbc579578b443af0f80abba75865892f15974",
                 "description": "binary_0_10_2147484754_1031 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpo5pk6_20/binary_0_10_2147484754_1031",
+                "path": "/tmp/working_directory/tmpa_bg8f42/binary_0_10_2147484754_1031",
                 "is_section_image": false
             },
             {
@@ -48,7 +48,7 @@
                 "sha256": "d0123a6b47391ad1d846dba246c8d29fb34207933613ff3a87abc14020c32734",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpo5pk6_20/overlay",
+                "path": "/tmp/working_directory/tmpa_bg8f42/overlay",
                 "is_section_image": false
             },
             {
@@ -56,7 +56,7 @@
                 "sha256": "35282afa633ddc4471485446b2a2222c3389d144d6692bac1db08cc0f1952e14",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpo5pk6_20/certificate.1.1",
+                "path": "/tmp/working_directory/tmpa_bg8f42/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -64,7 +64,7 @@
                 "sha256": "5e6d2f88f617dc8b809aee712445a41b3cde26af874a221a9dc98ea1dc68e3d5",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpo5pk6_20/certificate.1.2",
+                "path": "/tmp/working_directory/tmpa_bg8f42/certificate.1.2",
                 "is_section_image": false
             }
         ],
@@ -187,14 +187,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -210,6 +203,24 @@
                     }
                 },
                 "title_text": "Section - UPX1",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Section name: UPX1\nEntropy: 7.936099015021149\nEntropy without padding: 7.936099015021149",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -697,7 +708,7 @@
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "Possibly self signed.\nCould not identify a chain of trust back to a known root CA, but certificates presented were issued by different issuers",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 2,
@@ -710,7 +721,7 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "Possibly self signed. Could not identify a chain of trust back to a known root CA, but certificates presented were issued by different issuers",
+                "title_text": "Unknown Root CA",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

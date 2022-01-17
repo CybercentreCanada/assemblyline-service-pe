@@ -14,7 +14,7 @@
                 "sha256": "89fb9847efaa2b1fd77d02c67063ce937edb8fa836ad227afd5aca0200847e40",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpkb2_sdvm/features.json",
+                "path": "/tmp/working_directory/tmp1tbilis9/features.json",
                 "is_section_image": false
             }
         ],
@@ -30,14 +30,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
-                "heuristic": {
-                    "heur_id": 18,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -51,6 +44,24 @@
                     }
                 },
                 "title_text": "Headers",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Magic Name: ???\nMagic Value: 0",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 18,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Invalid Magic",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -73,7 +84,7 @@
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "0 sections found in executable",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,

@@ -2,11 +2,11 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2021-12-07T14:57:47.835819Z",
-            "service_completed": "2021-12-07T14:57:48.117009Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "eaf54b06365eb5a3a27344b350b46d69c03d82d2f0ba6e05f48b565b30ec7f17",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpxwwxrrq2/icon_0.ico",
+                "path": "/tmp/working_directory/tmpsrwi4uzl/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "5c095a61b0e9551e99276ef113c23f8bd52335bf980b7b1dcab6d78d03de7a21",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpxwwxrrq2/features.json",
+                "path": "/tmp/working_directory/tmpsrwi4uzl/features.json",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
                 "sha256": "95b805a1fd4e3ca64a494a3b7be0aa47a308d9cb933b68cc2dd902a81ecb507e",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpxwwxrrq2/overlay",
+                "path": "/tmp/working_directory/tmpsrwi4uzl/overlay",
                 "is_section_image": false
             }
         ],
@@ -161,14 +161,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -188,6 +181,24 @@
                 "auto_collapse": false
             },
             {
+                "body": "Section name: .rsrc\nEntropy: 7.835073866956729\nEntropy without padding: 7.835073866956726",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
                 "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.0776731684291976, 2.8874033476665337, 2.9720379943384767, 2.7776116021770085, 2.6814088965418157, 2.8729870111067015, 4.9881207339269675, 7.000017047883941, 7.605841277611844, 7.665790852870582, 7.676168217720662, 7.686765464778595, 7.674770701345253, 7.64031613514258, 7.652861009122813, 7.644729991136068, 7.652337375679315, 7.636826682750941, 7.614859182822156, 7.685070599901899, 7.659369867410367, 7.689161152030466, 7.6488160523273745, 7.645927969851339, 7.66002904503231, 7.66845598686093, 7.6190864336099, 7.628055875550657, 7.644481990206384, 7.639920758841127, 7.624752125445114, 7.655638908773558, 7.676147656213917, 7.656039275902432, 7.709648023872434, 7.66928452602079, 7.6705098847591175, 7.6590691824525665, 7.650678854082575, 7.69200131159431, 7.705063633242689, 7.69783582461008, 7.705929958959517, 7.669776036942905, 7.640817782419924, 7.634160375662266, 7.665229432870129, 7.73495669790143, 7.600771040095569, 7.6655617534443605]}}",
                 "classification": "TLP:W",
                 "body_format": "GRAPH_DATA",
@@ -203,14 +214,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -226,6 +230,24 @@
                     }
                 },
                 "title_text": "Section - DATA",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Section name: DATA\nEntropy: 7.997417127312105\nEntropy without padding: 7.997417127312104",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -341,7 +363,7 @@
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "Can't decode html object from resources manager",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
@@ -354,7 +376,7 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "HTML",
+                "title_text": "Corrupted resources",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

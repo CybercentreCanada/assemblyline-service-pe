@@ -135,9 +135,20 @@ class TestService:
         # Assert values of the class instance are expected
         assert cls.file_res == service_request.result
 
+        overwrite_results = False  # Used temporarily to mass-correct tests
+        if overwrite_results:
+            import copy
+
+            orig_result = copy.deepcopy(test_result)
+
         generalize_result(test_result)
         generalize_result(correct_result)
-        assert test_result == correct_result
+        if overwrite_results:
+            if test_result != correct_result:
+                with open(correct_result_path, "w") as f:
+                    f.write(json.dumps(orig_result))
+        else:
+            assert test_result == correct_result
 
     @staticmethod
     @pytest.mark.parametrize(

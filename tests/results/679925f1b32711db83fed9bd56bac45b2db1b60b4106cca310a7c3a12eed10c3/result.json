@@ -14,7 +14,7 @@
                 "sha256": "26974026f657d8b47a08d74cdd51fc7db28f650d4e9ef2083568db215d7a6966",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp9vv5jhvp/features.json",
+                "path": "/tmp/working_directory/tmpjibbiizi/features.json",
                 "is_section_image": false
             }
         ],
@@ -103,14 +103,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -126,6 +119,24 @@
                     }
                 },
                 "title_text": "Section - .text",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Section name: .text\nEntropy: 7.964887987841612\nEntropy without padding: 7.964887987841611",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

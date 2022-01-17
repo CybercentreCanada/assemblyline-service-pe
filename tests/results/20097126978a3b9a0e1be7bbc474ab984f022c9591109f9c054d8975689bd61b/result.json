@@ -2,11 +2,11 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2021-12-06T20:50:32.751938Z",
-            "service_completed": "2021-12-06T20:50:33.347171Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "bbfcb331af9caae2c2d11e7df3eaaa55c24ee078e398b8f691c69b409cc293a9",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmppyqqr_hg/features.json",
+                "path": "/tmp/working_directory/tmp_s0d4ojp/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "d989323cb9eafd6068401dc1feab31a59adbd84cdf06f37a422ad3d0a68b5271",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmppyqqr_hg/overlay",
+                "path": "/tmp/working_directory/tmp_s0d4ojp/overlay",
                 "is_section_image": false
             }
         ],
@@ -129,14 +129,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -156,6 +149,24 @@
                 "auto_collapse": false
             },
             {
+                "body": "Section name: UPX1\nEntropy: 7.999887720337854\nEntropy without padding: 7.999887720337853",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
                 "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.994840739564234, 7.99502509601356, 7.995073725171332, 7.995026600793957, 7.995274612322483, 7.99504411456976, 7.995080979775472, 7.995127838828113, 7.9947060083603265, 7.995027656443138, 7.995143814715465, 7.995353043032371, 7.994900233294833, 7.995001515214435, 7.9955389124280964, 7.9953531273256875, 7.9946363194761165, 7.995562070851464, 7.994874749652873, 7.9951571436124915, 7.995080502936287, 7.994636752326909, 7.995256378788262, 7.995717192895054, 7.996048797203445, 7.994667494953702, 7.995215748629032, 7.995862587049601, 7.994767798724516, 7.995038622523455, 7.994767316336845, 7.994727980589568, 7.995268135092911, 7.993725263845603, 7.995403773986126, 7.995007382490875, 7.99540086872182, 7.994329021069604, 7.995947337177543, 7.9950333259088255, 7.994956900438992, 7.9947068680298115, 7.995383595551612, 7.995663314178785, 7.995153829903841, 7.994837671522969, 7.9948125758087345, 7.9951336352316735, 7.995446890395271, 7.958011534092088]}}",
                 "classification": "TLP:W",
                 "body_format": "GRAPH_DATA",
@@ -171,14 +182,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -194,6 +198,24 @@
                     }
                 },
                 "title_text": "Section - .rsrc",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Section name: .rsrc\nEntropy: 7.512067529444863\nEntropy without padding: 7.512067529444863",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -489,7 +511,7 @@
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "Can't decode html object from resources manager",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
@@ -502,12 +524,12 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "HTML",
+                "title_text": "Corrupted resources",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "Found corrupted icons",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
@@ -520,7 +542,7 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "Icons",
+                "title_text": "Corrupted resources",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -615,7 +637,7 @@
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "INVALID_SIGNER found while verifying signature : VERIFICATION_FLAGS.INVALID_SIGNER | VERIFICATION_FLAGS.BAD_DIGEST | VERIFICATION_FLAGS.BAD_SIGNATURE",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
@@ -628,7 +650,7 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "Invalid PE Signature detected",
+                "title_text": "Invalid Signature due to invalid Signer",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -644,7 +666,7 @@
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "The signature does not match the program data :\nSignature : 81662a33778df31021e30202b5654a920dd2a523\nProgram data : 26f300f550c700a5c9294bebf2d406a05514229c",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 2,
@@ -657,12 +679,12 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "The signature does not match the program data",
+                "title_text": "Invalid Signature",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "This is probably an error. Less than two certificates were found : 0",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 2,
@@ -675,7 +697,7 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "This is probably an error. Less than 2 certificates were found",
+                "title_text": "Less than two certificates found",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

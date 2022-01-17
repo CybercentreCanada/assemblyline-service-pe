@@ -2,11 +2,11 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2021-11-25T18:39:16.593080Z",
-            "service_completed": "2021-11-25T18:39:18.268287Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "b4a31afe750adaaaccf23f7dcae7f918fe9aad46b5101ff98513f5f0d9d8112d",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7wzjsbdm/features.json",
+                "path": "/tmp/working_directory/tmpey4ll9ss/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "4cb72c23c88bbb9e2c89c328162008909a0ffc6a374da2c091cb288697e4db75",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7wzjsbdm/overlay",
+                "path": "/tmp/working_directory/tmpey4ll9ss/overlay",
                 "is_section_image": false
             },
             {
@@ -32,7 +32,7 @@
                 "sha256": "1c1983300c10fb262c0b2304b7be15aaba10ae356ebbbb177583dc44774eb080",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7wzjsbdm/certificate.1.1",
+                "path": "/tmp/working_directory/tmpey4ll9ss/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -40,7 +40,7 @@
                 "sha256": "2ade3fa71fa82fed7022b48b5c6dbace27ea4c48b9bfd98db84ee13f7b706fb6",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7wzjsbdm/certificate.1.2",
+                "path": "/tmp/working_directory/tmpey4ll9ss/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -48,7 +48,7 @@
                 "sha256": "f38406e540d7a9d90cb4a9479299640ffb6df9e224ecc7a01c0d9558d8dad77d",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7wzjsbdm/certificate.1.3",
+                "path": "/tmp/working_directory/tmpey4ll9ss/certificate.1.3",
                 "is_section_image": false
             },
             {
@@ -56,7 +56,7 @@
                 "sha256": "6a3c4d89cd6297023831b9c4f718ce71cf8753a2be49e021245ec6ba5066ff00",
                 "description": "certificate.1.4 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7wzjsbdm/certificate.1.4",
+                "path": "/tmp/working_directory/tmpey4ll9ss/certificate.1.4",
                 "is_section_image": false
             },
             {
@@ -64,7 +64,7 @@
                 "sha256": "31a6d7325c3861ba092bc5d3d25a7d4fef62ebf9a3490f65897b87623ecc1295",
                 "description": "certificate.1.5 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7wzjsbdm/certificate.1.5",
+                "path": "/tmp/working_directory/tmpey4ll9ss/certificate.1.5",
                 "is_section_image": false
             }
         ],
@@ -856,7 +856,7 @@
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "OK found while verifying signature : OK",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
@@ -869,7 +869,7 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "This file is signed",
+                "title_text": "Signed EXE",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

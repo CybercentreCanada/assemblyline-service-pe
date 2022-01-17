@@ -406,7 +406,11 @@ class PE(ServiceBase):
         res.add_line(f"Machine: {self.binary.header.machine.name}")
         res.add_line(f"Magic: {self.binary.optional_header.magic.name}")
         if self.binary.optional_header.magic.name == "???":
-            res.set_heuristic(18)
+            heur = Heuristic(18)
+            heur_section = ResultSection(heur.definition.name, heuristic=heur)
+            heur_section.add_line(f"Magic Name: {self.binary.optional_header.magic.name}")
+            heur_section.add_line(f"Magic Value: {self.binary.optional_header.magic.__int__()}")
+            res.add_subsection(heur_section)
         res.add_line(
             (
                 f"Image version: {self.binary.optional_header.major_image_version}."
@@ -467,6 +471,7 @@ class PE(ServiceBase):
         res = ResultSection("Sections")
         self.features["sections"] = []
         if len(self.binary.sections) == 0:
+            res.add_line("0 sections found in executable")
             res.set_heuristic(19)
         for section in self.binary.sections:
             if section.size > len(section.content):
@@ -508,7 +513,12 @@ class PE(ServiceBase):
             sub_res.add_tag("file.pe.sections.name", section.name)
             sub_res.add_line(f"Entropy: {entropy_data[0]}")
             if entropy_data[0] > 7.5:
-                sub_res.set_heuristic(4)
+                heur = Heuristic(4)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line(f"Section name: {section.name}")
+                heur_section.add_line(f"Entropy: {entropy_data[0]}")
+                heur_section.add_line(f"Entropy without padding: {section.entropy}")
+                sub_res.add_subsection(heur_section)
             sub_res.add_line(f"Entropy without padding: {section.entropy}")
             sub_res.add_line(f"Offset: {section.offset}")
             sub_res.add_line(f"Size: {section.size}")
@@ -529,10 +539,11 @@ class PE(ServiceBase):
             try:
                 self.binary.get_section(section.name)
             except lief.not_found:
-                sub_sub_res = ResultSection(
-                    "Section could not be retrieved using the section's name.", heuristic=Heuristic(14)
-                )
-                sub_res.add_subsection(sub_sub_res)
+                heur = Heuristic(14)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line("Section could not be retrieved using the section's name.")
+                heur_section.add_line(f"Section name: {section.name}")
+                sub_res.add_subsection(heur_section)
 
             res.add_subsection(sub_res)
         self.file_res.add_section(res)
@@ -571,7 +582,9 @@ class PE(ServiceBase):
                     sub_res.add_line(f"Filename: {debug.code_view.filename}")
                     sub_res.add_tag("file.pe.pdb_filename", debug.code_view.filename)
                 except UnicodeDecodeError:
-                    sub_res.set_heuristic(16)
+                    heur = Heuristic(16)
+                    heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                    sub_res.add_subsection(heur_section)
                 debug_dict["code_view"] = cv_dict
             if debug.has_pogo:
                 debug_dict["pogo"] = {
@@ -608,6 +621,14 @@ class PE(ServiceBase):
             "ordinal_base": export.ordinal_base,
             "timestamp": export.timestamp,
         }
+
+        res.add_line(f"Name: {export.name}")
+        res.add_tag("file.pe.exports.module_name", export.name)
+        res.add_line(f"Version: {export.major_version}.{export.minor_version}")
+        hr_timestamp = datetime.datetime.utcfromtimestamp(export.timestamp).strftime("%Y-%m-%d %H:%M:%S +00:00 (UTC)")
+        res.add_line(f"Timestamp: {export.timestamp} ({hr_timestamp})")
+
+        sub_res = ResultSection("Entries")
         for entry in export.entries:
             entry_dict = {
                 "address": entry.address,
@@ -619,6 +640,8 @@ class PE(ServiceBase):
                 # "size": entry.size, #In the docs, but not in the dir()
                 # "value": entry.value, #In the docs, but not in the dir()
             }
+            sub_res.add_line(f"Name: {entry.name}, ordinal: {entry.ordinal}")
+            sub_res.add_tag("file.pe.exports.function_name", entry.name)
             try:
                 entry_dict["forward_information"] = {
                     "function": entry.forward_information.function,
@@ -626,19 +649,12 @@ class PE(ServiceBase):
                 }
             except UnicodeDecodeError:
                 del entry_dict["forward_information"]
-                if not res.heuristic:
-                    res.set_heuristic(13)
+                heur = Heuristic(13)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line(f"Couldn't parse the forward information of {entry.name} ({entry.ordinal})")
+                sub_res.add_subsection(heur_section)
             self.features["export"]["entries"].append(entry_dict)
 
-        res.add_line(f"Name: {export.name}")
-        res.add_tag("file.pe.exports.module_name", export.name)
-        res.add_line(f"Version: {export.major_version}.{export.minor_version}")
-        hr_timestamp = datetime.datetime.utcfromtimestamp(export.timestamp).strftime("%Y-%m-%d %H:%M:%S +00:00 (UTC)")
-        res.add_line(f"Timestamp: {export.timestamp} ({hr_timestamp})")
-        sub_res = ResultSection("Entries")
-        for entry in export.entries:
-            sub_res.add_line(f"Name: {entry.name}, ordinal: {entry.ordinal}")
-            sub_res.add_tag("file.pe.exports.function_name", entry.name)
         res.add_subsection(sub_res)
         self.file_res.add_section(res)
 
@@ -871,22 +887,28 @@ class PE(ServiceBase):
                             if item.title != "":
                                 res.add_tag("file.string.extracted", item.title)
                         except UnicodeDecodeError:
-                            sub_res = ResultSection("Dialog item", heuristic=Heuristic(13))
-                            res.add_subsection(sub_res)
+                            heur = Heuristic(13)
+                            heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                            heur_section.add_line(f"Can't decode title of dialog item from dialog named {dialog.title}")
+                            res.add_subsection(heur_section)
                         dialog_dict["items"].append(item_dict)
                     dialogs_list.append(dialog_dict)
 
                 self.features["resources_manager"]["dialogs"] = dialogs_list
             except lief.read_out_of_bound:
-                sub_res = ResultSection("Dialogs", heuristic=Heuristic(13))
-                res.add_subsection(sub_res)
+                heur = Heuristic(13)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line("Can't read dialog object")
+                res.add_subsection(heur_section)
 
         if self.binary.resources_manager.has_html:
             try:
                 self.features["resources_manager"]["html"] = self.binary.resources_manager.html
             except UnicodeDecodeError:
-                sub_res = ResultSection("HTML", heuristic=Heuristic(13))
-                res.add_subsection(sub_res)
+                heur = Heuristic(13)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line("Can't decode html object from resources manager")
+                res.add_subsection(heur_section)
                 # Do our best to find resource 0x17 (23) and save it in the features
 
                 def fetch_last_content(resource):
@@ -928,9 +950,10 @@ class PE(ServiceBase):
                 self.features["resources_manager"]["icons"] = icons
                 res.add_subsection(sub_res)
             except lief.corrupted:
-                sub_res.set_heuristic(13)
-                res.add_subsection(sub_res)
-                pass
+                heur = Heuristic(13)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line("Found corrupted icons")
+                res.add_subsection(heur_section)
 
         if self.binary.resources_manager.has_manifest:
             try:
@@ -946,7 +969,6 @@ class PE(ServiceBase):
                     self.features["resources_manager"]["string_table"].append(string_table.name)
                 except UnicodeDecodeError:
                     self.features["resources_manager"]["string_table"].append("AL_PE: UnicodeDecodeError")
-                    pass
 
         if self.binary.resources_manager.has_version:
             sub_res = ResultSection("Version")
@@ -1115,10 +1137,18 @@ class PE(ServiceBase):
         res = ResultSection("Signatures")
 
         if "INVALID_SIGNER" in self.features["verify_signature"]:
-            res.add_subsection(ResultSection("Invalid PE Signature detected", heuristic=Heuristic(10)))
+            heur = Heuristic(10)
+            heur_section = ResultSection(heur.definition.name, heuristic=heur)
+            heur_section.add_line(
+                f"INVALID_SIGNER found while verifying signature : {self.features['verify_signature']}"
+            )
+            res.add_subsection(heur_section)
 
         if self.features["verify_signature"] == "OK":
-            res.add_subsection(ResultSection("This file is signed", heuristic=Heuristic(2)))
+            heur = Heuristic(2)
+            heur_section = ResultSection(heur.definition.name, heuristic=heur)
+            heur_section.add_line(f"OK found while verifying signature : {self.features['verify_signature']}")
+            res.add_subsection(heur_section)
 
         self.features["signatures"] = []
         for signature_index, signature in enumerate(self.binary.signatures):
@@ -1213,8 +1243,10 @@ class PE(ServiceBase):
                     sub_sub_sub_res.add_tag("cert.thumbprint", hashlib.md5(signer_raw_hex).hexdigest())
                     sub_sub_res.add_subsection(sub_sub_sub_res)
                 else:
-                    sub_sub_sub_res = ResultSection("Signer Certificate", heuristic=Heuristic(13))
-                    sub_sub_res.add_subsection(sub_sub_sub_res)
+                    heur = Heuristic(13)
+                    heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                    heur_section.add_line("Signer certificate or signer certificate's issuer is non-existant")
+                    sub_sub_res.add_subsection(heur_section)
                     del signer_dict["cert"]
 
                 signature_dict["signers"].append(signer_dict)
@@ -1245,31 +1277,40 @@ class PE(ServiceBase):
             self.features["signatures"].append(signature_dict)
 
             if signature.content_info.digest_algorithm.name not in self.features["authentihash"]:
-                sub_res.add_subsection(
-                    ResultSection("The signature does not match the program data", heuristic=Heuristic(1))
-                )
+                heur = Heuristic(1)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line("The signature hash does not exist in the program data :")
+                heur_section.add_line(f"Signature hash : {signature.content_info.digest_algorithm.name}")
+                heur_section.add_line(f"Program data hashes : {', '.join(self.features['authentihash'].keys())}")
+                sub_res.add_subsection(heur_section)
             elif (
                 signature.content_info.digest.hex()
                 != self.features["authentihash"][signature.content_info.digest_algorithm.name]
             ):
-                sub_res.add_subsection(
-                    ResultSection("The signature does not match the program data", heuristic=Heuristic(1))
+                heur = Heuristic(1)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line("The signature does not match the program data :")
+                heur_section.add_line(f"Signature : {signature.content_info.digest.hex()}")
+                heur_section.add_line(
+                    f"Program data : {self.features['authentihash'][signature.content_info.digest_algorithm.name]}"
                 )
+                sub_res.add_subsection(heur_section)
 
             if len(signature.certificates) < 2:
-                sub_res.add_subsection(
-                    ResultSection(
-                        "This is probably an error. Less than 2 certificates were found", heuristic=Heuristic(8)
-                    )
+                heur = Heuristic(8)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line(
+                    f"This is probably an error. Less than two certificates were found : {len(signature.certificates)}"
                 )
+                sub_res.add_subsection(heur_section)
                 res.add_subsection(sub_res)
                 continue
 
-            self_signed_signer = False
-            denied_algorithm = False
+            denied_algorithm = []
+            self_signed_signer = []
             for signer in signature.signers:
                 if signer.encryption_algorithm.name not in ACCEPTED_ALGORITHMS:
-                    denied_algorithm = True
+                    denied_algorithm.append(signer.encryption_algorithm.name)
                 # TODO Do not re-parse it again.
                 if signer.cert is not None:
                     extracted_cert_info = extract_cert_info(signer.cert, trusted_certs + extra_certs)
@@ -1277,20 +1318,23 @@ class PE(ServiceBase):
                         extracted_cert_info["issuer"] == extracted_cert_info["subject"]
                         and extracted_cert_info["is_trusted"] != "OK"
                     ):
-                        self_signed_signer = True
+                        self_signed_signer.append(extracted_cert_info["issuer"])
                         break
 
             if denied_algorithm:
-                exploit_res = ResultSection("Invalid Encryption Algorithm used for signature", heuristic=Heuristic(9))
-                exploit_res.add_tag("attribution.exploit", "CVE_2020_0601")
-                sub_res.add_subsection(exploit_res)
-                res.add_subsection(sub_res)
-                continue
+                heur = Heuristic(9)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line(f"Offending algorithms : {', '.join(denied_algorithm)}")
+                heur_section.add_tag("attribution.exploit", "CVE_2020_0601")
+                sub_res.add_subsection(heur_section)
 
             if self_signed_signer:
-                sub_res.add_subsection(
-                    ResultSection("File is self-signed (signing cert signed by itself)", heuristic=Heuristic(6))
-                )
+                heur = Heuristic(6)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line(f"Subject/Issuer used : {self_signed_signer[0]}")
+                sub_res.add_subsection(heur_section)
+
+            if denied_algorithm or self_signed_signer:
                 res.add_subsection(sub_res)
                 continue
 
@@ -1301,21 +1345,27 @@ class PE(ServiceBase):
                     all_same_issuer = False
                     break
             if all_same_issuer:
-                sub_res.add_subsection(
-                    ResultSection("File is self-signed, all certificate issuers match", heuristic=Heuristic(3))
-                )
+                heur = Heuristic(3)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line("All issuers matching is usually a sign of it being self-signed")
+                heur_section.add_line(f"Issuer : {first_issuer}")
+                sub_res.add_subsection(heur_section)
                 res.add_subsection(sub_res)
                 continue
 
             if signature_dict["check"] != "OK":
-                sub_res.add_subsection(
-                    ResultSection(
-                        "Possibly self signed. "
-                        "Could not identify a chain of trust back to a known root CA, but certificates "
-                        "presented were issued by different issuers",
-                        heuristic=Heuristic(5),
-                    )
+                heur = Heuristic(5)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_lines(
+                    [
+                        "Possibly self signed.",
+                        (
+                            "Could not identify a chain of trust back to a known root CA, but certificates "
+                            "presented were issued by different issuers"
+                        ),
+                    ]
                 )
+                sub_res.add_subsection(heur_section)
             res.add_subsection(sub_res)
         self.file_res.add_section(res)
 
@@ -1341,6 +1391,7 @@ class PE(ServiceBase):
     def _cleanup(self):
         self.binary = None
         self.features = None
+        self.temp_res = None
         super()._cleanup()
 
     def execute(self, request: ServiceRequest):

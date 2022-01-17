@@ -2,11 +2,11 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2021-11-25T18:39:28.115934Z",
-            "service_completed": "2021-11-25T18:39:28.329816Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "c1f7054aa090a769ae02c39f4d139adfb99f399624bfe7151a872ad0a91e7e01",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_duwnxnw/features.json",
+                "path": "/tmp/working_directory/tmp0csk4l22/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "58166564c037449c32b5c13649913c5390a2a34b21d33ebc01f295e7f2aa1b01",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_duwnxnw/overlay",
+                "path": "/tmp/working_directory/tmp0csk4l22/overlay",
                 "is_section_image": false
             }
         ],
@@ -498,11 +498,11 @@
                     "file": {
                         "pe": {
                             "versions": {
-                                "filename": [
-                                    "maintenanceservice.exe"
-                                ],
                                 "description": [
                                     ""
+                                ],
+                                "filename": [
+                                    "maintenanceservice.exe"
                                 ]
                             }
                         }
@@ -557,7 +557,7 @@
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "INVALID_SIGNER found while verifying signature : VERIFICATION_FLAGS.INVALID_SIGNER | VERIFICATION_FLAGS.BAD_DIGEST | VERIFICATION_FLAGS.BAD_SIGNATURE",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
@@ -570,7 +570,7 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "Invalid PE Signature detected",
+                "title_text": "Invalid Signature due to invalid Signer",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -586,7 +586,7 @@
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "The signature does not match the program data :\nSignature : c77a960b0d1e58c51e259ea67b6e1b19aea3ce5a\nProgram data : 8abbd265630a79db05277f78a3877e31c737af95",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 2,
@@ -599,12 +599,12 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "The signature does not match the program data",
+                "title_text": "Invalid Signature",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "This is probably an error. Less than two certificates were found : 0",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 2,
@@ -617,7 +617,7 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "This is probably an error. Less than 2 certificates were found",
+                "title_text": "Less than two certificates found",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

@@ -2,11 +2,11 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2021-12-07T14:25:52.821024Z",
-            "service_completed": "2021-12-07T14:25:53.008951Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "8494c59dd4318a347ccba6171c7b247fa7c703ef3adbe09b462dcd825f5386d8",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpmjdtr5b1/icon_0.ico",
+                "path": "/tmp/working_directory/tmp8o8j53yp/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "ffcf94876e62e39c6fdba329df2746c937bcd1ffb9dda4ccd8371659f9d7e19a",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpmjdtr5b1/icon_1.ico",
+                "path": "/tmp/working_directory/tmp8o8j53yp/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "3b74afadc1ed7b1fc408890a289322d85de5622706a22b8e192c3cf4268a015a",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpmjdtr5b1/icon_2.ico",
+                "path": "/tmp/working_directory/tmp8o8j53yp/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "c7b93a7217fbe46e50d358aa8d85821f763d6afc525cabac5cd735fa90590a39",
                 "description": "Icon 3 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpmjdtr5b1/icon_3.ico",
+                "path": "/tmp/working_directory/tmp8o8j53yp/icon_3.ico",
                 "is_section_image": false
             },
             {
@@ -46,7 +46,7 @@
                 "sha256": "69a982b8f68e4cf384ea2bf14bdd3a3b17dbf1259c83848fc4218aa0159644a3",
                 "description": "Icon 4 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpmjdtr5b1/icon_4.ico",
+                "path": "/tmp/working_directory/tmp8o8j53yp/icon_4.ico",
                 "is_section_image": false
             },
             {
@@ -54,7 +54,7 @@
                 "sha256": "0f630f5dc9d04fe04c1d1493adba52fcbff6666be0477bb482669aed59ed3e96",
                 "description": "Icon 5 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpmjdtr5b1/icon_5.ico",
+                "path": "/tmp/working_directory/tmp8o8j53yp/icon_5.ico",
                 "is_section_image": false
             },
             {
@@ -62,7 +62,7 @@
                 "sha256": "f34d44677ac874f2b2b3c794545a55a8beac75472eb0cd1c4255936643bc10be",
                 "description": "Icon 6 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpmjdtr5b1/icon_6.ico",
+                "path": "/tmp/working_directory/tmp8o8j53yp/icon_6.ico",
                 "is_section_image": false
             },
             {
@@ -70,7 +70,7 @@
                 "sha256": "86e5d6cf9a61b29df9d5b2b569ff049fceba6029f65ecff708d0c6e17b4590f7",
                 "description": "Icon 7 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpmjdtr5b1/icon_7.ico",
+                "path": "/tmp/working_directory/tmp8o8j53yp/icon_7.ico",
                 "is_section_image": false
             },
             {
@@ -78,7 +78,7 @@
                 "sha256": "f744a393818e370c25e0385c0dc83aa8d2caab636bbd97748b943e24e6b26490",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpmjdtr5b1/features.json",
+                "path": "/tmp/working_directory/tmp8o8j53yp/features.json",
                 "is_section_image": false
             }
         ],
@@ -88,7 +88,7 @@
                 "sha256": "35129502d3b2554dfb1a2c9cf0ae20050c8e30c0c1603c5c1424403204ba1ccf",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpmjdtr5b1/overlay",
+                "path": "/tmp/working_directory/tmp8o8j53yp/overlay",
                 "is_section_image": false
             }
         ],
@@ -592,7 +592,7 @@
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "Signer certificate or signer certificate's issuer is non-existant",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 3,
@@ -605,12 +605,12 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "Signer Certificate",
+                "title_text": "Corrupted resources",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "The signature does not match the program data :\nSignature : 74cf3a187817d9743a8d45fe2b4f4b6c56727e04\nProgram data : 46b555ee5b218160f5001bd5a198a770858d4108",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 2,
@@ -623,12 +623,12 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "The signature does not match the program data",
+                "title_text": "Invalid Signature",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "This is probably an error. Less than two certificates were found : 0",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 2,
@@ -641,7 +641,7 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "This is probably an error. Less than 2 certificates were found",
+                "title_text": "Less than two certificates found",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

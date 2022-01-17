@@ -2,11 +2,11 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2021-11-25T18:40:19.767719Z",
-            "service_completed": "2021-11-25T18:40:19.953112Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "0b9bbba31552d6314b424243d1bf60bc23fe8de531f5989433f3dbb1f46f026e",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_0k95qzh/features.json",
+                "path": "/tmp/working_directory/tmpv_xsjyzz/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "b1bd3ae269f305e658c866bfaf5233ad74f2fe2c4b22797c216f32b370a38137",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_0k95qzh/overlay",
+                "path": "/tmp/working_directory/tmpv_xsjyzz/overlay",
                 "is_section_image": false
             }
         ],
@@ -118,14 +118,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -145,18 +138,36 @@
                 "auto_collapse": false
             },
             {
-                "auto_collapse": false,
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.733078825779354, 7.166391657089713, 7.2608044498824125, 7.258372303305696, 7.167990761706463, 7.074401948438118, 7.130296476752854, 7.203513610238915, 7.185596632280928, 7.245882887869945, 7.18337531289714, 7.327921923116574, 7.139992241000401, 7.3320030572726695, 7.097544724161023, 7.381766821917645, 7.262453437461793, 7.201031580699568, 7.258011312959545, 7.2119740073879965, 7.106518507716277, 7.164161789535648, 7.265196691422029, 7.1925797317207625, 7.208478183582945, 7.190952785123629, 7.063287831879562, 7.136968468809167, 7.313933683254665, 7.312919888988959, 7.226778192869321, 7.245469781654366, 7.187245619860311, 7.11720447547439, 7.210568633623618, 7.334274259619092, 7.1727525417625095, 7.274401110245655, 7.286659890413034, 7.251902590272035, 7.118246290871597, 6.967667513968778, 6.896262445920553, 6.798320592276783, 6.875986669511347, 6.962069934498075, 7.171616940589298, 7.065467302205667, 7.148807313232157, 3.6898653914266264]}}",
-                "body_format": "GRAPH_DATA",
+                "body": "Section name: \\x02\\xd2u\\xdb\\x8a\\x16\\xeb\\xd4\nEntropy: 7.878589862403527\nEntropy without padding: 7.878589862403527",
                 "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.733078825779354, 7.166391657089713, 7.2608044498824125, 7.258372303305696, 7.167990761706463, 7.074401948438118, 7.130296476752854, 7.203513610238915, 7.185596632280928, 7.245882887869945, 7.18337531289714, 7.327921923116574, 7.139992241000401, 7.3320030572726695, 7.097544724161023, 7.381766821917645, 7.262453437461793, 7.201031580699568, 7.258011312959545, 7.2119740073879965, 7.106518507716277, 7.164161789535648, 7.265196691422029, 7.1925797317207625, 7.208478183582945, 7.190952785123629, 7.063287831879562, 7.136968468809167, 7.313933683254665, 7.312919888988959, 7.226778192869321, 7.245469781654366, 7.187245619860311, 7.11720447547439, 7.210568633623618, 7.334274259619092, 7.1727525417625095, 7.274401110245655, 7.286659890413034, 7.251902590272035, 7.118246290871597, 6.967667513968778, 6.896262445920553, 6.798320592276783, 6.875986669511347, 6.962069934498075, 7.171616940589298, 7.065467302205667, 7.148807313232157, 3.6898653914266264]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
                 "depth": 2,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Entropy graph",
-                "zeroize_on_tag_safe": false
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "Section could not be retrieved using the section's name.\nSection name: \\x02\\xd2u\\xdb\\x8a\\x16\\xeb\\xd4",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 2,
@@ -169,7 +180,7 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "Section could not be retrieved using the section's name.",
+                "title_text": "Irretrievable section",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

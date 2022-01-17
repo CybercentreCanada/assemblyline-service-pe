@@ -2,11 +2,11 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2021-11-25T18:38:54.730501Z",
-            "service_completed": "2021-11-25T18:38:57.948274Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "938bb74b53192850aa95a31b4a46ae49be927cc56790072959f48b8ce72d8728",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpz17j7lo1/icon_0.ico",
+                "path": "/tmp/working_directory/tmpsj2dtisx/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "3b80fa643d1efdd6385c55c37c3e6b79513d1546237c2539e0e2431629ea7049",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpz17j7lo1/icon_1.ico",
+                "path": "/tmp/working_directory/tmpsj2dtisx/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "0fa7b343ff5beb3524d64f983e84cf9c8d7a3ef0ed79abf58d20edaf5005115b",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpz17j7lo1/icon_2.ico",
+                "path": "/tmp/working_directory/tmpsj2dtisx/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "04ce49e2c405a8c6869d14805d5200fdf0913cf1246fc0a7571a482a25adb8bc",
                 "description": "Icon 3 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpz17j7lo1/icon_3.ico",
+                "path": "/tmp/working_directory/tmpsj2dtisx/icon_3.ico",
                 "is_section_image": false
             },
             {
@@ -46,7 +46,7 @@
                 "sha256": "e051f3c75616f37c6c6d487516d50401b4550da7b89b7d9b0243d8b98d8a793e",
                 "description": "Icon 4 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpz17j7lo1/icon_4.ico",
+                "path": "/tmp/working_directory/tmpsj2dtisx/icon_4.ico",
                 "is_section_image": false
             },
             {
@@ -54,7 +54,7 @@
                 "sha256": "188572665a3ddeea8092dd9eb4ad2c081973f4dc63b07c3af75ae19962cab867",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpz17j7lo1/features.json",
+                "path": "/tmp/working_directory/tmpsj2dtisx/features.json",
                 "is_section_image": false
             }
         ],
@@ -64,7 +64,7 @@
                 "sha256": "74cd07ef186d995ad75a0c2a153d1dd6f7b563987f5aa0fefef0a095708c02dd",
                 "description": "binary_0_2147486448_2147486464_1033 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpz17j7lo1/binary_0_2147486448_2147486464_1033",
+                "path": "/tmp/working_directory/tmpsj2dtisx/binary_0_2147486448_2147486464_1033",
                 "is_section_image": false
             }
         ],
@@ -509,14 +509,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -532,6 +525,24 @@
                     }
                 },
                 "title_text": "Section - .rsrc",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Section name: .rsrc\nEntropy: 7.9700859457300455\nEntropy without padding: 7.970085945730044",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

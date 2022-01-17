@@ -2,11 +2,11 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2021-12-13T19:39:11.230217Z",
-            "service_completed": "2021-12-13T19:39:11.380686Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "b65b4077fb9bdfe176e22c4848c7ef85cb668c0f18dddd4d414277b92b3f9390",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpt9c2owin/icon_0.ico",
+                "path": "/tmp/working_directory/tmpx_llv15k/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "991eafd590a6db23212e86387edb848b79637156ec4c9dce29d85570604dcb53",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpt9c2owin/icon_1.ico",
+                "path": "/tmp/working_directory/tmpx_llv15k/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "80415827b01b2a20f9bcaac44129b0f5be3062989927d40816e1c99fe44ce1a4",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpt9c2owin/icon_2.ico",
+                "path": "/tmp/working_directory/tmpx_llv15k/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "0f3c0676848224fd8bb689f9d4e8982915b9cc1b300c3bad54fec75e0211c63d",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpt9c2owin/features.json",
+                "path": "/tmp/working_directory/tmpx_llv15k/features.json",
                 "is_section_image": false
             }
         ],
@@ -48,7 +48,7 @@
                 "sha256": "ecb5f5c7916b0d324a279fb13547e9250f132d0d215d0dc5b6b9bf7d6a7faf99",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpt9c2owin/overlay",
+                "path": "/tmp/working_directory/tmpx_llv15k/overlay",
                 "is_section_image": false
             }
         ],
@@ -223,14 +223,7 @@
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {
                     "file": {
                         "pe": {
@@ -246,6 +239,24 @@
                     }
                 },
                 "title_text": "Section - .rsrc",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Section name: .rsrc\nEntropy: 7.572896690878167\nEntropy without padding: 7.57323601165223",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

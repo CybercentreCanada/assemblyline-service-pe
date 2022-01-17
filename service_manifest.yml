@@ -41,7 +41,7 @@ heuristics:
   - description: This PE appears is self-signed. All certificates are from the same issuer.
     filetype: "executable/windows"
     heur_id: 3
-    name: Self Signed
+    name: Same issuer for all certificates
     score: 500
 
   - description: >-
@@ -77,7 +77,7 @@ heuristics:
   - description: This file has less than two certificate. This is probably an error...
     filetype: "executable/windows"
     heur_id: 8
-    name: Less than two certificates
+    name: Less than two certificates found
     score: 50
 
   - description: >-
@@ -85,7 +85,7 @@ heuristics:
        usually a sign of someone tampering with the signature information.
     filetype: "executable/windows"
     heur_id: 9
-    name: Invalid encryption algorithm used
+    name: Invalid encryption algorithm used for signature
     score: 1000
 
   - description: >-
