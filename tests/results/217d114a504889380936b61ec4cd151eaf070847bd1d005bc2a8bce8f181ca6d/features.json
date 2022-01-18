@@ -1,1 +1,2168 @@
-{"name": "217d114a504889380936b61ec4cd151eaf070847bd1d005bc2a8bce8f181ca6d", "format": "PE", "imphash": "d9e84c41ab9408879405afc69826e0b7", "entrypoint": 25505, "header": {"characteristics_hash": 258, "characteristics_list": ["CHARA_32BIT_MACHINE", "EXECUTABLE_IMAGE"], "machine": "I386", "numberof_sections": 7, "numberof_symbols": 0, "signature": [80, 69, 0, 0], "timestamp": 1495741942, "hr_timestamp": "2017-05-25 19:52:22 +00:00 (UTC)"}, "optional_header": {"addressof_entrypoint": 25505, "baseof_code": 4096, "checksum": 803873, "dll_characteristics": 33088, "dll_characteristics_lists": ["DYNAMIC_BASE", "NX_COMPAT", "TERMINAL_SERVER_AWARE"], "file_alignment": 512, "imagebase": 4194304, "loader_flags": 0, "magic": "PE32", "major_image_version": 0, "major_linker_version": 0, "major_operating_system_version": 5, "major_subsystem_version": 5, "minor_image_version": 0, "minor_linker_version": 0, "minor_operating_system_version": 1, "minor_subsystem_version": 1, "numberof_rva_and_size": 16, "section_alignment": 4096, "sizeof_code": 111616, "sizeof_headers": 1024, "sizeof_heap_commit": 4096, "sizeof_heap_reserve": 1048576, "sizeof_image": 778240, "sizeof_initialized_data": 647680, "sizeof_stack_commit": 4096, "sizeof_stack_reserve": 1048576, "sizeof_uninitialized_data": 0, "subsystem": "WINDOWS_CUI", "win32_version_value": 0, "baseof_data": 118784}, "dos_header": {"addressof_new_exeheader": 256, "addressof_relocation_table": 64, "checksum": 0, "file_size_in_pages": 3, "header_size_in_paragraphs": 4, "initial_ip": 0, "initial_relative_cs": 0, "initial_relative_ss": 0, "initial_sp": 184, "magic": 23117, "maximum_extra_paragraphs": 65535, "minimum_extra_paragraphs": 0, "numberof_relocation": 0, "oem_id": 0, "oem_info": 0, "overlay_number": 0, "used_bytes_in_the_last_page": 144}, "rich_header": {"entries": [{"build_id": 24210, "count": 1, "id": 258}, {"build_id": 0, "count": 1, "id": 151}, {"build_id": 24210, "count": 1, "id": 255}, {"build_id": 24210, "count": 3, "id": 265}, {"build_id": 0, "count": 96, "id": 1}, {"build_id": 30729, "count": 5, "id": 147}, {"build_id": 24123, "count": 34, "id": 260}, {"build_id": 24123, "count": 57, "id": 261}, {"build_id": 24123, "count": 22, "id": 259}, {"build_id": 40116, "count": 29, "id": 242}, {"build_id": 40116, "count": 143, "id": 243}, {"build_id": 40116, "count": 13, "id": 241}], "key": 857619653}, "nx": true, "authentihash": {"SHA_512": "a6a2730b6f249b42a9e64d870436efaf5c09b80b91b537231dc7364651222f804db6bfae91401c8a9153353876ebbbbb37a980a0c6b524d3779750c2b09909da", "SHA_384": "4578a53ce7eede9584a1e7f6a9e10dd2274a8590e28f02f8319049a0eeee0d90d15f6e0b6909c0535a17f319bd8b42e9", "SHA_256": "9872c7237de8031c10e59cdd95769cf4e3eb82ac7353c0c44d86ce206ff851e6", "SHA_1": "0befcef97f7e6855afbcc51113d39b9d02faacfd", "MD5": "17ebf20d7315b31333eb8e504de94579"}, "tls": {"associated section": ".rdata"}, "position_independent": true, "is_reproducible_build": false, "overlay": {"size": 0}, "size_of_headers": 1024, "virtual_size": 778240, "sections": [{"name": ".text", "characteristics_hash": 1610612768, "characteristics_list": ["CNT_CODE", "MEM_EXECUTE", "MEM_READ"], "entropy": 6.628951819271886, "entropy_without_padding": 6.633409193379763, "md5": "73beda5cac74aadad0f014176a779a46", "offset": 1024, "size": 111616, "sizeof_raw_data": 111616, "virtual_address": 4096, "virtual_size": 111463, "fullname": ".text\u0000\u0000\u0000"}, {"name": ".rdata", "characteristics_hash": 1073741888, "characteristics_list": ["CNT_INITIALIZED_DATA", "MEM_READ"], "entropy": 6.541314375578349, "entropy_without_padding": 6.541631760662821, "md5": "86ac4ab156dfbc03306c62273c88fcc3", "offset": 112640, "size": 568320, "sizeof_raw_data": 568320, "virtual_address": 118784, "virtual_size": 568282, "fullname": ".rdata\u0000\u0000"}, {"name": ".data", "characteristics_hash": 3221225536, "characteristics_list": ["CNT_INITIALIZED_DATA", "MEM_READ", "MEM_WRITE"], "entropy": 3.4202509647972863, "entropy_without_padding": 3.420250964797284, "md5": "375eab99c3a6b560df7481e67273c127", "offset": 680960, "size": 3584, "sizeof_raw_data": 3584, "virtual_address": 688128, "virtual_size": 7324, "fullname": ".data\u0000\u0000\u0000"}, {"name": ".gfids", "characteristics_hash": 1073741888, "characteristics_list": ["CNT_INITIALIZED_DATA", "MEM_READ"], "entropy": 3.0796312199229217, "entropy_without_padding": 3.7487041694941925, "md5": "d864fd89f4f518e30a560e0fab7061da", "offset": 684544, "size": 1024, "sizeof_raw_data": 1024, "virtual_address": 696320, "virtual_size": 792, "fullname": ".gfids\u0000\u0000"}, {"name": ".tls", "characteristics_hash": 3221225536, "characteristics_list": ["CNT_INITIALIZED_DATA", "MEM_READ", "MEM_WRITE"], "entropy": 0.020393135236084953, "entropy_without_padding": 0.5032583347756457, "md5": "1f354d76203061bfdd5a53dae48d5435", "offset": 685568, "size": 512, "sizeof_raw_data": 512, "virtual_address": 700416, "virtual_size": 9, "fullname": ".tls\u0000\u0000\u0000\u0000"}, {"name": ".rsrc", "characteristics_hash": 1073741888, "characteristics_list": ["CNT_INITIALIZED_DATA", "MEM_READ"], "entropy": 4.121101832086987, "entropy_without_padding": 4.138556702131238, "md5": "bd10751b89fd9f97bd6b5fac96a35437", "offset": 686080, "size": 61952, "sizeof_raw_data": 61952, "virtual_address": 704512, "virtual_size": 61584, "fullname": ".rsrc\u0000\u0000\u0000"}, {"name": ".reloc", "characteristics_hash": 1107296320, "characteristics_list": ["CNT_INITIALIZED_DATA", "MEM_DISCARDABLE", "MEM_READ"], "entropy": 6.5250062745987165, "entropy_without_padding": 6.554805123134259, "md5": "6971bee41f136001489c5fe1e778ff1a", "offset": 748032, "size": 8192, "sizeof_raw_data": 8192, "virtual_address": 770048, "virtual_size": 8072, "fullname": ".reloc\u0000\u0000"}], "debug": [{"addressof_rawdata": 680536, "characteristics": 0, "major_version": 0, "minor_version": 0, "pointerto_rawdata": 674392, "sizeof_data": 976, "timestamp": 1495741942, "type": "POGO", "pogo": {"entries": [{"name": ".text$di", "size": 224, "start_rva": 4096}, {"name": ".text$mn", "size": 110025, "start_rva": 4320}, {"name": ".text$x", "size": 1124, "start_rva": 114345}, {"name": ".text$yd", "size": 90, "start_rva": 115469}, {"name": ".idata$5", "size": 324, "start_rva": 118784}, {"name": ".00cfg", "size": 4, "start_rva": 119108}, {"name": ".CRT$XCA", "size": 4, "start_rva": 119112}, {"name": ".CRT$XCAA", "size": 4, "start_rva": 119116}, {"name": ".CRT$XCC", "size": 28, "start_rva": 119120}, {"name": ".CRT$XCL", "size": 8, "start_rva": 119148}, {"name": ".CRT$XCU", "size": 4, "start_rva": 119156}, {"name": ".CRT$XCZ", "size": 4, "start_rva": 119160}, {"name": ".CRT$XIA", "size": 4, "start_rva": 119164}, {"name": ".CRT$XIAA", "size": 4, "start_rva": 119168}, {"name": ".CRT$XIAC", "size": 4, "start_rva": 119172}, {"name": ".CRT$XIC", "size": 24, "start_rva": 119176}, {"name": ".CRT$XIZ", "size": 4, "start_rva": 119200}, {"name": ".CRT$XLA", "size": 4, "start_rva": 119204}, {"name": ".CRT$XLZ", "size": 4, "start_rva": 119208}, {"name": ".CRT$XPA", "size": 4, "start_rva": 119212}, {"name": ".CRT$XPX", "size": 8, "start_rva": 119216}, {"name": ".CRT$XPXA", "size": 4, "start_rva": 119224}, {"name": ".CRT$XPZ", "size": 4, "start_rva": 119228}, {"name": ".CRT$XTA", "size": 4, "start_rva": 119232}, {"name": ".CRT$XTZ", "size": 4, "start_rva": 119236}, {"name": ".l3p", "size": 512456, "start_rva": 119240}, {"name": ".rdata", "size": 46236, "start_rva": 631696}, {"name": ".rdata$T", "size": 24, "start_rva": 677932}, {"name": ".rdata$r", "size": 2444, "start_rva": 677956}, {"name": ".rdata$sxdata", "size": 136, "start_rva": 680400}, {"name": ".rdata$zzzdbg", "size": 976, "start_rva": 680536}, {"name": ".rtc$IAA", "size": 4, "start_rva": 681512}, {"name": ".rtc$IZZ", "size": 4, "start_rva": 681516}, {"name": ".rtc$TAA", "size": 4, "start_rva": 681520}, {"name": ".rtc$TZZ", "size": 4, "start_rva": 681524}, {"name": ".xdata$x", "size": 3684, "start_rva": 681528}, {"name": ".idata$2", "size": 40, "start_rva": 685212}, {"name": ".idata$3", "size": 20, "start_rva": 685252}, {"name": ".idata$4", "size": 324, "start_rva": 685272}, {"name": ".idata$6", "size": 1470, "start_rva": 685596}, {"name": ".data", "size": 2480, "start_rva": 688128}, {"name": ".data$r", "size": 1096, "start_rva": 690608}, {"name": ".bss", "size": 3748, "start_rva": 691704}, {"name": ".gfids$x", "size": 192, "start_rva": 696320}, {"name": ".gfids$y", "size": 600, "start_rva": 696512}, {"name": ".tls", "size": 4, "start_rva": 700416}, {"name": ".tls$", "size": 4, "start_rva": 700420}, {"name": ".tls$ZZZ", "size": 1, "start_rva": 700424}, {"name": ".rsrc$01", "size": 1552, "start_rva": 704512}, {"name": ".rsrc$02", "size": 60032, "start_rva": 706064}], "signature": "LCTG"}}], "imports": {"KERNEL32.dll": [{"data": 685596, "hint": 536, "iat_address": 118784, "iat_value": 685596, "is_ordinal": false, "name": "GetModuleHandleW"}, {"data": 685616, "hint": 351, "iat_address": 118788, "iat_value": 685616, "is_ordinal": false, "name": "FreeConsole"}, {"data": 685630, "hint": 1263, "iat_address": 118792, "iat_value": 685630, "is_ordinal": false, "name": "VirtualProtect"}, {"data": 687040, "hint": 724, "iat_address": 118796, "iat_value": 687040, "is_ordinal": false, "name": "HeapSize"}, {"data": 687024, "hint": 958, "iat_address": 118800, "iat_value": 687024, "is_ordinal": false, "name": "ReadConsoleW"}, {"data": 685694, "hint": 1297, "iat_address": 118804, "iat_value": 685694, "is_ordinal": false, "name": "WideCharToMultiByte"}, {"data": 685716, "hint": 234, "iat_address": 118808, "iat_value": 685716, "is_ordinal": false, "name": "EncodePointer"}, {"data": 685732, "hint": 202, "iat_address": 118812, "iat_value": 685732, "is_ordinal": false, "name": "DecodePointer"}, {"data": 685748, "hint": 238, "iat_address": 118816, "iat_value": 685748, "is_ordinal": false, "name": "EnterCriticalSection"}, {"data": 685772, "hint": 825, "iat_address": 118820, "iat_value": 685772, "is_ordinal": false, "name": "LeaveCriticalSection"}, {"data": 685796, "hint": 209, "iat_address": 118824, "iat_value": 685796, "is_ordinal": false, "name": "DeleteCriticalSection"}, {"data": 685820, "hint": 871, "iat_address": 118828, "iat_value": 685820, "is_ordinal": false, "name": "MultiByteToWideChar"}, {"data": 685842, "hint": 1139, "iat_address": 118832, "iat_value": 685842, "is_ordinal": false, "name": "SetLastError"}, {"data": 685858, "hint": 739, "iat_address": 118836, "iat_value": 685858, "is_ordinal": false, "name": "InitializeCriticalSectionAndSpinCount"}, {"data": 685898, "hint": 133, "iat_address": 118840, "iat_value": 685898, "is_ordinal": false, "name": "CreateEventW"}, {"data": 685914, "hint": 1221, "iat_address": 118844, "iat_value": 685914, "is_ordinal": false, "name": "TlsAlloc"}, {"data": 685926, "hint": 1223, "iat_address": 118848, "iat_value": 685926, "is_ordinal": false, "name": "TlsGetValue"}, {"data": 685940, "hint": 1224, "iat_address": 118852, "iat_value": 685940, "is_ordinal": false, "name": "TlsSetValue"}, {"data": 685954, "hint": 1222, "iat_address": 118856, "iat_value": 685954, "is_ordinal": false, "name": "TlsFree"}, {"data": 685964, "hint": 633, "iat_address": 118860, "iat_value": 685964, "is_ordinal": false, "name": "GetSystemTimeAsFileTime"}, {"data": 685990, "hint": 581, "iat_address": 118864, "iat_value": 685990, "is_ordinal": false, "name": "GetProcAddress"}, {"data": 686008, "hint": 100, "iat_address": 118868, "iat_value": 686008, "is_ordinal": false, "name": "CompareStringW"}, {"data": 686026, "hint": 813, "iat_address": 118872, "iat_value": 686026, "is_ordinal": false, "name": "LCMapStringW"}, {"data": 686042, "hint": 518, "iat_address": 118876, "iat_value": 686042, "is_ordinal": false, "name": "GetLocaleInfoW"}, {"data": 686060, "hint": 617, "iat_address": 118880, "iat_value": 686060, "is_ordinal": false, "name": "GetStringTypeW"}, {"data": 686078, "hint": 370, "iat_address": 118884, "iat_value": 686078, "is_ordinal": false, "name": "GetCPInfo"}, {"data": 686090, "hint": 82, "iat_address": 118888, "iat_value": 686090, "is_ordinal": false, "name": "CloseHandle"}, {"data": 686104, "hint": 1113, "iat_address": 118892, "iat_value": 686104, "is_ordinal": false, "name": "SetEvent"}, {"data": 686116, "hint": 1039, "iat_address": 118896, "iat_value": 686116, "is_ordinal": false, "name": "ResetEvent"}, {"data": 686130, "hint": 1274, "iat_address": 118900, "iat_value": 686130, "is_ordinal": false, "name": "WaitForSingleObjectEx"}, {"data": 686154, "hint": 1235, "iat_address": 118904, "iat_value": 686154, "is_ordinal": false, "name": "UnhandledExceptionFilter"}, {"data": 686182, "hint": 1189, "iat_address": 118908, "iat_value": 686182, "is_ordinal": false, "name": "SetUnhandledExceptionFilter"}, {"data": 686212, "hint": 448, "iat_address": 118912, "iat_value": 686212, "is_ordinal": false, "name": "GetCurrentProcess"}, {"data": 686232, "hint": 1216, "iat_address": 118916, "iat_value": 686232, "is_ordinal": false, "name": "TerminateProcess"}, {"data": 686252, "hint": 772, "iat_address": 118920, "iat_value": 686252, "is_ordinal": false, "name": "IsProcessorFeaturePresent"}, {"data": 686280, "hint": 768, "iat_address": 118924, "iat_value": 686280, "is_ordinal": false, "name": "IsDebuggerPresent"}, {"data": 686300, "hint": 611, "iat_address": 118928, "iat_value": 686300, "is_ordinal": false, "name": "GetStartupInfoW"}, {"data": 686318, "hint": 935, "iat_address": 118932, "iat_value": 686318, "is_ordinal": false, "name": "QueryPerformanceCounter"}, {"data": 686344, "hint": 449, "iat_address": 118936, "iat_value": 686344, "is_ordinal": false, "name": "GetCurrentProcessId"}, {"data": 686366, "hint": 453, "iat_address": 118940, "iat_value": 686366, "is_ordinal": false, "name": "GetCurrentThreadId"}, {"data": 686388, "hint": 743, "iat_address": 118944, "iat_value": 686388, "is_ordinal": false, "name": "InitializeSListHead"}, {"data": 686410, "hint": 945, "iat_address": 118948, "iat_value": 686410, "is_ordinal": false, "name": "RaiseException"}, {"data": 686428, "hint": 1048, "iat_address": 118952, "iat_value": 686428, "is_ordinal": false, "name": "RtlUnwind"}, {"data": 686440, "hint": 514, "iat_address": 118956, "iat_value": 686440, "is_ordinal": false, "name": "GetLastError"}, {"data": 686456, "hint": 354, "iat_address": 118960, "iat_value": 686456, "is_ordinal": false, "name": "FreeLibrary"}, {"data": 686470, "hint": 830, "iat_address": 118964, "iat_value": 686470, "is_ordinal": false, "name": "LoadLibraryExW"}, {"data": 686488, "hint": 715, "iat_address": 118968, "iat_value": 686488, "is_ordinal": false, "name": "HeapAlloc"}, {"data": 686500, "hint": 722, "iat_address": 118972, "iat_value": 686500, "is_ordinal": false, "name": "HeapReAlloc"}, {"data": 686514, "hint": 719, "iat_address": 118976, "iat_value": 686514, "is_ordinal": false, "name": "HeapFree"}, {"data": 686526, "hint": 281, "iat_address": 118980, "iat_value": 686526, "is_ordinal": false, "name": "ExitProcess"}, {"data": 686540, "hint": 535, "iat_address": 118984, "iat_value": 686540, "is_ordinal": false, "name": "GetModuleHandleExW"}, {"data": 686562, "hint": 531, "iat_address": 118988, "iat_value": 686562, "is_ordinal": false, "name": "GetModuleFileNameA"}, {"data": 686584, "hint": 612, "iat_address": 118992, "iat_value": 686584, "is_ordinal": false, "name": "GetStdHandle"}, {"data": 686600, "hint": 1317, "iat_address": 118996, "iat_value": 686600, "is_ordinal": false, "name": "WriteFile"}, {"data": 686612, "hint": 390, "iat_address": 119000, "iat_value": 686612, "is_ordinal": false, "name": "GetCommandLineA"}, {"data": 686630, "hint": 391, "iat_address": 119004, "iat_value": 686630, "is_ordinal": false, "name": "GetCommandLineW"}, {"data": 686648, "hint": 360, "iat_address": 119008, "iat_value": 686648, "is_ordinal": false, "name": "GetACP"}, {"data": 686658, "hint": 780, "iat_address": 119012, "iat_value": 686658, "is_ordinal": false, "name": "IsValidLocale"}, {"data": 686674, "hint": 667, "iat_address": 119016, "iat_value": 686674, "is_ordinal": false, "name": "GetUserDefaultLCID"}, {"data": 686696, "hint": 271, "iat_address": 119020, "iat_value": 686696, "is_ordinal": false, "name": "EnumSystemLocalesW"}, {"data": 686718, "hint": 499, "iat_address": 119024, "iat_value": 686718, "is_ordinal": false, "name": "GetFileType"}, {"data": 686732, "hint": 343, "iat_address": 119028, "iat_value": 686732, "is_ordinal": false, "name": "FlushFileBuffers"}, {"data": 686752, "hint": 410, "iat_address": 119032, "iat_value": 686752, "is_ordinal": false, "name": "GetConsoleCP"}, {"data": 686768, "hint": 428, "iat_address": 119036, "iat_value": 686768, "is_ordinal": false, "name": "GetConsoleMode"}, {"data": 686786, "hint": 960, "iat_address": 119040, "iat_value": 686786, "is_ordinal": false, "name": "ReadFile"}, {"data": 686798, "hint": 1127, "iat_address": 119044, "iat_value": 686798, "is_ordinal": false, "name": "SetFilePointerEx"}, {"data": 686818, "hint": 586, "iat_address": 119048, "iat_value": 686818, "is_ordinal": false, "name": "GetProcessHeap"}, {"data": 686836, "hint": 302, "iat_address": 119052, "iat_value": 686836, "is_ordinal": false, "name": "FindClose"}, {"data": 686848, "hint": 307, "iat_address": 119056, "iat_value": 686848, "is_ordinal": false, "name": "FindFirstFileExA"}, {"data": 686868, "hint": 323, "iat_address": 119060, "iat_value": 686868, "is_ordinal": false, "name": "FindNextFileA"}, {"data": 686884, "hint": 778, "iat_address": 119064, "iat_value": 686884, "is_ordinal": false, "name": "IsValidCodePage"}, {"data": 686902, "hint": 567, "iat_address": 119068, "iat_value": 686902, "is_ordinal": false, "name": "GetOEMCP"}, {"data": 686914, "hint": 474, "iat_address": 119072, "iat_value": 686914, "is_ordinal": false, "name": "GetEnvironmentStringsW"}, {"data": 686940, "hint": 353, "iat_address": 119076, "iat_value": 686940, "is_ordinal": false, "name": "FreeEnvironmentStringsW"}, {"data": 686966, "hint": 1110, "iat_address": 119080, "iat_value": 686966, "is_ordinal": false, "name": "SetEnvironmentVariableA"}, {"data": 686992, "hint": 1159, "iat_address": 119084, "iat_value": 686992, "is_ordinal": false, "name": "SetStdHandle"}, {"data": 687008, "hint": 1316, "iat_address": 119088, "iat_value": 687008, "is_ordinal": false, "name": "WriteConsoleW"}, {"data": 687052, "hint": 143, "iat_address": 119092, "iat_value": 687052, "is_ordinal": false, "name": "CreateFileW"}], "SHELL32.dll": [{"data": 685662, "hint": 195, "iat_address": 119100, "iat_value": 685662, "is_ordinal": false, "name": "SHGetFolderPathW"}]}, "load_configuration": {"characteristics": 92, "critical_section_default_timeout": 0, "csd_version": 0, "decommit_free_block_threshold": 0, "decommit_total_free_threshold": 0, "editlist": 0, "global_flags_clear": 0, "global_flags_set": 0, "lock_prefix_table": 0, "major_version": 0, "maximum_allocation_size": 0, "minor_version": 0, "process_affinity_mask": 0, "process_heap_flags": 0, "reserved1": 0, "security_cookie": 4882544, "timedatestamp": 0, "version": "UNKNOWN", "virtual_memory_threshold": 0}, "resources_manager": {"langs_available": ["ENGLISH", "RUSSIAN"], "sublangs_available": ["ENGLISH_US", "DEFAULT"], "icons": [{"id": 1, "planes": 1, "height": 48, "width": 48, "lang": "RUSSIAN", "sublang": "DEFAULT"}, {"id": 2, "planes": 1, "height": 13, "width": 13, "lang": "RUSSIAN", "sublang": "DEFAULT"}, {"id": 3, "planes": 1, "height": 48, "width": 48, "lang": "RUSSIAN", "sublang": "DEFAULT"}, {"id": 4, "planes": 1, "height": 32, "width": 32, "lang": "RUSSIAN", "sublang": "DEFAULT"}, {"id": 5, "planes": 1, "height": 16, "width": 16, "lang": "RUSSIAN", "sublang": "DEFAULT"}, {"id": 6, "planes": 1, "height": 13, "width": 13, "lang": "RUSSIAN", "sublang": "DEFAULT"}, {"id": 7, "planes": 1, "height": 64, "width": 64, "lang": "RUSSIAN", "sublang": "DEFAULT"}, {"id": 8, "planes": 1, "height": 48, "width": 48, "lang": "RUSSIAN", "sublang": "DEFAULT"}, {"id": 9, "planes": 1, "height": 32, "width": 32, "lang": "RUSSIAN", "sublang": "DEFAULT"}, {"id": 10, "planes": 1, "height": 16, "width": 16, "lang": "RUSSIAN", "sublang": "DEFAULT"}], "manifest": "<?xml version='1.0' encoding='UTF-8' standalone='yes'?>\r\n<assembly xmlns='urn:schemas-microsoft-com:asm.v1' manifestVersion='1.0'>\r\n  <trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v3\">\r\n    <security>\r\n      <requestedPrivileges>\r\n        <requestedExecutionLevel level='asInvoker' uiAccess='false' />\r\n      </requestedPrivileges>\r\n    </security>\r\n  </trustInfo>\r\n  <dependency>\r\n    <dependentAssembly>\r\n      <assemblyIdentity type='win32' \tname='Microsoft.Windows.Common-Controls' version='6.0.0.0' \tprocessorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*' />\r\n    </dependentAssembly>\r\n  </dependency>\r\n</assembly>\r\n", "version": {"type": 0, "fixed_file_info": {"file_date_LS": 0, "file_date_MS": 0, "file_flags": 0, "file_flags_mask": 63, "file_os": "NT_WINDOWS32", "file_subtype": "UNKNOWN", "file_type": "UNKNOWN", "file_version_LS": 1, "file_version_MS": 65536, "product_version_LS": 1, "product_version_MS": 65536, "signature": 4277077181, "struct_version": 65536}, "string_file_info": {"key": "StringFileInfo", "type": 1, "langcode_items": [{"key": "041904b0", "type": 1, "lang": "RUSSIAN", "sublang": "DEFAULT", "code_page": "UTF_16", "items": {"ProductVersion": "1.0.0.1", "ProductName": "TODO: <Product name>", "LegalCopyright": "Copyright (C) 2017", "OriginalFilename": "TODO: <Original filename>", "FileVersion": "1.0.0.1", "FileDescription": "TODO: <File description>", "CompanyName": "TODO: <Company name>", "InternalName": "TODO: <Internal name>"}}]}, "var_file_info": {"key": "VarFileInfo", "type": 1, "translations": [78644249]}}}, "resources": {"characteristics": 0, "num_childs": 6, "depth": 0, "id": 0, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 5, "numberof_name_entries": 1, "time_date_stamp": 0, "childs": [{"characteristics": 0, "num_childs": 7, "depth": 1, "name": "AFX_DIALOG_LAYOUT", "id": 2147485152, "resource_type": "???", "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 7, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"characteristics": 0, "num_childs": 1, "depth": 2, "id": 900, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 746160, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 901, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 746168, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 902, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 746176, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 903, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 746184, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 914, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 746192, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 921, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 746200, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 922, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 746208, "reserved": 0}]}]}, {"characteristics": 0, "num_childs": 10, "depth": 1, "id": 3, "resource_type": "ICON", "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 10, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"characteristics": 0, "num_childs": 1, "depth": 2, "id": 1, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 687632, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 2, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 697296, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 3, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 700136, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 4, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 703888, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 5, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 706104, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 6, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 707488, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 7, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 710640, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 8, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 727576, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 9, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 737216, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 10, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 741480, "reserved": 0}]}]}, {"characteristics": 0, "num_childs": 7, "depth": 1, "id": 5, "resource_type": "DIALOG", "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 7, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"characteristics": 0, "num_childs": 1, "depth": 2, "id": 900, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 742744, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 901, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 742904, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 902, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 743064, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 903, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 743224, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 914, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 745680, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 921, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 745840, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 922, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 746000, "reserved": 0}]}]}, {"characteristics": 0, "num_childs": 2, "depth": 1, "id": 14, "resource_type": "GROUP_ICON", "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 2, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"characteristics": 0, "num_childs": 1, "depth": 2, "id": 883, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 697272, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 934, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 742608, "reserved": 0}]}]}, {"characteristics": 0, "num_childs": 1, "depth": 1, "id": 16, "resource_type": "VERSION", "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"characteristics": 0, "num_childs": 1, "depth": 2, "id": 1, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1049, "is_data": true, "is_directory": false, "offset": 746216, "reserved": 0}]}]}, {"characteristics": 0, "num_childs": 1, "depth": 1, "id": 24, "resource_type": "MANIFEST", "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"characteristics": 0, "num_childs": 1, "depth": 2, "id": 1, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 0, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 1033, "is_data": true, "is_directory": false, "offset": 747024, "reserved": 0}]}]}]}, "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"}
+{
+    "name": "217d114a504889380936b61ec4cd151eaf070847bd1d005bc2a8bce8f181ca6d",
+    "format": "PE",
+    "imphash": "d9e84c41ab9408879405afc69826e0b7",
+    "entrypoint": 25505,
+    "header": {
+        "characteristics_hash": 258,
+        "characteristics_list": [
+            "CHARA_32BIT_MACHINE",
+            "EXECUTABLE_IMAGE"
+        ],
+        "machine": "I386",
+        "numberof_sections": 7,
+        "numberof_symbols": 0,
+        "signature": [
+            80,
+            69,
+            0,
+            0
+        ],
+        "timestamp": 1495741942,
+        "hr_timestamp": "2017-05-25 19:52:22 +00:00 (UTC)"
+    },
+    "optional_header": {
+        "addressof_entrypoint": 25505,
+        "baseof_code": 4096,
+        "checksum": 803873,
+        "dll_characteristics": 33088,
+        "dll_characteristics_lists": [
+            "DYNAMIC_BASE",
+            "NX_COMPAT",
+            "TERMINAL_SERVER_AWARE"
+        ],
+        "file_alignment": 512,
+        "imagebase": 4194304,
+        "loader_flags": 0,
+        "magic": "PE32",
+        "major_image_version": 0,
+        "major_linker_version": 0,
+        "major_operating_system_version": 5,
+        "major_subsystem_version": 5,
+        "minor_image_version": 0,
+        "minor_linker_version": 0,
+        "minor_operating_system_version": 1,
+        "minor_subsystem_version": 1,
+        "numberof_rva_and_size": 16,
+        "section_alignment": 4096,
+        "sizeof_code": 111616,
+        "sizeof_headers": 1024,
+        "sizeof_heap_commit": 4096,
+        "sizeof_heap_reserve": 1048576,
+        "sizeof_image": 778240,
+        "sizeof_initialized_data": 647680,
+        "sizeof_stack_commit": 4096,
+        "sizeof_stack_reserve": 1048576,
+        "sizeof_uninitialized_data": 0,
+        "subsystem": "WINDOWS_CUI",
+        "win32_version_value": 0,
+        "baseof_data": 118784
+    },
+    "dos_header": {
+        "addressof_new_exeheader": 256,
+        "addressof_relocation_table": 64,
+        "checksum": 0,
+        "file_size_in_pages": 3,
+        "header_size_in_paragraphs": 4,
+        "initial_ip": 0,
+        "initial_relative_cs": 0,
+        "initial_relative_ss": 0,
+        "initial_sp": 184,
+        "magic": 23117,
+        "maximum_extra_paragraphs": 65535,
+        "minimum_extra_paragraphs": 0,
+        "numberof_relocation": 0,
+        "oem_id": 0,
+        "oem_info": 0,
+        "overlay_number": 0,
+        "used_bytes_in_the_last_page": 144
+    },
+    "rich_header": {
+        "entries": [
+            {
+                "build_id": 24210,
+                "count": 1,
+                "id": 258
+            },
+            {
+                "build_id": 0,
+                "count": 1,
+                "id": 151
+            },
+            {
+                "build_id": 24210,
+                "count": 1,
+                "id": 255
+            },
+            {
+                "build_id": 24210,
+                "count": 3,
+                "id": 265
+            },
+            {
+                "build_id": 0,
+                "count": 96,
+                "id": 1
+            },
+            {
+                "build_id": 30729,
+                "count": 5,
+                "id": 147
+            },
+            {
+                "build_id": 24123,
+                "count": 34,
+                "id": 260
+            },
+            {
+                "build_id": 24123,
+                "count": 57,
+                "id": 261
+            },
+            {
+                "build_id": 24123,
+                "count": 22,
+                "id": 259
+            },
+            {
+                "build_id": 40116,
+                "count": 29,
+                "id": 242
+            },
+            {
+                "build_id": 40116,
+                "count": 143,
+                "id": 243
+            },
+            {
+                "build_id": 40116,
+                "count": 13,
+                "id": 241
+            }
+        ],
+        "key": 857619653
+    },
+    "nx": true,
+    "authentihash": {
+        "SHA_512": "a6a2730b6f249b42a9e64d870436efaf5c09b80b91b537231dc7364651222f804db6bfae91401c8a9153353876ebbbbb37a980a0c6b524d3779750c2b09909da",
+        "SHA_384": "4578a53ce7eede9584a1e7f6a9e10dd2274a8590e28f02f8319049a0eeee0d90d15f6e0b6909c0535a17f319bd8b42e9",
+        "SHA_256": "9872c7237de8031c10e59cdd95769cf4e3eb82ac7353c0c44d86ce206ff851e6",
+        "SHA_1": "0befcef97f7e6855afbcc51113d39b9d02faacfd",
+        "MD5": "17ebf20d7315b31333eb8e504de94579"
+    },
+    "tls": {
+        "associated section": ".rdata"
+    },
+    "position_independent": true,
+    "is_reproducible_build": false,
+    "overlay": {
+        "size": 0
+    },
+    "size_of_headers": 1024,
+    "virtual_size": 778240,
+    "sections": [
+        {
+            "name": ".text",
+            "characteristics_hash": 1610612768,
+            "characteristics_list": [
+                "CNT_CODE",
+                "MEM_EXECUTE",
+                "MEM_READ"
+            ],
+            "entropy": 6.628951819271886,
+            "entropy_without_padding": 6.633409193379763,
+            "md5": "73beda5cac74aadad0f014176a779a46",
+            "offset": 1024,
+            "size": 111616,
+            "sizeof_raw_data": 111616,
+            "virtual_address": 4096,
+            "virtual_size": 111463,
+            "fullname": ".text\u0000\u0000\u0000"
+        },
+        {
+            "name": ".rdata",
+            "characteristics_hash": 1073741888,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_READ"
+            ],
+            "entropy": 6.541314375578349,
+            "entropy_without_padding": 6.541631760662821,
+            "md5": "86ac4ab156dfbc03306c62273c88fcc3",
+            "offset": 112640,
+            "size": 568320,
+            "sizeof_raw_data": 568320,
+            "virtual_address": 118784,
+            "virtual_size": 568282,
+            "fullname": ".rdata\u0000\u0000"
+        },
+        {
+            "name": ".data",
+            "characteristics_hash": 3221225536,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_READ",
+                "MEM_WRITE"
+            ],
+            "entropy": 3.4202509647972863,
+            "entropy_without_padding": 3.420250964797284,
+            "md5": "375eab99c3a6b560df7481e67273c127",
+            "offset": 680960,
+            "size": 3584,
+            "sizeof_raw_data": 3584,
+            "virtual_address": 688128,
+            "virtual_size": 7324,
+            "fullname": ".data\u0000\u0000\u0000"
+        },
+        {
+            "name": ".gfids",
+            "characteristics_hash": 1073741888,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_READ"
+            ],
+            "entropy": 3.0796312199229217,
+            "entropy_without_padding": 3.7487041694941925,
+            "md5": "d864fd89f4f518e30a560e0fab7061da",
+            "offset": 684544,
+            "size": 1024,
+            "sizeof_raw_data": 1024,
+            "virtual_address": 696320,
+            "virtual_size": 792,
+            "fullname": ".gfids\u0000\u0000"
+        },
+        {
+            "name": ".tls",
+            "characteristics_hash": 3221225536,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_READ",
+                "MEM_WRITE"
+            ],
+            "entropy": 0.020393135236084953,
+            "entropy_without_padding": 0.5032583347756457,
+            "md5": "1f354d76203061bfdd5a53dae48d5435",
+            "offset": 685568,
+            "size": 512,
+            "sizeof_raw_data": 512,
+            "virtual_address": 700416,
+            "virtual_size": 9,
+            "fullname": ".tls\u0000\u0000\u0000\u0000"
+        },
+        {
+            "name": ".rsrc",
+            "characteristics_hash": 1073741888,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_READ"
+            ],
+            "entropy": 4.121101832086987,
+            "entropy_without_padding": 4.138556702131238,
+            "md5": "bd10751b89fd9f97bd6b5fac96a35437",
+            "offset": 686080,
+            "size": 61952,
+            "sizeof_raw_data": 61952,
+            "virtual_address": 704512,
+            "virtual_size": 61584,
+            "fullname": ".rsrc\u0000\u0000\u0000"
+        },
+        {
+            "name": ".reloc",
+            "characteristics_hash": 1107296320,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_DISCARDABLE",
+                "MEM_READ"
+            ],
+            "entropy": 6.5250062745987165,
+            "entropy_without_padding": 6.554805123134259,
+            "md5": "6971bee41f136001489c5fe1e778ff1a",
+            "offset": 748032,
+            "size": 8192,
+            "sizeof_raw_data": 8192,
+            "virtual_address": 770048,
+            "virtual_size": 8072,
+            "fullname": ".reloc\u0000\u0000"
+        }
+    ],
+    "debug": [
+        {
+            "addressof_rawdata": 680536,
+            "characteristics": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "pointerto_rawdata": 674392,
+            "sizeof_data": 976,
+            "timestamp": 1495741942,
+            "type": "POGO",
+            "pogo": {
+                "entries": [
+                    {
+                        "name": ".text$di",
+                        "size": 224,
+                        "start_rva": 4096
+                    },
+                    {
+                        "name": ".text$mn",
+                        "size": 110025,
+                        "start_rva": 4320
+                    },
+                    {
+                        "name": ".text$x",
+                        "size": 1124,
+                        "start_rva": 114345
+                    },
+                    {
+                        "name": ".text$yd",
+                        "size": 90,
+                        "start_rva": 115469
+                    },
+                    {
+                        "name": ".idata$5",
+                        "size": 324,
+                        "start_rva": 118784
+                    },
+                    {
+                        "name": ".00cfg",
+                        "size": 4,
+                        "start_rva": 119108
+                    },
+                    {
+                        "name": ".CRT$XCA",
+                        "size": 4,
+                        "start_rva": 119112
+                    },
+                    {
+                        "name": ".CRT$XCAA",
+                        "size": 4,
+                        "start_rva": 119116
+                    },
+                    {
+                        "name": ".CRT$XCC",
+                        "size": 28,
+                        "start_rva": 119120
+                    },
+                    {
+                        "name": ".CRT$XCL",
+                        "size": 8,
+                        "start_rva": 119148
+                    },
+                    {
+                        "name": ".CRT$XCU",
+                        "size": 4,
+                        "start_rva": 119156
+                    },
+                    {
+                        "name": ".CRT$XCZ",
+                        "size": 4,
+                        "start_rva": 119160
+                    },
+                    {
+                        "name": ".CRT$XIA",
+                        "size": 4,
+                        "start_rva": 119164
+                    },
+                    {
+                        "name": ".CRT$XIAA",
+                        "size": 4,
+                        "start_rva": 119168
+                    },
+                    {
+                        "name": ".CRT$XIAC",
+                        "size": 4,
+                        "start_rva": 119172
+                    },
+                    {
+                        "name": ".CRT$XIC",
+                        "size": 24,
+                        "start_rva": 119176
+                    },
+                    {
+                        "name": ".CRT$XIZ",
+                        "size": 4,
+                        "start_rva": 119200
+                    },
+                    {
+                        "name": ".CRT$XLA",
+                        "size": 4,
+                        "start_rva": 119204
+                    },
+                    {
+                        "name": ".CRT$XLZ",
+                        "size": 4,
+                        "start_rva": 119208
+                    },
+                    {
+                        "name": ".CRT$XPA",
+                        "size": 4,
+                        "start_rva": 119212
+                    },
+                    {
+                        "name": ".CRT$XPX",
+                        "size": 8,
+                        "start_rva": 119216
+                    },
+                    {
+                        "name": ".CRT$XPXA",
+                        "size": 4,
+                        "start_rva": 119224
+                    },
+                    {
+                        "name": ".CRT$XPZ",
+                        "size": 4,
+                        "start_rva": 119228
+                    },
+                    {
+                        "name": ".CRT$XTA",
+                        "size": 4,
+                        "start_rva": 119232
+                    },
+                    {
+                        "name": ".CRT$XTZ",
+                        "size": 4,
+                        "start_rva": 119236
+                    },
+                    {
+                        "name": ".l3p",
+                        "size": 512456,
+                        "start_rva": 119240
+                    },
+                    {
+                        "name": ".rdata",
+                        "size": 46236,
+                        "start_rva": 631696
+                    },
+                    {
+                        "name": ".rdata$T",
+                        "size": 24,
+                        "start_rva": 677932
+                    },
+                    {
+                        "name": ".rdata$r",
+                        "size": 2444,
+                        "start_rva": 677956
+                    },
+                    {
+                        "name": ".rdata$sxdata",
+                        "size": 136,
+                        "start_rva": 680400
+                    },
+                    {
+                        "name": ".rdata$zzzdbg",
+                        "size": 976,
+                        "start_rva": 680536
+                    },
+                    {
+                        "name": ".rtc$IAA",
+                        "size": 4,
+                        "start_rva": 681512
+                    },
+                    {
+                        "name": ".rtc$IZZ",
+                        "size": 4,
+                        "start_rva": 681516
+                    },
+                    {
+                        "name": ".rtc$TAA",
+                        "size": 4,
+                        "start_rva": 681520
+                    },
+                    {
+                        "name": ".rtc$TZZ",
+                        "size": 4,
+                        "start_rva": 681524
+                    },
+                    {
+                        "name": ".xdata$x",
+                        "size": 3684,
+                        "start_rva": 681528
+                    },
+                    {
+                        "name": ".idata$2",
+                        "size": 40,
+                        "start_rva": 685212
+                    },
+                    {
+                        "name": ".idata$3",
+                        "size": 20,
+                        "start_rva": 685252
+                    },
+                    {
+                        "name": ".idata$4",
+                        "size": 324,
+                        "start_rva": 685272
+                    },
+                    {
+                        "name": ".idata$6",
+                        "size": 1470,
+                        "start_rva": 685596
+                    },
+                    {
+                        "name": ".data",
+                        "size": 2480,
+                        "start_rva": 688128
+                    },
+                    {
+                        "name": ".data$r",
+                        "size": 1096,
+                        "start_rva": 690608
+                    },
+                    {
+                        "name": ".bss",
+                        "size": 3748,
+                        "start_rva": 691704
+                    },
+                    {
+                        "name": ".gfids$x",
+                        "size": 192,
+                        "start_rva": 696320
+                    },
+                    {
+                        "name": ".gfids$y",
+                        "size": 600,
+                        "start_rva": 696512
+                    },
+                    {
+                        "name": ".tls",
+                        "size": 4,
+                        "start_rva": 700416
+                    },
+                    {
+                        "name": ".tls$",
+                        "size": 4,
+                        "start_rva": 700420
+                    },
+                    {
+                        "name": ".tls$ZZZ",
+                        "size": 1,
+                        "start_rva": 700424
+                    },
+                    {
+                        "name": ".rsrc$01",
+                        "size": 1552,
+                        "start_rva": 704512
+                    },
+                    {
+                        "name": ".rsrc$02",
+                        "size": 60032,
+                        "start_rva": 706064
+                    }
+                ],
+                "signature": "LCTG"
+            }
+        }
+    ],
+    "imports": {
+        "KERNEL32.dll": [
+            {
+                "data": 685596,
+                "hint": 536,
+                "iat_address": 118784,
+                "iat_value": 685596,
+                "is_ordinal": false,
+                "name": "GetModuleHandleW"
+            },
+            {
+                "data": 685616,
+                "hint": 351,
+                "iat_address": 118788,
+                "iat_value": 685616,
+                "is_ordinal": false,
+                "name": "FreeConsole"
+            },
+            {
+                "data": 685630,
+                "hint": 1263,
+                "iat_address": 118792,
+                "iat_value": 685630,
+                "is_ordinal": false,
+                "name": "VirtualProtect"
+            },
+            {
+                "data": 687040,
+                "hint": 724,
+                "iat_address": 118796,
+                "iat_value": 687040,
+                "is_ordinal": false,
+                "name": "HeapSize"
+            },
+            {
+                "data": 687024,
+                "hint": 958,
+                "iat_address": 118800,
+                "iat_value": 687024,
+                "is_ordinal": false,
+                "name": "ReadConsoleW"
+            },
+            {
+                "data": 685694,
+                "hint": 1297,
+                "iat_address": 118804,
+                "iat_value": 685694,
+                "is_ordinal": false,
+                "name": "WideCharToMultiByte"
+            },
+            {
+                "data": 685716,
+                "hint": 234,
+                "iat_address": 118808,
+                "iat_value": 685716,
+                "is_ordinal": false,
+                "name": "EncodePointer"
+            },
+            {
+                "data": 685732,
+                "hint": 202,
+                "iat_address": 118812,
+                "iat_value": 685732,
+                "is_ordinal": false,
+                "name": "DecodePointer"
+            },
+            {
+                "data": 685748,
+                "hint": 238,
+                "iat_address": 118816,
+                "iat_value": 685748,
+                "is_ordinal": false,
+                "name": "EnterCriticalSection"
+            },
+            {
+                "data": 685772,
+                "hint": 825,
+                "iat_address": 118820,
+                "iat_value": 685772,
+                "is_ordinal": false,
+                "name": "LeaveCriticalSection"
+            },
+            {
+                "data": 685796,
+                "hint": 209,
+                "iat_address": 118824,
+                "iat_value": 685796,
+                "is_ordinal": false,
+                "name": "DeleteCriticalSection"
+            },
+            {
+                "data": 685820,
+                "hint": 871,
+                "iat_address": 118828,
+                "iat_value": 685820,
+                "is_ordinal": false,
+                "name": "MultiByteToWideChar"
+            },
+            {
+                "data": 685842,
+                "hint": 1139,
+                "iat_address": 118832,
+                "iat_value": 685842,
+                "is_ordinal": false,
+                "name": "SetLastError"
+            },
+            {
+                "data": 685858,
+                "hint": 739,
+                "iat_address": 118836,
+                "iat_value": 685858,
+                "is_ordinal": false,
+                "name": "InitializeCriticalSectionAndSpinCount"
+            },
+            {
+                "data": 685898,
+                "hint": 133,
+                "iat_address": 118840,
+                "iat_value": 685898,
+                "is_ordinal": false,
+                "name": "CreateEventW"
+            },
+            {
+                "data": 685914,
+                "hint": 1221,
+                "iat_address": 118844,
+                "iat_value": 685914,
+                "is_ordinal": false,
+                "name": "TlsAlloc"
+            },
+            {
+                "data": 685926,
+                "hint": 1223,
+                "iat_address": 118848,
+                "iat_value": 685926,
+                "is_ordinal": false,
+                "name": "TlsGetValue"
+            },
+            {
+                "data": 685940,
+                "hint": 1224,
+                "iat_address": 118852,
+                "iat_value": 685940,
+                "is_ordinal": false,
+                "name": "TlsSetValue"
+            },
+            {
+                "data": 685954,
+                "hint": 1222,
+                "iat_address": 118856,
+                "iat_value": 685954,
+                "is_ordinal": false,
+                "name": "TlsFree"
+            },
+            {
+                "data": 685964,
+                "hint": 633,
+                "iat_address": 118860,
+                "iat_value": 685964,
+                "is_ordinal": false,
+                "name": "GetSystemTimeAsFileTime"
+            },
+            {
+                "data": 685990,
+                "hint": 581,
+                "iat_address": 118864,
+                "iat_value": 685990,
+                "is_ordinal": false,
+                "name": "GetProcAddress"
+            },
+            {
+                "data": 686008,
+                "hint": 100,
+                "iat_address": 118868,
+                "iat_value": 686008,
+                "is_ordinal": false,
+                "name": "CompareStringW"
+            },
+            {
+                "data": 686026,
+                "hint": 813,
+                "iat_address": 118872,
+                "iat_value": 686026,
+                "is_ordinal": false,
+                "name": "LCMapStringW"
+            },
+            {
+                "data": 686042,
+                "hint": 518,
+                "iat_address": 118876,
+                "iat_value": 686042,
+                "is_ordinal": false,
+                "name": "GetLocaleInfoW"
+            },
+            {
+                "data": 686060,
+                "hint": 617,
+                "iat_address": 118880,
+                "iat_value": 686060,
+                "is_ordinal": false,
+                "name": "GetStringTypeW"
+            },
+            {
+                "data": 686078,
+                "hint": 370,
+                "iat_address": 118884,
+                "iat_value": 686078,
+                "is_ordinal": false,
+                "name": "GetCPInfo"
+            },
+            {
+                "data": 686090,
+                "hint": 82,
+                "iat_address": 118888,
+                "iat_value": 686090,
+                "is_ordinal": false,
+                "name": "CloseHandle"
+            },
+            {
+                "data": 686104,
+                "hint": 1113,
+                "iat_address": 118892,
+                "iat_value": 686104,
+                "is_ordinal": false,
+                "name": "SetEvent"
+            },
+            {
+                "data": 686116,
+                "hint": 1039,
+                "iat_address": 118896,
+                "iat_value": 686116,
+                "is_ordinal": false,
+                "name": "ResetEvent"
+            },
+            {
+                "data": 686130,
+                "hint": 1274,
+                "iat_address": 118900,
+                "iat_value": 686130,
+                "is_ordinal": false,
+                "name": "WaitForSingleObjectEx"
+            },
+            {
+                "data": 686154,
+                "hint": 1235,
+                "iat_address": 118904,
+                "iat_value": 686154,
+                "is_ordinal": false,
+                "name": "UnhandledExceptionFilter"
+            },
+            {
+                "data": 686182,
+                "hint": 1189,
+                "iat_address": 118908,
+                "iat_value": 686182,
+                "is_ordinal": false,
+                "name": "SetUnhandledExceptionFilter"
+            },
+            {
+                "data": 686212,
+                "hint": 448,
+                "iat_address": 118912,
+                "iat_value": 686212,
+                "is_ordinal": false,
+                "name": "GetCurrentProcess"
+            },
+            {
+                "data": 686232,
+                "hint": 1216,
+                "iat_address": 118916,
+                "iat_value": 686232,
+                "is_ordinal": false,
+                "name": "TerminateProcess"
+            },
+            {
+                "data": 686252,
+                "hint": 772,
+                "iat_address": 118920,
+                "iat_value": 686252,
+                "is_ordinal": false,
+                "name": "IsProcessorFeaturePresent"
+            },
+            {
+                "data": 686280,
+                "hint": 768,
+                "iat_address": 118924,
+                "iat_value": 686280,
+                "is_ordinal": false,
+                "name": "IsDebuggerPresent"
+            },
+            {
+                "data": 686300,
+                "hint": 611,
+                "iat_address": 118928,
+                "iat_value": 686300,
+                "is_ordinal": false,
+                "name": "GetStartupInfoW"
+            },
+            {
+                "data": 686318,
+                "hint": 935,
+                "iat_address": 118932,
+                "iat_value": 686318,
+                "is_ordinal": false,
+                "name": "QueryPerformanceCounter"
+            },
+            {
+                "data": 686344,
+                "hint": 449,
+                "iat_address": 118936,
+                "iat_value": 686344,
+                "is_ordinal": false,
+                "name": "GetCurrentProcessId"
+            },
+            {
+                "data": 686366,
+                "hint": 453,
+                "iat_address": 118940,
+                "iat_value": 686366,
+                "is_ordinal": false,
+                "name": "GetCurrentThreadId"
+            },
+            {
+                "data": 686388,
+                "hint": 743,
+                "iat_address": 118944,
+                "iat_value": 686388,
+                "is_ordinal": false,
+                "name": "InitializeSListHead"
+            },
+            {
+                "data": 686410,
+                "hint": 945,
+                "iat_address": 118948,
+                "iat_value": 686410,
+                "is_ordinal": false,
+                "name": "RaiseException"
+            },
+            {
+                "data": 686428,
+                "hint": 1048,
+                "iat_address": 118952,
+                "iat_value": 686428,
+                "is_ordinal": false,
+                "name": "RtlUnwind"
+            },
+            {
+                "data": 686440,
+                "hint": 514,
+                "iat_address": 118956,
+                "iat_value": 686440,
+                "is_ordinal": false,
+                "name": "GetLastError"
+            },
+            {
+                "data": 686456,
+                "hint": 354,
+                "iat_address": 118960,
+                "iat_value": 686456,
+                "is_ordinal": false,
+                "name": "FreeLibrary"
+            },
+            {
+                "data": 686470,
+                "hint": 830,
+                "iat_address": 118964,
+                "iat_value": 686470,
+                "is_ordinal": false,
+                "name": "LoadLibraryExW"
+            },
+            {
+                "data": 686488,
+                "hint": 715,
+                "iat_address": 118968,
+                "iat_value": 686488,
+                "is_ordinal": false,
+                "name": "HeapAlloc"
+            },
+            {
+                "data": 686500,
+                "hint": 722,
+                "iat_address": 118972,
+                "iat_value": 686500,
+                "is_ordinal": false,
+                "name": "HeapReAlloc"
+            },
+            {
+                "data": 686514,
+                "hint": 719,
+                "iat_address": 118976,
+                "iat_value": 686514,
+                "is_ordinal": false,
+                "name": "HeapFree"
+            },
+            {
+                "data": 686526,
+                "hint": 281,
+                "iat_address": 118980,
+                "iat_value": 686526,
+                "is_ordinal": false,
+                "name": "ExitProcess"
+            },
+            {
+                "data": 686540,
+                "hint": 535,
+                "iat_address": 118984,
+                "iat_value": 686540,
+                "is_ordinal": false,
+                "name": "GetModuleHandleExW"
+            },
+            {
+                "data": 686562,
+                "hint": 531,
+                "iat_address": 118988,
+                "iat_value": 686562,
+                "is_ordinal": false,
+                "name": "GetModuleFileNameA"
+            },
+            {
+                "data": 686584,
+                "hint": 612,
+                "iat_address": 118992,
+                "iat_value": 686584,
+                "is_ordinal": false,
+                "name": "GetStdHandle"
+            },
+            {
+                "data": 686600,
+                "hint": 1317,
+                "iat_address": 118996,
+                "iat_value": 686600,
+                "is_ordinal": false,
+                "name": "WriteFile"
+            },
+            {
+                "data": 686612,
+                "hint": 390,
+                "iat_address": 119000,
+                "iat_value": 686612,
+                "is_ordinal": false,
+                "name": "GetCommandLineA"
+            },
+            {
+                "data": 686630,
+                "hint": 391,
+                "iat_address": 119004,
+                "iat_value": 686630,
+                "is_ordinal": false,
+                "name": "GetCommandLineW"
+            },
+            {
+                "data": 686648,
+                "hint": 360,
+                "iat_address": 119008,
+                "iat_value": 686648,
+                "is_ordinal": false,
+                "name": "GetACP"
+            },
+            {
+                "data": 686658,
+                "hint": 780,
+                "iat_address": 119012,
+                "iat_value": 686658,
+                "is_ordinal": false,
+                "name": "IsValidLocale"
+            },
+            {
+                "data": 686674,
+                "hint": 667,
+                "iat_address": 119016,
+                "iat_value": 686674,
+                "is_ordinal": false,
+                "name": "GetUserDefaultLCID"
+            },
+            {
+                "data": 686696,
+                "hint": 271,
+                "iat_address": 119020,
+                "iat_value": 686696,
+                "is_ordinal": false,
+                "name": "EnumSystemLocalesW"
+            },
+            {
+                "data": 686718,
+                "hint": 499,
+                "iat_address": 119024,
+                "iat_value": 686718,
+                "is_ordinal": false,
+                "name": "GetFileType"
+            },
+            {
+                "data": 686732,
+                "hint": 343,
+                "iat_address": 119028,
+                "iat_value": 686732,
+                "is_ordinal": false,
+                "name": "FlushFileBuffers"
+            },
+            {
+                "data": 686752,
+                "hint": 410,
+                "iat_address": 119032,
+                "iat_value": 686752,
+                "is_ordinal": false,
+                "name": "GetConsoleCP"
+            },
+            {
+                "data": 686768,
+                "hint": 428,
+                "iat_address": 119036,
+                "iat_value": 686768,
+                "is_ordinal": false,
+                "name": "GetConsoleMode"
+            },
+            {
+                "data": 686786,
+                "hint": 960,
+                "iat_address": 119040,
+                "iat_value": 686786,
+                "is_ordinal": false,
+                "name": "ReadFile"
+            },
+            {
+                "data": 686798,
+                "hint": 1127,
+                "iat_address": 119044,
+                "iat_value": 686798,
+                "is_ordinal": false,
+                "name": "SetFilePointerEx"
+            },
+            {
+                "data": 686818,
+                "hint": 586,
+                "iat_address": 119048,
+                "iat_value": 686818,
+                "is_ordinal": false,
+                "name": "GetProcessHeap"
+            },
+            {
+                "data": 686836,
+                "hint": 302,
+                "iat_address": 119052,
+                "iat_value": 686836,
+                "is_ordinal": false,
+                "name": "FindClose"
+            },
+            {
+                "data": 686848,
+                "hint": 307,
+                "iat_address": 119056,
+                "iat_value": 686848,
+                "is_ordinal": false,
+                "name": "FindFirstFileExA"
+            },
+            {
+                "data": 686868,
+                "hint": 323,
+                "iat_address": 119060,
+                "iat_value": 686868,
+                "is_ordinal": false,
+                "name": "FindNextFileA"
+            },
+            {
+                "data": 686884,
+                "hint": 778,
+                "iat_address": 119064,
+                "iat_value": 686884,
+                "is_ordinal": false,
+                "name": "IsValidCodePage"
+            },
+            {
+                "data": 686902,
+                "hint": 567,
+                "iat_address": 119068,
+                "iat_value": 686902,
+                "is_ordinal": false,
+                "name": "GetOEMCP"
+            },
+            {
+                "data": 686914,
+                "hint": 474,
+                "iat_address": 119072,
+                "iat_value": 686914,
+                "is_ordinal": false,
+                "name": "GetEnvironmentStringsW"
+            },
+            {
+                "data": 686940,
+                "hint": 353,
+                "iat_address": 119076,
+                "iat_value": 686940,
+                "is_ordinal": false,
+                "name": "FreeEnvironmentStringsW"
+            },
+            {
+                "data": 686966,
+                "hint": 1110,
+                "iat_address": 119080,
+                "iat_value": 686966,
+                "is_ordinal": false,
+                "name": "SetEnvironmentVariableA"
+            },
+            {
+                "data": 686992,
+                "hint": 1159,
+                "iat_address": 119084,
+                "iat_value": 686992,
+                "is_ordinal": false,
+                "name": "SetStdHandle"
+            },
+            {
+                "data": 687008,
+                "hint": 1316,
+                "iat_address": 119088,
+                "iat_value": 687008,
+                "is_ordinal": false,
+                "name": "WriteConsoleW"
+            },
+            {
+                "data": 687052,
+                "hint": 143,
+                "iat_address": 119092,
+                "iat_value": 687052,
+                "is_ordinal": false,
+                "name": "CreateFileW"
+            }
+        ],
+        "SHELL32.dll": [
+            {
+                "data": 685662,
+                "hint": 195,
+                "iat_address": 119100,
+                "iat_value": 685662,
+                "is_ordinal": false,
+                "name": "SHGetFolderPathW"
+            }
+        ]
+    },
+    "load_configuration": {
+        "characteristics": 92,
+        "critical_section_default_timeout": 0,
+        "csd_version": 0,
+        "decommit_free_block_threshold": 0,
+        "decommit_total_free_threshold": 0,
+        "editlist": 0,
+        "global_flags_clear": 0,
+        "global_flags_set": 0,
+        "lock_prefix_table": 0,
+        "major_version": 0,
+        "maximum_allocation_size": 0,
+        "minor_version": 0,
+        "process_affinity_mask": 0,
+        "process_heap_flags": 0,
+        "reserved1": 0,
+        "security_cookie": 4882544,
+        "timedatestamp": 0,
+        "version": "UNKNOWN",
+        "virtual_memory_threshold": 0
+    },
+    "resources_manager": {
+        "langs_available": [
+            "ENGLISH",
+            "RUSSIAN"
+        ],
+        "sublangs_available": [
+            "ENGLISH_US",
+            "DEFAULT"
+        ],
+        "icons": [
+            {
+                "id": 1,
+                "planes": 1,
+                "height": 48,
+                "width": 48,
+                "lang": "RUSSIAN",
+                "sublang": "DEFAULT"
+            },
+            {
+                "id": 2,
+                "planes": 1,
+                "height": 13,
+                "width": 13,
+                "lang": "RUSSIAN",
+                "sublang": "DEFAULT"
+            },
+            {
+                "id": 3,
+                "planes": 1,
+                "height": 48,
+                "width": 48,
+                "lang": "RUSSIAN",
+                "sublang": "DEFAULT"
+            },
+            {
+                "id": 4,
+                "planes": 1,
+                "height": 32,
+                "width": 32,
+                "lang": "RUSSIAN",
+                "sublang": "DEFAULT"
+            },
+            {
+                "id": 5,
+                "planes": 1,
+                "height": 16,
+                "width": 16,
+                "lang": "RUSSIAN",
+                "sublang": "DEFAULT"
+            },
+            {
+                "id": 6,
+                "planes": 1,
+                "height": 13,
+                "width": 13,
+                "lang": "RUSSIAN",
+                "sublang": "DEFAULT"
+            },
+            {
+                "id": 7,
+                "planes": 1,
+                "height": 64,
+                "width": 64,
+                "lang": "RUSSIAN",
+                "sublang": "DEFAULT"
+            },
+            {
+                "id": 8,
+                "planes": 1,
+                "height": 48,
+                "width": 48,
+                "lang": "RUSSIAN",
+                "sublang": "DEFAULT"
+            },
+            {
+                "id": 9,
+                "planes": 1,
+                "height": 32,
+                "width": 32,
+                "lang": "RUSSIAN",
+                "sublang": "DEFAULT"
+            },
+            {
+                "id": 10,
+                "planes": 1,
+                "height": 16,
+                "width": 16,
+                "lang": "RUSSIAN",
+                "sublang": "DEFAULT"
+            }
+        ],
+        "manifest": "<?xml version='1.0' encoding='UTF-8' standalone='yes'?>\r\n<assembly xmlns='urn:schemas-microsoft-com:asm.v1' manifestVersion='1.0'>\r\n  <trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v3\">\r\n    <security>\r\n      <requestedPrivileges>\r\n        <requestedExecutionLevel level='asInvoker' uiAccess='false' />\r\n      </requestedPrivileges>\r\n    </security>\r\n  </trustInfo>\r\n  <dependency>\r\n    <dependentAssembly>\r\n      <assemblyIdentity type='win32' \tname='Microsoft.Windows.Common-Controls' version='6.0.0.0' \tprocessorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*' />\r\n    </dependentAssembly>\r\n  </dependency>\r\n</assembly>\r\n",
+        "version": {
+            "type": 0,
+            "fixed_file_info": {
+                "file_date_LS": 0,
+                "file_date_MS": 0,
+                "file_flags": 0,
+                "file_flags_mask": 63,
+                "file_os": "NT_WINDOWS32",
+                "file_subtype": "UNKNOWN",
+                "file_type": "UNKNOWN",
+                "file_version_LS": 1,
+                "file_version_MS": 65536,
+                "product_version_LS": 1,
+                "product_version_MS": 65536,
+                "signature": 4277077181,
+                "struct_version": 65536
+            },
+            "string_file_info": {
+                "key": "StringFileInfo",
+                "type": 1,
+                "langcode_items": [
+                    {
+                        "key": "041904b0",
+                        "type": 1,
+                        "lang": "RUSSIAN",
+                        "sublang": "DEFAULT",
+                        "code_page": "UTF_16",
+                        "items": {
+                            "ProductVersion": "1.0.0.1",
+                            "ProductName": "TODO: <Product name>",
+                            "LegalCopyright": "Copyright (C) 2017",
+                            "OriginalFilename": "TODO: <Original filename>",
+                            "FileVersion": "1.0.0.1",
+                            "FileDescription": "TODO: <File description>",
+                            "CompanyName": "TODO: <Company name>",
+                            "InternalName": "TODO: <Internal name>"
+                        }
+                    }
+                ]
+            },
+            "var_file_info": {
+                "key": "VarFileInfo",
+                "type": 1,
+                "translations": [
+                    78644249
+                ]
+            }
+        }
+    },
+    "resources": {
+        "characteristics": 0,
+        "num_childs": 6,
+        "depth": 0,
+        "id": 0,
+        "is_data": false,
+        "is_directory": true,
+        "major_version": 0,
+        "minor_version": 0,
+        "numberof_id_entries": 5,
+        "numberof_name_entries": 1,
+        "time_date_stamp": 0,
+        "childs": [
+            {
+                "characteristics": 0,
+                "num_childs": 7,
+                "depth": 1,
+                "name": "AFX_DIALOG_LAYOUT",
+                "id": 2147485152,
+                "resource_type": "???",
+                "is_data": false,
+                "is_directory": true,
+                "major_version": 0,
+                "minor_version": 0,
+                "numberof_id_entries": 7,
+                "numberof_name_entries": 0,
+                "time_date_stamp": 0,
+                "childs": [
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 900,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 746160,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 901,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 746168,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 902,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 746176,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 903,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 746184,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 914,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 746192,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 921,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 746200,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 922,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 746208,
+                                "reserved": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "characteristics": 0,
+                "num_childs": 10,
+                "depth": 1,
+                "id": 3,
+                "resource_type": "ICON",
+                "is_data": false,
+                "is_directory": true,
+                "major_version": 0,
+                "minor_version": 0,
+                "numberof_id_entries": 10,
+                "numberof_name_entries": 0,
+                "time_date_stamp": 0,
+                "childs": [
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 1,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 687632,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 2,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 697296,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 3,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 700136,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 4,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 703888,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 5,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 706104,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 6,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 707488,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 7,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 710640,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 8,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 727576,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 9,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 737216,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 10,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 741480,
+                                "reserved": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "characteristics": 0,
+                "num_childs": 7,
+                "depth": 1,
+                "id": 5,
+                "resource_type": "DIALOG",
+                "is_data": false,
+                "is_directory": true,
+                "major_version": 0,
+                "minor_version": 0,
+                "numberof_id_entries": 7,
+                "numberof_name_entries": 0,
+                "time_date_stamp": 0,
+                "childs": [
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 900,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 742744,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 901,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 742904,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 902,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 743064,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 903,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 743224,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 914,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 745680,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 921,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 745840,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 922,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 746000,
+                                "reserved": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "characteristics": 0,
+                "num_childs": 2,
+                "depth": 1,
+                "id": 14,
+                "resource_type": "GROUP_ICON",
+                "is_data": false,
+                "is_directory": true,
+                "major_version": 0,
+                "minor_version": 0,
+                "numberof_id_entries": 2,
+                "numberof_name_entries": 0,
+                "time_date_stamp": 0,
+                "childs": [
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 883,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 697272,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 934,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 742608,
+                                "reserved": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "characteristics": 0,
+                "num_childs": 1,
+                "depth": 1,
+                "id": 16,
+                "resource_type": "VERSION",
+                "is_data": false,
+                "is_directory": true,
+                "major_version": 0,
+                "minor_version": 0,
+                "numberof_id_entries": 1,
+                "numberof_name_entries": 0,
+                "time_date_stamp": 0,
+                "childs": [
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 1,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1049,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 746216,
+                                "reserved": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "characteristics": 0,
+                "num_childs": 1,
+                "depth": 1,
+                "id": 24,
+                "resource_type": "MANIFEST",
+                "is_data": false,
+                "is_directory": true,
+                "major_version": 0,
+                "minor_version": 0,
+                "numberof_id_entries": 1,
+                "numberof_name_entries": 0,
+                "time_date_stamp": 0,
+                "childs": [
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 1,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 0,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 1033,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 747024,
+                                "reserved": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"
+}

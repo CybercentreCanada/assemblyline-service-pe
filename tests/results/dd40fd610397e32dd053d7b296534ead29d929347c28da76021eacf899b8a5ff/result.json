@@ -1,0 +1,323 @@
+{
+    "classification": "TLP:W",
+    "response": {
+        "milestones": {
+            "service_started": "2022-01-18T20:30:55.761856Z",
+            "service_completed": "2022-01-18T20:30:55.830690Z"
+        },
+        "service_version": "$SERVICE_TAG",
+        "service_name": "pe",
+        "service_tool_version": null,
+        "supplementary": [
+            {
+                "name": "icon_0.ico",
+                "sha256": "1704e60e99dec20a67dcfec68989ebee51ec17ec26075bc1a38c7a8459959d01",
+                "description": "Icon 0 extracted from the PE file",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpfph8m497/icon_0.ico",
+                "is_section_image": false
+            },
+            {
+                "name": "features.json",
+                "sha256": "2ccc43c164b220e8d164c6fff1bf07811f489799291c551ea2a5ea5e294ecca0",
+                "description": "Features extracted from the PE file, as a JSON file",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpfph8m497/features.json",
+                "is_section_image": false
+            }
+        ],
+        "extracted": [
+            {
+                "name": "overlay",
+                "sha256": "e68568581cf99cc4ceedeb0f5dff5da279b183fdeae7cd8d06d2592b53476112",
+                "description": "overlay extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpfph8m497/overlay",
+                "is_section_image": false
+            }
+        ],
+        "service_context": null,
+        "service_debug_info": null
+    },
+    "result": {
+        "score": 500,
+        "sections": [
+            {
+                "body": "0 -> 2147486256 -> 130\n0 -> 1 -> 1\n0 -> 1 -> 2\n0 -> 1 -> 3\n0 -> 1 -> 4\n0 -> 1 -> 5\n0 -> 1 -> 6\n0 -> 1 -> 7\n0 -> 1 -> 8\n0 -> 1 -> 9\n0 -> 1 -> 10\n0 -> 1 -> 11\n0 -> 1 -> 12\n0 -> 1 -> 13\n0 -> 1 -> 14\n0 -> 1 -> 15\n0 -> 1 -> 16\n0 -> 1 -> 17\n0 -> 1 -> 18\n0 -> 2 -> 101\n0 -> 2 -> 1011\n0 -> 2 -> 2030\n0 -> 2 -> 2031\n0 -> 2 -> 2032\n0 -> 2 -> 2033\n0 -> 2 -> 2034\n0 -> 2 -> 2035\n0 -> 2 -> 2502\n0 -> 2 -> 2503\n0 -> 3 -> 2\n0 -> 12 -> 2008\n0 -> 12 -> 2025\n0 -> 12 -> 9801\n0 -> 12 -> 9802\n0 -> 12 -> 9803\n0 -> 12 -> 9804\n0 -> 12 -> 9805\n0 -> 12 -> 9806\n0 -> 12 -> 9807\n0 -> 12 -> 9808\n0 -> 12 -> 9809\n0 -> 12 -> 9810\n0 -> 12 -> 9811\n0 -> 12 -> 9812\n0 -> 12 -> 9813\n0 -> 12 -> 9814\n0 -> 12 -> 9815\n0 -> 12 -> 9816\n0 -> 14 -> 25625",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": {
+                    "heur_id": 15,
+                    "score": 200,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Resource directories that does not contain a leaf data node",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Timestamp: 1449463483 (2015-12-07 04:44:43 +00:00 (UTC))\nEntrypoint: 0x1000\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 5.12\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nOverlay size: 33906",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "linker": {
+                                "timestamp": [
+                                    1449463483,
+                                    "2015-12-07 04:44:43 +00:00 (UTC)"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Headers",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "build_id: 8444, count: 1, id: 18\nbuild_id: 8078, count: 8, id: 19",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Rich Headers - Key: 2610103321",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "SHA_512: c25e818bf4b3337d9466c053b2880c153c344baf70f2be181e828a35cd5c5d1d45ffc55d1792395458bc3aeaa405b174dd3024c1dbbe8940b958172f8f0b3541\nSHA_384: a3e47be18d958a08e779ce9a949b2acc56f4b6cf32f617ec9cc11623da6533956c19d9882a386348265a8b05dcc0c029\nSHA_256: c950692a58275797d7df5075e2411e9b88d45bbb919ec135f419506e6522fe7c\nSHA_1: 26969150facfb906c90930aafea49b9a9bf58850\nMD5: ffd9ee0c4b8277497b57bbfe98afac1c",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Authentihash",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Sections",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 0.5549228223007707\nEntropy without padding: 0.5549228223007708\nOffset: 512\nSize: 512\nVirtual Size: 356352\nCharacteristics: CNT_CODE, MEM_EXECUTE, MEM_READ\nMD5: 206ee84bed0e04551a14ef351ce111d4",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".ASPack"
+                                ],
+                                "hash": [
+                                    "206ee84bed0e04551a14ef351ce111d4"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .ASPack",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Section name: .ASPack",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 20,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Common packed section name",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.0271691184406193, 3.0271691184406193, 2.59490661824394, 2.0494520727893946, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Entropy: 7.811375776231191\nEntropy without padding: 7.811375776231191\nOffset: 1024\nSize: 273598\nVirtual Size: 289958\nCharacteristics: CNT_CODE, MEM_EXECUTE, MEM_READ, MEM_WRITE\nMD5: 18c67251a7d8383dfd7a106d9cfd5c4a",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "sections": {
+                                "name": [
+                                    ".ASPack"
+                                ],
+                                "hash": [
+                                    "18c67251a7d8383dfd7a106d9cfd5c4a"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Section - .ASPack",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Section name: .ASPack",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 20,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Common packed section name",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Section name: .ASPack\nEntropy: 7.811375776231191\nEntropy without padding: 7.811375776231191",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 4,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "High section entropy",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.281270703301155, 7.395262848796842, 7.891337296851689, 7.89543803577762, 7.905102835969482, 7.900178402288836, 7.854083274508141, 7.6866049593943, 7.774369231127488, 7.7635562395090885, 7.764274489375173, 7.774578329214418, 7.756066499895299, 7.765925863155931, 7.765866197720606, 7.785710010168803, 7.77060217306636, 7.779171801112406, 7.780090656072249, 7.782810942261003, 7.774056649996292, 7.770062878553575, 7.762616314327387, 7.776308233807798, 7.759808840721537, 7.755840422284437, 7.770141649842357, 7.761230314967647, 7.77303611144724, 7.760025938513197, 7.766271426959199, 7.7668441178950545, 7.759728470379155, 7.766564446755001, 7.770294347564607, 7.757339391629447, 7.774616240744039, 7.7623242977952644, 7.758954854209978, 7.76797816956148, 7.764124201179381, 7.755821915790363, 7.752032574751889, 7.769415135006654, 7.769919931098744, 7.765396842096627, 7.802338910456502, 7.829129323436439, 7.628820731610377, 7.814380096453738]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": null,
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "imports": {
+                                "sorted_sha1": [
+                                    "1adcd08d6b948562877a2112857d00c8e72e89b5"
+                                ],
+                                "md5": [
+                                    "469b1bae2575baede5bf1f06a01b4767"
+                                ],
+                                "fuzzy": [
+                                    "3:swBJAEPwS9KTXzhAXwEBJJ67EQaxRAAbsEGV2Sx2AEn:dBJAEHGDywyRlbWVtEn"
+                                ],
+                                "sorted_fuzzy": [
+                                    "3:sUx2AEZsS9KTXzhAXwWBJAEPwEBJJ67EGV2EQaxRn:nERGDYBJAEtmVCyRn"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Imports",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "LoadLibraryA, GetProcAddress, VirtualAlloc, VirtualProtect, VirtualFree, GetModuleHandleA",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "kernel32.dll",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Languages available: NEUTRAL\nSublanguages available: DEFAULT",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "resources": {
+                                "language": [
+                                    "NEUTRAL"
+                                ],
+                                "name": [
+                                    "GUI"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "Resources",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "ID: 1, Lang: NEUTRAL",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Icons",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            }
+        ]
+    },
+    "sha256": "dd40fd610397e32dd053d7b296534ead29d929347c28da76021eacf899b8a5ff",
+    "drop_file": false,
+    "temp_submission_data": {}
+}

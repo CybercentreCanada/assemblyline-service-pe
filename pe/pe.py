@@ -502,14 +502,21 @@ class PE(ServiceBase):
             self.features["sections"].append(section_dict)
 
             sub_res = ResultSection(f"Section - {section.name}")
-            # TODO: Re-enable after doing the add_heuristic refactoring
-            # if section.name in PACKED_SECTION_NAMES:
-            #    sub_res.set_heuristic(20)
-            # for malicious_section in MALICIOUS_SECTION_NAMES:
-            #    if section.name == malicious_section[0] and (
-            #        malicious_section[1] is None or section.characteristics == malicious_section[1]
-            #    ):
-            #        sub_res.set_heuristic(21)
+            if section.name in PACKED_SECTION_NAMES:
+                heur = Heuristic(20)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line(f"Section name: {section.name}")
+                sub_res.add_subsection(heur_section)
+            for malicious_section in MALICIOUS_SECTION_NAMES:
+                if section.name == malicious_section[0] and (
+                    malicious_section[1] is None or section.characteristics == malicious_section[1]
+                ):
+                    heur = Heuristic(21)
+                    heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                    heur_section.add_line(f"Section name: {section.name}")
+                    if malicious_section[1] is not None:
+                        heur_section.add_line(f"Characteristics: {', '.join(section_dict['characteristics_list'])}")
+                    sub_res.add_subsection(heur_section)
             sub_res.add_tag("file.pe.sections.name", section.name)
             sub_res.add_line(f"Entropy: {entropy_data[0]}")
             if entropy_data[0] > 7.5:

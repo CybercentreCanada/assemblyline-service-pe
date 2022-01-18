@@ -1,1 +1,576 @@
-{"name": "9112de8f7ab7966d0709bef921e712042a1199843204d63cb77bcd172a574f34", "format": "PE", "imphash": "a4d2b8107ca667d0276ee9e08f4ca65a", "entrypoint": 342048, "header": {"characteristics_hash": 33167, "characteristics_list": ["BYTES_REVERSED_LO", "RELOCS_STRIPPED", "EXECUTABLE_IMAGE", "CHARA_32BIT_MACHINE", "LINE_NUMS_STRIPPED", "BYTES_REVERSED_HI", "LOCAL_SYMS_STRIPPED"], "machine": "I386", "numberof_sections": 3, "numberof_symbols": 0, "signature": [80, 69, 0, 0], "timestamp": 708992537, "hr_timestamp": "1992-06-19 22:22:17 +00:00 (UTC)"}, "optional_header": {"addressof_entrypoint": 342048, "baseof_code": 286720, "checksum": 0, "dll_characteristics": 0, "dll_characteristics_lists": [], "file_alignment": 512, "imagebase": 4194304, "loader_flags": 0, "magic": "PE32", "major_image_version": 0, "major_linker_version": 2, "major_operating_system_version": 4, "major_subsystem_version": 4, "minor_image_version": 0, "minor_linker_version": 25, "minor_operating_system_version": 0, "minor_subsystem_version": 0, "numberof_rva_and_size": 16, "section_alignment": 4096, "sizeof_code": 57344, "sizeof_headers": 4096, "sizeof_heap_commit": 4096, "sizeof_heap_reserve": 1048576, "sizeof_image": 442368, "sizeof_initialized_data": 24576, "sizeof_stack_commit": 16384, "sizeof_stack_reserve": 1048576, "sizeof_uninitialized_data": 282624, "subsystem": "WINDOWS_GUI", "win32_version_value": 0, "baseof_data": 344064}, "dos_header": {"addressof_new_exeheader": 256, "addressof_relocation_table": 64, "checksum": 0, "file_size_in_pages": 2, "header_size_in_paragraphs": 4, "initial_ip": 0, "initial_relative_cs": 0, "initial_relative_ss": 0, "initial_sp": 184, "magic": 23117, "maximum_extra_paragraphs": 65535, "minimum_extra_paragraphs": 15, "numberof_relocation": 0, "oem_id": 0, "oem_info": 0, "overlay_number": 26, "used_bytes_in_the_last_page": 80}, "nx": false, "authentihash": {"SHA_512": "f1a7e76083d9a32d18220a7ece057884ce9d9f9b3b7a06fa09e1ba823428bcb08e6256c24111eff7bf8eb5445fa1f5a4f8b685984ba17cd945f656a2a4be4eb6", "SHA_384": "2152df2e9d54a4a99de26fefa319df789c2e007c91324d7b4e14116b3d1766ad0d3147a4e1d32e1517109e490ef207e0", "SHA_256": "0b62e6954036217134e6c6bad4faeb219e324dc757847dd2173d0f0e1f98df4f", "SHA_1": "83cf704fd4db09b903e24a351e6b3b4d981634a5", "MD5": "e255396345f3e3c200ea62acd60e579a"}, "tls": {"associated section": "UPX1"}, "position_independent": false, "is_reproducible_build": false, "overlay": {"size": 3936}, "size_of_headers": 1024, "virtual_size": 442368, "sections": [{"name": "UPX0", "characteristics_hash": 3758096512, "characteristics_list": ["CNT_UNINITIALIZED_DATA", "MEM_EXECUTE", "MEM_READ", "MEM_WRITE"], "entropy": 0.0, "entropy_without_padding": -0.0, "md5": "d41d8cd98f00b204e9800998ecf8427e", "offset": 1024, "size": 0, "sizeof_raw_data": 0, "virtual_address": 4096, "virtual_size": 282624, "fullname": "UPX0\u0000\u0000\u0000\u0000"}, {"name": "UPX1", "characteristics_hash": 3758096448, "characteristics_list": ["CNT_INITIALIZED_DATA", "MEM_EXECUTE", "MEM_READ", "MEM_WRITE"], "entropy": 7.884088360688016, "entropy_without_padding": 7.8840883606880166, "md5": "d2fb28438f66f1faafaf2b49317a53e4", "offset": 1024, "size": 55808, "sizeof_raw_data": 55808, "virtual_address": 286720, "virtual_size": 57344, "fullname": "UPX1\u0000\u0000\u0000\u0000"}, {"name": ".rsrc", "characteristics_hash": 3758096448, "characteristics_list": ["CNT_INITIALIZED_DATA", "MEM_EXECUTE", "MEM_READ", "MEM_WRITE"], "entropy": 7.440575961020789, "entropy_without_padding": 7.440575961020789, "md5": "20c6728a1019b02d4538fa80bd4c4f87", "offset": 56832, "size": 98304, "sizeof_raw_data": 98304, "virtual_address": 344064, "virtual_size": 98304, "fullname": ".rsrc\u0000\u0000\u0000"}], "imports": {"KERNEL32.DLL": [{"data": 368296, "hint": 0, "iat_address": 368164, "iat_value": 368296, "is_ordinal": false, "name": "LoadLibraryA"}, {"data": 368310, "hint": 0, "iat_address": 368168, "iat_value": 368310, "is_ordinal": false, "name": "GetProcAddress"}, {"data": 368326, "hint": 0, "iat_address": 368172, "iat_value": 368326, "is_ordinal": false, "name": "VirtualProtect"}, {"data": 368342, "hint": 0, "iat_address": 368176, "iat_value": 368342, "is_ordinal": false, "name": "ExitProcess"}], "advapi32.dll": [{"data": 368356, "hint": 0, "iat_address": 368184, "iat_value": 368356, "is_ordinal": false, "name": "RegCloseKey"}], "ntdll.dll": [{"data": 368370, "hint": 0, "iat_address": 368192, "iat_value": 368370, "is_ordinal": false, "name": "ZwLoadDriver"}], "oleaut32.dll": [{"data": 368384, "hint": 0, "iat_address": 368200, "iat_value": 368384, "is_ordinal": false, "name": "SysFreeString"}], "shell32.dll": [{"data": 368400, "hint": 0, "iat_address": 368208, "iat_value": 368400, "is_ordinal": false, "name": "SHChangeNotify"}], "user32.dll": [{"data": 368416, "hint": 0, "iat_address": 368216, "iat_value": 368416, "is_ordinal": false, "name": "SetTimer"}]}, "resources_manager": {"langs_available": ["CHINESE", "NORWEGIAN"], "sublangs_available": ["CHINESE_SIMPLIFIED", "NORWEGIAN_NYNORSK"]}, "resources": {"characteristics": 67108864, "num_childs": 5, "depth": 0, "id": 0, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 3, "numberof_name_entries": 4, "time_date_stamp": 1046056250, "childs": [{"characteristics": 33554432, "num_childs": 5, "depth": 1, "name": "", "id": 2147484888, "resource_type": "???", "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 0, "numberof_name_entries": 133, "time_date_stamp": 1046318394, "childs": [{"characteristics": 0, "num_childs": 0, "depth": 2, "name": "", "id": 2685404392, "is_data": false, "is_directory": true, "major_version": 4096, "minor_version": 4096, "numberof_id_entries": 1, "numberof_name_entries": 128, "time_date_stamp": 1046056250}, {"characteristics": 0, "num_childs": 0, "depth": 2, "name": "", "id": 2147484920, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 9, "numberof_name_entries": 0, "time_date_stamp": 1046056250}, {"characteristics": 4194304, "num_childs": 0, "depth": 2, "name": "QQ)9", "id": 2147484922, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 1046055226}, {"characteristics": 0, "num_childs": 0, "depth": 2, "name": "H\\xe0\\xa1\\x8cOO", "id": 2147484932, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 1024, "time_date_stamp": 1046056250}, {"characteristics": 0, "num_childs": 0, "depth": 2, "name": "HLSS\u0016IEFILE\u0001C\\xe0\\xa0\\x81D\"DY\u0000GL\\xc2\\x82\\xe1\\x81\\x94B\\xe2\\x82\\x82VL\u0007IT\\xc3\\x93\\xe4\\x81\\x86\\xe8\\x81\\x8bLE\\xc2\\x83ITS\\xd0\\x87SY[F\\xe1\\x81\\x89LD\u0003SY\\xe4\\x81\\x93\u0006DVCLAL\u000bPACKAGEIN", "id": 2147484942, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 1046056250}]}, {"characteristics": 0, "num_childs": 1, "depth": 1, "name": "\u0004\u0000\u0000\\xc4\\x80\u0000\u0000\u0000\u0000", "id": 2147493144, "resource_type": "???", "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 0, "numberof_name_entries": 22, "time_date_stamp": 1046056250, "childs": [{"characteristics": 1073741824, "num_childs": 1, "depth": 2, "name": "C", "id": 2147484966, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 1046056250, "childs": [{"num_child": 0, "code_page": 64, "depth": 3, "id": 2068, "is_data": true, "is_directory": false, "offset": 21424, "reserved": 0}]}]}, {"characteristics": 0, "num_childs": 0, "depth": 1, "name": "IT\\xc3\\x93\\xe4\\x81\\x86\\xe8\\x81\\x8bLE", "id": 2147484998, "resource_type": "???", "is_data": false, "is_directory": true, "major_version": 4, "minor_version": 4, "numberof_id_entries": 0, "numberof_name_entries": 1, "time_date_stamp": 1046056250}, {"characteristics": 134217728, "num_childs": 1, "depth": 1, "name": "", "id": 2164262238, "resource_type": "???", "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 0, "numberof_name_entries": 1, "time_date_stamp": 1046056250, "childs": [{"characteristics": 16384, "num_childs": 0, "depth": 2, "name": "", "id": 2164262254, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 32769, "numberof_name_entries": 0, "time_date_stamp": 1046060346}]}, {"characteristics": 0, "num_childs": 6, "depth": 1, "id": 131075, "resource_type": "???", "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 6, "numberof_name_entries": 0, "time_date_stamp": 1046056250, "childs": [{"characteristics": 0, "num_childs": 1, "depth": 2, "id": 1, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 1046056250, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 2052, "is_data": true, "is_directory": false, "offset": 58260, "reserved": 0}]}, {"characteristics": 0, "num_childs": 0, "depth": 2, "id": 66, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 1046056250}, {"characteristics": 14594601, "num_childs": 0, "depth": 2, "id": 3, "is_data": false, "is_directory": true, "major_version": 34337, "minor_version": 34337, "numberof_id_entries": 231, "numberof_name_entries": 48697, "time_date_stamp": 14069289}, {"characteristics": 1, "num_childs": 0, "depth": 2, "id": 4, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 16384, "time_date_stamp": 1046056250}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 5, "is_data": false, "is_directory": true, "major_version": 2, "minor_version": 2, "numberof_id_entries": 513, "numberof_name_entries": 0, "time_date_stamp": 1046056250, "childs": [{"num_child": 0, "code_page": 294912, "depth": 3, "id": 2052, "is_data": true, "is_directory": false, "offset": 75300, "reserved": 0}]}, {"characteristics": 0, "num_childs": 1, "depth": 2, "id": 6, "is_data": false, "is_directory": true, "major_version": 0, "minor_version": 0, "numberof_id_entries": 1, "numberof_name_entries": 0, "time_date_stamp": 1062833466, "childs": [{"num_child": 0, "code_page": 0, "depth": 3, "id": 2052, "is_data": true, "is_directory": false, "offset": 79576, "reserved": 0}]}]}]}, "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"}
+{
+    "name": "9112de8f7ab7966d0709bef921e712042a1199843204d63cb77bcd172a574f34",
+    "format": "PE",
+    "imphash": "a4d2b8107ca667d0276ee9e08f4ca65a",
+    "entrypoint": 342048,
+    "header": {
+        "characteristics_hash": 33167,
+        "characteristics_list": [
+            "BYTES_REVERSED_LO",
+            "RELOCS_STRIPPED",
+            "EXECUTABLE_IMAGE",
+            "CHARA_32BIT_MACHINE",
+            "LINE_NUMS_STRIPPED",
+            "BYTES_REVERSED_HI",
+            "LOCAL_SYMS_STRIPPED"
+        ],
+        "machine": "I386",
+        "numberof_sections": 3,
+        "numberof_symbols": 0,
+        "signature": [
+            80,
+            69,
+            0,
+            0
+        ],
+        "timestamp": 708992537,
+        "hr_timestamp": "1992-06-19 22:22:17 +00:00 (UTC)"
+    },
+    "optional_header": {
+        "addressof_entrypoint": 342048,
+        "baseof_code": 286720,
+        "checksum": 0,
+        "dll_characteristics": 0,
+        "dll_characteristics_lists": [],
+        "file_alignment": 512,
+        "imagebase": 4194304,
+        "loader_flags": 0,
+        "magic": "PE32",
+        "major_image_version": 0,
+        "major_linker_version": 2,
+        "major_operating_system_version": 4,
+        "major_subsystem_version": 4,
+        "minor_image_version": 0,
+        "minor_linker_version": 25,
+        "minor_operating_system_version": 0,
+        "minor_subsystem_version": 0,
+        "numberof_rva_and_size": 16,
+        "section_alignment": 4096,
+        "sizeof_code": 57344,
+        "sizeof_headers": 4096,
+        "sizeof_heap_commit": 4096,
+        "sizeof_heap_reserve": 1048576,
+        "sizeof_image": 442368,
+        "sizeof_initialized_data": 24576,
+        "sizeof_stack_commit": 16384,
+        "sizeof_stack_reserve": 1048576,
+        "sizeof_uninitialized_data": 282624,
+        "subsystem": "WINDOWS_GUI",
+        "win32_version_value": 0,
+        "baseof_data": 344064
+    },
+    "dos_header": {
+        "addressof_new_exeheader": 256,
+        "addressof_relocation_table": 64,
+        "checksum": 0,
+        "file_size_in_pages": 2,
+        "header_size_in_paragraphs": 4,
+        "initial_ip": 0,
+        "initial_relative_cs": 0,
+        "initial_relative_ss": 0,
+        "initial_sp": 184,
+        "magic": 23117,
+        "maximum_extra_paragraphs": 65535,
+        "minimum_extra_paragraphs": 15,
+        "numberof_relocation": 0,
+        "oem_id": 0,
+        "oem_info": 0,
+        "overlay_number": 26,
+        "used_bytes_in_the_last_page": 80
+    },
+    "nx": false,
+    "authentihash": {
+        "SHA_512": "f1a7e76083d9a32d18220a7ece057884ce9d9f9b3b7a06fa09e1ba823428bcb08e6256c24111eff7bf8eb5445fa1f5a4f8b685984ba17cd945f656a2a4be4eb6",
+        "SHA_384": "2152df2e9d54a4a99de26fefa319df789c2e007c91324d7b4e14116b3d1766ad0d3147a4e1d32e1517109e490ef207e0",
+        "SHA_256": "0b62e6954036217134e6c6bad4faeb219e324dc757847dd2173d0f0e1f98df4f",
+        "SHA_1": "83cf704fd4db09b903e24a351e6b3b4d981634a5",
+        "MD5": "e255396345f3e3c200ea62acd60e579a"
+    },
+    "tls": {
+        "associated section": "UPX1"
+    },
+    "position_independent": false,
+    "is_reproducible_build": false,
+    "overlay": {
+        "size": 3936
+    },
+    "size_of_headers": 1024,
+    "virtual_size": 442368,
+    "sections": [
+        {
+            "name": "UPX0",
+            "characteristics_hash": 3758096512,
+            "characteristics_list": [
+                "CNT_UNINITIALIZED_DATA",
+                "MEM_EXECUTE",
+                "MEM_READ",
+                "MEM_WRITE"
+            ],
+            "entropy": 0.0,
+            "entropy_without_padding": -0.0,
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
+            "offset": 1024,
+            "size": 0,
+            "sizeof_raw_data": 0,
+            "virtual_address": 4096,
+            "virtual_size": 282624,
+            "fullname": "UPX0\u0000\u0000\u0000\u0000"
+        },
+        {
+            "name": "UPX1",
+            "characteristics_hash": 3758096448,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_EXECUTE",
+                "MEM_READ",
+                "MEM_WRITE"
+            ],
+            "entropy": 7.884088360688016,
+            "entropy_without_padding": 7.8840883606880166,
+            "md5": "d2fb28438f66f1faafaf2b49317a53e4",
+            "offset": 1024,
+            "size": 55808,
+            "sizeof_raw_data": 55808,
+            "virtual_address": 286720,
+            "virtual_size": 57344,
+            "fullname": "UPX1\u0000\u0000\u0000\u0000"
+        },
+        {
+            "name": ".rsrc",
+            "characteristics_hash": 3758096448,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_EXECUTE",
+                "MEM_READ",
+                "MEM_WRITE"
+            ],
+            "entropy": 7.440575961020789,
+            "entropy_without_padding": 7.440575961020789,
+            "md5": "20c6728a1019b02d4538fa80bd4c4f87",
+            "offset": 56832,
+            "size": 98304,
+            "sizeof_raw_data": 98304,
+            "virtual_address": 344064,
+            "virtual_size": 98304,
+            "fullname": ".rsrc\u0000\u0000\u0000"
+        }
+    ],
+    "imports": {
+        "KERNEL32.DLL": [
+            {
+                "data": 368296,
+                "hint": 0,
+                "iat_address": 368164,
+                "iat_value": 368296,
+                "is_ordinal": false,
+                "name": "LoadLibraryA"
+            },
+            {
+                "data": 368310,
+                "hint": 0,
+                "iat_address": 368168,
+                "iat_value": 368310,
+                "is_ordinal": false,
+                "name": "GetProcAddress"
+            },
+            {
+                "data": 368326,
+                "hint": 0,
+                "iat_address": 368172,
+                "iat_value": 368326,
+                "is_ordinal": false,
+                "name": "VirtualProtect"
+            },
+            {
+                "data": 368342,
+                "hint": 0,
+                "iat_address": 368176,
+                "iat_value": 368342,
+                "is_ordinal": false,
+                "name": "ExitProcess"
+            }
+        ],
+        "advapi32.dll": [
+            {
+                "data": 368356,
+                "hint": 0,
+                "iat_address": 368184,
+                "iat_value": 368356,
+                "is_ordinal": false,
+                "name": "RegCloseKey"
+            }
+        ],
+        "ntdll.dll": [
+            {
+                "data": 368370,
+                "hint": 0,
+                "iat_address": 368192,
+                "iat_value": 368370,
+                "is_ordinal": false,
+                "name": "ZwLoadDriver"
+            }
+        ],
+        "oleaut32.dll": [
+            {
+                "data": 368384,
+                "hint": 0,
+                "iat_address": 368200,
+                "iat_value": 368384,
+                "is_ordinal": false,
+                "name": "SysFreeString"
+            }
+        ],
+        "shell32.dll": [
+            {
+                "data": 368400,
+                "hint": 0,
+                "iat_address": 368208,
+                "iat_value": 368400,
+                "is_ordinal": false,
+                "name": "SHChangeNotify"
+            }
+        ],
+        "user32.dll": [
+            {
+                "data": 368416,
+                "hint": 0,
+                "iat_address": 368216,
+                "iat_value": 368416,
+                "is_ordinal": false,
+                "name": "SetTimer"
+            }
+        ]
+    },
+    "resources_manager": {
+        "langs_available": [
+            "CHINESE",
+            "NORWEGIAN"
+        ],
+        "sublangs_available": [
+            "CHINESE_SIMPLIFIED",
+            "NORWEGIAN_NYNORSK"
+        ]
+    },
+    "resources": {
+        "characteristics": 67108864,
+        "num_childs": 5,
+        "depth": 0,
+        "id": 0,
+        "is_data": false,
+        "is_directory": true,
+        "major_version": 0,
+        "minor_version": 0,
+        "numberof_id_entries": 3,
+        "numberof_name_entries": 4,
+        "time_date_stamp": 1046056250,
+        "childs": [
+            {
+                "characteristics": 33554432,
+                "num_childs": 5,
+                "depth": 1,
+                "name": "",
+                "id": 2147484888,
+                "resource_type": "???",
+                "is_data": false,
+                "is_directory": true,
+                "major_version": 0,
+                "minor_version": 0,
+                "numberof_id_entries": 0,
+                "numberof_name_entries": 133,
+                "time_date_stamp": 1046318394,
+                "childs": [
+                    {
+                        "characteristics": 0,
+                        "num_childs": 0,
+                        "depth": 2,
+                        "name": "",
+                        "id": 2685404392,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 4096,
+                        "minor_version": 4096,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 128,
+                        "time_date_stamp": 1046056250
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 0,
+                        "depth": 2,
+                        "name": "",
+                        "id": 2147484920,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 9,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 1046056250
+                    },
+                    {
+                        "characteristics": 4194304,
+                        "num_childs": 0,
+                        "depth": 2,
+                        "name": "QQ)9",
+                        "id": 2147484922,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 1046055226
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 0,
+                        "depth": 2,
+                        "name": "H\\xe0\\xa1\\x8cOO",
+                        "id": 2147484932,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 1024,
+                        "time_date_stamp": 1046056250
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 0,
+                        "depth": 2,
+                        "name": "HLSS\u0016IEFILE\u0001C\\xe0\\xa0\\x81D\"DY\u0000GL\\xc2\\x82\\xe1\\x81\\x94B\\xe2\\x82\\x82VL\u0007IT\\xc3\\x93\\xe4\\x81\\x86\\xe8\\x81\\x8bLE\\xc2\\x83ITS\\xd0\\x87SY[F\\xe1\\x81\\x89LD\u0003SY\\xe4\\x81\\x93\u0006DVCLAL\u000bPACKAGEIN",
+                        "id": 2147484942,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 1046056250
+                    }
+                ]
+            },
+            {
+                "characteristics": 0,
+                "num_childs": 1,
+                "depth": 1,
+                "name": "\u0004\u0000\u0000\\xc4\\x80\u0000\u0000\u0000\u0000",
+                "id": 2147493144,
+                "resource_type": "???",
+                "is_data": false,
+                "is_directory": true,
+                "major_version": 0,
+                "minor_version": 0,
+                "numberof_id_entries": 0,
+                "numberof_name_entries": 22,
+                "time_date_stamp": 1046056250,
+                "childs": [
+                    {
+                        "characteristics": 1073741824,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "name": "C",
+                        "id": 2147484966,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 1046056250,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 64,
+                                "depth": 3,
+                                "id": 2068,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 21424,
+                                "reserved": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "characteristics": 0,
+                "num_childs": 0,
+                "depth": 1,
+                "name": "IT\\xc3\\x93\\xe4\\x81\\x86\\xe8\\x81\\x8bLE",
+                "id": 2147484998,
+                "resource_type": "???",
+                "is_data": false,
+                "is_directory": true,
+                "major_version": 4,
+                "minor_version": 4,
+                "numberof_id_entries": 0,
+                "numberof_name_entries": 1,
+                "time_date_stamp": 1046056250
+            },
+            {
+                "characteristics": 134217728,
+                "num_childs": 1,
+                "depth": 1,
+                "name": "",
+                "id": 2164262238,
+                "resource_type": "???",
+                "is_data": false,
+                "is_directory": true,
+                "major_version": 0,
+                "minor_version": 0,
+                "numberof_id_entries": 0,
+                "numberof_name_entries": 1,
+                "time_date_stamp": 1046056250,
+                "childs": [
+                    {
+                        "characteristics": 16384,
+                        "num_childs": 0,
+                        "depth": 2,
+                        "name": "",
+                        "id": 2164262254,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 32769,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 1046060346
+                    }
+                ]
+            },
+            {
+                "characteristics": 0,
+                "num_childs": 6,
+                "depth": 1,
+                "id": 131075,
+                "resource_type": "???",
+                "is_data": false,
+                "is_directory": true,
+                "major_version": 0,
+                "minor_version": 0,
+                "numberof_id_entries": 6,
+                "numberof_name_entries": 0,
+                "time_date_stamp": 1046056250,
+                "childs": [
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 1,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 1046056250,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 2052,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 58260,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 0,
+                        "depth": 2,
+                        "id": 66,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 1046056250
+                    },
+                    {
+                        "characteristics": 14594601,
+                        "num_childs": 0,
+                        "depth": 2,
+                        "id": 3,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 34337,
+                        "minor_version": 34337,
+                        "numberof_id_entries": 231,
+                        "numberof_name_entries": 48697,
+                        "time_date_stamp": 14069289
+                    },
+                    {
+                        "characteristics": 1,
+                        "num_childs": 0,
+                        "depth": 2,
+                        "id": 4,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 16384,
+                        "time_date_stamp": 1046056250
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 5,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 2,
+                        "minor_version": 2,
+                        "numberof_id_entries": 513,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 1046056250,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 294912,
+                                "depth": 3,
+                                "id": 2052,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 75300,
+                                "reserved": 0
+                            }
+                        ]
+                    },
+                    {
+                        "characteristics": 0,
+                        "num_childs": 1,
+                        "depth": 2,
+                        "id": 6,
+                        "is_data": false,
+                        "is_directory": true,
+                        "major_version": 0,
+                        "minor_version": 0,
+                        "numberof_id_entries": 1,
+                        "numberof_name_entries": 0,
+                        "time_date_stamp": 1062833466,
+                        "childs": [
+                            {
+                                "num_child": 0,
+                                "code_page": 0,
+                                "depth": 3,
+                                "id": 2052,
+                                "is_data": true,
+                                "is_directory": false,
+                                "offset": 79576,
+                                "reserved": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"
+}
