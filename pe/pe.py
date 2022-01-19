@@ -2,6 +2,7 @@ import datetime
 import hashlib
 import json
 import os
+import pathlib
 from collections import defaultdict
 from io import BytesIO
 
@@ -177,6 +178,12 @@ class PE(ServiceBase):
 
     def start(self):
         self.log.info("Starting PE")
+        self.rich_header_entries = {}
+        with open(os.path.join(pathlib.Path(__file__).parent.resolve(), "comp_id.txt"), "r") as f:
+            for line in f.read().splitlines():
+                if line and line[0] != "#":
+                    k, v = line.split(" ", 1)
+                    self.rich_header_entries[k] = v
 
     def check_timestamps(self):
         """
@@ -440,7 +447,14 @@ class PE(ServiceBase):
         if self.binary.has_rich_header:
             sub_res = ResultSection(f"Rich Headers - Key: {self.binary.rich_header.key}")
             for entry in self.binary.rich_header.entries:
-                sub_res.add_line(f"build_id: {entry.build_id}, count: {entry.count}, id: {entry.id}")
+                rich_header_hex = (
+                    f"{entry.id.to_bytes(2, byteorder='big').hex()}{entry.build_id.to_bytes(2, byteorder='big').hex()}"
+                )
+                try:
+                    entry_compilation_info = self.rich_header_entries[rich_header_hex]
+                    sub_res.add_line(f"{entry_compilation_info} (count={entry.count})")
+                except KeyError:
+                    sub_res.add_line(f"Unknown object 0x{rich_header_hex} (count={entry.count})")
             res.add_subsection(sub_res)
 
         sub_res = ResultSection("Authentihash")
@@ -1117,14 +1131,11 @@ class PE(ServiceBase):
                 data["num_child"] = len(node.childs)
                 data["code_page"] = node.code_page
                 # data["content"] = node.content
-                # if sub_res.body is None:
-                #    sub_res.add_line("SHA256 | Resource Type | Entropy")
                 resource_data = bytearray(node.content)
                 entropy = calculate_partition_entropy(BytesIO(resource_data))[0]
                 resource_sha256 = hashlib.sha256(resource_data).hexdigest()
                 data["sha256"] = resource_sha256
                 data["entropy"] = entropy
-                # sub_res.add_line(f"{resource_sha256} | {current_resource_type} | {entropy}")
                 sub_res.body.append({"SHA256": resource_sha256, "Type": current_resource_type, "Entropy": entropy})
                 data["depth"] = node.depth
                 if node.has_name:
@@ -1141,8 +1152,6 @@ class PE(ServiceBase):
             return data
 
         self.features["resources"] = get_node_data(self.binary.resources)
-        # if sub_res.body is not None:
-        #    res.add_subsection(sub_res)
         if sub_res.body:
             sub_res.body = json.dumps(sub_res.body)
             res.add_subsection(sub_res)
