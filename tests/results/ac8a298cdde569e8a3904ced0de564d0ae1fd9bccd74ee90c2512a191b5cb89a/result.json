@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "c1f7054aa090a769ae02c39f4d139adfb99f399624bfe7151a872ad0a91e7e01",
+                "sha256": "06723748bedc330766a34a05e59b2b6780f44384083d0fc4044f347d95ed6a49",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp0csk4l22/features.json",
+                "path": "/tmp/working_directory/tmpqe1v9qvg/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "58166564c037449c32b5c13649913c5390a2a34b21d33ebc01f295e7f2aa1b01",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp0csk4l22/overlay",
+                "path": "/tmp/working_directory/tmpqe1v9qvg/overlay",
                 "is_section_image": false
             }
         ],
@@ -542,6 +542,17 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "var_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"SHA256\": \"97e6ec0b5075e3de05ef13c5e9270ba2990e87979597c1f558255fef0960c746\", \"Type\": \"VERSION\", \"Entropy\": 3.3577338599794766}, {\"SHA256\": \"40dac25443a0406db0b90cdd4ae575071fe6100eb3d31504e59a090b569259e3\", \"Type\": \"MANIFEST\", \"Entropy\": 5.226984147224085}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Summary",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

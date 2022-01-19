@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "0b9bbba31552d6314b424243d1bf60bc23fe8de531f5989433f3dbb1f46f026e",
+                "sha256": "a170bf8cbdc40fe8b1cf461becce52e57aee7852446aa894cb6edc7008d3a579",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpv_xsjyzz/features.json",
+                "path": "/tmp/working_directory/tmp6yvxmws8/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "b1bd3ae269f305e658c866bfaf5233ad74f2fe2c4b22797c216f32b370a38137",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpv_xsjyzz/overlay",
+                "path": "/tmp/working_directory/tmp6yvxmws8/overlay",
                 "is_section_image": false
             }
         ],
@@ -247,6 +247,17 @@
                     }
                 },
                 "title_text": "Resources",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"SHA256\": \"643295f2e8b8d0d5dbd2bccd930d076554c0a273875d4203876b1789f4ada967\", \"Type\": \"RCDATA\", \"Entropy\": 3.375}, {\"SHA256\": \"9fc27cd0adfaddd8394191ef99ba549b3f4ecda6a47dc16c707a5ebbaa1ecad2\", \"Type\": \"RCDATA\", \"Entropy\": 5.098231803727738}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Summary",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

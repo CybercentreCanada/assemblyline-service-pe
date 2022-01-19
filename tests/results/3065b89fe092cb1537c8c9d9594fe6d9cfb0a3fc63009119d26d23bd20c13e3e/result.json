@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "ef5bd08c7f2b0ae4f4b456d29300a8825734c8b8a2812f5018583522dd3cea0b",
+                "sha256": "b8c52124a8979a7a29f1529ce7c05c7621430bcb679beb79ee88b9d95b898085",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp4268_r6h/features.json",
+                "path": "/tmp/working_directory/tmp8hns9ylo/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "1a7392209b81d83c7c33ae655e15c1e860028fc7f9edb5ce2292264cfe52f27b",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp4268_r6h/overlay",
+                "path": "/tmp/working_directory/tmp8hns9ylo/overlay",
                 "is_section_image": false
             }
         ],
@@ -392,6 +392,17 @@
                 },
                 "tags": {},
                 "title_text": "Corrupted resources",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"SHA256\": \"78c963fc53e2bf5e235f895e30625c416b5e3e5b5ddf47f3311592aa0f551104\", \"Type\": \"IDR_BINARY\", \"Entropy\": 7.999037569136436}, {\"SHA256\": \"844176a3ddcad0192f2cee6a7a49e7be833dd5c8c4de7d5a46f82a352fcff19b\", \"Type\": \"ICON\", \"Entropy\": 7.770745371140747}, {\"SHA256\": \"8ec4f7c55d523ba362ea8f8a7f90cb95258108ec011c9012686701f8035b07df\", \"Type\": \"ICON\", \"Entropy\": 7.3075207540606995}, {\"SHA256\": \"8a39e88637fb4291d7e52cc38b44d65839acd463e29a4623440a1f1958c5b32d\", \"Type\": \"ICON\", \"Entropy\": 7.946400191302502}, {\"SHA256\": \"b033cde67b8828ee9fb942769dc7d52c1e58e0b6780bdea20cc8e4f34a644eb0\", \"Type\": \"ICON\", \"Entropy\": 7.903368113814543}, {\"SHA256\": \"3789fc51ba1046ab6b2d2d143a1cf1216b980cf9b6c019d0380e728aaf45e253\", \"Type\": \"ICON\", \"Entropy\": 7.85779326069085}, {\"SHA256\": \"94be39be0aa3319ae39dc20b4d9dea9171ba2b85e9b8ea5bc75ae76a7f4fd302\", \"Type\": \"ICON\", \"Entropy\": 7.981578909849276}, {\"SHA256\": \"ae10c455b0e55f62c00a53011ec1a646c8e74835d547eefa1815b6bf765a90a5\", \"Type\": \"ICON\", \"Entropy\": 7.956720774762248}, {\"SHA256\": \"f257508d18909cbf7ac280781631968aeadf8347b41f9d3bc84b38ef394c2a13\", \"Type\": \"ICON\", \"Entropy\": 7.805872941553459}, {\"SHA256\": \"d891f5934663cc080136f20354ce0104e274a9d1e697ba10521ca6d3dd5aa505\", \"Type\": \"ICON\", \"Entropy\": 7.739651499259316}, {\"SHA256\": \"a213d54e8a649bd582144444ff04330810736a416d3edfd136dd6a5516d91b6d\", \"Type\": \"ICON\", \"Entropy\": 7.210375863850693}, {\"SHA256\": \"6c72653dcb5c69ed4156eabf2b2e6419bec63a8b1d5ee6c4cf74bcc8272b7a97\", \"Type\": \"ICON\", \"Entropy\": 7.950383983136265}, {\"SHA256\": \"c4c4fbddf137c31e5285e734e75867c6c58094c44c8417d4ec559fc72378ff40\", \"Type\": \"ICON\", \"Entropy\": 7.921284328787441}, {\"SHA256\": \"55785339ff7644a455cd6aa837bafd8ca05a1cc6f55f2c07fda1dc3ac6fe6290\", \"Type\": \"ICON\", \"Entropy\": 7.863473836091744}, {\"SHA256\": \"dee164a14dfe356460998649dcebd2e59b872cd80d213d37317f6cdba8db6adc\", \"Type\": \"ICON\", \"Entropy\": 7.980959984255092}, {\"SHA256\": \"e3cef3c9750de850c0f599b7ce800f95a79760fc4a06ad76f962005e85ea7939\", \"Type\": \"ICON\", \"Entropy\": 7.956637784203043}, {\"SHA256\": \"b8da8ede59945ef2a57c2c3a37bd9c7aa11a3391de365bc5aca7a0bc81078540\", \"Type\": \"ICON\", \"Entropy\": 7.819904938573999}, {\"SHA256\": \"d635211b6190d87f904daf79ac6db1576bffbf53b6427c3216cc4d6f72a30d1f\", \"Type\": \"MENU\", \"Entropy\": 5.918780730435346}, {\"SHA256\": \"fac83cbcff5ebfe055b92c1e365216c46a4a1475852cca42f8c8cdf7eeed1db5\", \"Type\": \"DIALOG\", \"Entropy\": 7.663059829104346}, {\"SHA256\": \"f8fdffab4c8798e4a4104409a675a2b40455f2a383e932486771d1114cc9dcad\", \"Type\": \"STRING\", \"Entropy\": 5.939183095358684}, {\"SHA256\": \"376845dc53d441645de0285b9033ce7b9f857838cb04d681bd466105bf4d1496\", \"Type\": \"ACCELERATOR\", \"Entropy\": 4.0}, {\"SHA256\": \"991dd282be82295b6c148fdf1053ef34a6cd6392569af0c7309e4951099ee523\", \"Type\": \"GROUP_ICON\", \"Entropy\": 6.446119532376013}, {\"SHA256\": \"96efbfc415e9341e2612870d9da9ccb1fd7f796f9fe0b338d8ff763441c7bfee\", \"Type\": \"GROUP_ICON\", \"Entropy\": 6.371925570493272}, {\"SHA256\": \"49a60be4b95b6d30da355a0c124af82b35000bce8f24f957d1c09ead47544a1e\", \"Type\": \"MANIFEST\", \"Entropy\": 4.795973602273464}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Summary",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

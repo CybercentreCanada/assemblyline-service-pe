@@ -2,11 +2,11 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2022-01-18T21:16:50.167014Z",
-            "service_completed": "2022-01-18T21:16:50.445306Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,15 +14,15 @@
                 "sha256": "e61d981c7855fff4241c60ed9bc33185902b9bc3398d8207bb6512451986fa04",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpmhefr9ah/icon_0.ico",
+                "path": "/tmp/working_directory/tmpa3zxk18l/icon_0.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "93b288ca78cb77614f292ad4ae00c043821c26ac746091a46ab51416f3b738c9",
+                "sha256": "908f24795330b929b44679dddc14097064d1906a2a570bd9e9ff6d1fd9a1507a",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpmhefr9ah/features.json",
+                "path": "/tmp/working_directory/tmpa3zxk18l/features.json",
                 "is_section_image": false
             }
         ],
@@ -205,6 +205,17 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Icons",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"SHA256\": \"b04775cd3e06c3eb938dc9457ceb73589703f91759d095b046f3e8b8e538e8c9\", \"Type\": \"ICON\", \"Entropy\": 6.348607205578606}, {\"SHA256\": \"bd7b891000b776021bd2d3790a165561c6134cea734f0d70a52a9b9c0b363321\", \"Type\": \"GROUP_ICON\", \"Entropy\": 1.943751954420502}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Summary",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

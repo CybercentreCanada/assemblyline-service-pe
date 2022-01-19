@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "42a3aa82a2e006f978b11e16c4375e0b41ca1f6a8e6563892179f75c19cac443",
+                "sha256": "99874991c5574eba0377b0dfcc0deae0d43909fea059e75ff95c2f7842cc8960",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7e76cwyf/features.json",
+                "path": "/tmp/working_directory/tmpgsz3y5lt/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "7e3589f5f903ff483b50ecdd840268b937f338bf32febe7d22fded993732922e",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7e76cwyf/overlay",
+                "path": "/tmp/working_directory/tmpgsz3y5lt/overlay",
                 "is_section_image": false
             },
             {
@@ -32,7 +32,7 @@
                 "sha256": "0e0fabf3c4fb549fc156e7fe8f3c8966c8e09ffbba31e650b18214064245b54f",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7e76cwyf/certificate.1.1",
+                "path": "/tmp/working_directory/tmpgsz3y5lt/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -40,7 +40,7 @@
                 "sha256": "4f32d5dc00f715250abcc486511e37f501a899deb3bf7ea8adbbd3aef1c412da",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7e76cwyf/certificate.1.2",
+                "path": "/tmp/working_directory/tmpgsz3y5lt/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -48,7 +48,7 @@
                 "sha256": "534b9b1a31a38b4e0bf9a291f408337c25a2e011d460fdff495ce473fb168a8e",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7e76cwyf/certificate.1.3",
+                "path": "/tmp/working_directory/tmpgsz3y5lt/certificate.1.3",
                 "is_section_image": false
             },
             {
@@ -56,7 +56,7 @@
                 "sha256": "d92bf8e9fa867dbd8b794c6a49e6ff1fcfac71f3d7f4ae55bb9587eb24ac6489",
                 "description": "certificate.1.4 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7e76cwyf/certificate.1.4",
+                "path": "/tmp/working_directory/tmpgsz3y5lt/certificate.1.4",
                 "is_section_image": false
             }
         ],
@@ -653,6 +653,17 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "var_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"SHA256\": \"e0ee72ee67a6faeb57d5fbe39351575922717fba3fb7b61cca8b33ac2f46977f\", \"Type\": \"MOFDATA\", \"Entropy\": 7.515681058365994}, {\"SHA256\": \"ef1539ff613b078aa26becbe1585c8357c6162fab5d2af631b20a0b0a9e9ae3a\", \"Type\": \"WEVT_TEMPLATE\", \"Entropy\": 3.6137962793878327}, {\"SHA256\": \"ebaa70f31f8654fda12f626f5be11532dfaea4b2d6a1c888ea8e8d2c06db14c1\", \"Type\": \"MESSAGETABLE\", \"Entropy\": 3.5726301311127493}, {\"SHA256\": \"a42d31efe33d819a562db99e2cedfa09921ce45888a289ab6bb76545b67552a4\", \"Type\": \"VERSION\", \"Entropy\": 3.4988956304471044}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Summary",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

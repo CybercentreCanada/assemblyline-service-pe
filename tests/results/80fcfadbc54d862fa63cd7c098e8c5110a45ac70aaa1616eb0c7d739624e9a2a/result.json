@@ -2,19 +2,19 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2021-11-25T18:39:24.711889Z",
-            "service_completed": "2021-11-25T18:39:24.833414Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "21b8dcf626548b04c375f748a15a1f855e7ca1580f066c2766e328d733f8f7cb",
+                "sha256": "c7c024528309ef6f9966bf6486691a6eebba5c0b565ba11212c44a75b955e8fb",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmps4h18ex6/features.json",
+                "path": "/tmp/working_directory/tmp_q4jlg2v/features.json",
                 "is_section_image": false
             }
         ],
@@ -523,6 +523,17 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "var_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"SHA256\": \"c341fa6d5790a6357af322eadf92a8b187df789c53a626444340a4b5c8d0e037\", \"Type\": \"VERSION\", \"Entropy\": 3.49783356161407}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Summary",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

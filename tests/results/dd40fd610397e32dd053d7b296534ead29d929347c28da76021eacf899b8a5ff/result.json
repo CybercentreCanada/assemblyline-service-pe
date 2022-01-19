@@ -2,11 +2,11 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2022-01-18T20:30:55.761856Z",
-            "service_completed": "2022-01-18T20:30:55.830690Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,15 +14,15 @@
                 "sha256": "1704e60e99dec20a67dcfec68989ebee51ec17ec26075bc1a38c7a8459959d01",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpfph8m497/icon_0.ico",
+                "path": "/tmp/working_directory/tmp9t7fvkid/icon_0.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "2ccc43c164b220e8d164c6fff1bf07811f489799291c551ea2a5ea5e294ecca0",
+                "sha256": "653177b40b4955cb01f9acad8f4a25f4a4624e54f8d11321e1e5002b044ba672",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpfph8m497/features.json",
+                "path": "/tmp/working_directory/tmp9t7fvkid/features.json",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
                 "sha256": "e68568581cf99cc4ceedeb0f5dff5da279b183fdeae7cd8d06d2592b53476112",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpfph8m497/overlay",
+                "path": "/tmp/working_directory/tmp9t7fvkid/overlay",
                 "is_section_image": false
             }
         ],
@@ -312,6 +312,17 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Icons",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"SHA256\": \"2c0eeffbc4481d895cea856f67d1331a47ab1acb1f933ac5946516c91f2941e9\", \"Type\": \"ICON\", \"Entropy\": 3.82285545046894}, {\"SHA256\": \"494e4fd717fa1ee0c5c7bb3b4e28fdab4b7f6e95b4f9865f5ab86f03f62ae62c\", \"Type\": \"GROUP_ICON\", \"Entropy\": 1.8192407046368488}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Summary",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

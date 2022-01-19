@@ -14,7 +14,7 @@
                 "sha256": "594d69b5565093806a52688591cf0f787e5d2d1456e06b15f3edd9ac467ea151",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmplv7gl8yu/icon_0.ico",
+                "path": "/tmp/working_directory/tmpe_3597xf/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "41afb348971df54d31a279047926f2312b0bbbafe8daf7ebc3dd92894015f5c7",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmplv7gl8yu/icon_1.ico",
+                "path": "/tmp/working_directory/tmpe_3597xf/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "8a0debd2f4973111bdd5352fb44b2a69eec1e37c135261a3e91c3861898dca59",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmplv7gl8yu/icon_2.ico",
+                "path": "/tmp/working_directory/tmpe_3597xf/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,15 +38,15 @@
                 "sha256": "b22118c3159d96c061e3e6f668cb26f0c679bb96fccd2c788584d3e2a64c4c35",
                 "description": "Icon 3 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmplv7gl8yu/icon_3.ico",
+                "path": "/tmp/working_directory/tmpe_3597xf/icon_3.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "b9b5d1d13f2fb36a3cf42afa50f36a683694a93f1311a2f949c87059ef6a1425",
+                "sha256": "d2635e1ca1a293aa05eb4ace329b7beb14be91b43968838606a656cd1b036732",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmplv7gl8yu/features.json",
+                "path": "/tmp/working_directory/tmpe_3597xf/features.json",
                 "is_section_image": false
             }
         ],
@@ -56,7 +56,7 @@
                 "sha256": "4eb4a513a671328955b3dde5c57d3c614258b670fd1313a20d5782e5eb8cd283",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmplv7gl8yu/overlay",
+                "path": "/tmp/working_directory/tmpe_3597xf/overlay",
                 "is_section_image": false
             },
             {
@@ -64,7 +64,7 @@
                 "sha256": "06e5baf59e3da805ce9f286df1baea93d2bd671f6d73728a25eb6ac697f204c1",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmplv7gl8yu/certificate.1.1",
+                "path": "/tmp/working_directory/tmpe_3597xf/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -72,7 +72,7 @@
                 "sha256": "9bc06dc3614e82154d40d8f8d7b787d2cbe86c13a2b3e1d7409abdd8fa4cbd95",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmplv7gl8yu/certificate.1.2",
+                "path": "/tmp/working_directory/tmpe_3597xf/certificate.1.2",
                 "is_section_image": false
             }
         ],
@@ -622,6 +622,17 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "var_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"SHA256\": \"f59f62e7843b3ff992cf769a3c608acd4a85a38b3b302cda8507b75163659d7b\", \"Type\": \"ICON\", \"Entropy\": 3.2575464382313695}, {\"SHA256\": \"dc785b2a3e4ea82bd34121cc04e80758e221f11ee686fcfd87ce49f8e6730b22\", \"Type\": \"ICON\", \"Entropy\": 3.471506847727187}, {\"SHA256\": \"ca8fc96218d0a7e691dd7b95da05a27246439822d09b829af240523b28fd5bb3\", \"Type\": \"ICON\", \"Entropy\": 3.9170770496759393}, {\"SHA256\": \"3bbacbad1458254c59ad7d0fd9bea998d46b70b8f8dcfc56aad561a293ffdae3\", \"Type\": \"ICON\", \"Entropy\": 3.9136637442867808}, {\"SHA256\": \"34ea1c2173226ecc593f8a2b0224c51ebbee1928715bda9339eec7717a822b89\", \"Type\": \"STRING\", \"Entropy\": 2.5603116092409643}, {\"SHA256\": \"e1d818d622875ce2cf81883816ef982aa05a724c46f82b3e67875e0bc24228b1\", \"Type\": \"STRING\", \"Entropy\": 3.2528682784639362}, {\"SHA256\": \"80bc91470ef70d527d0c4e0824945bc3b17ff84f464bca425661c3e7e1972ce7\", \"Type\": \"STRING\", \"Entropy\": 3.2691919537455263}, {\"SHA256\": \"33ef72f38fc1fe2842c44e11bb351f94385bb186fee0fadbefc9364ed52aeb93\", \"Type\": \"STRING\", \"Entropy\": 3.3326803512289143}, {\"SHA256\": \"7f63f3f944a0b62f8f3b35a60141081599f7f175605ced7e1b4dcb80fda58c8a\", \"Type\": \"STRING\", \"Entropy\": 3.3457888608414152}, {\"SHA256\": \"cb21f2b28bfc6b8046348c7a96bf97149dc5f91e1cc1a4f2904a1044a008425a\", \"Type\": \"STRING\", \"Entropy\": 3.280565553298675}, {\"SHA256\": \"677245e2a6b2eb5495b4965b8c26025a4b26e8b8c21a825f658cb390b493b9a0\", \"Type\": \"RCDATA\", \"Entropy\": 3.5071972129392006}, {\"SHA256\": \"88d14cc6638af8a0836f6d868dfab60df92907a2d7becaefbbd7e007acb75610\", \"Type\": \"RCDATA\", \"Entropy\": 4.0}, {\"SHA256\": \"05efbff33471fec1389d42d84ee0572448b1dabb86c18ee38dd6463ff7f927af\", \"Type\": \"RCDATA\", \"Entropy\": 5.179058592067406}, {\"SHA256\": \"421623d8f4e8b9461543df8f2a43d54c0a2daefc3f4cf74ca4cb56ad9baba4ea\", \"Type\": \"RCDATA\", \"Entropy\": 4.386266142526534}, {\"SHA256\": \"44b095a62d7e401671f57271e6cada367bb55cf7b300ef768b3487b841facd3c\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.645763006690921}, {\"SHA256\": \"a41273f76f5e97f5619066daf69390a52225a20f45b3cd8a80ba8611035f8aaa\", \"Type\": \"VERSION\", \"Entropy\": 2.8667315658743524}, {\"SHA256\": \"356ca8abf11d97bf9dcbff47c04bf1ddcb8685ef84d38e6850ec6c28a37655b9\", \"Type\": \"MANIFEST\", \"Entropy\": 5.139653001249503}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Summary",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

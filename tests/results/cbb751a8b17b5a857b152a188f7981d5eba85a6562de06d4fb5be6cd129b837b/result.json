@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "b4a31afe750adaaaccf23f7dcae7f918fe9aad46b5101ff98513f5f0d9d8112d",
+                "sha256": "b8f51a4d10123735a4f2e01231e488480c189a80686788419c746960c1c5f4fc",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpey4ll9ss/features.json",
+                "path": "/tmp/working_directory/tmph273737w/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "4cb72c23c88bbb9e2c89c328162008909a0ffc6a374da2c091cb288697e4db75",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpey4ll9ss/overlay",
+                "path": "/tmp/working_directory/tmph273737w/overlay",
                 "is_section_image": false
             },
             {
@@ -32,7 +32,7 @@
                 "sha256": "1c1983300c10fb262c0b2304b7be15aaba10ae356ebbbb177583dc44774eb080",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpey4ll9ss/certificate.1.1",
+                "path": "/tmp/working_directory/tmph273737w/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -40,7 +40,7 @@
                 "sha256": "2ade3fa71fa82fed7022b48b5c6dbace27ea4c48b9bfd98db84ee13f7b706fb6",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpey4ll9ss/certificate.1.2",
+                "path": "/tmp/working_directory/tmph273737w/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -48,7 +48,7 @@
                 "sha256": "f38406e540d7a9d90cb4a9479299640ffb6df9e224ecc7a01c0d9558d8dad77d",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpey4ll9ss/certificate.1.3",
+                "path": "/tmp/working_directory/tmph273737w/certificate.1.3",
                 "is_section_image": false
             },
             {
@@ -56,7 +56,7 @@
                 "sha256": "6a3c4d89cd6297023831b9c4f718ce71cf8753a2be49e021245ec6ba5066ff00",
                 "description": "certificate.1.4 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpey4ll9ss/certificate.1.4",
+                "path": "/tmp/working_directory/tmph273737w/certificate.1.4",
                 "is_section_image": false
             },
             {
@@ -64,7 +64,7 @@
                 "sha256": "31a6d7325c3861ba092bc5d3d25a7d4fef62ebf9a3490f65897b87623ecc1295",
                 "description": "certificate.1.5 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpey4ll9ss/certificate.1.5",
+                "path": "/tmp/working_directory/tmph273737w/certificate.1.5",
                 "is_section_image": false
             }
         ],
@@ -841,6 +841,17 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "var_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"SHA256\": \"200215d33ddba94a633ead96a5f07dc3bebcd7d27c4073c41689ea19f5984d39\", \"Type\": \"STRING\", \"Entropy\": 5.564939632366235}, {\"SHA256\": \"26a53642580b6f514b061fa5f68d8c1178dbd39450fcf80cf8681c4881ce7356\", \"Type\": \"STRING\", \"Entropy\": 3.204023484308209}, {\"SHA256\": \"f69ee690c4d2570afe1e2ac9f434e9ff3761fad7235ca1587d11c8e263fb5507\", \"Type\": \"STRING\", \"Entropy\": 3.113355129833689}, {\"SHA256\": \"7b96194be251b0c7ff1bf01e67c517fe2d6535318bfab83d200c684a443b4ca3\", \"Type\": \"STRING\", \"Entropy\": 3.0449645846106566}, {\"SHA256\": \"e409b9c8264ce93763334d8a8c0bba9406a5cdac4ab8dd893edcd316f57563df\", \"Type\": \"STRING\", \"Entropy\": 3.0445398115686895}, {\"SHA256\": \"24965c65a1099db9dbc050efcbffe164188591e5e0e208d9a0ffb0915c0e8011\", \"Type\": \"STRING\", \"Entropy\": 4.621358638409996}, {\"SHA256\": \"74110263cd512806519f0360656799df3d5b308f0eff50d500faf91b48314bba\", \"Type\": \"STRING\", \"Entropy\": 5.004110191215525}, {\"SHA256\": \"939329db4278038eb0a8c66fec977a8a5cb39da6e17c10f99ea3f0bb2baee863\", \"Type\": \"STRING\", \"Entropy\": 5.491575321471785}, {\"SHA256\": \"00fa3e231ec4c92d9a8c0b9828d0c57664b506e90b3fa7802df84b23d046bca6\", \"Type\": \"STRING\", \"Entropy\": 3.0735482477325156}, {\"SHA256\": \"af22325296d73e2f8388a86a562b8d4a1c9a6009df6b9452dac043678e999566\", \"Type\": \"MESSAGETABLE\", \"Entropy\": 6.261897987331784}, {\"SHA256\": \"e1d7149c417f41812eaea32d5a7532de8e1e25c886d0ad935849c3b8e9cabe1c\", \"Type\": \"MESSAGETABLE\", \"Entropy\": 3.502250928571719}, {\"SHA256\": \"aa8edda19cc34217acde373c8f26eb435941c2d987a3db889f3f2bbe87a16cd0\", \"Type\": \"MESSAGETABLE\", \"Entropy\": 3.4753096016346388}, {\"SHA256\": \"7acaa36b33922f06797600041587b04a4f794b3bd1db8ce8da23e44f284ee27c\", \"Type\": \"MESSAGETABLE\", \"Entropy\": 3.4536076543939123}, {\"SHA256\": \"bd92fc3cce7538836380217f344d4160dfa0901ae67bfedad0f3e5c85ec4ad61\", \"Type\": \"MESSAGETABLE\", \"Entropy\": 3.43262250090094}, {\"SHA256\": \"04e66cb43677d0d33993fd6371fc9e87a1e22e1f69ad420a237638f560652c5e\", \"Type\": \"MESSAGETABLE\", \"Entropy\": 5.301242884422589}, {\"SHA256\": \"46bbb2ffddd82cb140b0f424489403e586e4f3b5081db943dd93d28852fa2faf\", \"Type\": \"MESSAGETABLE\", \"Entropy\": 5.512010591142917}, {\"SHA256\": \"fdc7fdbd51778680d5f8c4af92e3da52c689ef111aa59997aea1307f9becd1a7\", \"Type\": \"MESSAGETABLE\", \"Entropy\": 6.23644142905822}, {\"SHA256\": \"3778560fea8aa51c6c2f5a9d11bf25245c27dbd0fca65c748b209586d93a6a7a\", \"Type\": \"MESSAGETABLE\", \"Entropy\": 3.425164671957546}, {\"SHA256\": \"ff04e7dba3e5b09bb18d89a08251eb43364a81c7aa1e1b108a9044e8b3661959\", \"Type\": \"VERSION\", \"Entropy\": 3.5548198686549717}, {\"SHA256\": \"61b662e4d6f36c1cfc9a11cb243e79ae5242ce6201d0bbaf2e3e0f1ff9be5cbb\", \"Type\": \"VERSION\", \"Entropy\": 3.491822650777607}, {\"SHA256\": \"901bec57f992570a6ee8f4ec1af9e8d5765bb06c47e13bc3efef0e23de2b9dc8\", \"Type\": \"VERSION\", \"Entropy\": 3.477284600377098}, {\"SHA256\": \"0fe98abcec5f445994863f812157591b21e9e23c580bcb01bce6e85d6f880517\", \"Type\": \"VERSION\", \"Entropy\": 3.501904030296455}, {\"SHA256\": \"8d7d9e152454a29c50cae473446979a9a9077198e68aafbccb58394f5be65a46\", \"Type\": \"VERSION\", \"Entropy\": 3.4872058470639313}, {\"SHA256\": \"0d5c4d987e075176abdd378ca2fc67c342fe926a4fee05234174e2708ae30471\", \"Type\": \"VERSION\", \"Entropy\": 3.6786530271202706}, {\"SHA256\": \"9068174b4a8a2ff0c384e368056ccc49632643767234704ab6721f16ef40de42\", \"Type\": \"VERSION\", \"Entropy\": 3.7682589681563567}, {\"SHA256\": \"0670ab570114aea774c5601e568b2f7af6e8c535840bc1c0adaef59f62b1ec54\", \"Type\": \"VERSION\", \"Entropy\": 3.697514876567587}, {\"SHA256\": \"436ff491c3d83735b821c00f9c8c318c022059425a67b33f0b4c1170ff81ef47\", \"Type\": \"VERSION\", \"Entropy\": 3.4959811398551563}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Summary",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

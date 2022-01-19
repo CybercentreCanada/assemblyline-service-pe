@@ -2,19 +2,19 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2021-12-13T16:22:23.549671Z",
-            "service_completed": "2021-12-13T16:22:23.682363Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": "Not Important",
         "service_tool_version": null,
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "ae2d22486d1bb52a317c59deb1326859a2cc0b936c23e31b336723f7420f83ef",
+                "sha256": "c0ae2657a6b1ca22e7bf689116cfde54129c1fb6ed4a12674fdbb80475e99a59",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpkp_xolqb/features.json",
+                "path": "/tmp/working_directory/tmpjftez3pp/features.json",
                 "is_section_image": false
             }
         ],
@@ -474,6 +474,17 @@
                     }
                 },
                 "title_text": "Resources",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"SHA256\": \"95347bcfd203e45c2062e2f5f224d39b02589a75ebbe4381d43c0565efefee6e\", \"Type\": \"RCDATA\", \"Entropy\": 5.043603385880926}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Summary",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

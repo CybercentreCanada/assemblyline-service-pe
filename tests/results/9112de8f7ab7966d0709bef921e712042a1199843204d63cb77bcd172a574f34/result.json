@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "996652281c7388540b86f73b10b449004f5e65b695604613d5e2f5af4d6fd70c",
+                "sha256": "157ae42b02628d15d6056d8c8dbb03b347320052324f66daa092422be042a20a",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpw78mgiv_/features.json",
+                "path": "/tmp/working_directory/tmp3booc_oi/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "090460ab0a6a1ee9d5d0cfe2662ab9ec711036640977f231dbe7747cad108725",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpw78mgiv_/overlay",
+                "path": "/tmp/working_directory/tmp3booc_oi/overlay",
                 "is_section_image": false
             }
         ],
@@ -361,6 +361,17 @@
                     }
                 },
                 "title_text": "Resources",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"SHA256\": \"ef0b6c39ebb7f580988638e0070113263c431f9a0219a5d6527ed11935f1c1fd\", \"Type\": \"\\u0004\\u0000\\u0000\\\\xc4\\\\x80\\u0000\\u0000\\u0000\\u0000\", \"Entropy\": 7.543070041988922}, {\"SHA256\": \"4b4574a26d99143ff5e1dac73c463c16a267d2e2a3d6c1d070487a94dd577fde\", \"Type\": \"???\", \"Entropy\": 4.347158763041331}, {\"SHA256\": \"a85b9e2eae5f2475ad4c2a23e83f91390f8053bdc56c83cd6b621908f6e8e738\", \"Type\": \"???\", \"Entropy\": 3.78864515319639}, {\"SHA256\": \"f63c258abbcf889db2175654b511a8ef446fbd5043417682402a6a2eb934dd5c\", \"Type\": \"???\", \"Entropy\": 7.436250285704418}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Summary",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

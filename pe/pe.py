@@ -1082,6 +1082,9 @@ class PE(ServiceBase):
                 sub_res.set_heuristic(13)
             res.add_subsection(sub_res)
 
+        sub_res = ResultSection("Summary", body_format=BODY_FORMAT.TABLE, body=[])
+        current_resource_type = ""
+
         def get_node_data(node):
             data = {}
             if isinstance(node, lief.PE.ResourceDirectory):
@@ -1094,6 +1097,10 @@ class PE(ServiceBase):
                 data["id"] = node.id
                 if node.depth == 1:
                     data["resource_type"] = lief.PE.RESOURCE_TYPES(node.id).name
+                    nonlocal current_resource_type
+                    current_resource_type = data["resource_type"]
+                    if current_resource_type == "???" and node.has_name:
+                        current_resource_type = node.name
                 data["is_data"] = node.is_data
                 data["is_directory"] = node.is_directory
                 data["major_version"] = node.major_version
@@ -1110,6 +1117,15 @@ class PE(ServiceBase):
                 data["num_child"] = len(node.childs)
                 data["code_page"] = node.code_page
                 # data["content"] = node.content
+                # if sub_res.body is None:
+                #    sub_res.add_line("SHA256 | Resource Type | Entropy")
+                resource_data = bytearray(node.content)
+                entropy = calculate_partition_entropy(BytesIO(resource_data))[0]
+                resource_sha256 = hashlib.sha256(resource_data).hexdigest()
+                data["sha256"] = resource_sha256
+                data["entropy"] = entropy
+                # sub_res.add_line(f"{resource_sha256} | {current_resource_type} | {entropy}")
+                sub_res.body.append({"SHA256": resource_sha256, "Type": current_resource_type, "Entropy": entropy})
                 data["depth"] = node.depth
                 if node.has_name:
                     data["name"] = node.name
@@ -1125,6 +1141,11 @@ class PE(ServiceBase):
             return data
 
         self.features["resources"] = get_node_data(self.binary.resources)
+        # if sub_res.body is not None:
+        #    res.add_subsection(sub_res)
+        if sub_res.body:
+            sub_res.body = json.dumps(sub_res.body)
+            res.add_subsection(sub_res)
 
         self.file_res.add_section(res)
 

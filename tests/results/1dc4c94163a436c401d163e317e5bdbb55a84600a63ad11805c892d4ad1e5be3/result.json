@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "b0955003432d86d98f68e47f8e0de0622014e45759dd4d607a57859097d0865f",
+                "sha256": "6f7c93318be84dde5bf2d363076c6e481739be2de4178bdd7940fd68228f6484",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_0swhzty/features.json",
+                "path": "/tmp/working_directory/tmp4pkqboe7/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "ce1539051360bc7fa73ce9c06d87ef4f2864e8a8f9e722b0de2d906fc63f6749",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_0swhzty/overlay",
+                "path": "/tmp/working_directory/tmp4pkqboe7/overlay",
                 "is_section_image": false
             }
         ],
@@ -375,6 +375,17 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "var_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"SHA256\": \"ec333345db21769a6092f6961951f02b933de6799f7843877bf9fd7f7cfc98ad\", \"Type\": \"ICON\", \"Entropy\": 4.781774235443909}, {\"SHA256\": \"d1d9669cd7cda13b1fcb8736f2538615ed74e7d7557864c4d22266719f83d180\", \"Type\": \"GROUP_ICON\", \"Entropy\": 1.6567796494470395}, {\"SHA256\": \"12d21c907defb9bde322c113d34ecf9f84e9c80a210398a68aeb232247a99bf3\", \"Type\": \"VERSION\", \"Entropy\": 3.9943659891467154}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Summary",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

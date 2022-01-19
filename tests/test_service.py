@@ -106,6 +106,9 @@ class TestService:
     @staticmethod
     @pytest.mark.parametrize("sample", list_results(SELF_LOCATION), indirect=True)
     def test_service(sample):
+        overwrite_features = False  # Used temporarily to mass-correct tests
+        overwrite_results = False  # Used temporarily to mass-correct tests
+
         cls = pe.pe.PE()
         cls.start()
 
@@ -122,7 +125,12 @@ class TestService:
             with open(test_features_path, "r") as f:
                 test_features = json.loads(f.read())
 
-            assert test_features == correct_features
+            if overwrite_features:
+                if test_features != correct_features:
+                    with open(correct_features_path, "w") as f:
+                        f.write(json.dumps(test_features))
+            else:
+                assert test_features == correct_features
 
         # Get the result of execute() from the test method
         test_result = task.get_service_result()
@@ -135,7 +143,6 @@ class TestService:
         # Assert values of the class instance are expected
         assert cls.file_res == service_request.result
 
-        overwrite_results = False  # Used temporarily to mass-correct tests
         if overwrite_results:
             import copy
 
