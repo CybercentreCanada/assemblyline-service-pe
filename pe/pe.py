@@ -446,15 +446,48 @@ class PE(ServiceBase):
         res.add_line(f"NX: {self.binary.has_nx}")
         if self.binary.has_rich_header:
             sub_res = ResultSection(f"Rich Headers - Key: {self.binary.rich_header.key}")
+            # Recreate the rich header original clear data to compute the rich header hash
+            clear_data = ""
+
+            sub_sub_res = ResultSection("Entries", body_format=BODY_FORMAT.TABLE, body=[])
             for entry in self.binary.rich_header.entries:
+                clear_data = (
+                    f"{entry.build_id.to_bytes(2, byteorder='little').hex()}"
+                    f"{entry.id.to_bytes(2, byteorder='little').hex()}"
+                    f"{entry.count.to_bytes(4, byteorder='little').hex()}"
+                    f"{clear_data}"
+                )
                 rich_header_hex = (
                     f"{entry.id.to_bytes(2, byteorder='big').hex()}{entry.build_id.to_bytes(2, byteorder='big').hex()}"
                 )
                 try:
                     entry_compilation_info = self.rich_header_entries[rich_header_hex]
-                    sub_res.add_line(f"{entry_compilation_info} (count={entry.count})")
+                    sub_sub_res.body.append(
+                        {
+                            "ID": f"0x{rich_header_hex}",
+                            "Compiler Information": entry_compilation_info,
+                            "Count": entry.count,
+                        }
+                    )
                 except KeyError:
-                    sub_res.add_line(f"Unknown object 0x{rich_header_hex} (count={entry.count})")
+                    sub_sub_res.body.append(
+                        {
+                            "ID": f"0x{rich_header_hex}",
+                            "Compiler Information": f"Unknown object 0x{rich_header_hex}",
+                            "Count": entry.count,
+                        }
+                    )
+            if sub_sub_res.body:
+                sub_sub_res.body = json.dumps(sub_sub_res.body)
+                sub_res.add_subsection(sub_sub_res)
+
+            clear_data = bytes.fromhex(f"44616e53{'0'*24}{clear_data}")  # DanS
+            m = hashlib.md5()
+            m.update(clear_data)
+            rich_header_hash = m.hexdigest()
+            sub_res.add_line(f"Hash: {rich_header_hash}")
+            sub_res.add_tag("file.pe.rich_header.hash", rich_header_hash)
+            self.features["rich_header"]["hash"] = rich_header_hash
             res.add_subsection(sub_res)
 
         sub_res = ResultSection("Authentihash")

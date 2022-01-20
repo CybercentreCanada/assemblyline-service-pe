@@ -14,7 +14,7 @@
                 "sha256": "8494c59dd4318a347ccba6171c7b247fa7c703ef3adbe09b462dcd825f5386d8",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtumoreq/icon_0.ico",
+                "path": "/tmp/working_directory/tmpj73lma_e/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "ffcf94876e62e39c6fdba329df2746c937bcd1ffb9dda4ccd8371659f9d7e19a",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtumoreq/icon_1.ico",
+                "path": "/tmp/working_directory/tmpj73lma_e/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "3b74afadc1ed7b1fc408890a289322d85de5622706a22b8e192c3cf4268a015a",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtumoreq/icon_2.ico",
+                "path": "/tmp/working_directory/tmpj73lma_e/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "c7b93a7217fbe46e50d358aa8d85821f763d6afc525cabac5cd735fa90590a39",
                 "description": "Icon 3 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtumoreq/icon_3.ico",
+                "path": "/tmp/working_directory/tmpj73lma_e/icon_3.ico",
                 "is_section_image": false
             },
             {
@@ -46,7 +46,7 @@
                 "sha256": "69a982b8f68e4cf384ea2bf14bdd3a3b17dbf1259c83848fc4218aa0159644a3",
                 "description": "Icon 4 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtumoreq/icon_4.ico",
+                "path": "/tmp/working_directory/tmpj73lma_e/icon_4.ico",
                 "is_section_image": false
             },
             {
@@ -54,7 +54,7 @@
                 "sha256": "0f630f5dc9d04fe04c1d1493adba52fcbff6666be0477bb482669aed59ed3e96",
                 "description": "Icon 5 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtumoreq/icon_5.ico",
+                "path": "/tmp/working_directory/tmpj73lma_e/icon_5.ico",
                 "is_section_image": false
             },
             {
@@ -62,7 +62,7 @@
                 "sha256": "f34d44677ac874f2b2b3c794545a55a8beac75472eb0cd1c4255936643bc10be",
                 "description": "Icon 6 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtumoreq/icon_6.ico",
+                "path": "/tmp/working_directory/tmpj73lma_e/icon_6.ico",
                 "is_section_image": false
             },
             {
@@ -70,15 +70,15 @@
                 "sha256": "86e5d6cf9a61b29df9d5b2b569ff049fceba6029f65ecff708d0c6e17b4590f7",
                 "description": "Icon 7 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtumoreq/icon_7.ico",
+                "path": "/tmp/working_directory/tmpj73lma_e/icon_7.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "f442932dc26b81733e5240d3e1b4d2a2852c292a3d0899b68316d834ede3c7ed",
+                "sha256": "3645e98c4a185aca4218e816bfc8fc533e30d00d1c46257249555fdf9a713539",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtumoreq/features.json",
+                "path": "/tmp/working_directory/tmpj73lma_e/features.json",
                 "is_section_image": false
             }
         ],
@@ -88,7 +88,7 @@
                 "sha256": "35129502d3b2554dfb1a2c9cf0ae20050c8e30c0c1603c5c1424403204ba1ccf",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtumoreq/overlay",
+                "path": "/tmp/working_directory/tmpj73lma_e/overlay",
                 "is_section_image": false
             }
         ],
@@ -121,13 +121,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "[LNK] VS2008 SP1 build 30729 (count=1)\n[RES] VS2008 SP1 [9.0] build 30729 (*) (count=1)\n[ C ] VS2008 SP1 build 30729 (count=11)\n[ASM] VS2008 SP1 build 30729 (count=1)\n[---] Unmarked objects (count=158)\n[IMP] VS2005 build 50727 (count=15)\n[ C ] VS2005 build 50727 (count=3)\n[---] Unmarked objects (old) (count=2)",
+                "body": "Hash: 42c585c44ae3f6e55b7319f49315221d",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 2382904784",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x00917809\", \"Compiler Information\": \"[LNK] VS2008 SP1 build 30729\", \"Count\": 1}, {\"ID\": \"0x00947809\", \"Compiler Information\": \"[RES] VS2008 SP1 [9.0] build 30729 (*)\", \"Count\": 1}, {\"ID\": \"0x00837809\", \"Compiler Information\": \"[ C ] VS2008 SP1 build 30729\", \"Count\": 11}, {\"ID\": \"0x00957809\", \"Compiler Information\": \"[ASM] VS2008 SP1 build 30729\", \"Count\": 1}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 158}, {\"ID\": \"0x007bc627\", \"Compiler Information\": \"[IMP] VS2005 build 50727\", \"Count\": 15}, {\"ID\": \"0x006dc627\", \"Compiler Information\": \"[ C ] VS2005 build 50727\", \"Count\": 3}, {\"ID\": \"0x00000000\", \"Compiler Information\": \"[---] Unmarked objects (old)\", \"Count\": 2}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

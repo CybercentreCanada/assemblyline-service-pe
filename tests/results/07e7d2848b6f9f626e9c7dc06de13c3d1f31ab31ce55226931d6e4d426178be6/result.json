@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "6473d37ee4c16fa9c10479e6b15e0d9ab3fd6efebb241d1af730ae88cecc7a86",
+                "sha256": "b1373212cb355dc38fa36dadfde59af4431899ff61b818a9c7ad20a5052f4f22",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_z4kc9v6/features.json",
+                "path": "/tmp/working_directory/tmpvwbum488/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "17e42874aff50903131e781b920f8a9b65b2d9156f76479f86f76641a9150cbf",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_z4kc9v6/overlay",
+                "path": "/tmp/working_directory/tmpvwbum488/overlay",
                 "is_section_image": false
             },
             {
@@ -32,7 +32,7 @@
                 "sha256": "f95ce92dd0528e03cbd1c25fe6e506271f75b4dea7e490bd95e55206b46d8157",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_z4kc9v6/certificate.1.1",
+                "path": "/tmp/working_directory/tmpvwbum488/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -40,7 +40,7 @@
                 "sha256": "0625fee1a80d7b897a9712249c2f55ff391d6661dbd8b87f9be6f252d88ced95",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_z4kc9v6/certificate.1.2",
+                "path": "/tmp/working_directory/tmpvwbum488/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -48,7 +48,7 @@
                 "sha256": "0374881c9b74d31f28dc580b0f2b9d2b14a97ce31cbec2a05aeb377dcddcc2b0",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_z4kc9v6/certificate.1.3",
+                "path": "/tmp/working_directory/tmpvwbum488/certificate.1.3",
                 "is_section_image": false
             }
         ],
@@ -81,13 +81,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "[RES] VS98 (6.0) SP6 cvtres build 1736 (count=1)\n[C++] VS98 (6.0) build 8168 (count=2)\n[---] Unmarked objects (count=45)\nUnknown object 0x00131f62 (count=7)\nUnknown object 0x00041f6f (count=2)\nUnknown object 0x000a1f6f (count=11)\nUnknown object 0x000e1c83 (count=1)",
+                "body": "Hash: b60f0584b1bb3bda77a390b9ec4af88a",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 54501649",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x000606c7\", \"Compiler Information\": \"[RES] VS98 (6.0) SP6 cvtres build 1736\", \"Count\": 1}, {\"ID\": \"0x000b1fe8\", \"Compiler Information\": \"[C++] VS98 (6.0) build 8168\", \"Count\": 2}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 45}, {\"ID\": \"0x00131f62\", \"Compiler Information\": \"Unknown object 0x00131f62\", \"Count\": 7}, {\"ID\": \"0x00041f6f\", \"Compiler Information\": \"Unknown object 0x00041f6f\", \"Count\": 2}, {\"ID\": \"0x000a1f6f\", \"Compiler Information\": \"Unknown object 0x000a1f6f\", \"Count\": 11}, {\"ID\": \"0x000e1c83\", \"Compiler Information\": \"Unknown object 0x000e1c83\", \"Count\": 1}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

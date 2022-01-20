@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "6377bab6d898942277cca7dc8306a87ea72fce8dbe69ef9f3846e460ef0d9fa9",
+                "sha256": "3da5e6bf3d94e861c317fccc6afb327e89e099685e3bef72768669bc8297c4bf",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpmzo8jl4e/features.json",
+                "path": "/tmp/working_directory/tmp6_bhdczo/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "32c014250d2e33b7cbfee7ee6453c6d95177b959cc3109bd8698fd8baa25e4ee",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpmzo8jl4e/overlay",
+                "path": "/tmp/working_directory/tmp6_bhdczo/overlay",
                 "is_section_image": false
             }
         ],
@@ -57,13 +57,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "Unknown object 0x2fa2185b (count=1)\n[RES] VS2010 build 30319 (count=1)\nUnknown object 0x9947b89b (count=1)\n[---] Unmarked objects (count=90)\n[IMP] VS2008 SP1 build 30729 (count=9)\n[ C ] VS2010 build 30319 (count=96)\n[C++] VS2010 build 30319 (count=38)\n[ASM] VS2010 build 30319 (count=26)",
+                "body": "Hash: 9b322c687b8d07058236f64f2b6909ee",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 2562106964",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x2fa2185b\", \"Compiler Information\": \"Unknown object 0x2fa2185b\", \"Count\": 1}, {\"ID\": \"0x009a766f\", \"Compiler Information\": \"[RES] VS2010 build 30319\", \"Count\": 1}, {\"ID\": \"0x9947b89b\", \"Compiler Information\": \"Unknown object 0x9947b89b\", \"Count\": 1}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 90}, {\"ID\": \"0x00937809\", \"Compiler Information\": \"[IMP] VS2008 SP1 build 30729\", \"Count\": 9}, {\"ID\": \"0x00aa766f\", \"Compiler Information\": \"[ C ] VS2010 build 30319\", \"Count\": 96}, {\"ID\": \"0x00ab766f\", \"Compiler Information\": \"[C++] VS2010 build 30319\", \"Count\": 38}, {\"ID\": \"0x009e766f\", \"Compiler Information\": \"[ASM] VS2010 build 30319\", \"Count\": 26}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

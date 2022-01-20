@@ -14,15 +14,15 @@
                 "sha256": "1704e60e99dec20a67dcfec68989ebee51ec17ec26075bc1a38c7a8459959d01",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpkz7r5lv2/icon_0.ico",
+                "path": "/tmp/working_directory/tmpa2kyse7q/icon_0.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "653177b40b4955cb01f9acad8f4a25f4a4624e54f8d11321e1e5002b044ba672",
+                "sha256": "bf4fa2cbb3cabfa6d40f17169971ef16585365658c922714704489d3e9d159dd",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpkz7r5lv2/features.json",
+                "path": "/tmp/working_directory/tmpa2kyse7q/features.json",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
                 "sha256": "e68568581cf99cc4ceedeb0f5dff5da279b183fdeae7cd8d06d2592b53476112",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpkz7r5lv2/overlay",
+                "path": "/tmp/working_directory/tmpa2kyse7q/overlay",
                 "is_section_image": false
             }
         ],
@@ -83,13 +83,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "Unknown object 0x001220fc (count=1)\nUnknown object 0x00131f8e (count=8)",
+                "body": "Hash: ae850229fdfbd66ccf847ba4055756fe",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 2610103321",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x001220fc\", \"Compiler Information\": \"Unknown object 0x001220fc\", \"Count\": 1}, {\"ID\": \"0x00131f8e\", \"Compiler Information\": \"Unknown object 0x00131f8e\", \"Count\": 8}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

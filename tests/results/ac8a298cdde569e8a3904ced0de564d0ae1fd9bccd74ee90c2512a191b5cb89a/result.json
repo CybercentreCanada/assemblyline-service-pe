@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "06723748bedc330766a34a05e59b2b6780f44384083d0fc4044f347d95ed6a49",
+                "sha256": "25565083dcf45bb8ae9970dd03f6ef8cd67c658bac7a814a9a5865a3fd48b74c",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmps0b74fgl/features.json",
+                "path": "/tmp/working_directory/tmpo7i2p_ki/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "58166564c037449c32b5c13649913c5390a2a34b21d33ebc01f295e7f2aa1b01",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmps0b74fgl/overlay",
+                "path": "/tmp/working_directory/tmpo7i2p_ki/overlay",
                 "is_section_image": false
             }
         ],
@@ -57,13 +57,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "[LNK] VS2013 UPD3 build 30723 (*) (count=1)\n[RES] VS2013 build 21005 (count=1)\nUnknown object 0x00e57803 (count=11)\n[---] Unmarked objects (count=170)\nUnknown object 0x00cbffdd (count=21)\n[ C ] VS2013 build 21005 (count=147)\n[ASM] VS2013 build 21005 (count=20)\n[C++] VS2013 build 21005 (count=49)\nUnknown object 0x00c7a09e (count=1)",
+                "body": "Hash: ab98f9c2c1e8309aa1b91ebd7e907d89",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 235164092",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x00de7803\", \"Compiler Information\": \"[LNK] VS2013 UPD3 build 30723 (*)\", \"Count\": 1}, {\"ID\": \"0x00db520d\", \"Compiler Information\": \"[RES] VS2013 build 21005\", \"Count\": 1}, {\"ID\": \"0x00e57803\", \"Compiler Information\": \"Unknown object 0x00e57803\", \"Count\": 11}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 170}, {\"ID\": \"0x00cbffdd\", \"Compiler Information\": \"Unknown object 0x00cbffdd\", \"Count\": 21}, {\"ID\": \"0x00e0520d\", \"Compiler Information\": \"[ C ] VS2013 build 21005\", \"Count\": 147}, {\"ID\": \"0x00df520d\", \"Compiler Information\": \"[ASM] VS2013 build 21005\", \"Count\": 20}, {\"ID\": \"0x00e1520d\", \"Compiler Information\": \"[C++] VS2013 build 21005\", \"Count\": 49}, {\"ID\": \"0x00c7a09e\", \"Compiler Information\": \"Unknown object 0x00c7a09e\", \"Count\": 1}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

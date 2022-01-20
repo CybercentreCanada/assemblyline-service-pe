@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "634ac48dc3dbc704968dee2193b7b3e18254012f13332537d149fa41f6c7a04d",
+                "sha256": "fb428477014873cd1801df4a37224ceb8338df0ec9f55aa2552634f3ddd52fd7",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp0hw4dulf/features.json",
+                "path": "/tmp/working_directory/tmplbmv3to5/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "cafac901d78c530de08461f224cdf695b9a38a46d370612ccc0e665cc70eba71",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp0hw4dulf/overlay",
+                "path": "/tmp/working_directory/tmplbmv3to5/overlay",
                 "is_section_image": false
             }
         ],
@@ -57,13 +57,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "[RES] VS98 (6.0) SP6 cvtres build 1736 (count=1)\nUnknown object 0x00312354 (count=4)\n[---] Unmarked objects (count=196)\nUnknown object 0x00131f62 (count=13)\nUnknown object 0x001923fa (count=2)\nUnknown object 0x001c23da (count=1)\n[---] Unmarked objects (old) (count=7)\nUnknown object 0x00041f6f (count=2)\nUnknown object 0x000a1f6f (count=11)\nUnknown object 0x000e1c83 (count=2)",
+                "body": "Hash: 5a9da3b45c94fe748113796b76477e99",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 1095431765",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x000606c7\", \"Compiler Information\": \"[RES] VS98 (6.0) SP6 cvtres build 1736\", \"Count\": 1}, {\"ID\": \"0x00312354\", \"Compiler Information\": \"Unknown object 0x00312354\", \"Count\": 4}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 196}, {\"ID\": \"0x00131f62\", \"Compiler Information\": \"Unknown object 0x00131f62\", \"Count\": 13}, {\"ID\": \"0x001923fa\", \"Compiler Information\": \"Unknown object 0x001923fa\", \"Count\": 2}, {\"ID\": \"0x001c23da\", \"Compiler Information\": \"Unknown object 0x001c23da\", \"Count\": 1}, {\"ID\": \"0x00000000\", \"Compiler Information\": \"[---] Unmarked objects (old)\", \"Count\": 7}, {\"ID\": \"0x00041f6f\", \"Compiler Information\": \"Unknown object 0x00041f6f\", \"Count\": 2}, {\"ID\": \"0x000a1f6f\", \"Compiler Information\": \"Unknown object 0x000a1f6f\", \"Count\": 11}, {\"ID\": \"0x000e1c83\", \"Compiler Information\": \"Unknown object 0x000e1c83\", \"Count\": 2}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

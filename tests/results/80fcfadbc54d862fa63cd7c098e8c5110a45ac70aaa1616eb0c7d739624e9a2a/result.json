@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "c7c024528309ef6f9966bf6486691a6eebba5c0b565ba11212c44a75b955e8fb",
+                "sha256": "589e4d658e5c63312589edf15c6b4cbf4fb009f4ccd3339d0f5566a6e7772119",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpiwoxrz36/features.json",
+                "path": "/tmp/working_directory/tmpjv15y1_s/features.json",
                 "is_section_image": false
             }
         ],
@@ -48,13 +48,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "[LNK] VS2003 (.NET) SP1 build 6030 (count=1)\n[RES] VS2003 (.NET) build 3052 (count=1)\n[EXP] VS2003 (.NET) SP1 build 6030 (count=1)\n[C++] VS2003 (.NET) SP1 build 6030 (count=14)\n[---] Unmarked objects (count=90)\nUnknown object 0x005d0883 (count=7)\n[ C ] VS2003 (.NET) SP1 build 6030 (count=72)\n[ASM] VS2003 (.NET) SP1 build 6030 (count=23)\nUnknown object 0x00690813 (count=1)",
+                "body": "Hash: 7295dac656339843fa8a8424a1f3dbbc",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 3855160698",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x005a178e\", \"Compiler Information\": \"[LNK] VS2003 (.NET) SP1 build 6030\", \"Count\": 1}, {\"ID\": \"0x005e0bec\", \"Compiler Information\": \"[RES] VS2003 (.NET) build 3052\", \"Count\": 1}, {\"ID\": \"0x005c178e\", \"Compiler Information\": \"[EXP] VS2003 (.NET) SP1 build 6030\", \"Count\": 1}, {\"ID\": \"0x0060178e\", \"Compiler Information\": \"[C++] VS2003 (.NET) SP1 build 6030\", \"Count\": 14}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 90}, {\"ID\": \"0x005d0883\", \"Compiler Information\": \"Unknown object 0x005d0883\", \"Count\": 7}, {\"ID\": \"0x005f178e\", \"Compiler Information\": \"[ C ] VS2003 (.NET) SP1 build 6030\", \"Count\": 72}, {\"ID\": \"0x000f178e\", \"Compiler Information\": \"[ASM] VS2003 (.NET) SP1 build 6030\", \"Count\": 23}, {\"ID\": \"0x00690813\", \"Compiler Information\": \"Unknown object 0x00690813\", \"Count\": 1}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

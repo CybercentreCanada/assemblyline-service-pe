@@ -14,15 +14,15 @@
                 "sha256": "e61d981c7855fff4241c60ed9bc33185902b9bc3398d8207bb6512451986fa04",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpnmw82hof/icon_0.ico",
+                "path": "/tmp/working_directory/tmp7tgc_n8v/icon_0.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "908f24795330b929b44679dddc14097064d1906a2a570bd9e9ff6d1fd9a1507a",
+                "sha256": "1e2b28f9410c54536ac05c5874df730f5439017d02bf70ab6e478c157feae41e",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpnmw82hof/features.json",
+                "path": "/tmp/working_directory/tmp7tgc_n8v/features.json",
                 "is_section_image": false
             }
         ],
@@ -56,13 +56,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "[---] Unmarked objects (old) (count=1)",
+                "body": "Hash: 03d66c1bb0ed3815ed5240669f9d7036",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 2286892065",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x00000000\", \"Compiler Information\": \"[---] Unmarked objects (old)\", \"Count\": 1}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

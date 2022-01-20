@@ -14,15 +14,15 @@
                 "sha256": "01bbc368eb3c9ebd5ea9c211a3d502a170e952a935b001445e4ef4d59ef7388e",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpf1kjegm8/icon_0.ico",
+                "path": "/tmp/working_directory/tmpy0rj_qqj/icon_0.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "ec17a2c0dc587407d621fb3dcdb7ff9f4297ad822a9861b14a95a5f9d570c51f",
+                "sha256": "dcb9f1ae72fe58bd4af1cf7ac19d61a23193f238b7694d9c7690c24d1632ec0c",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpf1kjegm8/features.json",
+                "path": "/tmp/working_directory/tmpy0rj_qqj/features.json",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
                 "sha256": "19b04b9c1d7d7affa39d767a995660e9a239b480f286a3f57925adce430050cd",
                 "description": "binary_0_10_2147484742_1031 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpf1kjegm8/binary_0_10_2147484742_1031",
+                "path": "/tmp/working_directory/tmpy0rj_qqj/binary_0_10_2147484742_1031",
                 "is_section_image": false
             },
             {
@@ -40,7 +40,7 @@
                 "sha256": "e8c94324346a70c2ae8d2320816bbc579578b443af0f80abba75865892f15974",
                 "description": "binary_0_10_2147484754_1031 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpf1kjegm8/binary_0_10_2147484754_1031",
+                "path": "/tmp/working_directory/tmpy0rj_qqj/binary_0_10_2147484754_1031",
                 "is_section_image": false
             },
             {
@@ -48,7 +48,7 @@
                 "sha256": "d0123a6b47391ad1d846dba246c8d29fb34207933613ff3a87abc14020c32734",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpf1kjegm8/overlay",
+                "path": "/tmp/working_directory/tmpy0rj_qqj/overlay",
                 "is_section_image": false
             },
             {
@@ -56,7 +56,7 @@
                 "sha256": "35282afa633ddc4471485446b2a2222c3389d144d6692bac1db08cc0f1952e14",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpf1kjegm8/certificate.1.1",
+                "path": "/tmp/working_directory/tmpy0rj_qqj/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -64,7 +64,7 @@
                 "sha256": "5e6d2f88f617dc8b809aee712445a41b3cde26af874a221a9dc98ea1dc68e3d5",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpf1kjegm8/certificate.1.2",
+                "path": "/tmp/working_directory/tmpy0rj_qqj/certificate.1.2",
                 "is_section_image": false
             }
         ],
@@ -115,13 +115,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "[LNK] VS2012 UPD4 build 61030 (count=1)\nUnknown object 0x00970000 (count=1)\n[RES] VS2012 UPD4 build 61030 (count=1)\n[ASM] VS2012 UPD4 build 61030 (count=2)\nUnknown object 0x00d8ee66 (count=77)\n[---] Unmarked objects (count=532)\n[IMP] VS2008 SP1 build 30729 (count=37)\n[ C ] VS2008 SP1 build 30729 (count=9)\nUnknown object 0x00cfc6f1 (count=50)\nUnknown object 0x00cec6f1 (count=174)\nUnknown object 0x00cdc6f1 (count=51)\nUnknown object 0x00c7a09e (count=1)",
+                "body": "Hash: c00fbeb3d5a73fb916958895bc6eccfb",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 3450209721",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x00ccee66\", \"Compiler Information\": \"[LNK] VS2012 UPD4 build 61030\", \"Count\": 1}, {\"ID\": \"0x00970000\", \"Compiler Information\": \"Unknown object 0x00970000\", \"Count\": 1}, {\"ID\": \"0x00c9ee66\", \"Compiler Information\": \"[RES] VS2012 UPD4 build 61030\", \"Count\": 1}, {\"ID\": \"0x00cdee66\", \"Compiler Information\": \"[ASM] VS2012 UPD4 build 61030\", \"Count\": 2}, {\"ID\": \"0x00d8ee66\", \"Compiler Information\": \"Unknown object 0x00d8ee66\", \"Count\": 77}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 532}, {\"ID\": \"0x00937809\", \"Compiler Information\": \"[IMP] VS2008 SP1 build 30729\", \"Count\": 37}, {\"ID\": \"0x00837809\", \"Compiler Information\": \"[ C ] VS2008 SP1 build 30729\", \"Count\": 9}, {\"ID\": \"0x00cfc6f1\", \"Compiler Information\": \"Unknown object 0x00cfc6f1\", \"Count\": 50}, {\"ID\": \"0x00cec6f1\", \"Compiler Information\": \"Unknown object 0x00cec6f1\", \"Count\": 174}, {\"ID\": \"0x00cdc6f1\", \"Compiler Information\": \"Unknown object 0x00cdc6f1\", \"Count\": 51}, {\"ID\": \"0x00c7a09e\", \"Compiler Information\": \"Unknown object 0x00c7a09e\", \"Count\": 1}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

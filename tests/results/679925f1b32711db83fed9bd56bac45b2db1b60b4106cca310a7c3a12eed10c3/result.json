@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "26974026f657d8b47a08d74cdd51fc7db28f650d4e9ef2083568db215d7a6966",
+                "sha256": "a8d138621935522b7c922a48ad7cc6b8214f03e89284a17566972f4274cf881d",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpf7vydqvz/features.json",
+                "path": "/tmp/working_directory/tmp048j0hs6/features.json",
                 "is_section_image": false
             }
         ],
@@ -66,13 +66,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "Unknown object 0x000d1fe9 (count=1)\nUnknown object 0x00091f69 (count=1)\nUnknown object 0x000e1c83 (count=1)",
+                "body": "Hash: fec6d6d499d3f24031e6f7c921c9b24e",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 2291657675",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x000d1fe9\", \"Compiler Information\": \"Unknown object 0x000d1fe9\", \"Count\": 1}, {\"ID\": \"0x00091f69\", \"Compiler Information\": \"Unknown object 0x00091f69\", \"Count\": 1}, {\"ID\": \"0x000e1c83\", \"Compiler Information\": \"Unknown object 0x000e1c83\", \"Count\": 1}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

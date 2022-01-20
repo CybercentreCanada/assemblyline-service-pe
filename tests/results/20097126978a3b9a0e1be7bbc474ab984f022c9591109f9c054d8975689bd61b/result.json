@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "de2c7a01607ccd888727ee027a4269341370c3baedf85838d060d57e16d4ff8c",
+                "sha256": "deca89d916825c8a75d821902d72c1e4ba9a93acdacdcd5fac9df901baab5f81",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpcj50mkjx/features.json",
+                "path": "/tmp/working_directory/tmpczlkccct/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "d989323cb9eafd6068401dc1feab31a59adbd84cdf06f37a422ad3d0a68b5271",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpcj50mkjx/overlay",
+                "path": "/tmp/working_directory/tmpczlkccct/overlay",
                 "is_section_image": false
             }
         ],
@@ -57,13 +57,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "[LNK] VS2015 UPD3.1 build 24215 (count=1)\nUnknown object 0x00970000 (count=3)\n[RES] VS2015 UPD3 build 24210 (count=1)\n[C++] VS2015 UPD3.1 build 24215 (count=368)\n[---] Unmarked objects (count=720)\n[IMP] VS2008 SP1 build 30729 (count=41)\n[C++] VS2008 SP1 build 30729 (count=1)\n[ C ] VS2008 SP1 build 30729 (count=16)\n[ C ] VS2015 UPD3.1 build 24215 (count=203)\nUnknown object 0x01095e97 (count=35)\n[ C ] VS98 (6.0) build 8168 (count=1)\nUnknown object 0x000e1c83 (count=3)\nUnknown object 0x01045e3b (count=42)\nUnknown object 0x01055e3b (count=67)\nUnknown object 0x01035e3b (count=27)\nUnknown object 0x00c7a09e (count=1)\nUnknown object 0x010559e5 (count=2)\nUnknown object 0x00f29cb4 (count=33)\nUnknown object 0x00f39cb4 (count=198)\nUnknown object 0x00f19cb4 (count=26)",
+                "body": "Hash: a0f27917c0b020a9f3cbc5d3f989e421",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 3247001902",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x01025e97\", \"Compiler Information\": \"[LNK] VS2015 UPD3.1 build 24215\", \"Count\": 1}, {\"ID\": \"0x00970000\", \"Compiler Information\": \"Unknown object 0x00970000\", \"Count\": 3}, {\"ID\": \"0x00ff5e92\", \"Compiler Information\": \"[RES] VS2015 UPD3 build 24210\", \"Count\": 1}, {\"ID\": \"0x01055e97\", \"Compiler Information\": \"[C++] VS2015 UPD3.1 build 24215\", \"Count\": 368}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 720}, {\"ID\": \"0x00937809\", \"Compiler Information\": \"[IMP] VS2008 SP1 build 30729\", \"Count\": 41}, {\"ID\": \"0x00847809\", \"Compiler Information\": \"[C++] VS2008 SP1 build 30729\", \"Count\": 1}, {\"ID\": \"0x00837809\", \"Compiler Information\": \"[ C ] VS2008 SP1 build 30729\", \"Count\": 16}, {\"ID\": \"0x01045e97\", \"Compiler Information\": \"[ C ] VS2015 UPD3.1 build 24215\", \"Count\": 203}, {\"ID\": \"0x01095e97\", \"Compiler Information\": \"Unknown object 0x01095e97\", \"Count\": 35}, {\"ID\": \"0x000a1fe8\", \"Compiler Information\": \"[ C ] VS98 (6.0) build 8168\", \"Count\": 1}, {\"ID\": \"0x000e1c83\", \"Compiler Information\": \"Unknown object 0x000e1c83\", \"Count\": 3}, {\"ID\": \"0x01045e3b\", \"Compiler Information\": \"Unknown object 0x01045e3b\", \"Count\": 42}, {\"ID\": \"0x01055e3b\", \"Compiler Information\": \"Unknown object 0x01055e3b\", \"Count\": 67}, {\"ID\": \"0x01035e3b\", \"Compiler Information\": \"Unknown object 0x01035e3b\", \"Count\": 27}, {\"ID\": \"0x00c7a09e\", \"Compiler Information\": \"Unknown object 0x00c7a09e\", \"Count\": 1}, {\"ID\": \"0x010559e5\", \"Compiler Information\": \"Unknown object 0x010559e5\", \"Count\": 2}, {\"ID\": \"0x00f29cb4\", \"Compiler Information\": \"Unknown object 0x00f29cb4\", \"Count\": 33}, {\"ID\": \"0x00f39cb4\", \"Compiler Information\": \"Unknown object 0x00f39cb4\", \"Count\": 198}, {\"ID\": \"0x00f19cb4\", \"Compiler Information\": \"Unknown object 0x00f19cb4\", \"Count\": 26}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

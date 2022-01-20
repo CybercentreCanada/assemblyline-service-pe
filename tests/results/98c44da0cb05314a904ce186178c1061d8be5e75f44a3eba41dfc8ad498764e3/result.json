@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "26ce5356a4e9d956c166f09951b972ef63fa055ae1fc2e389495c32ca0c939c8",
+                "sha256": "da27d7298ac04465dc53126d021a21976102d948d24e22934eacde49a6acbf5b",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpg83jf90i/features.json",
+                "path": "/tmp/working_directory/tmpz9sviiqy/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpg83jf90i/overlay",
+                "path": "/tmp/working_directory/tmpz9sviiqy/overlay",
                 "is_section_image": false
             }
         ],
@@ -57,13 +57,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "[LNK] VS2008 SP1 build 30729 (count=1)\nUnknown object 0x008a7809 (count=8)\nUnknown object 0x000e1c83 (count=1)\nUnknown object 0x00041f6f (count=3)\n[---] Unmarked objects (count=71)\n[ASM] Windows Server 2003 SP1 DDK build 4035 (*) (count=1)\n[IMP] VS2005 build 50727 (count=12)",
+                "body": "Hash: 8677c8925069faa0b2f1ea33c1a4c1fe",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 3509055806",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x00917809\", \"Compiler Information\": \"[LNK] VS2008 SP1 build 30729\", \"Count\": 1}, {\"ID\": \"0x008a7809\", \"Compiler Information\": \"Unknown object 0x008a7809\", \"Count\": 8}, {\"ID\": \"0x000e1c83\", \"Compiler Information\": \"Unknown object 0x000e1c83\", \"Count\": 1}, {\"ID\": \"0x00041f6f\", \"Compiler Information\": \"Unknown object 0x00041f6f\", \"Count\": 3}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 71}, {\"ID\": \"0x000f0fc3\", \"Compiler Information\": \"[ASM] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 1}, {\"ID\": \"0x007bc627\", \"Compiler Information\": \"[IMP] VS2005 build 50727\", \"Count\": 12}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

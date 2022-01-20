@@ -14,7 +14,7 @@
                 "sha256": "1ea72096d6dbc0493be7e5c8d673f629bebf6d08e8ce8ce189cfb0571a905296",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp07dxuq44/icon_0.ico",
+                "path": "/tmp/working_directory/tmp3_il8zv3/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "2ba064d98137e88b6e3b363b502251fa45fb0bfb3af86db1294b6e79c417ae73",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp07dxuq44/icon_1.ico",
+                "path": "/tmp/working_directory/tmp3_il8zv3/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,15 +30,15 @@
                 "sha256": "3e64faf9856f72fc74be4c92047083e786ee658d470a24d88e6c11dca101cb97",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp07dxuq44/icon_2.ico",
+                "path": "/tmp/working_directory/tmp3_il8zv3/icon_2.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "a4b6a3b0b82abfc9048297a146c1825d3ba4822729a5c419eafbbdf87c1fa301",
+                "sha256": "14f4e65fa5c0ba83d0ffc51ba99a251ec22e9908b693a07f035d7a2879684573",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp07dxuq44/features.json",
+                "path": "/tmp/working_directory/tmp3_il8zv3/features.json",
                 "is_section_image": false
             }
         ],
@@ -48,7 +48,7 @@
                 "sha256": "3bcd08369fcfbb8f6b3d1de0879420f1c30f209500d18a6136aa62e359d05405",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp07dxuq44/overlay",
+                "path": "/tmp/working_directory/tmp3_il8zv3/overlay",
                 "is_section_image": false
             },
             {
@@ -56,7 +56,7 @@
                 "sha256": "a20ff65a0c17480a62c6a9244ebe700f6a47da1b3c9c88bfae58806899e49abd",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp07dxuq44/certificate.1.1",
+                "path": "/tmp/working_directory/tmp3_il8zv3/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -64,7 +64,7 @@
                 "sha256": "56d8f6e145b291f5fba29eb9898cf522bde7b14ab38929d0a4c4d1dddaba2a69",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp07dxuq44/certificate.1.2",
+                "path": "/tmp/working_directory/tmp3_il8zv3/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -72,7 +72,7 @@
                 "sha256": "708f7b26bcb83d3b708a7def1b35cc3d4fdf2f6640fcf9e68836072b0016f015",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp07dxuq44/certificate.1.3",
+                "path": "/tmp/working_directory/tmp3_il8zv3/certificate.1.3",
                 "is_section_image": false
             }
         ],
@@ -105,13 +105,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "[LNK] VS2015 UPD3.1 build 24215 (count=1)\nUnknown object 0x00970000 (count=1)\n[RES] VS2015 UPD3 build 24210 (count=1)\nUnknown object 0x01085e97 (count=53)\n[---] Unmarked objects (count=386)\nUnknown object 0x00cbffdd (count=29)\nUnknown object 0x00d0ffdd (count=1)\nUnknown object 0x00d1ffdd (count=1)\n[ C ] VS2015 UPD3.1 build 24215 (count=496)\nUnknown object 0x01045e3b (count=25)\nUnknown object 0x01055e3b (count=33)\nUnknown object 0x01035e3b (count=10)\nUnknown object 0x00c7a09e (count=1)\nUnknown object 0x00f29cb4 (count=38)\nUnknown object 0x00f39cb4 (count=176)\nUnknown object 0x00f19cb4 (count=20)",
+                "body": "Hash: 42ef6087e82634928ea4574666f2ecda",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 2383118191",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x01025e97\", \"Compiler Information\": \"[LNK] VS2015 UPD3.1 build 24215\", \"Count\": 1}, {\"ID\": \"0x00970000\", \"Compiler Information\": \"Unknown object 0x00970000\", \"Count\": 1}, {\"ID\": \"0x00ff5e92\", \"Compiler Information\": \"[RES] VS2015 UPD3 build 24210\", \"Count\": 1}, {\"ID\": \"0x01085e97\", \"Compiler Information\": \"Unknown object 0x01085e97\", \"Count\": 53}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 386}, {\"ID\": \"0x00cbffdd\", \"Compiler Information\": \"Unknown object 0x00cbffdd\", \"Count\": 29}, {\"ID\": \"0x00d0ffdd\", \"Compiler Information\": \"Unknown object 0x00d0ffdd\", \"Count\": 1}, {\"ID\": \"0x00d1ffdd\", \"Compiler Information\": \"Unknown object 0x00d1ffdd\", \"Count\": 1}, {\"ID\": \"0x01045e97\", \"Compiler Information\": \"[ C ] VS2015 UPD3.1 build 24215\", \"Count\": 496}, {\"ID\": \"0x01045e3b\", \"Compiler Information\": \"Unknown object 0x01045e3b\", \"Count\": 25}, {\"ID\": \"0x01055e3b\", \"Compiler Information\": \"Unknown object 0x01055e3b\", \"Count\": 33}, {\"ID\": \"0x01035e3b\", \"Compiler Information\": \"Unknown object 0x01035e3b\", \"Count\": 10}, {\"ID\": \"0x00c7a09e\", \"Compiler Information\": \"Unknown object 0x00c7a09e\", \"Count\": 1}, {\"ID\": \"0x00f29cb4\", \"Compiler Information\": \"Unknown object 0x00f29cb4\", \"Count\": 38}, {\"ID\": \"0x00f39cb4\", \"Compiler Information\": \"Unknown object 0x00f39cb4\", \"Count\": 176}, {\"ID\": \"0x00f19cb4\", \"Compiler Information\": \"Unknown object 0x00f19cb4\", \"Count\": 20}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "75d730f0b9d0db1af6b568162d21c80f1b6cb7e76d71d4fb113f5accc17741e2",
+                "sha256": "73d03076187528e144e9721bd2e7e1a15b61aabc727f44863b22a6b7380f14d8",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmppyzubopr/features.json",
+                "path": "/tmp/working_directory/tmph85e5tsb/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "ea8cbd0b800f9fed2de4a25ae1be370dbe662a37c53908a59796239ef7410a49",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmppyzubopr/overlay",
+                "path": "/tmp/working_directory/tmph85e5tsb/overlay",
                 "is_section_image": false
             },
             {
@@ -32,7 +32,7 @@
                 "sha256": "f38406e540d7a9d90cb4a9479299640ffb6df9e224ecc7a01c0d9558d8dad77d",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmppyzubopr/certificate.1.1",
+                "path": "/tmp/working_directory/tmph85e5tsb/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -40,7 +40,7 @@
                 "sha256": "f38406e540d7a9d90cb4a9479299640ffb6df9e224ecc7a01c0d9558d8dad77d",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmppyzubopr/certificate.1.2",
+                "path": "/tmp/working_directory/tmph85e5tsb/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -48,7 +48,7 @@
                 "sha256": "b0332967cd774f3793d758e1f170e4c2a284b8e81671afc975788759135ce2a3",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmppyzubopr/certificate.1.3",
+                "path": "/tmp/working_directory/tmph85e5tsb/certificate.1.3",
                 "is_section_image": false
             },
             {
@@ -56,7 +56,7 @@
                 "sha256": "b0332967cd774f3793d758e1f170e4c2a284b8e81671afc975788759135ce2a3",
                 "description": "certificate.1.4 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmppyzubopr/certificate.1.4",
+                "path": "/tmp/working_directory/tmph85e5tsb/certificate.1.4",
                 "is_section_image": false
             },
             {
@@ -64,7 +64,7 @@
                 "sha256": "5d8197fd2e2ca5a4b1106c4fbebfd0bd50fbcaea2979b72c4f2bead320be3082",
                 "description": "certificate.1.5 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmppyzubopr/certificate.1.5",
+                "path": "/tmp/working_directory/tmph85e5tsb/certificate.1.5",
                 "is_section_image": false
             },
             {
@@ -72,7 +72,7 @@
                 "sha256": "6a3c4d89cd6297023831b9c4f718ce71cf8753a2be49e021245ec6ba5066ff00",
                 "description": "certificate.1.6 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmppyzubopr/certificate.1.6",
+                "path": "/tmp/working_directory/tmph85e5tsb/certificate.1.6",
                 "is_section_image": false
             },
             {
@@ -80,7 +80,7 @@
                 "sha256": "31a6d7325c3861ba092bc5d3d25a7d4fef62ebf9a3490f65897b87623ecc1295",
                 "description": "certificate.1.7 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmppyzubopr/certificate.1.7",
+                "path": "/tmp/working_directory/tmph85e5tsb/certificate.1.7",
                 "is_section_image": false
             }
         ],
@@ -113,13 +113,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "[LNK] VS2003 (.NET) build 3077 (count=1)\nUnknown object 0x006013c4 (count=15)\n[RES] VS2003 (.NET) build 3052 (count=1)\n[---] Unmarked objects (count=160)\nUnknown object 0x005d0813 (count=7)\nUnknown object 0x005f13c4 (count=1)\n[ C ] VS2003 (.NET) build 3077 (count=4)\n[ASM] VS2003 (.NET) build 3077 (count=2)\n[C++] VS2003 (.NET) build 3077 (count=4)\n[ C ] VS98 (6.0) build 8168 (count=7)\nUnknown object 0x000e1c83 (count=1)\n[LNK] VS98 (6.0) imp/exp build 8168 (count=2)\nUnknown object 0x005d07f3 (count=2)\nUnknown object 0x00252233 (count=2)\nUnknown object 0x001923fa (count=4)\nUnknown object 0x005f0813 (count=4)\nUnknown object 0x001c23da (count=1)",
+                "body": "Hash: 9ac7358d5171c8b05478ee30874515d4",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 3725763505",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x005a0c05\", \"Compiler Information\": \"[LNK] VS2003 (.NET) build 3077\", \"Count\": 1}, {\"ID\": \"0x006013c4\", \"Compiler Information\": \"Unknown object 0x006013c4\", \"Count\": 15}, {\"ID\": \"0x005e0bec\", \"Compiler Information\": \"[RES] VS2003 (.NET) build 3052\", \"Count\": 1}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 160}, {\"ID\": \"0x005d0813\", \"Compiler Information\": \"Unknown object 0x005d0813\", \"Count\": 7}, {\"ID\": \"0x005f13c4\", \"Compiler Information\": \"Unknown object 0x005f13c4\", \"Count\": 1}, {\"ID\": \"0x005f0c05\", \"Compiler Information\": \"[ C ] VS2003 (.NET) build 3077\", \"Count\": 4}, {\"ID\": \"0x000f0c05\", \"Compiler Information\": \"[ASM] VS2003 (.NET) build 3077\", \"Count\": 2}, {\"ID\": \"0x00600c05\", \"Compiler Information\": \"[C++] VS2003 (.NET) build 3077\", \"Count\": 4}, {\"ID\": \"0x000a1fe8\", \"Compiler Information\": \"[ C ] VS98 (6.0) build 8168\", \"Count\": 7}, {\"ID\": \"0x000e1c83\", \"Compiler Information\": \"Unknown object 0x000e1c83\", \"Count\": 1}, {\"ID\": \"0x00041fe8\", \"Compiler Information\": \"[LNK] VS98 (6.0) imp/exp build 8168\", \"Count\": 2}, {\"ID\": \"0x005d07f3\", \"Compiler Information\": \"Unknown object 0x005d07f3\", \"Count\": 2}, {\"ID\": \"0x00252233\", \"Compiler Information\": \"Unknown object 0x00252233\", \"Count\": 2}, {\"ID\": \"0x001923fa\", \"Compiler Information\": \"Unknown object 0x001923fa\", \"Count\": 4}, {\"ID\": \"0x005f0813\", \"Compiler Information\": \"Unknown object 0x005f0813\", \"Count\": 4}, {\"ID\": \"0x001c23da\", \"Compiler Information\": \"Unknown object 0x001c23da\", \"Count\": 1}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

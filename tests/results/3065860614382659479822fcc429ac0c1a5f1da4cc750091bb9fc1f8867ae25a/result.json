@@ -14,7 +14,7 @@
                 "sha256": "9ef5ef4492d93d9bac67c78d62b4f04b519a1a0e4a7d3a9c4c39f787e46198d0",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpe7pz7n3k/icon_0.ico",
+                "path": "/tmp/working_directory/tmpo1uw6k3s/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "cfdfcdf2bfa01333e4fe3d50a93ca139ec85aeecd63dba8463c7699c4a3ad724",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpe7pz7n3k/icon_1.ico",
+                "path": "/tmp/working_directory/tmpo1uw6k3s/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "f7f4d98f44d83944c775ab657d4703740082efbe916575f9897c3bac2e1f857b",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpe7pz7n3k/icon_2.ico",
+                "path": "/tmp/working_directory/tmpo1uw6k3s/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "1e1b4f78d602a527761df16508d060ca98398f0be61599ff9a404fe5ef33f4b7",
                 "description": "Icon 3 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpe7pz7n3k/icon_3.ico",
+                "path": "/tmp/working_directory/tmpo1uw6k3s/icon_3.ico",
                 "is_section_image": false
             },
             {
@@ -46,7 +46,7 @@
                 "sha256": "c8aee923147d8d2a0fc3591688b0c48188eb022d15e1313faf97e563e9f3b87e",
                 "description": "Icon 4 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpe7pz7n3k/icon_4.ico",
+                "path": "/tmp/working_directory/tmpo1uw6k3s/icon_4.ico",
                 "is_section_image": false
             },
             {
@@ -54,7 +54,7 @@
                 "sha256": "6bd2db91cd123cb31692e2053fb4eb9c87644f967070a915eec964ee8ec2ea71",
                 "description": "Icon 5 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpe7pz7n3k/icon_5.ico",
+                "path": "/tmp/working_directory/tmpo1uw6k3s/icon_5.ico",
                 "is_section_image": false
             },
             {
@@ -62,7 +62,7 @@
                 "sha256": "b0023a2392214f28a84071a79d5035c3726365538d49cf4bddff05c5cd1edfbb",
                 "description": "Icon 6 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpe7pz7n3k/icon_6.ico",
+                "path": "/tmp/working_directory/tmpo1uw6k3s/icon_6.ico",
                 "is_section_image": false
             },
             {
@@ -70,15 +70,15 @@
                 "sha256": "1ace7832dc164f571d536c91638c5a5fc9cafbea9af2942b5ecc521d5d649d4d",
                 "description": "Icon 7 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpe7pz7n3k/icon_7.ico",
+                "path": "/tmp/working_directory/tmpo1uw6k3s/icon_7.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "00966ec2f9c869130f53d401393560ca6cf54c32a75eb429244a28d9bc2a5744",
+                "sha256": "3f20bf9149d2d03e5ed66aae61c4ed9619ddb606c0bb8e7c9a5a1c8a76b487fb",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpe7pz7n3k/features.json",
+                "path": "/tmp/working_directory/tmpo1uw6k3s/features.json",
                 "is_section_image": false
             }
         ],
@@ -112,13 +112,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "[LNK] Windows Server 2003 SP1 DDK build 4035 (*) (count=1)\n[ C ] Windows Server 2003 SP1 DDK build 4035 (*) (count=27)\n[RES] Windows Server 2003 SP1 DDK build 4035 (*) (count=1)\n[---] Unmarked objects (count=134)\n[IMP] Windows Server 2003 SP1 DDK build 4035 (*) (count=13)",
+                "body": "Hash: 87c02cf7ae3b70f2eeb1122540dff093",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 1140509622",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x005a0fc3\", \"Compiler Information\": \"[LNK] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 1}, {\"ID\": \"0x005f0fc3\", \"Compiler Information\": \"[ C ] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 27}, {\"ID\": \"0x005e0fc3\", \"Compiler Information\": \"[RES] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 1}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 134}, {\"ID\": \"0x005d0fc3\", \"Compiler Information\": \"[IMP] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 13}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

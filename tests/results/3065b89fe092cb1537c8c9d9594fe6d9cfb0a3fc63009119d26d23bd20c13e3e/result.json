@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "b8c52124a8979a7a29f1529ce7c05c7621430bcb679beb79ee88b9d95b898085",
+                "sha256": "bfbff4056f2eac05662057cf78cd2197404d3d6c979c9ff4d0b0da7cdce78f4a",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpeypg4i61/features.json",
+                "path": "/tmp/working_directory/tmpmirlkkuc/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "1a7392209b81d83c7c33ae655e15c1e860028fc7f9edb5ce2292264cfe52f27b",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpeypg4i61/overlay",
+                "path": "/tmp/working_directory/tmpmirlkkuc/overlay",
                 "is_section_image": false
             }
         ],
@@ -57,13 +57,24 @@
                 "auto_collapse": false
             },
             {
-                "body": "[LNK] VS2008 SP1 build 30729 (count=1)\n[RES] VS2008 build 21022 (count=1)\nUnknown object 0x008a7809 (count=6)\n[---] Unmarked objects (count=529)\n[IMP] VS2005 build 50727 (count=27)\n[ C ] VS2005 build 50727 (count=7)\n[C++] VS2008 SP1 build 30729 (count=123)\n[ C ] VS2008 SP1 build 30729 (count=166)\n[ASM] VS2008 SP1 build 30729 (count=24)",
+                "body": "Hash: 588537892b2379ff9f1e41fd29bc05b0",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Rich Headers - Key: 2382526426",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[{\"ID\": \"0x00917809\", \"Compiler Information\": \"[LNK] VS2008 SP1 build 30729\", \"Count\": 1}, {\"ID\": \"0x0094521e\", \"Compiler Information\": \"[RES] VS2008 build 21022\", \"Count\": 1}, {\"ID\": \"0x008a7809\", \"Compiler Information\": \"Unknown object 0x008a7809\", \"Count\": 6}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 529}, {\"ID\": \"0x007bc627\", \"Compiler Information\": \"[IMP] VS2005 build 50727\", \"Count\": 27}, {\"ID\": \"0x006dc627\", \"Compiler Information\": \"[ C ] VS2005 build 50727\", \"Count\": 7}, {\"ID\": \"0x00847809\", \"Compiler Information\": \"[C++] VS2008 SP1 build 30729\", \"Count\": 123}, {\"ID\": \"0x00837809\", \"Compiler Information\": \"[ C ] VS2008 SP1 build 30729\", \"Count\": 166}, {\"ID\": \"0x00957809\", \"Compiler Information\": \"[ASM] VS2008 SP1 build 30729\", \"Count\": 24}]",
+                "classification": "TLP:W",
+                "body_format": "TABLE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entries",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
