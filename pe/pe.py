@@ -739,7 +739,7 @@ class PE(ServiceBase):
             )
             res.add_subsection(sub_res)
         res.add_tag("file.pe.imports.sorted_sha1", calc_imphash_sha1(self.features["imports"]))
-        res.add_tag("file.pe.imports.md5", self.features["imphash"])
+        res.add_tag("file.pe.imports.imphash", self.features["imphash"])
         res.add_tag("file.pe.imports.fuzzy", calc_impfuzzy(self.features["imports"], sort=False))
         res.add_tag("file.pe.imports.sorted_fuzzy", calc_impfuzzy(self.features["imports"], sort=True))
         self.file_res.add_section(res)
