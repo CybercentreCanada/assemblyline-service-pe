@@ -14,7 +14,7 @@
                 "sha256": "1ea72096d6dbc0493be7e5c8d673f629bebf6d08e8ce8ce189cfb0571a905296",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp3_il8zv3/icon_0.ico",
+                "path": "/tmp/working_directory/tmprm93q5ru/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "2ba064d98137e88b6e3b363b502251fa45fb0bfb3af86db1294b6e79c417ae73",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp3_il8zv3/icon_1.ico",
+                "path": "/tmp/working_directory/tmprm93q5ru/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "3e64faf9856f72fc74be4c92047083e786ee658d470a24d88e6c11dca101cb97",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp3_il8zv3/icon_2.ico",
+                "path": "/tmp/working_directory/tmprm93q5ru/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "14f4e65fa5c0ba83d0ffc51ba99a251ec22e9908b693a07f035d7a2879684573",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp3_il8zv3/features.json",
+                "path": "/tmp/working_directory/tmprm93q5ru/features.json",
                 "is_section_image": false
             }
         ],
@@ -48,7 +48,7 @@
                 "sha256": "3bcd08369fcfbb8f6b3d1de0879420f1c30f209500d18a6136aa62e359d05405",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp3_il8zv3/overlay",
+                "path": "/tmp/working_directory/tmprm93q5ru/overlay",
                 "is_section_image": false
             },
             {
@@ -56,7 +56,7 @@
                 "sha256": "a20ff65a0c17480a62c6a9244ebe700f6a47da1b3c9c88bfae58806899e49abd",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp3_il8zv3/certificate.1.1",
+                "path": "/tmp/working_directory/tmprm93q5ru/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -64,7 +64,7 @@
                 "sha256": "56d8f6e145b291f5fba29eb9898cf522bde7b14ab38929d0a4c4d1dddaba2a69",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp3_il8zv3/certificate.1.2",
+                "path": "/tmp/working_directory/tmprm93q5ru/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -72,7 +72,7 @@
                 "sha256": "708f7b26bcb83d3b708a7def1b35cc3d4fdf2f6640fcf9e68836072b0016f015",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp3_il8zv3/certificate.1.3",
+                "path": "/tmp/working_directory/tmprm93q5ru/certificate.1.3",
                 "is_section_image": false
             }
         ],
@@ -110,7 +110,17 @@
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
-                "tags": {},
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "rich_header": {
+                                "hash": [
+                                    "42ef6087e82634928ea4574666f2ecda"
+                                ]
+                            }
+                        }
+                    }
+                },
                 "title_text": "Rich Headers - Key: 2383118191",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
@@ -480,7 +490,7 @@
                                 "sorted_sha1": [
                                     "65f704003e69b508ee4fd7768c0f0b7bb3d7dd33"
                                 ],
-                                "md5": [
+                                "imphash": [
                                     "d01cc3ccd4e258e08c52468271c93805"
                                 ],
                                 "fuzzy": [

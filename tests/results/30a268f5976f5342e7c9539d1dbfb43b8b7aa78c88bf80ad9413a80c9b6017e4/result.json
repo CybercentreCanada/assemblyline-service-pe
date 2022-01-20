@@ -14,7 +14,7 @@
                 "sha256": "bcd41ecc20811815251393f81550eee5d3890233c364180ba7f4be02c63f915b",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpakkgk8gp/icon_0.ico",
+                "path": "/tmp/working_directory/tmpzwtalajg/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "57e8e11cda39f14c7fead08d852760360244237b0ab8485587f6ad9f798190ba",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpakkgk8gp/icon_1.ico",
+                "path": "/tmp/working_directory/tmpzwtalajg/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "b031a3ee4ad16538a25e4c5813dfafa77ea4cb065f730bb40d0af01c2384bc17",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpakkgk8gp/icon_2.ico",
+                "path": "/tmp/working_directory/tmpzwtalajg/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "c61b2513501909446715ef7c5c1d78ef27afbb6732ea52b604876452e26735da",
                 "description": "Icon 3 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpakkgk8gp/icon_3.ico",
+                "path": "/tmp/working_directory/tmpzwtalajg/icon_3.ico",
                 "is_section_image": false
             },
             {
@@ -46,7 +46,7 @@
                 "sha256": "2c2b16704d1ce6c64acdce28a4ee523d8d48b3757fef599b90b52a2266a0cda6",
                 "description": "Icon 4 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpakkgk8gp/icon_4.ico",
+                "path": "/tmp/working_directory/tmpzwtalajg/icon_4.ico",
                 "is_section_image": false
             },
             {
@@ -54,7 +54,7 @@
                 "sha256": "05e731fd482d17c2d7fade1218ef085846d25652168a8887379759374c4b2f0b",
                 "description": "Icon 5 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpakkgk8gp/icon_5.ico",
+                "path": "/tmp/working_directory/tmpzwtalajg/icon_5.ico",
                 "is_section_image": false
             },
             {
@@ -62,7 +62,7 @@
                 "sha256": "3bfd1fbbc858c205420a1ae3d15dd3e9f7894cb7bde8946f8ac971a7018a9e2d",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpakkgk8gp/features.json",
+                "path": "/tmp/working_directory/tmpzwtalajg/features.json",
                 "is_section_image": false
             }
         ],
@@ -72,7 +72,7 @@
                 "sha256": "afbcf72d114ef0eb448bf509cc3ed95877381067db097298ca8da4a04a2e57cc",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpakkgk8gp/overlay",
+                "path": "/tmp/working_directory/tmpzwtalajg/overlay",
                 "is_section_image": false
             }
         ],
@@ -110,7 +110,17 @@
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
-                "tags": {},
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "rich_header": {
+                                "hash": [
+                                    "20bf0bdb6c45c1084bb66b314034991c"
+                                ]
+                            }
+                        }
+                    }
+                },
                 "title_text": "Rich Headers - Key: 1248868792",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
@@ -409,7 +419,7 @@
                                 "sorted_sha1": [
                                     "49d1fd2e17c6ef97dcbebd44e0e369ac2db1ec9a"
                                 ],
-                                "md5": [
+                                "imphash": [
                                     "17b3459f217388c85308828819a9e274"
                                 ],
                                 "fuzzy": [

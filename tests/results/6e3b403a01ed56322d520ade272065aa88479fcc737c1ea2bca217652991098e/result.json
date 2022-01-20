@@ -14,7 +14,7 @@
                 "sha256": "7587a88b2a98cd3e07bf55f99e3184b6a2daa1dd6cd8beb2ae54ca29f61f3965",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp6_wirfyp/icon_0.ico",
+                "path": "/tmp/working_directory/tmp3os5g31j/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "b479612803fee0c69534706cf75c95f56f7b182416f50b68c3c542f47705bc7d",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp6_wirfyp/icon_1.ico",
+                "path": "/tmp/working_directory/tmp3os5g31j/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "d243cb91b47d79db54c6f893dd6e7ad2ea088335dfb7ecff522e42792ef76343",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp6_wirfyp/features.json",
+                "path": "/tmp/working_directory/tmp3os5g31j/features.json",
                 "is_section_image": false
             }
         ],
@@ -40,7 +40,7 @@
                 "sha256": "8b562b8408058a72d2cd01ee8353e17069b9dd2f5fa6e0ad12293ce08d4979be",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp6_wirfyp/overlay",
+                "path": "/tmp/working_directory/tmp3os5g31j/overlay",
                 "is_section_image": false
             },
             {
@@ -48,7 +48,7 @@
                 "sha256": "2cf1ec6ab594113bd538df6d5c940e3319b424f8756d975888072c6ab558b771",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp6_wirfyp/certificate.1.1",
+                "path": "/tmp/working_directory/tmp3os5g31j/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -56,7 +56,7 @@
                 "sha256": "2463525300d9e8e0a6f5d79e2b20b9f5182fe40d3fd7c85ddaf48e6c25bedf5d",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp6_wirfyp/certificate.1.2",
+                "path": "/tmp/working_directory/tmp3os5g31j/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -64,7 +64,7 @@
                 "sha256": "8ef8f2565be30e7ce7ba6302bb18b42a3acd148a0ddb4779e4c03e862f39589b",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp6_wirfyp/certificate.1.3",
+                "path": "/tmp/working_directory/tmp3os5g31j/certificate.1.3",
                 "is_section_image": false
             },
             {
@@ -72,7 +72,7 @@
                 "sha256": "04b4c3f1ad6b2bc1afe0eba7a587ccf7ae744f1e52a4fc4b1de6540ba603f85e",
                 "description": "certificate.1.4 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp6_wirfyp/certificate.1.4",
+                "path": "/tmp/working_directory/tmp3os5g31j/certificate.1.4",
                 "is_section_image": false
             }
         ],
@@ -110,7 +110,17 @@
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
-                "tags": {},
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "rich_header": {
+                                "hash": [
+                                    "5ce04936e13a946a8f42e3b310af5d92"
+                                ]
+                            }
+                        }
+                    }
+                },
                 "title_text": "Rich Headers - Key: 1066646",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
@@ -386,7 +396,7 @@
                                 "sorted_sha1": [
                                     "3a0ab03bd99d01b78ff087fa92157983a9cce30a"
                                 ],
-                                "md5": [
+                                "imphash": [
                                     "4c59c0b3420ca0877a0e6c8146bdb593"
                                 ],
                                 "fuzzy": [

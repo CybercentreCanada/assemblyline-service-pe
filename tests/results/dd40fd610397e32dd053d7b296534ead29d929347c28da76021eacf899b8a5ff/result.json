@@ -14,7 +14,7 @@
                 "sha256": "1704e60e99dec20a67dcfec68989ebee51ec17ec26075bc1a38c7a8459959d01",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpa2kyse7q/icon_0.ico",
+                "path": "/tmp/working_directory/tmp7dxnq2z7/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "bf4fa2cbb3cabfa6d40f17169971ef16585365658c922714704489d3e9d159dd",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpa2kyse7q/features.json",
+                "path": "/tmp/working_directory/tmp7dxnq2z7/features.json",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
                 "sha256": "e68568581cf99cc4ceedeb0f5dff5da279b183fdeae7cd8d06d2592b53476112",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpa2kyse7q/overlay",
+                "path": "/tmp/working_directory/tmp7dxnq2z7/overlay",
                 "is_section_image": false
             }
         ],
@@ -88,7 +88,17 @@
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
-                "tags": {},
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "rich_header": {
+                                "hash": [
+                                    "ae850229fdfbd66ccf847ba4055756fe"
+                                ]
+                            }
+                        }
+                    }
+                },
                 "title_text": "Rich Headers - Key: 2610103321",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
@@ -263,7 +273,7 @@
                                 "sorted_sha1": [
                                     "1adcd08d6b948562877a2112857d00c8e72e89b5"
                                 ],
-                                "md5": [
+                                "imphash": [
                                     "469b1bae2575baede5bf1f06a01b4767"
                                 ],
                                 "fuzzy": [

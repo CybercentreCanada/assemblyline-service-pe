@@ -14,7 +14,7 @@
                 "sha256": "589e4d658e5c63312589edf15c6b4cbf4fb009f4ccd3339d0f5566a6e7772119",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpjv15y1_s/features.json",
+                "path": "/tmp/working_directory/tmp9gq9ojsl/features.json",
                 "is_section_image": false
             }
         ],
@@ -53,7 +53,17 @@
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
-                "tags": {},
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "rich_header": {
+                                "hash": [
+                                    "7295dac656339843fa8a8424a1f3dbbc"
+                                ]
+                            }
+                        }
+                    }
+                },
                 "title_text": "Rich Headers - Key: 3855160698",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
@@ -387,7 +397,7 @@
                                 "sorted_sha1": [
                                     "6eb76566d32e1a1dd9472e4416dd43615b0ffd55"
                                 ],
-                                "md5": [
+                                "imphash": [
                                     "028671ee99a1ece96d9d3f10b23e770f"
                                 ],
                                 "fuzzy": [

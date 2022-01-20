@@ -14,7 +14,7 @@
                 "sha256": "e61d981c7855fff4241c60ed9bc33185902b9bc3398d8207bb6512451986fa04",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7tgc_n8v/icon_0.ico",
+                "path": "/tmp/working_directory/tmp_bigftgh/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "1e2b28f9410c54536ac05c5874df730f5439017d02bf70ab6e478c157feae41e",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7tgc_n8v/features.json",
+                "path": "/tmp/working_directory/tmp_bigftgh/features.json",
                 "is_section_image": false
             }
         ],
@@ -61,7 +61,17 @@
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
-                "tags": {},
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "rich_header": {
+                                "hash": [
+                                    "03d66c1bb0ed3815ed5240669f9d7036"
+                                ]
+                            }
+                        }
+                    }
+                },
                 "title_text": "Rich Headers - Key: 2286892065",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false

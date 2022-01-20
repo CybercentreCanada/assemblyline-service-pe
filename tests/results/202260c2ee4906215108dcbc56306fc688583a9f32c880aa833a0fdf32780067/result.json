@@ -14,7 +14,7 @@
                 "sha256": "3da5e6bf3d94e861c317fccc6afb327e89e099685e3bef72768669bc8297c4bf",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp6_bhdczo/features.json",
+                "path": "/tmp/working_directory/tmp8c2iyu4h/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "32c014250d2e33b7cbfee7ee6453c6d95177b959cc3109bd8698fd8baa25e4ee",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp6_bhdczo/overlay",
+                "path": "/tmp/working_directory/tmp8c2iyu4h/overlay",
                 "is_section_image": false
             }
         ],
@@ -62,7 +62,17 @@
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
-                "tags": {},
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "rich_header": {
+                                "hash": [
+                                    "9b322c687b8d07058236f64f2b6909ee"
+                                ]
+                            }
+                        }
+                    }
+                },
                 "title_text": "Rich Headers - Key: 2562106964",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
@@ -306,7 +316,7 @@
                                 "sorted_sha1": [
                                     "cd2b20b369b6e6852d397b993687ae6eb484b832"
                                 ],
-                                "md5": [
+                                "imphash": [
                                     "ee6d7bb16bf083fc6670fd36a50a031e"
                                 ],
                                 "fuzzy": [

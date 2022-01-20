@@ -14,7 +14,7 @@
                 "sha256": "05a55bf454e8c1ea0389b673a67aacfd993e35d4892960bbc71e6e0155f44aff",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpkwzalkt5/features.json",
+                "path": "/tmp/working_directory/tmpymlt5hmk/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "7e3589f5f903ff483b50ecdd840268b937f338bf32febe7d22fded993732922e",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpkwzalkt5/overlay",
+                "path": "/tmp/working_directory/tmpymlt5hmk/overlay",
                 "is_section_image": false
             },
             {
@@ -32,7 +32,7 @@
                 "sha256": "0e0fabf3c4fb549fc156e7fe8f3c8966c8e09ffbba31e650b18214064245b54f",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpkwzalkt5/certificate.1.1",
+                "path": "/tmp/working_directory/tmpymlt5hmk/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -40,7 +40,7 @@
                 "sha256": "4f32d5dc00f715250abcc486511e37f501a899deb3bf7ea8adbbd3aef1c412da",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpkwzalkt5/certificate.1.2",
+                "path": "/tmp/working_directory/tmpymlt5hmk/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -48,7 +48,7 @@
                 "sha256": "534b9b1a31a38b4e0bf9a291f408337c25a2e011d460fdff495ce473fb168a8e",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpkwzalkt5/certificate.1.3",
+                "path": "/tmp/working_directory/tmpymlt5hmk/certificate.1.3",
                 "is_section_image": false
             },
             {
@@ -56,7 +56,7 @@
                 "sha256": "d92bf8e9fa867dbd8b794c6a49e6ff1fcfac71f3d7f4ae55bb9587eb24ac6489",
                 "description": "certificate.1.4 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpkwzalkt5/certificate.1.4",
+                "path": "/tmp/working_directory/tmpymlt5hmk/certificate.1.4",
                 "is_section_image": false
             }
         ],
@@ -94,7 +94,17 @@
                 "body_format": "TEXT",
                 "depth": 1,
                 "heuristic": null,
-                "tags": {},
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "rich_header": {
+                                "hash": [
+                                    "3a1fa9cd7a1ad4028b8f22debb6cc23b"
+                                ]
+                            }
+                        }
+                    }
+                },
                 "title_text": "Rich Headers - Key: 249823288",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
@@ -501,7 +511,7 @@
                                 "sorted_sha1": [
                                     "0ac5ba13215b87077ac09f978670ba4257a89a50"
                                 ],
-                                "md5": [
+                                "imphash": [
                                     "9031ce6e59723c6b3aebb68d1aae2bae"
                                 ],
                                 "fuzzy": [
