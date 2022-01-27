@@ -238,13 +238,27 @@ class PE(ServiceBase):
             recurse_resources(self.binary.resources)
 
         if len(timestamps) > 1 and max(timestamps) - min(timestamps) > self.config.get(
-            "allowed_timestamp_range", 86400
+            "heur11_allowed_timestamp_range", 86400
         ):
             res = ResultSection("Different timestamps", heuristic=Heuristic(11))
             for timestamp in timestamps:
-                hr_timestamp = datetime.datetime.utcfromtimestamp(timestamp).strftime("%Y-%m-%d %H:%M:%S +00:00 (UTC)")
+                hr_timestamp = datetime.datetime.fromtimestamp(timestamp, datetime.timezone.utc).strftime(
+                    "%Y-%m-%d %H:%M:%S +00:00 (UTC)"
+                )
                 res.add_line(f"{timestamp} ({hr_timestamp})")
             self.file_res.add_section(res)
+        if len(timestamps) > 0:
+            timestamp = max(timestamps)
+            if datetime.datetime.fromtimestamp(timestamp, datetime.timezone.utc) > datetime.datetime.now(
+                datetime.timezone.utc
+            ) - datetime.timedelta(days=self.config.get("heur22_flag_more_recent_than_days", 3)):
+                hr_timestamp = datetime.datetime.fromtimestamp(timestamp, datetime.timezone.utc).strftime(
+                    "%Y-%m-%d %H:%M:%S +00:00 (UTC)"
+                )
+                heur = Heuristic(22)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line(f"Latest timestamp: {timestamp} ({hr_timestamp})")
+                self.file_res.add_section(heur_section)
 
     def recurse_resources(self, resource, parent_name):
         if isinstance(resource, lief.PE.ResourceDirectory):

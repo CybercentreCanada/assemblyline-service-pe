@@ -20,7 +20,8 @@ licence_count: 0
 
 config:
   trusted_certs: ["/usr/share/ca-certificates/mozilla/"]
-  allowed_timestamp_range: 86400
+  heur11_allowed_timestamp_range: 86400
+  heur22_flag_more_recent_than_days: 3
 
 heuristics:
   - description: >-
@@ -171,6 +172,13 @@ heuristics:
     heur_id: 21
     name: Malicious section name
     score: 250
+
+  - description: >-
+       A timestamp found in the PE is very recent or in the future. It may be the latest version of a genuine software, or a custom built executable for a targeted execution.
+    filetype: "executable/windows"
+    heur_id: 22
+    name: Recent timestamp found
+    score: 500
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
