@@ -14,7 +14,7 @@
                 "sha256": "9ef5ef4492d93d9bac67c78d62b4f04b519a1a0e4a7d3a9c4c39f787e46198d0",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpruqqjqz9/icon_0.ico",
+                "path": "/tmp/working_directory/tmpz96bho2t/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "cfdfcdf2bfa01333e4fe3d50a93ca139ec85aeecd63dba8463c7699c4a3ad724",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpruqqjqz9/icon_1.ico",
+                "path": "/tmp/working_directory/tmpz96bho2t/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "f7f4d98f44d83944c775ab657d4703740082efbe916575f9897c3bac2e1f857b",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpruqqjqz9/icon_2.ico",
+                "path": "/tmp/working_directory/tmpz96bho2t/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "1e1b4f78d602a527761df16508d060ca98398f0be61599ff9a404fe5ef33f4b7",
                 "description": "Icon 3 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpruqqjqz9/icon_3.ico",
+                "path": "/tmp/working_directory/tmpz96bho2t/icon_3.ico",
                 "is_section_image": false
             },
             {
@@ -46,7 +46,7 @@
                 "sha256": "c8aee923147d8d2a0fc3591688b0c48188eb022d15e1313faf97e563e9f3b87e",
                 "description": "Icon 4 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpruqqjqz9/icon_4.ico",
+                "path": "/tmp/working_directory/tmpz96bho2t/icon_4.ico",
                 "is_section_image": false
             },
             {
@@ -54,7 +54,7 @@
                 "sha256": "6bd2db91cd123cb31692e2053fb4eb9c87644f967070a915eec964ee8ec2ea71",
                 "description": "Icon 5 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpruqqjqz9/icon_5.ico",
+                "path": "/tmp/working_directory/tmpz96bho2t/icon_5.ico",
                 "is_section_image": false
             },
             {
@@ -62,7 +62,7 @@
                 "sha256": "b0023a2392214f28a84071a79d5035c3726365538d49cf4bddff05c5cd1edfbb",
                 "description": "Icon 6 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpruqqjqz9/icon_6.ico",
+                "path": "/tmp/working_directory/tmpz96bho2t/icon_6.ico",
                 "is_section_image": false
             },
             {
@@ -70,15 +70,15 @@
                 "sha256": "1ace7832dc164f571d536c91638c5a5fc9cafbea9af2942b5ecc521d5d649d4d",
                 "description": "Icon 7 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpruqqjqz9/icon_7.ico",
+                "path": "/tmp/working_directory/tmpz96bho2t/icon_7.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "3f20bf9149d2d03e5ed66aae61c4ed9619ddb606c0bb8e7c9a5a1c8a76b487fb",
+                "sha256": "106b6345e0bb98a45ecbcc85379c68c652594f33bb098258304225a3ff1a0d89",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpruqqjqz9/features.json",
+                "path": "/tmp/working_directory/tmpz96bho2t/features.json",
                 "is_section_image": false
             }
         ],
@@ -87,10 +87,10 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 100,
+        "score": 300,
         "sections": [
             {
-                "body": "Timestamp: 1091599297 (2004-08-04 06:01:37 +00:00 (UTC))\nEntrypoint: 0x645c\nMachine: I386\nMagic: PE32\nImage version: 5.1\nLinker version: 7.10\nOperating System version: 5.1\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nOverlay size: 0",
+                "body": "Timestamp: 1091599297 (2004-08-04 06:01:37 +00:00 (UTC))\nEntrypoint: 0x645c\nMachine: I386\nMagic: PE32\nImage version: 5.1\nLinker version: 7.10\nOperating System version: 5.1\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nOverlay size: 0\nChecksum: 0x001a26b4",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -151,6 +151,24 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Authentihash",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Optional header checksum: 0x0014f99f\nComputed checksum: 0x001a26b4",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 23,
+                    "score": 200,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Invalid optional header checksum",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

@@ -3,6 +3,7 @@ import hashlib
 import json
 import os
 import pathlib
+import struct
 from collections import defaultdict
 from io import BytesIO
 
@@ -172,6 +173,38 @@ def calc_impfuzzy(imports, sort=False):
     return ssdeep.hash(apilist)
 
 
+def generate_checksum(filename, checksum_offset):
+    # Code taken from https://github.com/erocarrera/pefile/blob/master/pefile.py#L7131 until
+    # LIEF includes a way to compute it internally :
+    #   https://github.com/lief-project/LIEF/issues/660
+    # The checksum_offset can be found with
+    # checksum_offset = pe_lief.dos_header.addressof_new_exeheader + 0x58
+
+    with open(filename, "rb") as f:
+        data = bytearray(f.read())
+
+    checksum = 0
+    remainder = len(data) % 4
+    data_len = len(data) + ((4 - remainder) * (remainder != 0))
+
+    for i in range(int(data_len / 4)):
+        if i == int(checksum_offset / 4):
+            continue
+        if i + 1 == (int(data_len / 4)) and remainder:
+            dword = struct.unpack("I", data[i * 4 :] + (b"\0" * (4 - remainder)))[0]
+        else:
+            dword = struct.unpack("I", data[i * 4 : i * 4 + 4])[0]
+        checksum += dword
+        if checksum >= 2 ** 32:
+            checksum = (checksum & 0xFFFFFFFF) + (checksum >> 32)
+
+    checksum = (checksum & 0xFFFF) + (checksum >> 16)
+    checksum = (checksum) + (checksum >> 16)
+    checksum = checksum & 0xFFFF
+
+    return checksum + len(data)
+
+
 class PE(ServiceBase):
     def __init__(self, config=None):
         super(PE, self).__init__(config)
@@ -325,6 +358,9 @@ class PE(ServiceBase):
             "addressof_entrypoint": self.binary.optional_header.addressof_entrypoint,
             "baseof_code": self.binary.optional_header.baseof_code,
             "checksum": self.binary.optional_header.checksum,
+            "computed_checksum": generate_checksum(
+                self.request.file_path, self.binary.dos_header.addressof_new_exeheader + 0x58
+            ),
             "dll_characteristics": self.binary.optional_header.dll_characteristics,
             "dll_characteristics_lists": [char.name for char in self.binary.optional_header.dll_characteristics_lists],
             "file_alignment": self.binary.optional_header.file_alignment,
@@ -525,6 +561,14 @@ class PE(ServiceBase):
             with open(temp_path, "wb") as myfile:
                 myfile.write(bytearray(self.binary.overlay))
             self.request.add_extracted(temp_path, file_name, f"{file_name} extracted from binary's resources")
+
+        res.add_line(f"Checksum: {self.features['optional_header']['computed_checksum']:#0{10}x}")
+        if self.features["optional_header"]["checksum"] != self.features["optional_header"]["computed_checksum"]:
+            heur = Heuristic(23)
+            heur_section = ResultSection(heur.definition.name, heuristic=heur)
+            heur_section.add_line(f"Optional header checksum: {self.features['optional_header']['checksum']:#0{10}x}")
+            heur_section.add_line(f"Computed checksum: {self.features['optional_header']['computed_checksum']:#0{10}x}")
+            res.add_subsection(heur_section)
 
         self.file_res.add_section(res)
 

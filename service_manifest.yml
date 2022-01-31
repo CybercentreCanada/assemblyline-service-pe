@@ -180,6 +180,13 @@ heuristics:
     name: Recent timestamp found
     score: 500
 
+  - description: >-
+       The checksum found in the optional header is not equivalent to the computed checksum. Microsoft does not enforce validation of this checksum outside of kernel drivers use.
+    filetype: "executable/windows"
+    heur_id: 23
+    name: Invalid optional header checksum
+    score: 200
+
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
   cpu_cores: 1

@@ -14,7 +14,7 @@
                 "sha256": "bcd41ecc20811815251393f81550eee5d3890233c364180ba7f4be02c63f915b",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzwtalajg/icon_0.ico",
+                "path": "/tmp/working_directory/tmpfya4hsik/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "57e8e11cda39f14c7fead08d852760360244237b0ab8485587f6ad9f798190ba",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzwtalajg/icon_1.ico",
+                "path": "/tmp/working_directory/tmpfya4hsik/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "b031a3ee4ad16538a25e4c5813dfafa77ea4cb065f730bb40d0af01c2384bc17",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzwtalajg/icon_2.ico",
+                "path": "/tmp/working_directory/tmpfya4hsik/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "c61b2513501909446715ef7c5c1d78ef27afbb6732ea52b604876452e26735da",
                 "description": "Icon 3 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzwtalajg/icon_3.ico",
+                "path": "/tmp/working_directory/tmpfya4hsik/icon_3.ico",
                 "is_section_image": false
             },
             {
@@ -46,7 +46,7 @@
                 "sha256": "2c2b16704d1ce6c64acdce28a4ee523d8d48b3757fef599b90b52a2266a0cda6",
                 "description": "Icon 4 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzwtalajg/icon_4.ico",
+                "path": "/tmp/working_directory/tmpfya4hsik/icon_4.ico",
                 "is_section_image": false
             },
             {
@@ -54,15 +54,15 @@
                 "sha256": "05e731fd482d17c2d7fade1218ef085846d25652168a8887379759374c4b2f0b",
                 "description": "Icon 5 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzwtalajg/icon_5.ico",
+                "path": "/tmp/working_directory/tmpfya4hsik/icon_5.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "3bfd1fbbc858c205420a1ae3d15dd3e9f7894cb7bde8946f8ac971a7018a9e2d",
+                "sha256": "8b7f7c6f5d52b5ea690e8a429ca5bd05eead3845192ab40c8a173cfaaefd5830",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzwtalajg/features.json",
+                "path": "/tmp/working_directory/tmpfya4hsik/features.json",
                 "is_section_image": false
             }
         ],
@@ -72,7 +72,7 @@
                 "sha256": "afbcf72d114ef0eb448bf509cc3ed95877381067db097298ca8da4a04a2e57cc",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzwtalajg/overlay",
+                "path": "/tmp/working_directory/tmpfya4hsik/overlay",
                 "is_section_image": false
             }
         ],
@@ -80,10 +80,10 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 400,
+        "score": 600,
         "sections": [
             {
-                "body": "Timestamp: 1544434845 (2018-12-10 09:40:45 +00:00 (UTC))\nEntrypoint: 0xa245b\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 14.15\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_CUI\nNX: True\nPosition Independent: True\nOverlay size: 1610",
+                "body": "Timestamp: 1544434845 (2018-12-10 09:40:45 +00:00 (UTC))\nEntrypoint: 0xa245b\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 14.15\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_CUI\nNX: True\nPosition Independent: True\nOverlay size: 1610\nChecksum: 0x00158fe4",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -144,6 +144,24 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Authentihash",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Optional header checksum: 0x00000000\nComputed checksum: 0x00158fe4",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 23,
+                    "score": 200,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Invalid optional header checksum",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

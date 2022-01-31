@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "bfbff4056f2eac05662057cf78cd2197404d3d6c979c9ff4d0b0da7cdce78f4a",
+                "sha256": "d72213d45d81e2a751ed5ab3a3d7d273469f01be3a34073f96b3f377f8e1082a",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_fz038vy/features.json",
+                "path": "/tmp/working_directory/tmpzslgk66d/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "1a7392209b81d83c7c33ae655e15c1e860028fc7f9edb5ce2292264cfe52f27b",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_fz038vy/overlay",
+                "path": "/tmp/working_directory/tmpzslgk66d/overlay",
                 "is_section_image": false
             }
         ],
@@ -32,10 +32,10 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 300,
+        "score": 500,
         "sections": [
             {
-                "body": "Timestamp: 1381752628 (2013-10-14 12:10:28 +00:00 (UTC))\nEntrypoint: 0x86970\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 9.0\nOperating System version: 5.0\nSubsystem version: 5.0\nSubsystem: WINDOWS_GUI\nNX: True\nPosition Independent: True\nOverlay size: 9222",
+                "body": "Timestamp: 1381752628 (2013-10-14 12:10:28 +00:00 (UTC))\nEntrypoint: 0x86970\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 9.0\nOperating System version: 5.0\nSubsystem version: 5.0\nSubsystem: WINDOWS_GUI\nNX: True\nPosition Independent: True\nOverlay size: 9222\nChecksum: 0x0005816d",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -96,6 +96,24 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Authentihash",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Optional header checksum: 0x00000000\nComputed checksum: 0x0005816d",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 23,
+                    "score": 200,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Invalid optional header checksum",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

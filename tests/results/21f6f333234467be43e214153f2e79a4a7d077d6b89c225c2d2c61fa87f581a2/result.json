@@ -14,7 +14,7 @@
                 "sha256": "8494c59dd4318a347ccba6171c7b247fa7c703ef3adbe09b462dcd825f5386d8",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp86ob9436/icon_0.ico",
+                "path": "/tmp/working_directory/tmputdpi_fz/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "ffcf94876e62e39c6fdba329df2746c937bcd1ffb9dda4ccd8371659f9d7e19a",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp86ob9436/icon_1.ico",
+                "path": "/tmp/working_directory/tmputdpi_fz/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "3b74afadc1ed7b1fc408890a289322d85de5622706a22b8e192c3cf4268a015a",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp86ob9436/icon_2.ico",
+                "path": "/tmp/working_directory/tmputdpi_fz/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "c7b93a7217fbe46e50d358aa8d85821f763d6afc525cabac5cd735fa90590a39",
                 "description": "Icon 3 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp86ob9436/icon_3.ico",
+                "path": "/tmp/working_directory/tmputdpi_fz/icon_3.ico",
                 "is_section_image": false
             },
             {
@@ -46,7 +46,7 @@
                 "sha256": "69a982b8f68e4cf384ea2bf14bdd3a3b17dbf1259c83848fc4218aa0159644a3",
                 "description": "Icon 4 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp86ob9436/icon_4.ico",
+                "path": "/tmp/working_directory/tmputdpi_fz/icon_4.ico",
                 "is_section_image": false
             },
             {
@@ -54,7 +54,7 @@
                 "sha256": "0f630f5dc9d04fe04c1d1493adba52fcbff6666be0477bb482669aed59ed3e96",
                 "description": "Icon 5 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp86ob9436/icon_5.ico",
+                "path": "/tmp/working_directory/tmputdpi_fz/icon_5.ico",
                 "is_section_image": false
             },
             {
@@ -62,7 +62,7 @@
                 "sha256": "f34d44677ac874f2b2b3c794545a55a8beac75472eb0cd1c4255936643bc10be",
                 "description": "Icon 6 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp86ob9436/icon_6.ico",
+                "path": "/tmp/working_directory/tmputdpi_fz/icon_6.ico",
                 "is_section_image": false
             },
             {
@@ -70,15 +70,15 @@
                 "sha256": "86e5d6cf9a61b29df9d5b2b569ff049fceba6029f65ecff708d0c6e17b4590f7",
                 "description": "Icon 7 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp86ob9436/icon_7.ico",
+                "path": "/tmp/working_directory/tmputdpi_fz/icon_7.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "3645e98c4a185aca4218e816bfc8fc533e30d00d1c46257249555fdf9a713539",
+                "sha256": "d3a566125eaf8358f4d12abbe9a4ffbabc83962f3a5480f015f00f3ad4d70188",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp86ob9436/features.json",
+                "path": "/tmp/working_directory/tmputdpi_fz/features.json",
                 "is_section_image": false
             }
         ],
@@ -88,7 +88,7 @@
                 "sha256": "35129502d3b2554dfb1a2c9cf0ae20050c8e30c0c1603c5c1424403204ba1ccf",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp86ob9436/overlay",
+                "path": "/tmp/working_directory/tmputdpi_fz/overlay",
                 "is_section_image": false
             }
         ],
@@ -96,10 +96,10 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 550,
+        "score": 750,
         "sections": [
             {
-                "body": "Timestamp: 1466412143 (2016-06-20 08:42:23 +00:00 (UTC))\nEntrypoint: 0x331d\nMachine: I386\nMagic: PE32\nImage version: 6.0\nLinker version: 9.0\nOperating System version: 5.0\nSubsystem version: 5.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nOverlay size: 667360",
+                "body": "Timestamp: 1466412143 (2016-06-20 08:42:23 +00:00 (UTC))\nEntrypoint: 0x331d\nMachine: I386\nMagic: PE32\nImage version: 6.0\nLinker version: 9.0\nOperating System version: 5.0\nSubsystem version: 5.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nOverlay size: 667360\nChecksum: 0x000b39cc",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -160,6 +160,24 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Authentihash",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Optional header checksum: 0x000b9b53\nComputed checksum: 0x000b39cc",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 23,
+                    "score": 200,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Invalid optional header checksum",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

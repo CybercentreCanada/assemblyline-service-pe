@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "92cf4726bab5d63fd73c5fc35e2605d0ab0d085d6793d55be9f69eb9e3ea25f8",
+                "sha256": "469d171f8d4b8984732b40cfe278f4e4c061ef8577cdff45d8a3896671fc92d2",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmphll1hlij/features.json",
+                "path": "/tmp/working_directory/tmpshfz79lj/features.json",
                 "is_section_image": false
             }
         ],
@@ -23,7 +23,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 200,
+        "score": 400,
         "sections": [
             {
                 "body": "0 -> 24 -> 1",
@@ -44,7 +44,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "Timestamp: 0 (1970-01-01 00:00:00 +00:00 (UTC))\nEntrypoint: 0x1000\nMachine: AMD64\nMagic: PE32_PLUS\nImage version: 0.0\nLinker version: 2.29\nOperating System version: 4.0\nSubsystem version: 5.2\nSubsystem: WINDOWS_CUI\nNX: False\nPosition Independent: False\nOverlay size: 0",
+                "body": "Timestamp: 0 (1970-01-01 00:00:00 +00:00 (UTC))\nEntrypoint: 0x1000\nMachine: AMD64\nMagic: PE32_PLUS\nImage version: 0.0\nLinker version: 2.29\nOperating System version: 4.0\nSubsystem version: 5.2\nSubsystem: WINDOWS_CUI\nNX: False\nPosition Independent: False\nOverlay size: 0\nChecksum: 0x0000a299",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -73,6 +73,24 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Authentihash",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Optional header checksum: 0x000086e3\nComputed checksum: 0x0000a299",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 23,
+                    "score": 200,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Invalid optional header checksum",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

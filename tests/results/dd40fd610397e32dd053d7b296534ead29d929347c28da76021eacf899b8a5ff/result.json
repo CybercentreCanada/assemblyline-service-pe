@@ -14,15 +14,15 @@
                 "sha256": "1704e60e99dec20a67dcfec68989ebee51ec17ec26075bc1a38c7a8459959d01",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7dxnq2z7/icon_0.ico",
+                "path": "/tmp/working_directory/tmpaj8lulzk/icon_0.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "bf4fa2cbb3cabfa6d40f17169971ef16585365658c922714704489d3e9d159dd",
+                "sha256": "3186fe08fbaf13defd5f50849d4314d7f800a3871d5b7f8bcc4c65ffe8deb9fc",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7dxnq2z7/features.json",
+                "path": "/tmp/working_directory/tmpaj8lulzk/features.json",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
                 "sha256": "e68568581cf99cc4ceedeb0f5dff5da279b183fdeae7cd8d06d2592b53476112",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7dxnq2z7/overlay",
+                "path": "/tmp/working_directory/tmpaj8lulzk/overlay",
                 "is_section_image": false
             }
         ],
@@ -40,7 +40,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 500,
+        "score": 700,
         "sections": [
             {
                 "body": "0 -> 2147486256 -> 130\n0 -> 1 -> 1\n0 -> 1 -> 2\n0 -> 1 -> 3\n0 -> 1 -> 4\n0 -> 1 -> 5\n0 -> 1 -> 6\n0 -> 1 -> 7\n0 -> 1 -> 8\n0 -> 1 -> 9\n0 -> 1 -> 10\n0 -> 1 -> 11\n0 -> 1 -> 12\n0 -> 1 -> 13\n0 -> 1 -> 14\n0 -> 1 -> 15\n0 -> 1 -> 16\n0 -> 1 -> 17\n0 -> 1 -> 18\n0 -> 2 -> 101\n0 -> 2 -> 1011\n0 -> 2 -> 2030\n0 -> 2 -> 2031\n0 -> 2 -> 2032\n0 -> 2 -> 2033\n0 -> 2 -> 2034\n0 -> 2 -> 2035\n0 -> 2 -> 2502\n0 -> 2 -> 2503\n0 -> 3 -> 2\n0 -> 12 -> 2008\n0 -> 12 -> 2025\n0 -> 12 -> 9801\n0 -> 12 -> 9802\n0 -> 12 -> 9803\n0 -> 12 -> 9804\n0 -> 12 -> 9805\n0 -> 12 -> 9806\n0 -> 12 -> 9807\n0 -> 12 -> 9808\n0 -> 12 -> 9809\n0 -> 12 -> 9810\n0 -> 12 -> 9811\n0 -> 12 -> 9812\n0 -> 12 -> 9813\n0 -> 12 -> 9814\n0 -> 12 -> 9815\n0 -> 12 -> 9816\n0 -> 14 -> 25625",
@@ -61,7 +61,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "Timestamp: 1449463483 (2015-12-07 04:44:43 +00:00 (UTC))\nEntrypoint: 0x1000\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 5.12\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nOverlay size: 33906",
+                "body": "Timestamp: 1449463483 (2015-12-07 04:44:43 +00:00 (UTC))\nEntrypoint: 0x1000\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 5.12\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nOverlay size: 33906\nChecksum: 0x00059346",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -122,6 +122,24 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Authentihash",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Optional header checksum: 0x00000000\nComputed checksum: 0x00059346",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 23,
+                    "score": 200,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Invalid optional header checksum",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
