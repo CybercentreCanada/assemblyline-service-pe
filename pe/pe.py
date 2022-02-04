@@ -358,9 +358,6 @@ class PE(ServiceBase):
             "addressof_entrypoint": self.binary.optional_header.addressof_entrypoint,
             "baseof_code": self.binary.optional_header.baseof_code,
             "checksum": self.binary.optional_header.checksum,
-            "computed_checksum": generate_checksum(
-                self.request.file_path, self.binary.dos_header.addressof_new_exeheader + 0x58
-            ),
             "dll_characteristics": self.binary.optional_header.dll_characteristics,
             "dll_characteristics_lists": [char.name for char in self.binary.optional_header.dll_characteristics_lists],
             "file_alignment": self.binary.optional_header.file_alignment,
@@ -540,18 +537,19 @@ class PE(ServiceBase):
             self.features["rich_header"]["hash"] = rich_header_hash
             res.add_subsection(sub_res)
 
-        sub_res = ResultSection("Authentihash")
-        for i in range(1, 6):
-            try:
-                authentihash = lief.PE.ALGORITHMS(i)
-                authentihash_value = self.binary.authentihash(lief.PE.ALGORITHMS(i)).hex()
-                self.features["authentihash"][authentihash.name] = authentihash_value
-                sub_res.add_line(f"{authentihash.name}: {authentihash_value}")
-            except lief.bad_format:
-                if sub_res.heuristic is None:
-                    sub_res.set_heuristic(17)
+        if self.binary.virtual_size <= self.config.get("hash_generation_max_size", 5000000) or self.request.deep_scan:
+            sub_res = ResultSection("Authentihash")
+            for i in range(1, 6):
+                try:
+                    authentihash = lief.PE.ALGORITHMS(i)
+                    authentihash_value = self.binary.authentihash(lief.PE.ALGORITHMS(i)).hex()
+                    self.features["authentihash"][authentihash.name] = authentihash_value
+                    sub_res.add_line(f"{authentihash.name}: {authentihash_value}")
+                except lief.bad_format:
+                    if sub_res.heuristic is None:
+                        sub_res.set_heuristic(17)
+            res.add_subsection(sub_res)
 
-        res.add_subsection(sub_res)
         res.add_line(f"Position Independent: {self.binary.is_pie}")
 
         res.add_line(f"Overlay size: {self.features['overlay']['size']}")
@@ -562,13 +560,21 @@ class PE(ServiceBase):
                 myfile.write(bytearray(self.binary.overlay))
             self.request.add_extracted(temp_path, file_name, f"{file_name} extracted from binary's resources")
 
-        res.add_line(f"Checksum: {self.features['optional_header']['computed_checksum']:#0{10}x}")
-        if self.features["optional_header"]["checksum"] != self.features["optional_header"]["computed_checksum"]:
-            heur = Heuristic(23)
-            heur_section = ResultSection(heur.definition.name, heuristic=heur)
-            heur_section.add_line(f"Optional header checksum: {self.features['optional_header']['checksum']:#0{10}x}")
-            heur_section.add_line(f"Computed checksum: {self.features['optional_header']['computed_checksum']:#0{10}x}")
-            res.add_subsection(heur_section)
+        res.add_line(f"Checksum: {self.features['optional_header']['checksum']:#0{10}x}")
+        if self.binary.virtual_size <= self.config.get("hash_generation_max_size", 5000000) or self.request.deep_scan:
+            self.features["optional_header"]["computed_checksum"] = generate_checksum(
+                self.request.file_path, self.binary.dos_header.addressof_new_exeheader + 0x58
+            )
+            if self.features["optional_header"]["checksum"] != self.features["optional_header"]["computed_checksum"]:
+                heur = Heuristic(23)
+                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section.add_line(
+                    f"Optional header checksum: {self.features['optional_header']['checksum']:#0{10}x}"
+                )
+                heur_section.add_line(
+                    f"Computed checksum: {self.features['optional_header']['computed_checksum']:#0{10}x}"
+                )
+                res.add_subsection(heur_section)
 
         self.file_res.add_section(res)
 

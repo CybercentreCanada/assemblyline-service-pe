@@ -106,8 +106,8 @@ class TestService:
     @staticmethod
     @pytest.mark.parametrize("sample", list_results(SELF_LOCATION), indirect=True)
     def test_service(sample):
-        overwrite_features = False  # Used temporarily to mass-correct tests
-        overwrite_results = False  # Used temporarily to mass-correct tests
+        overwrite_features = True  # Used temporarily to mass-correct tests
+        overwrite_results = True  # Used temporarily to mass-correct tests
 
         cls = pe.pe.PE()
         cls.start()

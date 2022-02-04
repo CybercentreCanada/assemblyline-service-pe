@@ -20,6 +20,7 @@ licence_count: 0
 
 config:
   trusted_certs: ["/usr/share/ca-certificates/mozilla/"]
+  hash_generation_max_size: 5000000
   heur11_allowed_timestamp_range: 86400
   heur22_flag_more_recent_than_days: 3
 
