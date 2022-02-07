@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "48eae90bf3b03467351afff871e38fb7973edcafa295b6c999c03b19e90414c7",
+                "sha256": "39b484cbde652d22bd10d69415cd763cc839706f8df4dceea70cf897fb401b3f",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpz5tsg0k8/features.json",
+                "path": "/tmp/working_directory/tmpdg2skng5/features.json",
                 "is_section_image": false
             }
         ],
@@ -23,7 +23,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 400,
+        "score": 500,
         "sections": [
             {
                 "body": "0 -> 24 -> 1",
@@ -62,6 +62,24 @@
                     }
                 },
                 "title_text": "Headers",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "File Size: 13348\nVirtual Size: 1654784",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 24,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Mismatch file size",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

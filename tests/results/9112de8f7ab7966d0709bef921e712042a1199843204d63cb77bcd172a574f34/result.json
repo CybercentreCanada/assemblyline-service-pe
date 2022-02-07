@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "6a92df926c8baef66c76bd5634fc2c21bb33886497c96579d17d2ea1575ba3d6",
+                "sha256": "9af1592cf7fdd655abffcc5bd0b3137d00292e27b866b7fec3979c68a71e1787",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp1r6d3met/features.json",
+                "path": "/tmp/working_directory/tmpew1j5zcj/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "090460ab0a6a1ee9d5d0cfe2662ab9ec711036640977f231dbe7747cad108725",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp1r6d3met/overlay",
+                "path": "/tmp/working_directory/tmpew1j5zcj/overlay",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 750,
+        "score": 850,
         "sections": [
             {
                 "body": "1298655712 (2011-02-25 17:41:52 +00:00 (UTC))\n1298662912 (2011-02-25 19:41:52 +00:00 (UTC))\n1298653792 (2011-02-25 17:09:52 +00:00 (UTC))\n1319564512 (2011-10-25 17:41:52 +00:00 (UTC))\n1046318394 (2003-02-27 03:59:54 +00:00 (UTC))\n330558558 (1980-06-22 21:49:18 +00:00 (UTC))",
@@ -89,6 +89,24 @@
                     }
                 },
                 "title_text": "Headers",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "File Size: 159072\nVirtual Size: 442368",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 24,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Mismatch file size",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

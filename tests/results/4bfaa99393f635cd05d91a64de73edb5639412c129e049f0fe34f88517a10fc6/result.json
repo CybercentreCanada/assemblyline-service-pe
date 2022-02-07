@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "b9c948c7101b577b8640784587616f38687daaa76374f52052204856960f5e8c",
+                "sha256": "d93f0e33799ac7dd3a23d575b6d83470f5905dfcc57ef0e6d00e950893b9412b",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpsqyj281q/features.json",
+                "path": "/tmp/working_directory/tmpxolhlq4h/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "22587a1fcf9547c58827d438f98de8c9f0362f14abdeb844443cb19f1c325a71",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpsqyj281q/overlay",
+                "path": "/tmp/working_directory/tmpxolhlq4h/overlay",
                 "is_section_image": false
             },
             {
@@ -32,7 +32,7 @@
                 "sha256": "0625fee1a80d7b897a9712249c2f55ff391d6661dbd8b87f9be6f252d88ced95",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpsqyj281q/certificate.1.1",
+                "path": "/tmp/working_directory/tmpxolhlq4h/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -40,7 +40,7 @@
                 "sha256": "0374881c9b74d31f28dc580b0f2b9d2b14a97ce31cbec2a05aeb377dcddcc2b0",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpsqyj281q/certificate.1.2",
+                "path": "/tmp/working_directory/tmpxolhlq4h/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -48,7 +48,7 @@
                 "sha256": "468720148020cf74baae2a3a70b5b77f7d969e3a63069aae382aa77813c75b2e",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpsqyj281q/certificate.1.3",
+                "path": "/tmp/working_directory/tmpxolhlq4h/certificate.1.3",
                 "is_section_image": false
             },
             {
@@ -56,7 +56,7 @@
                 "sha256": "a6eac3ab012ccd0e6be59a42eed458739bccb5727b1b95a1e6a577a248d87b58",
                 "description": "certificate.1.4 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpsqyj281q/certificate.1.4",
+                "path": "/tmp/working_directory/tmpxolhlq4h/certificate.1.4",
                 "is_section_image": false
             },
             {
@@ -64,7 +64,7 @@
                 "sha256": "0cfc19db681b014bfe3f23cb3a78b67208b4e3d8d7b6a7b1807f7cd6ecb2a54e",
                 "description": "certificate.1.5 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpsqyj281q/certificate.1.5",
+                "path": "/tmp/working_directory/tmpxolhlq4h/certificate.1.5",
                 "is_section_image": false
             }
         ],
@@ -72,7 +72,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 0,
+        "score": 100,
         "sections": [
             {
                 "body": "Timestamp: 1362101484 (2013-03-01 01:31:24 +00:00 (UTC))\nEntrypoint: 0x9008\nMachine: AMD64\nMagic: PE32_PLUS\nImage version: 6.0\nLinker version: 8.0\nOperating System version: 6.0\nSubsystem version: 6.0\nSubsystem: NATIVE\nNX: False\nPosition Independent: False\nOverlay size: 7928\nChecksum: 0x00017139",
@@ -125,6 +125,24 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Entries",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "File Size: 36600\nVirtual Size: 49152",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 24,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Mismatch file size",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

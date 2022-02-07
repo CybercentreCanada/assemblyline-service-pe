@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "8590b39944645b57e79aa06834b7c9f10b741d895ebcb34f3951bd3523d4e1a8",
+                "sha256": "cc836e7d3cca1637f860c59809606b92468b97e0eb6e79141368edf59713c014",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpl4aza4uc/features.json",
+                "path": "/tmp/working_directory/tmpr7x7vjq4/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "58166564c037449c32b5c13649913c5390a2a34b21d33ebc01f295e7f2aa1b01",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpl4aza4uc/overlay",
+                "path": "/tmp/working_directory/tmpr7x7vjq4/overlay",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 850,
+        "score": 950,
         "sections": [
             {
                 "body": "Timestamp: 1450322943 (2015-12-17 03:29:03 +00:00 (UTC))\nEntrypoint: 0x4d87\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 12.0\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_GUI\nNX: True\nPosition Independent: True\nOverlay size: 373543\nChecksum: 0x0002c1ed",
@@ -85,6 +85,24 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Entries",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "File Size: 512807\nVirtual Size: 163840",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 24,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Mismatch file size",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

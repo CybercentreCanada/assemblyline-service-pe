@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "916581834d6e2c45284f25a5703f0fe01ffb7d69b1968e1bb525e48a3030a086",
+                "sha256": "9a32c0e2158ff995c285991c9cdf75177e31d3d4edb86fc7dc6b52b3801c7364",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmplul85va4/features.json",
+                "path": "/tmp/working_directory/tmp58yxegia/features.json",
                 "is_section_image": false
             }
         ],
@@ -23,7 +23,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 700,
+        "score": 800,
         "sections": [
             {
                 "body": "0 -> 3 -> 30001\n0 -> 14 -> 1\n0 -> 16 -> 1",
@@ -94,6 +94,24 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Entries",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "File Size: 14338\nVirtual Size: 53248",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 24,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Mismatch file size",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

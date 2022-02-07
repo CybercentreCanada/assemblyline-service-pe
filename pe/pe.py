@@ -449,6 +449,7 @@ class PE(ServiceBase):
         self.features["overlay"] = {"size": len(self.binary.overlay)}
         self.features["size_of_headers"] = self.binary.sizeof_headers
         self.features["virtual_size"] = self.binary.virtual_size
+        self.features["size"] = os.path.getsize(self.request.file_path)
         # Ignore self.binary.symbols
 
         res = ResultSection("Headers")
@@ -537,7 +538,16 @@ class PE(ServiceBase):
             self.features["rich_header"]["hash"] = rich_header_hash
             res.add_subsection(sub_res)
 
-        if self.binary.virtual_size <= self.config.get("hash_generation_max_size", 5000000) or self.request.deep_scan:
+        if abs(self.features["size"] - self.features["virtual_size"]) > max(
+            self.features["size"], self.features["virtual_size"]
+        ) * self.config.get("heur24_allowed_mismatch_file_size", 0.25):
+            heur = Heuristic(24)
+            heur_section = ResultSection(heur.definition.name, heuristic=heur)
+            heur_section.add_line(f"File Size: {self.features['size']}")
+            heur_section.add_line(f"Virtual Size: {self.features['virtual_size']}")
+            res.add_subsection(heur_section)
+
+        if self.features["size"] <= self.config.get("hash_generation_max_size", 5000000) or self.request.deep_scan:
             sub_res = ResultSection("Authentihash")
             for i in range(1, 6):
                 try:
@@ -561,7 +571,7 @@ class PE(ServiceBase):
             self.request.add_extracted(temp_path, file_name, f"{file_name} extracted from binary's resources")
 
         res.add_line(f"Checksum: {self.features['optional_header']['checksum']:#0{10}x}")
-        if self.binary.virtual_size <= self.config.get("hash_generation_max_size", 5000000) or self.request.deep_scan:
+        if self.features["size"] <= self.config.get("hash_generation_max_size", 5000000) or self.request.deep_scan:
             self.features["optional_header"]["computed_checksum"] = generate_checksum(
                 self.request.file_path, self.binary.dos_header.addressof_new_exeheader + 0x58
             )

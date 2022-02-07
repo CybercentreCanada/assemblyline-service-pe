@@ -23,6 +23,7 @@ config:
   hash_generation_max_size: 5000000
   heur11_allowed_timestamp_range: 86400
   heur22_flag_more_recent_than_days: 3
+  heur24_allowed_mismatch_file_size: 0.25
 
 heuristics:
   - description: >-
@@ -187,6 +188,13 @@ heuristics:
     heur_id: 23
     name: Invalid optional header checksum
     score: 200
+
+  - description: >-
+       The file size is very different from the reported virtual size.
+    filetype: "executable/windows"
+    heur_id: 24
+    name: Mismatch file size
+    score: 100
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG

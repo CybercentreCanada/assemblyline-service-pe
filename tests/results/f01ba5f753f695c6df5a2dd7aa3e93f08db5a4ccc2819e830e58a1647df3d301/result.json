@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "9759515b8d80baa9ed4efcd2097d399e63fcc8a277a9875e1cf5065fea390300",
+                "sha256": "67b3e84603ae52efacbb296324abd3d1f88a275342c48c699dd6296249800c1d",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpce7ldo8c/features.json",
+                "path": "/tmp/working_directory/tmp3rrfftmv/features.json",
                 "is_section_image": false
             }
         ],
@@ -23,7 +23,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 0,
+        "score": 100,
         "sections": [
             {
                 "body": "Timestamp: 0 (1970-01-01 00:00:00 +00:00 (UTC))\nEntrypoint: 0x13b0\nMachine: I386\nMagic: PE32\nImage version: 1.0\nLinker version: 2.34\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_CUI\nNX: False\nPosition Independent: False\nOverlay size: 0\nChecksum: 0x00010ebf",
@@ -44,6 +44,24 @@
                     }
                 },
                 "title_text": "Headers",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "File Size: 13824\nVirtual Size: 45056",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": {
+                    "heur_id": 24,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Mismatch file size",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
