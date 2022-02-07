@@ -21,6 +21,7 @@ licence_count: 0
 config:
   trusted_certs: ["/usr/share/ca-certificates/mozilla/"]
   hash_generation_max_size: 5000000
+  overlay_analysis_file_max_size: 50000000
   heur11_allowed_timestamp_range: 86400
   heur22_flag_more_recent_than_days: 3
   heur24_allowed_mismatch_file_size: 0.25
@@ -179,7 +180,7 @@ heuristics:
        A timestamp found in the PE is very recent or in the future. It may be the latest version of a genuine software, or a custom built executable for a targeted execution.
     filetype: "executable/windows"
     heur_id: 22
-    name: Recent timestamp found
+    name: Recent/Future timestamp found
     score: 500
 
   - description: >-

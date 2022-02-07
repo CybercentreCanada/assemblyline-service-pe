@@ -445,11 +445,9 @@ class PE(ServiceBase):
         # print(self.binary.imagebase) # Doesn't work as documented?
         self.features["position_independent"] = self.binary.is_pie
         self.features["is_reproducible_build"] = self.binary.is_reproducible_build
-        # self.features["overlay"] = bytearray(self.binary.overlay).hex()
-        self.features["overlay"] = {"size": len(self.binary.overlay)}
         self.features["size_of_headers"] = self.binary.sizeof_headers
         self.features["virtual_size"] = self.binary.virtual_size
-        self.features["size"] = os.path.getsize(self.request.file_path)
+        self.features["size"] = os.path.getsize(self.file_path)
         # Ignore self.binary.symbols
 
         res = ResultSection("Headers")
@@ -562,13 +560,18 @@ class PE(ServiceBase):
 
         res.add_line(f"Position Independent: {self.binary.is_pie}")
 
-        res.add_line(f"Overlay size: {self.features['overlay']['size']}")
-        if self.features["overlay"]["size"] > 0:
-            file_name = "overlay"
-            temp_path = os.path.join(self.working_directory, file_name)
-            with open(temp_path, "wb") as myfile:
-                myfile.write(bytearray(self.binary.overlay))
-            self.request.add_extracted(temp_path, file_name, f"{file_name} extracted from binary's resources")
+        if (
+            self.features["size"] <= self.config.get("overlay_analysis_file_max_size", 50000000)
+            or self.request.deep_scan
+        ):
+            self.features["overlay"] = {"size": len(self.binary.overlay)}
+            res.add_line(f"Overlay size: {self.features['overlay']['size']}")
+            if self.features["overlay"]["size"] > 0:
+                file_name = "overlay"
+                temp_path = os.path.join(self.working_directory, file_name)
+                with open(temp_path, "wb") as myfile:
+                    myfile.write(bytearray(self.binary.overlay))
+                self.request.add_extracted(temp_path, file_name, f"{file_name} extracted from binary's resources")
 
         res.add_line(f"Checksum: {self.features['optional_header']['checksum']:#0{10}x}")
         if self.features["size"] <= self.config.get("hash_generation_max_size", 5000000) or self.request.deep_scan:
@@ -1536,14 +1539,16 @@ class PE(ServiceBase):
         self.binary = None
         self.features = None
         self.temp_res = None
+        self.file_path = None
         super()._cleanup()
 
     def execute(self, request: ServiceRequest):
         request.result = Result()
         self.file_res = request.result
         self.request = request
+        self.file_path = request.file_path
 
-        self.binary = lief.parse(request.file_path)
+        self.binary = lief.parse(self.file_path)
         if self.binary is None:
             res = ResultSection("This file looks like a PE but failed loading.", heuristic=Heuristic(7))
             self.file_res.add_section(res)
