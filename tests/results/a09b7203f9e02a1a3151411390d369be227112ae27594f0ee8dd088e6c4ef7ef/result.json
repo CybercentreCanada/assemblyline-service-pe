@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "bfa373aa2940fe54b63535b3b1622dd8daf4783b5bf1b81af108074a369f11de",
+                "sha256": "3e354a5886aa6ab47c74328f49f87e8a17a127a2ae1007484a793caf5d0ff150",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp0kfmadu8/features.json",
+                "path": "/tmp/working_directory/tmp3yroenjb/features.json",
                 "is_section_image": false
             }
         ],
@@ -26,7 +26,7 @@
         "score": 400,
         "sections": [
             {
-                "body": "Timestamp: 708992537 (1992-06-19 22:22:17 +00:00 (UTC))\nEntrypoint: 0x7f1a8\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 2.25\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nOverlay size: 0\nChecksum: 0x00000000",
+                "body": "Timestamp: 708992537 (1992-06-19 22:22:17 +00:00 (UTC))\nEntrypoint: 0x7f1a8\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 2.25\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nChecksum: 0x00000000",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -516,6 +516,17 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Summary",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 0",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

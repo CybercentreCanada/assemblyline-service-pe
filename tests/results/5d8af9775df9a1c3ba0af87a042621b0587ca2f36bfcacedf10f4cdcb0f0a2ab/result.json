@@ -11,28 +11,20 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "540f658e5a720a914faaa44b6dd5de8e20a8de8caed9cb40f690c79252c633a4",
+                "sha256": "6de6540f9c039343cee4f98babe207bac9005872cd2c2fceacca0c4a4621d480",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpcqwhh2kr/features.json",
+                "path": "/tmp/working_directory/tmpf3c9006k/features.json",
                 "is_section_image": false
             }
         ],
         "extracted": [
             {
-                "name": "overlay",
-                "sha256": "7e3589f5f903ff483b50ecdd840268b937f338bf32febe7d22fded993732922e",
-                "description": "overlay extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpcqwhh2kr/overlay",
-                "is_section_image": false
-            },
-            {
                 "name": "certificate.1.1",
                 "sha256": "0e0fabf3c4fb549fc156e7fe8f3c8966c8e09ffbba31e650b18214064245b54f",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpcqwhh2kr/certificate.1.1",
+                "path": "/tmp/working_directory/tmpf3c9006k/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -40,7 +32,7 @@
                 "sha256": "4f32d5dc00f715250abcc486511e37f501a899deb3bf7ea8adbbd3aef1c412da",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpcqwhh2kr/certificate.1.2",
+                "path": "/tmp/working_directory/tmpf3c9006k/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -48,7 +40,7 @@
                 "sha256": "534b9b1a31a38b4e0bf9a291f408337c25a2e011d460fdff495ce473fb168a8e",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpcqwhh2kr/certificate.1.3",
+                "path": "/tmp/working_directory/tmpf3c9006k/certificate.1.3",
                 "is_section_image": false
             },
             {
@@ -56,7 +48,15 @@
                 "sha256": "d92bf8e9fa867dbd8b794c6a49e6ff1fcfac71f3d7f4ae55bb9587eb24ac6489",
                 "description": "certificate.1.4 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpcqwhh2kr/certificate.1.4",
+                "path": "/tmp/working_directory/tmpf3c9006k/certificate.1.4",
+                "is_section_image": false
+            },
+            {
+                "name": "overlay",
+                "sha256": "7e3589f5f903ff483b50ecdd840268b937f338bf32febe7d22fded993732922e",
+                "description": "overlay extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpf3c9006k/overlay",
                 "is_section_image": false
             }
         ],
@@ -67,7 +67,7 @@
         "score": 0,
         "sections": [
             {
-                "body": "Timestamp: 1497976520 (2017-06-20 16:35:20 +00:00 (UTC))\nEntrypoint: 0x23f24\nMachine: AMD64\nMagic: PE32_PLUS\nImage version: 10.0\nLinker version: 14.0\nOperating System version: 10.0\nSubsystem version: 10.0\nSubsystem: NATIVE\nNX: True\nPosition Independent: True\nOverlay size: 19616\nChecksum: 0x0003a89b",
+                "body": "Timestamp: 1497976520 (2017-06-20 16:35:20 +00:00 (UTC))\nEntrypoint: 0x23f24\nMachine: AMD64\nMagic: PE32_PLUS\nImage version: 10.0\nLinker version: 14.0\nOperating System version: 10.0\nSubsystem version: 10.0\nSubsystem: NATIVE\nNX: True\nPosition Independent: True\nChecksum: 0x0003a89b",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -816,6 +816,28 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Certificate - 4",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 19616",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.993855355533575, 7.17699528366811, 6.982900766581547, 7.493856393009458, 6.310406771078287, 7.479285820137615, 6.785750136073117, 6.987927185643178, 7.071022463462171, 6.409079664847936, 7.4662843026801005, 6.716806775608803, 7.311077019162668, 6.9851923242977705, 6.227256440858026, 7.479671389013024, 6.496877839279068, 6.883128891329966, 6.079871933734306, 7.255777798982388, 7.114328599894513, 7.121140116073371, 6.282336991711318, 7.0210655900356285, 6.752419310761134, 7.428206853417141, 6.415022895225966, 7.07329909027833, 5.971359820158306, 7.166054374524188, 5.910876809192117, 7.219774536686005, 6.4015810032635185, 6.79410768810376, 7.266309937828675, 6.975694313914776, 6.70090669651254, 6.681778608892459, 5.718379599208138, 7.0825469600315, 6.044471415747613, 7.273569901549518, 7.059328733440266, 6.929543472349479, 6.6333855910671, 7.250475793995281, 6.194169912394553, 6.98598194866582, 6.2147727691746, 7.308504290414057]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

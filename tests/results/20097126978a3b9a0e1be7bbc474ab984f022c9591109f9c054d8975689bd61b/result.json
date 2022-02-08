@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "055fba1172c65105bbac3a3d07fd6791c2339543fe2ceaa95dbfb130597cc02f",
+                "sha256": "553ded7ed562ce723a83c28e7f65172a4171a6f641bc11eb7e8498404938b77d",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpyn_hrn_j/features.json",
+                "path": "/tmp/working_directory/tmprc7mcb0t/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "d989323cb9eafd6068401dc1feab31a59adbd84cdf06f37a422ad3d0a68b5271",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpyn_hrn_j/overlay",
+                "path": "/tmp/working_directory/tmprc7mcb0t/overlay",
                 "is_section_image": false
             }
         ],
@@ -35,7 +35,7 @@
         "score": 1550,
         "sections": [
             {
-                "body": "Timestamp: 1536793850 (2018-09-12 23:10:50 +00:00 (UTC))\nEntrypoint: 0x5088f0\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 14.0\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_GUI\nNX: True\nPosition Independent: False\nOverlay size: 13504\nChecksum: 0x00000000",
+                "body": "Timestamp: 1536793850 (2018-09-12 23:10:50 +00:00 (UTC))\nEntrypoint: 0x5088f0\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 14.0\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_GUI\nNX: True\nPosition Independent: False\nChecksum: 0x00000000",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -766,6 +766,28 @@
                 },
                 "tags": {},
                 "title_text": "Less than two certificates found",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 13504",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.900311198974305, 5.906862764962702, 7.037389724360219, 5.427177724763069, 7.248007460225986, 6.187109173447882, 6.172382726344532, 7.1318204217830985, 5.588645259015564, 7.197692065305695, 6.1475460447745816, 7.121105764559702, 6.256460190315965, 7.172766281164872, 6.020874792669396, 7.108762672427063, 5.902855343201084, 6.962911058274545, 6.742392571976032, 6.192476506320158, 7.005083866418658, 6.28828400670594, 7.064209041721721, 6.282027060479238, 5.750908297052753, 6.866611716918642, 6.184480001803644, 6.685032022499403, 7.03481765391301, 5.451308581888396, 7.145663041430747, 5.895655853853101, 6.530869518476215, 7.002143288701668, 6.156515817402304, 7.138651474899792, 6.03473028225481, 5.715567935444023, 6.42181074363875, 6.88350091396866, 6.240142295438051, 7.110666940119446, 5.456697766576802, 6.775906963741864, 6.526709661072353, 6.650757774820056, 6.897691235246108, 6.287400812510312, 6.230138499823313, 7.02652481811877]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

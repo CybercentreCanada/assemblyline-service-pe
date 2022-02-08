@@ -508,7 +508,7 @@ class PE(ServiceBase):
                 )
                 try:
                     entry_compilation_info = self.rich_header_entries[rich_header_hex]
-                    sub_sub_res.body.append(
+                    sub_sub_res._body.append(
                         {
                             "ID": f"0x{rich_header_hex}",
                             "Compiler Information": entry_compilation_info,
@@ -516,15 +516,15 @@ class PE(ServiceBase):
                         }
                     )
                 except KeyError:
-                    sub_sub_res.body.append(
+                    sub_sub_res._body.append(
                         {
                             "ID": f"0x{rich_header_hex}",
                             "Compiler Information": f"Unknown object 0x{rich_header_hex}",
                             "Count": entry.count,
                         }
                     )
-            if sub_sub_res.body:
-                sub_sub_res.body = json.dumps(sub_sub_res.body)
+            if sub_sub_res._body:
+                sub_sub_res._body = json.dumps(sub_sub_res._body)
                 sub_res.add_subsection(sub_sub_res)
 
             clear_data = bytes.fromhex(f"44616e53{'0'*24}{clear_data}")  # DanS
@@ -545,33 +545,20 @@ class PE(ServiceBase):
             heur_section.add_line(f"Virtual Size: {self.features['virtual_size']}")
             res.add_subsection(heur_section)
 
-        if self.features["size"] <= self.config.get("hash_generation_max_size", 5000000) or self.request.deep_scan:
-            sub_res = ResultSection("Authentihash")
-            for i in range(1, 6):
-                try:
-                    authentihash = lief.PE.ALGORITHMS(i)
-                    authentihash_value = self.binary.authentihash(lief.PE.ALGORITHMS(i)).hex()
-                    self.features["authentihash"][authentihash.name] = authentihash_value
-                    sub_res.add_line(f"{authentihash.name}: {authentihash_value}")
-                except lief.bad_format:
-                    if sub_res.heuristic is None:
-                        sub_res.set_heuristic(17)
-            res.add_subsection(sub_res)
+        # if self.features["size"] <= self.config.get("hash_generation_max_size", 5000000) or self.request.deep_scan:
+        sub_res = ResultSection("Authentihash")
+        for i in range(1, 6):
+            try:
+                authentihash = lief.PE.ALGORITHMS(i)
+                authentihash_value = self.binary.authentihash(lief.PE.ALGORITHMS(i)).hex()
+                self.features["authentihash"][authentihash.name] = authentihash_value
+                sub_res.add_line(f"{authentihash.name}: {authentihash_value}")
+            except lief.bad_format:
+                if sub_res.heuristic is None:
+                    sub_res.set_heuristic(17)
+        res.add_subsection(sub_res)
 
         res.add_line(f"Position Independent: {self.binary.is_pie}")
-
-        if (
-            self.features["size"] <= self.config.get("overlay_analysis_file_max_size", 50000000)
-            or self.request.deep_scan
-        ):
-            self.features["overlay"] = {"size": len(self.binary.overlay)}
-            res.add_line(f"Overlay size: {self.features['overlay']['size']}")
-            if self.features["overlay"]["size"] > 0:
-                file_name = "overlay"
-                temp_path = os.path.join(self.working_directory, file_name)
-                with open(temp_path, "wb") as myfile:
-                    myfile.write(bytearray(self.binary.overlay))
-                self.request.add_extracted(temp_path, file_name, f"{file_name} extracted from binary's resources")
 
         res.add_line(f"Checksum: {self.features['optional_header']['checksum']:#0{10}x}")
         if self.features["size"] <= self.config.get("hash_generation_max_size", 5000000) or self.request.deep_scan:
@@ -643,7 +630,7 @@ class PE(ServiceBase):
                     sub_res.add_subsection(heur_section)
             sub_res.add_tag("file.pe.sections.name", section.name)
             sub_res.add_line(f"Entropy: {entropy_data[0]}")
-            if entropy_data[0] > 7.5:
+            if entropy_data[0] > self.config.get("heur4_max_section_entropy", 7.5):
                 heur = Heuristic(4)
                 heur_section = ResultSection(heur.definition.name, heuristic=heur)
                 heur_section.add_line(f"Section name: {section.name}")
@@ -1246,7 +1233,7 @@ class PE(ServiceBase):
                 resource_sha256 = hashlib.sha256(resource_data).hexdigest()
                 data["sha256"] = resource_sha256
                 data["entropy"] = entropy
-                sub_res.body.append({"SHA256": resource_sha256, "Type": current_resource_type, "Entropy": entropy})
+                sub_res._body.append({"SHA256": resource_sha256, "Type": current_resource_type, "Entropy": entropy})
                 data["depth"] = node.depth
                 if node.has_name:
                     data["name"] = node.name
@@ -1262,8 +1249,8 @@ class PE(ServiceBase):
             return data
 
         self.features["resources"] = get_node_data(self.binary.resources)
-        if sub_res.body:
-            sub_res.body = json.dumps(sub_res.body)
+        if sub_res._body:
+            sub_res._body = json.dumps(sub_res._body)
             res.add_subsection(sub_res)
 
         self.file_res.add_section(res)
@@ -1516,6 +1503,43 @@ class PE(ServiceBase):
             res.add_subsection(sub_res)
         self.file_res.add_section(res)
 
+    def add_overlay(self):
+        if (
+            self.features["size"] <= self.config.get("overlay_analysis_file_max_size", 50000000)
+            or self.request.deep_scan
+        ):
+            res = ResultSection("Overlay")
+            overlay = bytearray(self.binary.overlay)
+            entropy_data = calculate_partition_entropy(BytesIO(overlay))
+            self.features["overlay"] = {"size": len(overlay), "entropy": entropy_data[0]}
+            res.add_line(f"Overlay size: {self.features['overlay']['size']}")
+            if self.features["overlay"]["size"] > 0:
+                if self.features["overlay"]["size"] > self.features["virtual_size"] and self.features["overlay"][
+                    "entropy"
+                ] < self.config.get("heur25_min_overlay_entropy", 0.5):
+                    heur = Heuristic(25)
+                    heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                    heur_section.add_line(f"Overlay Size: {self.features['overlay']['size']}")
+                    heur_section.add_line(f"Overlay Entropy: {self.features['overlay']['entropy']}")
+                    res.add_subsection(heur_section)
+
+                entropy_graph_data = {
+                    "type": "colormap",
+                    "data": {"domain": [0, 8], "values": entropy_data[1]},
+                }
+                entropy_res = ResultSection(
+                    "Entropy graph", body_format=BODY_FORMAT.GRAPH_DATA, body=json.dumps(entropy_graph_data)
+                )
+                res.add_subsection(entropy_res)
+
+                file_name = "overlay"
+                temp_path = os.path.join(self.working_directory, file_name)
+                with open(temp_path, "wb") as myfile:
+                    myfile.write(overlay)
+                self.request.add_extracted(temp_path, file_name, f"{file_name} extracted from binary's resources")
+
+            self.file_res.add_section(res)
+
     def add_optional(self):
         if self.request.deep_scan and self.binary.has_relocations:
             self.features["relocations"] = [
@@ -1567,6 +1591,7 @@ class PE(ServiceBase):
         self.add_configuration()
         self.add_resources()
         self.add_signatures()
+        self.add_overlay()
         self.add_optional()
 
         temp_path = os.path.join(self.working_directory, "features.json")

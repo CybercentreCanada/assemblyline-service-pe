@@ -14,7 +14,7 @@
                 "sha256": "938bb74b53192850aa95a31b4a46ae49be927cc56790072959f48b8ce72d8728",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzn6gh19m/icon_0.ico",
+                "path": "/tmp/working_directory/tmp26xw69km/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "3b80fa643d1efdd6385c55c37c3e6b79513d1546237c2539e0e2431629ea7049",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzn6gh19m/icon_1.ico",
+                "path": "/tmp/working_directory/tmp26xw69km/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "0fa7b343ff5beb3524d64f983e84cf9c8d7a3ef0ed79abf58d20edaf5005115b",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzn6gh19m/icon_2.ico",
+                "path": "/tmp/working_directory/tmp26xw69km/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "04ce49e2c405a8c6869d14805d5200fdf0913cf1246fc0a7571a482a25adb8bc",
                 "description": "Icon 3 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzn6gh19m/icon_3.ico",
+                "path": "/tmp/working_directory/tmp26xw69km/icon_3.ico",
                 "is_section_image": false
             },
             {
@@ -46,15 +46,15 @@
                 "sha256": "e051f3c75616f37c6c6d487516d50401b4550da7b89b7d9b0243d8b98d8a793e",
                 "description": "Icon 4 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzn6gh19m/icon_4.ico",
+                "path": "/tmp/working_directory/tmp26xw69km/icon_4.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "28f498d4d867663b84051a2c55f9aec6b9f62e943d3f43639b332a138869830a",
+                "sha256": "875d7caa3698b5e908eea4ac1266900421b40630b998b99c7865487fc2cf03e2",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzn6gh19m/features.json",
+                "path": "/tmp/working_directory/tmp26xw69km/features.json",
                 "is_section_image": false
             }
         ],
@@ -64,7 +64,7 @@
                 "sha256": "74cd07ef186d995ad75a0c2a153d1dd6f7b563987f5aa0fefef0a095708c02dd",
                 "description": "binary_0_2147486448_2147486464_1033 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzn6gh19m/binary_0_2147486448_2147486464_1033",
+                "path": "/tmp/working_directory/tmp26xw69km/binary_0_2147486448_2147486464_1033",
                 "is_section_image": false
             }
         ],
@@ -111,7 +111,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "Timestamp: 1539779597 (2018-10-17 12:33:17 +00:00 (UTC))\nEntrypoint: 0x28c7fc\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 2.25\nOperating System version: 5.0\nSubsystem version: 5.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nOverlay size: 0\nChecksum: 0x00000000",
+                "body": "Timestamp: 1539779597 (2018-10-17 12:33:17 +00:00 (UTC))\nEntrypoint: 0x28c7fc\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 2.25\nOperating System version: 5.0\nSubsystem version: 5.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nChecksum: 0x00000000",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -129,6 +129,17 @@
                     }
                 },
                 "title_text": "Headers",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "SHA_512: 5a96b759048d603f176a6fe4fe5a49e8099ffa3558a35bda56eabd85414eae75f0cf7c5f258b2071fdb13cfe31eac7ec9c9d28a1b5761f61eb37fcc01233ae23\nSHA_384: ffc989017dab7b0fc7f59e0cfd161d526d8c44b107a41256303200edcf1cbcb05c831f5f31d2bf8a1a1e49ccd58b6ff6\nSHA_256: 43e9feaa0fefda59cb8ac6fc7bbdca09d06188ec89a8ac5cecc71c12410dd624\nSHA_1: cb9bc4f4237c551ca41d4cac93df485c1507dc03\nMD5: c73ee4b67ddf4bef17585837d2b23bfe",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Authentihash",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -891,6 +902,17 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Summary",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 0",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "af59412d96d2965143c9cabdb641cca66eef6917c649d6e2ed8ec0227eea3081",
+                "sha256": "e05749281126fd9525839df8058fc5df657ae4d8039b2bc9be30b834fd621080",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpgpv30v50/features.json",
+                "path": "/tmp/working_directory/tmpw7bjf1md/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "ce1539051360bc7fa73ce9c06d87ef4f2864e8a8f9e722b0de2d906fc63f6749",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpgpv30v50/overlay",
+                "path": "/tmp/working_directory/tmpw7bjf1md/overlay",
                 "is_section_image": false
             }
         ],
@@ -35,7 +35,7 @@
         "score": 500,
         "sections": [
             {
-                "body": "Timestamp: 1187354584 (2007-08-17 12:43:04 +00:00 (UTC))\nEntrypoint: 0x14d8\nMachine: I386\nMagic: PE32\nImage version: 1.0\nLinker version: 6.0\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nOverlay size: 1860632\nChecksum: 0x00000000",
+                "body": "Timestamp: 1187354584 (2007-08-17 12:43:04 +00:00 (UTC))\nEntrypoint: 0x14d8\nMachine: I386\nMagic: PE32\nImage version: 1.0\nLinker version: 6.0\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nChecksum: 0x00000000",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -443,6 +443,28 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Summary",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 1860632",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.260389308247601, 6.374502432366379, 6.196443793355849, 6.277647671188952, 1.7172753572729285, 4.191766071581111, 3.5117294150999876, 4.345529837333933, 6.380726650017732, 6.304605831183279, 6.363023490637593, 6.408147602119573, 6.4078839863368575, 6.3953066591665895, 6.366645394723957, 6.310827410680624, 6.315453793322595, 6.407876502430317, 6.393048841558272, 6.080329044286372, 5.627712410507375, 4.209207269924872, 4.7402598663466575, 7.880462416809381, 6.426817871447178, 7.845081006157204, 6.681806657500326, 3.8842581940016307, 3.228366733146549, 3.255637472795778, 3.0344567192821525, 3.4303197937900816, 2.833719524631311, 2.225291658082896, 2.4065647839179247, 2.6965236449429506, 2.830495379498167, 3.7631806088120276, 2.357137224523712, 2.7084314378416012, 3.3251796321613445, 4.071603472254511, 2.7348792205746633, 2.962709354822368, 3.175984024051812, 2.5034756869154506, 3.0788524950387393, 2.1418823626928423, 2.5227395278691636, 5.807205972163855]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

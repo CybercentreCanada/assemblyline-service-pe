@@ -14,15 +14,15 @@
                 "sha256": "eaf54b06365eb5a3a27344b350b46d69c03d82d2f0ba6e05f48b565b30ec7f17",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmppe5r5vn5/icon_0.ico",
+                "path": "/tmp/working_directory/tmpidoaej1u/icon_0.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "bbad50c480952a26b387caeac1c58f247bb4c616c77cae30196e349d47b66650",
+                "sha256": "a0c7d6e631963ff1e9b777ea692e09bd5720f7b6c81c4aacb8fdf0a82df0f19f",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmppe5r5vn5/features.json",
+                "path": "/tmp/working_directory/tmpidoaej1u/features.json",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
                 "sha256": "95b805a1fd4e3ca64a494a3b7be0aa47a308d9cb933b68cc2dd902a81ecb507e",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmppe5r5vn5/overlay",
+                "path": "/tmp/working_directory/tmpidoaej1u/overlay",
                 "is_section_image": false
             }
         ],
@@ -43,7 +43,7 @@
         "score": 500,
         "sections": [
             {
-                "body": "Timestamp: 1347773836 (2012-09-16 05:37:16 +00:00 (UTC))\nEntrypoint: 0x30000\nMachine: I386\nMagic: PE32\nImage version: 6.2\nLinker version: 6.0\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nOverlay size: 3930942\nChecksum: 0x003eb99e",
+                "body": "Timestamp: 1347773836 (2012-09-16 05:37:16 +00:00 (UTC))\nEntrypoint: 0x30000\nMachine: I386\nMagic: PE32\nImage version: 6.2\nLinker version: 6.0\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nChecksum: 0x003eb99e",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -417,6 +417,28 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Summary",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 3930942",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.997733886852676, 7.997681248638004, 7.997448188272039, 7.9978430284996955, 7.997775801762429, 7.997439566632519, 7.99729378876632, 7.997706535424432, 7.997502741082592, 7.997943202744663, 7.997457682664665, 7.99777613046642, 7.99786513729655, 7.997378931805427, 7.99799477548602, 7.997648607843552, 7.99728385228435, 7.997785771990512, 7.997801431619291, 7.997669955356563, 7.997924464790356, 7.997306638624197, 7.997920413642035, 7.997572184088161, 7.997472573131042, 7.997557966439118, 7.997870403107613, 7.997793246845042, 7.997175056437314, 7.99753066765845, 7.9973699374482905, 7.997889942003456, 7.997714580104985, 7.997910422859292, 7.997537587292736, 7.997652918575819, 7.997602363854102, 7.997446309983337, 7.9977053187610725, 7.997321539229602, 7.997630011418045, 7.997361330268267, 7.997972380509987, 7.997759761609958, 7.99777779360263, 7.9977836846839825, 7.997527215120268, 7.9972278805936, 7.997648255930999, 7.997385717350444]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

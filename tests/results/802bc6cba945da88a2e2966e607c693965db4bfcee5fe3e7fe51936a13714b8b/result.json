@@ -14,7 +14,7 @@
                 "sha256": "b65b4077fb9bdfe176e22c4848c7ef85cb668c0f18dddd4d414277b92b3f9390",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpqfv9ow35/icon_0.ico",
+                "path": "/tmp/working_directory/tmpt7y1_qzi/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "991eafd590a6db23212e86387edb848b79637156ec4c9dce29d85570604dcb53",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpqfv9ow35/icon_1.ico",
+                "path": "/tmp/working_directory/tmpt7y1_qzi/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,15 +30,15 @@
                 "sha256": "80415827b01b2a20f9bcaac44129b0f5be3062989927d40816e1c99fe44ce1a4",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpqfv9ow35/icon_2.ico",
+                "path": "/tmp/working_directory/tmpt7y1_qzi/icon_2.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "9d7a82a9fcb773b830482a7881b344b4f76fcac0e8868f0cab0aa7f9fa7b703e",
+                "sha256": "337c98863815b92fec67bf9a8e4827e83baf4a196c0d62a9d6c5e879efd0425b",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpqfv9ow35/features.json",
+                "path": "/tmp/working_directory/tmpt7y1_qzi/features.json",
                 "is_section_image": false
             }
         ],
@@ -48,7 +48,7 @@
                 "sha256": "ecb5f5c7916b0d324a279fb13547e9250f132d0d215d0dc5b6b9bf7d6a7faf99",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpqfv9ow35/overlay",
+                "path": "/tmp/working_directory/tmpt7y1_qzi/overlay",
                 "is_section_image": false
             }
         ],
@@ -59,7 +59,7 @@
         "score": 300,
         "sections": [
             {
-                "body": "Timestamp: 1529185622 (2018-06-16 21:47:02 +00:00 (UTC))\nEntrypoint: 0x4d4a\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 10.0\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_GUI\nNX: True\nPosition Independent: False\nOverlay size: 9\nChecksum: 0x0004fdeb",
+                "body": "Timestamp: 1529185622 (2018-06-16 21:47:02 +00:00 (UTC))\nEntrypoint: 0x4d4a\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 10.0\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_GUI\nNX: True\nPosition Independent: False\nChecksum: 0x0004fdeb",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -531,6 +531,28 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Summary",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 9",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [-0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

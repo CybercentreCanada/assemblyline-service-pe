@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "fec167bb4f7b5d62677372dc01b3806452bb54868ea84139a27fd633abd2d949",
+                "sha256": "bbf7284451c3fda574b7533d9ce2ca33628da09245e04dcbfb003df97e866160",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpuabni_tv/features.json",
+                "path": "/tmp/working_directory/tmpiioqp8hl/features.json",
                 "is_section_image": false
             }
         ],
@@ -26,7 +26,7 @@
         "score": 700,
         "sections": [
             {
-                "body": "Timestamp: 1239670995 (2009-04-14 01:03:15 +00:00 (UTC))\nEntrypoint: 0x0\nMachine: I386\nMagic: ???\nImage version: 0.0\nLinker version: 9.0\nOperating System version: 5.0\nSubsystem version: 5.0\nSubsystem: WINDOWS_CUI\nNX: False\nPosition Independent: False\nOverlay size: 0\nChecksum: 0x00000000",
+                "body": "Timestamp: 1239670995 (2009-04-14 01:03:15 +00:00 (UTC))\nEntrypoint: 0x0\nMachine: I386\nMagic: ???\nImage version: 0.0\nLinker version: 9.0\nOperating System version: 5.0\nSubsystem version: 5.0\nSubsystem: WINDOWS_CUI\nNX: False\nPosition Independent: False\nChecksum: 0x00000000",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -134,6 +134,17 @@
                 },
                 "tags": {},
                 "title_text": "Sections",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 0",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

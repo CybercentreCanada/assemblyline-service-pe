@@ -14,15 +14,15 @@
                 "sha256": "01bbc368eb3c9ebd5ea9c211a3d502a170e952a935b001445e4ef4d59ef7388e",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp1raepjar/icon_0.ico",
+                "path": "/tmp/working_directory/tmpacsjfp8y/icon_0.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "e1b2da46adffe352364e6479fcbcabec942a1320c7e298c0537a960f36532dc4",
+                "sha256": "b447a1d9ceb2eb4ffafcdbebdac8654f0796c81eb2e2712c12f7426264475ec8",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp1raepjar/features.json",
+                "path": "/tmp/working_directory/tmpacsjfp8y/features.json",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
                 "sha256": "19b04b9c1d7d7affa39d767a995660e9a239b480f286a3f57925adce430050cd",
                 "description": "binary_0_10_2147484742_1031 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp1raepjar/binary_0_10_2147484742_1031",
+                "path": "/tmp/working_directory/tmpacsjfp8y/binary_0_10_2147484742_1031",
                 "is_section_image": false
             },
             {
@@ -40,15 +40,7 @@
                 "sha256": "e8c94324346a70c2ae8d2320816bbc579578b443af0f80abba75865892f15974",
                 "description": "binary_0_10_2147484754_1031 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp1raepjar/binary_0_10_2147484754_1031",
-                "is_section_image": false
-            },
-            {
-                "name": "overlay",
-                "sha256": "d0123a6b47391ad1d846dba246c8d29fb34207933613ff3a87abc14020c32734",
-                "description": "overlay extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp1raepjar/overlay",
+                "path": "/tmp/working_directory/tmpacsjfp8y/binary_0_10_2147484754_1031",
                 "is_section_image": false
             },
             {
@@ -56,7 +48,7 @@
                 "sha256": "35282afa633ddc4471485446b2a2222c3389d144d6692bac1db08cc0f1952e14",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp1raepjar/certificate.1.1",
+                "path": "/tmp/working_directory/tmpacsjfp8y/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -64,7 +56,15 @@
                 "sha256": "5e6d2f88f617dc8b809aee712445a41b3cde26af874a221a9dc98ea1dc68e3d5",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp1raepjar/certificate.1.2",
+                "path": "/tmp/working_directory/tmpacsjfp8y/certificate.1.2",
+                "is_section_image": false
+            },
+            {
+                "name": "overlay",
+                "sha256": "d0123a6b47391ad1d846dba246c8d29fb34207933613ff3a87abc14020c32734",
+                "description": "overlay extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpacsjfp8y/overlay",
                 "is_section_image": false
             }
         ],
@@ -93,7 +93,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "Timestamp: 1486476020 (2017-02-07 14:00:20 +00:00 (UTC))\nEntrypoint: 0x1ee910\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 11.0\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: True\nOverlay size: 3592\nChecksum: 0x0017c1e0",
+                "body": "Timestamp: 1486476020 (2017-02-07 14:00:20 +00:00 (UTC))\nEntrypoint: 0x1ee910\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 11.0\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: True\nChecksum: 0x0017c1e0",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -772,6 +772,28 @@
                 },
                 "tags": {},
                 "title_text": "Unknown Root CA",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 3592",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.579017536942529, 4.756709295779172, 5.372923918313784, 5.148412848364054, 4.770008508116323, 4.853081335982127, 5.252715278979704, 5.16938194564637, 5.8434003486044395, 6.031036112553427, 5.919925001442314, 5.7322892374933305, 5.45451145971555, 4.533142968764662, 5.117861029749888, 4.8054967936988735, 4.923416585305443, 5.4877108975705955, 5.975480556997871, 5.892147223664536, 5.9477027792200925, 5.412573265150915, 5.108763501526924, 4.884795487373133, 5.045012245057716, 4.935288154364797, 5.542685286737729, 5.843400348604442, 5.9094404528011575, 5.892147223664539, 5.4613201402110105, 4.15522152885951, 4.9698746126380335, 4.818755383176419, 5.012171578716044, 5.898955904159997, 5.805138022185505, 5.826107119467822, 5.9927737861344905, 5.964996008356714, 5.853884897245599, 5.975480556997871, 5.013199827620864, 4.841470272390305, 5.08604861231304, 5.0172344672799385, 5.798329341690045, 6.00325833477565, 5.787844793048884, 5.568599367586925]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

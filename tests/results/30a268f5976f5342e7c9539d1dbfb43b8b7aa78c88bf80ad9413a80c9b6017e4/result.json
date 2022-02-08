@@ -14,7 +14,7 @@
                 "sha256": "bcd41ecc20811815251393f81550eee5d3890233c364180ba7f4be02c63f915b",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm7oymqfu/icon_0.ico",
+                "path": "/tmp/working_directory/tmptuiob05w/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "57e8e11cda39f14c7fead08d852760360244237b0ab8485587f6ad9f798190ba",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm7oymqfu/icon_1.ico",
+                "path": "/tmp/working_directory/tmptuiob05w/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "b031a3ee4ad16538a25e4c5813dfafa77ea4cb065f730bb40d0af01c2384bc17",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm7oymqfu/icon_2.ico",
+                "path": "/tmp/working_directory/tmptuiob05w/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "c61b2513501909446715ef7c5c1d78ef27afbb6732ea52b604876452e26735da",
                 "description": "Icon 3 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm7oymqfu/icon_3.ico",
+                "path": "/tmp/working_directory/tmptuiob05w/icon_3.ico",
                 "is_section_image": false
             },
             {
@@ -46,7 +46,7 @@
                 "sha256": "2c2b16704d1ce6c64acdce28a4ee523d8d48b3757fef599b90b52a2266a0cda6",
                 "description": "Icon 4 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm7oymqfu/icon_4.ico",
+                "path": "/tmp/working_directory/tmptuiob05w/icon_4.ico",
                 "is_section_image": false
             },
             {
@@ -54,15 +54,15 @@
                 "sha256": "05e731fd482d17c2d7fade1218ef085846d25652168a8887379759374c4b2f0b",
                 "description": "Icon 5 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm7oymqfu/icon_5.ico",
+                "path": "/tmp/working_directory/tmptuiob05w/icon_5.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "c1ff8d76cce5bfa3f8d83c68b98a187ef13c1dbcdf89c86afe7b7e36bfcac07c",
+                "sha256": "3b27923a01f9c028b00b566bb69b69ca3e6e1ac907e8a2b58d201711766523bd",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm7oymqfu/features.json",
+                "path": "/tmp/working_directory/tmptuiob05w/features.json",
                 "is_section_image": false
             }
         ],
@@ -72,7 +72,7 @@
                 "sha256": "afbcf72d114ef0eb448bf509cc3ed95877381067db097298ca8da4a04a2e57cc",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm7oymqfu/overlay",
+                "path": "/tmp/working_directory/tmptuiob05w/overlay",
                 "is_section_image": false
             }
         ],
@@ -83,7 +83,7 @@
         "score": 600,
         "sections": [
             {
-                "body": "Timestamp: 1544434845 (2018-12-10 09:40:45 +00:00 (UTC))\nEntrypoint: 0xa245b\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 14.15\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_CUI\nNX: True\nPosition Independent: True\nOverlay size: 1610\nChecksum: 0x00000000",
+                "body": "Timestamp: 1544434845 (2018-12-10 09:40:45 +00:00 (UTC))\nEntrypoint: 0xa245b\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 14.15\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_CUI\nNX: True\nPosition Independent: True\nChecksum: 0x00000000",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -653,6 +653,28 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Summary",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 1610",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [-0.0, 0.39045213081320695, 4.7413638163281515, 4.7413638163281515, 4.8625759375402735, 4.9837880587523955, 4.9837880587523955, 4.923181998146335, 4.801969876934213, 5.044394119358456, 4.923181998146335, 4.8625759375402735, 4.862575937540274, 4.862575937540273, 4.923181998146334, 4.9837880587523955, 4.801969876934212, 4.923181998146335, 4.923181998146335, 4.923181998146335, 4.9837880587523955, 4.923181998146335, 4.779094498080775, 4.983788058752395, 4.923181998146335, 4.923181998146334, 4.801969876934213, 5.044394119358456, 4.801969876934213, 4.801969876934212, 4.923181998146335, 4.923181998146335, 5.044394119358456, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 1.2989565682277366, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

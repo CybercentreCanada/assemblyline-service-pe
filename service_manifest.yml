@@ -22,9 +22,11 @@ config:
   trusted_certs: ["/usr/share/ca-certificates/mozilla/"]
   hash_generation_max_size: 5000000
   overlay_analysis_file_max_size: 50000000
+  heur4_max_section_entropy: 7.5
   heur11_allowed_timestamp_range: 86400
   heur22_flag_more_recent_than_days: 3
   heur24_allowed_mismatch_file_size: 0.25
+  heur25_min_overlay_entropy: 0.5
 
 heuristics:
   - description: >-
@@ -49,7 +51,7 @@ heuristics:
     score: 500
 
   - description: >-
-      This PE contains at least one section with entropy > 7.5, which
+      This PE contains at least one section with high entropy, which
       may indicate packed or encrypted code.
 
       (see: http://n10info.blogspot.com/2014/06/entropy-and-distinctive-signs-of-packed.html)
@@ -197,7 +199,14 @@ heuristics:
     name: Mismatch file size
     score: 100
 
+  - description: >-
+       The overlay entropy is low, while the size is at least as much as the virtual size of the executable. It may be a sign of padding or bloating to bypass certain detection techniques.
+    filetype: "executable/windows"
+    heur_id: 25
+    name: Low overlay entropy
+    score: 200
+
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
   cpu_cores: 1
-  ram_mb: 512
+  ram_mb: 2048

@@ -14,7 +14,7 @@
                 "sha256": "1ea72096d6dbc0493be7e5c8d673f629bebf6d08e8ce8ce189cfb0571a905296",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtvvbw2d/icon_0.ico",
+                "path": "/tmp/working_directory/tmpd_l_n4xn/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "2ba064d98137e88b6e3b363b502251fa45fb0bfb3af86db1294b6e79c417ae73",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtvvbw2d/icon_1.ico",
+                "path": "/tmp/working_directory/tmpd_l_n4xn/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,33 +30,25 @@
                 "sha256": "3e64faf9856f72fc74be4c92047083e786ee658d470a24d88e6c11dca101cb97",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtvvbw2d/icon_2.ico",
+                "path": "/tmp/working_directory/tmpd_l_n4xn/icon_2.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "79069640fd0fc286f2f2e91f9029c4daad31ec82e9dfb923e0db932ce5a7f24c",
+                "sha256": "91e943a78b4333a4d66c2a735075229cf7c54987823ab7829af2fe239efdfc6f",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtvvbw2d/features.json",
+                "path": "/tmp/working_directory/tmpd_l_n4xn/features.json",
                 "is_section_image": false
             }
         ],
         "extracted": [
             {
-                "name": "overlay",
-                "sha256": "3bcd08369fcfbb8f6b3d1de0879420f1c30f209500d18a6136aa62e359d05405",
-                "description": "overlay extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtvvbw2d/overlay",
-                "is_section_image": false
-            },
-            {
                 "name": "certificate.1.1",
                 "sha256": "a20ff65a0c17480a62c6a9244ebe700f6a47da1b3c9c88bfae58806899e49abd",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtvvbw2d/certificate.1.1",
+                "path": "/tmp/working_directory/tmpd_l_n4xn/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -64,7 +56,7 @@
                 "sha256": "56d8f6e145b291f5fba29eb9898cf522bde7b14ab38929d0a4c4d1dddaba2a69",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtvvbw2d/certificate.1.2",
+                "path": "/tmp/working_directory/tmpd_l_n4xn/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -72,7 +64,15 @@
                 "sha256": "708f7b26bcb83d3b708a7def1b35cc3d4fdf2f6640fcf9e68836072b0016f015",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpwtvvbw2d/certificate.1.3",
+                "path": "/tmp/working_directory/tmpd_l_n4xn/certificate.1.3",
+                "is_section_image": false
+            },
+            {
+                "name": "overlay",
+                "sha256": "3bcd08369fcfbb8f6b3d1de0879420f1c30f209500d18a6136aa62e359d05405",
+                "description": "overlay extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpd_l_n4xn/overlay",
                 "is_section_image": false
             }
         ],
@@ -83,7 +83,7 @@
         "score": 700,
         "sections": [
             {
-                "body": "Timestamp: 1630356811 (2021-08-30 20:53:31 +00:00 (UTC))\nEntrypoint: 0x1c7cac\nMachine: AMD64\nMagic: PE32_PLUS\nImage version: 0.0\nLinker version: 14.0\nOperating System version: 6.0\nSubsystem version: 6.0\nSubsystem: WINDOWS_CUI\nNX: True\nPosition Independent: True\nOverlay size: 6064\nChecksum: 0x002e9dcf",
+                "body": "Timestamp: 1630356811 (2021-08-30 20:53:31 +00:00 (UTC))\nEntrypoint: 0x1c7cac\nMachine: AMD64\nMagic: PE32_PLUS\nImage version: 0.0\nLinker version: 14.0\nOperating System version: 6.0\nSubsystem version: 6.0\nSubsystem: WINDOWS_CUI\nNX: True\nPosition Independent: True\nChecksum: 0x002e9dcf",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -939,6 +939,28 @@
                 },
                 "tags": {},
                 "title_text": "Self-signed certificate",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 6064",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.8603335168167, 5.89668014151026, 5.284489879434563, 6.316853296664691, 6.4983202268894225, 6.3362346735220685, 6.545331189950977, 6.335416104094939, 5.08744807601401, 5.260959015473279, 5.882266821183918, 6.5125443047050755, 6.414183648967369, 6.5249195096585755, 6.326028833375867, 5.376737542161726, 5.240410210639186, 5.07206244532888, 6.391602603867666, 6.5372947146120755, 6.522750144851278, 6.547500554758274, 5.877087030644987, 5.225601788901498, 5.224097252589671, 6.305828887091359, 6.483775657128624, 6.524919509658574, 6.551518792427726, 6.303447788276168, 5.022894656168838, 5.207205732484735, 5.770712391065582, 6.512544304705075, 6.45315813669002, 6.4797574194591725, 6.389433239060371, 5.418282371210254, 5.7693615956854165, 5.379652220037932, 6.541312952281527, 6.266642665360812, 5.331347101564464, 5.394350530730389, 6.3238594685685685, 6.459345739166772, 6.319841230899115, 6.531107112135322, 6.440782931736524, 5.603078853312898]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

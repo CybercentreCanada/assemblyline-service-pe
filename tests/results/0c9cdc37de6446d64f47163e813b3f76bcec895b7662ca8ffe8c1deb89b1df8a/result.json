@@ -14,7 +14,7 @@
                 "sha256": "97078f5e93de3208349d1249a997578cdfc6fc29b9f0ccfcee273810fdd6e131",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm4zs331z/icon_0.ico",
+                "path": "/tmp/working_directory/tmpgj03vqal/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "4cdc568f9253e08f4b48bcee0029ea8446b5dbd110b6ddc6c9f63053ccd6f0d9",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm4zs331z/icon_1.ico",
+                "path": "/tmp/working_directory/tmpgj03vqal/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "a24820269bffb7f7fa9a95f0ac9cbed59bb41988580f20ad3b0c44c419cabf20",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm4zs331z/icon_2.ico",
+                "path": "/tmp/working_directory/tmpgj03vqal/icon_2.ico",
                 "is_section_image": false
             },
             {
@@ -38,33 +38,25 @@
                 "sha256": "6a7523d1871523d1c71e7d3a72d97b2f70e7201d6944aedd56966d42d26f6e64",
                 "description": "Icon 3 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm4zs331z/icon_3.ico",
+                "path": "/tmp/working_directory/tmpgj03vqal/icon_3.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "0ae4f31ea5dc71d1dbba28bb07ce043ab0dbdf24fd14164b7cf3d3938793fd81",
+                "sha256": "d4e9fbde300b3d57a575b47aa71d30066f90546a1cfa5ae7775e748d38403fbe",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm4zs331z/features.json",
+                "path": "/tmp/working_directory/tmpgj03vqal/features.json",
                 "is_section_image": false
             }
         ],
         "extracted": [
             {
-                "name": "overlay",
-                "sha256": "9d8350bb933007cceefc66b3dac26ab17a7221b85a96f747c0465279a49e79aa",
-                "description": "overlay extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm4zs331z/overlay",
-                "is_section_image": false
-            },
-            {
                 "name": "certificate.1.1",
                 "sha256": "fd2d7df0220dd65ee23d0090299dfcc356f6f8f7167bae9adf7d08cefaf39d02",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm4zs331z/certificate.1.1",
+                "path": "/tmp/working_directory/tmpgj03vqal/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -72,7 +64,15 @@
                 "sha256": "df5aa7fac68d7b0abf52c404cb0587be2670d4bd8a289691043f5be17fc65373",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpm4zs331z/certificate.1.2",
+                "path": "/tmp/working_directory/tmpgj03vqal/certificate.1.2",
+                "is_section_image": false
+            },
+            {
+                "name": "overlay",
+                "sha256": "9d8350bb933007cceefc66b3dac26ab17a7221b85a96f747c0465279a49e79aa",
+                "description": "overlay extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpgj03vqal/overlay",
                 "is_section_image": false
             }
         ],
@@ -80,10 +80,10 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 1300,
+        "score": 1000,
         "sections": [
             {
-                "body": "Timestamp: 1530291109 (2018-06-29 16:51:49 +00:00 (UTC))\nEntrypoint: 0xd52001\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 2.50\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nOverlay size: 6504\nChecksum: 0x00518351",
+                "body": "Timestamp: 1530291109 (2018-06-29 16:51:49 +00:00 (UTC))\nEntrypoint: 0xd52001\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 2.50\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nChecksum: 0x00518351",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -119,6 +119,17 @@
                 },
                 "tags": {},
                 "title_text": "Mismatch file size",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "SHA_512: 37523d2b94e7835950b91ec5041eef7262195e4f8945e0b1fb48c9369becd52cfb427fec4e9c0bdcaa7bad02d9360614f9af68fdc26c1c6560e65a814b4eae5c\nSHA_384: 53e3ffc31fa66ef33d88969c32f323cf50111d60f54ab66b7de7a0dfe51ff1e7ebc9c071a768a6f65143a14d81055182\nSHA_256: dedd001038d1742fefbedaa2ff57f8eaba14315ebde5f3cea0bd08f6413fdaa6\nSHA_1: 6a4b9e44bef4ba2071f3197787365de385f0cdda\nMD5: 172d3855a5ab073b9d3c9f692096c846",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Authentihash",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -997,24 +1008,6 @@
                 "auto_collapse": false
             },
             {
-                "body": "The signature hash does not exist in the program data :\nSignature hash : SHA_1\nProgram data hashes : ",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 2,
-                "heuristic": {
-                    "heur_id": 1,
-                    "score": 300,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Invalid Signature",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
                 "body": "Subject/Issuer used : CN=WZTeam",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
@@ -1029,6 +1022,28 @@
                 },
                 "tags": {},
                 "title_text": "Self-signed certificate",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 6504",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.242632621261356, 5.4513305795447184, 6.500793707561749, 5.833420257445559, 6.565604585391313, 5.557161388573343, 5.412879494337605, 5.629701082077361, 6.5275858831672995, 6.592396760996863, 5.568489201209709, 5.328174701265394, 6.628693612158416, 6.433962505255159, 5.374429557245885, 5.007629375496523, 6.217636578326627, 6.009461432931211, 5.602711719075147, 5.285033598560025, 6.634456112174931, 6.6229311121419014, 4.9618319711499455, 5.551995396397338, 6.2917549443155325, 6.609684261046409, 6.0277084522103195, 6.546595234279305, 6.497051532022261, 5.345387246216013, 5.174621004472624, 6.45797202455078, 6.588654585457375, 5.239455590158105, 6.119311505645435, 5.674441803547456, 5.438499488511006, 5.393304998789359, 5.673925196456392, 6.5160608831342675, 6.4892687075287165, 5.69855386900734, 5.535512559728983, 6.571367085407829, 6.44346718081116, 5.262084884511866, 5.439209071671178, 6.311062768842104, 6.552357734295821, 5.991628877263271]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

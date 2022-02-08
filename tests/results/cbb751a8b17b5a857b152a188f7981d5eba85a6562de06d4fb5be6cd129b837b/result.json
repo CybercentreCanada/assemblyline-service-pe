@@ -11,28 +11,20 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "e3d20162f38fad1d46a5825896fb3e9a3d2e9e479a671dc552ec02dc68373b21",
+                "sha256": "97a163192ef04fe040531443ce3fdba216f9cce67b959ceb627a176022f8f97c",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_i082m35/features.json",
+                "path": "/tmp/working_directory/tmpa75mc3c1/features.json",
                 "is_section_image": false
             }
         ],
         "extracted": [
             {
-                "name": "overlay",
-                "sha256": "4cb72c23c88bbb9e2c89c328162008909a0ffc6a374da2c091cb288697e4db75",
-                "description": "overlay extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_i082m35/overlay",
-                "is_section_image": false
-            },
-            {
                 "name": "certificate.1.1",
                 "sha256": "1c1983300c10fb262c0b2304b7be15aaba10ae356ebbbb177583dc44774eb080",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_i082m35/certificate.1.1",
+                "path": "/tmp/working_directory/tmpa75mc3c1/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -40,7 +32,7 @@
                 "sha256": "2ade3fa71fa82fed7022b48b5c6dbace27ea4c48b9bfd98db84ee13f7b706fb6",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_i082m35/certificate.1.2",
+                "path": "/tmp/working_directory/tmpa75mc3c1/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -48,7 +40,7 @@
                 "sha256": "f38406e540d7a9d90cb4a9479299640ffb6df9e224ecc7a01c0d9558d8dad77d",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_i082m35/certificate.1.3",
+                "path": "/tmp/working_directory/tmpa75mc3c1/certificate.1.3",
                 "is_section_image": false
             },
             {
@@ -56,7 +48,7 @@
                 "sha256": "6a3c4d89cd6297023831b9c4f718ce71cf8753a2be49e021245ec6ba5066ff00",
                 "description": "certificate.1.4 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_i082m35/certificate.1.4",
+                "path": "/tmp/working_directory/tmpa75mc3c1/certificate.1.4",
                 "is_section_image": false
             },
             {
@@ -64,7 +56,15 @@
                 "sha256": "31a6d7325c3861ba092bc5d3d25a7d4fef62ebf9a3490f65897b87623ecc1295",
                 "description": "certificate.1.5 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_i082m35/certificate.1.5",
+                "path": "/tmp/working_directory/tmpa75mc3c1/certificate.1.5",
+                "is_section_image": false
+            },
+            {
+                "name": "overlay",
+                "sha256": "4cb72c23c88bbb9e2c89c328162008909a0ffc6a374da2c091cb288697e4db75",
+                "description": "overlay extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpa75mc3c1/overlay",
                 "is_section_image": false
             }
         ],
@@ -75,7 +75,7 @@
         "score": 0,
         "sections": [
             {
-                "body": "Timestamp: 1156763755 (2006-08-28 11:15:55 +00:00 (UTC))\nEntrypoint: 0x153330\nMachine: AMD64\nMagic: PE32_PLUS\nImage version: 5.2\nLinker version: 8.0\nOperating System version: 5.2\nSubsystem version: 5.2\nSubsystem: WINDOWS_CUI\nNX: False\nPosition Independent: False\nOverlay size: 6936\nChecksum: 0x003a6bed",
+                "body": "Timestamp: 1156763755 (2006-08-28 11:15:55 +00:00 (UTC))\nEntrypoint: 0x153330\nMachine: AMD64\nMagic: PE32_PLUS\nImage version: 5.2\nLinker version: 8.0\nOperating System version: 5.2\nSubsystem version: 5.2\nSubsystem: WINDOWS_CUI\nNX: False\nPosition Independent: False\nChecksum: 0x003a6bed",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -1015,6 +1015,28 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Certificate - 5",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 6936",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.097194063515846, 5.858858768113653, 5.251824261315482, 6.168486871727439, 6.660132169767997, 6.050988036940245, 5.463169605415867, 6.622397547481406, 5.729799526766905, 5.26630690581269, 6.533143072973731, 6.568370389176893, 5.34745443977762, 5.882204901191614, 6.705201684203181, 6.436251482870417, 4.898211620280561, 5.421731153956182, 6.604482259742749, 6.432423648513295, 5.393132393801938, 6.573082777896704, 6.654701324428693, 5.505366480993022, 5.209572906368531, 5.706568591034293, 6.527108968360278, 6.328363264004591, 5.343983721960435, 5.364239030419373, 6.670993860446611, 6.562221087218094, 5.395291732609414, 5.304854131561735, 5.925485566162861, 6.564843590646872, 6.25690769227027, 5.614274192305439, 5.599584667269709, 6.079347594565113, 6.638690083499321, 6.079097459135865, 5.407103462218172, 5.344473059919065, 6.447113173549028, 6.627828392820709, 5.692949458843002, 5.258224886323489, 6.6943399935245695, 6.43174518464479]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

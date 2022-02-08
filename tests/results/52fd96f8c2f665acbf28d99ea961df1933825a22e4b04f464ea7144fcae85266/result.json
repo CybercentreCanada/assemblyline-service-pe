@@ -14,7 +14,7 @@
                 "sha256": "0dc0ad4e670667a740371fd24fc75d4d01c571b5dfc3fbb0bbf07c87196af765",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpdny9qyv1/icon_0.ico",
+                "path": "/tmp/working_directory/tmp1thlwpg4/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,33 +22,25 @@
                 "sha256": "a3e7aed9d15a4fda96701cb0a8db80f96913d0819b73256288a12ab5726c3b34",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpdny9qyv1/icon_1.ico",
+                "path": "/tmp/working_directory/tmp1thlwpg4/icon_1.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "695636a433296811bb12eede8b12d6ad8d6d8ef786f87f1636caad16e8ebd462",
+                "sha256": "3a8d1e2c7ab5edd600c8f6c8077b74ae0df602042a5f8e3a2ec2f64b1c7397a1",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpdny9qyv1/features.json",
+                "path": "/tmp/working_directory/tmp1thlwpg4/features.json",
                 "is_section_image": false
             }
         ],
         "extracted": [
             {
-                "name": "overlay",
-                "sha256": "89a5a50017b3bc8db9373d5b33d0ec3297676bfda1d824a1e289e1d61cf18578",
-                "description": "overlay extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpdny9qyv1/overlay",
-                "is_section_image": false
-            },
-            {
                 "name": "certificate.1.1",
                 "sha256": "4c7e7ac08b96c9c0d46f20b17eb62f5ae91d499f87f8b64df1aed77c7b200e2c",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpdny9qyv1/certificate.1.1",
+                "path": "/tmp/working_directory/tmp1thlwpg4/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -56,7 +48,15 @@
                 "sha256": "aa2fb386ae0809d4ca16eefdf52bcf1beb37ac68e04f21625d316d09d82be735",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpdny9qyv1/certificate.1.2",
+                "path": "/tmp/working_directory/tmp1thlwpg4/certificate.1.2",
+                "is_section_image": false
+            },
+            {
+                "name": "overlay",
+                "sha256": "89a5a50017b3bc8db9373d5b33d0ec3297676bfda1d824a1e289e1d61cf18578",
+                "description": "overlay extracted from binary's resources",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmp1thlwpg4/overlay",
                 "is_section_image": false
             }
         ],
@@ -67,7 +67,7 @@
         "score": 600,
         "sections": [
             {
-                "body": "Timestamp: 1475715000 (2016-10-06 00:50:00 +00:00 (UTC))\nEntrypoint: 0x33c6e\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 8.0\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: True\nPosition Independent: True\nOverlay size: 1624\nChecksum: 0x00040659",
+                "body": "Timestamp: 1475715000 (2016-10-06 00:50:00 +00:00 (UTC))\nEntrypoint: 0x33c6e\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 8.0\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: True\nPosition Independent: True\nChecksum: 0x00040659",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -476,6 +476,28 @@
                 },
                 "tags": {},
                 "title_text": "Same issuer for all certificates",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 1624",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.881832665522081, 4.173033892020167, 4.12728313431329, 3.7118435602361175, 4.779094498080775, 4.779094498080775, 4.62015169511603, 4.294246013232288, 4.369707376737534, 4.369707376737534, 4.4531888161970326, 4.9837880587523955, 4.923181998146335, 4.9837880587523955, 4.779094498080775, 4.900306619292897, 4.089552452560668, 4.8625759375402735, 4.923181998146335, 4.8625759375402735, 4.9837880587523955, 4.923181998146335, 4.5366702556565315, 4.680757755722091, 4.1272831343132905, 3.8391081341821707, 3.8997141947882312, 4.430313437343594, 4.862575937540274, 4.839700558686835, 5.044394119358456, 4.983788058752395, 4.635006998015215, 4.801969876934212, 4.801969876934213, 4.680757755722092, 4.801969876934213, 4.923181998146335, 4.9837880587523955, 4.476064195050471, 4.294246013232288, 4.923181998146335, 4.331976694984911, 4.150158513166729, 4.779094498080775, 4.9837880587523955, 5.044394119358456, 4.7790944980807755, 4.801969876934213, 0.5916727785823275]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

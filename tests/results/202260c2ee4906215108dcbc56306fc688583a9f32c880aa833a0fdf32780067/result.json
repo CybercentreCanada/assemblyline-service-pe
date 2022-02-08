@@ -11,10 +11,10 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "acb245c0bf826eda8d004cf2b1839366a9c73e69dd2b7ee6e8b1f2b5485a314d",
+                "sha256": "7f002a170f7feb3c94dba28f42136ff214d5d97a25b25e4a3dbdb035e8db609f",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpobrsa41n/features.json",
+                "path": "/tmp/working_directory/tmpntus6958/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "32c014250d2e33b7cbfee7ee6453c6d95177b959cc3109bd8698fd8baa25e4ee",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpobrsa41n/overlay",
+                "path": "/tmp/working_directory/tmpntus6958/overlay",
                 "is_section_image": false
             }
         ],
@@ -35,7 +35,7 @@
         "score": 500,
         "sections": [
             {
-                "body": "Timestamp: 1530079054 (2018-06-27 05:57:34 +00:00 (UTC))\nEntrypoint: 0x3a84\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 10.0\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_GUI\nNX: True\nPosition Independent: False\nOverlay size: 9\nChecksum: 0x000469ba",
+                "body": "Timestamp: 1530079054 (2018-06-27 05:57:34 +00:00 (UTC))\nEntrypoint: 0x3a84\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 10.0\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_GUI\nNX: True\nPosition Independent: False\nChecksum: 0x000469ba",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
@@ -501,6 +501,28 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Summary",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Overlay size: 9",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Overlay",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [-0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 1,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }
