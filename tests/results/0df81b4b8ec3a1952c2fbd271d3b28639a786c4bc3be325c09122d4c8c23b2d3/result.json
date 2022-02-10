@@ -14,7 +14,7 @@
                 "sha256": "681763f0d5e5c43f0f3cb9fe22a1187ad6185525e9363601e70e694709da01e1",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpbn1nci2b/features.json",
+                "path": "/tmp/working_directory/tmpfflv22u5/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "cafac901d78c530de08461f224cdf695b9a38a46d370612ccc0e665cc70eba71",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpbn1nci2b/overlay",
+                "path": "/tmp/working_directory/tmpfflv22u5/overlay",
                 "is_section_image": false
             }
         ],
@@ -35,9 +35,9 @@
         "score": 700,
         "sections": [
             {
-                "body": "Timestamp: 1160092538 (2006-10-05 23:55:38 +00:00 (UTC))\nEntrypoint: 0x7f56\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 6.0\nOperating System version: 4.0\nSubsystem version: 4.0\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: False\nChecksum: 0x00000000",
+                "body": "[[\"Timestamp\", \"1160092538 (2006-10-05 23:55:38 +00:00 (UTC))\"], [\"Entrypoint\", \"0x7f56\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"6.0\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 0,
                 "heuristic": null,
                 "tags": {
@@ -57,9 +57,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Hash: 5a9da3b45c94fe748113796b76477e99",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"5a9da3b45c94fe748113796b76477e99\"]]], [\"TABLE\", [{\"ID\": \"0x000606c7\", \"Compiler Information\": \"[RES] VS98 (6.0) SP6 cvtres build 1736\", \"Count\": 1}, {\"ID\": \"0x00312354\", \"Compiler Information\": \"Unknown object 0x00312354\", \"Count\": 4}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 196}, {\"ID\": \"0x00131f62\", \"Compiler Information\": \"Unknown object 0x00131f62\", \"Count\": 13}, {\"ID\": \"0x001923fa\", \"Compiler Information\": \"Unknown object 0x001923fa\", \"Count\": 2}, {\"ID\": \"0x001c23da\", \"Compiler Information\": \"Unknown object 0x001c23da\", \"Count\": 1}, {\"ID\": \"0x00000000\", \"Compiler Information\": \"[---] Unmarked objects (old)\", \"Count\": 7}, {\"ID\": \"0x00041f6f\", \"Compiler Information\": \"Unknown object 0x00041f6f\", \"Count\": 2}, {\"ID\": \"0x000a1f6f\", \"Compiler Information\": \"Unknown object 0x000a1f6f\", \"Count\": 11}, {\"ID\": \"0x000e1c83\", \"Compiler Information\": \"Unknown object 0x000e1c83\", \"Count\": 2}]]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -78,20 +78,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "[{\"ID\": \"0x000606c7\", \"Compiler Information\": \"[RES] VS98 (6.0) SP6 cvtres build 1736\", \"Count\": 1}, {\"ID\": \"0x00312354\", \"Compiler Information\": \"Unknown object 0x00312354\", \"Count\": 4}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 196}, {\"ID\": \"0x00131f62\", \"Compiler Information\": \"Unknown object 0x00131f62\", \"Count\": 13}, {\"ID\": \"0x001923fa\", \"Compiler Information\": \"Unknown object 0x001923fa\", \"Count\": 2}, {\"ID\": \"0x001c23da\", \"Compiler Information\": \"Unknown object 0x001c23da\", \"Count\": 1}, {\"ID\": \"0x00000000\", \"Compiler Information\": \"[---] Unmarked objects (old)\", \"Count\": 7}, {\"ID\": \"0x00041f6f\", \"Compiler Information\": \"Unknown object 0x00041f6f\", \"Count\": 2}, {\"ID\": \"0x000a1f6f\", \"Compiler Information\": \"Unknown object 0x000a1f6f\", \"Count\": 11}, {\"ID\": \"0x000e1c83\", \"Compiler Information\": \"Unknown object 0x000e1c83\", \"Count\": 2}]",
+                "body": "[[\"File Size\", 524288], [\"Virtual Size\", 356352]]",
                 "classification": "TLP:W",
-                "body_format": "TABLE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entries",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "File Size: 524288\nVirtual Size: 356352",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 24,
@@ -107,9 +96,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "SHA_512: 37ff04a31040b5ce0f48711f0fc8f4a64b5d7e57b789d25bbc6b2084c5752e6d206d5df43383ac2f33fbedaf00096c9ad488db76961900f7e70ed5a195cfd6a1\nSHA_384: 6c8e3de44195a04a25aeb35ff17e6afc70bffb3981ab918d5805bdca0ed04950f3c530e30976958d94fc91fa54aaa3fd\nSHA_256: 9a469e5c874129a0f33dfa7a8c12f81630a5608404edf1333d8a4b5f2c52f8d1\nSHA_1: aa5c84f9ada35ae6960cc9d9bee0469e21a96b0f\nMD5: 4a68ab60c082c79845be83f4fed2ac8b",
+                "body": "[[\"SHA512\", \"37ff04a31040b5ce0f48711f0fc8f4a64b5d7e57b789d25bbc6b2084c5752e6d206d5df43383ac2f33fbedaf00096c9ad488db76961900f7e70ed5a195cfd6a1\"], [\"SHA384\", \"6c8e3de44195a04a25aeb35ff17e6afc70bffb3981ab918d5805bdca0ed04950f3c530e30976958d94fc91fa54aaa3fd\"], [\"SHA256\", \"9a469e5c874129a0f33dfa7a8c12f81630a5608404edf1333d8a4b5f2c52f8d1\"], [\"SHA1\", \"aa5c84f9ada35ae6960cc9d9bee0469e21a96b0f\"], [\"MD5\", \"4a68ab60c082c79845be83f4fed2ac8b\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
@@ -118,9 +107,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Optional header checksum: 0x00000000\nComputed checksum: 0x00083f0d",
+                "body": "[[\"Optional header checksum\", \"0x00000000\"], [\"Computed checksum\", \"0x00083f0d\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 23,
@@ -147,9 +136,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Entropy: 5.759725371730042\nEntropy without padding: 6.201780977248346\nOffset: 4096\nSize: 32768\nVirtual Size: 28965\nCharacteristics: CNT_CODE, MEM_EXECUTE, MEM_READ\nMD5: 354c49a6161b7fb82a08db6a9eeb2d62",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.759725371730042], [\"Entropy without padding\", 6.201780977248346], [\"Offset\", 4096], [\"Size\", 32768], [\"Virtual Size\", 28965], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"354c49a6161b7fb82a08db6a9eeb2d62\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.541664798186069, 5.199764411822351, 5.65020307903756, 5.646261238181013, 5.888367903201608, 6.0935293007502995, 6.2344571467723, 5.960031692378868, 5.764610396764186, 5.672746575317396, 5.661118213683478, 5.788544317251147, 5.537196689358499, 4.717763629553195, 5.851465564748451, 5.664504352857779, 5.776677622225419, 5.758572781757485, 5.883750472279787, 5.974433292698961, 5.60600781803848, 5.65262324686563, 5.835497791166032, 5.282191165829277, 5.627075851082424, 5.806198805834136, 5.867179211314872, 5.751738976441529, 5.630499999849219, 5.714046691546217, 6.025132805693354, 5.8086047863817605, 5.5897774243508955, 5.589267719048612, 5.815011699290567, 5.620574950941077, 5.729614782471407, 5.672998096905473, 5.4890271452242185, 5.704682084137198, 5.838208831487811, 6.0139955766554865, 5.719564129068974, 5.867149662369778, 1.101162329756417, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -171,20 +160,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.541664798186069, 5.199764411822351, 5.65020307903756, 5.646261238181013, 5.888367903201608, 6.0935293007502995, 6.2344571467723, 5.960031692378868, 5.764610396764186, 5.672746575317396, 5.661118213683478, 5.788544317251147, 5.537196689358499, 4.717763629553195, 5.851465564748451, 5.664504352857779, 5.776677622225419, 5.758572781757485, 5.883750472279787, 5.974433292698961, 5.60600781803848, 5.65262324686563, 5.835497791166032, 5.282191165829277, 5.627075851082424, 5.806198805834136, 5.867179211314872, 5.751738976441529, 5.630499999849219, 5.714046691546217, 6.025132805693354, 5.8086047863817605, 5.5897774243508955, 5.589267719048612, 5.815011699290567, 5.620574950941077, 5.729614782471407, 5.672998096905473, 5.4890271452242185, 5.704682084137198, 5.838208831487811, 6.0139955766554865, 5.719564129068974, 5.867149662369778, 1.101162329756417, -0.0, -0.0, -0.0, -0.0, -0.0]}}",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.099691072771993], [\"Entropy without padding\", 5.3306855800912185], [\"Offset\", 36864], [\"Size\", 8192], [\"Virtual Size\", 5652], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"a953056930475b3fcbf24c816c60f57e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.1875638957567767, 3.2883618787965556, 3.212662251561789, 3.1536316551919095, 3.0058271173197166, 2.4892867197472, 2.2346557490211985, 2.835669806894489, 3.1882494357002393, 3.2266571765338328, 3.143919757544698, 3.059441625339673, 4.545883399167824, 4.582803222408278, 4.720949049322321, 4.622891192433406, 4.717431745654654, 4.821515674883009, 5.128348693746478, 4.665417095587968, 4.928752862996052, 5.055113869627006, 4.67049789514598, 4.556073500320664, 4.569158011049232, 4.725400439607929, 4.599815431488982, 4.578373029484305, 4.342695216365506, 4.510463805935384, 4.83239923896224, 4.817788221424436, 4.630686800145478, 4.6661753755558095, 2.5504085523352793, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
                 "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Entropy: 4.099691072771993\nEntropy without padding: 5.3306855800912185\nOffset: 36864\nSize: 8192\nVirtual Size: 5652\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ\nMD5: a953056930475b3fcbf24c816c60f57e",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -206,20 +184,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.1875638957567767, 3.2883618787965556, 3.212662251561789, 3.1536316551919095, 3.0058271173197166, 2.4892867197472, 2.2346557490211985, 2.835669806894489, 3.1882494357002393, 3.2266571765338328, 3.143919757544698, 3.059441625339673, 4.545883399167824, 4.582803222408278, 4.720949049322321, 4.622891192433406, 4.717431745654654, 4.821515674883009, 5.128348693746478, 4.665417095587968, 4.928752862996052, 5.055113869627006, 4.67049789514598, 4.556073500320664, 4.569158011049232, 4.725400439607929, 4.599815431488982, 4.578373029484305, 4.342695216365506, 4.510463805935384, 4.83239923896224, 4.817788221424436, 4.630686800145478, 4.6661753755558095, 2.5504085523352793, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.751920080799498], [\"Entropy without padding\", 5.0222722249100915], [\"Offset\", 45056], [\"Size\", 16384], [\"Virtual Size\", 14780], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"066a4cf2b1f9cd631453b9fa577a2301\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.476552327821904, 4.784772890522303, 4.677016761842811, 4.564460191320452, 4.442545143760038, 4.310555025428953, 4.500773550752967, 4.791256870201838, 4.672428570250299, 4.959541474125805, 4.663614351888782, 4.96955177849086, 4.888483126231874, 4.315270651000042, 4.635959843420642, 4.281247542399758, 4.625967953013962, 4.5969067464376545, 4.4315833787488454, 4.668688578535514, 4.904992238170433, 4.582678593578712, 4.309167397052001, 4.312232552462965, 4.34096370384027, 4.711481275606358, 4.913647547325447, 4.841423514623936, 4.845405737109321, 4.953996637211295, 5.099420937490011, 5.062385916347304, 4.657904366469611, 4.96546745116624, 4.944440274500285, 4.8371923801944705, 4.825200985345099, 4.77203441115236, 4.959943279683165, 5.021327755818136, 5.86771757388912, 0.02987209017334897, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
                 "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Entropy: 4.751920080799498\nEntropy without padding: 5.0222722249100915\nOffset: 45056\nSize: 16384\nVirtual Size: 14780\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\nMD5: 066a4cf2b1f9cd631453b9fa577a2301",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -241,20 +208,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.476552327821904, 4.784772890522303, 4.677016761842811, 4.564460191320452, 4.442545143760038, 4.310555025428953, 4.500773550752967, 4.791256870201838, 4.672428570250299, 4.959541474125805, 4.663614351888782, 4.96955177849086, 4.888483126231874, 4.315270651000042, 4.635959843420642, 4.281247542399758, 4.625967953013962, 4.5969067464376545, 4.4315833787488454, 4.668688578535514, 4.904992238170433, 4.582678593578712, 4.309167397052001, 4.312232552462965, 4.34096370384027, 4.711481275606358, 4.913647547325447, 4.841423514623936, 4.845405737109321, 4.953996637211295, 5.099420937490011, 5.062385916347304, 4.657904366469611, 4.96546745116624, 4.944440274500285, 4.8371923801944705, 4.825200985345099, 4.77203441115236, 4.959943279683165, 5.021327755818136, 5.86771757388912, 0.02987209017334897, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.278523281826534], [\"Entropy without padding\", 4.30202693472686], [\"Offset\", 61440], [\"Size\", 294912], [\"Virtual Size\", 292680], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"af94a849d13149c2a4ac2b501ab4c215\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.7038412301419865, -0.0, -0.0, -0.0, -0.0, -0.0, 0.10253343073025273, -0.0, -0.0, -0.0, -0.0, 0.10760468199222933, -0.0, -0.0, -0.0, -0.0, -0.0, 4.230043817165825, 4.665302757194349, 4.31866556960888, 3.3927565677932177, 3.4889877274087038, 3.8334860047406423, 4.309489179415599, 4.454923071848791, 4.632639938601392, 4.682316318610608, 4.844124358806859, 4.929796446430825, 5.069427638051573, 4.708993084098596, 4.476963505904432, 4.207256498274772, 3.7414329644476187, 3.023075230493755, 2.4599699679709714, 1.7876988333465398, 3.2365033265942107, 4.1925001190966045, 5.880925855821296, 4.248677163219176, 3.4715853866587687, 4.093315868709753, 3.2736839397715514, 3.2458785336552785, 3.2350767265676676, 3.218288036759085, 3.1549958614958857, 4.48371127111705, 3.346283711857653]}}]]",
                 "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Entropy: 4.278523281826534\nEntropy without padding: 4.30202693472686\nOffset: 61440\nSize: 294912\nVirtual Size: 292680\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ\nMD5: af94a849d13149c2a4ac2b501ab4c215",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -272,17 +228,6 @@
                     }
                 },
                 "title_text": "Section - .rsrc",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.7038412301419865, -0.0, -0.0, -0.0, -0.0, -0.0, 0.10253343073025273, -0.0, -0.0, -0.0, -0.0, 0.10760468199222933, -0.0, -0.0, -0.0, -0.0, -0.0, 4.230043817165825, 4.665302757194349, 4.31866556960888, 3.3927565677932177, 3.4889877274087038, 3.8334860047406423, 4.309489179415599, 4.454923071848791, 4.632639938601392, 4.682316318610608, 4.844124358806859, 4.929796446430825, 5.069427638051573, 4.708993084098596, 4.476963505904432, 4.207256498274772, 3.7414329644476187, 3.023075230493755, 2.4599699679709714, 1.7876988333465398, 3.2365033265942107, 4.1925001190966045, 5.880925855821296, 4.248677163219176, 3.4715853866587687, 4.093315868709753, 3.2736839397715514, 3.2458785336552785, 3.2350767265676676, 3.218288036759085, 3.1549958614958857, 4.48371127111705, 3.346283711857653]}}",
-                "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -427,9 +372,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Languages available: ARABIC, CHINESE, CZECH, DANISH, GERMAN, GREEK, ENGLISH, SPANISH, FINNISH, FRENCH, HEBREW, HUNGARIAN, ITALIAN, JAPANESE, KOREAN, DUTCH, NORWEGIAN, POLISH, PORTUGUESE, RUSSIAN, SLOVAK, SWEDISH, THAI, TURKISH, SLOVENIAN\nSublanguages available: ENGLISH_US, SWEDISH, CHINESE_SIMPLIFIED, ITALIAN, NORWEGIAN_BOKMAL, PORTUGUESE_BRAZILIAN, PORTUGUESE, FRENCH, DEFAULT, ARABIC_SAUDI_ARABIA, SPANISH_MEXICAN, GERMAN, SPANISH_MODERN\nManifest: \\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00",
+                "body": "[[\"Languages\", \"ARABIC, CHINESE, CZECH, DANISH, GERMAN, GREEK, ENGLISH, SPANISH, FINNISH, FRENCH, HEBREW, HUNGARIAN, ITALIAN, JAPANESE, KOREAN, DUTCH, NORWEGIAN, POLISH, PORTUGUESE, RUSSIAN, SLOVAK, SWEDISH, THAI, TURKISH, SLOVENIAN\"], [\"Sublanguages\", \"ENGLISH_US, SWEDISH, CHINESE_SIMPLIFIED, ITALIAN, NORWEGIAN_BOKMAL, PORTUGUESE_BRAZILIAN, PORTUGUESE, FRENCH, DEFAULT, ARABIC_SAUDI_ARABIA, SPANISH_MEXICAN, GERMAN, SPANISH_MODERN\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 0,
                 "heuristic": null,
                 "tags": {
@@ -528,9 +473,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Type: 0",
+                "body": "[[\"Type\", 0]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
@@ -539,9 +484,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "file_date_LS: 0\nfile_date_MS: 0\nfile_flags: 0\nfile_flags_mask: 63\nfile_os: NT_WINDOWS32\nfile_subtype: UNKNOWN\nfile_type: UNKNOWN\nfile_version_LS: 65592\nfile_version_MS: 65536\nproduct_version_LS: 65592\nproduct_version_MS: 65536\nsignature: 4277077181\nstruct_version: 65536",
+                "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 63], [\"file_os\", \"NT_WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"UNKNOWN\"], [\"file_version_LS\", 65592], [\"file_version_MS\", 65536], [\"product_version_LS\", 65592], [\"product_version_MS\", 65536], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 2,
                 "heuristic": null,
                 "tags": {},
@@ -550,9 +495,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "key: StringFileInfo\ntype: 1",
+                "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 2,
                 "heuristic": null,
                 "tags": {
@@ -571,9 +516,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "key: 040904e2\ntype: 1\nlang: ENGLISH\nsublang: ENGLISH_US\ncode_page: WINDOWS_1250",
+                "body": "[[\"key\", \"040904e2\"], [\"type\", 1], [\"lang\", \"ENGLISH\"], [\"sublang\", \"ENGLISH_US\"], [\"code_page\", \"WINDOWS_1250\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 3,
                 "heuristic": null,
                 "tags": {},
@@ -582,9 +527,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "ProductVersion: 1 , 0 , 1 , 56 \nProductName: NVIDIA Corporation\nLegalCopyright: (C) NVIDIA Corporation. All rights reserved.\nFileVersion: 1 , 0 , 1 , 56 \nFileDescription: NVIDIA Uninstaller Utility\nCompanyName: NVIDIA Corporation\nInternalName: NVUnistall",
+                "body": "[[\"ProductVersion\", \"1 , 0 , 1 , 56 \"], [\"ProductName\", \"NVIDIA Corporation\"], [\"LegalCopyright\", \"(C) NVIDIA Corporation. All rights reserved.\"], [\"FileVersion\", \"1 , 0 , 1 , 56 \"], [\"FileDescription\", \"NVIDIA Uninstaller Utility\"], [\"CompanyName\", \"NVIDIA Corporation\"], [\"InternalName\", \"NVUnistall\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 4,
                 "heuristic": null,
                 "tags": {},
@@ -593,9 +538,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "key: VarFileInfo\ntype: 1\ntranslations: 81921033",
+                "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"81921033\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 2,
                 "heuristic": null,
                 "tags": {},
@@ -615,24 +560,13 @@
                 "auto_collapse": false
             },
             {
-                "body": "Overlay size: 167936",
+                "body": "[[\"TEXT\", \"Overlay size: 167936\"], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.8855311554587151, 4.980687909074379, 6.217078785737909, 5.98959697570086, 6.090928399925535, 5.999483622106007, 6.064718031470336, 5.959633372901013, 5.108975742863442, 1.1932912312863693, 5.256887776786809, 2.3778660535878786, 4.310900402669231, 4.8208614586511525, 5.087612905148688, 3.3061653514475906, 4.036676702096534, 4.270816626849374, 3.8114265323470575, 4.058967550439969, 4.46518747337971, 5.406528569916311, 5.134936626611161, 5.21196624186826, 5.065472974216928, 2.5322566712784154, 5.59775472561377, 4.268248950397961, 3.4626575318989867, 3.438201680543395, 4.185760721914677, 4.673634016649909, 6.494978218314874, 4.2992083139971085, 3.5311946784864654, 3.4493212698051026, 4.190327414240733, 3.286803502364348, 3.274312198746532, 3.333517457643191, 3.243764383006205, 3.1849222352198088, 3.255741947557079, 3.1884544173105502, 3.2329692993070456, 3.1572900294478847, 4.070084982759383, 4.274558316485271, 4.5113491229105165, 1.3598957877003461]}}]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 0,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Overlay",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.8855311554587151, 4.980687909074379, 6.217078785737909, 5.98959697570086, 6.090928399925535, 5.999483622106007, 6.064718031470336, 5.959633372901013, 5.108975742863442, 1.1932912312863693, 5.256887776786809, 2.3778660535878786, 4.310900402669231, 4.8208614586511525, 5.087612905148688, 3.3061653514475906, 4.036676702096534, 4.270816626849374, 3.8114265323470575, 4.058967550439969, 4.46518747337971, 5.406528569916311, 5.134936626611161, 5.21196624186826, 5.065472974216928, 2.5322566712784154, 5.59775472561377, 4.268248950397961, 3.4626575318989867, 3.438201680543395, 4.185760721914677, 4.673634016649909, 6.494978218314874, 4.2992083139971085, 3.5311946784864654, 3.4493212698051026, 4.190327414240733, 3.286803502364348, 3.274312198746532, 3.333517457643191, 3.243764383006205, 3.1849222352198088, 3.255741947557079, 3.1884544173105502, 3.2329692993070456, 3.1572900294478847, 4.070084982759383, 4.274558316485271, 4.5113491229105165, 1.3598957877003461]}}",
-                "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

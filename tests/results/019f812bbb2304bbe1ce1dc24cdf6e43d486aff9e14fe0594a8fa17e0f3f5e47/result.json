@@ -14,7 +14,7 @@
                 "sha256": "bbf7284451c3fda574b7533d9ce2ca33628da09245e04dcbfb003df97e866160",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpiioqp8hl/features.json",
+                "path": "/tmp/working_directory/tmp_4ohnsuo/features.json",
                 "is_section_image": false
             }
         ],
@@ -26,9 +26,9 @@
         "score": 700,
         "sections": [
             {
-                "body": "Timestamp: 1239670995 (2009-04-14 01:03:15 +00:00 (UTC))\nEntrypoint: 0x0\nMachine: I386\nMagic: ???\nImage version: 0.0\nLinker version: 9.0\nOperating System version: 5.0\nSubsystem version: 5.0\nSubsystem: WINDOWS_CUI\nNX: False\nPosition Independent: False\nChecksum: 0x00000000",
+                "body": "[[\"Timestamp\", \"1239670995 (2009-04-14 01:03:15 +00:00 (UTC))\"], [\"Entrypoint\", \"0x0\"], [\"Machine\", \"I386\"], [\"Magic\", \"???\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"9.0\"], [\"Operating System version\", \"5.0\"], [\"Subsystem version\", \"5.0\"], [\"Subsystem\", \"WINDOWS_CUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 0,
                 "heuristic": null,
                 "tags": {
@@ -48,9 +48,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Magic Name: ???\nMagic Value: 0",
+                "body": "[[\"Magic Name\", \"???\"], [\"Magic Value\", 0]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 18,
@@ -66,9 +66,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "File Size: 350\nVirtual Size: 4096",
+                "body": "[[\"File Size\", 350], [\"Virtual Size\", 4096]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 24,
@@ -86,7 +86,7 @@
             {
                 "body": null,
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 17,
@@ -102,9 +102,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Optional header checksum: 0x00000000\nComputed checksum: 0x0000e593",
+                "body": "[[\"Optional header checksum\", \"0x00000000\"], [\"Computed checksum\", \"0x0000e593\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 23,
@@ -138,9 +138,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Overlay size: 0",
+                "body": "[[\"TEXT\", \"Overlay size: 0\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 0,
                 "heuristic": null,
                 "tags": {},

@@ -14,7 +14,7 @@
                 "sha256": "01bbc368eb3c9ebd5ea9c211a3d502a170e952a935b001445e4ef4d59ef7388e",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpacsjfp8y/icon_0.ico",
+                "path": "/tmp/working_directory/tmpev4g5pjr/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "b447a1d9ceb2eb4ffafcdbebdac8654f0796c81eb2e2712c12f7426264475ec8",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpacsjfp8y/features.json",
+                "path": "/tmp/working_directory/tmpev4g5pjr/features.json",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
                 "sha256": "19b04b9c1d7d7affa39d767a995660e9a239b480f286a3f57925adce430050cd",
                 "description": "binary_0_10_2147484742_1031 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpacsjfp8y/binary_0_10_2147484742_1031",
+                "path": "/tmp/working_directory/tmpev4g5pjr/binary_0_10_2147484742_1031",
                 "is_section_image": false
             },
             {
@@ -40,7 +40,7 @@
                 "sha256": "e8c94324346a70c2ae8d2320816bbc579578b443af0f80abba75865892f15974",
                 "description": "binary_0_10_2147484754_1031 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpacsjfp8y/binary_0_10_2147484754_1031",
+                "path": "/tmp/working_directory/tmpev4g5pjr/binary_0_10_2147484754_1031",
                 "is_section_image": false
             },
             {
@@ -48,7 +48,7 @@
                 "sha256": "35282afa633ddc4471485446b2a2222c3389d144d6692bac1db08cc0f1952e14",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpacsjfp8y/certificate.1.1",
+                "path": "/tmp/working_directory/tmpev4g5pjr/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -56,7 +56,7 @@
                 "sha256": "5e6d2f88f617dc8b809aee712445a41b3cde26af874a221a9dc98ea1dc68e3d5",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpacsjfp8y/certificate.1.2",
+                "path": "/tmp/working_directory/tmpev4g5pjr/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -64,7 +64,7 @@
                 "sha256": "d0123a6b47391ad1d846dba246c8d29fb34207933613ff3a87abc14020c32734",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpacsjfp8y/overlay",
+                "path": "/tmp/working_directory/tmpev4g5pjr/overlay",
                 "is_section_image": false
             }
         ],
@@ -93,9 +93,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Timestamp: 1486476020 (2017-02-07 14:00:20 +00:00 (UTC))\nEntrypoint: 0x1ee910\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 11.0\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_GUI\nNX: False\nPosition Independent: True\nChecksum: 0x0017c1e0",
+                "body": "[[\"Timestamp\", \"1486476020 (2017-02-07 14:00:20 +00:00 (UTC))\"], [\"Entrypoint\", \"0x1ee910\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"11.0\"], [\"Operating System version\", \"5.1\"], [\"Subsystem version\", \"5.1\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", true], [\"Checksum\", \"0x0017c1e0\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 0,
                 "heuristic": null,
                 "tags": {
@@ -115,9 +115,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Hash: c00fbeb3d5a73fb916958895bc6eccfb",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"c00fbeb3d5a73fb916958895bc6eccfb\"]]], [\"TABLE\", [{\"ID\": \"0x00ccee66\", \"Compiler Information\": \"[LNK] VS2012 UPD4 build 61030\", \"Count\": 1}, {\"ID\": \"0x00970000\", \"Compiler Information\": \"Unknown object 0x00970000\", \"Count\": 1}, {\"ID\": \"0x00c9ee66\", \"Compiler Information\": \"[RES] VS2012 UPD4 build 61030\", \"Count\": 1}, {\"ID\": \"0x00cdee66\", \"Compiler Information\": \"[ASM] VS2012 UPD4 build 61030\", \"Count\": 2}, {\"ID\": \"0x00d8ee66\", \"Compiler Information\": \"Unknown object 0x00d8ee66\", \"Count\": 77}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 532}, {\"ID\": \"0x00937809\", \"Compiler Information\": \"[IMP] VS2008 SP1 build 30729\", \"Count\": 37}, {\"ID\": \"0x00837809\", \"Compiler Information\": \"[ C ] VS2008 SP1 build 30729\", \"Count\": 9}, {\"ID\": \"0x00cfc6f1\", \"Compiler Information\": \"Unknown object 0x00cfc6f1\", \"Count\": 50}, {\"ID\": \"0x00cec6f1\", \"Compiler Information\": \"Unknown object 0x00cec6f1\", \"Count\": 174}, {\"ID\": \"0x00cdc6f1\", \"Compiler Information\": \"Unknown object 0x00cdc6f1\", \"Count\": 51}, {\"ID\": \"0x00c7a09e\", \"Compiler Information\": \"Unknown object 0x00c7a09e\", \"Count\": 1}]]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -136,20 +136,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "[{\"ID\": \"0x00ccee66\", \"Compiler Information\": \"[LNK] VS2012 UPD4 build 61030\", \"Count\": 1}, {\"ID\": \"0x00970000\", \"Compiler Information\": \"Unknown object 0x00970000\", \"Count\": 1}, {\"ID\": \"0x00c9ee66\", \"Compiler Information\": \"[RES] VS2012 UPD4 build 61030\", \"Count\": 1}, {\"ID\": \"0x00cdee66\", \"Compiler Information\": \"[ASM] VS2012 UPD4 build 61030\", \"Count\": 2}, {\"ID\": \"0x00d8ee66\", \"Compiler Information\": \"Unknown object 0x00d8ee66\", \"Count\": 77}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 532}, {\"ID\": \"0x00937809\", \"Compiler Information\": \"[IMP] VS2008 SP1 build 30729\", \"Count\": 37}, {\"ID\": \"0x00837809\", \"Compiler Information\": \"[ C ] VS2008 SP1 build 30729\", \"Count\": 9}, {\"ID\": \"0x00cfc6f1\", \"Compiler Information\": \"Unknown object 0x00cfc6f1\", \"Count\": 50}, {\"ID\": \"0x00cec6f1\", \"Compiler Information\": \"Unknown object 0x00cec6f1\", \"Count\": 174}, {\"ID\": \"0x00cdc6f1\", \"Compiler Information\": \"Unknown object 0x00cdc6f1\", \"Count\": 51}, {\"ID\": \"0x00c7a09e\", \"Compiler Information\": \"Unknown object 0x00c7a09e\", \"Count\": 1}]",
+                "body": "[[\"File Size\", 1496584], [\"Virtual Size\", 3178496]]",
                 "classification": "TLP:W",
-                "body_format": "TABLE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entries",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "File Size: 1496584\nVirtual Size: 3178496",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 24,
@@ -165,9 +154,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "SHA_512: 4640d6983eee82e4120f07ba2ed3623ce443d5443794c2d6bf2d79483dea3c5e1777d7333935fd064948cac46d8e7001ec97d18fd8092992d4863d5e0f0d5cde\nSHA_384: 5cd5edbfc396d0f4cdcdd4a31a4a24016742101af78a2cafabb28b38ee33661394ff0064ff63f25775891a97f8a254b1\nSHA_256: ea750ba8fe4cee2a92c5f2e371107ecd33c063453622a4b694374cfbd1ba9b95\nSHA_1: 938edab77ea11734cb3e00ccf755e55d6338297b\nMD5: 88943444b97b4beb008484ba76c8879a",
+                "body": "[[\"SHA512\", \"4640d6983eee82e4120f07ba2ed3623ce443d5443794c2d6bf2d79483dea3c5e1777d7333935fd064948cac46d8e7001ec97d18fd8092992d4863d5e0f0d5cde\"], [\"SHA384\", \"5cd5edbfc396d0f4cdcdd4a31a4a24016742101af78a2cafabb28b38ee33661394ff0064ff63f25775891a97f8a254b1\"], [\"SHA256\", \"ea750ba8fe4cee2a92c5f2e371107ecd33c063453622a4b694374cfbd1ba9b95\"], [\"SHA1\", \"938edab77ea11734cb3e00ccf755e55d6338297b\"], [\"MD5\", \"88943444b97b4beb008484ba76c8879a\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
@@ -187,9 +176,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Entropy: 0.0\nEntropy without padding: -0.0\nOffset: 1024\nSize: 0\nVirtual Size: 1679360\nCharacteristics: CNT_UNINITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE\nMD5: d41d8cd98f00b204e9800998ecf8427e",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", -0.0], [\"Offset\", 1024], [\"Size\", 0], [\"Virtual Size\", 1679360], [\"Characteristics\", \"CNT_UNINITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -211,20 +200,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 7.936099015021149], [\"Entropy without padding\", 7.936099015021149], [\"Offset\", 1024], [\"Size\", 343040], [\"Virtual Size\", 344064], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d2c8794a3e39050d32b749602c4a4094\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.842905700563568, 7.881546037625594, 7.874069435731891, 7.898893338357213, 7.883541801797358, 7.911133639418355, 7.8207061142677095, 7.459792905051836, 7.891683322033214, 7.875895855986591, 7.883578552216452, 7.900010121126985, 7.881367261287721, 7.885214607965897, 7.902177149658595, 7.880535966681048, 7.8951041430392594, 7.8891235018085695, 7.89454697470843, 7.86581082577765, 7.882823816617637, 7.901644200663436, 7.879187288987949, 7.888563611201744, 7.871712445452961, 7.897097986315131, 7.886707278309429, 7.882279411272846, 7.881112728824733, 7.874561949979576, 7.883543885472764, 7.890926397451702, 7.906495323271482, 7.891348083861796, 7.906108816475714, 7.897936815586702, 7.914889354023799, 7.891792625830693, 7.910410485427787, 7.897725202734444, 7.798192215648923, 7.756471204016972, 7.792259337659784, 7.706121997874004, 7.845390115716841, 7.591751301638727, 7.723636276424822, 7.809431413174685, 7.77157552828618, 7.511719919415455]}}]]",
                 "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Entropy: 7.936099015021149\nEntropy without padding: 7.936099015021149\nOffset: 1024\nSize: 343040\nVirtual Size: 344064\nCharacteristics: CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE\nMD5: d2c8794a3e39050d32b749602c4a4094",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -246,9 +224,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Section name: UPX1\nEntropy: 7.936099015021149\nEntropy without padding: 7.936099015021149",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Section name\", \"UPX1\"], [\"Entropy:\", 7.936099015021149], [\"Entropy without padding\", 7.936099015021149]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.842905700563568, 7.881546037625594, 7.874069435731891, 7.898893338357213, 7.883541801797358, 7.911133639418355, 7.8207061142677095, 7.459792905051836, 7.891683322033214, 7.875895855986591, 7.883578552216452, 7.900010121126985, 7.881367261287721, 7.885214607965897, 7.902177149658595, 7.880535966681048, 7.8951041430392594, 7.8891235018085695, 7.89454697470843, 7.86581082577765, 7.882823816617637, 7.901644200663436, 7.879187288987949, 7.888563611201744, 7.871712445452961, 7.897097986315131, 7.886707278309429, 7.882279411272846, 7.881112728824733, 7.874561949979576, 7.883543885472764, 7.890926397451702, 7.906495323271482, 7.891348083861796, 7.906108816475714, 7.897936815586702, 7.914889354023799, 7.891792625830693, 7.910410485427787, 7.897725202734444, 7.798192215648923, 7.756471204016972, 7.792259337659784, 7.706121997874004, 7.845390115716841, 7.591751301638727, 7.723636276424822, 7.809431413174685, 7.77157552828618, 7.511719919415455]}}]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 2,
                 "heuristic": {
                     "heur_id": 4,
@@ -264,20 +242,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.842905700563568, 7.881546037625594, 7.874069435731891, 7.898893338357213, 7.883541801797358, 7.911133639418355, 7.8207061142677095, 7.459792905051836, 7.891683322033214, 7.875895855986591, 7.883578552216452, 7.900010121126985, 7.881367261287721, 7.885214607965897, 7.902177149658595, 7.880535966681048, 7.8951041430392594, 7.8891235018085695, 7.89454697470843, 7.86581082577765, 7.882823816617637, 7.901644200663436, 7.879187288987949, 7.888563611201744, 7.871712445452961, 7.897097986315131, 7.886707278309429, 7.882279411272846, 7.881112728824733, 7.874561949979576, 7.883543885472764, 7.890926397451702, 7.906495323271482, 7.891348083861796, 7.906108816475714, 7.897936815586702, 7.914889354023799, 7.891792625830693, 7.910410485427787, 7.897725202734444, 7.798192215648923, 7.756471204016972, 7.792259337659784, 7.706121997874004, 7.845390115716841, 7.591751301638727, 7.723636276424822, 7.809431413174685, 7.77157552828618, 7.511719919415455]}}",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.785152530415821], [\"Entropy without padding\", 6.785152530415821], [\"Offset\", 344064], [\"Size\", 1148928], [\"Virtual Size\", 1150976], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"3c1072ca86f0ac3efc315b29fc267e8d\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.768733729579372, 7.868994251436603, 7.920346291865113, 5.684546364748401, 7.650224194150449, 7.848847273816776, 7.910984333511867, 7.9185514748040475, 7.91437774477078, 7.949267686132163, 7.826751360451963, 6.0788149998239, 5.1264305575693925, 5.356168373604191, 5.508178853058461, 5.221155504716554, 4.864403713653071, 5.072332674669757, 5.202698091197718, 5.380039354548296, 5.319714462553356, 6.466327577545752, 4.94891158393516, 4.059879799537805, 4.183695650645629, 5.352631469546708, 6.09156097525921, 7.6383150513932705, 7.813519470901241, 7.909799608207067, 7.9165593062469775, 7.924277672129798, 7.946976168810844, 7.826380736827942, 6.431175204773584, 5.196144721124179, 5.299566974186806, 5.537640222542683, 5.244504178345807, 5.020738858762441, 5.079823605566087, 5.172710195831955, 5.316448932112992, 5.409114275563834, 6.367248339361761, 4.970310846714672, 4.260749633874781, 3.9513264762366176, 5.604401220729153, 5.6508085721134]}}]]",
                 "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Entropy: 6.785152530415821\nEntropy without padding: 6.785152530415821\nOffset: 344064\nSize: 1148928\nVirtual Size: 1150976\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\nMD5: 3c1072ca86f0ac3efc315b29fc267e8d",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -295,17 +262,6 @@
                     }
                 },
                 "title_text": "Section - .rsrc",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.768733729579372, 7.868994251436603, 7.920346291865113, 5.684546364748401, 7.650224194150449, 7.848847273816776, 7.910984333511867, 7.9185514748040475, 7.91437774477078, 7.949267686132163, 7.826751360451963, 6.0788149998239, 5.1264305575693925, 5.356168373604191, 5.508178853058461, 5.221155504716554, 4.864403713653071, 5.072332674669757, 5.202698091197718, 5.380039354548296, 5.319714462553356, 6.466327577545752, 4.94891158393516, 4.059879799537805, 4.183695650645629, 5.352631469546708, 6.09156097525921, 7.6383150513932705, 7.813519470901241, 7.909799608207067, 7.9165593062469775, 7.924277672129798, 7.946976168810844, 7.826380736827942, 6.431175204773584, 5.196144721124179, 5.299566974186806, 5.537640222542683, 5.244504178345807, 5.020738858762441, 5.079823605566087, 5.172710195831955, 5.316448932112992, 5.409114275563834, 6.367248339361761, 4.970310846714672, 4.260749633874781, 3.9513264762366176, 5.604401220729153, 5.6508085721134]}}",
-                "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -538,9 +494,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Languages available: NEUTRAL, ENGLISH, GERMAN\nSublanguages available: ENGLISH_UK, GERMAN, DEFAULT\nManifest: <?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\\x0d\n<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\">\\x0d\n\\x0d\n\t<!-- Identify the application security requirements. -->\\x0d\n\t<trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v2\">\\x0d\n\t\t<security>\\x0d\n\t\t\t<requestedPrivileges>\\x0d\n\t\t\t\t<requestedExecutionLevel\\x0d\n \t\t\t\t\tlevel=\"highestAvailable\"\\x0d\n\t\t\t\t\tuiAccess=\"false\"\\x0d\n\t\t\t\t/>\\x0d\n\t\t\t</requestedPrivileges>\\x0d\n\t\t</security>\\x0d\n\t</trustInfo>\\x0d\n\\x0d\n\t<!-- Identify the application dependencies. -->\\x0d\n\t<dependency>\\x0d\n\t\t<dependentAssembly>\\x0d\n\t\t\t<assemblyIdentity\\x0d\n\t\t\t\ttype=\"win32\"\\x0d\n\t\t\t\tname=\"Microsoft.Windows.Common-Controls\"\\x0d\n\t\t\t\tversion=\"6.0.0.0\"\\x0d\n\t\t\t\tlanguage=\"*\"\\x0d\n\t\t\t\tprocessorArchitecture=\"*\"\\x0d\n\t\t\t\tpublicKeyToken=\"6595b64144ccf1df\"\\x0d\n\t\t\t/>\\x0d\n\t\t</dependentAssembly>\\x0d\n\t</dependency>\\x0d\n\\x0d\n\t<compatibility xmlns=\"urn:schemas-microsoft-com:compatibility.v1\">\\x0d\n\t\t<application>\\x0d\n\t\t\t<!--The ID below indicates application support for Windows Vista -->\\x0d\n\t\t\t<supportedOS Id=\"{e2011457-1546-43c5-a5fe-008deee3d3f0}\"/>\\x0d\n\t\t\t<!--The ID below indicates application support for Windows 7 -->\\x0d\n\t\t\t<supportedOS Id=\"{35138b9a-5d96-4fbd-8e2d-a2440225f93a}\"/>\\x0d\n\t\t\t<!--The ID below indicates application support for Windows 8 -->\\x0d\n\t\t\t<supportedOS Id=\"{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}\"/>\\x0d\n\t\t\t<!--The ID below indicates application support for Windows 8.1 -->\\x0d\n\t\t\t<supportedOS Id=\"{1f676c76-80e1-4239-95bb-83d0f6d0da78}\"/>\\x0d\n\t\t</application>\\x0d\n\t</compatibility>\\x0d\n</assembly>\\x0d\n",
+                "body": "[[\"Languages\", \"NEUTRAL, ENGLISH, GERMAN\"], [\"Sublanguages\", \"ENGLISH_UK, GERMAN, DEFAULT\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 0,
                 "heuristic": null,
                 "tags": {
@@ -569,9 +525,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "ID: 4, Lang: ENGLISH",
+                "body": "[{\"ID\": 4, \"Lang\": \"ENGLISH\", \"Size\": \"64x64\", \"Size (bytes)\": 9640}]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "TABLE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
@@ -580,9 +536,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Type: 0",
+                "body": "[[\"Type\", 0]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
@@ -591,9 +547,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "file_date_LS: 0\nfile_date_MS: 0\nfile_flags: 0\nfile_flags_mask: 0\nfile_os: WINDOWS32\nfile_subtype: UNKNOWN\nfile_type: UNKNOWN\nfile_version_LS: 262148\nfile_version_MS: 131073\nproduct_version_LS: 262148\nproduct_version_MS: 131073\nsignature: 4277077181\nstruct_version: 65536",
+                "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 0], [\"file_os\", \"WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"UNKNOWN\"], [\"file_version_LS\", 262148], [\"file_version_MS\", 131073], [\"product_version_LS\", 262148], [\"product_version_MS\", 131073], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 2,
                 "heuristic": null,
                 "tags": {},
@@ -602,9 +558,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "key: StringFileInfo\ntype: 1",
+                "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 2,
                 "heuristic": null,
                 "tags": {
@@ -623,9 +579,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "key: 040704b0\ntype: 1\nlang: GERMAN\nsublang: GERMAN\ncode_page: UTF_16",
+                "body": "[[\"key\", \"040704b0\"], [\"type\", 1], [\"lang\", \"GERMAN\"], [\"sublang\", \"GERMAN\"], [\"code_page\", \"UTF_16\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 3,
                 "heuristic": null,
                 "tags": {},
@@ -634,9 +590,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "ProductVersion: 2.1.4.4\nLegalCopyright: Copyright \u00a9 2017 Chip Digital GmbH\nFileDescription: CHIP Secured Installer\nFileVersion: 2.1.4.4\nComments: CHIP Secured Installer",
+                "body": "[[\"ProductVersion\", \"2.1.4.4\"], [\"LegalCopyright\", \"Copyright \\u00a9 2017 Chip Digital GmbH\"], [\"FileDescription\", \"CHIP Secured Installer\"], [\"FileVersion\", \"2.1.4.4\"], [\"Comments\", \"CHIP Secured Installer\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 4,
                 "heuristic": null,
                 "tags": {},
@@ -645,9 +601,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "key: VarFileInfo\ntype: 1\ntranslations: 78644231",
+                "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78644231\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 2,
                 "heuristic": null,
                 "tags": {},
@@ -678,9 +634,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Version: 1\nAlgorithm: SHA_1\nContent Info Algorithm: SHA_1\nContent Info Digest: 938edab77ea11734cb3e00ccf755e55d6338297b\nContent Info Content Type: 1.3.6.1.4.1.311.2.1.4",
+                "body": "[[\"Version\", 1], [\"Algorithm\", \"SHA1\"], [\"Content Info Algorithm\", \"SHA1\"], [\"Content Info Digest\", \"938edab77ea11734cb3e00ccf755e55d6338297b\"], [\"Content Info Content Type\", \"1.3.6.1.4.1.311.2.1.4\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
@@ -689,9 +645,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Version: 1\nDigest Algorithm: SHA_1\nAuthenticated Attributes: SPC_SP_OPUS_INFO, CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST\nUnauthenticated Attributes: ",
+                "body": "[[\"Version\", 1], [\"Digest Algorithm\", \"SHA1\"], [\"Authenticated Attributes\", \"SPC_SP_OPUS_INFO, CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST\"], [\"Unauthenticated Attributes\", \"\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 2,
                 "heuristic": null,
                 "tags": {},
@@ -700,9 +656,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Version: 3\nSubject: C=DE, postalCode=81541, ST=Bayern, L=Munich, ??=St.-Martin-Strasse 66, O=CHIP Digital GmbH, OU=Download Development, CN=CHIP Digital GmbH\nIssuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Code Signing CA\nSerial Number: 00dfe066d5acffad39c60aea807a45fa40\nValid From: 2017-02-07T00:00:00\nValid To: 2018-02-07T23:59:59",
+                "body": "[[\"Version\", 3], [\"Subject\", \"C=DE, postalCode=81541, ST=Bayern, L=Munich, ??=St.-Martin-Strasse 66, O=CHIP Digital GmbH, OU=Download Development, CN=CHIP Digital GmbH\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Code Signing CA\"], [\"Serial Number\", \"00dfe066d5acffad39c60aea807a45fa40\"], [\"Valid From\", \"2017-02-07T00:00:00\"], [\"Valid To\", \"2018-02-07T23:59:59\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 3,
                 "heuristic": null,
                 "tags": {
@@ -736,9 +692,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Version: 3\nSubject: C=DE, postalCode=81541, ST=Bayern, L=Munich, ??=St.-Martin-Strasse 66, O=CHIP Digital GmbH, OU=Download Development, CN=CHIP Digital GmbH\nIssuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Code Signing CA\nSHA-1: 3de5685770fe3d345e78230a03fcdf27579ca034\nSHA-256: 35282afa633ddc4471485446b2a2222c3389d144d6692bac1db08cc0f1952e14\nMD5: c82e650bb01292a15c3bf0d4d99fa68c\nSerial Number: 00dfe066d5acffad39c60aea807a45fa40\nValid From: 2017-02-07T00:00:00\nValid To: 2018-02-07T23:59:59",
+                "body": "[[\"Version\", 3], [\"Subject\", \"C=DE, postalCode=81541, ST=Bayern, L=Munich, ??=St.-Martin-Strasse 66, O=CHIP Digital GmbH, OU=Download Development, CN=CHIP Digital GmbH\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Code Signing CA\"], [\"SHA1\", \"3de5685770fe3d345e78230a03fcdf27579ca034\"], [\"SHA256\", \"35282afa633ddc4471485446b2a2222c3389d144d6692bac1db08cc0f1952e14\"], [\"MD5\", \"c82e650bb01292a15c3bf0d4d99fa68c\"], [\"Serial Number\", \"00dfe066d5acffad39c60aea807a45fa40\"], [\"Valid From\", \"2017-02-07T00:00:00\"], [\"Valid To\", \"2018-02-07T23:59:59\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 2,
                 "heuristic": null,
                 "tags": {},
@@ -747,9 +703,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Version: 3\nSubject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Code Signing CA\nIssuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Certification Authority\nSHA-1: b69e752bbe88b4458200a7c0f4f5b3cce6f35b47\nSHA-256: 5e6d2f88f617dc8b809aee712445a41b3cde26af874a221a9dc98ea1dc68e3d5\nMD5: aa374cc00bed2e1ea691ef415b808fe1\nSerial Number: 2e7c87cc0e934a52fe94fd1cb7cd34af\nValid From: 2013-05-09T00:00:00\nValid To: 2028-05-08T23:59:59",
+                "body": "[[\"Version\", 3], [\"Subject\", \"C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Code Signing CA\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Certification Authority\"], [\"SHA1\", \"b69e752bbe88b4458200a7c0f4f5b3cce6f35b47\"], [\"SHA256\", \"5e6d2f88f617dc8b809aee712445a41b3cde26af874a221a9dc98ea1dc68e3d5\"], [\"MD5\", \"aa374cc00bed2e1ea691ef415b808fe1\"], [\"Serial Number\", \"2e7c87cc0e934a52fe94fd1cb7cd34af\"], [\"Valid From\", \"2013-05-09T00:00:00\"], [\"Valid To\", \"2028-05-08T23:59:59\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 2,
                 "heuristic": null,
                 "tags": {},
@@ -776,24 +732,13 @@
                 "auto_collapse": false
             },
             {
-                "body": "Overlay size: 3592",
+                "body": "[[\"TEXT\", \"Overlay size: 3592\"], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.579017536942529, 4.756709295779172, 5.372923918313784, 5.148412848364054, 4.770008508116323, 4.853081335982127, 5.252715278979704, 5.16938194564637, 5.8434003486044395, 6.031036112553427, 5.919925001442314, 5.7322892374933305, 5.45451145971555, 4.533142968764662, 5.117861029749888, 4.8054967936988735, 4.923416585305443, 5.4877108975705955, 5.975480556997871, 5.892147223664536, 5.9477027792200925, 5.412573265150915, 5.108763501526924, 4.884795487373133, 5.045012245057716, 4.935288154364797, 5.542685286737729, 5.843400348604442, 5.9094404528011575, 5.892147223664539, 5.4613201402110105, 4.15522152885951, 4.9698746126380335, 4.818755383176419, 5.012171578716044, 5.898955904159997, 5.805138022185505, 5.826107119467822, 5.9927737861344905, 5.964996008356714, 5.853884897245599, 5.975480556997871, 5.013199827620864, 4.841470272390305, 5.08604861231304, 5.0172344672799385, 5.798329341690045, 6.00325833477565, 5.787844793048884, 5.568599367586925]}}]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 0,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Overlay",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.579017536942529, 4.756709295779172, 5.372923918313784, 5.148412848364054, 4.770008508116323, 4.853081335982127, 5.252715278979704, 5.16938194564637, 5.8434003486044395, 6.031036112553427, 5.919925001442314, 5.7322892374933305, 5.45451145971555, 4.533142968764662, 5.117861029749888, 4.8054967936988735, 4.923416585305443, 5.4877108975705955, 5.975480556997871, 5.892147223664536, 5.9477027792200925, 5.412573265150915, 5.108763501526924, 4.884795487373133, 5.045012245057716, 4.935288154364797, 5.542685286737729, 5.843400348604442, 5.9094404528011575, 5.892147223664539, 5.4613201402110105, 4.15522152885951, 4.9698746126380335, 4.818755383176419, 5.012171578716044, 5.898955904159997, 5.805138022185505, 5.826107119467822, 5.9927737861344905, 5.964996008356714, 5.853884897245599, 5.975480556997871, 5.013199827620864, 4.841470272390305, 5.08604861231304, 5.0172344672799385, 5.798329341690045, 6.00325833477565, 5.787844793048884, 5.568599367586925]}}",
-                "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

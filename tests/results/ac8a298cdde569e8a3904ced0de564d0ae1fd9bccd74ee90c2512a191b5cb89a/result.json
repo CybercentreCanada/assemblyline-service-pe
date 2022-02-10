@@ -14,7 +14,7 @@
                 "sha256": "3e996c31e06b43ff3a641860832fa16de0cad86addffb2a9ae678083eb55d084",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpnjj50tqo/features.json",
+                "path": "/tmp/working_directory/tmpyl65k3xw/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "58166564c037449c32b5c13649913c5390a2a34b21d33ebc01f295e7f2aa1b01",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpnjj50tqo/overlay",
+                "path": "/tmp/working_directory/tmpyl65k3xw/overlay",
                 "is_section_image": false
             }
         ],
@@ -35,9 +35,9 @@
         "score": 950,
         "sections": [
             {
-                "body": "Timestamp: 1450322943 (2015-12-17 03:29:03 +00:00 (UTC))\nEntrypoint: 0x4d87\nMachine: I386\nMagic: PE32\nImage version: 0.0\nLinker version: 12.0\nOperating System version: 5.1\nSubsystem version: 5.1\nSubsystem: WINDOWS_GUI\nNX: True\nPosition Independent: True\nChecksum: 0x0002c1ed",
+                "body": "[[\"Timestamp\", \"1450322943 (2015-12-17 03:29:03 +00:00 (UTC))\"], [\"Entrypoint\", \"0x4d87\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"12.0\"], [\"Operating System version\", \"5.1\"], [\"Subsystem version\", \"5.1\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x0002c1ed\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 0,
                 "heuristic": null,
                 "tags": {
@@ -57,9 +57,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Hash: ab98f9c2c1e8309aa1b91ebd7e907d89",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"ab98f9c2c1e8309aa1b91ebd7e907d89\"]]], [\"TABLE\", [{\"ID\": \"0x00de7803\", \"Compiler Information\": \"[LNK] VS2013 UPD3 build 30723 (*)\", \"Count\": 1}, {\"ID\": \"0x00db520d\", \"Compiler Information\": \"[RES] VS2013 build 21005\", \"Count\": 1}, {\"ID\": \"0x00e57803\", \"Compiler Information\": \"Unknown object 0x00e57803\", \"Count\": 11}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 170}, {\"ID\": \"0x00cbffdd\", \"Compiler Information\": \"Unknown object 0x00cbffdd\", \"Count\": 21}, {\"ID\": \"0x00e0520d\", \"Compiler Information\": \"[ C ] VS2013 build 21005\", \"Count\": 147}, {\"ID\": \"0x00df520d\", \"Compiler Information\": \"[ASM] VS2013 build 21005\", \"Count\": 20}, {\"ID\": \"0x00e1520d\", \"Compiler Information\": \"[C++] VS2013 build 21005\", \"Count\": 49}, {\"ID\": \"0x00c7a09e\", \"Compiler Information\": \"Unknown object 0x00c7a09e\", \"Count\": 1}]]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -78,20 +78,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "[{\"ID\": \"0x00de7803\", \"Compiler Information\": \"[LNK] VS2013 UPD3 build 30723 (*)\", \"Count\": 1}, {\"ID\": \"0x00db520d\", \"Compiler Information\": \"[RES] VS2013 build 21005\", \"Count\": 1}, {\"ID\": \"0x00e57803\", \"Compiler Information\": \"Unknown object 0x00e57803\", \"Count\": 11}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 170}, {\"ID\": \"0x00cbffdd\", \"Compiler Information\": \"Unknown object 0x00cbffdd\", \"Count\": 21}, {\"ID\": \"0x00e0520d\", \"Compiler Information\": \"[ C ] VS2013 build 21005\", \"Count\": 147}, {\"ID\": \"0x00df520d\", \"Compiler Information\": \"[ASM] VS2013 build 21005\", \"Count\": 20}, {\"ID\": \"0x00e1520d\", \"Compiler Information\": \"[C++] VS2013 build 21005\", \"Count\": 49}, {\"ID\": \"0x00c7a09e\", \"Compiler Information\": \"Unknown object 0x00c7a09e\", \"Count\": 1}]",
+                "body": "[[\"File Size\", 512807], [\"Virtual Size\", 163840]]",
                 "classification": "TLP:W",
-                "body_format": "TABLE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entries",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "File Size: 512807\nVirtual Size: 163840",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 24,
@@ -107,9 +96,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "SHA_512: 103adba66fe50d3b9f11477bc143771f9b1493eccffd39fd3bf30a3e4e0b0f33687b93efe6e1ac8cd265319f81b75974b3d46fc3c799bb6a58823d5bb03513c6\nSHA_384: 2fc599a4a868294d9b149dbab0c576a5ebee16b34d2e1048759a06f4fa25105b76ec6e7363439946e9e2f22c5ef65083\nSHA_256: f61170f894476e6a6536021496b98a7e7cde40b2baf6d8cd4be1d8cc8cb5a764\nSHA_1: 8abbd265630a79db05277f78a3877e31c737af95\nMD5: a9888f6d8d2ce106f158e0342e894a79",
+                "body": "[[\"SHA512\", \"103adba66fe50d3b9f11477bc143771f9b1493eccffd39fd3bf30a3e4e0b0f33687b93efe6e1ac8cd265319f81b75974b3d46fc3c799bb6a58823d5bb03513c6\"], [\"SHA384\", \"2fc599a4a868294d9b149dbab0c576a5ebee16b34d2e1048759a06f4fa25105b76ec6e7363439946e9e2f22c5ef65083\"], [\"SHA256\", \"f61170f894476e6a6536021496b98a7e7cde40b2baf6d8cd4be1d8cc8cb5a764\"], [\"SHA1\", \"8abbd265630a79db05277f78a3877e31c737af95\"], [\"MD5\", \"a9888f6d8d2ce106f158e0342e894a79\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
@@ -118,9 +107,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Optional header checksum: 0x0002c1ed\nComputed checksum: 0x00084234",
+                "body": "[[\"Optional header checksum\", \"0x0002c1ed\"], [\"Computed checksum\", \"0x00084234\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 23,
@@ -147,9 +136,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Entropy: 6.631029183869859\nEntropy without padding: 6.635242938187162\nOffset: 1024\nSize: 91136\nVirtual Size: 91022\nCharacteristics: CNT_CODE, MEM_EXECUTE, MEM_READ\nMD5: 17adbe8622d30f59f9f02d22d535cbde",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.631029183869859], [\"Entropy without padding\", 6.635242938187162], [\"Offset\", 1024], [\"Size\", 91136], [\"Virtual Size\", 91022], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"17adbe8622d30f59f9f02d22d535cbde\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.198493609917615, 6.271846254084052, 6.016311574357403, 6.242498788502632, 6.035720927371197, 6.079264613632077, 6.424080726708374, 6.025675286388796, 6.268695345947047, 6.345577391752224, 6.376729436573745, 6.195337485890456, 6.1198798420251, 6.121599154403999, 6.348227733199872, 6.330637254869552, 6.060903538662255, 5.845059773388193, 6.048439895677545, 6.382731263611904, 6.424447753898263, 6.358575603913923, 6.283720983102594, 6.360779277601445, 6.418479499548763, 6.269248448800385, 5.935661842828582, 6.031150410485301, 5.785310946676974, 6.390388848401105, 6.478305981899486, 6.4515615220195555, 6.367439425988614, 5.665136558498074, 5.021546846847724, 4.8233471708750635, 4.901521456981819, 6.173415551978812, 6.497801445470673, 6.3189076292420285, 6.470210621286937, 6.493038763133414, 6.356116865354885, 6.65344989912308, 6.483292268244422, 6.444373283187721, 6.4561897433900866, 6.698558021230575, 6.239954914841244, 5.851237174217432]}}]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -171,20 +160,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.198493609917615, 6.271846254084052, 6.016311574357403, 6.242498788502632, 6.035720927371197, 6.079264613632077, 6.424080726708374, 6.025675286388796, 6.268695345947047, 6.345577391752224, 6.376729436573745, 6.195337485890456, 6.1198798420251, 6.121599154403999, 6.348227733199872, 6.330637254869552, 6.060903538662255, 5.845059773388193, 6.048439895677545, 6.382731263611904, 6.424447753898263, 6.358575603913923, 6.283720983102594, 6.360779277601445, 6.418479499548763, 6.269248448800385, 5.935661842828582, 6.031150410485301, 5.785310946676974, 6.390388848401105, 6.478305981899486, 6.4515615220195555, 6.367439425988614, 5.665136558498074, 5.021546846847724, 4.8233471708750635, 4.901521456981819, 6.173415551978812, 6.497801445470673, 6.3189076292420285, 6.470210621286937, 6.493038763133414, 6.356116865354885, 6.65344989912308, 6.483292268244422, 6.444373283187721, 6.4561897433900866, 6.698558021230575, 6.239954914841244, 5.851237174217432]}}",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.026985087757495], [\"Entropy without padding\", 5.047784453985557], [\"Offset\", 92160], [\"Size\", 34304], [\"Virtual Size\", 34096], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"c3fff101f0abdc4c6beb76c08ba1bda5\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.319802661255465, 3.641657889724695, 3.178592405330238, 3.152111828212942, 3.3143683903126284, 4.313091553951322, 4.786392901347856, 3.8177582618827532, 4.9295200694203665, 3.9614645255014485, 4.148692555276166, 3.862825790168558, 3.7681849609567144, 3.687286570312216, 2.401528430670505, 2.99448083801822, 2.927177656049029, 2.781830055619127, 2.609980783977117, 2.686388266552785, 2.048534650424573, 1.553211989365598, 5.428336387455466, 7.197896232005131, 4.658574924859572, 4.2528111446396935, 4.5297219207218316, 3.8475929058472227, 4.341187785395406, 4.475446714649196, 4.451356737215899, 4.406256980038649, 4.496524419766536, 4.593793042869275, 4.5232249790184165, 4.643407851190078, 4.353997098677976, 4.645633779537297, 4.558869437598867, 4.663565049236385, 4.322817938996096, 4.362712356978, 2.549254249895629, 2.295144887044526, 4.1082180577122065, 4.991212450612612, 5.0165077681927395, 5.144988294598898, 5.038630678565856, 4.093815815827934]}}]]",
                 "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Entropy: 5.026985087757495\nEntropy without padding: 5.047784453985557\nOffset: 92160\nSize: 34304\nVirtual Size: 34096\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ\nMD5: c3fff101f0abdc4c6beb76c08ba1bda5",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -206,20 +184,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.319802661255465, 3.641657889724695, 3.178592405330238, 3.152111828212942, 3.3143683903126284, 4.313091553951322, 4.786392901347856, 3.8177582618827532, 4.9295200694203665, 3.9614645255014485, 4.148692555276166, 3.862825790168558, 3.7681849609567144, 3.687286570312216, 2.401528430670505, 2.99448083801822, 2.927177656049029, 2.781830055619127, 2.609980783977117, 2.686388266552785, 2.048534650424573, 1.553211989365598, 5.428336387455466, 7.197896232005131, 4.658574924859572, 4.2528111446396935, 4.5297219207218316, 3.8475929058472227, 4.341187785395406, 4.475446714649196, 4.451356737215899, 4.406256980038649, 4.496524419766536, 4.593793042869275, 4.5232249790184165, 4.643407851190078, 4.353997098677976, 4.645633779537297, 4.558869437598867, 4.663565049236385, 4.322817938996096, 4.362712356978, 2.549254249895629, 2.295144887044526, 4.1082180577122065, 4.991212450612612, 5.0165077681927395, 5.144988294598898, 5.038630678565856, 4.093815815827934]}}",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.3300898892604045], [\"Entropy without padding\", 3.3300898892604045], [\"Offset\", 126464], [\"Size\", 5120], [\"Virtual Size\", 13988], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"5bc8fc2b5fb61a88248bdb75931427b0\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.4483660588953096, 1.7807000307203944, 1.8039074047549883, 1.8490114682389913, 1.1887489798160606, 0.4276590022251725, -0.0, 1.5491604265588055, 1.5047863739416352, -0.0, 0.9368955538037875, 3.0304943603822982, -0.0, 1.1748537292282468, 0.6684725699243226, -0.0, 3.8778239015468463, -0.0, 2.6580538099244033, 2.159951011611893, 2.1875982651735493, 0.13815722856252644, -0.0, -0.0, -0.0, -0.0, 1.1717674153329438, 3.225901482689307, 3.2905913060167586, 3.3688643848465465, 1.938554726781285, 1.5674323466461706, 0.5028957934803595, -0.0, 2.1392773029429244, 2.7082129565337145, 2.1573814727139284, 2.1909819112473046, 5.619630901462138, 6.264075527141218, 5.884275376861958, 6.142811206794879, 6.360193338111028, 6.271404532016592, 2.795326698404042, 3.9404950506129266, 2.6070857577401103, -0.0, -0.0, -0.0]}}]]",
                 "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Entropy: 3.3300898892604045\nEntropy without padding: 3.3300898892604045\nOffset: 126464\nSize: 5120\nVirtual Size: 13988\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\nMD5: 5bc8fc2b5fb61a88248bdb75931427b0",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -241,20 +208,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.4483660588953096, 1.7807000307203944, 1.8039074047549883, 1.8490114682389913, 1.1887489798160606, 0.4276590022251725, -0.0, 1.5491604265588055, 1.5047863739416352, -0.0, 0.9368955538037875, 3.0304943603822982, -0.0, 1.1748537292282468, 0.6684725699243226, -0.0, 3.8778239015468463, -0.0, 2.6580538099244033, 2.159951011611893, 2.1875982651735493, 0.13815722856252644, -0.0, -0.0, -0.0, -0.0, 1.1717674153329438, 3.225901482689307, 3.2905913060167586, 3.3688643848465465, 1.938554726781285, 1.5674323466461706, 0.5028957934803595, -0.0, 2.1392773029429244, 2.7082129565337145, 2.1573814727139284, 2.1909819112473046, 5.619630901462138, 6.264075527141218, 5.884275376861958, 6.142811206794879, 6.360193338111028, 6.271404532016592, 2.795326698404042, 3.9404950506129266, 2.6070857577401103, -0.0, -0.0, -0.0]}}",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.832303505243232], [\"Entropy without padding\", 4.844233419951383], [\"Offset\", 131584], [\"Size\", 2048], [\"Virtual Size\", 2040], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"c509f80e54b2499e3a2bdd46ea54429f\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.089899892361705, 1.0535274695246943, 0.9923389167519487, 2.328004866284709, 4.393898955732061, 4.16195322391921, 4.247557492317426, 4.247557492317427, 3.8259913334114692, 3.1876035433808143, 4.275490346652223, 4.405855662943599, 4.12512944332587, 4.043544614839372, 4.034653688580828, 3.9555046032677423, 4.122693700152458, 4.217818932588803, 4.41231084602873, 4.247557492317427, 3.8972031514247374, 4.631346211671318, 4.402399334892958, 4.210733711724087, 4.585564578900931, 4.33622754166864, 4.226709858847346, 4.585564578900931, 4.180365114215879, 4.07391321234758, 2.8151455197801827, 2.2148375595807286, 2.2792243784798307, 2.1978233455538234, 3.010267470999695, 2.5273300529764318, 2.8183447946175835, 2.4297690773666756, 2.7511524165160353, 2.4283714010969106, 2.961486983194817, 2.3795909132920325, 2.7511524165160353, 2.525661867788315, 2.4647911788874928, 2.6551907243382122, 2.72238310243976, 2.1172765839709724, 2.624891028586188, 1.7314038132824299]}}]]",
                 "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Entropy: 4.832303505243232\nEntropy without padding: 4.844233419951383\nOffset: 131584\nSize: 2048\nVirtual Size: 2040\nCharacteristics: CNT_INITIALIZED_DATA, MEM_READ\nMD5: c509f80e54b2499e3a2bdd46ea54429f",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -276,20 +232,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.089899892361705, 1.0535274695246943, 0.9923389167519487, 2.328004866284709, 4.393898955732061, 4.16195322391921, 4.247557492317426, 4.247557492317427, 3.8259913334114692, 3.1876035433808143, 4.275490346652223, 4.405855662943599, 4.12512944332587, 4.043544614839372, 4.034653688580828, 3.9555046032677423, 4.122693700152458, 4.217818932588803, 4.41231084602873, 4.247557492317427, 3.8972031514247374, 4.631346211671318, 4.402399334892958, 4.210733711724087, 4.585564578900931, 4.33622754166864, 4.226709858847346, 4.585564578900931, 4.180365114215879, 4.07391321234758, 2.8151455197801827, 2.2148375595807286, 2.2792243784798307, 2.1978233455538234, 3.010267470999695, 2.5273300529764318, 2.8183447946175835, 2.4297690773666756, 2.7511524165160353, 2.4283714010969106, 2.961486983194817, 2.3795909132920325, 2.7511524165160353, 2.525661867788315, 2.4647911788874928, 2.6551907243382122, 2.72238310243976, 2.1172765839709724, 2.624891028586188, 1.7314038132824299]}}",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.559451791918641], [\"Entropy without padding\", 6.64105210607593], [\"Offset\", 133632], [\"Size\", 5632], [\"Virtual Size\", 5448], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"7236639f5fcf7d23cdfa5103723affac\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.00386830398138, 4.999734784708614, 5.017922911045383, 5.011882239888028, 4.98010501357594, 5.129950615806562, 5.04538519395323, 5.145709871585633, 5.103285203271728, 5.214892710613435, 5.162371441989046, 5.448615238416089, 5.3348320796998765, 5.061170193465329, 4.901235394673963, 5.180196841734522, 4.420740003821143, 4.280458250852135, 4.999216267668942, 5.260145494799624, 5.146209798733145, 5.536393543115746, 5.309184940985589, 5.363141768485158, 4.982808086815356, 4.816526341593562, 5.443868843188012, 4.76329120787856, 5.545213255518607, 5.390500168686189, 5.187581504178209, 4.805766619677735, 4.821337030985992, 4.5059697440707795, 3.9934696656017, 4.127963053036824, 4.102186035482832, 4.517181919243916, 4.024925847187654, 4.094039601308901, 4.1830108208222665, 4.4834064550563895, 4.024314888542056, 4.329008860851604, 4.7960537685092755, 4.662186944644286, 4.301985493834034, 4.466245971221792, 1.2426297583170314, -0.0]}}]]",
                 "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Entropy: 6.559451791918641\nEntropy without padding: 6.64105210607593\nOffset: 133632\nSize: 5632\nVirtual Size: 5448\nCharacteristics: CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\nMD5: 7236639f5fcf7d23cdfa5103723affac",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -311,17 +256,6 @@
                 "auto_collapse": false
             },
             {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.00386830398138, 4.999734784708614, 5.017922911045383, 5.011882239888028, 4.98010501357594, 5.129950615806562, 5.04538519395323, 5.145709871585633, 5.103285203271728, 5.214892710613435, 5.162371441989046, 5.448615238416089, 5.3348320796998765, 5.061170193465329, 4.901235394673963, 5.180196841734522, 4.420740003821143, 4.280458250852135, 4.999216267668942, 5.260145494799624, 5.146209798733145, 5.536393543115746, 5.309184940985589, 5.363141768485158, 4.982808086815356, 4.816526341593562, 5.443868843188012, 4.76329120787856, 5.545213255518607, 5.390500168686189, 5.187581504178209, 4.805766619677735, 4.821337030985992, 4.5059697440707795, 3.9934696656017, 4.127963053036824, 4.102186035482832, 4.517181919243916, 4.024925847187654, 4.094039601308901, 4.1830108208222665, 4.4834064550563895, 4.024314888542056, 4.329008860851604, 4.7960537685092755, 4.662186944644286, 4.301985493834034, 4.466245971221792, 1.2426297583170314, -0.0]}}",
-                "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
                 "body": null,
                 "classification": "TLP:W",
                 "body_format": "TEXT",
@@ -333,9 +267,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Timestamp: 1450322943 (2015-12-17 03:29:03 +00:00 (UTC))\nVersion: 0.0\nCV_Signature: PDB_70\nFilename: c:\\builds\\moz2_slave\\rel-m-rel-w32_bld-000000000000\\build\\obj-firefox\\toolkit\\components\\maintenanceservice\\maintenanceservice.pdb",
+                "body": "[[\"Timestamp\", \"1450322943 (2015-12-17 03:29:03 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"c:\\\\builds\\\\moz2_slave\\\\rel-m-rel-w32_bld-000000000000\\\\build\\\\obj-firefox\\\\toolkit\\\\components\\\\maintenanceservice\\\\maintenanceservice.pdb\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {
@@ -352,9 +286,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Timestamp: 1450322943 (2015-12-17 03:29:03 +00:00 (UTC))\nVersion: 0.0",
+                "body": "[[\"Timestamp\", \"1450322943 (2015-12-17 03:29:03 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
@@ -363,9 +297,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Timestamp: 1450322943 (2015-12-17 03:29:03 +00:00 (UTC))\nVersion: 0.0",
+                "body": "[[\"Timestamp\", \"1450322943 (2015-12-17 03:29:03 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
@@ -503,9 +437,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Languages available: ENGLISH\nSublanguages available: ENGLISH_US\nManifest: <?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\">\n<assemblyIdentity\n        version=\"1.0.0.0\"\n        processorArchitecture=\"*\"\n        name=\"MaintenanceService\"\n        type=\"win32\"\n/>\n<description>MaintenanceService</description>\n<ms_asmv3:trustInfo xmlns:ms_asmv3=\"urn:schemas-microsoft-com:asm.v3\">\n  <ms_asmv3:security>\n    <ms_asmv3:requestedPrivileges>\n      <ms_asmv3:requestedExecutionLevel level=\"requireAdministrator\" uiAccess=\"false\" />\n    </ms_asmv3:requestedPrivileges>\n  </ms_asmv3:security>\n</ms_asmv3:trustInfo>\n  <compatibility xmlns=\"urn:schemas-microsoft-com:compatibility.v1\">\n    <application>\n      <supportedOS Id=\"{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}\"/>\n      <supportedOS Id=\"{1f676c76-80e1-4239-95bb-83d0f6d0da78}\"/>\n      <supportedOS Id=\"{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}\"/>\n      <supportedOS Id=\"{35138b9a-5d96-4fbd-8e2d-a2440225f93a}\"/>\n      <supportedOS Id=\"{e2011457-1546-43c5-a5fe-008deee3d3f0}\"/>\n    </application>\n  </compatibility>\n</assembly>\n",
+                "body": "[[\"Languages\", \"ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 0,
                 "heuristic": null,
                 "tags": {
@@ -524,9 +458,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Type: 0",
+                "body": "[[\"Type\", 0]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
@@ -535,9 +469,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "file_date_LS: 0\nfile_date_MS: 0\nfile_flags: 0\nfile_flags_mask: 63\nfile_os: WINDOWS32\nfile_subtype: UNKNOWN\nfile_type: DLL\nfile_version_LS: 71364\nfile_version_MS: 2818048\nproduct_version_LS: 71364\nproduct_version_MS: 2818048\nsignature: 4277077181\nstruct_version: 65536",
+                "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 63], [\"file_os\", \"WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"DLL\"], [\"file_version_LS\", 71364], [\"file_version_MS\", 2818048], [\"product_version_LS\", 71364], [\"product_version_MS\", 2818048], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 2,
                 "heuristic": null,
                 "tags": {},
@@ -546,9 +480,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "key: StringFileInfo\ntype: 1",
+                "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 2,
                 "heuristic": null,
                 "tags": {
@@ -570,9 +504,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "key: 000004b0\ntype: 1\nlang: NEUTRAL\nsublang: DEFAULT\ncode_page: UTF_16",
+                "body": "[[\"key\", \"000004b0\"], [\"type\", 1], [\"lang\", \"NEUTRAL\"], [\"sublang\", \"DEFAULT\"], [\"code_page\", \"UTF_16\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 3,
                 "heuristic": null,
                 "tags": {},
@@ -581,9 +515,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "BuildID: 20151216175450\nProductName: Firefox\nLegalTrademarks: Mozilla\nProductVersion: 43.0.1\nLegalCopyright: License: MPL 2\nInternalName: \nCompanyName: Mozilla Foundation\nFileDescription: \nComments: \nOriginalFilename: maintenanceservice.exe\nFileVersion: 43.0.1",
+                "body": "[[\"BuildID\", \"20151216175450\"], [\"ProductName\", \"Firefox\"], [\"LegalTrademarks\", \"Mozilla\"], [\"ProductVersion\", \"43.0.1\"], [\"LegalCopyright\", \"License: MPL 2\"], [\"InternalName\", \"\"], [\"CompanyName\", \"Mozilla Foundation\"], [\"FileDescription\", \"\"], [\"Comments\", \"\"], [\"OriginalFilename\", \"maintenanceservice.exe\"], [\"FileVersion\", \"43.0.1\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 4,
                 "heuristic": null,
                 "tags": {},
@@ -592,9 +526,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "key: VarFileInfo\ntype: 1\ntranslations: 78643200",
+                "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78643200\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 2,
                 "heuristic": null,
                 "tags": {},
@@ -643,9 +577,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "Version: 1\nAlgorithm: SHA_1\nContent Info Algorithm: SHA_1\nContent Info Digest: c77a960b0d1e58c51e259ea67b6e1b19aea3ce5a\nContent Info Content Type: 1.3.6.1.4.1.311.2.1.4",
+                "body": "[[\"Version\", 1], [\"Algorithm\", \"SHA1\"], [\"Content Info Algorithm\", \"SHA1\"], [\"Content Info Digest\", \"c77a960b0d1e58c51e259ea67b6e1b19aea3ce5a\"], [\"Content Info Content Type\", \"1.3.6.1.4.1.311.2.1.4\"]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
@@ -654,9 +588,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "The signature does not match the program data :\nSignature : c77a960b0d1e58c51e259ea67b6e1b19aea3ce5a\nProgram data : 8abbd265630a79db05277f78a3877e31c737af95",
+                "body": "[[\"TEXT\", \"The signature does not match the authentihash data found for SHA1\"], [\"ORDERED_KEY_VALUE\", [[\"Signature\", \"c77a960b0d1e58c51e259ea67b6e1b19aea3ce5a\"], [\"Authentihash data\", \"8abbd265630a79db05277f78a3877e31c737af95\"]]]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 2,
                 "heuristic": {
                     "heur_id": 1,
@@ -667,7 +601,7 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "Invalid Signature",
+                "title_text": "Signature hash not found in authentihash data",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -690,24 +624,13 @@
                 "auto_collapse": false
             },
             {
-                "body": "Overlay size: 373543",
+                "body": "[[\"TEXT\", \"Overlay size: 373543\"], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.744503210273345, 5.855129823471562, 5.975665525402214, 6.163021255195035, 6.2278883233079805, 6.328537587150523, 6.287644974394345, 6.140475743845506, 6.245504205059121, 6.091912237112036, 6.242466684964563, 6.263669578039074, 6.370806004940275, 6.666967797169927, 6.621505161683916, 6.573801154853258, 6.56991016908253, 6.103465766806055, 6.386712925156642, 6.46893977457688, 6.574926511974925, 6.452278590351172, 6.363809594836512, 6.270452142913247, 6.798999977373054, 6.628982683645647, 5.6670258912374445, 5.9594371932465915, 5.202593948831961, 3.4733493956976806, 4.28759041063134, 4.2497621879364855, 4.302202991512311, 4.319846551757337, 4.321216290589609, 4.328458369627005, 4.296643268880458, 4.3179261700315115, 4.343656671007695, 5.444882512687382, 5.308210775682846, 4.10472557392704, 2.857237576120648, 4.079980001928553, 4.147414156465887, 5.938458901602365, 6.362382986743431, 6.448621130107834, 7.448010730352998, 7.384502224974495]}}]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 0,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Overlay",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.744503210273345, 5.855129823471562, 5.975665525402214, 6.163021255195035, 6.2278883233079805, 6.328537587150523, 6.287644974394345, 6.140475743845506, 6.245504205059121, 6.091912237112036, 6.242466684964563, 6.263669578039074, 6.370806004940275, 6.666967797169927, 6.621505161683916, 6.573801154853258, 6.56991016908253, 6.103465766806055, 6.386712925156642, 6.46893977457688, 6.574926511974925, 6.452278590351172, 6.363809594836512, 6.270452142913247, 6.798999977373054, 6.628982683645647, 5.6670258912374445, 5.9594371932465915, 5.202593948831961, 3.4733493956976806, 4.28759041063134, 4.2497621879364855, 4.302202991512311, 4.319846551757337, 4.321216290589609, 4.328458369627005, 4.296643268880458, 4.3179261700315115, 4.343656671007695, 5.444882512687382, 5.308210775682846, 4.10472557392704, 2.857237576120648, 4.079980001928553, 4.147414156465887, 5.938458901602365, 6.362382986743431, 6.448621130107834, 7.448010730352998, 7.384502224974495]}}",
-                "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Entropy graph",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

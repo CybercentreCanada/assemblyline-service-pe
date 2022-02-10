@@ -14,10 +14,17 @@ from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.result import (
-    BODY_FORMAT,
+    GraphSectionBody,
     Heuristic,
+    OrderedKVSectionBody,
     Result,
+    ResultMultiSection,
+    ResultOrderedKeyValueSection,
     ResultSection,
+    ResultTableSection,
+    TableRow,
+    TableSectionBody,
+    TextSectionBody,
 )
 
 MZ = [ord(x) for x in "MZ"]
@@ -289,8 +296,8 @@ class PE(ServiceBase):
                     "%Y-%m-%d %H:%M:%S +00:00 (UTC)"
                 )
                 heur = Heuristic(22)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
-                heur_section.add_line(f"Latest timestamp: {timestamp} ({hr_timestamp})")
+                heur_section = ResultOrderedKeyValueSection(heur.name, heuristic=heur)
+                heur_section.add_item("Latest timestamp", f"{timestamp} ({hr_timestamp})")
                 self.file_res.add_section(heur_section)
 
     def recurse_resources(self, resource, parent_name):
@@ -450,52 +457,50 @@ class PE(ServiceBase):
         self.features["size"] = os.path.getsize(self.file_path)
         # Ignore self.binary.symbols
 
-        res = ResultSection("Headers")
-        res.add_line(f"Timestamp: {self.binary.header.time_date_stamps} ({hr_timestamp})")
+        res = ResultOrderedKeyValueSection("Headers")
+        res.add_item("Timestamp", f"{self.binary.header.time_date_stamps} ({hr_timestamp})")
         res.add_tag("file.pe.linker.timestamp", self.binary.header.time_date_stamps)
         res.add_tag("file.pe.linker.timestamp", hr_timestamp)
         # Somehow, that is different from binary.entrypoint
-        res.add_line(f"Entrypoint: {hex(self.binary.optional_header.addressof_entrypoint)}")
-        res.add_line(f"Machine: {self.binary.header.machine.name}")
-        res.add_line(f"Magic: {self.binary.optional_header.magic.name}")
+        res.add_item("Entrypoint", hex(self.binary.optional_header.addressof_entrypoint))
+        res.add_item("Machine", self.binary.header.machine.name)
+        res.add_item("Magic", self.binary.optional_header.magic.name)
         if self.binary.optional_header.magic.name == "???":
             heur = Heuristic(18)
-            heur_section = ResultSection(heur.definition.name, heuristic=heur)
-            heur_section.add_line(f"Magic Name: {self.binary.optional_header.magic.name}")
-            heur_section.add_line(f"Magic Value: {self.binary.optional_header.magic.__int__()}")
+            heur_section = ResultOrderedKeyValueSection(heur.name, heuristic=heur)
+            heur_section.add_item("Magic Name", self.binary.optional_header.magic.name)
+            heur_section.add_item("Magic Value", self.binary.optional_header.magic.__int__())
             res.add_subsection(heur_section)
-        res.add_line(
-            (
-                f"Image version: {self.binary.optional_header.major_image_version}."
-                f"{self.binary.optional_header.minor_image_version}"
-            )
+        res.add_item(
+            "Image version",
+            f"{self.binary.optional_header.major_image_version}.{self.binary.optional_header.minor_image_version}",
         )
-        res.add_line(
-            (
-                f"Linker version: {self.binary.optional_header.major_linker_version}."
-                f"{self.binary.optional_header.minor_linker_version}"
-            )
+        res.add_item(
+            "Linker version",
+            f"{self.binary.optional_header.major_linker_version}.{self.binary.optional_header.minor_linker_version}",
         )
-        res.add_line(
+        res.add_item(
+            "Operating System version",
             (
-                f"Operating System version: {self.binary.optional_header.major_operating_system_version}."
+                f"{self.binary.optional_header.major_operating_system_version}."
                 f"{self.binary.optional_header.minor_operating_system_version}"
-            )
+            ),
         )
-        res.add_line(
+        res.add_item(
+            "Subsystem version",
             (
-                f"Subsystem version: {self.binary.optional_header.major_subsystem_version}."
+                f"{self.binary.optional_header.major_subsystem_version}."
                 f"{self.binary.optional_header.minor_subsystem_version}"
-            )
+            ),
         )
-        res.add_line(f"Subsystem: {self.binary.optional_header.subsystem.name}")
-        res.add_line(f"NX: {self.binary.has_nx}")
+        res.add_item("Subsystem", self.binary.optional_header.subsystem.name)
+        res.add_item("NX", self.binary.has_nx)
         if self.binary.has_rich_header:
-            sub_res = ResultSection(f"Rich Headers - Key: {self.binary.rich_header.key}")
+            rich_header_section = ResultMultiSection(f"Rich Headers - Key: {self.binary.rich_header.key}")
             # Recreate the rich header original clear data to compute the rich header hash
             clear_data = ""
 
-            sub_sub_res = ResultSection("Entries", body_format=BODY_FORMAT.TABLE, body=[])
+            table_body = TableSectionBody()
             for entry in self.binary.rich_header.entries:
                 clear_data = (
                     f"{entry.build_id.to_bytes(2, byteorder='little').hex()}"
@@ -508,71 +513,76 @@ class PE(ServiceBase):
                 )
                 try:
                     entry_compilation_info = self.rich_header_entries[rich_header_hex]
-                    sub_sub_res._body.append(
-                        {
-                            "ID": f"0x{rich_header_hex}",
-                            "Compiler Information": entry_compilation_info,
-                            "Count": entry.count,
-                        }
+                    table_body.add_row(
+                        TableRow(
+                            **{
+                                "ID": f"0x{rich_header_hex}",
+                                "Compiler Information": entry_compilation_info,
+                                "Count": entry.count,
+                            }
+                        )
                     )
                 except KeyError:
-                    sub_sub_res._body.append(
-                        {
-                            "ID": f"0x{rich_header_hex}",
-                            "Compiler Information": f"Unknown object 0x{rich_header_hex}",
-                            "Count": entry.count,
-                        }
+                    table_body.add_row(
+                        TableRow(
+                            **{
+                                "ID": f"0x{rich_header_hex}",
+                                "Compiler Information": f"Unknown object 0x{rich_header_hex}",
+                                "Count": entry.count,
+                            }
+                        )
                     )
-            if sub_sub_res._body:
-                sub_sub_res._body = json.dumps(sub_sub_res._body)
-                sub_res.add_subsection(sub_sub_res)
 
             clear_data = bytes.fromhex(f"44616e53{'0'*24}{clear_data}")  # DanS
             m = hashlib.md5()
             m.update(clear_data)
             rich_header_hash = m.hexdigest()
-            sub_res.add_line(f"Hash: {rich_header_hash}")
-            sub_res.add_tag("file.pe.rich_header.hash", rich_header_hash)
+            kv_body = OrderedKVSectionBody()
+            kv_body.add_item("Hash", rich_header_hash)
+            rich_header_section.add_section_part(kv_body)
+            rich_header_section.add_tag("file.pe.rich_header.hash", rich_header_hash)
             self.features["rich_header"]["hash"] = rich_header_hash
-            res.add_subsection(sub_res)
+            rich_header_section.add_section_part(table_body)
+            res.add_subsection(rich_header_section)
 
         if abs(self.features["size"] - self.features["virtual_size"]) > max(
             self.features["size"], self.features["virtual_size"]
         ) * self.config.get("heur24_allowed_mismatch_file_size", 0.25):
             heur = Heuristic(24)
-            heur_section = ResultSection(heur.definition.name, heuristic=heur)
-            heur_section.add_line(f"File Size: {self.features['size']}")
-            heur_section.add_line(f"Virtual Size: {self.features['virtual_size']}")
+            heur_section = ResultOrderedKeyValueSection(heur.name, heuristic=heur)
+            heur_section.add_item("File Size", self.features["size"])
+            heur_section.add_item("Virtual Size", self.features["virtual_size"])
             res.add_subsection(heur_section)
 
-        # if self.features["size"] <= self.config.get("hash_generation_max_size", 5000000) or self.request.deep_scan:
-        sub_res = ResultSection("Authentihash")
+        # sub_res = ResultTableSection("Authentihash")
+        sub_res = ResultOrderedKeyValueSection("Authentihash")
         for i in range(1, 6):
             try:
                 authentihash = lief.PE.ALGORITHMS(i)
                 authentihash_value = self.binary.authentihash(lief.PE.ALGORITHMS(i)).hex()
                 self.features["authentihash"][authentihash.name] = authentihash_value
-                sub_res.add_line(f"{authentihash.name}: {authentihash_value}")
+                # sub_res.add_row(TableRow(**{"Hash": authentihash.name, "Value": authentihash_value}))
+                sub_res.add_item(authentihash.name.replace("_", ""), authentihash_value)
             except lief.bad_format:
                 if sub_res.heuristic is None:
                     sub_res.set_heuristic(17)
         res.add_subsection(sub_res)
 
-        res.add_line(f"Position Independent: {self.binary.is_pie}")
+        res.add_item("Position Independent", self.binary.is_pie)
 
-        res.add_line(f"Checksum: {self.features['optional_header']['checksum']:#0{10}x}")
+        res.add_item("Checksum", f"{self.features['optional_header']['checksum']:#0{10}x}")
         if self.features["size"] <= self.config.get("hash_generation_max_size", 5000000) or self.request.deep_scan:
             self.features["optional_header"]["computed_checksum"] = generate_checksum(
                 self.request.file_path, self.binary.dos_header.addressof_new_exeheader + 0x58
             )
             if self.features["optional_header"]["checksum"] != self.features["optional_header"]["computed_checksum"]:
                 heur = Heuristic(23)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
-                heur_section.add_line(
-                    f"Optional header checksum: {self.features['optional_header']['checksum']:#0{10}x}"
+                heur_section = ResultOrderedKeyValueSection(heur.name, heuristic=heur)
+                heur_section.add_item(
+                    "Optional header checksum", f"{self.features['optional_header']['checksum']:#0{10}x}"
                 )
-                heur_section.add_line(
-                    f"Computed checksum: {self.features['optional_header']['computed_checksum']:#0{10}x}"
+                heur_section.add_item(
+                    "Computed checksum", f"{self.features['optional_header']['computed_checksum']:#0{10}x}"
                 )
                 res.add_subsection(heur_section)
 
@@ -612,58 +622,61 @@ class PE(ServiceBase):
 
             self.features["sections"].append(section_dict)
 
-            sub_res = ResultSection(f"Section - {section.name}")
+            section_section = ResultMultiSection(f"Section - {section.name}")
             if section.name in PACKED_SECTION_NAMES:
                 heur = Heuristic(20)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section = ResultSection(heur.name, heuristic=heur)
                 heur_section.add_line(f"Section name: {section.name}")
-                sub_res.add_subsection(heur_section)
+                section_section.add_subsection(heur_section)
             for malicious_section in MALICIOUS_SECTION_NAMES:
                 if section.name == malicious_section[0] and (
                     malicious_section[1] is None or section.characteristics == malicious_section[1]
                 ):
                     heur = Heuristic(21)
-                    heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                    heur_section = ResultSection(heur.name, heuristic=heur)
                     heur_section.add_line(f"Section name: {section.name}")
                     if malicious_section[1] is not None:
                         heur_section.add_line(f"Characteristics: {', '.join(section_dict['characteristics_list'])}")
-                    sub_res.add_subsection(heur_section)
-            sub_res.add_tag("file.pe.sections.name", section.name)
-            sub_res.add_line(f"Entropy: {entropy_data[0]}")
+                    section_section.add_subsection(heur_section)
+            section_section.add_tag("file.pe.sections.name", section.name)
+            section_text_section = OrderedKVSectionBody()
+            section_text_section.add_item("Entropy", entropy_data[0])
+            section_graph_section = GraphSectionBody()
+            section_graph_section.set_colormap(cmap_min=0, cmap_max=8, values=entropy_data[1])
             if entropy_data[0] > self.config.get("heur4_max_section_entropy", 7.5):
                 heur = Heuristic(4)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
-                heur_section.add_line(f"Section name: {section.name}")
-                heur_section.add_line(f"Entropy: {entropy_data[0]}")
-                heur_section.add_line(f"Entropy without padding: {section.entropy}")
-                sub_res.add_subsection(heur_section)
-            sub_res.add_line(f"Entropy without padding: {section.entropy}")
-            sub_res.add_line(f"Offset: {section.offset}")
-            sub_res.add_line(f"Size: {section.size}")
-            sub_res.add_line(f"Virtual Size: {section.virtual_size}")
-            sub_res.add_line(f"Characteristics: {', '.join(section_dict['characteristics_list'])}")
-            sub_res.add_line(f"MD5: {section_dict['md5']}")
-            sub_res.add_tag("file.pe.sections.hash", section_dict["md5"])
-
-            entropy_graph_data = {
-                "type": "colormap",
-                "data": {"domain": [0, 8], "values": entropy_data[1]},
-            }
-            sub_sub_res = ResultSection(
-                "Entropy graph", body_format=BODY_FORMAT.GRAPH_DATA, body=json.dumps(entropy_graph_data)
-            )
-            sub_res.add_subsection(sub_sub_res)
+                heur_section = ResultMultiSection(heur.name, heuristic=heur)
+                heur_text_section = OrderedKVSectionBody()
+                heur_text_section.add_item("Section name", section.name)
+                heur_text_section.add_item("Entropy:", entropy_data[0])
+                heur_text_section.add_item("Entropy without padding", section.entropy)
+                heur_section.add_section_part(heur_text_section)
+                heur_section.add_section_part(section_graph_section)
+                section_section.add_subsection(heur_section)
+            section_text_section.add_item("Entropy without padding", section.entropy)
+            section_text_section.add_item("Offset", section.offset)
+            section_text_section.add_item("Size", section.size)
+            section_text_section.add_item("Virtual Size", section.virtual_size)
+            section_text_section.add_item("Characteristics", ", ".join(section_dict["characteristics_list"]))
+            section_text_section.add_item("MD5", section_dict["md5"])
+            section_section.add_tag("file.pe.sections.hash", section_dict["md5"])
+            section_section.add_section_part(section_text_section)
+            section_section.add_section_part(section_graph_section)
 
             try:
                 self.binary.get_section(section.name)
             except lief.not_found:
                 heur = Heuristic(14)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
-                heur_section.add_line("Section could not be retrieved using the section's name.")
-                heur_section.add_line(f"Section name: {section.name}")
-                sub_res.add_subsection(heur_section)
+                heur_section = ResultMultiSection(heur.name, heuristic=heur)
+                heur_text_body = TextSectionBody()
+                heur_text_body.add_line("Section could not be retrieved using the section's name.")
+                heur_section.add_section_part(heur_text_body)
+                heur_kv_body = OrderedKVSectionBody()
+                heur_kv_body.add_item("Section name", section.name)
+                heur_section.add_section_part(heur_kv_body)
+                section_section.add_subsection(heur_section)
 
-            res.add_subsection(sub_res)
+            res.add_subsection(section_section)
         self.file_res.add_section(res)
 
     def add_debug(self):
@@ -682,26 +695,26 @@ class PE(ServiceBase):
                 "timestamp": debug.timestamp,
                 "type": debug.type.name,
             }
-            sub_res = ResultSection(f"{debug.type.name}")
+            sub_res = ResultOrderedKeyValueSection(f"{debug.type.name}")
             hr_timestamp = datetime.datetime.utcfromtimestamp(debug.timestamp).strftime(
                 "%Y-%m-%d %H:%M:%S +00:00 (UTC)"
             )
-            sub_res.add_line(f"Timestamp: {debug.timestamp} ({hr_timestamp})")
-            sub_res.add_line(f"Version: {debug.major_version}.{debug.minor_version}")
+            sub_res.add_item("Timestamp", f"{debug.timestamp} ({hr_timestamp})")
+            sub_res.add_item("Version", f"{debug.major_version}.{debug.minor_version}")
             if debug.has_code_view:
                 cv_dict = {
                     "age": debug.code_view.age,
                     "cv_signature": debug.code_view.cv_signature.name,
                     "signature": debug.code_view.signature,
                 }
-                sub_res.add_line(f"CV_Signature: {debug.code_view.cv_signature.name}")
+                sub_res.add_item("CV_Signature", debug.code_view.cv_signature.name)
                 try:
                     cv_dict["filename"] = debug.code_view.filename
-                    sub_res.add_line(f"Filename: {debug.code_view.filename}")
+                    sub_res.add_item("Filename", debug.code_view.filename)
                     sub_res.add_tag("file.pe.pdb_filename", debug.code_view.filename)
                 except UnicodeDecodeError:
                     heur = Heuristic(16)
-                    heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                    heur_section = ResultSection(heur.name, heuristic=heur)
                     sub_res.add_subsection(heur_section)
                 debug_dict["code_view"] = cv_dict
             if debug.has_pogo:
@@ -768,7 +781,7 @@ class PE(ServiceBase):
             except UnicodeDecodeError:
                 del entry_dict["forward_information"]
                 heur = Heuristic(13)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section = ResultSection(heur.name, heuristic=heur)
                 heur_section.add_line(f"Couldn't parse the forward information of {entry.name} ({entry.ordinal})")
                 sub_res.add_subsection(heur_section)
             self.features["export"]["entries"].append(entry_dict)
@@ -933,11 +946,11 @@ class PE(ServiceBase):
             "langs_available": [lang.name for lang in self.binary.resources_manager.langs_available],
             "sublangs_available": [lang.name for lang in self.binary.resources_manager.sublangs_available],
         }
-        res = ResultSection("Resources")
-        res.add_line(f"Languages available: {', '.join(self.features['resources_manager']['langs_available'])}")
+        res = ResultOrderedKeyValueSection("Resources")
+        res.add_item("Languages", ", ".join(self.features["resources_manager"]["langs_available"]))
         for lang in self.features["resources_manager"]["langs_available"]:
             res.add_tag("file.pe.resources.language", lang)
-        res.add_line(f"Sublanguages available: {', '.join(self.features['resources_manager']['sublangs_available'])}")
+        res.add_item("Sublanguages", ", ".join(self.features["resources_manager"]["sublangs_available"]))
 
         if self.binary.resources_manager.has_accelerator:
             self.features["resources_manager"]["accelerator"] = []
@@ -1006,7 +1019,7 @@ class PE(ServiceBase):
                                 res.add_tag("file.string.extracted", item.title)
                         except UnicodeDecodeError:
                             heur = Heuristic(13)
-                            heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                            heur_section = ResultSection(heur.name, heuristic=heur)
                             heur_section.add_line(f"Can't decode title of dialog item from dialog named {dialog.title}")
                             res.add_subsection(heur_section)
                         dialog_dict["items"].append(item_dict)
@@ -1015,7 +1028,7 @@ class PE(ServiceBase):
                 self.features["resources_manager"]["dialogs"] = dialogs_list
             except lief.read_out_of_bound:
                 heur = Heuristic(13)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section = ResultSection(heur.name, heuristic=heur)
                 heur_section.add_line("Can't read dialog object")
                 res.add_subsection(heur_section)
 
@@ -1024,7 +1037,7 @@ class PE(ServiceBase):
                 self.features["resources_manager"]["html"] = self.binary.resources_manager.html
             except UnicodeDecodeError:
                 heur = Heuristic(13)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section = ResultSection(heur.name, heuristic=heur)
                 heur_section.add_line("Can't decode html object from resources manager")
                 res.add_subsection(heur_section)
                 # Do our best to find resource 0x17 (23) and save it in the features
@@ -1044,7 +1057,7 @@ class PE(ServiceBase):
                             )
 
         if self.binary.resources_manager.has_icons:
-            sub_res = ResultSection("Icons")
+            sub_res = ResultTableSection("Icons")
             try:
                 icons = []
                 for idx, icon in enumerate(self.binary.resources_manager.icons):
@@ -1059,7 +1072,16 @@ class PE(ServiceBase):
                             "sublang": icon.sublang.name,
                         }
                     )
-                    sub_res.add_line(f"ID: {icon.id}, Lang: {icon.lang.name}")
+                    sub_res.add_row(
+                        TableRow(
+                            **{
+                                "ID": icon.id,
+                                "Lang": icon.lang.name,
+                                "Size": f"{icon.height}x{icon.width}",
+                                "Size (bytes)": len(icon.pixels),
+                            }
+                        )
+                    )
                     temp_path = os.path.join(self.working_directory, f"icon_{idx}.ico")
                     icon.save(temp_path)
                     self.request.add_supplementary(
@@ -1069,14 +1091,13 @@ class PE(ServiceBase):
                 res.add_subsection(sub_res)
             except lief.corrupted:
                 heur = Heuristic(13)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section = ResultSection(heur.name, heuristic=heur)
                 heur_section.add_line("Found corrupted icons")
                 res.add_subsection(heur_section)
 
         if self.binary.resources_manager.has_manifest:
             try:
                 self.features["resources_manager"]["manifest"] = self.binary.resources_manager.manifest
-                res.add_line(f"Manifest: {self.binary.resources_manager.manifest}")
             except lief.not_found:
                 pass
 
@@ -1089,11 +1110,11 @@ class PE(ServiceBase):
                     self.features["resources_manager"]["string_table"].append("AL_PE: UnicodeDecodeError")
 
         if self.binary.resources_manager.has_version:
-            sub_res = ResultSection("Version")
+            sub_res = ResultOrderedKeyValueSection("Version")
             try:
                 version = self.binary.resources_manager.version
                 self.features["resources_manager"]["version"] = {"type": version.type}
-                sub_res.add_line(f"Type: {version.type}")
+                sub_res.add_item("Type", version.type)
                 if version.has_fixed_file_info:
                     self.features["resources_manager"]["version"]["fixed_file_info"] = {
                         "file_date_LS": version.fixed_file_info.file_date_LS,
@@ -1110,20 +1131,20 @@ class PE(ServiceBase):
                         "signature": version.fixed_file_info.signature,
                         "struct_version": version.fixed_file_info.struct_version,
                     }
-                    sub_sub_res = ResultSection("fixed_file_info")
-                    sub_sub_res.add_line(f"file_date_LS: {version.fixed_file_info.file_date_LS}")
-                    sub_sub_res.add_line(f"file_date_MS: {version.fixed_file_info.file_date_MS}")
-                    sub_sub_res.add_line(f"file_flags: {version.fixed_file_info.file_flags}")
-                    sub_sub_res.add_line(f"file_flags_mask: {version.fixed_file_info.file_flags_mask}")
-                    sub_sub_res.add_line(f"file_os: {version.fixed_file_info.file_os.name}")
-                    sub_sub_res.add_line(f"file_subtype: {version.fixed_file_info.file_subtype.name}")
-                    sub_sub_res.add_line(f"file_type: {version.fixed_file_info.file_type.name}")
-                    sub_sub_res.add_line(f"file_version_LS: {version.fixed_file_info.file_version_LS}")
-                    sub_sub_res.add_line(f"file_version_MS: {version.fixed_file_info.file_version_MS}")
-                    sub_sub_res.add_line(f"product_version_LS: {version.fixed_file_info.product_version_LS}")
-                    sub_sub_res.add_line(f"product_version_MS: {version.fixed_file_info.product_version_MS}")
-                    sub_sub_res.add_line(f"signature: {version.fixed_file_info.signature}")
-                    sub_sub_res.add_line(f"struct_version: {version.fixed_file_info.struct_version}")
+                    sub_sub_res = ResultOrderedKeyValueSection("fixed_file_info")
+                    sub_sub_res.add_item("file_date_LS", version.fixed_file_info.file_date_LS)
+                    sub_sub_res.add_item("file_date_MS", version.fixed_file_info.file_date_MS)
+                    sub_sub_res.add_item("file_flags", version.fixed_file_info.file_flags)
+                    sub_sub_res.add_item("file_flags_mask", version.fixed_file_info.file_flags_mask)
+                    sub_sub_res.add_item("file_os", version.fixed_file_info.file_os.name)
+                    sub_sub_res.add_item("file_subtype", version.fixed_file_info.file_subtype.name)
+                    sub_sub_res.add_item("file_type", version.fixed_file_info.file_type.name)
+                    sub_sub_res.add_item("file_version_LS", version.fixed_file_info.file_version_LS)
+                    sub_sub_res.add_item("file_version_MS", version.fixed_file_info.file_version_MS)
+                    sub_sub_res.add_item("product_version_LS", version.fixed_file_info.product_version_LS)
+                    sub_sub_res.add_item("product_version_MS", version.fixed_file_info.product_version_MS)
+                    sub_sub_res.add_item("signature", version.fixed_file_info.signature)
+                    sub_sub_res.add_item("struct_version", version.fixed_file_info.struct_version)
                     sub_res.add_subsection(sub_sub_res)
                 if version.has_string_file_info:
                     self.features["resources_manager"]["version"]["string_file_info"] = {
@@ -1131,13 +1152,13 @@ class PE(ServiceBase):
                         "type": version.string_file_info.type,
                         "langcode_items": [],
                     }
-                    sub_sub_res = ResultSection("string_file_info")
-                    sub_sub_res.add_line(f"key: {version.string_file_info.key}")
-                    sub_sub_res.add_line(f"type: {version.string_file_info.type}")
+                    sub_sub_res = ResultOrderedKeyValueSection("string_file_info")
+                    sub_sub_res.add_item("key", version.string_file_info.key)
+                    sub_sub_res.add_item("type", version.string_file_info.type)
                     for item_index, langcodeitem in enumerate(version.string_file_info.langcode_items):
-                        sub_sub_sub_res = ResultSection(f"langcode_items {item_index + 1}")
-                        sub_sub_sub_res.add_line(f"key: {langcodeitem.key}")
-                        sub_sub_sub_res.add_line(f"type: {langcodeitem.type}")
+                        sub_sub_sub_res = ResultOrderedKeyValueSection(f"langcode_items {item_index + 1}")
+                        sub_sub_sub_res.add_item("key", langcodeitem.key)
+                        sub_sub_sub_res.add_item("type", langcodeitem.type)
                         lancodeitem_dict = {
                             "key": langcodeitem.key,
                             "type": langcodeitem.type,
@@ -1148,21 +1169,21 @@ class PE(ServiceBase):
                         }
                         try:
                             lancodeitem_dict["lang"] = langcodeitem.lang.name
-                            sub_sub_sub_res.add_line(f"lang: {langcodeitem.lang.name}")
+                            sub_sub_sub_res.add_item("lang", langcodeitem.lang.name)
                             lancodeitem_dict["sublang"] = langcodeitem.sublang.name
-                            sub_sub_sub_res.add_line(f"sublang: {langcodeitem.sublang.name}")
+                            sub_sub_sub_res.add_item("sublang", langcodeitem.sublang.name)
                             lancodeitem_dict["code_page"] = langcodeitem.code_page.name
-                            sub_sub_sub_res.add_line(f"code_page: {langcodeitem.code_page.name}")
+                            sub_sub_sub_res.add_item("code_page", langcodeitem.code_page.name)
                         except lief.corrupted:
                             sub_sub_sub_res.set_heuristic(13)
                             del lancodeitem_dict["lang"]
                             del lancodeitem_dict["sublang"]
                             del lancodeitem_dict["code_page"]
 
-                        sub_sub_sub_sub_res = ResultSection("items")
+                        sub_sub_sub_sub_res = ResultOrderedKeyValueSection("items")
                         for k, v in langcodeitem.items.items():
                             lancodeitem_dict["items"][k] = v.decode()
-                            sub_sub_sub_sub_res.add_line(f"{k}: {v.decode()}")
+                            sub_sub_sub_sub_res.add_item(k, v.decode())
                             if k == "OriginalFilename":
                                 sub_sub_res.add_tag("file.pe.versions.filename", v.decode())
                             elif k == "FileDescription":
@@ -1179,11 +1200,10 @@ class PE(ServiceBase):
                         "type": version.var_file_info.type,
                         "translations": version.var_file_info.translations,
                     }
-                    sub_sub_res = ResultSection("var_file_info")
-                    sub_sub_res.add_line(f"key: {version.var_file_info.key}")
-                    sub_sub_res.add_line(f"type: {version.var_file_info.type}")
-                    for translation in version.var_file_info.translations:
-                        sub_sub_res.add_line(f"translations: {translation}")
+                    sub_sub_res = ResultOrderedKeyValueSection("var_file_info")
+                    sub_sub_res.add_item("key", version.var_file_info.key)
+                    sub_sub_res.add_item("type", version.var_file_info.type)
+                    sub_sub_res.add_item("translations", ", ".join(map(str, version.var_file_info.translations)))
                     sub_res.add_subsection(sub_sub_res)
             except lief.not_found:
                 sub_res.set_heuristic(13)
@@ -1193,7 +1213,7 @@ class PE(ServiceBase):
                 sub_res.set_heuristic(13)
             res.add_subsection(sub_res)
 
-        sub_res = ResultSection("Summary", body_format=BODY_FORMAT.TABLE, body=[])
+        sub_res = ResultTableSection("Summary")
         current_resource_type = ""
 
         def get_node_data(node):
@@ -1233,7 +1253,9 @@ class PE(ServiceBase):
                 resource_sha256 = hashlib.sha256(resource_data).hexdigest()
                 data["sha256"] = resource_sha256
                 data["entropy"] = entropy
-                sub_res._body.append({"SHA256": resource_sha256, "Type": current_resource_type, "Entropy": entropy})
+                sub_res.add_row(
+                    TableRow(**{"SHA256": resource_sha256, "Type": current_resource_type, "Entropy": entropy})
+                )
                 data["depth"] = node.depth
                 if node.has_name:
                     data["name"] = node.name
@@ -1249,9 +1271,7 @@ class PE(ServiceBase):
             return data
 
         self.features["resources"] = get_node_data(self.binary.resources)
-        if sub_res._body:
-            sub_res._body = json.dumps(sub_res._body)
-            res.add_subsection(sub_res)
+        res.add_subsection(sub_res)
 
         self.file_res.add_section(res)
 
@@ -1272,7 +1292,7 @@ class PE(ServiceBase):
 
         if "INVALID_SIGNER" in self.features["verify_signature"]:
             heur = Heuristic(10)
-            heur_section = ResultSection(heur.definition.name, heuristic=heur)
+            heur_section = ResultSection(heur.name, heuristic=heur)
             heur_section.add_line(
                 f"INVALID_SIGNER found while verifying signature : {self.features['verify_signature']}"
             )
@@ -1280,7 +1300,7 @@ class PE(ServiceBase):
 
         if self.features["verify_signature"] == "OK":
             heur = Heuristic(2)
-            heur_section = ResultSection(heur.definition.name, heuristic=heur)
+            heur_section = ResultSection(heur.name, heuristic=heur)
             heur_section.add_line(f"OK found while verifying signature : {self.features['verify_signature']}")
             res.add_subsection(heur_section)
 
@@ -1311,14 +1331,14 @@ class PE(ServiceBase):
                 "check": signature.check().name(),
             }
 
-            sub_res = ResultSection(f"Signature - {signature_index + 1}")
-            sub_res.add_line(f"Version: {signature.version}")
-            sub_res.add_line(f"Algorithm: {signature.digest_algorithm.name}")
-            sub_res.add_line(f"Content Info Algorithm: {signature.content_info.digest_algorithm.name}")
-            sub_res.add_line(f"Content Info Digest: {signature_dict['content_info']['digest']}")
-            sub_res.add_line(f"Content Info Content Type: {signature.content_info.content_type}")
+            sub_res = ResultOrderedKeyValueSection(f"Signature - {signature_index + 1}")
+            sub_res.add_item("Version", signature.version)
+            sub_res.add_item("Algorithm", signature.digest_algorithm.name.replace("_", ""))
+            sub_res.add_item("Content Info Algorithm", signature.content_info.digest_algorithm.name.replace("_", ""))
+            sub_res.add_item("Content Info Digest", signature_dict["content_info"]["digest"])
+            sub_res.add_item("Content Info Content Type", signature.content_info.content_type)
             for signer_index, signer in enumerate(signature.signers):
-                sub_sub_res = ResultSection(f"Signer - {signer_index + 1}")
+                sub_sub_res = ResultOrderedKeyValueSection(f"Signer - {signer_index + 1}")
                 signer_dict = {
                     "version": signer.version,
                     "issuer": signer.issuer,
@@ -1338,34 +1358,32 @@ class PE(ServiceBase):
                         for attribute in signer.unauthenticated_attributes
                     ],
                 }
-                sub_sub_res.add_line(f"Version: {signer.version}")
-                sub_sub_res.add_line(f"Digest Algorithm: {signer.digest_algorithm.name}")
-                sub_sub_res.add_line(f"Authenticated Attributes: {', '.join(signer_dict['authenticated_attributes'])}")
-                sub_sub_res.add_line(
-                    f"Unauthenticated Attributes: {', '.join(signer_dict['unauthenticated_attributes'])}"
-                )
+                sub_sub_res.add_item("Version", signer.version)
+                sub_sub_res.add_item("Digest Algorithm", signer.digest_algorithm.name.replace("_", ""))
+                sub_sub_res.add_item("Authenticated Attributes", ", ".join(signer_dict["authenticated_attributes"]))
+                sub_sub_res.add_item("Unauthenticated Attributes", ", ".join(signer_dict["unauthenticated_attributes"]))
 
                 if signer.cert is not None and signer.cert.issuer is not None:
                     recurse_cert(signer.cert.issuer)
                     extracted_cert_info = extract_cert_info(signer.cert, trusted_certs + extra_certs)
                     signer_dict["cert"] = extracted_cert_info
 
-                    sub_sub_sub_res = ResultSection("Signer Certificate")
-                    sub_sub_sub_res.add_line(f"Version: {extracted_cert_info['version']}")
-                    sub_sub_sub_res.add_line(f"Subject: {extracted_cert_info['subject']}")
+                    sub_sub_sub_res = ResultOrderedKeyValueSection("Signer Certificate")
+                    sub_sub_sub_res.add_item("Version", extracted_cert_info["version"])
+                    sub_sub_sub_res.add_item("Subject", extracted_cert_info["subject"])
                     sub_sub_sub_res.add_tag("cert.subject", extracted_cert_info["subject"])
-                    sub_sub_sub_res.add_line(f"Issuer: {extracted_cert_info['issuer']}")
+                    sub_sub_sub_res.add_item("Issuer", extracted_cert_info["issuer"])
                     sub_sub_sub_res.add_tag("cert.issuer", extracted_cert_info["issuer"])
-                    sub_sub_sub_res.add_line(f"Serial Number: {extracted_cert_info['serial_number']}")
+                    sub_sub_sub_res.add_item("Serial Number", extracted_cert_info["serial_number"])
                     sub_sub_sub_res.add_tag("cert.serial_no", extracted_cert_info["serial_number"])
-                    sub_sub_sub_res.add_line(
-                        f"Valid From: {datetime.datetime(*extracted_cert_info['valid_from']).isoformat()}"
+                    sub_sub_sub_res.add_item(
+                        "Valid From", datetime.datetime(*extracted_cert_info["valid_from"]).isoformat()
                     )
                     sub_sub_sub_res.add_tag(
                         "cert.valid.start", datetime.datetime(*extracted_cert_info["valid_from"]).isoformat()
                     )
-                    sub_sub_sub_res.add_line(
-                        f"Valid To: {datetime.datetime(*extracted_cert_info['valid_to']).isoformat()}"
+                    sub_sub_sub_res.add_item(
+                        "Valid To", datetime.datetime(*extracted_cert_info["valid_to"]).isoformat()
                     )
                     sub_sub_sub_res.add_tag(
                         "cert.valid.end", datetime.datetime(*extracted_cert_info["valid_to"]).isoformat()
@@ -1378,7 +1396,7 @@ class PE(ServiceBase):
                     sub_sub_res.add_subsection(sub_sub_sub_res)
                 else:
                     heur = Heuristic(13)
-                    heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                    heur_section = ResultSection(heur.name, heuristic=heur)
                     heur_section.add_line("Signer certificate or signer certificate's issuer is non-existant")
                     sub_sub_res.add_subsection(heur_section)
                     del signer_dict["cert"]
@@ -1390,49 +1408,62 @@ class PE(ServiceBase):
                     recurse_cert(certificate.issuer)
                 extracted_cert_info = extract_cert_info(certificate, trusted_certs + extra_certs)
                 signature_dict["certificates"].append(extracted_cert_info)
-                sub_sub_res = ResultSection(f"Certificate - {certificate_index + 1}")
-                sub_sub_res.add_line(f"Version: {extracted_cert_info['version']}")
-                sub_sub_res.add_line(f"Subject: {extracted_cert_info['subject']}")
-                sub_sub_res.add_line(f"Issuer: {extracted_cert_info['issuer']}")
+                sub_sub_res = ResultOrderedKeyValueSection(f"Certificate - {certificate_index + 1}")
+                sub_sub_res.add_item("Version", extracted_cert_info["version"])
+                sub_sub_res.add_item("Subject", extracted_cert_info["subject"])
+                sub_sub_res.add_item("Issuer", extracted_cert_info["issuer"])
                 raw_cert = bytes.fromhex(extracted_cert_info["raw_hex"])
                 file_name = f"certificate.{signature_index + 1}.{certificate_index + 1}"
                 temp_path = os.path.join(self.working_directory, file_name)
                 with open(temp_path, "wb") as myfile:
                     myfile.write(raw_cert)
                 self.request.add_extracted(temp_path, file_name, f"{file_name} extracted from binary's resources")
-                sub_sub_res.add_line(f"SHA-1: {hashlib.sha1(raw_cert).hexdigest()}")
-                sub_sub_res.add_line(f"SHA-256: {hashlib.sha256(raw_cert).hexdigest()}")
-                sub_sub_res.add_line(f"MD5: {hashlib.md5(raw_cert).hexdigest()}")
-                sub_sub_res.add_line(f"Serial Number: {extracted_cert_info['serial_number']}")
-                sub_sub_res.add_line(f"Valid From: {datetime.datetime(*extracted_cert_info['valid_from']).isoformat()}")
-                sub_sub_res.add_line(f"Valid To: {datetime.datetime(*extracted_cert_info['valid_to']).isoformat()}")
+                sub_sub_res.add_item("SHA1", hashlib.sha1(raw_cert).hexdigest())
+                sub_sub_res.add_item("SHA256", hashlib.sha256(raw_cert).hexdigest())
+                sub_sub_res.add_item("MD5", hashlib.md5(raw_cert).hexdigest())
+                sub_sub_res.add_item("Serial Number", extracted_cert_info["serial_number"])
+                sub_sub_res.add_item("Valid From", datetime.datetime(*extracted_cert_info["valid_from"]).isoformat())
+                sub_sub_res.add_item("Valid To", datetime.datetime(*extracted_cert_info["valid_to"]).isoformat())
                 sub_res.add_subsection(sub_sub_res)
 
             self.features["signatures"].append(signature_dict)
 
             if signature.content_info.digest_algorithm.name not in self.features["authentihash"]:
                 heur = Heuristic(1)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
-                heur_section.add_line("The signature hash does not exist in the program data :")
-                heur_section.add_line(f"Signature hash : {signature.content_info.digest_algorithm.name}")
-                heur_section.add_line(f"Program data hashes : {', '.join(self.features['authentihash'].keys())}")
+                heur_section = ResultMultiSection(heur.name, heuristic=heur)
+                heur_text_body = TextSectionBody()
+                heur_text_body.add_line("The signature hash does not exist in the program data")
+                heur_section.add_section_part(heur_text_body)
+                heur_kv_body = OrderedKVSectionBody()
+                heur_kv_body.add_item("Signature hash", signature.content_info.digest_algorithm.name)
+                heur_kv_body.add_item("Program data hashes", ", ".join(self.features["authentihash"].keys()))
+                heur_section.add_section_part(heur_kv_body)
                 sub_res.add_subsection(heur_section)
             elif (
                 signature.content_info.digest.hex()
                 != self.features["authentihash"][signature.content_info.digest_algorithm.name]
             ):
                 heur = Heuristic(1)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
-                heur_section.add_line("The signature does not match the program data :")
-                heur_section.add_line(f"Signature : {signature.content_info.digest.hex()}")
-                heur_section.add_line(
-                    f"Program data : {self.features['authentihash'][signature.content_info.digest_algorithm.name]}"
+                heur_section = ResultMultiSection(heur.name, heuristic=heur)
+                heur_text_body = TextSectionBody()
+                heur_text_body.add_line(
+                    (
+                        "The signature does not match the authentihash data found "
+                        f"for {signature.content_info.digest_algorithm.name.replace('_', '')}"
+                    )
                 )
+                heur_section.add_section_part(heur_text_body)
+                heur_kv_body = OrderedKVSectionBody()
+                heur_kv_body.add_item("Signature", signature.content_info.digest.hex())
+                heur_kv_body.add_item(
+                    "Authentihash data", self.features["authentihash"][signature.content_info.digest_algorithm.name]
+                )
+                heur_section.add_section_part(heur_kv_body)
                 sub_res.add_subsection(heur_section)
 
             if len(signature.certificates) < 2:
                 heur = Heuristic(8)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section = ResultSection(heur.name, heuristic=heur)
                 heur_section.add_line(
                     f"This is probably an error. Less than two certificates were found : {len(signature.certificates)}"
                 )
@@ -1457,15 +1488,15 @@ class PE(ServiceBase):
 
             if denied_algorithm:
                 heur = Heuristic(9)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
-                heur_section.add_line(f"Offending algorithms : {', '.join(denied_algorithm)}")
+                heur_section = ResultOrderedKeyValueSection(heur.name, heuristic=heur)
+                heur_section.add_item("Offending algorithms", ", ".join(denied_algorithm))
                 heur_section.add_tag("attribution.exploit", "CVE_2020_0601")
                 sub_res.add_subsection(heur_section)
 
             if self_signed_signer:
                 heur = Heuristic(6)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
-                heur_section.add_line(f"Subject/Issuer used : {self_signed_signer[0]}")
+                heur_section = ResultOrderedKeyValueSection(heur.name, heuristic=heur)
+                heur_section.add_item("Subject/Issuer", self_signed_signer[0])
                 sub_res.add_subsection(heur_section)
 
             if denied_algorithm or self_signed_signer:
@@ -1480,16 +1511,20 @@ class PE(ServiceBase):
                     break
             if all_same_issuer:
                 heur = Heuristic(3)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
-                heur_section.add_line("All issuers matching is usually a sign of it being self-signed")
-                heur_section.add_line(f"Issuer : {first_issuer}")
+                heur_section = ResultMultiSection(heur.name, heuristic=heur)
+                heur_text_body = TextSectionBody()
+                heur_text_body.add_line("All issuers matching is usually a sign of it being self-signed")
+                heur_section.add_section_part(heur_text_body)
+                heur_kv_body = OrderedKVSectionBody()
+                heur_kv_body.add_item("Issuer", first_issuer)
+                heur_section.add_section_part(heur_kv_body)
                 sub_res.add_subsection(heur_section)
                 res.add_subsection(sub_res)
                 continue
 
             if signature_dict["check"] != "OK":
                 heur = Heuristic(5)
-                heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                heur_section = ResultSection(heur.name, heuristic=heur)
                 heur_section.add_lines(
                     [
                         "Possibly self signed.",
@@ -1508,29 +1543,26 @@ class PE(ServiceBase):
             self.features["size"] <= self.config.get("overlay_analysis_file_max_size", 50000000)
             or self.request.deep_scan
         ):
-            res = ResultSection("Overlay")
+            res = ResultMultiSection("Overlay")
             overlay = bytearray(self.binary.overlay)
             entropy_data = calculate_partition_entropy(BytesIO(overlay))
             self.features["overlay"] = {"size": len(overlay), "entropy": entropy_data[0]}
-            res.add_line(f"Overlay size: {self.features['overlay']['size']}")
+            overlay_text_section = TextSectionBody()
+            overlay_text_section.add_line(f"Overlay size: {self.features['overlay']['size']}")
+            res.add_section_part(overlay_text_section)
             if self.features["overlay"]["size"] > 0:
                 if self.features["overlay"]["size"] > self.features["virtual_size"] and self.features["overlay"][
                     "entropy"
                 ] < self.config.get("heur25_min_overlay_entropy", 0.5):
                     heur = Heuristic(25)
-                    heur_section = ResultSection(heur.definition.name, heuristic=heur)
+                    heur_section = ResultSection(heur.name, heuristic=heur)
                     heur_section.add_line(f"Overlay Size: {self.features['overlay']['size']}")
                     heur_section.add_line(f"Overlay Entropy: {self.features['overlay']['entropy']}")
                     res.add_subsection(heur_section)
 
-                entropy_graph_data = {
-                    "type": "colormap",
-                    "data": {"domain": [0, 8], "values": entropy_data[1]},
-                }
-                entropy_res = ResultSection(
-                    "Entropy graph", body_format=BODY_FORMAT.GRAPH_DATA, body=json.dumps(entropy_graph_data)
-                )
-                res.add_subsection(entropy_res)
+                overlay_graph_section = GraphSectionBody()
+                overlay_graph_section.set_colormap(cmap_min=0, cmap_max=8, values=entropy_data[1])
+                res.add_section_part(overlay_graph_section)
 
                 file_name = "overlay"
                 temp_path = os.path.join(self.working_directory, file_name)
