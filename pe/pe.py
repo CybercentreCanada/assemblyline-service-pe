@@ -642,7 +642,7 @@ class PE(ServiceBase):
             section_text_section = OrderedKVSectionBody()
             section_text_section.add_item("Entropy", entropy_data[0])
             section_graph_section = GraphSectionBody()
-            section_graph_section.set_colormap(cmap_min=0, cmap_max=8, values=entropy_data[1])
+            section_graph_section.set_colormap(cmap_min=0, cmap_max=8, values=[round(x, 5) for x in entropy_data[1]])
             if entropy_data[0] > self.config.get("heur4_max_section_entropy", 7.5):
                 heur = Heuristic(4)
                 heur_section = ResultMultiSection(heur.name, heuristic=heur)
@@ -1547,8 +1547,8 @@ class PE(ServiceBase):
             overlay = bytearray(self.binary.overlay)
             entropy_data = calculate_partition_entropy(BytesIO(overlay))
             self.features["overlay"] = {"size": len(overlay), "entropy": entropy_data[0]}
-            overlay_text_section = TextSectionBody()
-            overlay_text_section.add_line(f"Overlay size: {self.features['overlay']['size']}")
+            overlay_text_section = OrderedKVSectionBody()
+            overlay_text_section.add_item("Size", self.features['overlay']['size'])
             res.add_section_part(overlay_text_section)
             if self.features["overlay"]["size"] > 0:
                 if self.features["overlay"]["size"] > self.features["virtual_size"] and self.features["overlay"][
@@ -1561,7 +1561,9 @@ class PE(ServiceBase):
                     res.add_subsection(heur_section)
 
                 overlay_graph_section = GraphSectionBody()
-                overlay_graph_section.set_colormap(cmap_min=0, cmap_max=8, values=entropy_data[1])
+                overlay_graph_section.set_colormap(
+                    cmap_min=0, cmap_max=8, values=[round(x, 5) for x in entropy_data[1]]
+                )
                 res.add_section_part(overlay_graph_section)
 
                 file_name = "overlay"
