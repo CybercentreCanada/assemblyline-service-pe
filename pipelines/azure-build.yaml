@@ -50,7 +50,6 @@ stages:
           - script: |
               export TAG=${BUILD_SOURCEBRANCH#"refs/tags/v"}
               if [[ "$TAG" == *stable* ]]; then export BUILD_TYPE=stable; else export BUILD_TYPE=latest; fi
-              # TODO: Add replacement of ARG branch=latest for stable if we're doing a stable build
               docker build --build-arg version=$TAG --build-arg branch=$BUILD_TYPE -t cccs/${BUILD_REPOSITORY_NAME##*/}:$TAG -t cccs/${BUILD_REPOSITORY_NAME##*/}:$BUILD_TYPE -f ./Dockerfile .
             workingDirectory: $(full_self_location)
             displayName: Build containers
@@ -58,7 +57,7 @@ stages:
               [ ! -d "$(pwd)/tests" ] && echo "No tests found" && exit
               export TAG=${BUILD_SOURCEBRANCH#"refs/tags/v"}
               if [[ "$TAG" == *stable* ]]; then export BUILD_TYPE=stable; else export BUILD_TYPE=latest; fi
-              [ -f "$(pwd)/tests/requirements.txt" ] && docker run -e FULL_SELF_LOCATION=/opt/al_service -e FULL_SAMPLES_LOCATION=/opt/samples -v /usr/share/ca-certificates/mozilla:/usr/share/ca-certificates/mozilla -v $(pwd)/tests/:/opt/al_service/tests/ -v ${FULL_SAMPLES_LOCATION}:/opt/samples cccs/${BUILD_REPOSITORY_NAME##*/}:$BUILD_TYPE bash -c 'pip install -U -r tests/requirements.txt; pytest -p no:cacheprovider' -vv && exit
+              [ -f "$(pwd)/tests/requirements.txt" ] && docker run -e FULL_SELF_LOCATION=/opt/al_service -e FULL_SAMPLES_LOCATION=/opt/samples -v /usr/share/ca-certificates/mozilla:/usr/share/ca-certificates/mozilla -v $(pwd)/tests/:/opt/al_service/tests/ -v ${FULL_SAMPLES_LOCATION}:/opt/samples cccs/${BUILD_REPOSITORY_NAME##*/}:$BUILD_TYPE bash -c 'pip install -U -r tests/requirements.txt; pytest -p no:cacheprovider -vv' && exit
               docker run -e FULL_SELF_LOCATION=/opt/al_service -e FULL_SAMPLES_LOCATION=/opt/samples -v /usr/share/ca-certificates/mozilla:/usr/share/ca-certificates/mozilla -v $(pwd)/tests/:/opt/al_service/tests/ -v ${FULL_SAMPLES_LOCATION}:/opt/samples cccs/${BUILD_REPOSITORY_NAME##*/}:$BUILD_TYPE bash -c 'pytest -p no:cacheprovider -vv'
             workingDirectory: $(full_self_location)
             displayName: Test containers
