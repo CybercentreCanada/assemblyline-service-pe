@@ -1,0 +1,244 @@
+{
+    "name": "260e454f1c460f016406e94de138764950fbc7746f2035632bd08b14ab6447db",
+    "format": "PE",
+    "imphash": "",
+    "entrypoint": 26119,
+    "header": {
+        "characteristics_hash": 271,
+        "characteristics_list": [
+            "CHARA_32BIT_MACHINE",
+            "RELOCS_STRIPPED",
+            "EXECUTABLE_IMAGE",
+            "LINE_NUMS_STRIPPED",
+            "LOCAL_SYMS_STRIPPED"
+        ],
+        "machine": "I386",
+        "numberof_sections": 4,
+        "numberof_symbols": 0,
+        "signature": [
+            80,
+            69,
+            0,
+            0
+        ],
+        "timestamp": 1251288449,
+        "hr_timestamp": "2009-08-26 12:07:29 +00:00 (UTC)"
+    },
+    "optional_header": {
+        "addressof_entrypoint": 26119,
+        "baseof_code": 4096,
+        "checksum": 0,
+        "dll_characteristics": 0,
+        "dll_characteristics_lists": [],
+        "file_alignment": 4096,
+        "imagebase": 4194304,
+        "loader_flags": 0,
+        "magic": "PE32",
+        "major_image_version": 0,
+        "major_linker_version": 6,
+        "major_operating_system_version": 4,
+        "major_subsystem_version": 4,
+        "minor_image_version": 0,
+        "minor_linker_version": 0,
+        "minor_operating_system_version": 0,
+        "minor_subsystem_version": 0,
+        "numberof_rva_and_size": 16,
+        "section_alignment": 4096,
+        "sizeof_code": 45056,
+        "sizeof_headers": 4096,
+        "sizeof_heap_commit": 4096,
+        "sizeof_heap_reserve": 1048576,
+        "sizeof_image": 90112,
+        "sizeof_initialized_data": 40960,
+        "sizeof_stack_commit": 4096,
+        "sizeof_stack_reserve": 1048576,
+        "sizeof_uninitialized_data": 0,
+        "subsystem": "WINDOWS_GUI",
+        "win32_version_value": 0,
+        "baseof_data": 49152
+    },
+    "dos_header": {
+        "addressof_new_exeheader": 232,
+        "addressof_relocation_table": 64,
+        "checksum": 0,
+        "file_size_in_pages": 3,
+        "header_size_in_paragraphs": 4,
+        "initial_ip": 0,
+        "initial_relative_cs": 0,
+        "initial_relative_ss": 0,
+        "initial_sp": 184,
+        "magic": 23117,
+        "maximum_extra_paragraphs": 65535,
+        "minimum_extra_paragraphs": 0,
+        "numberof_relocation": 0,
+        "oem_id": 0,
+        "oem_info": 0,
+        "overlay_number": 0,
+        "used_bytes_in_the_last_page": 144
+    },
+    "rich_header": {
+        "entries": [
+            {
+                "build_id": 1735,
+                "count": 1,
+                "id": 6
+            },
+            {
+                "build_id": 9044,
+                "count": 40,
+                "id": 48
+            },
+            {
+                "build_id": 2179,
+                "count": 8,
+                "id": 93
+            },
+            {
+                "build_id": 0,
+                "count": 201,
+                "id": 1
+            },
+            {
+                "build_id": 8047,
+                "count": 3,
+                "id": 4
+            },
+            {
+                "build_id": 8047,
+                "count": 11,
+                "id": 10
+            },
+            {
+                "build_id": 7299,
+                "count": 9,
+                "id": 14
+            },
+            {
+                "build_id": 7291,
+                "count": 4,
+                "id": 12
+            }
+        ],
+        "key": 2241747415,
+        "hash": "a7016ce5cb15a8644d2a00d0e692d936"
+    },
+    "nx": false,
+    "authentihash": {
+        "SHA_512": "a18c13042228d54239095cc58bc296044d6fe476a1bee92c46c7dd8a6f7dd4473cffd8340418a03c0e920e47a216a2043200117389dbb59b532e574ec5a18656",
+        "SHA_384": "3ec63fb55eb9564c04438784d3b357345adae47b6e9bb295d2b52a796573735afc146253acab03e5b9e773c01ee6bdcf",
+        "SHA_256": "5bcfa0add0b53f05c1a34c5f38052b34c6d5f299da072afd48c8147325d70be7",
+        "SHA_1": "e53b1bb250421b5b4317c31fcf647e751ec0e92a",
+        "MD5": "8b0f52c92ac456c112016112ee661ebe"
+    },
+    "overlay": {
+        "entropy": 0.0033219519674815862,
+        "size": 357500072
+    },
+    "position_independent": false,
+    "is_reproducible_build": false,
+    "size_of_headers": 4096,
+    "virtual_size": 90112,
+    "size": 357573800,
+    "sections": [
+        {
+            "name": ".text",
+            "characteristics_hash": 1610612768,
+            "characteristics_list": [
+                "CNT_CODE",
+                "MEM_EXECUTE",
+                "MEM_READ"
+            ],
+            "entropy": 0.0,
+            "entropy_without_padding": -0.0,
+            "md5": "c324946ce1884cae603d6f4aa055ac8c",
+            "offset": 4096,
+            "size": 45056,
+            "sizeof_raw_data": 45056,
+            "virtual_address": 4096,
+            "virtual_size": 43366,
+            "fullname": ".text\u0000\u0000\u0000"
+        },
+        {
+            "name": ".rdata",
+            "characteristics_hash": 1073741888,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_READ"
+            ],
+            "entropy": 0.0,
+            "entropy_without_padding": -0.0,
+            "md5": "620f0b67a91f7f74151bc5be745b7110",
+            "offset": 49152,
+            "size": 4096,
+            "sizeof_raw_data": 4096,
+            "virtual_address": 49152,
+            "virtual_size": 4070,
+            "fullname": ".rdata\u0000\u0000"
+        },
+        {
+            "name": ".data",
+            "characteristics_hash": 3221225536,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_READ",
+                "MEM_WRITE"
+            ],
+            "entropy": 0.0,
+            "entropy_without_padding": -0.0,
+            "md5": "ce338fe6899778aacfc28414f2d9498b",
+            "offset": 53248,
+            "size": 16384,
+            "sizeof_raw_data": 16384,
+            "virtual_address": 53248,
+            "virtual_size": 28764,
+            "fullname": ".data\u0000\u0000\u0000"
+        },
+        {
+            "name": ".rsrc",
+            "characteristics_hash": 1073741888,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_READ"
+            ],
+            "entropy": 0.0,
+            "entropy_without_padding": -0.0,
+            "md5": "620f0b67a91f7f74151bc5be745b7110",
+            "offset": 69632,
+            "size": 4096,
+            "sizeof_raw_data": 4096,
+            "virtual_address": 86016,
+            "virtual_size": 1992,
+            "fullname": ".rsrc\u0000\u0000\u0000"
+        }
+    ],
+    "debug": [
+        {
+            "addressof_rawdata": 0,
+            "characteristics": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "pointerto_rawdata": 0,
+            "sizeof_data": 0,
+            "timestamp": 0,
+            "type": "UNKNOWN"
+        }
+    ],
+    "resources_manager": {
+        "langs_available": [],
+        "sublangs_available": []
+    },
+    "resources": {
+        "characteristics": 0,
+        "num_childs": 0,
+        "depth": 0,
+        "id": 0,
+        "is_data": false,
+        "is_directory": true,
+        "major_version": 0,
+        "minor_version": 0,
+        "numberof_id_entries": 0,
+        "numberof_name_entries": 0,
+        "time_date_stamp": 0
+    },
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"
+}

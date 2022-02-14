@@ -114,6 +114,9 @@ class TestService:
 
         task = Task(create_service_task(sample=sample))
         service_request = ServiceRequest(task)
+
+        if sample == "260e454f1c460f016406e94de138764950fbc7746f2035632bd08b14ab6447db":
+            cls.config["overlay_analysis_file_max_size"] = 500000000
         cls.execute(service_request)
 
         correct_features_path = os.path.join(SELF_LOCATION, "tests", "results", sample, "features.json")

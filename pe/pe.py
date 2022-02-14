@@ -562,7 +562,6 @@ class PE(ServiceBase):
             heur_section.add_item("Virtual Size", self.features["virtual_size"])
             res.add_subsection(heur_section)
 
-        # sub_res = ResultTableSection("Authentihash")
         sub_res = ResultOrderedKeyValueSection("Authentihash")
         for i in range(1, 6):
             try:
@@ -1568,6 +1567,16 @@ class PE(ServiceBase):
                     heur_section.add_line(f"Overlay Entropy: {self.features['overlay']['entropy']}")
                     res.add_subsection(heur_section)
 
+                    file_name = "pe_without_overlay"
+                    temp_path = os.path.join(self.working_directory, file_name)
+                    data_len = self.features["size"] - self.features["overlay"]["size"]
+                    with open(self.request.file_path, "rb") as f:
+                        data = bytearray(f.read(data_len))
+
+                    with open(temp_path, "wb") as f:
+                        f.write(data)
+                    self.request.add_extracted(temp_path, file_name, f"{file_name} extracted from binary's resources")
+
                 overlay_graph_section = GraphSectionBody()
                 overlay_graph_section.set_colormap(
                     cmap_min=0, cmap_max=8, values=[round(x, 5) for x in entropy_data[1]]
@@ -1576,8 +1585,8 @@ class PE(ServiceBase):
 
                 file_name = "overlay"
                 temp_path = os.path.join(self.working_directory, file_name)
-                with open(temp_path, "wb") as myfile:
-                    myfile.write(overlay)
+                with open(temp_path, "wb") as f:
+                    f.write(overlay)
                 self.request.add_extracted(temp_path, file_name, f"{file_name} extracted from binary's resources")
 
             self.file_res.add_section(res)
