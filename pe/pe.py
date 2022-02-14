@@ -247,18 +247,26 @@ class PE(ServiceBase):
         delphi = False
         if self.binary.header.time_date_stamps == 708992537:  # Likely a delphi binary
             delphi = True
-        elif self.binary.header.time_date_stamps != 0:
+        elif self.binary.header.time_date_stamps != 0 and self.binary.header.time_date_stamps != 0xFFFFFFFF:
             timestamps.add(self.binary.header.time_date_stamps)
 
-        if self.binary.has_configuration and self.binary.load_configuration.timedatestamp != 0:
+        if (
+            self.binary.has_configuration
+            and self.binary.load_configuration.timedatestamp != 0
+            and self.binary.load_configuration.timedatestamp != 0xFFFFFFFF
+        ):
             timestamps.add(self.binary.load_configuration.timedatestamp)
 
-        if self.binary.has_exports and self.binary.get_export().timestamp != 0:
+        if (
+            self.binary.has_exports
+            and self.binary.get_export().timestamp != 0
+            and self.binary.get_export().timestamp != 0xFFFFFFFF
+        ):
             timestamps.add(self.binary.get_export().timestamp)
 
         if self.binary.has_debug:
             for debug in self.binary.debug:
-                if debug.timestamp != 0:
+                if debug.timestamp != 0 and debug.timestamp != 0xFFFFFFFF:
                     timestamps.add(debug.timestamp)
                 # Will never trigger, but taken from https://0xc0decafe.com/malware-analyst-guide-to-pe-timestamps/
                 if debug.has_code_view and debug.code_view.cv_signature.name == "01BN":
@@ -266,7 +274,7 @@ class PE(ServiceBase):
 
         def recurse_resources(node):
             if isinstance(node, lief.PE.ResourceDirectory):
-                if node.time_date_stamp != 0:
+                if node.time_date_stamp != 0 and node.time_date_stamp != 0xFFFFFFFF:
                     if delphi:
                         timestamps.add(from_msdos(node.time_date_stamp))
                     else:
@@ -1417,7 +1425,7 @@ class PE(ServiceBase):
                 temp_path = os.path.join(self.working_directory, file_name)
                 with open(temp_path, "wb") as myfile:
                     myfile.write(raw_cert)
-                self.request.add_extracted(temp_path, file_name, f"{file_name} extracted from binary's resources")
+                self.request.add_supplementary(temp_path, file_name, f"{file_name} extracted from binary's resources")
                 sub_sub_res.add_item("SHA1", hashlib.sha1(raw_cert).hexdigest())
                 sub_sub_res.add_item("SHA256", hashlib.sha256(raw_cert).hexdigest())
                 sub_sub_res.add_item("MD5", hashlib.md5(raw_cert).hexdigest())
@@ -1547,9 +1555,9 @@ class PE(ServiceBase):
             overlay = bytearray(self.binary.overlay)
             entropy_data = calculate_partition_entropy(BytesIO(overlay))
             self.features["overlay"] = {"size": len(overlay), "entropy": entropy_data[0]}
-            overlay_text_section = OrderedKVSectionBody()
-            overlay_text_section.add_item("Size", self.features['overlay']['size'])
-            res.add_section_part(overlay_text_section)
+            overlay_kv_section = OrderedKVSectionBody()
+            overlay_kv_section.add_item("Size", self.features["overlay"]["size"])
+            res.add_section_part(overlay_kv_section)
             if self.features["overlay"]["size"] > 0:
                 if self.features["overlay"]["size"] > self.features["virtual_size"] and self.features["overlay"][
                     "entropy"

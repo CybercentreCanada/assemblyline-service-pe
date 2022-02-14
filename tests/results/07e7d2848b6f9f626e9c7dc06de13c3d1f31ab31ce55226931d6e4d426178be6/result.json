@@ -10,21 +10,11 @@
         "service_tool_version": null,
         "supplementary": [
             {
-                "name": "features.json",
-                "sha256": "c9d2d4bc17f8ecf9e934aad5d2f1cea70eae6785f5d4137a3abeb008b31cc065",
-                "description": "Features extracted from the PE file, as a JSON file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpvm5_33x1/features.json",
-                "is_section_image": false
-            }
-        ],
-        "extracted": [
-            {
                 "name": "certificate.1.1",
                 "sha256": "f95ce92dd0528e03cbd1c25fe6e506271f75b4dea7e490bd95e55206b46d8157",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpvm5_33x1/certificate.1.1",
+                "path": "/tmp/working_directory/tmpbppsw5qz/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -32,7 +22,7 @@
                 "sha256": "0625fee1a80d7b897a9712249c2f55ff391d6661dbd8b87f9be6f252d88ced95",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpvm5_33x1/certificate.1.2",
+                "path": "/tmp/working_directory/tmpbppsw5qz/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -40,15 +30,25 @@
                 "sha256": "0374881c9b74d31f28dc580b0f2b9d2b14a97ce31cbec2a05aeb377dcddcc2b0",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpvm5_33x1/certificate.1.3",
+                "path": "/tmp/working_directory/tmpbppsw5qz/certificate.1.3",
                 "is_section_image": false
             },
+            {
+                "name": "features.json",
+                "sha256": "c9d2d4bc17f8ecf9e934aad5d2f1cea70eae6785f5d4137a3abeb008b31cc065",
+                "description": "Features extracted from the PE file, as a JSON file",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpbppsw5qz/features.json",
+                "is_section_image": false
+            }
+        ],
+        "extracted": [
             {
                 "name": "overlay",
                 "sha256": "17e42874aff50903131e781b920f8a9b65b2d9156f76479f86f76641a9150cbf",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpvm5_33x1/overlay",
+                "path": "/tmp/working_directory/tmpbppsw5qz/overlay",
                 "is_section_image": false
             }
         ],
