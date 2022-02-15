@@ -124,10 +124,6 @@
     "size_of_headers": 1024,
     "virtual_size": 1695744,
     "size": 1680896,
-    "overlay": {
-        "size": 0,
-        "entropy": 0.0
-    },
     "sections": [
         {
             "name": ".text",
@@ -196,24 +192,7 @@
             "code_view": {
                 "age": 1,
                 "cv_signature": "PDB_70",
-                "signature": [
-                    64,
-                    152,
-                    214,
-                    215,
-                    115,
-                    95,
-                    23,
-                    73,
-                    148,
-                    218,
-                    199,
-                    50,
-                    27,
-                    34,
-                    197,
-                    18
-                ],
+                "GUID": "d7d69840-5f73-4917-94da-c7321b22c512",
                 "filename": "wextract.pdb"
             }
         }
@@ -2614,5 +2593,9 @@
             }
         ]
     },
-    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
+    "overlay": {
+        "size": 0,
+        "entropy": 0.0
+    }
 }

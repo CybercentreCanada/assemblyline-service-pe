@@ -712,7 +712,13 @@ class PE(ServiceBase):
                 cv_dict = {
                     "age": debug.code_view.age,
                     "cv_signature": debug.code_view.cv_signature.name,
-                    "signature": debug.code_view.signature,
+                    "GUID": (
+                        f"{''.join([hex(x)[2:] for x in debug.code_view.signature[:4][::-1]])}-"
+                        f"{''.join([hex(x)[2:] for x in debug.code_view.signature[4:6][::-1]])}-"
+                        f"{''.join([hex(x)[2:] for x in debug.code_view.signature[6:8][::-1]])}-"
+                        f"{''.join([hex(x)[2:] for x in debug.code_view.signature[8:10]])}-"
+                        f"{''.join([hex(x)[2:] for x in debug.code_view.signature[10:]])}"
+                    ),
                 }
                 sub_res.add_item("CV_Signature", debug.code_view.cv_signature.name)
                 try:
@@ -723,6 +729,7 @@ class PE(ServiceBase):
                     heur = Heuristic(16)
                     heur_section = ResultSection(heur.name, heuristic=heur)
                     sub_res.add_subsection(heur_section)
+                sub_res.add_item("GUID", cv_dict["GUID"])
                 debug_dict["code_view"] = cv_dict
             if debug.has_pogo:
                 debug_dict["pogo"] = {

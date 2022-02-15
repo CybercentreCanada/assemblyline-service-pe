@@ -91,10 +91,6 @@
     "size_of_headers": 1024,
     "virtual_size": 1654784,
     "size": 13348,
-    "overlay": {
-        "size": 0,
-        "entropy": 0.0
-    },
     "sections": [
         {
             "name": ".text",
@@ -397,24 +393,7 @@
             "code_view": {
                 "age": 1,
                 "cv_signature": "PDB_70",
-                "signature": [
-                    207,
-                    168,
-                    57,
-                    237,
-                    194,
-                    51,
-                    103,
-                    224,
-                    127,
-                    59,
-                    231,
-                    181,
-                    81,
-                    15,
-                    135,
-                    83
-                ],
+                "GUID": "ed39a8cf-33c2-e067-7f3b-e7b551f8753",
                 "filename": ""
             }
         }
@@ -721,5 +700,9 @@
             }
         ]
     },
-    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
+    "overlay": {
+        "size": 0,
+        "entropy": 0.0
+    }
 }

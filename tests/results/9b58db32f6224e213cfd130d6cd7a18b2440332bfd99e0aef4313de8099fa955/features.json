@@ -143,10 +143,6 @@
     "size_of_headers": 1024,
     "virtual_size": 548864,
     "size": 539136,
-    "overlay": {
-        "size": 0,
-        "entropy": 0.0
-    },
     "sections": [
         {
             "name": ".text",
@@ -215,24 +211,7 @@
             "code_view": {
                 "age": 1,
                 "cv_signature": "PDB_70",
-                "signature": [
-                    21,
-                    63,
-                    220,
-                    127,
-                    249,
-                    142,
-                    250,
-                    74,
-                    152,
-                    89,
-                    191,
-                    108,
-                    141,
-                    233,
-                    8,
-                    59
-                ],
+                "GUID": "7fdc3f15-8ef9-4afa-9859-bf6c8de983b",
                 "filename": "dialer.pdb"
             }
         }
@@ -14185,5 +14164,9 @@
             }
         ]
     },
-    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
+    "overlay": {
+        "size": 0,
+        "entropy": 0.0
+    }
 }
