@@ -289,24 +289,41 @@ class PE(ServiceBase):
         if len(timestamps) > 1 and max(timestamps) - min(timestamps) > self.config.get(
             "heur11_allowed_timestamp_range", 86400
         ):
-            res = ResultSection("Different timestamps", heuristic=Heuristic(11))
+            heur = Heuristic(11)
+            heur_section = ResultSection(heur.name, heuristic=heur)
             for timestamp in timestamps:
                 hr_timestamp = datetime.datetime.fromtimestamp(timestamp, datetime.timezone.utc).strftime(
                     "%Y-%m-%d %H:%M:%S +00:00 (UTC)"
                 )
-                res.add_line(f"{timestamp} ({hr_timestamp})")
-            self.file_res.add_section(res)
+                heur_section.add_line(f"{timestamp} ({hr_timestamp})")
+            self.file_res.add_section(heur_section)
         if len(timestamps) > 0:
-            timestamp = max(timestamps)
-            if datetime.datetime.fromtimestamp(timestamp, datetime.timezone.utc) > datetime.datetime.now(
-                datetime.timezone.utc
-            ) - datetime.timedelta(days=self.config.get("heur22_flag_more_recent_than_days", 3)):
-                hr_timestamp = datetime.datetime.fromtimestamp(timestamp, datetime.timezone.utc).strftime(
-                    "%Y-%m-%d %H:%M:%S +00:00 (UTC)"
-                )
+            heur22_earliest_ts = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(
+                days=self.config.get("heur22_flag_more_recent_than_days", 3)
+            )
+            heur22_latest_ts = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=2)
+            recent_timestamps = []
+            future_timestamps = []
+            for timestamp in sorted(timestamps):
+                ts = datetime.datetime.fromtimestamp(timestamp, datetime.timezone.utc)
+                if ts < heur22_earliest_ts:
+                    continue
+                if ts > heur22_latest_ts:
+                    future_timestamps.append((timestamp, ts))
+                    continue
+                recent_timestamps.append((timestamp, ts))
+
+            if recent_timestamps:
                 heur = Heuristic(22)
-                heur_section = ResultOrderedKeyValueSection(heur.name, heuristic=heur)
-                heur_section.add_item("Latest timestamp", f"{timestamp} ({hr_timestamp})")
+                heur_section = ResultSection(heur.name, heuristic=heur)
+                for timestamp, ts in recent_timestamps:
+                    heur_section.add_line(f"{timestamp} ({ts.strftime('%Y-%m-%d %H:%M:%S +00:00 (UTC)')})")
+                self.file_res.add_section(heur_section)
+            if future_timestamps:
+                heur = Heuristic(26)
+                heur_section = ResultSection(heur.name, heuristic=heur)
+                for timestamp, ts in future_timestamps:
+                    heur_section.add_line(f"{timestamp} ({ts.strftime('%Y-%m-%d %H:%M:%S +00:00 (UTC)')})")
                 self.file_res.add_section(heur_section)
 
     def recurse_resources(self, resource, parent_name):

@@ -179,10 +179,10 @@ heuristics:
     score: 250
 
   - description: >-
-       A timestamp found in the PE is very recent or in the future. It may be the latest version of a genuine software, or a custom built executable for a targeted execution.
+       A timestamp found in the PE is very recent. It may be the latest version of a genuine software, or a custom built executable for a targeted execution.
     filetype: "executable/windows"
     heur_id: 22
-    name: Recent/Future timestamp found
+    name: Recent timestamp found
     score: 500
 
   - description: >-
@@ -205,6 +205,13 @@ heuristics:
     heur_id: 25
     name: Low overlay entropy
     score: 200
+
+  - description: >-
+       A timestamp found in the PE is in the future. It is not normally a sign of maliciousness, but rather corruption, bad parsing, or bad practice.
+    filetype: "executable/windows"
+    heur_id: 26
+    name: Future timestamp found
+    score: 1
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
