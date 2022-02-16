@@ -11,18 +11,26 @@
         "supplementary": [
             {
                 "name": "icon_0.ico",
-                "sha256": "e61d981c7855fff4241c60ed9bc33185902b9bc3398d8207bb6512451986fa04",
+                "sha256": "c82aa0f42ff0f2bf9c3b423c3c53ff26ea98f92c2ab38797479fea0c25797f1f",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpqu1np_w5/icon_0.ico",
-                "is_section_image": false
+                "path": "/tmp/working_directory/tmpbadvmyib/tmp32xs4m0r",
+                "is_section_image": true
+            },
+            {
+                "name": "icon_0.ico.thumb",
+                "sha256": "719741befc4e0966b1cf24b010f2007687529c1e41ad6bab83c3e0230e8e983d",
+                "description": "Icon 0 extracted from the PE file (thumbnail)",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpbadvmyib/tmpsvccin5a",
+                "is_section_image": true
             },
             {
                 "name": "features.json",
                 "sha256": "3e8642a5dad39798c4fa92af7e4031338fc8578a63524868eddbc608879c35b0",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpqu1np_w5/features.json",
+                "path": "/tmp/working_directory/tmpnrwif1qx/features.json",
                 "is_section_image": false
             }
         ],
@@ -204,9 +212,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "[{\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 4264}]",
+                "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 4264}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"c82aa0f42ff0f2bf9c3b423c3c53ff26ea98f92c2ab38797479fea0c25797f1f\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"719741befc4e0966b1cf24b010f2007687529c1e41ad6bab83c3e0230e8e983d\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}]]]",
                 "classification": "TLP:W",
-                "body_format": "TABLE",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},

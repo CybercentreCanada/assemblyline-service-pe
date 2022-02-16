@@ -16,6 +16,7 @@ from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.result import (
     GraphSectionBody,
     Heuristic,
+    ImageSectionBody,
     OrderedKVSectionBody,
     Result,
     ResultMultiSection,
@@ -1071,7 +1072,9 @@ class PE(ServiceBase):
                             )
 
         if self.binary.resources_manager.has_icons:
-            sub_res = ResultTableSection("Icons")
+            sub_res = ResultMultiSection("Icons")
+            sub_res_table = TableSectionBody()
+            sub_res_image = ImageSectionBody(self.request)
             try:
                 icons = []
                 for idx, icon in enumerate(self.binary.resources_manager.icons):
@@ -1086,7 +1089,7 @@ class PE(ServiceBase):
                             "sublang": icon.sublang.name,
                         }
                     )
-                    sub_res.add_row(
+                    sub_res_table.add_row(
                         TableRow(
                             **{
                                 "ID": icon.id,
@@ -1098,10 +1101,16 @@ class PE(ServiceBase):
                     )
                     temp_path = os.path.join(self.working_directory, f"icon_{idx}.ico")
                     icon.save(temp_path)
-                    self.request.add_supplementary(
-                        temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file"
-                    )
+                    try:
+                        sub_res_image.add_image(temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file")
+                    except ValueError:
+                        self.request.add_supplementary(
+                            temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file"
+                        )
+
                 self.features["resources_manager"]["icons"] = icons
+                sub_res.add_section_part(sub_res_table)
+                sub_res.add_section_part(sub_res_image)
                 res.add_subsection(sub_res)
             except lief.corrupted:
                 heur = Heuristic(13)

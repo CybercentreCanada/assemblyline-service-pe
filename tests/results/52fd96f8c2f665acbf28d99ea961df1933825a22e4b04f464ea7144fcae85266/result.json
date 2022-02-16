@@ -14,7 +14,7 @@
                 "sha256": "0dc0ad4e670667a740371fd24fc75d4d01c571b5dfc3fbb0bbf07c87196af765",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzrfhlxz9/icon_0.ico",
+                "path": "/tmp/working_directory/tmpmnrc4baf/icon_0.ico",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "a3e7aed9d15a4fda96701cb0a8db80f96913d0819b73256288a12ab5726c3b34",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzrfhlxz9/icon_1.ico",
+                "path": "/tmp/working_directory/tmpmnrc4baf/icon_1.ico",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "4c7e7ac08b96c9c0d46f20b17eb62f5ae91d499f87f8b64df1aed77c7b200e2c",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzrfhlxz9/certificate.1.1",
+                "path": "/tmp/working_directory/tmpmnrc4baf/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "aa2fb386ae0809d4ca16eefdf52bcf1beb37ac68e04f21625d316d09d82be735",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzrfhlxz9/certificate.1.2",
+                "path": "/tmp/working_directory/tmpmnrc4baf/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -46,7 +46,7 @@
                 "sha256": "eddf0b345d08c7fca467708d174f54c936b85b22c94fb2d3841a897c443dd950",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzrfhlxz9/features.json",
+                "path": "/tmp/working_directory/tmpmnrc4baf/features.json",
                 "is_section_image": false
             }
         ],
@@ -56,7 +56,7 @@
                 "sha256": "89a5a50017b3bc8db9373d5b33d0ec3297676bfda1d824a1e289e1d61cf18578",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpzrfhlxz9/overlay",
+                "path": "/tmp/working_directory/tmpmnrc4baf/overlay",
                 "is_section_image": false
             }
         ],
@@ -298,9 +298,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "[{\"ID\": 2, \"Lang\": \"NEUTRAL\", \"Size\": \"16x16\", \"Size (bytes)\": 1128}, {\"ID\": 3, \"Lang\": \"NEUTRAL\", \"Size\": \"32x32\", \"Size (bytes)\": 4264}]",
+                "body": "[[\"TABLE\", [{\"ID\": 2, \"Lang\": \"NEUTRAL\", \"Size\": \"16x16\", \"Size (bytes)\": 1128}, {\"ID\": 3, \"Lang\": \"NEUTRAL\", \"Size\": \"32x32\", \"Size (bytes)\": 4264}]], [\"IMAGE\", []]]",
                 "classification": "TLP:W",
-                "body_format": "TABLE",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},

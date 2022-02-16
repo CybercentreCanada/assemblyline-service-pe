@@ -11,18 +11,26 @@
         "supplementary": [
             {
                 "name": "icon_0.ico",
-                "sha256": "1704e60e99dec20a67dcfec68989ebee51ec17ec26075bc1a38c7a8459959d01",
+                "sha256": "b8e8cf2e0bd52d772b8a4c50ec1bb5f8ce0751ced7666001a825e6d5a3561ab6",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmphi4p28dc/icon_0.ico",
-                "is_section_image": false
+                "path": "/tmp/working_directory/tmpf371_o7o/tmpqli0rzbi",
+                "is_section_image": true
+            },
+            {
+                "name": "icon_0.ico.thumb",
+                "sha256": "61746f03d1c240c277b8be8f840348eb2d2c11ecb1feac343daabb9af28af99c",
+                "description": "Icon 0 extracted from the PE file (thumbnail)",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmpf371_o7o/tmp7ws9t599",
+                "is_section_image": true
             },
             {
                 "name": "features.json",
                 "sha256": "5b171f6e02170610f62942efd61311a77187ba3e007d668c41b58c054d40581b",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmphi4p28dc/features.json",
+                "path": "/tmp/working_directory/tmpqgw2r8s5/features.json",
                 "is_section_image": false
             }
         ],
@@ -32,7 +40,7 @@
                 "sha256": "e68568581cf99cc4ceedeb0f5dff5da279b183fdeae7cd8d06d2592b53476112",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmphi4p28dc/overlay",
+                "path": "/tmp/working_directory/tmpqgw2r8s5/overlay",
                 "is_section_image": false
             }
         ],
@@ -329,9 +337,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "[{\"ID\": 1, \"Lang\": \"NEUTRAL\", \"Size\": \"32x32\", \"Size (bytes)\": 2216}]",
+                "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"NEUTRAL\", \"Size\": \"32x32\", \"Size (bytes)\": 2216}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"b8e8cf2e0bd52d772b8a4c50ec1bb5f8ce0751ced7666001a825e6d5a3561ab6\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"61746f03d1c240c277b8be8f840348eb2d2c11ecb1feac343daabb9af28af99c\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}]]]",
                 "classification": "TLP:W",
-                "body_format": "TABLE",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},

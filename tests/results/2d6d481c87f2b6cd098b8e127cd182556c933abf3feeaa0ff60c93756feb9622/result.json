@@ -11,34 +11,58 @@
         "supplementary": [
             {
                 "name": "icon_0.ico",
-                "sha256": "fb610d0173b3dced73697d2b32ec7d24f631e518d7d85d58a14b421681907d01",
+                "sha256": "7d1de1ae1e3925006a9fc1fb15d2dd4c38385bf44f2865adde670e76a23bb563",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpp3qbdd9c/icon_0.ico",
-                "is_section_image": false
+                "path": "/tmp/working_directory/tmppxc0ioq2/tmpty4trt8j",
+                "is_section_image": true
+            },
+            {
+                "name": "icon_0.ico.thumb",
+                "sha256": "4dce467d3910fc970b2647246e571db388327fc308ae42c3bacb099620407ccb",
+                "description": "Icon 0 extracted from the PE file (thumbnail)",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmppxc0ioq2/tmpk4s3mpxl",
+                "is_section_image": true
             },
             {
                 "name": "icon_1.ico",
-                "sha256": "1f4ad234ab78c806685efb15e627a02e6b38ee2b623984bf97a48f61c029076a",
+                "sha256": "cc0b4697b2d891ee5c57bc67857c7f76a2c3ce744934fcbc648367edfb273aa7",
                 "description": "Icon 1 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpp3qbdd9c/icon_1.ico",
-                "is_section_image": false
+                "path": "/tmp/working_directory/tmppxc0ioq2/tmp11th4647",
+                "is_section_image": true
+            },
+            {
+                "name": "icon_1.ico.thumb",
+                "sha256": "7915bad13b6c8c0b46c6b0307fc8b175c3c8aa58e6ff4fe1885c308b8387e05d",
+                "description": "Icon 1 extracted from the PE file (thumbnail)",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmppxc0ioq2/tmplso9lz9j",
+                "is_section_image": true
             },
             {
                 "name": "icon_2.ico",
-                "sha256": "0b8583e91d8f666f827ba58c4e3ff134eda1ef813e569b189c5c99945399a094",
+                "sha256": "fdc8119ddf81be92ab312bbf97b9d401b15c765c28fddc9ae162b8b6f837a451",
                 "description": "Icon 2 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpp3qbdd9c/icon_2.ico",
-                "is_section_image": false
+                "path": "/tmp/working_directory/tmppxc0ioq2/tmpci9czzqt",
+                "is_section_image": true
+            },
+            {
+                "name": "icon_2.ico.thumb",
+                "sha256": "011f27ea43f2fd3096f5aa8d1e2eeef5e1a1d33b20ca4ad6b23edce387b8c6ba",
+                "description": "Icon 2 extracted from the PE file (thumbnail)",
+                "classification": "TLP:W",
+                "path": "/tmp/working_directory/tmppxc0ioq2/tmp_b16sdjk",
+                "is_section_image": true
             },
             {
                 "name": "features.json",
                 "sha256": "a9f7b8927c91f62b30ac6321ecd5c366b6bc206d6baa2e465361afa1ec9e3db3",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpp3qbdd9c/features.json",
+                "path": "/tmp/working_directory/tmp1m2aw2fw/features.json",
                 "is_section_image": false
             }
         ],
@@ -48,7 +72,7 @@
                 "sha256": "d16af8a3965437c67a4a6aa7521638407e373ebdeb2a32a3e52d44a76d5f9e9f",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpp3qbdd9c/overlay",
+                "path": "/tmp/working_directory/tmp1m2aw2fw/overlay",
                 "is_section_image": false
             }
         ],
@@ -381,9 +405,9 @@
                 "auto_collapse": false
             },
             {
-                "body": "[{\"ID\": 50, \"Lang\": \"RUSSIAN\", \"Size\": \"16x16\", \"Size (bytes)\": 1128}, {\"ID\": 51, \"Lang\": \"RUSSIAN\", \"Size\": \"32x32\", \"Size (bytes)\": 4264}, {\"ID\": 52, \"Lang\": \"RUSSIAN\", \"Size\": \"48x48\", \"Size (bytes)\": 9640}]",
+                "body": "[[\"TABLE\", [{\"ID\": 50, \"Lang\": \"RUSSIAN\", \"Size\": \"16x16\", \"Size (bytes)\": 1128}, {\"ID\": 51, \"Lang\": \"RUSSIAN\", \"Size\": \"32x32\", \"Size (bytes)\": 4264}, {\"ID\": 52, \"Lang\": \"RUSSIAN\", \"Size\": \"48x48\", \"Size (bytes)\": 9640}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"7d1de1ae1e3925006a9fc1fb15d2dd4c38385bf44f2865adde670e76a23bb563\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"4dce467d3910fc970b2647246e571db388327fc308ae42c3bacb099620407ccb\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_1.ico\", \"sha256\": \"cc0b4697b2d891ee5c57bc67857c7f76a2c3ce744934fcbc648367edfb273aa7\", \"description\": \"Icon 1 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_1.ico.thumb\", \"sha256\": \"7915bad13b6c8c0b46c6b0307fc8b175c3c8aa58e6ff4fe1885c308b8387e05d\", \"description\": \"Icon 1 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_2.ico\", \"sha256\": \"fdc8119ddf81be92ab312bbf97b9d401b15c765c28fddc9ae162b8b6f837a451\", \"description\": \"Icon 2 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_2.ico.thumb\", \"sha256\": \"011f27ea43f2fd3096f5aa8d1e2eeef5e1a1d33b20ca4ad6b23edce387b8c6ba\", \"description\": \"Icon 2 extracted from the PE file (thumbnail)\"}}]]]",
                 "classification": "TLP:W",
-                "body_format": "TABLE",
+                "body_format": "MULTI",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},

@@ -95,6 +95,9 @@ def generalize_result(result):
             for supplementary in result["response"]["supplementary"]:
                 if "path" in supplementary:
                     supplementary["path"] = drop_ultimate_folder(supplementary["path"])
+                if "is_section_image" in supplementary and "path" in supplementary:
+                    if supplementary["is_section_image"]:
+                        supplementary["path"] = str(Path(supplementary["path"]).parents[0])
 
 
 class TestService:
