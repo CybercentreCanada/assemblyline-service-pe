@@ -748,6 +748,7 @@ class PE(ServiceBase):
                     heur_section = ResultSection(heur.name, heuristic=heur)
                     sub_res.add_subsection(heur_section)
                 sub_res.add_item("GUID", cv_dict["GUID"])
+                sub_res.add_tag("file.pe.debug.guid", cv_dict["GUID"])
                 debug_dict["code_view"] = cv_dict
             if debug.has_pogo:
                 debug_dict["pogo"] = {

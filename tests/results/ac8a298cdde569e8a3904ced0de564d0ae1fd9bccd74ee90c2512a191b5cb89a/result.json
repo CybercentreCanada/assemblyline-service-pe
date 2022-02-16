@@ -14,7 +14,7 @@
                 "sha256": "5817bde9ba07896356f8d6abc61b4e31e79364d9d1057289a587f54671508f5d",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_p98wrhz/features.json",
+                "path": "/tmp/working_directory/tmptlrqqada/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "58166564c037449c32b5c13649913c5390a2a34b21d33ebc01f295e7f2aa1b01",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp_p98wrhz/overlay",
+                "path": "/tmp/working_directory/tmptlrqqada/overlay",
                 "is_section_image": false
             }
         ],
@@ -277,7 +277,12 @@
                         "pe": {
                             "pdb_filename": [
                                 "c:\\builds\\moz2_slave\\rel-m-rel-w32_bld-000000000000\\build\\obj-firefox\\toolkit\\components\\maintenanceservice\\maintenanceservice.pdb"
-                            ]
+                            ],
+                            "debug": {
+                                "guid": [
+                                    "158645c2-7f57-4b37-9b83-aff45d17e40"
+                                ]
+                            }
                         }
                     }
                 },
