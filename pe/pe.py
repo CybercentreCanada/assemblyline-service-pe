@@ -1103,7 +1103,7 @@ class PE(ServiceBase):
                     icon.save(temp_path)
                     try:
                         sub_res_image.add_image(temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file")
-                    except ValueError:
+                    except OSError:
                         self.request.add_supplementary(
                             temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file"
                         )
