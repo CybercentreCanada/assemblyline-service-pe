@@ -6,15 +6,15 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "9d58abd89dafd0b5857b1ad44473f4452004145a05ebb542548bfdae17246218",
+                "sha256": "df916a0083a0e13a481b48907daaf32b186063c310023501e463738783384b4a",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp4827etp_/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -84,7 +84,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"a32f4a7a3bb43f7092328050ec53cd2ef1c17f9f4891817b8696089a0176cc400cfa58ef68e7f8502138efcc757f30a4874681e60f2fcef0a43f73ccd5cc1057\"], [\"SHA384\", \"6f8006134142ffff4b5b0fb6b521eb7bfc35e054af39407cb5811e903bfcc1df55aa5f2a5ff8ce7bc34b920fdc11b6aa\"], [\"SHA256\", \"b73657999ddf4a94f0bb7de717020aa84e1f2ae928013174f357f1feab5e3216\"], [\"SHA1\", \"41ef6731217bbadfd241d4f2e24728bc9da43ecb\"], [\"MD5\", \"d8eea530ab79d0e0b06bb141267ffdcb\"]]",
+                "body": "[[\"sha512\", \"a32f4a7a3bb43f7092328050ec53cd2ef1c17f9f4891817b8696089a0176cc400cfa58ef68e7f8502138efcc757f30a4874681e60f2fcef0a43f73ccd5cc1057\"], [\"sha384\", \"6f8006134142ffff4b5b0fb6b521eb7bfc35e054af39407cb5811e903bfcc1df55aa5f2a5ff8ce7bc34b920fdc11b6aa\"], [\"sha256\", \"b73657999ddf4a94f0bb7de717020aa84e1f2ae928013174f357f1feab5e3216\"], [\"sha1\", \"41ef6731217bbadfd241d4f2e24728bc9da43ecb\"], [\"md5\", \"d8eea530ab79d0e0b06bb141267ffdcb\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
@@ -370,7 +370,7 @@
                 "depth": 0,
                 "heuristic": null,
                 "tags": {},
-                "title_text": "Debug",
+                "title_text": "Debugs",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

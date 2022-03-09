@@ -6,15 +6,15 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "0bfad9f5d3652209c3c8833b67e5d586c4b429eab305688226d97d04a1b34ad2",
+                "sha256": "5ad830b641f692dd8c50015f14585f6a442bee7dc95a7afbe7e3204af42e1d07",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp7rzi5slf/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -66,7 +66,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"ce2ef526e2a6c99a7556f59af032bb8193ec188ca9f0f8b1fd96dad417aae5a753f0913bfc8892044a1e54fd25432b58871f0f070105ae3b45d15b8267405d88\"], [\"SHA384\", \"dc85eb4792819394ce1193eca205273ee60b9b85bb4cefdf26923a2b4dd49eb3832267d2345b63dab64d38d012487db8\"], [\"SHA256\", \"280fd12b1b150767746b367adb55d9297e90956c92688d75ebed294e8716e55f\"], [\"SHA1\", \"2c1c3e4652eeab1495a3d7a6406d69eb9a19833f\"], [\"MD5\", \"ca2183a81998479278a80202b64927b8\"]]",
+                "body": "[[\"sha512\", \"ce2ef526e2a6c99a7556f59af032bb8193ec188ca9f0f8b1fd96dad417aae5a753f0913bfc8892044a1e54fd25432b58871f0f070105ae3b45d15b8267405d88\"], [\"sha384\", \"dc85eb4792819394ce1193eca205273ee60b9b85bb4cefdf26923a2b4dd49eb3832267d2345b63dab64d38d012487db8\"], [\"sha256\", \"280fd12b1b150767746b367adb55d9297e90956c92688d75ebed294e8716e55f\"], [\"sha1\", \"2c1c3e4652eeab1495a3d7a6406d69eb9a19833f\"], [\"md5\", \"ca2183a81998479278a80202b64927b8\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
@@ -320,7 +320,7 @@
                         }
                     }
                 },
-                "title_text": "Exports",
+                "title_text": "Export",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

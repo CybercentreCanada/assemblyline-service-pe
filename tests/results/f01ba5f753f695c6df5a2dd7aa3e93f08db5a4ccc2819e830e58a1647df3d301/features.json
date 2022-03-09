@@ -22,8 +22,7 @@
             0,
             0
         ],
-        "timestamp": 0,
-        "hr_timestamp": "1970-01-01 00:00:00 +00:00 (UTC)"
+        "timestamp": 0
     },
     "optional_header": {
         "addressof_entrypoint": 5040,
@@ -80,24 +79,20 @@
     },
     "nx": false,
     "authentihash": {
-        "SHA_512": "ce2ef526e2a6c99a7556f59af032bb8193ec188ca9f0f8b1fd96dad417aae5a753f0913bfc8892044a1e54fd25432b58871f0f070105ae3b45d15b8267405d88",
-        "SHA_384": "dc85eb4792819394ce1193eca205273ee60b9b85bb4cefdf26923a2b4dd49eb3832267d2345b63dab64d38d012487db8",
-        "SHA_256": "280fd12b1b150767746b367adb55d9297e90956c92688d75ebed294e8716e55f",
-        "SHA_1": "2c1c3e4652eeab1495a3d7a6406d69eb9a19833f",
-        "MD5": "ca2183a81998479278a80202b64927b8"
+        "sha512": "ce2ef526e2a6c99a7556f59af032bb8193ec188ca9f0f8b1fd96dad417aae5a753f0913bfc8892044a1e54fd25432b58871f0f070105ae3b45d15b8267405d88",
+        "sha384": "dc85eb4792819394ce1193eca205273ee60b9b85bb4cefdf26923a2b4dd49eb3832267d2345b63dab64d38d012487db8",
+        "sha256": "280fd12b1b150767746b367adb55d9297e90956c92688d75ebed294e8716e55f",
+        "sha1": "2c1c3e4652eeab1495a3d7a6406d69eb9a19833f",
+        "md5": "ca2183a81998479278a80202b64927b8"
     },
     "tls": {
-        "associated section": ".rdata"
+        "section": ".rdata"
     },
     "position_independent": false,
     "is_reproducible_build": false,
     "size_of_headers": 1024,
     "virtual_size": 45056,
     "size": 13824,
-    "overlay": {
-        "size": 0,
-        "entropy": 0.0
-    },
     "sections": [
         {
             "name": ".text",
@@ -723,5 +718,9 @@
             }
         ]
     },
-    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
+    "overlay": {
+        "size": 0,
+        "entropy": 0.0
+    }
 }

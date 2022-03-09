@@ -54,8 +54,8 @@ jobs:
           [ ! -d "$(pwd)/tests" ] && echo "No tests found" && exit
           sudo apt-get update
           sudo apt-get install -y libfuzzy-dev libfuzzy2
-          if [ -f $(pwd)/pkglist.txt ]; then
-            sudo apt-get install -y < $(pwd)/pkglist.txt
+          if [[ -f "$(pwd)/pkglist.txt" ]]; then
+            grep -vE '^#' "$(pwd)/pkglist.txt" | xargs sudo apt install -y
           fi
           sudo rm -rf /var/lib/apt/lists/*
           sudo env "PATH=$PATH" python -m pip install -U --no-cache-dir assemblyline assemblyline_v4_service

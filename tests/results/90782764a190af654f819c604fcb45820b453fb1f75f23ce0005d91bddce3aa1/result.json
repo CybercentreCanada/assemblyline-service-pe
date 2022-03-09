@@ -6,15 +6,15 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "19386aaa8ecc4027d39a6ab2aea141bcec77b37dcc990809dee59d02f505790f",
+                "sha256": "e7f81f3aed53e9acf0f6c4e18c5edd866eb394011d2fc88925c1207ae3c57f99",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpr9at1eg4/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -84,7 +84,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"008dc4c4c2227f82f8a9d8c2e2cedff60d3d135a1024f5d1692144e0d626ab0ba5b1ac6c0ad6b393c8548578151aeb1988b0b60355357ab38bb6fa2617b10104\"], [\"SHA384\", \"17dabcee194ab3a77b398e11ad0585bc1ea7d1a49f9fd1e145f2a34415aa07bf3a13bb79bce246dfbb8d704269266585\"], [\"SHA256\", \"d348f5212f8bb9727d3fb812d4a01a8f0d8100751d622a146ed0d293c922babe\"], [\"SHA1\", \"0019b8e985df6a2d653eb04b9580829068375b30\"], [\"MD5\", \"5d8d710dd391ce4a543562d89c0bbd62\"]]",
+                "body": "[[\"sha512\", \"008dc4c4c2227f82f8a9d8c2e2cedff60d3d135a1024f5d1692144e0d626ab0ba5b1ac6c0ad6b393c8548578151aeb1988b0b60355357ab38bb6fa2617b10104\"], [\"sha384\", \"17dabcee194ab3a77b398e11ad0585bc1ea7d1a49f9fd1e145f2a34415aa07bf3a13bb79bce246dfbb8d704269266585\"], [\"sha256\", \"d348f5212f8bb9727d3fb812d4a01a8f0d8100751d622a146ed0d293c922babe\"], [\"sha1\", \"0019b8e985df6a2d653eb04b9580829068375b30\"], [\"md5\", \"5d8d710dd391ce4a543562d89c0bbd62\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,

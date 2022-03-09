@@ -21,8 +21,7 @@
             0,
             0
         ],
-        "timestamp": 0,
-        "hr_timestamp": "1970-01-01 00:00:00 +00:00 (UTC)"
+        "timestamp": 0
     },
     "optional_header": {
         "addressof_entrypoint": 73329,
@@ -79,24 +78,20 @@
     },
     "nx": false,
     "authentihash": {
-        "SHA_512": "1e9093b4afe4a904cb30efe33965c0ceb07e88a0463c374f48b6362ff3716afb2b85b8df43bf136b785709b8c336980a2f6296d33799c7b57e4a45629065aefd",
-        "SHA_384": "fa5963ef73bd2a35bb3521c8624642a049f4ad8d0da62a20166d3798c7b5f3fc13136590e95839f9d87bc73bb6f318cd",
-        "SHA_256": "9b47515bdcddfe679bfc5d1d2c04a7cff1f5c5e37ba63ca93b792b204933dc8c",
-        "SHA_1": "f9f2ee4dc8122ae93fc043adf878913cde2f3920",
-        "MD5": "fb91c8143fc1d59419db8dec81246dc8"
+        "sha512": "1e9093b4afe4a904cb30efe33965c0ceb07e88a0463c374f48b6362ff3716afb2b85b8df43bf136b785709b8c336980a2f6296d33799c7b57e4a45629065aefd",
+        "sha384": "fa5963ef73bd2a35bb3521c8624642a049f4ad8d0da62a20166d3798c7b5f3fc13136590e95839f9d87bc73bb6f318cd",
+        "sha256": "9b47515bdcddfe679bfc5d1d2c04a7cff1f5c5e37ba63ca93b792b204933dc8c",
+        "sha1": "f9f2ee4dc8122ae93fc043adf878913cde2f3920",
+        "md5": "fb91c8143fc1d59419db8dec81246dc8"
     },
     "tls": {
-        "associated section": "\u0002\\xd2u\\xdb\\x8a\u0016\\xeb\\xd4"
+        "section": "\u0002\\xd2u\\xdb\\x8a\u0016\\xeb\\xd4"
     },
     "position_independent": false,
     "is_reproducible_build": false,
     "size_of_headers": 512,
     "virtual_size": 73728,
     "size": 2377820,
-    "overlay": {
-        "size": 2361298,
-        "entropy": 5.11172004574328
-    },
     "sections": [
         {
             "name": "MEW",
@@ -169,7 +164,7 @@
         "characteristics": 0,
         "num_childs": 1,
         "depth": 0,
-        "id": 0,
+        "resource_id": 0,
         "is_data": false,
         "is_directory": true,
         "major_version": 0,
@@ -182,7 +177,7 @@
                 "characteristics": 0,
                 "num_childs": 2,
                 "depth": 1,
-                "id": 10,
+                "resource_id": 10,
                 "resource_type": "RCDATA",
                 "is_data": false,
                 "is_directory": true,
@@ -197,7 +192,7 @@
                         "num_childs": 1,
                         "depth": 2,
                         "name": "DVCLAL",
-                        "id": 2147483784,
+                        "resource_id": 2147483784,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -207,12 +202,12 @@
                         "time_date_stamp": 920566666,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "643295f2e8b8d0d5dbd2bccd930d076554c0a273875d4203876b1789f4ada967",
                                 "entropy": 3.375,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 49328,
@@ -225,7 +220,7 @@
                         "num_childs": 1,
                         "depth": 2,
                         "name": "PACKAGEINFO",
-                        "id": 2147483798,
+                        "resource_id": 2147483798,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -235,12 +230,12 @@
                         "time_date_stamp": 920566666,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "9fc27cd0adfaddd8394191ef99ba549b3f4ecda6a47dc16c707a5ebbaa1ecad2",
                                 "entropy": 5.098231803727738,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 49344,
@@ -252,5 +247,9 @@
             }
         ]
     },
-    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
+    "overlay": {
+        "size": 2361298,
+        "entropy": 5.11172004574328
+    }
 }

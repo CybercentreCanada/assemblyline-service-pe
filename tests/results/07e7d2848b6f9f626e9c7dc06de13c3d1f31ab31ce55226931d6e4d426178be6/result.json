@@ -6,7 +6,7 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "f95ce92dd0528e03cbd1c25fe6e506271f75b4dea7e490bd95e55206b46d8157",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpbppsw5qz/certificate.1.1",
+                "path": "/tmp/working_directory/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "0625fee1a80d7b897a9712249c2f55ff391d6661dbd8b87f9be6f252d88ced95",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpbppsw5qz/certificate.1.2",
+                "path": "/tmp/working_directory/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -30,15 +30,15 @@
                 "sha256": "0374881c9b74d31f28dc580b0f2b9d2b14a97ce31cbec2a05aeb377dcddcc2b0",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpbppsw5qz/certificate.1.3",
+                "path": "/tmp/working_directory/certificate.1.3",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "c9d2d4bc17f8ecf9e934aad5d2f1cea70eae6785f5d4137a3abeb008b31cc065",
+                "sha256": "7632b35a9a70035162fbb166fbae447107c61c73cd6240f1f4fc36d5b5e4eaa2",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpbppsw5qz/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -48,7 +48,7 @@
                 "sha256": "17e42874aff50903131e781b920f8a9b65b2d9156f76479f86f76641a9150cbf",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpbppsw5qz/overlay",
+                "path": "/tmp/working_directory/overlay",
                 "is_section_image": false
             }
         ],
@@ -102,7 +102,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"c1597b9863c3559affa71781d335f400001d7958bb12e611062e890f2df80affda79bfade44b1b0e615cc5d1cde1518355429cd5f3081ec2db7377d82eecf17d\"], [\"SHA384\", \"591253b8a921198b1924ecffdc4bcc3b4f73c280f263b13b0da6a0551f66e24e65f0934326ec100a2fc4b9afa4189ffa\"], [\"SHA256\", \"3802ac3969d79e7a5fbba0ea4ff5803edb9609038ddd1584e07fadbb028bb7c7\"], [\"SHA1\", \"015afe509a62247b82b2cebde3b8039a49dc447d\"], [\"MD5\", \"76716db617b0576c427884f2223610af\"]]",
+                "body": "[[\"sha512\", \"c1597b9863c3559affa71781d335f400001d7958bb12e611062e890f2df80affda79bfade44b1b0e615cc5d1cde1518355429cd5f3081ec2db7377d82eecf17d\"], [\"sha384\", \"591253b8a921198b1924ecffdc4bcc3b4f73c280f263b13b0da6a0551f66e24e65f0934326ec100a2fc4b9afa4189ffa\"], [\"sha256\", \"3802ac3969d79e7a5fbba0ea4ff5803edb9609038ddd1584e07fadbb028bb7c7\"], [\"sha1\", \"015afe509a62247b82b2cebde3b8039a49dc447d\"], [\"md5\", \"76716db617b0576c427884f2223610af\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
@@ -525,7 +525,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"TEXT\", \"The signature does not match the authentihash data found for SHA1\"], [\"ORDERED_KEY_VALUE\", [[\"Signature\", \"088cab60f7d8b202e8042cfb51ac3abab1a3d617\"], [\"Authentihash data\", \"015afe509a62247b82b2cebde3b8039a49dc447d\"]]]]",
+                "body": "[[\"TEXT\", \"The signature does not match the authentihash data found for sha1\"], [\"ORDERED_KEY_VALUE\", [[\"Signature\", \"088cab60f7d8b202e8042cfb51ac3abab1a3d617\"], [\"Authentihash data\", \"015afe509a62247b82b2cebde3b8039a49dc447d\"]]]]",
                 "classification": "TLP:W",
                 "body_format": "MULTI",
                 "depth": 2,

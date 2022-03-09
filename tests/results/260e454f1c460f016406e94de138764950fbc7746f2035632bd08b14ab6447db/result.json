@@ -6,15 +6,15 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "ce2928daae94a96c0072de0cbf6a7d755326fc6f6159f4f0e39083e068285282",
+                "sha256": "38fd564537c2ac0f7f6b47aabc7f9738d827134a20d71e5c048138c77926edf4",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpvbsierw4/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "2895e2b46df20091ffd40cd02f65d32ea69c3605c1f60f511480cffbb2445692",
                 "description": "pe_without_overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpvbsierw4/pe_without_overlay",
+                "path": "/tmp/working_directory/pe_without_overlay",
                 "is_section_image": false
             },
             {
@@ -32,7 +32,7 @@
                 "sha256": "dd65e2907058f17032f13ab421e5ab18ebaac124e6a9434b034ddf959ce46b5d",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpvbsierw4/overlay",
+                "path": "/tmp/working_directory/overlay",
                 "is_section_image": false
             }
         ],
@@ -40,7 +40,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 500,
+        "score": 800,
         "sections": [
             {
                 "body": "0",
@@ -122,7 +122,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"a18c13042228d54239095cc58bc296044d6fe476a1bee92c46c7dd8a6f7dd4473cffd8340418a03c0e920e47a216a2043200117389dbb59b532e574ec5a18656\"], [\"SHA384\", \"3ec63fb55eb9564c04438784d3b357345adae47b6e9bb295d2b52a796573735afc146253acab03e5b9e773c01ee6bdcf\"], [\"SHA256\", \"5bcfa0add0b53f05c1a34c5f38052b34c6d5f299da072afd48c8147325d70be7\"], [\"SHA1\", \"e53b1bb250421b5b4317c31fcf647e751ec0e92a\"], [\"MD5\", \"8b0f52c92ac456c112016112ee661ebe\"]]",
+                "body": "[[\"sha512\", \"a18c13042228d54239095cc58bc296044d6fe476a1bee92c46c7dd8a6f7dd4473cffd8340418a03c0e920e47a216a2043200117389dbb59b532e574ec5a18656\"], [\"sha384\", \"3ec63fb55eb9564c04438784d3b357345adae47b6e9bb295d2b52a796573735afc146253acab03e5b9e773c01ee6bdcf\"], [\"sha256\", \"5bcfa0add0b53f05c1a34c5f38052b34c6d5f299da072afd48c8147325d70be7\"], [\"sha1\", \"e53b1bb250421b5b4317c31fcf647e751ec0e92a\"], [\"md5\", \"8b0f52c92ac456c112016112ee661ebe\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
@@ -246,7 +246,7 @@
                 "depth": 0,
                 "heuristic": null,
                 "tags": {},
-                "title_text": "Debug",
+                "title_text": "Debugs",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -301,14 +301,14 @@
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 25,
-                    "score": 200,
+                    "score": 500,
                     "attack_ids": [],
                     "signatures": {},
                     "frequency": 1,
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "Low overlay entropy",
+                "title_text": "Big overlay with very low entropy",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

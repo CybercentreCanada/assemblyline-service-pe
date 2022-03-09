@@ -26,6 +26,7 @@ config:
   heur11_allowed_timestamp_range: 86400
   heur22_flag_more_recent_than_days: 3
   heur24_allowed_mismatch_file_size: 0.25
+  heur25_min_overlay_size: 31457280
   heur25_min_overlay_entropy: 0.5
 
 heuristics:
@@ -200,14 +201,14 @@ heuristics:
     score: 100
 
   - description: >-
-       The overlay entropy is low, while the size is at least as much as the virtual size of the executable. It may be a sign of padding or bloating to bypass certain detection techniques.
+       The overlay entropy is low, while the size is noticeable. It may be a sign of padding or bloating to bypass certain detection techniques.
     filetype: "executable/windows"
     heur_id: 25
-    name: Low overlay entropy
-    score: 200
+    name: Big overlay with very low entropy
+    score: 500
 
   - description: >-
-       A timestamp found in the PE is in the future. It is not normally a sign of maliciousness, but rather corruption, bad parsing, or bad practice.
+       A timestamp found in the PE is in the future. It is not automatically a sign of maliciousness, but rather corruption, bad parsing, or bad practice.
     filetype: "executable/windows"
     heur_id: 26
     name: Future timestamp found

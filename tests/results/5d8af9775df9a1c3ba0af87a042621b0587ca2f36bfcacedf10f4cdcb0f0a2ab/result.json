@@ -6,7 +6,7 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "0e0fabf3c4fb549fc156e7fe8f3c8966c8e09ffbba31e650b18214064245b54f",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpyyspwtxm/certificate.1.1",
+                "path": "/tmp/working_directory/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "4f32d5dc00f715250abcc486511e37f501a899deb3bf7ea8adbbd3aef1c412da",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpyyspwtxm/certificate.1.2",
+                "path": "/tmp/working_directory/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "534b9b1a31a38b4e0bf9a291f408337c25a2e011d460fdff495ce473fb168a8e",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpyyspwtxm/certificate.1.3",
+                "path": "/tmp/working_directory/certificate.1.3",
                 "is_section_image": false
             },
             {
@@ -38,15 +38,15 @@
                 "sha256": "d92bf8e9fa867dbd8b794c6a49e6ff1fcfac71f3d7f4ae55bb9587eb24ac6489",
                 "description": "certificate.1.4 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpyyspwtxm/certificate.1.4",
+                "path": "/tmp/working_directory/certificate.1.4",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "36447c36e7782722f35e4edf3157980eed8eb106a510d5c85ae42b68a3824d97",
+                "sha256": "6138e03d7e1284f078780e3c853b6c7344701f29501bdc37fe6539a4d5af5dc8",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpyyspwtxm/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -56,7 +56,7 @@
                 "sha256": "7e3589f5f903ff483b50ecdd840268b937f338bf32febe7d22fded993732922e",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpyyspwtxm/overlay",
+                "path": "/tmp/working_directory/overlay",
                 "is_section_image": false
             }
         ],
@@ -110,7 +110,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"963e00f50e11f14290f899dd9d0ed00561e62b6996a32f1b2f703e85438ebab86eb3c19575cb3187dbde726c8bda62cb41b8a718bee99d6e8f13e52fc1e1bbbe\"], [\"SHA384\", \"4a5d64dacfa93a87fb70cc10cf8abda9c9ef87f5af3dc230f52cb31c29b4f5bf2460b6742738c4f243e9957fd68cce4e\"], [\"SHA256\", \"e513e4a5d219cde085a44bd25b56341a9ce6948c26ea298d36a6a049a3e98859\"], [\"SHA1\", \"e1b37b37c210a6195f0b9d9f3d71b073b391b71e\"], [\"MD5\", \"74b5527b259a1d86dee42770b72e6380\"]]",
+                "body": "[[\"sha512\", \"963e00f50e11f14290f899dd9d0ed00561e62b6996a32f1b2f703e85438ebab86eb3c19575cb3187dbde726c8bda62cb41b8a718bee99d6e8f13e52fc1e1bbbe\"], [\"sha384\", \"4a5d64dacfa93a87fb70cc10cf8abda9c9ef87f5af3dc230f52cb31c29b4f5bf2460b6742738c4f243e9957fd68cce4e\"], [\"sha256\", \"e513e4a5d219cde085a44bd25b56341a9ce6948c26ea298d36a6a049a3e98859\"], [\"sha1\", \"e1b37b37c210a6195f0b9d9f3d71b073b391b71e\"], [\"md5\", \"74b5527b259a1d86dee42770b72e6380\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
@@ -354,7 +354,7 @@
                 "depth": 0,
                 "heuristic": null,
                 "tags": {},
-                "title_text": "Debug",
+                "title_text": "Debugs",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

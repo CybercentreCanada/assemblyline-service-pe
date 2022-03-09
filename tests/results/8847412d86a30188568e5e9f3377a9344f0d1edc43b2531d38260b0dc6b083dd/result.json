@@ -2,11 +2,11 @@
     "classification": "TLP:W",
     "response": {
         "milestones": {
-            "service_started": "2022-02-16T16:43:58.643226Z",
-            "service_completed": "2022-02-16T16:43:59.324945Z"
+            "service_started": null,
+            "service_completed": null
         },
-        "service_version": "$SERVICE_TAG",
-        "service_name": "pe",
+        "service_version": null,
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,15 +14,15 @@
                 "sha256": "ecac4f33945b82eea111db352be958c3db3c410429ad05ab7c4cf8a9c2e1001c",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpe0hsta3r/icon_0.ico",
+                "path": "/tmp/working_directory/icon_0.ico",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "ab243393b4e639f1e3c33a74ed8b2bbe6087f48ada696c72ef741ba28417eda5",
+                "sha256": "38c44859faece43e86e40b4880ce712e9e66b4cfb764a946249d124ab5b38e6d",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpe0hsta3r/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -77,7 +77,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"247d741659cc098630d4ac2680b68d0994056dce2e253e17f0fcec59651f5804ffb295871fd975fbab999a99bfbda6011fa35888da0e2a9c05bffa2aa1e7bcd8\"], [\"SHA384\", \"c69eeef5083876a5855d50f29fc9100f8ee24b7e49ffe9d1bce909413a101a749d83a9800ddc65d883c34400f30dff29\"], [\"SHA256\", \"b1eb442e0acc1ebf41f01cb00d1a6d10a564f81ca64039aaf8d812189ce3e6c4\"], [\"SHA1\", \"8456fe6e69a80d5a35ddb559c831e2a29986bba2\"], [\"MD5\", \"8e224ea5d0462ddd8463a7459a419a96\"]]",
+                "body": "[[\"sha512\", \"247d741659cc098630d4ac2680b68d0994056dce2e253e17f0fcec59651f5804ffb295871fd975fbab999a99bfbda6011fa35888da0e2a9c05bffa2aa1e7bcd8\"], [\"sha384\", \"c69eeef5083876a5855d50f29fc9100f8ee24b7e49ffe9d1bce909413a101a749d83a9800ddc65d883c34400f30dff29\"], [\"sha256\", \"b1eb442e0acc1ebf41f01cb00d1a6d10a564f81ca64039aaf8d812189ce3e6c4\"], [\"sha1\", \"8456fe6e69a80d5a35ddb559c831e2a29986bba2\"], [\"md5\", \"8e224ea5d0462ddd8463a7459a419a96\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
@@ -409,7 +409,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 766}]], [\"IMAGE\", []]]",
+                "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 766, \"Saved as\": \"icon_0.ico\"}]], [\"IMAGE\", []]]",
                 "classification": "TLP:W",
                 "body_format": "MULTI",
                 "depth": 1,

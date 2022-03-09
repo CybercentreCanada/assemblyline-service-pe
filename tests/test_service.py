@@ -1,9 +1,11 @@
 import errno
 import json
 import os
+from collections import defaultdict
 from pathlib import Path
 
 import pytest
+from assemblyline.common.identify import fileinfo
 from assemblyline.odm.messages.task import Task as ServiceTask
 from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.task import Task
@@ -30,7 +32,7 @@ def find_sample(locations, sample):
 
 
 def list_results(location):
-    return os.listdir(os.path.join(location, "tests", "results"))
+    return [f.rstrip(".json") for f in os.listdir(os.path.join(location, "tests", "results"))]
 
 
 @pytest.fixture()
@@ -42,6 +44,8 @@ def sample(request):
 
 
 def create_service_task(sample):
+    fileinfo_keys = ["magic", "md5", "mime", "sha1", "sha256", "size", "type"]
+
     return ServiceTask(
         {
             "sid": 1,
@@ -49,15 +53,7 @@ def create_service_task(sample):
             "deep_scan": False,
             "service_name": "Not Important",
             "service_config": {},
-            "fileinfo": {
-                "magic": "Not Important",
-                "md5": "a" * 32,
-                "mime": "Not Important",
-                "sha1": "a" * 40,
-                "sha256": sample,
-                "size": 1,
-                "type": "Not Important",
-            },
+            "fileinfo": dict((k, v) for k, v in fileinfo(f"/tmp/{sample}").items() if k in fileinfo_keys),
             "filename": sample,
             "min_classification": "TLP:WHITE",
             "max_files": 501,
@@ -109,11 +105,11 @@ class TestService:
     @staticmethod
     @pytest.mark.parametrize("sample", list_results(SELF_LOCATION), indirect=True)
     def test_service(sample):
-        overwrite_features = False  # Used temporarily to mass-correct tests
         overwrite_results = False  # Used temporarily to mass-correct tests
 
         cls = pe.pe.PE()
         cls.start()
+        cls.ontologies = defaultdict(list)
 
         task = Task(create_service_task(sample=sample))
         service_request = ServiceRequest(task)
@@ -122,44 +118,54 @@ class TestService:
             cls.config["overlay_analysis_file_max_size"] = 500000000
         cls.execute(service_request)
 
-        correct_features_path = os.path.join(SELF_LOCATION, "tests", "results", sample, "features.json")
-        if os.path.exists(correct_features_path):
-            with open(correct_features_path, "r") as f:
-                correct_features = json.loads(f.read())
+        correct_path = os.path.join(SELF_LOCATION, "tests", "results", sample, "features.json")
+        if os.path.exists(correct_path):
+            with open(correct_path, "r") as f:
+                correct_result = json.loads(f.read())
 
-            test_features_path = os.path.join(cls.working_directory, "features.json")
-            with open(test_features_path, "r") as f:
-                test_features = json.loads(f.read())
+            test_path = os.path.join(cls.working_directory, "features.json")
+            with open(test_path, "r") as f:
+                test_result = json.loads(f.read())
 
-            if overwrite_features:
-                if test_features != correct_features:
-                    with open(correct_features_path, "w") as f:
-                        f.write(json.dumps(test_features))
+            if overwrite_results:
+                if test_result != correct_result:
+                    with open(correct_path, "w") as f:
+                        f.write(json.dumps(test_result))
             else:
-                assert test_features == correct_features
+                assert test_result == correct_result
+
+        correct_path = os.path.join(SELF_LOCATION, "tests", "results", sample, "result_ontology_PE.json")
+        if os.path.exists(correct_path):
+            with open(correct_path, "r") as f:
+                correct_result = json.loads(f.read())
+
+            assert "PE" in cls.ontologies
+            assert len(cls.ontologies["PE"]) == 1
+            test_result = cls.ontologies["PE"][0]
+
+            if overwrite_results:
+                if test_result != correct_result:
+                    with open(correct_path, "w") as f:
+                        f.write(json.dumps(test_result))
+            else:
+                assert test_result == correct_result
 
         # Get the result of execute() from the test method
         test_result = task.get_service_result()
 
         # Get the assumed "correct" result of the sample
-        correct_result_path = os.path.join(SELF_LOCATION, "tests", "results", sample, "result.json")
-        with open(correct_result_path, "r") as f:
+        correct_path = os.path.join(SELF_LOCATION, "tests", "results", sample, "result.json")
+        with open(correct_path, "r") as f:
             correct_result = json.loads(f.read())
 
         # Assert values of the class instance are expected
         assert cls.file_res == service_request.result
 
-        if overwrite_results:
-            import copy
-
-            orig_result = copy.deepcopy(test_result)
-
         generalize_result(test_result)
-        generalize_result(correct_result)
         if overwrite_results:
             if test_result != correct_result:
-                with open(correct_result_path, "w") as f:
-                    f.write(json.dumps(orig_result))
+                with open(correct_path, "w") as f:
+                    f.write(json.dumps(test_result))
         else:
             assert test_result == correct_result
 
