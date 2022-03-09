@@ -39,7 +39,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 450,
+        "score": 250,
         "sections": [
             {
                 "body": "[[\"Timestamp\", \"1546277936 (2018-12-31 17:38:56 +00:00 (UTC))\"], [\"Entrypoint\", \"0x1a9f49\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"5.12\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
@@ -92,24 +92,6 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Optional header checksum\", \"0x00000000\"], [\"Computed checksum\", \"0x001b08b2\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": {
-                    "heur_id": 23,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Invalid optional header checksum",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

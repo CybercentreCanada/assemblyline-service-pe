@@ -32,7 +32,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 600,
+        "score": 300,
         "sections": [
             {
                 "body": "[[\"Timestamp\", \"1381752628 (2013-10-14 12:10:28 +00:00 (UTC))\"], [\"Entrypoint\", \"0x86970\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"9.0\"], [\"Operating System version\", \"5.0\"], [\"Subsystem version\", \"5.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x00000000\"]]",
@@ -84,7 +84,7 @@
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 24,
-                    "score": 100,
+                    "score": 0,
                     "attack_ids": [],
                     "signatures": {},
                     "frequency": 1,
@@ -103,24 +103,6 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Optional header checksum\", \"0x00000000\"], [\"Computed checksum\", \"0x0005816d\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": {
-                    "heur_id": 23,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Invalid optional header checksum",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

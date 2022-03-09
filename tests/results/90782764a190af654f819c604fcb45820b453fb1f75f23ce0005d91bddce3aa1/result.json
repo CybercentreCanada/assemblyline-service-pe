@@ -23,7 +23,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 401,
+        "score": 201,
         "sections": [
             {
                 "body": "2147483704 (2038-01-19 03:15:04 +00:00 (UTC))",
@@ -91,24 +91,6 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Optional header checksum\", \"0x00000000\"], [\"Computed checksum\", \"0x0002a1b4\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": {
-                    "heur_id": 23,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Invalid optional header checksum",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

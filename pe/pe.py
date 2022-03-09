@@ -600,7 +600,11 @@ class PE(ServiceBase):
             self.features["optional_header"]["computed_checksum"] = generate_checksum(
                 self.request.file_path, self.binary.dos_header.addressof_new_exeheader + 0x58
             )
-            if self.features["optional_header"]["checksum"] != self.features["optional_header"]["computed_checksum"]:
+            if (
+                self.features["optional_header"]["checksum"] != 0
+                and self.features["optional_header"]["checksum"]
+                != self.features["optional_header"]["computed_checksum"]
+            ):
                 heur = Heuristic(23)
                 heur_section = ResultOrderedKeyValueSection(heur.name, heuristic=heur)
                 heur_section.add_item(
@@ -1603,9 +1607,7 @@ class PE(ServiceBase):
             if self.features["overlay"]["size"] > 0:
                 if self.features["overlay"]["size"] > self.config.get(
                     "heur25_min_overlay_size", 31457280
-                ) and self.features["overlay"][
-                    "entropy"
-                ] < self.config.get("heur25_min_overlay_entropy", 0.5):
+                ) and self.features["overlay"]["entropy"] < self.config.get("heur25_min_overlay_entropy", 0.5):
                     heur = Heuristic(25)
                     heur_section = ResultSection(heur.name, heuristic=heur)
                     heur_section.add_line(f"Overlay Size: {self.features['overlay']['size']}")

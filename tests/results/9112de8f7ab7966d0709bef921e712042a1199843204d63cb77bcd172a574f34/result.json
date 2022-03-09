@@ -32,7 +32,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 850,
+        "score": 550,
         "sections": [
             {
                 "body": "1298655712 (2011-02-25 17:41:52 +00:00 (UTC))\n1298662912 (2011-02-25 19:41:52 +00:00 (UTC))\n1298653792 (2011-02-25 17:09:52 +00:00 (UTC))\n1319564512 (2011-10-25 17:41:52 +00:00 (UTC))\n1046318394 (2003-02-27 03:59:54 +00:00 (UTC))\n330558558 (1980-06-22 21:49:18 +00:00 (UTC))",
@@ -99,7 +99,7 @@
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 24,
-                    "score": 100,
+                    "score": 0,
                     "attack_ids": [],
                     "signatures": {},
                     "frequency": 1,
@@ -118,24 +118,6 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Optional header checksum\", \"0x00000000\"], [\"Computed checksum\", \"0x0002d8c2\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": {
-                    "heur_id": 23,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Invalid optional header checksum",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
