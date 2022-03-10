@@ -31,7 +31,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 0,
+        "score": 50,
         "sections": [
             {
                 "body": "[[\"Timestamp\", \"1475592868 (2016-10-04 14:54:28 +00:00 (UTC))\"], [\"Entrypoint\", \"0x82b00\"], [\"Machine\", \"AMD64\"], [\"Magic\", \"PE32_PLUS\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"8.0\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"5.2\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
@@ -398,6 +398,24 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Icons",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "icon_0.ico",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 27,
+                    "score": 50,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Unshowable icon",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

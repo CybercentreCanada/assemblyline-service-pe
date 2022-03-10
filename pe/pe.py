@@ -29,6 +29,7 @@ from assemblyline_v4_service.common.result import (
     TableSectionBody,
     TextSectionBody,
 )
+from PIL import Image
 
 MZ = [ord(x) for x in "MZ"]
 DOS_MODE = [ord(x) for x in "This program cannot be run in DOS mode"]
@@ -1099,6 +1100,7 @@ class PE(ServiceBase):
             sub_res_image = ImageSectionBody(self.request)
             try:
                 icons = []
+                unshowable_icons = []
                 for idx, icon in enumerate(self.binary.resources_manager.icons):
                     icons.append(
                         {
@@ -1126,7 +1128,18 @@ class PE(ServiceBase):
                     icon.save(temp_path)
                     try:
                         sub_res_image.add_image(temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file")
-                    except OSError:
+                    except (OSError, ValueError):
+                        unshowable_icons.append(f"icon_{idx}.ico")
+                        self.request.add_supplementary(
+                            temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file"
+                        )
+                    except Image.DecompressionBombError:
+                        heur = Heuristic(28)
+                        heur_section = ResultSection(heur.name, heuristic=heur)
+                        heur_section.add_line(f"icon_{idx}.ico")
+                        sub_res.add_subsection(heur_section)
+
+                        unshowable_icons.append(f"icon_{idx}.ico")
                         self.request.add_supplementary(
                             temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file"
                         )
@@ -1134,6 +1147,11 @@ class PE(ServiceBase):
                 self.features["resources_manager"]["icons"] = icons
                 sub_res.add_section_part(sub_res_table)
                 sub_res.add_section_part(sub_res_image)
+                if unshowable_icons:
+                    heur = Heuristic(27)
+                    heur_section = ResultSection(heur.name, heuristic=heur)
+                    heur_section.add_lines(unshowable_icons)
+                    sub_res.add_subsection(heur_section)
                 res.add_subsection(sub_res)
             except lief.corrupted:
                 heur = Heuristic(13)
@@ -1669,7 +1687,11 @@ class PE(ServiceBase):
         self.request = request
         self.file_path = request.file_path
 
-        self.binary = lief.parse(self.file_path)
+        try:
+            self.binary = lief.parse(self.file_path)
+        except (lief.bad_format, lief.read_out_of_bound):
+            self.binary = None
+
         if self.binary is None:
             res = ResultSection("This file looks like a PE but failed loading.", heuristic=Heuristic(7))
             self.file_res.add_section(res)

@@ -214,6 +214,20 @@ heuristics:
     name: Future timestamp found
     score: 1
 
+  - description: >-
+      Some icons could not be added to the result display, which is usually a sign of corruption
+    filetype: "executable/windows"
+    heur_id: 27
+    name: Unshowable icon
+    score: 50
+
+  - description: >-
+      This icon exceeds limit of allowed pixel during decompression. It may be a decompression bomb DOS attack and as such, won't be shown normally.
+    filetype: "executable/windows"
+    heur_id: 28
+    name: Possible decompression bomb DOS attack
+    score: 200
+
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
   cpu_cores: 1
