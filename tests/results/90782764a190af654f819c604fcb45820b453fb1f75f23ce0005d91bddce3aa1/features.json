@@ -22,8 +22,7 @@
             0,
             0
         ],
-        "timestamp": 708992537,
-        "hr_timestamp": "1992-06-19 22:22:17 +00:00 (UTC)"
+        "timestamp": 708992537
     },
     "optional_header": {
         "addressof_entrypoint": 51444,
@@ -80,24 +79,20 @@
     },
     "nx": false,
     "authentihash": {
-        "SHA_512": "008dc4c4c2227f82f8a9d8c2e2cedff60d3d135a1024f5d1692144e0d626ab0ba5b1ac6c0ad6b393c8548578151aeb1988b0b60355357ab38bb6fa2617b10104",
-        "SHA_384": "17dabcee194ab3a77b398e11ad0585bc1ea7d1a49f9fd1e145f2a34415aa07bf3a13bb79bce246dfbb8d704269266585",
-        "SHA_256": "d348f5212f8bb9727d3fb812d4a01a8f0d8100751d622a146ed0d293c922babe",
-        "SHA_1": "0019b8e985df6a2d653eb04b9580829068375b30",
-        "MD5": "5d8d710dd391ce4a543562d89c0bbd62"
+        "sha512": "008dc4c4c2227f82f8a9d8c2e2cedff60d3d135a1024f5d1692144e0d626ab0ba5b1ac6c0ad6b393c8548578151aeb1988b0b60355357ab38bb6fa2617b10104",
+        "sha384": "17dabcee194ab3a77b398e11ad0585bc1ea7d1a49f9fd1e145f2a34415aa07bf3a13bb79bce246dfbb8d704269266585",
+        "sha256": "d348f5212f8bb9727d3fb812d4a01a8f0d8100751d622a146ed0d293c922babe",
+        "sha1": "0019b8e985df6a2d653eb04b9580829068375b30",
+        "md5": "5d8d710dd391ce4a543562d89c0bbd62"
     },
     "tls": {
-        "associated section": ".rdata"
+        "section": ".rdata"
     },
     "position_independent": false,
     "is_reproducible_build": false,
     "size_of_headers": 1024,
     "virtual_size": 135168,
     "size": 115200,
-    "overlay": {
-        "size": 0,
-        "entropy": 0.0
-    },
     "sections": [
         {
             "name": "CODE",
@@ -1314,7 +1309,7 @@
         "characteristics": 0,
         "num_childs": 1,
         "depth": 0,
-        "id": 0,
+        "resource_id": 0,
         "is_data": false,
         "is_directory": true,
         "major_version": 4,
@@ -1327,7 +1322,7 @@
                 "characteristics": 24,
                 "num_childs": 2,
                 "depth": 1,
-                "id": 10,
+                "resource_id": 10,
                 "resource_type": "RCDATA",
                 "is_data": false,
                 "is_directory": true,
@@ -1342,7 +1337,7 @@
                         "num_childs": 0,
                         "depth": 2,
                         "name": "DVCLAL",
-                        "id": 2147483784,
+                        "resource_id": 2147483784,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 4,
@@ -1356,7 +1351,7 @@
                         "num_childs": 1,
                         "depth": 2,
                         "name": "PACKAGEINFO",
-                        "id": 2147483798,
+                        "resource_id": 2147483798,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 4,
@@ -1366,12 +1361,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 1252,
                                 "sha256": "95347bcfd203e45c2062e2f5f224d39b02589a75ebbe4381d43c0565efefee6e",
                                 "entropy": 5.043603385880926,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 109248,
@@ -1383,5 +1378,9 @@
             }
         ]
     },
-    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
+    "overlay": {
+        "size": 0,
+        "entropy": 0.0
+    }
 }

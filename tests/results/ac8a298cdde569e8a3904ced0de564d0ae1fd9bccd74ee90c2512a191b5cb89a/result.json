@@ -6,15 +6,15 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "5817bde9ba07896356f8d6abc61b4e31e79364d9d1057289a587f54671508f5d",
+                "sha256": "6f3063cfa10a074045ae1ba986e319ebd9d5ad31557ad50fe6215eaea857f67e",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmptlrqqada/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "58166564c037449c32b5c13649913c5390a2a34b21d33ebc01f295e7f2aa1b01",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmptlrqqada/overlay",
+                "path": "/tmp/working_directory/overlay",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 950,
+        "score": 850,
         "sections": [
             {
                 "body": "[[\"Timestamp\", \"1450322943 (2015-12-17 03:29:03 +00:00 (UTC))\"], [\"Entrypoint\", \"0x4d87\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"12.0\"], [\"Operating System version\", \"5.1\"], [\"Subsystem version\", \"5.1\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x0002c1ed\"]]",
@@ -84,7 +84,7 @@
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 24,
-                    "score": 100,
+                    "score": 0,
                     "attack_ids": [],
                     "signatures": {},
                     "frequency": 1,
@@ -96,7 +96,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"103adba66fe50d3b9f11477bc143771f9b1493eccffd39fd3bf30a3e4e0b0f33687b93efe6e1ac8cd265319f81b75974b3d46fc3c799bb6a58823d5bb03513c6\"], [\"SHA384\", \"2fc599a4a868294d9b149dbab0c576a5ebee16b34d2e1048759a06f4fa25105b76ec6e7363439946e9e2f22c5ef65083\"], [\"SHA256\", \"f61170f894476e6a6536021496b98a7e7cde40b2baf6d8cd4be1d8cc8cb5a764\"], [\"SHA1\", \"8abbd265630a79db05277f78a3877e31c737af95\"], [\"MD5\", \"a9888f6d8d2ce106f158e0342e894a79\"]]",
+                "body": "[[\"sha512\", \"103adba66fe50d3b9f11477bc143771f9b1493eccffd39fd3bf30a3e4e0b0f33687b93efe6e1ac8cd265319f81b75974b3d46fc3c799bb6a58823d5bb03513c6\"], [\"sha384\", \"2fc599a4a868294d9b149dbab0c576a5ebee16b34d2e1048759a06f4fa25105b76ec6e7363439946e9e2f22c5ef65083\"], [\"sha256\", \"f61170f894476e6a6536021496b98a7e7cde40b2baf6d8cd4be1d8cc8cb5a764\"], [\"sha1\", \"8abbd265630a79db05277f78a3877e31c737af95\"], [\"md5\", \"a9888f6d8d2ce106f158e0342e894a79\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
@@ -262,7 +262,7 @@
                 "depth": 0,
                 "heuristic": null,
                 "tags": {},
-                "title_text": "Debug",
+                "title_text": "Debugs",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -593,7 +593,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"TEXT\", \"The signature does not match the authentihash data found for SHA1\"], [\"ORDERED_KEY_VALUE\", [[\"Signature\", \"c77a960b0d1e58c51e259ea67b6e1b19aea3ce5a\"], [\"Authentihash data\", \"8abbd265630a79db05277f78a3877e31c737af95\"]]]]",
+                "body": "[[\"TEXT\", \"The signature does not match the authentihash data found for sha1\"], [\"ORDERED_KEY_VALUE\", [[\"Signature\", \"c77a960b0d1e58c51e259ea67b6e1b19aea3ce5a\"], [\"Authentihash data\", \"8abbd265630a79db05277f78a3877e31c737af95\"]]]]",
                 "classification": "TLP:W",
                 "body_format": "MULTI",
                 "depth": 2,

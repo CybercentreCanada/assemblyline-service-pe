@@ -18,8 +18,7 @@
             0,
             0
         ],
-        "timestamp": 1495741942,
-        "hr_timestamp": "2017-05-25 19:52:22 +00:00 (UTC)"
+        "timestamp": 1495741942
     },
     "optional_header": {
         "addressof_entrypoint": 25505,
@@ -83,62 +82,62 @@
             {
                 "build_id": 24210,
                 "count": 1,
-                "id": 258
+                "entry_id": 258
             },
             {
                 "build_id": 0,
                 "count": 1,
-                "id": 151
+                "entry_id": 151
             },
             {
                 "build_id": 24210,
                 "count": 1,
-                "id": 255
+                "entry_id": 255
             },
             {
                 "build_id": 24210,
                 "count": 3,
-                "id": 265
+                "entry_id": 265
             },
             {
                 "build_id": 0,
                 "count": 96,
-                "id": 1
+                "entry_id": 1
             },
             {
                 "build_id": 30729,
                 "count": 5,
-                "id": 147
+                "entry_id": 147
             },
             {
                 "build_id": 24123,
                 "count": 34,
-                "id": 260
+                "entry_id": 260
             },
             {
                 "build_id": 24123,
                 "count": 57,
-                "id": 261
+                "entry_id": 261
             },
             {
                 "build_id": 24123,
                 "count": 22,
-                "id": 259
+                "entry_id": 259
             },
             {
                 "build_id": 40116,
                 "count": 29,
-                "id": 242
+                "entry_id": 242
             },
             {
                 "build_id": 40116,
                 "count": 143,
-                "id": 243
+                "entry_id": 243
             },
             {
                 "build_id": 40116,
                 "count": 13,
-                "id": 241
+                "entry_id": 241
             }
         ],
         "key": 857619653,
@@ -146,24 +145,20 @@
     },
     "nx": true,
     "authentihash": {
-        "SHA_512": "a6a2730b6f249b42a9e64d870436efaf5c09b80b91b537231dc7364651222f804db6bfae91401c8a9153353876ebbbbb37a980a0c6b524d3779750c2b09909da",
-        "SHA_384": "4578a53ce7eede9584a1e7f6a9e10dd2274a8590e28f02f8319049a0eeee0d90d15f6e0b6909c0535a17f319bd8b42e9",
-        "SHA_256": "9872c7237de8031c10e59cdd95769cf4e3eb82ac7353c0c44d86ce206ff851e6",
-        "SHA_1": "0befcef97f7e6855afbcc51113d39b9d02faacfd",
-        "MD5": "17ebf20d7315b31333eb8e504de94579"
+        "sha512": "a6a2730b6f249b42a9e64d870436efaf5c09b80b91b537231dc7364651222f804db6bfae91401c8a9153353876ebbbbb37a980a0c6b524d3779750c2b09909da",
+        "sha384": "4578a53ce7eede9584a1e7f6a9e10dd2274a8590e28f02f8319049a0eeee0d90d15f6e0b6909c0535a17f319bd8b42e9",
+        "sha256": "9872c7237de8031c10e59cdd95769cf4e3eb82ac7353c0c44d86ce206ff851e6",
+        "sha1": "0befcef97f7e6855afbcc51113d39b9d02faacfd",
+        "md5": "17ebf20d7315b31333eb8e504de94579"
     },
     "tls": {
-        "associated section": ".rdata"
+        "section": ".rdata"
     },
     "position_independent": true,
     "is_reproducible_build": false,
     "size_of_headers": 1024,
     "virtual_size": 778240,
     "size": 756224,
-    "overlay": {
-        "size": 0,
-        "entropy": 0.0
-    },
     "sections": [
         {
             "name": ".text",
@@ -289,7 +284,7 @@
             "fullname": ".reloc\u0000\u0000"
         }
     ],
-    "debug": [
+    "debugs": [
         {
             "addressof_rawdata": 680536,
             "characteristics": 0,
@@ -1226,7 +1221,7 @@
         ],
         "icons": [
             {
-                "id": 1,
+                "icon_id": 1,
                 "planes": 1,
                 "height": 48,
                 "width": 48,
@@ -1234,7 +1229,7 @@
                 "sublang": "DEFAULT"
             },
             {
-                "id": 2,
+                "icon_id": 2,
                 "planes": 1,
                 "height": 13,
                 "width": 13,
@@ -1242,7 +1237,7 @@
                 "sublang": "DEFAULT"
             },
             {
-                "id": 3,
+                "icon_id": 3,
                 "planes": 1,
                 "height": 48,
                 "width": 48,
@@ -1250,7 +1245,7 @@
                 "sublang": "DEFAULT"
             },
             {
-                "id": 4,
+                "icon_id": 4,
                 "planes": 1,
                 "height": 32,
                 "width": 32,
@@ -1258,7 +1253,7 @@
                 "sublang": "DEFAULT"
             },
             {
-                "id": 5,
+                "icon_id": 5,
                 "planes": 1,
                 "height": 16,
                 "width": 16,
@@ -1266,7 +1261,7 @@
                 "sublang": "DEFAULT"
             },
             {
-                "id": 6,
+                "icon_id": 6,
                 "planes": 1,
                 "height": 13,
                 "width": 13,
@@ -1274,7 +1269,7 @@
                 "sublang": "DEFAULT"
             },
             {
-                "id": 7,
+                "icon_id": 7,
                 "planes": 1,
                 "height": 64,
                 "width": 64,
@@ -1282,7 +1277,7 @@
                 "sublang": "DEFAULT"
             },
             {
-                "id": 8,
+                "icon_id": 8,
                 "planes": 1,
                 "height": 48,
                 "width": 48,
@@ -1290,7 +1285,7 @@
                 "sublang": "DEFAULT"
             },
             {
-                "id": 9,
+                "icon_id": 9,
                 "planes": 1,
                 "height": 32,
                 "width": 32,
@@ -1298,7 +1293,7 @@
                 "sublang": "DEFAULT"
             },
             {
-                "id": 10,
+                "icon_id": 10,
                 "planes": 1,
                 "height": 16,
                 "width": 16,
@@ -1310,17 +1305,17 @@
         "version": {
             "type": 0,
             "fixed_file_info": {
-                "file_date_LS": 0,
-                "file_date_MS": 0,
+                "file_date_ls": 0,
+                "file_date_ms": 0,
                 "file_flags": 0,
                 "file_flags_mask": 63,
                 "file_os": "NT_WINDOWS32",
                 "file_subtype": "UNKNOWN",
                 "file_type": "UNKNOWN",
-                "file_version_LS": 1,
-                "file_version_MS": 65536,
-                "product_version_LS": 1,
-                "product_version_MS": 65536,
+                "file_version_ls": 1,
+                "file_version_ms": 65536,
+                "product_version_ls": 1,
+                "product_version_ms": 65536,
                 "signature": 4277077181,
                 "struct_version": 65536
             },
@@ -1360,7 +1355,7 @@
         "characteristics": 0,
         "num_childs": 6,
         "depth": 0,
-        "id": 0,
+        "resource_id": 0,
         "is_data": false,
         "is_directory": true,
         "major_version": 0,
@@ -1374,7 +1369,7 @@
                 "num_childs": 7,
                 "depth": 1,
                 "name": "AFX_DIALOG_LAYOUT",
-                "id": 2147485152,
+                "resource_id": 2147485152,
                 "resource_type": "???",
                 "is_data": false,
                 "is_directory": true,
@@ -1388,7 +1383,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 900,
+                        "resource_id": 900,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1398,12 +1393,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
                                 "entropy": 0.0,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 746160,
@@ -1415,7 +1410,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 901,
+                        "resource_id": 901,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1425,12 +1420,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
                                 "entropy": 0.0,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 746168,
@@ -1442,7 +1437,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 902,
+                        "resource_id": 902,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1452,12 +1447,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
                                 "entropy": 0.0,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 746176,
@@ -1469,7 +1464,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 903,
+                        "resource_id": 903,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1479,12 +1474,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
                                 "entropy": 0.0,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 746184,
@@ -1496,7 +1491,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 914,
+                        "resource_id": 914,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1506,12 +1501,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
                                 "entropy": 0.0,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 746192,
@@ -1523,7 +1518,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 921,
+                        "resource_id": 921,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1533,12 +1528,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
                                 "entropy": 0.0,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 746200,
@@ -1550,7 +1545,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 922,
+                        "resource_id": 922,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1560,12 +1555,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
                                 "entropy": 0.0,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 746208,
@@ -1579,7 +1574,7 @@
                 "characteristics": 0,
                 "num_childs": 10,
                 "depth": 1,
-                "id": 3,
+                "resource_id": 3,
                 "resource_type": "ICON",
                 "is_data": false,
                 "is_directory": true,
@@ -1593,7 +1588,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 1,
+                        "resource_id": 1,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1603,12 +1598,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "fd78ec9bd7fe5ae11234b670e89b7aac20aa278543eec703df9e437d6ddb0c19",
                                 "entropy": 3.010573941237518,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 687632,
@@ -1620,7 +1615,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 2,
+                        "resource_id": 2,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1630,12 +1625,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "59606f95415218da016b3035d6db01aef99009c32cbb9225295161e9cbde599e",
                                 "entropy": 7.443239631203201,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 697296,
@@ -1647,7 +1642,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 3,
+                        "resource_id": 3,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1657,12 +1652,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "9282ef76bd7caf21b082ec5372036737a274f4dcde6754b44a14e82f7fc44250",
                                 "entropy": 2.1434964794339035,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 700136,
@@ -1674,7 +1669,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 4,
+                        "resource_id": 4,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1684,12 +1679,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "0f21d4638acea2a29935821118a405870571395ae6ade17d42acdfd14d926d48",
                                 "entropy": 1.9495556929676439,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 703888,
@@ -1701,7 +1696,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 5,
+                        "resource_id": 5,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1711,12 +1706,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "3cf96c4d0f81d50f1ecde1534f7945a48ff5b19c8d0b271647385b0dda219919",
                                 "entropy": 1.2432926244449707,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 706104,
@@ -1728,7 +1723,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 6,
+                        "resource_id": 6,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1738,12 +1733,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "0b47c4dbebef9b67af29ce925d575a67b12c998e8d6790f938b262477fd75a74",
                                 "entropy": 7.482457045800001,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 707488,
@@ -1755,7 +1750,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 7,
+                        "resource_id": 7,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1765,12 +1760,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "c47e69dfa46836e856531e341cbbe649d011400e16e1af2bc1a854d648937fe1",
                                 "entropy": 2.582769000913991,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 710640,
@@ -1782,7 +1777,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 8,
+                        "resource_id": 8,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1792,12 +1787,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "e133a3834f112a6b436ca01cf5be9762b09ef5903c3a3b4ee713687dbc77e12c",
                                 "entropy": 2.6851227312845283,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 727576,
@@ -1809,7 +1804,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 9,
+                        "resource_id": 9,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1819,12 +1814,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "8d33b5052feadd6b5970af4783ee1ec4a9d24942b7732e98ec7e9f8aaf983533",
                                 "entropy": 2.6971721728902605,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 737216,
@@ -1836,7 +1831,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 10,
+                        "resource_id": 10,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1846,12 +1841,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "1f5e6628a542770910dddfe17bdc51fe41afbe5c00318202f56854f51746f7e8",
                                 "entropy": 2.8702426832422363,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 741480,
@@ -1865,7 +1860,7 @@
                 "characteristics": 0,
                 "num_childs": 7,
                 "depth": 1,
-                "id": 5,
+                "resource_id": 5,
                 "resource_type": "DIALOG",
                 "is_data": false,
                 "is_directory": true,
@@ -1879,7 +1874,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 900,
+                        "resource_id": 900,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1889,12 +1884,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "b833d967d2f4da0a2cd9d1b20d63d45f4a76aa471ff3c23a2f4a09d1e719b0c0",
                                 "entropy": 2.7725138485265606,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 742744,
@@ -1906,7 +1901,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 901,
+                        "resource_id": 901,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1916,12 +1911,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "b833d967d2f4da0a2cd9d1b20d63d45f4a76aa471ff3c23a2f4a09d1e719b0c0",
                                 "entropy": 2.7725138485265606,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 742904,
@@ -1933,7 +1928,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 902,
+                        "resource_id": 902,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1943,12 +1938,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "b833d967d2f4da0a2cd9d1b20d63d45f4a76aa471ff3c23a2f4a09d1e719b0c0",
                                 "entropy": 2.7725138485265606,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 743064,
@@ -1960,7 +1955,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 903,
+                        "resource_id": 903,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1970,12 +1965,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "8931cf0dfd9edc578ad4eaf315a33add4af2e937ea1ce4927cefffb76c186872",
                                 "entropy": 7.054104552096785,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 743224,
@@ -1987,7 +1982,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 914,
+                        "resource_id": 914,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1997,12 +1992,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "b833d967d2f4da0a2cd9d1b20d63d45f4a76aa471ff3c23a2f4a09d1e719b0c0",
                                 "entropy": 2.7725138485265606,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 745680,
@@ -2014,7 +2009,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 921,
+                        "resource_id": 921,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -2024,12 +2019,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "b833d967d2f4da0a2cd9d1b20d63d45f4a76aa471ff3c23a2f4a09d1e719b0c0",
                                 "entropy": 2.7725138485265606,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 745840,
@@ -2041,7 +2036,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 922,
+                        "resource_id": 922,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -2051,12 +2046,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "b833d967d2f4da0a2cd9d1b20d63d45f4a76aa471ff3c23a2f4a09d1e719b0c0",
                                 "entropy": 2.7725138485265606,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 746000,
@@ -2070,7 +2065,7 @@
                 "characteristics": 0,
                 "num_childs": 2,
                 "depth": 1,
-                "id": 14,
+                "resource_id": 14,
                 "resource_type": "GROUP_ICON",
                 "is_data": false,
                 "is_directory": true,
@@ -2084,7 +2079,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 883,
+                        "resource_id": 883,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -2094,12 +2089,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "6eb54801f91b6d8effccbfaefe6b2d7705a274a75940e6226e24e0d4ec58c396",
                                 "entropy": 1.919240704636849,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 697272,
@@ -2111,7 +2106,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 934,
+                        "resource_id": 934,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -2121,12 +2116,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "36bf55fddab2557f1aa89bd78e6e36138847fe8f0b71a76c2d48fe1fd022b729",
                                 "entropy": 3.0415432658528103,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 742608,
@@ -2140,7 +2135,7 @@
                 "characteristics": 0,
                 "num_childs": 1,
                 "depth": 1,
-                "id": 16,
+                "resource_id": 16,
                 "resource_type": "VERSION",
                 "is_data": false,
                 "is_directory": true,
@@ -2154,7 +2149,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 1,
+                        "resource_id": 1,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -2164,12 +2159,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "64a731d6d4c24f00379d43a7e80d009774cc7fba585bdd5cd85570ba723e92af",
                                 "entropy": 3.391652080745814,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 746216,
@@ -2183,7 +2178,7 @@
                 "characteristics": 0,
                 "num_childs": 1,
                 "depth": 1,
-                "id": 24,
+                "resource_id": 24,
                 "resource_type": "MANIFEST",
                 "is_data": false,
                 "is_directory": true,
@@ -2197,7 +2192,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 1,
+                        "resource_id": 1,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -2207,12 +2202,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "84991d34e717ae7f74c1b9ff5192e7d50a2ef4799df6c9f6575affcf1d033823",
                                 "entropy": 5.079347202546267,
                                 "depth": 3,
-                                "id": 1033,
+                                "resource_id": 1033,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 747024,
@@ -2224,5 +2219,9 @@
             }
         ]
     },
-    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
+    "overlay": {
+        "size": 0,
+        "entropy": 0.0
+    }
 }

@@ -21,8 +21,7 @@
             0,
             0
         ],
-        "timestamp": 1224921716,
-        "hr_timestamp": "2008-10-25 08:01:56 +00:00 (UTC)"
+        "timestamp": 1224921716
     },
     "optional_header": {
         "addressof_entrypoint": 17344,
@@ -82,42 +81,42 @@
             {
                 "build_id": 4035,
                 "count": 1,
-                "id": 90
+                "entry_id": 90
             },
             {
                 "build_id": 4035,
                 "count": 68,
-                "id": 95
+                "entry_id": 95
             },
             {
                 "build_id": 4035,
                 "count": 37,
-                "id": 96
+                "entry_id": 96
             },
             {
                 "build_id": 4035,
                 "count": 1,
-                "id": 94
+                "entry_id": 94
             },
             {
                 "build_id": 4035,
                 "count": 41,
-                "id": 93
+                "entry_id": 93
             },
             {
                 "build_id": 0,
                 "count": 723,
-                "id": 1
+                "entry_id": 1
             },
             {
                 "build_id": 4035,
                 "count": 7,
-                "id": 15
+                "entry_id": 15
             },
             {
                 "build_id": 4017,
                 "count": 34,
-                "id": 95
+                "entry_id": 95
             }
         ],
         "key": 1717251893,
@@ -125,21 +124,17 @@
     },
     "nx": false,
     "authentihash": {
-        "SHA_512": "b8f567633acc6cacfcf37ccf5667293317aa61b9fef7cef2abb0685cb096c2c490fc9057e41cf3b7faea1528b45cd9cc833ec07f9a95726e079fb6994e864921",
-        "SHA_384": "ec78e2eb58f04ccfed02ce846565383a3efc6c64819dad6c2dd77d100e54efde5d18590167a0239801c59cb05abf3ab5",
-        "SHA_256": "83fbdcca1f950f518836ee1ffbea6a510e8650092dd6e9553f05adba87a567a1",
-        "SHA_1": "ecf7f4be298719c2fc5169fadd2f84492886b15e",
-        "MD5": "78371620272d2c66925f0af06a23a89f"
+        "sha512": "b8f567633acc6cacfcf37ccf5667293317aa61b9fef7cef2abb0685cb096c2c490fc9057e41cf3b7faea1528b45cd9cc833ec07f9a95726e079fb6994e864921",
+        "sha384": "ec78e2eb58f04ccfed02ce846565383a3efc6c64819dad6c2dd77d100e54efde5d18590167a0239801c59cb05abf3ab5",
+        "sha256": "83fbdcca1f950f518836ee1ffbea6a510e8650092dd6e9553f05adba87a567a1",
+        "sha1": "ecf7f4be298719c2fc5169fadd2f84492886b15e",
+        "md5": "78371620272d2c66925f0af06a23a89f"
     },
     "position_independent": false,
     "is_reproducible_build": false,
     "size_of_headers": 1024,
     "virtual_size": 237568,
     "size": 308224,
-    "overlay": {
-        "size": 154112,
-        "entropy": 7.377656979852942
-    },
     "sections": [
         {
             "name": ".text",
@@ -3324,7 +3319,7 @@
         ],
         "icons": [
             {
-                "id": 50,
+                "icon_id": 50,
                 "planes": 1,
                 "height": 16,
                 "width": 16,
@@ -3332,7 +3327,7 @@
                 "sublang": "DEFAULT"
             },
             {
-                "id": 51,
+                "icon_id": 51,
                 "planes": 1,
                 "height": 32,
                 "width": 32,
@@ -3340,7 +3335,7 @@
                 "sublang": "DEFAULT"
             },
             {
-                "id": 52,
+                "icon_id": 52,
                 "planes": 1,
                 "height": 48,
                 "width": 48,
@@ -3353,7 +3348,7 @@
         "characteristics": 0,
         "num_childs": 3,
         "depth": 0,
-        "id": 0,
+        "resource_id": 0,
         "is_data": false,
         "is_directory": true,
         "major_version": 4,
@@ -3366,7 +3361,7 @@
                 "characteristics": 0,
                 "num_childs": 3,
                 "depth": 1,
-                "id": 3,
+                "resource_id": 3,
                 "resource_type": "ICON",
                 "is_data": false,
                 "is_directory": true,
@@ -3380,7 +3375,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 50,
+                        "resource_id": 50,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 4,
@@ -3390,12 +3385,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 1252,
                                 "sha256": "03ba92890f0c795e7020751e2e7b2147fa5c71a6ec7e98a265a2447d149027a6",
                                 "entropy": 5.222521656232227,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 138060,
@@ -3407,7 +3402,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 51,
+                        "resource_id": 51,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 4,
@@ -3417,12 +3412,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 1252,
                                 "sha256": "ef545a4d3a8d5f1df8e44164fd28759b9bbb4ef86266fbe6b5d3d55ddd6a493c",
                                 "entropy": 5.5773035040918755,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 139188,
@@ -3434,7 +3429,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 52,
+                        "resource_id": 52,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 4,
@@ -3444,12 +3439,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 1252,
                                 "sha256": "6f278e69fba94281738402d3b76d443a28d9dc701d6780fa7cca406c3359b145",
                                 "entropy": 5.287500071880957,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 143452,
@@ -3463,7 +3458,7 @@
                 "characteristics": 0,
                 "num_childs": 1,
                 "depth": 1,
-                "id": 14,
+                "resource_id": 14,
                 "resource_type": "GROUP_ICON",
                 "is_data": false,
                 "is_directory": true,
@@ -3478,7 +3473,7 @@
                         "num_childs": 1,
                         "depth": 2,
                         "name": "1",
-                        "id": 2147483976,
+                        "resource_id": 2147483976,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 4,
@@ -3488,12 +3483,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 1252,
                                 "sha256": "ca4ef1bdadfa5a023f0e6b68471ffd6657602a1b9e8b7058438e592ad8e50201",
                                 "entropy": 2.575359735700981,
                                 "depth": 3,
-                                "id": 1049,
+                                "resource_id": 1049,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 153092,
@@ -3507,7 +3502,7 @@
                 "characteristics": 0,
                 "num_childs": 1,
                 "depth": 1,
-                "id": 16,
+                "resource_id": 16,
                 "resource_type": "VERSION",
                 "is_data": false,
                 "is_directory": true,
@@ -3521,7 +3516,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 1,
+                        "resource_id": 1,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 4,
@@ -3531,12 +3526,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 1252,
                                 "sha256": "eea3528fa1531832237c804b9e751e6df3743eaa65a1fb43d720eb349739dde7",
                                 "entropy": 3.30655021325988,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 153140,
@@ -3548,5 +3543,9 @@
             }
         ]
     },
-    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
+    "overlay": {
+        "size": 154112,
+        "entropy": 7.377656979852942
+    }
 }

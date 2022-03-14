@@ -6,15 +6,15 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "dfa5ae16e5783bca8bec198af2d34b2e984cdb7ef162a8aa417397f2adbd9938",
+                "sha256": "8164391f6c46912b64bce903b09d0abc09273c3090e4e0150bd0122ee577768e",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmp4eyn_538/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -23,7 +23,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 200,
+        "score": 0,
         "sections": [
             {
                 "body": "[[\"Timestamp\", \"1259829217 (2009-12-03 08:33:37 +00:00 (UTC))\"], [\"Entrypoint\", \"0x8c27\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"7.10\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
@@ -69,31 +69,13 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"af3038dd4d81535640272aaa1a39472d42af9015d6ac763cc83da2030ae480268c1e9c40361a70b5b4fa075515becbeca2aba09e57d5c4294c010e04715b285e\"], [\"SHA384\", \"aabb29eb53ef8f3b407af3f1a882bb1ec6d8efede74330df45af76126ba8c5ab596d776b19da4e6fb53421609b02a708\"], [\"SHA256\", \"3f6293f361e4e107d6d2de09faff34166ac3e19e770de3fca4476f70666a1208\"], [\"SHA1\", \"2c5098c30af4bdf0f36f2b4f9561c6f88033506d\"], [\"MD5\", \"fa6427ce53d91a1e1fc0a2931eedcd77\"]]",
+                "body": "[[\"sha512\", \"af3038dd4d81535640272aaa1a39472d42af9015d6ac763cc83da2030ae480268c1e9c40361a70b5b4fa075515becbeca2aba09e57d5c4294c010e04715b285e\"], [\"sha384\", \"aabb29eb53ef8f3b407af3f1a882bb1ec6d8efede74330df45af76126ba8c5ab596d776b19da4e6fb53421609b02a708\"], [\"sha256\", \"3f6293f361e4e107d6d2de09faff34166ac3e19e770de3fca4476f70666a1208\"], [\"sha1\", \"2c5098c30af4bdf0f36f2b4f9561c6f88033506d\"], [\"md5\", \"fa6427ce53d91a1e1fc0a2931eedcd77\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Optional header checksum\", \"0x00000000\"], [\"Computed checksum\", \"0x00031e9a\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": {
-                    "heur_id": 23,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Invalid optional header checksum",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -259,7 +241,7 @@
                 "depth": 0,
                 "heuristic": null,
                 "tags": {},
-                "title_text": "Debug",
+                "title_text": "Debugs",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -304,7 +286,7 @@
                         }
                     }
                 },
-                "title_text": "Exports",
+                "title_text": "Export",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

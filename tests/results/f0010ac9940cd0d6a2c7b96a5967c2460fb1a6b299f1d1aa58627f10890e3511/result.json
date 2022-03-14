@@ -6,7 +6,7 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "4f8b0f76b6ddce0db95f9ccb9ebf1812bed52a4f37ab39393a5980f1bc409d0a",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpaa7pphfl/tmppdp120u_",
+                "path": "/tmp/working_directory",
                 "is_section_image": true
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "49ccae734e18e8d30dd507759ead1f05a01c2c913246764027e29b2946756c8a",
                 "description": "Icon 0 extracted from the PE file (thumbnail)",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpaa7pphfl/tmpdz_s9fn5",
+                "path": "/tmp/working_directory",
                 "is_section_image": true
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "35282afa633ddc4471485446b2a2222c3389d144d6692bac1db08cc0f1952e14",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpasbxptu3/certificate.1.1",
+                "path": "/tmp/working_directory/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -38,15 +38,15 @@
                 "sha256": "5e6d2f88f617dc8b809aee712445a41b3cde26af874a221a9dc98ea1dc68e3d5",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpasbxptu3/certificate.1.2",
+                "path": "/tmp/working_directory/certificate.1.2",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "b447a1d9ceb2eb4ffafcdbebdac8654f0796c81eb2e2712c12f7426264475ec8",
+                "sha256": "d12e353cc142d4e17892f2c84d888aa6b80ce78e11414fab0cec5b23a3a568a0",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpasbxptu3/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -56,7 +56,7 @@
                 "sha256": "19b04b9c1d7d7affa39d767a995660e9a239b480f286a3f57925adce430050cd",
                 "description": "binary_0_10_2147484742_1031 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpasbxptu3/binary_0_10_2147484742_1031",
+                "path": "/tmp/working_directory/binary_0_10_2147484742_1031",
                 "is_section_image": false
             },
             {
@@ -64,7 +64,7 @@
                 "sha256": "e8c94324346a70c2ae8d2320816bbc579578b443af0f80abba75865892f15974",
                 "description": "binary_0_10_2147484754_1031 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpasbxptu3/binary_0_10_2147484754_1031",
+                "path": "/tmp/working_directory/binary_0_10_2147484754_1031",
                 "is_section_image": false
             },
             {
@@ -72,7 +72,7 @@
                 "sha256": "d0123a6b47391ad1d846dba246c8d29fb34207933613ff3a87abc14020c32734",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpasbxptu3/overlay",
+                "path": "/tmp/working_directory/overlay",
                 "is_section_image": false
             }
         ],
@@ -80,7 +80,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 1100,
+        "score": 1000,
         "sections": [
             {
                 "body": "Extracted binary_0_10_2147484742_1031\nExtracted binary_0_10_2147484754_1031",
@@ -150,7 +150,7 @@
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 24,
-                    "score": 100,
+                    "score": 0,
                     "attack_ids": [],
                     "signatures": {},
                     "frequency": 1,
@@ -162,7 +162,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"4640d6983eee82e4120f07ba2ed3623ce443d5443794c2d6bf2d79483dea3c5e1777d7333935fd064948cac46d8e7001ec97d18fd8092992d4863d5e0f0d5cde\"], [\"SHA384\", \"5cd5edbfc396d0f4cdcdd4a31a4a24016742101af78a2cafabb28b38ee33661394ff0064ff63f25775891a97f8a254b1\"], [\"SHA256\", \"ea750ba8fe4cee2a92c5f2e371107ecd33c063453622a4b694374cfbd1ba9b95\"], [\"SHA1\", \"938edab77ea11734cb3e00ccf755e55d6338297b\"], [\"MD5\", \"88943444b97b4beb008484ba76c8879a\"]]",
+                "body": "[[\"sha512\", \"4640d6983eee82e4120f07ba2ed3623ce443d5443794c2d6bf2d79483dea3c5e1777d7333935fd064948cac46d8e7001ec97d18fd8092992d4863d5e0f0d5cde\"], [\"sha384\", \"5cd5edbfc396d0f4cdcdd4a31a4a24016742101af78a2cafabb28b38ee33661394ff0064ff63f25775891a97f8a254b1\"], [\"sha256\", \"ea750ba8fe4cee2a92c5f2e371107ecd33c063453622a4b694374cfbd1ba9b95\"], [\"sha1\", \"938edab77ea11734cb3e00ccf755e55d6338297b\"], [\"md5\", \"88943444b97b4beb008484ba76c8879a\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
@@ -533,7 +533,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"TABLE\", [{\"ID\": 4, \"Lang\": \"ENGLISH\", \"Size\": \"64x64\", \"Size (bytes)\": 9640}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"4f8b0f76b6ddce0db95f9ccb9ebf1812bed52a4f37ab39393a5980f1bc409d0a\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"49ccae734e18e8d30dd507759ead1f05a01c2c913246764027e29b2946756c8a\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}]]]",
+                "body": "[[\"TABLE\", [{\"ID\": 4, \"Lang\": \"ENGLISH\", \"Size\": \"64x64\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_0.ico\"}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"4f8b0f76b6ddce0db95f9ccb9ebf1812bed52a4f37ab39393a5980f1bc409d0a\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"49ccae734e18e8d30dd507759ead1f05a01c2c913246764027e29b2946756c8a\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}]]]",
                 "classification": "TLP:W",
                 "body_format": "MULTI",
                 "depth": 1,

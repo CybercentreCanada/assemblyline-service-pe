@@ -6,15 +6,15 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "5318381ec6d1cf0eb80add59cc53f0643b8ccf412deef68418918ec5abbc5366",
+                "sha256": "696013213ce14694c2c08be910743aa8c5273cfc02eb7951b4da52956b4ce82a",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpsfxx95mo/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -66,7 +66,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"95da6d30cb8e5e8c94c4dcb4878b722d92fd3d85f67aea669114a04da4bd4b1d44fa536f989333d325ee9241c39cda6b19ad3ad2953e01ad5a244118ed5cfa31\"], [\"SHA384\", \"f988d682a1ee196de064dc0ab1643bac7251b1af8f11ec67aa18808854f36d01dc2377cf78e57d2d08e0b152194eaf0e\"], [\"SHA256\", \"bf67b2a3729312b9de9f4d4cef20397a48e1b2b6499052a81fbc944bb420688d\"], [\"SHA1\", \"ed36459563de049088b11f9b30abcbe7eafca9df\"], [\"MD5\", \"4455859615c9505dd1e2956bc2000c71\"]]",
+                "body": "[[\"sha512\", \"95da6d30cb8e5e8c94c4dcb4878b722d92fd3d85f67aea669114a04da4bd4b1d44fa536f989333d325ee9241c39cda6b19ad3ad2953e01ad5a244118ed5cfa31\"], [\"sha384\", \"f988d682a1ee196de064dc0ab1643bac7251b1af8f11ec67aa18808854f36d01dc2377cf78e57d2d08e0b152194eaf0e\"], [\"sha256\", \"bf67b2a3729312b9de9f4d4cef20397a48e1b2b6499052a81fbc944bb420688d\"], [\"sha1\", \"ed36459563de049088b11f9b30abcbe7eafca9df\"], [\"md5\", \"4455859615c9505dd1e2956bc2000c71\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
@@ -184,7 +184,7 @@
                 "depth": 0,
                 "heuristic": null,
                 "tags": {},
-                "title_text": "Debug",
+                "title_text": "Debugs",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -216,7 +216,7 @@
                         }
                     }
                 },
-                "title_text": "Exports",
+                "title_text": "Export",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

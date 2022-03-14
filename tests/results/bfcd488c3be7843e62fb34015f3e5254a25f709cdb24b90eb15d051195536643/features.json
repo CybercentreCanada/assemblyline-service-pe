@@ -21,8 +21,7 @@
             0,
             0
         ],
-        "timestamp": 0,
-        "hr_timestamp": "1970-01-01 00:00:00 +00:00 (UTC)"
+        "timestamp": 0
     },
     "optional_header": {
         "addressof_entrypoint": 4096,
@@ -80,11 +79,11 @@
     },
     "nx": false,
     "authentihash": {
-        "SHA_512": "a32f4a7a3bb43f7092328050ec53cd2ef1c17f9f4891817b8696089a0176cc400cfa58ef68e7f8502138efcc757f30a4874681e60f2fcef0a43f73ccd5cc1057",
-        "SHA_384": "6f8006134142ffff4b5b0fb6b521eb7bfc35e054af39407cb5811e903bfcc1df55aa5f2a5ff8ce7bc34b920fdc11b6aa",
-        "SHA_256": "b73657999ddf4a94f0bb7de717020aa84e1f2ae928013174f357f1feab5e3216",
-        "SHA_1": "41ef6731217bbadfd241d4f2e24728bc9da43ecb",
-        "MD5": "d8eea530ab79d0e0b06bb141267ffdcb"
+        "sha512": "a32f4a7a3bb43f7092328050ec53cd2ef1c17f9f4891817b8696089a0176cc400cfa58ef68e7f8502138efcc757f30a4874681e60f2fcef0a43f73ccd5cc1057",
+        "sha384": "6f8006134142ffff4b5b0fb6b521eb7bfc35e054af39407cb5811e903bfcc1df55aa5f2a5ff8ce7bc34b920fdc11b6aa",
+        "sha256": "b73657999ddf4a94f0bb7de717020aa84e1f2ae928013174f357f1feab5e3216",
+        "sha1": "41ef6731217bbadfd241d4f2e24728bc9da43ecb",
+        "md5": "d8eea530ab79d0e0b06bb141267ffdcb"
     },
     "position_independent": false,
     "is_reproducible_build": false,
@@ -380,7 +379,7 @@
             "fullname": "/4\u0000\u0000\u0000\u0000\u0000\u0000"
         }
     ],
-    "debug": [
+    "debugs": [
         {
             "addressof_rawdata": 20508,
             "characteristics": 0,
@@ -393,7 +392,7 @@
             "code_view": {
                 "age": 1,
                 "cv_signature": "PDB_70",
-                "GUID": "ed39a8cf-33c2-e067-7f3b-e7b551f8753",
+                "guid": "ed39a8cf-33c2-e067-7f3b-e7b551f8753",
                 "filename": ""
             }
         }
@@ -660,7 +659,7 @@
         "characteristics": 0,
         "num_childs": 1,
         "depth": 0,
-        "id": 0,
+        "resource_id": 0,
         "is_data": false,
         "is_directory": true,
         "major_version": 0,
@@ -673,7 +672,7 @@
                 "characteristics": 0,
                 "num_childs": 1,
                 "depth": 1,
-                "id": 24,
+                "resource_id": 24,
                 "resource_type": "MANIFEST",
                 "is_data": false,
                 "is_directory": true,
@@ -687,7 +686,7 @@
                         "characteristics": 0,
                         "num_childs": 0,
                         "depth": 2,
-                        "id": 1,
+                        "resource_id": 1,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,

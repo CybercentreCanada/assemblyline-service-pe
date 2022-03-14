@@ -6,15 +6,15 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "553ded7ed562ce723a83c28e7f65172a4171a6f641bc11eb7e8498404938b77d",
+                "sha256": "4cb8eccfa89d53eecee1f5ecb281363bf1f0204f2a45dca1e93f041f81b506a1",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpq9erujch/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "d989323cb9eafd6068401dc1feab31a59adbd84cdf06f37a422ad3d0a68b5271",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpq9erujch/overlay",
+                "path": "/tmp/working_directory/overlay",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 1550,
+        "score": 1250,
         "sections": [
             {
                 "body": "[[\"Timestamp\", \"1536793850 (2018-09-12 23:10:50 +00:00 (UTC))\"], [\"Entrypoint\", \"0x5088f0\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"14.0\"], [\"Operating System version\", \"5.1\"], [\"Subsystem version\", \"5.1\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", true], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
@@ -84,7 +84,7 @@
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 24,
-                    "score": 100,
+                    "score": 0,
                     "attack_ids": [],
                     "signatures": {},
                     "frequency": 1,
@@ -96,31 +96,13 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"99b208641637c34393deb13af7d19789c34bd8c59f735c420bcb61baef24765a39fdf254215184c4139ae060ac262ddb2f099e202a31316bef5c3cd93c8bd23a\"], [\"SHA384\", \"c348a62011e753a4d9cf9034ea6579f16df20183531a227640fe3920acb9180b6ac6a3a1bdf62ee9235a319272661904\"], [\"SHA256\", \"ca4850ac13a9d218e99cc497846022d9abbd8943b11e4b273f578ed60baa778b\"], [\"SHA1\", \"26f300f550c700a5c9294bebf2d406a05514229c\"], [\"MD5\", \"802dda0fff6f9beb14083e6548a2e2d4\"]]",
+                "body": "[[\"sha512\", \"99b208641637c34393deb13af7d19789c34bd8c59f735c420bcb61baef24765a39fdf254215184c4139ae060ac262ddb2f099e202a31316bef5c3cd93c8bd23a\"], [\"sha384\", \"c348a62011e753a4d9cf9034ea6579f16df20183531a227640fe3920acb9180b6ac6a3a1bdf62ee9235a319272661904\"], [\"sha256\", \"ca4850ac13a9d218e99cc497846022d9abbd8943b11e4b273f578ed60baa778b\"], [\"sha1\", \"26f300f550c700a5c9294bebf2d406a05514229c\"], [\"md5\", \"802dda0fff6f9beb14083e6548a2e2d4\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Optional header checksum\", \"0x00000000\"], [\"Computed checksum\", \"0x001fa0e3\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": {
-                    "heur_id": 23,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Invalid optional header checksum",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -690,7 +672,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"TEXT\", \"The signature does not match the authentihash data found for SHA1\"], [\"ORDERED_KEY_VALUE\", [[\"Signature\", \"81662a33778df31021e30202b5654a920dd2a523\"], [\"Authentihash data\", \"26f300f550c700a5c9294bebf2d406a05514229c\"]]]]",
+                "body": "[[\"TEXT\", \"The signature does not match the authentihash data found for sha1\"], [\"ORDERED_KEY_VALUE\", [[\"Signature\", \"81662a33778df31021e30202b5654a920dd2a523\"], [\"Authentihash data\", \"26f300f550c700a5c9294bebf2d406a05514229c\"]]]]",
                 "classification": "TLP:W",
                 "body_format": "MULTI",
                 "depth": 2,

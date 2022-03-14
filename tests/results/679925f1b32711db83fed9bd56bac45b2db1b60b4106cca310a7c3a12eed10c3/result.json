@@ -6,15 +6,15 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "7fff6ec8023468c267800e6742dc32e022698c9735a7f40cb2fd166c6d6ce0a6",
+                "sha256": "d30587cc425a70e98bdaae078b1dfbbe0d1554b081a3f82f201b56527aaaf039",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpe5xfga44/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -23,7 +23,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 800,
+        "score": 700,
         "sections": [
             {
                 "body": "0 -> 3 -> 30001\n0 -> 14 -> 1\n0 -> 16 -> 1",
@@ -93,7 +93,7 @@
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 24,
-                    "score": 100,
+                    "score": 0,
                     "attack_ids": [],
                     "signatures": {},
                     "frequency": 1,
@@ -105,7 +105,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"7562dcc92fb2feb8f1b78b4380ab25b490d7486246e941c06d9aacdac1cf6bffa420c21a168a6482119e80f7e74b703c96c24d080de85c24b623a08e1e2277c6\"], [\"SHA384\", \"a48590361b88567907462234504ecdfbcffc380ede4c2097b7829c2bc8a90a0f9a713e36a16725d105748e89cf88c50f\"], [\"SHA256\", \"fe860c0622508cd2f0ad63e4a893ca0d980dbc54301ef9ce0b29a0296e76fe90\"], [\"SHA1\", \"c441bc81d6fe05102389f025f0df0190676f2ca1\"], [\"MD5\", \"172f0ea2dc8c8c8abf2132c720cf192b\"]]",
+                "body": "[[\"sha512\", \"7562dcc92fb2feb8f1b78b4380ab25b490d7486246e941c06d9aacdac1cf6bffa420c21a168a6482119e80f7e74b703c96c24d080de85c24b623a08e1e2277c6\"], [\"sha384\", \"a48590361b88567907462234504ecdfbcffc380ede4c2097b7829c2bc8a90a0f9a713e36a16725d105748e89cf88c50f\"], [\"sha256\", \"fe860c0622508cd2f0ad63e4a893ca0d980dbc54301ef9ce0b29a0296e76fe90\"], [\"sha1\", \"c441bc81d6fe05102389f025f0df0190676f2ca1\"], [\"md5\", \"172f0ea2dc8c8c8abf2132c720cf192b\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,

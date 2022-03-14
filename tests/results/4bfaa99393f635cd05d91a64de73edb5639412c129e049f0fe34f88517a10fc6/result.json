@@ -6,7 +6,7 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "0625fee1a80d7b897a9712249c2f55ff391d6661dbd8b87f9be6f252d88ced95",
                 "description": "certificate.1.1 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpb3ks244a/certificate.1.1",
+                "path": "/tmp/working_directory/certificate.1.1",
                 "is_section_image": false
             },
             {
@@ -22,7 +22,7 @@
                 "sha256": "0374881c9b74d31f28dc580b0f2b9d2b14a97ce31cbec2a05aeb377dcddcc2b0",
                 "description": "certificate.1.2 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpb3ks244a/certificate.1.2",
+                "path": "/tmp/working_directory/certificate.1.2",
                 "is_section_image": false
             },
             {
@@ -30,7 +30,7 @@
                 "sha256": "468720148020cf74baae2a3a70b5b77f7d969e3a63069aae382aa77813c75b2e",
                 "description": "certificate.1.3 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpb3ks244a/certificate.1.3",
+                "path": "/tmp/working_directory/certificate.1.3",
                 "is_section_image": false
             },
             {
@@ -38,7 +38,7 @@
                 "sha256": "a6eac3ab012ccd0e6be59a42eed458739bccb5727b1b95a1e6a577a248d87b58",
                 "description": "certificate.1.4 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpb3ks244a/certificate.1.4",
+                "path": "/tmp/working_directory/certificate.1.4",
                 "is_section_image": false
             },
             {
@@ -46,15 +46,15 @@
                 "sha256": "0cfc19db681b014bfe3f23cb3a78b67208b4e3d8d7b6a7b1807f7cd6ecb2a54e",
                 "description": "certificate.1.5 extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpb3ks244a/certificate.1.5",
+                "path": "/tmp/working_directory/certificate.1.5",
                 "is_section_image": false
             },
             {
                 "name": "features.json",
-                "sha256": "effe9a113be310c15622f00b3ad484b5635ec054a19c0f06d8eec708ead675b0",
+                "sha256": "42a34753bb811f413ae9213f551d4f28572ab1c6b2dbf49dfe2027c03e404a8e",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpb3ks244a/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -64,7 +64,7 @@
                 "sha256": "22587a1fcf9547c58827d438f98de8c9f0362f14abdeb844443cb19f1c325a71",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpb3ks244a/overlay",
+                "path": "/tmp/working_directory/overlay",
                 "is_section_image": false
             }
         ],
@@ -72,7 +72,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 100,
+        "score": 0,
         "sections": [
             {
                 "body": "[[\"Timestamp\", \"1362101484 (2013-03-01 01:31:24 +00:00 (UTC))\"], [\"Entrypoint\", \"0x9008\"], [\"Machine\", \"AMD64\"], [\"Magic\", \"PE32_PLUS\"], [\"Image version\", \"6.0\"], [\"Linker version\", \"8.0\"], [\"Operating System version\", \"6.0\"], [\"Subsystem version\", \"6.0\"], [\"Subsystem\", \"NATIVE\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00017139\"]]",
@@ -124,7 +124,7 @@
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 24,
-                    "score": 100,
+                    "score": 0,
                     "attack_ids": [],
                     "signatures": {},
                     "frequency": 1,
@@ -136,7 +136,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"8469b927546712782d6f78f7010e4fa9f9e51f770423e9413a38d35849b1bbf7975de80db7a4a5c727e82c7c1247a8afcf4dc36b05bef34fba034271860d7b48\"], [\"SHA384\", \"0904336e89c4eb7cbf92c8f948eb75b598008503a8e7b96e6dafcd600c28a4ea833a4a9702417aff22e3b1fc422ffcd9\"], [\"SHA256\", \"170c30a726ef89a3fc7acaf9ae75fb77367290c79f20b07f9719805488ea59fd\"], [\"SHA1\", \"d6c1226599984d568b842f9de199781c8dc40f60\"], [\"MD5\", \"e0575b9fae0fb443fd6f78844055234b\"]]",
+                "body": "[[\"sha512\", \"8469b927546712782d6f78f7010e4fa9f9e51f770423e9413a38d35849b1bbf7975de80db7a4a5c727e82c7c1247a8afcf4dc36b05bef34fba034271860d7b48\"], [\"sha384\", \"0904336e89c4eb7cbf92c8f948eb75b598008503a8e7b96e6dafcd600c28a4ea833a4a9702417aff22e3b1fc422ffcd9\"], [\"sha256\", \"170c30a726ef89a3fc7acaf9ae75fb77367290c79f20b07f9719805488ea59fd\"], [\"sha1\", \"d6c1226599984d568b842f9de199781c8dc40f60\"], [\"md5\", \"e0575b9fae0fb443fd6f78844055234b\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
@@ -332,7 +332,7 @@
                 "depth": 0,
                 "heuristic": null,
                 "tags": {},
-                "title_text": "Debug",
+                "title_text": "Debugs",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

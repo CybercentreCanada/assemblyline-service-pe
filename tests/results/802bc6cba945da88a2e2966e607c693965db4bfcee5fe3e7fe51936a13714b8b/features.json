@@ -18,8 +18,7 @@
             0,
             0
         ],
-        "timestamp": 1529185622,
-        "hr_timestamp": "2018-06-16 21:47:02 +00:00 (UTC)"
+        "timestamp": 1529185622
     },
     "optional_header": {
         "addressof_entrypoint": 19786,
@@ -82,42 +81,42 @@
             {
                 "build_id": 51141,
                 "count": 1,
-                "id": 28736
+                "entry_id": 28736
             },
             {
                 "build_id": 30319,
                 "count": 1,
-                "id": 154
+                "entry_id": 154
             },
             {
                 "build_id": 32841,
                 "count": 1,
-                "id": 61080
+                "entry_id": 61080
             },
             {
                 "build_id": 0,
                 "count": 92,
-                "id": 1
+                "entry_id": 1
             },
             {
                 "build_id": 30729,
                 "count": 11,
-                "id": 147
+                "entry_id": 147
             },
             {
                 "build_id": 30319,
                 "count": 103,
-                "id": 170
+                "entry_id": 170
             },
             {
                 "build_id": 30319,
                 "count": 40,
-                "id": 171
+                "entry_id": 171
             },
             {
                 "build_id": 30319,
                 "count": 26,
-                "id": 158
+                "entry_id": 158
             }
         ],
         "key": 2538287455,
@@ -125,21 +124,17 @@
     },
     "nx": true,
     "authentihash": {
-        "SHA_512": "23f371f39a3aa98038519613d5655107542932e19a077ac7b75b43cd741db5acda570ff113b7d72fd735cae864808c7178d0bac61e658282cd30028b92829ea3",
-        "SHA_384": "947626d335c43eed383fb3586a22956236393e418ec2382697ad0d9f168bd989da06753a089da07bf89c8725f0ca587e",
-        "SHA_256": "32308df6261085e0f060d46bff06c63d9aba5fbf7a2d47f88795b9333c115b4e",
-        "SHA_1": "e1bda7881d6fad2f4d18a6fdca80da06904d293c",
-        "MD5": "152854b3d4fb0e82d3bb00d70bda6645"
+        "sha512": "23f371f39a3aa98038519613d5655107542932e19a077ac7b75b43cd741db5acda570ff113b7d72fd735cae864808c7178d0bac61e658282cd30028b92829ea3",
+        "sha384": "947626d335c43eed383fb3586a22956236393e418ec2382697ad0d9f168bd989da06753a089da07bf89c8725f0ca587e",
+        "sha256": "32308df6261085e0f060d46bff06c63d9aba5fbf7a2d47f88795b9333c115b4e",
+        "sha1": "e1bda7881d6fad2f4d18a6fdca80da06904d293c",
+        "md5": "152854b3d4fb0e82d3bb00d70bda6645"
     },
     "position_independent": false,
     "is_reproducible_build": false,
     "size_of_headers": 1024,
     "virtual_size": 311296,
     "size": 289289,
-    "overlay": {
-        "size": 9,
-        "entropy": 2.9477027792200903
-    },
     "sections": [
         {
             "name": ".text",
@@ -996,7 +991,7 @@
                         "cy": 14,
                         "extended_style": 0,
                         "help_id": 0,
-                        "id": 1,
+                        "item_id": 1,
                         "is_extended": true,
                         "style": "1342242817",
                         "title": "OK",
@@ -1008,7 +1003,7 @@
                         "cy": 14,
                         "extended_style": 0,
                         "help_id": 0,
-                        "id": 2,
+                        "item_id": 2,
                         "is_extended": true,
                         "style": "1342242816",
                         "title": "Cancel",
@@ -1038,7 +1033,7 @@
         ],
         "icons": [
             {
-                "id": 1,
+                "icon_id": 1,
                 "planes": 1,
                 "height": 32,
                 "width": 32,
@@ -1046,7 +1041,7 @@
                 "sublang": "DEFAULT"
             },
             {
-                "id": 2,
+                "icon_id": 2,
                 "planes": 1,
                 "height": 64,
                 "width": 64,
@@ -1054,7 +1049,7 @@
                 "sublang": "DEFAULT"
             },
             {
-                "id": 3,
+                "icon_id": 3,
                 "planes": 1,
                 "height": 32,
                 "width": 32,
@@ -1065,17 +1060,17 @@
         "version": {
             "type": 0,
             "fixed_file_info": {
-                "file_date_LS": 0,
-                "file_date_MS": 0,
+                "file_date_ls": 0,
+                "file_date_ms": 0,
                 "file_flags": 0,
                 "file_flags_mask": 63,
                 "file_os": "???",
                 "file_subtype": "UNKNOWN",
                 "file_type": "VXD",
-                "file_version_LS": 0,
-                "file_version_MS": 720896,
-                "product_version_LS": 0,
-                "product_version_MS": 786432,
+                "file_version_ls": 0,
+                "file_version_ms": 720896,
+                "product_version_ls": 0,
+                "product_version_ms": 786432,
                 "signature": 4277077181,
                 "struct_version": 65536
             },
@@ -1095,7 +1090,7 @@
         "characteristics": 0,
         "num_childs": 13,
         "depth": 0,
-        "id": 0,
+        "resource_id": 0,
         "is_data": false,
         "is_directory": true,
         "major_version": 0,
@@ -1109,7 +1104,7 @@
                 "num_childs": 1,
                 "depth": 1,
                 "name": "DORA",
-                "id": 2147484744,
+                "resource_id": 2147484744,
                 "resource_type": "???",
                 "is_data": false,
                 "is_directory": true,
@@ -1123,7 +1118,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 236,
+                        "resource_id": 236,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1133,12 +1128,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "dc44bb6da16bcc0e2e7d49739afcc8243254083e6e2d79870ac9d2a5ebb5662a",
                                 "entropy": 4.531615498711688,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 116968,
@@ -1153,7 +1148,7 @@
                 "num_childs": 1,
                 "depth": 1,
                 "name": "FSE",
-                "id": 2147484754,
+                "resource_id": 2147484754,
                 "resource_type": "???",
                 "is_data": false,
                 "is_directory": true,
@@ -1167,7 +1162,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 183,
+                        "resource_id": 183,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1177,12 +1172,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "f46983a43b1483981fea7beba83de1359b9e6d0b34658db50e9e0e9c3ed47d21",
                                 "entropy": 7.998354027166156,
                                 "depth": 3,
-                                "id": 1033,
+                                "resource_id": 1033,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 117384,
@@ -1197,7 +1192,7 @@
                 "num_childs": 1,
                 "depth": 1,
                 "name": "HABUZONOVITEKICOLESE",
-                "id": 2147484762,
+                "resource_id": 2147484762,
                 "resource_type": "???",
                 "is_data": false,
                 "is_directory": true,
@@ -1211,7 +1206,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 191,
+                        "resource_id": 191,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1221,12 +1216,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "00882714a89ff0857c5bd40ceb5ce4b7b990e71c9159c1a85474ed1a33cde0f0",
                                 "entropy": 4.316221110200142,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 226356,
@@ -1241,7 +1236,7 @@
                 "num_childs": 1,
                 "depth": 1,
                 "name": "HOVEMARI",
-                "id": 2147484804,
+                "resource_id": 2147484804,
                 "resource_type": "???",
                 "is_data": false,
                 "is_directory": true,
@@ -1255,7 +1250,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 234,
+                        "resource_id": 234,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1265,12 +1260,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "e6e3d1d72e89b29ded9b107d2cf154a981348dca0baa7ac301995eb4b39ee74c",
                                 "entropy": 4.516322073740009,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 226468,
@@ -1285,7 +1280,7 @@
                 "num_childs": 1,
                 "depth": 1,
                 "name": "RIJOYANEYEVETUWIPUFEBEDOPI",
-                "id": 2147484822,
+                "resource_id": 2147484822,
                 "resource_type": "???",
                 "is_data": false,
                 "is_directory": true,
@@ -1299,7 +1294,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 235,
+                        "resource_id": 235,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1309,12 +1304,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "777f97d91ffc8eb37cde1be8e87ddd96fcd3e05b8fafb8d468dfcb921bf7f572",
                                 "entropy": 4.5004253669828795,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 226724,
@@ -1329,7 +1324,7 @@
                 "num_childs": 1,
                 "depth": 1,
                 "name": "XIRUBODOXUYE",
-                "id": 2147484876,
+                "resource_id": 2147484876,
                 "resource_type": "???",
                 "is_data": false,
                 "is_directory": true,
@@ -1343,7 +1338,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 756,
+                        "resource_id": 756,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1353,12 +1348,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "8a2024fdb701637a31d43db9b31e885e8d26c80efe318f2d6e01cc88571222ce",
                                 "entropy": 4.550568078660774,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 227080,
@@ -1372,7 +1367,7 @@
                 "characteristics": 0,
                 "num_childs": 1,
                 "depth": 1,
-                "id": 1,
+                "resource_id": 1,
                 "resource_type": "CURSOR",
                 "is_data": false,
                 "is_directory": true,
@@ -1386,7 +1381,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 4,
+                        "resource_id": 4,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1396,12 +1391,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "67ba76fb7faa9b83954a6ffc945e709dcd9a1176f4ac3d201bea3be1b625e44b",
                                 "entropy": 1.8019020211826253,
                                 "depth": 3,
-                                "id": 2057,
+                                "resource_id": 2057,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 227804,
@@ -1415,7 +1410,7 @@
                 "characteristics": 0,
                 "num_childs": 2,
                 "depth": 1,
-                "id": 2,
+                "resource_id": 2,
                 "resource_type": "BITMAP",
                 "is_data": false,
                 "is_directory": true,
@@ -1429,7 +1424,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 234,
+                        "resource_id": 234,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1439,12 +1434,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "eb4273d77824049686fe2e6e930707bd09aa392b5fef7a0aca080afee9a6f7b8",
                                 "entropy": 6.005848539067285,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 228112,
@@ -1456,7 +1451,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 354,
+                        "resource_id": 354,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1466,12 +1461,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "2b36b6b15d16f4ab26a32c9db8c36e3887fa29f3d0b4b0a44265e116cc0080d2",
                                 "entropy": 3.1483038818380176,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 233184,
@@ -1485,7 +1480,7 @@
                 "characteristics": 0,
                 "num_childs": 3,
                 "depth": 1,
-                "id": 3,
+                "resource_id": 3,
                 "resource_type": "ICON",
                 "is_data": false,
                 "is_directory": true,
@@ -1499,7 +1494,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 1,
+                        "resource_id": 1,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1509,12 +1504,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "d85a2bf3f618b896145d16eaf412e8f26c8a216f2b6b2d8f3c7b7e6b32a3b7d5",
                                 "entropy": 4.475513129763074,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 256744,
@@ -1526,7 +1521,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 2,
+                        "resource_id": 2,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1536,12 +1531,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "5fcceae0f82cbf076e8e461e135f246308fc749f273be40dda42c736ab8a1244",
                                 "entropy": 4.483955746494582,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 259984,
@@ -1553,7 +1548,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 3,
+                        "resource_id": 3,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1563,12 +1558,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "3839ccb22749aeba2b7fe9374f96a23316ee6df158f5e36326106e5d977be4dd",
                                 "entropy": 4.221928254274434,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 276920,
@@ -1582,7 +1577,7 @@
                 "characteristics": 0,
                 "num_childs": 1,
                 "depth": 1,
-                "id": 5,
+                "resource_id": 5,
                 "resource_type": "DIALOG",
                 "is_data": false,
                 "is_directory": true,
@@ -1596,7 +1591,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 104,
+                        "resource_id": 104,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1606,12 +1601,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "9b07aaa6d9f574ab9c6345e963697fb3ca9f1851be210db6471e387abcacdc78",
                                 "entropy": 2.7947933723775944,
                                 "depth": 3,
-                                "id": 2057,
+                                "resource_id": 2057,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 281184,
@@ -1625,7 +1620,7 @@
                 "characteristics": 0,
                 "num_childs": 1,
                 "depth": 1,
-                "id": 12,
+                "resource_id": 12,
                 "resource_type": "GROUP_CURSOR",
                 "is_data": false,
                 "is_directory": true,
@@ -1639,7 +1634,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 105,
+                        "resource_id": 105,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1649,12 +1644,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "ff47a48c11c234903a7d625cb8b62101909f735ad84266c98dd4834549452c39",
                                 "entropy": 2.019240704636849,
                                 "depth": 3,
-                                "id": 2057,
+                                "resource_id": 2057,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 281340,
@@ -1668,7 +1663,7 @@
                 "characteristics": 0,
                 "num_childs": 1,
                 "depth": 1,
-                "id": 14,
+                "resource_id": 14,
                 "resource_type": "GROUP_ICON",
                 "is_data": false,
                 "is_directory": true,
@@ -1682,7 +1677,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 125,
+                        "resource_id": 125,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1692,12 +1687,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "969f67ffd166b19fdc5ca82813219495788bc2680fb3999fa39a10eee5dc4efa",
                                 "entropy": 2.476299579405909,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 281360,
@@ -1711,7 +1706,7 @@
                 "characteristics": 0,
                 "num_childs": 1,
                 "depth": 1,
-                "id": 16,
+                "resource_id": 16,
                 "resource_type": "VERSION",
                 "is_data": false,
                 "is_directory": true,
@@ -1725,7 +1720,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 1,
+                        "resource_id": 1,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 0,
@@ -1735,12 +1730,12 @@
                         "time_date_stamp": 0,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 0,
                                 "sha256": "83637d194580513976d74556b89871aa1ddac99ce434598f7c834b435185d8c2",
                                 "entropy": 2.739948658049404,
                                 "depth": 3,
-                                "id": 1040,
+                                "resource_id": 1040,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 281408,
@@ -1752,5 +1747,9 @@
             }
         ]
     },
-    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
+    "overlay": {
+        "size": 9,
+        "entropy": 2.9477027792200903
+    }
 }

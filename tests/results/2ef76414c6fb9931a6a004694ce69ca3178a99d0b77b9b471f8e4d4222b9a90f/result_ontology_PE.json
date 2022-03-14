@@ -1,0 +1,448 @@
+{
+    "name": "2ef76414c6fb9931a6a004694ce69ca3178a99d0b77b9b471f8e4d4222b9a90f",
+    "format": "PE",
+    "imphash": "c5411b30f7c034e3b87ab8006ee6d5b4",
+    "entrypoint": 196608,
+    "header": {
+        "characteristics_hash": 259,
+        "characteristics_list": [
+            "CHARA_32BIT_MACHINE",
+            "RELOCS_STRIPPED",
+            "EXECUTABLE_IMAGE"
+        ],
+        "machine": "I386",
+        "numberof_sections": 4,
+        "numberof_symbols": 0,
+        "signature": [
+            80,
+            69,
+            0,
+            0
+        ],
+        "timestamp": 1347773836,
+        "hr_timestamp": "2012-09-16T05:37:16.000000Z"
+    },
+    "optional_header": {
+        "addressof_entrypoint": 196608,
+        "baseof_code": 4096,
+        "baseof_data": 57344,
+        "checksum": 4110750,
+        "computed_checksum": 4110750,
+        "dll_characteristics": 0,
+        "dll_characteristics_lists": [],
+        "file_alignment": 512,
+        "imagebase": 4194304,
+        "loader_flags": 0,
+        "magic": "PE32",
+        "major_image_version": 6,
+        "major_linker_version": 6,
+        "major_operating_system_version": 4,
+        "major_subsystem_version": 4,
+        "minor_image_version": 2,
+        "minor_linker_version": 0,
+        "minor_operating_system_version": 0,
+        "minor_subsystem_version": 0,
+        "numberof_rva_and_size": 16,
+        "section_alignment": 4096,
+        "sizeof_code": 53248,
+        "sizeof_headers": 1024,
+        "sizeof_heap_commit": 4096,
+        "sizeof_heap_reserve": 1048576,
+        "sizeof_image": 303104,
+        "sizeof_initialized_data": 69632,
+        "sizeof_stack_commit": 4096,
+        "sizeof_stack_reserve": 1048576,
+        "sizeof_uninitialized_data": 0,
+        "subsystem": "WINDOWS_GUI",
+        "win32_version_value": 0
+    },
+    "dos_header": {
+        "addressof_new_exeheader": 256,
+        "addressof_relocation_table": 21049,
+        "checksum": 28331,
+        "file_size_in_pages": 37801,
+        "header_size_in_paragraphs": 39477,
+        "initial_ip": 1560,
+        "initial_relative_cs": 31212,
+        "initial_relative_ss": 56882,
+        "initial_sp": 50592,
+        "magic": 23117,
+        "maximum_extra_paragraphs": 3957,
+        "minimum_extra_paragraphs": 46420,
+        "numberof_relocation": 12868,
+        "oem_id": 51724,
+        "oem_info": 50215,
+        "overlay_number": 8218,
+        "used_bytes_in_the_last_page": 51910
+    },
+    "rich_header": null,
+    "nx": false,
+    "authentihash": {
+        "sha512": "b80a80a21bd26ea18a3b90290edcd8d1d0cb2825ad9d422af02fd1c67f3a93cc69a8660c8570c45bfe47900f3e263527e83b18464af0a41baf280ff54318ce13",
+        "sha384": "7d239b86deb3dac7022fde0cbbcf905cf035490075509d4ac89724845d20efaac52d7a68f39f58656ef9b65eade1dfa8",
+        "sha256": "06044cdc4296fe1462fbe86b8079097a2752fc586556b0c61f84d121b589e7ef",
+        "sha1": "9ce220bf19e4d06295ac0dc919cbf4788badcf5a",
+        "md5": "3ebaea6c4f4b15ec32e42f4207e87ff1"
+    },
+    "tls": null,
+    "position_independent": false,
+    "is_reproducible_build": false,
+    "size_of_headers": 1024,
+    "virtual_size": 303104,
+    "size": 4067520,
+    "sections": [
+        {
+            "name": ".bss",
+            "characteristics_hash": 1610612736,
+            "characteristics_list": [
+                "MEM_EXECUTE",
+                "MEM_READ"
+            ],
+            "entropy": 0.0,
+            "entropy_without_padding": -0.0,
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
+            "offset": 1024,
+            "size": 0,
+            "sizeof_raw_data": 0,
+            "virtual_address": 4096,
+            "virtual_size": 131072,
+            "fullname": ".bss\u0000\u0000\u0000\u0000"
+        },
+        {
+            "name": ".CRT",
+            "characteristics_hash": 3221225536,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_READ",
+                "MEM_WRITE"
+            ],
+            "entropy": 2.6794910502477793,
+            "entropy_without_padding": 2.6794910502477793,
+            "md5": "b374e30abb1bf75f21295fb832abb735",
+            "offset": 1024,
+            "size": 512,
+            "sizeof_raw_data": 512,
+            "virtual_address": 135168,
+            "virtual_size": 4096,
+            "fullname": ".CRT\u0000\u0000\u0000\u0000"
+        },
+        {
+            "name": ".rsrc",
+            "characteristics_hash": 1073741888,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_READ"
+            ],
+            "entropy": 7.835073866956729,
+            "entropy_without_padding": 7.835073866956726,
+            "md5": "52192736a1bef485d919acc8991719ba",
+            "offset": 1536,
+            "size": 30534,
+            "sizeof_raw_data": 30534,
+            "virtual_address": 139264,
+            "virtual_size": 54188,
+            "fullname": ".rsrc\u0000\u0000\u0000"
+        },
+        {
+            "name": "DATA",
+            "characteristics_hash": 3758096448,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_EXECUTE",
+                "MEM_READ",
+                "MEM_WRITE"
+            ],
+            "entropy": 7.997417127312105,
+            "entropy_without_padding": 7.997417127312104,
+            "md5": "16cc53aa2b859e75c88361a082c5a52f",
+            "offset": 32256,
+            "size": 104322,
+            "sizeof_raw_data": 104322,
+            "virtual_address": 196608,
+            "virtual_size": 106496,
+            "fullname": "DATA\u0000\u0000\u0000\u0000"
+        }
+    ],
+    "debugs": null,
+    "export": null,
+    "imports": [
+        {
+            "library": "kernel32.dll",
+            "data": 135350,
+            "hint": 0,
+            "iat_address": 135268,
+            "iat_value": 135350,
+            "is_ordinal": false,
+            "name": "GetModuleHandleA",
+            "ordinal": null
+        },
+        {
+            "library": "user32.dll",
+            "data": 135387,
+            "hint": 0,
+            "iat_address": 135284,
+            "iat_value": 135387,
+            "is_ordinal": false,
+            "name": "ValidateRect",
+            "ordinal": null
+        },
+        {
+            "library": "advapi32.dll",
+            "data": 135422,
+            "hint": 0,
+            "iat_address": 135300,
+            "iat_value": 135422,
+            "is_ordinal": false,
+            "name": "GetUserNameA",
+            "ordinal": null
+        },
+        {
+            "library": "comctl32.dll",
+            "data": 135457,
+            "hint": 0,
+            "iat_address": 135316,
+            "iat_value": 135457,
+            "is_ordinal": false,
+            "name": "PropertySheet",
+            "ordinal": null
+        }
+    ],
+    "load_configuration": null,
+    "resources_manager": {
+        "langs_available": [
+            "NEUTRAL",
+            "BULGARIAN",
+            "MAORI"
+        ],
+        "sublangs_available": [
+            "DEFAULT"
+        ],
+        "accelerators": null,
+        "dialogs": null,
+        "html": null,
+        "icons": [
+            {
+                "icon_id": 1,
+                "planes": 1,
+                "height": 32,
+                "width": 32,
+                "lang": "NEUTRAL",
+                "sublang": "DEFAULT"
+            }
+        ],
+        "manifest": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\"> \r\n  <assemblyIdentity version=\"1.0.0.0\"\r\n     processorArchitecture=\"X86\"\r\n     name=\"IsUserAdmin\"\r\n     type=\"win32\"/> \r\n  <description>fumants</description> \r\n  <!-- Identify the application security requirements. -->\r\n  <trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v2\">\r\n    <security>\r\n      <requestedPrivileges>\r\n        <requestedExecutionLevel\r\n          level=\"requireAdministrator\"\r\n          uiAccess=\"false\"/>\r\n        </requestedPrivileges>\r\n       </security>\r\n  </trustInfo>\r\n</assembly>\r\n\r\n",
+        "string_table": [],
+        "version": null
+    },
+    "resources": [
+        {
+            "parent_resource_ids": "0.2.1",
+            "parent_labels": [
+                "BITMAP"
+            ],
+            "characteristics": null,
+            "num_childs": 0,
+            "depth": 3,
+            "name": null,
+            "resource_id": 0,
+            "resource_type": null,
+            "is_data": true,
+            "is_directory": false,
+            "major_version": null,
+            "minor_version": null,
+            "numberof_id_entries": null,
+            "numberof_name_entries": null,
+            "time_date_stamp": null,
+            "hr_time_date_stamp": null,
+            "code_page": 0,
+            "sha256": "6b9ac12241cf945361530ec46a0d39c721e9b73d6a1085b13c283c743315fd14",
+            "entropy": 7.989882114659648,
+            "offset": 39772,
+            "reserved": 0
+        },
+        {
+            "parent_resource_ids": "0.3.1",
+            "parent_labels": [
+                "ICON"
+            ],
+            "characteristics": null,
+            "num_childs": 0,
+            "depth": 3,
+            "name": null,
+            "resource_id": 0,
+            "resource_type": null,
+            "is_data": true,
+            "is_directory": false,
+            "major_version": null,
+            "minor_version": null,
+            "numberof_id_entries": null,
+            "numberof_name_entries": null,
+            "time_date_stamp": null,
+            "hr_time_date_stamp": null,
+            "code_page": 0,
+            "sha256": "2f3c2b39e7dc991f425e39d8783d0a0fd67208a997d90398cf4ec84e0f24b66d",
+            "entropy": 3.8131652541407077,
+            "offset": 1736,
+            "reserved": 0
+        },
+        {
+            "parent_resource_ids": "0.6.110",
+            "parent_labels": [
+                "STRING"
+            ],
+            "characteristics": null,
+            "num_childs": 0,
+            "depth": 3,
+            "name": null,
+            "resource_id": 1064,
+            "resource_type": null,
+            "is_data": true,
+            "is_directory": false,
+            "major_version": null,
+            "minor_version": null,
+            "numberof_id_entries": null,
+            "numberof_name_entries": null,
+            "time_date_stamp": null,
+            "hr_time_date_stamp": null,
+            "code_page": 1200,
+            "sha256": "332b7c53ffbcddaa2c0496ce64f10cea0f53340c3fcdfb9514e8990bbe6c727c",
+            "entropy": 6.168758439731465,
+            "offset": 39672,
+            "reserved": 0
+        },
+        {
+            "parent_resource_ids": "0.14.1",
+            "parent_labels": [
+                "GROUP_ICON"
+            ],
+            "characteristics": null,
+            "num_childs": 0,
+            "depth": 3,
+            "name": null,
+            "resource_id": 0,
+            "resource_type": null,
+            "is_data": true,
+            "is_directory": false,
+            "major_version": null,
+            "minor_version": null,
+            "numberof_id_entries": null,
+            "numberof_name_entries": null,
+            "time_date_stamp": null,
+            "hr_time_date_stamp": null,
+            "code_page": 1200,
+            "sha256": "f01c223e6cf0e0f5c1d990ad720488af398180adb1b92e61c2144cf11d3130f8",
+            "entropy": 1.919240704636849,
+            "offset": 5104,
+            "reserved": 0
+        },
+        {
+            "parent_resource_ids": "0.23.2147487260",
+            "parent_labels": [
+                "HTML",
+                "RES"
+            ],
+            "characteristics": null,
+            "num_childs": 0,
+            "depth": 3,
+            "name": null,
+            "resource_id": 0,
+            "resource_type": null,
+            "is_data": true,
+            "is_directory": false,
+            "major_version": null,
+            "minor_version": null,
+            "numberof_id_entries": null,
+            "numberof_name_entries": null,
+            "time_date_stamp": null,
+            "hr_time_date_stamp": null,
+            "code_page": 0,
+            "sha256": "3e9d60e66c9afa55451b8328e1aa1485ca0f121f303e525a7366b36e7bb935f4",
+            "entropy": 7.94700215599192,
+            "offset": 21284,
+            "reserved": 0
+        },
+        {
+            "parent_resource_ids": "0.23.2147487260",
+            "parent_labels": [
+                "HTML",
+                "RES"
+            ],
+            "characteristics": null,
+            "num_childs": 0,
+            "depth": 3,
+            "name": null,
+            "resource_id": 2,
+            "resource_type": null,
+            "is_data": true,
+            "is_directory": false,
+            "major_version": null,
+            "minor_version": null,
+            "numberof_id_entries": null,
+            "numberof_name_entries": null,
+            "time_date_stamp": null,
+            "hr_time_date_stamp": null,
+            "code_page": 0,
+            "sha256": "f6a45d3396fecfba63abff1000805631f0b0476ba0db8ad52735a775274f63e6",
+            "entropy": 7.984589616328184,
+            "offset": 6272,
+            "reserved": 0
+        },
+        {
+            "parent_resource_ids": "0.24.1",
+            "parent_labels": [
+                "MANIFEST"
+            ],
+            "characteristics": null,
+            "num_childs": 0,
+            "depth": 3,
+            "name": null,
+            "resource_id": 907,
+            "resource_type": null,
+            "is_data": true,
+            "is_directory": false,
+            "major_version": null,
+            "minor_version": null,
+            "numberof_id_entries": null,
+            "numberof_name_entries": null,
+            "time_date_stamp": null,
+            "hr_time_date_stamp": null,
+            "code_page": 0,
+            "sha256": "66469a6ed582c864be9b1556868ff7720ba199a1831eba32587cb7cc4c167325",
+            "entropy": 4.84255531487753,
+            "offset": 5288,
+            "reserved": 0
+        },
+        {
+            "parent_resource_ids": "0.10.3623",
+            "parent_labels": [
+                "RCDATA"
+            ],
+            "characteristics": null,
+            "num_childs": 0,
+            "depth": 3,
+            "name": null,
+            "resource_id": 0,
+            "resource_type": null,
+            "is_data": true,
+            "is_directory": false,
+            "major_version": null,
+            "minor_version": null,
+            "numberof_id_entries": null,
+            "numberof_name_entries": null,
+            "time_date_stamp": null,
+            "hr_time_date_stamp": null,
+            "code_page": 0,
+            "sha256": "58ad23c52c32af9e1e2042fa2dd44803ec42e528610a143ac15d018386e494ba",
+            "entropy": 7.242366106863602,
+            "offset": 5992,
+            "reserved": 0
+        }
+    ],
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
+    "signatures": null,
+    "overlay": {
+        "size": 3930942,
+        "entropy": 7.999959517378917
+    },
+    "relocations": null
+}

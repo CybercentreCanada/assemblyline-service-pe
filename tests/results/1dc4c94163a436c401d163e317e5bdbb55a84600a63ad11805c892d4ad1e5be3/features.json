@@ -21,8 +21,7 @@
             0,
             0
         ],
-        "timestamp": 1187354584,
-        "hr_timestamp": "2007-08-17 12:43:04 +00:00 (UTC)"
+        "timestamp": 1187354584
     },
     "optional_header": {
         "addressof_entrypoint": 5336,
@@ -82,17 +81,17 @@
             {
                 "build_id": 8169,
                 "count": 1,
-                "id": 13
+                "entry_id": 13
             },
             {
                 "build_id": 8041,
                 "count": 1,
-                "id": 9
+                "entry_id": 9
             },
             {
                 "build_id": 7299,
                 "count": 1,
-                "id": 14
+                "entry_id": 14
             }
         ],
         "key": 2291657675,
@@ -100,21 +99,17 @@
     },
     "nx": false,
     "authentihash": {
-        "SHA_512": "e78f5100c3a00dfadf348f684b3c0920c99e9a9202a6c1930a581f2871589f12be1ce434677aa0e996a9ebc9978318e99b71ba3e60c10653c9631a20d12805ce",
-        "SHA_384": "6a0e12e764f853f2eceb06329a7b9fda0e936c72333fc379c69070c63914e1071a2bb037e2d057e14d54b8a7dadbaa87",
-        "SHA_256": "55ad0b78b41be976585d43ec0a0da213224ec11f698cde8d80d9ad6884c6855f",
-        "SHA_1": "58694c716590a6ea2993294daff1d445afab2882",
-        "MD5": "b0d205798e8239d76bd9c846215bd1b5"
+        "sha512": "e78f5100c3a00dfadf348f684b3c0920c99e9a9202a6c1930a581f2871589f12be1ce434677aa0e996a9ebc9978318e99b71ba3e60c10653c9631a20d12805ce",
+        "sha384": "6a0e12e764f853f2eceb06329a7b9fda0e936c72333fc379c69070c63914e1071a2bb037e2d057e14d54b8a7dadbaa87",
+        "sha256": "55ad0b78b41be976585d43ec0a0da213224ec11f698cde8d80d9ad6884c6855f",
+        "sha1": "58694c716590a6ea2993294daff1d445afab2882",
+        "md5": "b0d205798e8239d76bd9c846215bd1b5"
     },
     "position_independent": false,
     "is_reproducible_build": false,
     "size_of_headers": 1024,
     "virtual_size": 53248,
     "size": 1890328,
-    "overlay": {
-        "size": 1860632,
-        "entropy": 5.36521071079707
-    },
     "sections": [
         {
             "name": ".text",
@@ -886,17 +881,17 @@
         "version": {
             "type": 0,
             "fixed_file_info": {
-                "file_date_LS": 0,
-                "file_date_MS": 0,
+                "file_date_ls": 0,
+                "file_date_ms": 0,
                 "file_flags": 0,
                 "file_flags_mask": 0,
                 "file_os": "WINDOWS32",
                 "file_subtype": "UNKNOWN",
                 "file_type": "APP",
-                "file_version_LS": 7,
-                "file_version_MS": 65536,
-                "product_version_LS": 7,
-                "product_version_MS": 65536,
+                "file_version_ls": 7,
+                "file_version_ms": 65536,
+                "product_version_ls": 7,
+                "product_version_ms": 65536,
                 "signature": 4277077181,
                 "struct_version": 65536
             },
@@ -921,7 +916,7 @@
         "characteristics": 0,
         "num_childs": 3,
         "depth": 0,
-        "id": 0,
+        "resource_id": 0,
         "is_data": false,
         "is_directory": true,
         "major_version": 28335,
@@ -934,7 +929,7 @@
                 "characteristics": 0,
                 "num_childs": 1,
                 "depth": 1,
-                "id": 3,
+                "resource_id": 3,
                 "resource_type": "ICON",
                 "is_data": false,
                 "is_directory": true,
@@ -948,7 +943,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 30001,
+                        "resource_id": 30001,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 28335,
@@ -958,12 +953,12 @@
                         "time_date_stamp": 1187354584,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 1200,
                                 "sha256": "ec333345db21769a6092f6961951f02b933de6799f7843877bf9fd7f7cfc98ad",
                                 "entropy": 4.781774235443909,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 25984,
@@ -977,7 +972,7 @@
                 "characteristics": 0,
                 "num_childs": 1,
                 "depth": 1,
-                "id": 14,
+                "resource_id": 14,
                 "resource_type": "GROUP_ICON",
                 "is_data": false,
                 "is_directory": true,
@@ -991,7 +986,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 1,
+                        "resource_id": 1,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 28335,
@@ -1001,12 +996,12 @@
                         "time_date_stamp": 1187354584,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 1200,
                                 "sha256": "d1d9669cd7cda13b1fcb8736f2538615ed74e7d7557864c4d22266719f83d180",
                                 "entropy": 1.6567796494470395,
                                 "depth": 3,
-                                "id": 0,
+                                "resource_id": 0,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 25964,
@@ -1020,7 +1015,7 @@
                 "characteristics": 0,
                 "num_childs": 1,
                 "depth": 1,
-                "id": 16,
+                "resource_id": 16,
                 "resource_type": "VERSION",
                 "is_data": false,
                 "is_directory": true,
@@ -1034,7 +1029,7 @@
                         "characteristics": 0,
                         "num_childs": 1,
                         "depth": 2,
-                        "id": 1,
+                        "resource_id": 1,
                         "is_data": false,
                         "is_directory": true,
                         "major_version": 28335,
@@ -1044,12 +1039,12 @@
                         "time_date_stamp": 1187354584,
                         "childs": [
                             {
-                                "num_child": 0,
+                                "num_childs": 0,
                                 "code_page": 1200,
                                 "sha256": "12d21c907defb9bde322c113d34ecf9f84e9c80a210398a68aeb232247a99bf3",
                                 "entropy": 3.9943659891467154,
                                 "depth": 3,
-                                "id": 2052,
+                                "resource_id": 2052,
                                 "is_data": true,
                                 "is_directory": false,
                                 "offset": 25096,
@@ -1061,5 +1056,9 @@
             }
         ]
     },
-    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE"
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
+    "overlay": {
+        "size": 1860632,
+        "entropy": 5.36521071079707
+    }
 }

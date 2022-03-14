@@ -6,7 +6,7 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
@@ -14,7 +14,7 @@
                 "sha256": "c82aa0f42ff0f2bf9c3b423c3c53ff26ea98f92c2ab38797479fea0c25797f1f",
                 "description": "Icon 0 extracted from the PE file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpbadvmyib/tmp32xs4m0r",
+                "path": "/tmp/working_directory",
                 "is_section_image": true
             },
             {
@@ -22,15 +22,15 @@
                 "sha256": "719741befc4e0966b1cf24b010f2007687529c1e41ad6bab83c3e0230e8e983d",
                 "description": "Icon 0 extracted from the PE file (thumbnail)",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpbadvmyib/tmpsvccin5a",
+                "path": "/tmp/working_directory",
                 "is_section_image": true
             },
             {
                 "name": "features.json",
-                "sha256": "3e8642a5dad39798c4fa92af7e4031338fc8578a63524868eddbc608879c35b0",
+                "sha256": "36fe5f75164083acd3a0a5d30aa25ec68ce0ed296562c081a9e067de956bbc42",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpnrwif1qx/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -39,7 +39,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 450,
+        "score": 250,
         "sections": [
             {
                 "body": "[[\"Timestamp\", \"1546277936 (2018-12-31 17:38:56 +00:00 (UTC))\"], [\"Entrypoint\", \"0x1a9f49\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"5.12\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
@@ -85,31 +85,13 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"bacd07ecb911c4b855a048044cea575f02d0191156e8d562b1cdb24038821522d626408141cbc724443964d8536b6aaffb30f5f573e9464edc21ad2b2788de5d\"], [\"SHA384\", \"0e51e6db6efb1fb0ceabcd26814c15e385b21913925ce4d1962e651dc52971ddd3d4884505367c08df2bae32df695126\"], [\"SHA256\", \"a66ab482642d1950ce72385f470f0b7eb33083edecbc9c22ad5ae269385dd8b6\"], [\"SHA1\", \"b730059f249c8497721cf7205c7c76c880e35ff5\"], [\"MD5\", \"669cfbc3780aca76bfec4bfe1bfeee8f\"]]",
+                "body": "[[\"sha512\", \"bacd07ecb911c4b855a048044cea575f02d0191156e8d562b1cdb24038821522d626408141cbc724443964d8536b6aaffb30f5f573e9464edc21ad2b2788de5d\"], [\"sha384\", \"0e51e6db6efb1fb0ceabcd26814c15e385b21913925ce4d1962e651dc52971ddd3d4884505367c08df2bae32df695126\"], [\"sha256\", \"a66ab482642d1950ce72385f470f0b7eb33083edecbc9c22ad5ae269385dd8b6\"], [\"sha1\", \"b730059f249c8497721cf7205c7c76c880e35ff5\"], [\"md5\", \"669cfbc3780aca76bfec4bfe1bfeee8f\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Optional header checksum\", \"0x00000000\"], [\"Computed checksum\", \"0x001b08b2\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": {
-                    "heur_id": 23,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Invalid optional header checksum",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -212,7 +194,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 4264}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"c82aa0f42ff0f2bf9c3b423c3c53ff26ea98f92c2ab38797479fea0c25797f1f\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"719741befc4e0966b1cf24b010f2007687529c1e41ad6bab83c3e0230e8e983d\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}]]]",
+                "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_0.ico\"}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"c82aa0f42ff0f2bf9c3b423c3c53ff26ea98f92c2ab38797479fea0c25797f1f\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"719741befc4e0966b1cf24b010f2007687529c1e41ad6bab83c3e0230e8e983d\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}]]]",
                 "classification": "TLP:W",
                 "body_format": "MULTI",
                 "depth": 1,

@@ -4,7 +4,7 @@ FROM cccs/assemblyline-v4-service-base:$branch
 # Set service to be run
 ENV SERVICE_PATH pe.pe.PE
 
-# Install python dependancies
+# Install python dependencies
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir --user --requirement requirements.txt && rm -rf ~/.cache/pip
 

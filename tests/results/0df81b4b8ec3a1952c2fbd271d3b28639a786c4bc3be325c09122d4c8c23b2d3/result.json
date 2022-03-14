@@ -6,15 +6,15 @@
             "service_completed": null
         },
         "service_version": null,
-        "service_name": "Not Important",
+        "service_name": null,
         "service_tool_version": null,
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "681763f0d5e5c43f0f3cb9fe22a1187ad6185525e9363601e70e694709da01e1",
+                "sha256": "1d0e073c0482c63925108954289de770b11b6e04969454a4811da5b48e43e220",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpko4nfium/features.json",
+                "path": "/tmp/working_directory/features.json",
                 "is_section_image": false
             }
         ],
@@ -24,7 +24,7 @@
                 "sha256": "cafac901d78c530de08461f224cdf695b9a38a46d370612ccc0e665cc70eba71",
                 "description": "overlay extracted from binary's resources",
                 "classification": "TLP:W",
-                "path": "/tmp/working_directory/tmpko4nfium/overlay",
+                "path": "/tmp/working_directory/overlay",
                 "is_section_image": false
             }
         ],
@@ -32,7 +32,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 700,
+        "score": 400,
         "sections": [
             {
                 "body": "[[\"Timestamp\", \"1160092538 (2006-10-05 23:55:38 +00:00 (UTC))\"], [\"Entrypoint\", \"0x7f56\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"6.0\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
@@ -84,7 +84,7 @@
                 "depth": 1,
                 "heuristic": {
                     "heur_id": 24,
-                    "score": 100,
+                    "score": 0,
                     "attack_ids": [],
                     "signatures": {},
                     "frequency": 1,
@@ -96,31 +96,13 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"SHA512\", \"37ff04a31040b5ce0f48711f0fc8f4a64b5d7e57b789d25bbc6b2084c5752e6d206d5df43383ac2f33fbedaf00096c9ad488db76961900f7e70ed5a195cfd6a1\"], [\"SHA384\", \"6c8e3de44195a04a25aeb35ff17e6afc70bffb3981ab918d5805bdca0ed04950f3c530e30976958d94fc91fa54aaa3fd\"], [\"SHA256\", \"9a469e5c874129a0f33dfa7a8c12f81630a5608404edf1333d8a4b5f2c52f8d1\"], [\"SHA1\", \"aa5c84f9ada35ae6960cc9d9bee0469e21a96b0f\"], [\"MD5\", \"4a68ab60c082c79845be83f4fed2ac8b\"]]",
+                "body": "[[\"sha512\", \"37ff04a31040b5ce0f48711f0fc8f4a64b5d7e57b789d25bbc6b2084c5752e6d206d5df43383ac2f33fbedaf00096c9ad488db76961900f7e70ed5a195cfd6a1\"], [\"sha384\", \"6c8e3de44195a04a25aeb35ff17e6afc70bffb3981ab918d5805bdca0ed04950f3c530e30976958d94fc91fa54aaa3fd\"], [\"sha256\", \"9a469e5c874129a0f33dfa7a8c12f81630a5608404edf1333d8a4b5f2c52f8d1\"], [\"sha1\", \"aa5c84f9ada35ae6960cc9d9bee0469e21a96b0f\"], [\"md5\", \"4a68ab60c082c79845be83f4fed2ac8b\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
                 "heuristic": null,
                 "tags": {},
                 "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Optional header checksum\", \"0x00000000\"], [\"Computed checksum\", \"0x00083f0d\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": {
-                    "heur_id": 23,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Invalid optional header checksum",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

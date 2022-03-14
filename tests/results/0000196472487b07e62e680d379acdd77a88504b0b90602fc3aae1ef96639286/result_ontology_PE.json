@@ -1,0 +1,232 @@
+{
+    "name": "0000196472487b07e62e680d379acdd77a88504b0b90602fc3aae1ef96639286",
+    "format": "PE",
+    "imphash": "",
+    "entrypoint": 1744713,
+    "header": {
+        "characteristics_hash": 271,
+        "characteristics_list": [
+            "CHARA_32BIT_MACHINE",
+            "RELOCS_STRIPPED",
+            "EXECUTABLE_IMAGE",
+            "LINE_NUMS_STRIPPED",
+            "LOCAL_SYMS_STRIPPED"
+        ],
+        "machine": "I386",
+        "numberof_sections": 2,
+        "numberof_symbols": 0,
+        "signature": [
+            80,
+            69,
+            0,
+            0
+        ],
+        "timestamp": 1546277936,
+        "hr_timestamp": "2018-12-31T17:38:56.000000Z"
+    },
+    "optional_header": {
+        "addressof_entrypoint": 1744713,
+        "baseof_code": 4096,
+        "baseof_data": 1757184,
+        "checksum": 0,
+        "computed_checksum": 1771698,
+        "dll_characteristics": 0,
+        "dll_characteristics_lists": [],
+        "file_alignment": 512,
+        "imagebase": 4194304,
+        "loader_flags": 0,
+        "magic": "PE32",
+        "major_image_version": 0,
+        "major_linker_version": 5,
+        "major_operating_system_version": 4,
+        "major_subsystem_version": 4,
+        "minor_image_version": 0,
+        "minor_linker_version": 12,
+        "minor_operating_system_version": 0,
+        "minor_subsystem_version": 0,
+        "numberof_rva_and_size": 16,
+        "section_alignment": 4096,
+        "sizeof_code": 1751040,
+        "sizeof_headers": 512,
+        "sizeof_heap_commit": 4096,
+        "sizeof_heap_reserve": 1048576,
+        "sizeof_image": 1765376,
+        "sizeof_initialized_data": 4608,
+        "sizeof_stack_commit": 4096,
+        "sizeof_stack_reserve": 1048576,
+        "sizeof_uninitialized_data": 0,
+        "subsystem": "WINDOWS_GUI",
+        "win32_version_value": 0
+    },
+    "dos_header": {
+        "addressof_new_exeheader": 176,
+        "addressof_relocation_table": 64,
+        "checksum": 0,
+        "file_size_in_pages": 3,
+        "header_size_in_paragraphs": 4,
+        "initial_ip": 0,
+        "initial_relative_cs": 0,
+        "initial_relative_ss": 0,
+        "initial_sp": 184,
+        "magic": 23117,
+        "maximum_extra_paragraphs": 65535,
+        "minimum_extra_paragraphs": 0,
+        "numberof_relocation": 0,
+        "oem_id": 0,
+        "oem_info": 0,
+        "overlay_number": 0,
+        "used_bytes_in_the_last_page": 144
+    },
+    "rich_header": {
+        "key": 2286892065,
+        "hash": "03d66c1bb0ed3815ed5240669f9d7036",
+        "entries": [
+            {
+                "build_id": 0,
+                "count": 1,
+                "entry_id": 0
+            }
+        ]
+    },
+    "nx": false,
+    "authentihash": {
+        "sha512": "bacd07ecb911c4b855a048044cea575f02d0191156e8d562b1cdb24038821522d626408141cbc724443964d8536b6aaffb30f5f573e9464edc21ad2b2788de5d",
+        "sha384": "0e51e6db6efb1fb0ceabcd26814c15e385b21913925ce4d1962e651dc52971ddd3d4884505367c08df2bae32df695126",
+        "sha256": "a66ab482642d1950ce72385f470f0b7eb33083edecbc9c22ad5ae269385dd8b6",
+        "sha1": "b730059f249c8497721cf7205c7c76c880e35ff5",
+        "md5": "669cfbc3780aca76bfec4bfe1bfeee8f"
+    },
+    "tls": null,
+    "position_independent": false,
+    "is_reproducible_build": false,
+    "size_of_headers": 512,
+    "virtual_size": 1765376,
+    "size": 1756160,
+    "sections": [
+        {
+            "name": ".text",
+            "characteristics_hash": 3221487648,
+            "characteristics_list": [
+                "CNT_CODE",
+                "MEM_LOCKED",
+                "MEM_READ",
+                "MEM_WRITE"
+            ],
+            "entropy": 7.297203565952431,
+            "entropy_without_padding": 7.2968651084310165,
+            "md5": "2967a5df33344695593fe9f61a0a6783",
+            "offset": 512,
+            "size": 1751040,
+            "sizeof_raw_data": 1751040,
+            "virtual_address": 4096,
+            "virtual_size": 1750716,
+            "fullname": ".text\u0000\u0000\u0000"
+        },
+        {
+            "name": ".rsrc",
+            "characteristics_hash": 3221487648,
+            "characteristics_list": [
+                "CNT_CODE",
+                "MEM_LOCKED",
+                "MEM_READ",
+                "MEM_WRITE"
+            ],
+            "entropy": 6.2709549389208945,
+            "entropy_without_padding": 6.242260376823509,
+            "md5": "06646d0c5c3bd5eb1138b8aee1385550",
+            "offset": 1751552,
+            "size": 4608,
+            "sizeof_raw_data": 4608,
+            "virtual_address": 1757184,
+            "virtual_size": 4444,
+            "fullname": ".rsrc\u0000\u0000\u0000"
+        }
+    ],
+    "debugs": null,
+    "export": null,
+    "imports": null,
+    "load_configuration": null,
+    "resources_manager": {
+        "langs_available": [
+            "ENGLISH"
+        ],
+        "sublangs_available": [
+            "ENGLISH_US"
+        ],
+        "accelerators": null,
+        "dialogs": null,
+        "html": null,
+        "icons": [
+            {
+                "icon_id": 1,
+                "planes": 2,
+                "height": 32,
+                "width": 32,
+                "lang": "ENGLISH",
+                "sublang": "ENGLISH_US"
+            }
+        ],
+        "manifest": null,
+        "string_table": null,
+        "version": null
+    },
+    "resources": [
+        {
+            "parent_resource_ids": "0.3.1",
+            "parent_labels": [
+                "ICON"
+            ],
+            "characteristics": null,
+            "num_childs": 0,
+            "depth": 3,
+            "name": null,
+            "resource_id": 1033,
+            "resource_type": null,
+            "is_data": true,
+            "is_directory": false,
+            "major_version": null,
+            "minor_version": null,
+            "numberof_id_entries": null,
+            "numberof_name_entries": null,
+            "time_date_stamp": null,
+            "hr_time_date_stamp": null,
+            "code_page": 1252,
+            "sha256": "b04775cd3e06c3eb938dc9457ceb73589703f91759d095b046f3e8b8e538e8c9",
+            "entropy": 6.348607205578606,
+            "offset": 1751712,
+            "reserved": 0
+        },
+        {
+            "parent_resource_ids": "0.14.1",
+            "parent_labels": [
+                "GROUP_ICON"
+            ],
+            "characteristics": null,
+            "num_childs": 0,
+            "depth": 3,
+            "name": null,
+            "resource_id": 1033,
+            "resource_type": null,
+            "is_data": true,
+            "is_directory": false,
+            "major_version": null,
+            "minor_version": null,
+            "numberof_id_entries": null,
+            "numberof_name_entries": null,
+            "time_date_stamp": null,
+            "hr_time_date_stamp": null,
+            "code_page": 1252,
+            "sha256": "bd7b891000b776021bd2d3790a165561c6134cea734f0d70a52a9b9c0b363321",
+            "entropy": 1.943751954420502,
+            "offset": 1755976,
+            "reserved": 0
+        }
+    ],
+    "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
+    "signatures": null,
+    "overlay": {
+        "size": 0,
+        "entropy": 0.0
+    },
+    "relocations": null
+}
