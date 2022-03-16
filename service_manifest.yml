@@ -4,8 +4,8 @@ description: >-
   This service extracts attributes (imports, exports, section names, ...)
   from windows PE files using the python library LIEF.
 
-accepts: executable/windows
-rejects: empty|metadata/.*
+accepts: executable/windows/.*
+rejects: empty|metadata/.*|executable/windows/dos
 
 stage: CORE
 category: Static Analysis
