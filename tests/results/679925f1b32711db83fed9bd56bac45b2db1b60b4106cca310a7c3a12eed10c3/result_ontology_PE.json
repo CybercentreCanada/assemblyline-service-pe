@@ -106,7 +106,6 @@
         "sha1": "c441bc81d6fe05102389f025f0df0190676f2ca1",
         "md5": "172f0ea2dc8c8c8abf2132c720cf192b"
     },
-    "tls": null,
     "position_independent": false,
     "is_reproducible_build": false,
     "size_of_headers": 1024,
@@ -204,8 +203,6 @@
             "fullname": ".adata\u0000\u0000"
         }
     ],
-    "debugs": null,
-    "export": null,
     "imports": [
         {
             "library": "kernel32.dll",
@@ -214,8 +211,7 @@
             "iat_address": 40796,
             "iat_value": 40825,
             "is_ordinal": false,
-            "name": "GetProcAddress",
-            "ordinal": null
+            "name": "GetProcAddress"
         },
         {
             "library": "kernel32.dll",
@@ -224,8 +220,7 @@
             "iat_address": 40800,
             "iat_value": 40842,
             "is_ordinal": false,
-            "name": "GetModuleHandleA",
-            "ordinal": null
+            "name": "GetModuleHandleA"
         },
         {
             "library": "kernel32.dll",
@@ -234,8 +229,7 @@
             "iat_address": 40804,
             "iat_value": 40861,
             "is_ordinal": false,
-            "name": "LoadLibraryA",
-            "ordinal": null
+            "name": "LoadLibraryA"
         },
         {
             "library": "msvbvm60.dll",
@@ -244,28 +238,18 @@
             "iat_address": 40949,
             "iat_value": 40957,
             "is_ordinal": false,
-            "name": "_CIcos",
-            "ordinal": null
+            "name": "_CIcos"
         }
     ],
-    "load_configuration": null,
     "resources_manager": {
         "langs_available": [],
         "sublangs_available": [],
-        "accelerators": null,
-        "dialogs": null,
-        "html": null,
-        "icons": [],
-        "manifest": null,
-        "string_table": null,
-        "version": null
+        "icons": []
     },
     "resources": [],
     "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
-    "signatures": null,
     "overlay": {
         "size": 0,
         "entropy": 0.0
-    },
-    "relocations": null
+    }
 }

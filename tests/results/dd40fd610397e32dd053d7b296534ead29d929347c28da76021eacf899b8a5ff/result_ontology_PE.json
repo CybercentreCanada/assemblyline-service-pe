@@ -101,7 +101,6 @@
         "sha1": "26969150facfb906c90930aafea49b9a9bf58850",
         "md5": "ffd9ee0c4b8277497b57bbfe98afac1c"
     },
-    "tls": null,
     "position_independent": false,
     "is_reproducible_build": false,
     "size_of_headers": 512,
@@ -146,8 +145,6 @@
             "fullname": ".ASPack\u0000"
         }
     ],
-    "debugs": null,
-    "export": null,
     "imports": [
         {
             "library": "kernel32.dll",
@@ -156,8 +153,7 @@
             "iat_address": 628711,
             "iat_value": 628757,
             "is_ordinal": false,
-            "name": "LoadLibraryA",
-            "ordinal": null
+            "name": "LoadLibraryA"
         },
         {
             "library": "kernel32.dll",
@@ -166,8 +162,7 @@
             "iat_address": 628715,
             "iat_value": 628771,
             "is_ordinal": false,
-            "name": "GetProcAddress",
-            "ordinal": null
+            "name": "GetProcAddress"
         },
         {
             "library": "kernel32.dll",
@@ -176,8 +171,7 @@
             "iat_address": 628719,
             "iat_value": 628787,
             "is_ordinal": false,
-            "name": "VirtualAlloc",
-            "ordinal": null
+            "name": "VirtualAlloc"
         },
         {
             "library": "kernel32.dll",
@@ -186,8 +180,7 @@
             "iat_address": 628723,
             "iat_value": 628801,
             "is_ordinal": false,
-            "name": "VirtualProtect",
-            "ordinal": null
+            "name": "VirtualProtect"
         },
         {
             "library": "kernel32.dll",
@@ -196,8 +189,7 @@
             "iat_address": 628727,
             "iat_value": 628817,
             "is_ordinal": false,
-            "name": "VirtualFree",
-            "ordinal": null
+            "name": "VirtualFree"
         },
         {
             "library": "kernel32.dll",
@@ -206,11 +198,9 @@
             "iat_address": 628731,
             "iat_value": 628739,
             "is_ordinal": false,
-            "name": "GetModuleHandleA",
-            "ordinal": null
+            "name": "GetModuleHandleA"
         }
     ],
-    "load_configuration": null,
     "resources_manager": {
         "langs_available": [
             "NEUTRAL"
@@ -218,9 +208,6 @@
         "sublangs_available": [
             "DEFAULT"
         ],
-        "accelerators": null,
-        "dialogs": null,
-        "html": null,
         "icons": [
             {
                 "icon_id": 1,
@@ -230,10 +217,7 @@
                 "lang": "NEUTRAL",
                 "sublang": "DEFAULT"
             }
-        ],
-        "manifest": null,
-        "string_table": null,
-        "version": null
+        ]
     },
     "resources": [
         {
@@ -241,20 +225,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 0,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "2c0eeffbc4481d895cea856f67d1331a47ab1acb1f933ac5946516c91f2941e9",
             "entropy": 3.82285545046894,
@@ -266,20 +241,11 @@
             "parent_labels": [
                 "GROUP_ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 0,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "494e4fd717fa1ee0c5c7bb3b4e28fdab4b7f6e95b4f9865f5ab86f03f62ae62c",
             "entropy": 1.8192407046368488,
@@ -288,10 +254,8 @@
         }
     ],
     "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
-    "signatures": null,
     "overlay": {
         "size": 33906,
         "entropy": 7.535047981554125
-    },
-    "relocations": null
+    }
 }

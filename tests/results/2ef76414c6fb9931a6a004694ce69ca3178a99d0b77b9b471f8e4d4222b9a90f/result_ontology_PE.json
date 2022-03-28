@@ -75,7 +75,6 @@
         "overlay_number": 8218,
         "used_bytes_in_the_last_page": 51910
     },
-    "rich_header": null,
     "nx": false,
     "authentihash": {
         "sha512": "b80a80a21bd26ea18a3b90290edcd8d1d0cb2825ad9d422af02fd1c67f3a93cc69a8660c8570c45bfe47900f3e263527e83b18464af0a41baf280ff54318ce13",
@@ -84,7 +83,6 @@
         "sha1": "9ce220bf19e4d06295ac0dc919cbf4788badcf5a",
         "md5": "3ebaea6c4f4b15ec32e42f4207e87ff1"
     },
-    "tls": null,
     "position_independent": false,
     "is_reproducible_build": false,
     "size_of_headers": 1024,
@@ -163,8 +161,6 @@
             "fullname": "DATA\u0000\u0000\u0000\u0000"
         }
     ],
-    "debugs": null,
-    "export": null,
     "imports": [
         {
             "library": "kernel32.dll",
@@ -173,8 +169,7 @@
             "iat_address": 135268,
             "iat_value": 135350,
             "is_ordinal": false,
-            "name": "GetModuleHandleA",
-            "ordinal": null
+            "name": "GetModuleHandleA"
         },
         {
             "library": "user32.dll",
@@ -183,8 +178,7 @@
             "iat_address": 135284,
             "iat_value": 135387,
             "is_ordinal": false,
-            "name": "ValidateRect",
-            "ordinal": null
+            "name": "ValidateRect"
         },
         {
             "library": "advapi32.dll",
@@ -193,8 +187,7 @@
             "iat_address": 135300,
             "iat_value": 135422,
             "is_ordinal": false,
-            "name": "GetUserNameA",
-            "ordinal": null
+            "name": "GetUserNameA"
         },
         {
             "library": "comctl32.dll",
@@ -203,11 +196,9 @@
             "iat_address": 135316,
             "iat_value": 135457,
             "is_ordinal": false,
-            "name": "PropertySheet",
-            "ordinal": null
+            "name": "PropertySheet"
         }
     ],
-    "load_configuration": null,
     "resources_manager": {
         "langs_available": [
             "NEUTRAL",
@@ -217,9 +208,6 @@
         "sublangs_available": [
             "DEFAULT"
         ],
-        "accelerators": null,
-        "dialogs": null,
-        "html": null,
         "icons": [
             {
                 "icon_id": 1,
@@ -231,8 +219,7 @@
             }
         ],
         "manifest": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\"> \r\n  <assemblyIdentity version=\"1.0.0.0\"\r\n     processorArchitecture=\"X86\"\r\n     name=\"IsUserAdmin\"\r\n     type=\"win32\"/> \r\n  <description>fumants</description> \r\n  <!-- Identify the application security requirements. -->\r\n  <trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v2\">\r\n    <security>\r\n      <requestedPrivileges>\r\n        <requestedExecutionLevel\r\n          level=\"requireAdministrator\"\r\n          uiAccess=\"false\"/>\r\n        </requestedPrivileges>\r\n       </security>\r\n  </trustInfo>\r\n</assembly>\r\n\r\n",
-        "string_table": [],
-        "version": null
+        "string_table": []
     },
     "resources": [
         {
@@ -240,20 +227,11 @@
             "parent_labels": [
                 "BITMAP"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 0,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "6b9ac12241cf945361530ec46a0d39c721e9b73d6a1085b13c283c743315fd14",
             "entropy": 7.989882114659648,
@@ -265,20 +243,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 0,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "2f3c2b39e7dc991f425e39d8783d0a0fd67208a997d90398cf4ec84e0f24b66d",
             "entropy": 3.8131652541407077,
@@ -290,20 +259,11 @@
             "parent_labels": [
                 "STRING"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1064,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1200,
             "sha256": "332b7c53ffbcddaa2c0496ce64f10cea0f53340c3fcdfb9514e8990bbe6c727c",
             "entropy": 6.168758439731465,
@@ -315,20 +275,11 @@
             "parent_labels": [
                 "GROUP_ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 0,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1200,
             "sha256": "f01c223e6cf0e0f5c1d990ad720488af398180adb1b92e61c2144cf11d3130f8",
             "entropy": 1.919240704636849,
@@ -341,20 +292,11 @@
                 "HTML",
                 "RES"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 0,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "3e9d60e66c9afa55451b8328e1aa1485ca0f121f303e525a7366b36e7bb935f4",
             "entropy": 7.94700215599192,
@@ -367,20 +309,11 @@
                 "HTML",
                 "RES"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 2,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "f6a45d3396fecfba63abff1000805631f0b0476ba0db8ad52735a775274f63e6",
             "entropy": 7.984589616328184,
@@ -392,20 +325,11 @@
             "parent_labels": [
                 "MANIFEST"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 907,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "66469a6ed582c864be9b1556868ff7720ba199a1831eba32587cb7cc4c167325",
             "entropy": 4.84255531487753,
@@ -417,20 +341,11 @@
             "parent_labels": [
                 "RCDATA"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 0,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "58ad23c52c32af9e1e2042fa2dd44803ec42e528610a143ac15d018386e494ba",
             "entropy": 7.242366106863602,
@@ -439,10 +354,8 @@
         }
     ],
     "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
-    "signatures": null,
     "overlay": {
         "size": 3930942,
         "entropy": 7.999959517378917
-    },
-    "relocations": null
+    }
 }

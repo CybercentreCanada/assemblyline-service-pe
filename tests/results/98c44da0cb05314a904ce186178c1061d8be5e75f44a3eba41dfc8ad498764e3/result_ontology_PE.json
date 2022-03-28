@@ -127,7 +127,6 @@
         "sha1": "9387283d91cfb77754b2986985ce76333eab0757",
         "md5": "c288a0dfa2193eaafa42cdd09ddffbc8"
     },
-    "tls": null,
     "position_independent": true,
     "is_reproducible_build": false,
     "size_of_headers": 1024,
@@ -249,8 +248,6 @@
             "fullname": ".adata\u0000\u0000"
         }
     ],
-    "debugs": null,
-    "export": null,
     "imports": [
         {
             "library": "kernel32.dll",
@@ -259,8 +256,7 @@
             "iat_address": 28600,
             "iat_value": 28629,
             "is_ordinal": false,
-            "name": "GetProcAddress",
-            "ordinal": null
+            "name": "GetProcAddress"
         },
         {
             "library": "kernel32.dll",
@@ -269,8 +265,7 @@
             "iat_address": 28604,
             "iat_value": 28646,
             "is_ordinal": false,
-            "name": "GetModuleHandleA",
-            "ordinal": null
+            "name": "GetModuleHandleA"
         },
         {
             "library": "kernel32.dll",
@@ -279,8 +274,7 @@
             "iat_address": 28608,
             "iat_value": 28665,
             "is_ordinal": false,
-            "name": "LoadLibraryA",
-            "ordinal": null
+            "name": "LoadLibraryA"
         },
         {
             "library": "msvcrt.dll",
@@ -289,8 +283,7 @@
             "iat_address": 28910,
             "iat_value": 28958,
             "is_ordinal": false,
-            "name": "??2@YAPAXI@Z",
-            "ordinal": null
+            "name": "??2@YAPAXI@Z"
         },
         {
             "library": "shlwapi.dll",
@@ -299,8 +292,7 @@
             "iat_address": 28918,
             "iat_value": 28973,
             "is_ordinal": false,
-            "name": "PathFileExistsA",
-            "ordinal": null
+            "name": "PathFileExistsA"
         },
         {
             "library": "urlmon.dll",
@@ -309,8 +301,7 @@
             "iat_address": 28926,
             "iat_value": 28991,
             "is_ordinal": false,
-            "name": "URLDownloadToFileA",
-            "ordinal": null
+            "name": "URLDownloadToFileA"
         },
         {
             "library": "user32.dll",
@@ -319,8 +310,7 @@
             "iat_address": 28934,
             "iat_value": 29012,
             "is_ordinal": false,
-            "name": "wsprintfA",
-            "ordinal": null
+            "name": "wsprintfA"
         },
         {
             "library": "advapi32.dll",
@@ -329,8 +319,7 @@
             "iat_address": 28942,
             "iat_value": 29024,
             "is_ordinal": false,
-            "name": "OpenProcessToken",
-            "ordinal": null
+            "name": "OpenProcessToken"
         },
         {
             "library": "shell32.dll",
@@ -339,18 +328,12 @@
             "iat_address": 28950,
             "iat_value": 29043,
             "is_ordinal": false,
-            "name": "SHGetSpecialFolderPathA",
-            "ordinal": null
+            "name": "SHGetSpecialFolderPathA"
         }
     ],
-    "load_configuration": null,
-    "resources_manager": null,
-    "resources": null,
     "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
-    "signatures": null,
     "overlay": {
         "size": 512,
         "entropy": 0.0
-    },
-    "relocations": null
+    }
 }

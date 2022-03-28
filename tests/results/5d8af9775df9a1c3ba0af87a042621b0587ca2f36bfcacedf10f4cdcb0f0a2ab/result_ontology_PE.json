@@ -24,7 +24,6 @@
     "optional_header": {
         "addressof_entrypoint": 147236,
         "baseof_code": 4096,
-        "baseof_data": null,
         "checksum": 239771,
         "computed_checksum": 239771,
         "dll_characteristics": 352,
@@ -147,7 +146,6 @@
         "sha1": "e1b37b37c210a6195f0b9d9f3d71b073b391b71e",
         "md5": "74b5527b259a1d86dee42770b72e6380"
     },
-    "tls": null,
     "position_independent": true,
     "is_reproducible_build": false,
     "size_of_headers": 1024,
@@ -336,8 +334,7 @@
                 "cv_signature": "PDB_70",
                 "filename": "D:\\buildagent_prod\\p4\\1326309012\\drivers\\TeeDriver\\TEEDriver\\x64\\PgPoFxrelease\\TEEDriverW8x64.pdb",
                 "guid": "edabcfe6-9edb-4fbf-a052-31be8032f925"
-            },
-            "pogo": null
+            }
         },
         {
             "addressof_rawdata": 154124,
@@ -348,12 +345,9 @@
             "sizeof_data": 556,
             "timestamp": 1497976520,
             "hr_timestamp": "2017-06-20T16:35:20.000000Z",
-            "type": "POGO",
-            "code_view": null,
-            "pogo": null
+            "type": "POGO"
         }
     ],
-    "export": null,
     "imports": [
         {
             "library": "ksecdd.sys",
@@ -362,8 +356,7 @@
             "iat_address": 151608,
             "iat_value": 197888,
             "is_ordinal": false,
-            "name": "SecLookupWellKnownSid",
-            "ordinal": null
+            "name": "SecLookupWellKnownSid"
         },
         {
             "library": "ntoskrnl.exe",
@@ -372,8 +365,7 @@
             "iat_address": 151624,
             "iat_value": 198056,
             "is_ordinal": false,
-            "name": "memcpy_s",
-            "ordinal": null
+            "name": "memcpy_s"
         },
         {
             "library": "ntoskrnl.exe",
@@ -382,8 +374,7 @@
             "iat_address": 151632,
             "iat_value": 198068,
             "is_ordinal": false,
-            "name": "RtlInitUnicodeString",
-            "ordinal": null
+            "name": "RtlInitUnicodeString"
         },
         {
             "library": "ntoskrnl.exe",
@@ -392,8 +383,7 @@
             "iat_address": 151640,
             "iat_value": 198092,
             "is_ordinal": false,
-            "name": "RtlGUIDFromString",
-            "ordinal": null
+            "name": "RtlGUIDFromString"
         },
         {
             "library": "ntoskrnl.exe",
@@ -402,8 +392,7 @@
             "iat_address": 151648,
             "iat_value": 198112,
             "is_ordinal": false,
-            "name": "KeSetEvent",
-            "ordinal": null
+            "name": "KeSetEvent"
         },
         {
             "library": "ntoskrnl.exe",
@@ -412,8 +401,7 @@
             "iat_address": 151656,
             "iat_value": 198126,
             "is_ordinal": false,
-            "name": "MmUnmapLockedPages",
-            "ordinal": null
+            "name": "MmUnmapLockedPages"
         },
         {
             "library": "ntoskrnl.exe",
@@ -422,8 +410,7 @@
             "iat_address": 151664,
             "iat_value": 198148,
             "is_ordinal": false,
-            "name": "RtlGetVersion",
-            "ordinal": null
+            "name": "RtlGetVersion"
         },
         {
             "library": "ntoskrnl.exe",
@@ -432,8 +419,7 @@
             "iat_address": 151672,
             "iat_value": 198164,
             "is_ordinal": false,
-            "name": "RtlInitAnsiString",
-            "ordinal": null
+            "name": "RtlInitAnsiString"
         },
         {
             "library": "ntoskrnl.exe",
@@ -442,8 +428,7 @@
             "iat_address": 151680,
             "iat_value": 198184,
             "is_ordinal": false,
-            "name": "RtlAnsiStringToUnicodeString",
-            "ordinal": null
+            "name": "RtlAnsiStringToUnicodeString"
         },
         {
             "library": "ntoskrnl.exe",
@@ -452,8 +437,7 @@
             "iat_address": 151688,
             "iat_value": 198216,
             "is_ordinal": false,
-            "name": "RtlFreeUnicodeString",
-            "ordinal": null
+            "name": "RtlFreeUnicodeString"
         },
         {
             "library": "ntoskrnl.exe",
@@ -462,8 +446,7 @@
             "iat_address": 151696,
             "iat_value": 198240,
             "is_ordinal": false,
-            "name": "KeDelayExecutionThread",
-            "ordinal": null
+            "name": "KeDelayExecutionThread"
         },
         {
             "library": "ntoskrnl.exe",
@@ -472,8 +455,7 @@
             "iat_address": 151704,
             "iat_value": 198266,
             "is_ordinal": false,
-            "name": "KeInitializeEvent",
-            "ordinal": null
+            "name": "KeInitializeEvent"
         },
         {
             "library": "ntoskrnl.exe",
@@ -482,8 +464,7 @@
             "iat_address": 151712,
             "iat_value": 198286,
             "is_ordinal": false,
-            "name": "EtwWrite",
-            "ordinal": null
+            "name": "EtwWrite"
         },
         {
             "library": "ntoskrnl.exe",
@@ -492,8 +473,7 @@
             "iat_address": 151720,
             "iat_value": 198298,
             "is_ordinal": false,
-            "name": "MmGetSystemRoutineAddress",
-            "ordinal": null
+            "name": "MmGetSystemRoutineAddress"
         },
         {
             "library": "ntoskrnl.exe",
@@ -502,8 +482,7 @@
             "iat_address": 151728,
             "iat_value": 198326,
             "is_ordinal": false,
-            "name": "RtlCompareMemory",
-            "ordinal": null
+            "name": "RtlCompareMemory"
         },
         {
             "library": "ntoskrnl.exe",
@@ -512,8 +491,7 @@
             "iat_address": 151736,
             "iat_value": 198346,
             "is_ordinal": false,
-            "name": "IoWMIRegistrationControl",
-            "ordinal": null
+            "name": "IoWMIRegistrationControl"
         },
         {
             "library": "ntoskrnl.exe",
@@ -522,8 +500,7 @@
             "iat_address": 151744,
             "iat_value": 198374,
             "is_ordinal": false,
-            "name": "EtwRegister",
-            "ordinal": null
+            "name": "EtwRegister"
         },
         {
             "library": "ntoskrnl.exe",
@@ -532,8 +509,7 @@
             "iat_address": 151752,
             "iat_value": 198388,
             "is_ordinal": false,
-            "name": "EtwUnregister",
-            "ordinal": null
+            "name": "EtwUnregister"
         },
         {
             "library": "ntoskrnl.exe",
@@ -542,8 +518,7 @@
             "iat_address": 151760,
             "iat_value": 198030,
             "is_ordinal": false,
-            "name": "ZwQueryInformationToken",
-            "ordinal": null
+            "name": "ZwQueryInformationToken"
         },
         {
             "library": "ntoskrnl.exe",
@@ -552,8 +527,7 @@
             "iat_address": 151768,
             "iat_value": 198420,
             "is_ordinal": false,
-            "name": "MmUnmapIoSpace",
-            "ordinal": null
+            "name": "MmUnmapIoSpace"
         },
         {
             "library": "ntoskrnl.exe",
@@ -562,8 +536,7 @@
             "iat_address": 151776,
             "iat_value": 198438,
             "is_ordinal": false,
-            "name": "PoFxCompleteIdleState",
-            "ordinal": null
+            "name": "PoFxCompleteIdleState"
         },
         {
             "library": "ntoskrnl.exe",
@@ -572,8 +545,7 @@
             "iat_address": 151784,
             "iat_value": 198462,
             "is_ordinal": false,
-            "name": "PoRegisterPowerSettingCallback",
-            "ordinal": null
+            "name": "PoRegisterPowerSettingCallback"
         },
         {
             "library": "ntoskrnl.exe",
@@ -582,8 +554,7 @@
             "iat_address": 151792,
             "iat_value": 198496,
             "is_ordinal": false,
-            "name": "PoUnregisterPowerSettingCallback",
-            "ordinal": null
+            "name": "PoUnregisterPowerSettingCallback"
         },
         {
             "library": "ntoskrnl.exe",
@@ -592,8 +563,7 @@
             "iat_address": 151800,
             "iat_value": 198532,
             "is_ordinal": false,
-            "name": "KeClearEvent",
-            "ordinal": null
+            "name": "KeClearEvent"
         },
         {
             "library": "ntoskrnl.exe",
@@ -602,8 +572,7 @@
             "iat_address": 151808,
             "iat_value": 198548,
             "is_ordinal": false,
-            "name": "KeWaitForSingleObject",
-            "ordinal": null
+            "name": "KeWaitForSingleObject"
         },
         {
             "library": "ntoskrnl.exe",
@@ -612,8 +581,7 @@
             "iat_address": 151816,
             "iat_value": 198572,
             "is_ordinal": false,
-            "name": "MmBuildMdlForNonPagedPool",
-            "ordinal": null
+            "name": "MmBuildMdlForNonPagedPool"
         },
         {
             "library": "ntoskrnl.exe",
@@ -622,8 +590,7 @@
             "iat_address": 151824,
             "iat_value": 198600,
             "is_ordinal": false,
-            "name": "IoAllocateMdl",
-            "ordinal": null
+            "name": "IoAllocateMdl"
         },
         {
             "library": "ntoskrnl.exe",
@@ -632,8 +599,7 @@
             "iat_address": 151832,
             "iat_value": 198616,
             "is_ordinal": false,
-            "name": "IoFreeMdl",
-            "ordinal": null
+            "name": "IoFreeMdl"
         },
         {
             "library": "ntoskrnl.exe",
@@ -642,8 +608,7 @@
             "iat_address": 151840,
             "iat_value": 198628,
             "is_ordinal": false,
-            "name": "IoAllocateErrorLogEntry",
-            "ordinal": null
+            "name": "IoAllocateErrorLogEntry"
         },
         {
             "library": "ntoskrnl.exe",
@@ -652,8 +617,7 @@
             "iat_address": 151848,
             "iat_value": 198654,
             "is_ordinal": false,
-            "name": "IoWriteErrorLogEntry",
-            "ordinal": null
+            "name": "IoWriteErrorLogEntry"
         },
         {
             "library": "ntoskrnl.exe",
@@ -662,8 +626,7 @@
             "iat_address": 151856,
             "iat_value": 198678,
             "is_ordinal": false,
-            "name": "PoFxCompleteIdleCondition",
-            "ordinal": null
+            "name": "PoFxCompleteIdleCondition"
         },
         {
             "library": "ntoskrnl.exe",
@@ -672,8 +635,7 @@
             "iat_address": 151864,
             "iat_value": 198706,
             "is_ordinal": false,
-            "name": "ZwPowerInformation",
-            "ordinal": null
+            "name": "ZwPowerInformation"
         },
         {
             "library": "ntoskrnl.exe",
@@ -682,8 +644,7 @@
             "iat_address": 151872,
             "iat_value": 198728,
             "is_ordinal": false,
-            "name": "MmMapLockedPagesSpecifyCache",
-            "ordinal": null
+            "name": "MmMapLockedPagesSpecifyCache"
         },
         {
             "library": "ntoskrnl.exe",
@@ -692,8 +653,7 @@
             "iat_address": 151880,
             "iat_value": 198760,
             "is_ordinal": false,
-            "name": "IoIs32bitProcess",
-            "ordinal": null
+            "name": "IoIs32bitProcess"
         },
         {
             "library": "ntoskrnl.exe",
@@ -702,8 +662,7 @@
             "iat_address": 151888,
             "iat_value": 198780,
             "is_ordinal": false,
-            "name": "RtlAnsiCharToUnicodeChar",
-            "ordinal": null
+            "name": "RtlAnsiCharToUnicodeChar"
         },
         {
             "library": "ntoskrnl.exe",
@@ -712,8 +671,7 @@
             "iat_address": 151896,
             "iat_value": 198006,
             "is_ordinal": false,
-            "name": "ZwOpenProcessTokenEx",
-            "ordinal": null
+            "name": "ZwOpenProcessTokenEx"
         },
         {
             "library": "ntoskrnl.exe",
@@ -722,8 +680,7 @@
             "iat_address": 151904,
             "iat_value": 197992,
             "is_ordinal": false,
-            "name": "RtlEqualSid",
-            "ordinal": null
+            "name": "RtlEqualSid"
         },
         {
             "library": "ntoskrnl.exe",
@@ -732,8 +689,7 @@
             "iat_address": 151912,
             "iat_value": 198858,
             "is_ordinal": false,
-            "name": "RtlCopyUnicodeString",
-            "ordinal": null
+            "name": "RtlCopyUnicodeString"
         },
         {
             "library": "ntoskrnl.exe",
@@ -742,8 +698,7 @@
             "iat_address": 151920,
             "iat_value": 197978,
             "is_ordinal": false,
-            "name": "RtlValidSid",
-            "ordinal": null
+            "name": "RtlValidSid"
         },
         {
             "library": "ntoskrnl.exe",
@@ -752,8 +707,7 @@
             "iat_address": 151928,
             "iat_value": 197968,
             "is_ordinal": false,
-            "name": "ZwClose",
-            "ordinal": null
+            "name": "ZwClose"
         },
         {
             "library": "ntoskrnl.exe",
@@ -762,8 +716,7 @@
             "iat_address": 151936,
             "iat_value": 197948,
             "is_ordinal": false,
-            "name": "ExFreePoolWithTag",
-            "ordinal": null
+            "name": "ExFreePoolWithTag"
         },
         {
             "library": "ntoskrnl.exe",
@@ -772,8 +725,7 @@
             "iat_address": 151944,
             "iat_value": 197924,
             "is_ordinal": false,
-            "name": "ExAllocatePoolWithTag",
-            "ordinal": null
+            "name": "ExAllocatePoolWithTag"
         },
         {
             "library": "ntoskrnl.exe",
@@ -782,8 +734,7 @@
             "iat_address": 151952,
             "iat_value": 198404,
             "is_ordinal": false,
-            "name": "MmMapIoSpace",
-            "ordinal": null
+            "name": "MmMapIoSpace"
         },
         {
             "library": "HAL.dll",
@@ -792,8 +743,7 @@
             "iat_address": 151552,
             "iat_value": 198822,
             "is_ordinal": false,
-            "name": "KeStallExecutionProcessor",
-            "ordinal": null
+            "name": "KeStallExecutionProcessor"
         },
         {
             "library": "WDFLDR.SYS",
@@ -802,8 +752,7 @@
             "iat_address": 151568,
             "iat_value": 198920,
             "is_ordinal": false,
-            "name": "WdfVersionBindClass",
-            "ordinal": null
+            "name": "WdfVersionBindClass"
         },
         {
             "library": "WDFLDR.SYS",
@@ -812,8 +761,7 @@
             "iat_address": 151576,
             "iat_value": 198900,
             "is_ordinal": false,
-            "name": "WdfVersionUnbind",
-            "ordinal": null
+            "name": "WdfVersionUnbind"
         },
         {
             "library": "WDFLDR.SYS",
@@ -822,8 +770,7 @@
             "iat_address": 151584,
             "iat_value": 198882,
             "is_ordinal": false,
-            "name": "WdfVersionBind",
-            "ordinal": null
+            "name": "WdfVersionBind"
         },
         {
             "library": "WDFLDR.SYS",
@@ -832,8 +779,7 @@
             "iat_address": 151592,
             "iat_value": 198942,
             "is_ordinal": false,
-            "name": "WdfVersionUnbindClass",
-            "ordinal": null
+            "name": "WdfVersionUnbindClass"
         }
     ],
     "load_configuration": {
@@ -878,16 +824,7 @@
         "guard_long_jump_target_count": 0,
         "guard_long_jump_target_table": 0,
         "dynamic_value_reloc_table": 0,
-        "hybrid_metadata_pointer": 0,
-        "dynamic_value_reloctable_offset": null,
-        "dynamic_value_reloctable_section": null,
-        "guard_rf_failure_routine": null,
-        "guard_rf_failure_routine_function_pointer": null,
-        "reserved2": null,
-        "guard_rf_verify_stackpointer_function_pointer": null,
-        "hotpatch_table_offset": null,
-        "addressof_unicode_string": null,
-        "reserved3": null
+        "hybrid_metadata_pointer": 0
     },
     "resources_manager": {
         "langs_available": [
@@ -896,12 +833,6 @@
         "sublangs_available": [
             "ENGLISH_US"
         ],
-        "accelerators": null,
-        "dialogs": null,
-        "html": null,
-        "icons": null,
-        "manifest": null,
-        "string_table": null,
         "version": {
             "type": 0,
             "fixed_file_info": {
@@ -982,20 +913,11 @@
                 "MOFDATA",
                 "MOFRESOURCENAME"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "e0ee72ee67a6faeb57d5fbe39351575922717fba3fb7b61cca8b33ac2f46977f",
             "entropy": 7.515681058365994,
@@ -1007,20 +929,11 @@
             "parent_labels": [
                 "WEVT_TEMPLATE"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "ef1539ff613b078aa26becbe1585c8357c6162fab5d2af631b20a0b0a9e9ae3a",
             "entropy": 3.6137962793878327,
@@ -1032,20 +945,11 @@
             "parent_labels": [
                 "MESSAGETABLE"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "ebaa70f31f8654fda12f626f5be11532dfaea4b2d6a1c888ea8e8d2c06db14c1",
             "entropy": 3.5726301311127493,
@@ -1057,20 +961,11 @@
             "parent_labels": [
                 "VERSION"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "a42d31efe33d819a562db99e2cedfa09921ce45888a289ab6bb76545b67552a4",
             "entropy": 3.4988956304471044,
@@ -1268,6 +1163,5 @@
     "overlay": {
         "size": 19616,
         "entropy": 7.489479561238784
-    },
-    "relocations": null
+    }
 }

@@ -29,7 +29,6 @@
         "baseof_code": 4096,
         "baseof_data": 917504,
         "checksum": 5342033,
-        "computed_checksum": null,
         "dll_characteristics": 0,
         "dll_characteristics_lists": [],
         "file_alignment": 512,
@@ -77,7 +76,6 @@
         "overlay_number": 0,
         "used_bytes_in_the_last_page": 144
     },
-    "rich_header": null,
     "nx": false,
     "authentihash": {
         "sha512": "37523d2b94e7835950b91ec5041eef7262195e4f8945e0b1fb48c9369becd52cfb427fec4e9c0bdcaa7bad02d9360614f9af68fdc26c1c6560e65a814b4eae5c",
@@ -86,7 +84,6 @@
         "sha1": "6a4b9e44bef4ba2071f3197787365de385f0cdda",
         "md5": "172d3855a5ab073b9d3c9f692096c846"
     },
-    "tls": null,
     "position_independent": false,
     "is_reproducible_build": false,
     "size_of_headers": 1024,
@@ -246,8 +243,6 @@
             "fullname": ".adata\u0000\u0000"
         }
     ],
-    "debugs": null,
-    "export": null,
     "imports": [
         {
             "library": "kernel32.dll",
@@ -256,8 +251,7 @@
             "iat_address": 13971384,
             "iat_value": 13971413,
             "is_ordinal": false,
-            "name": "GetProcAddress",
-            "ordinal": null
+            "name": "GetProcAddress"
         },
         {
             "library": "kernel32.dll",
@@ -266,8 +260,7 @@
             "iat_address": 13971388,
             "iat_value": 13971430,
             "is_ordinal": false,
-            "name": "GetModuleHandleA",
-            "ordinal": null
+            "name": "GetModuleHandleA"
         },
         {
             "library": "kernel32.dll",
@@ -276,8 +269,7 @@
             "iat_address": 13971392,
             "iat_value": 13971449,
             "is_ordinal": false,
-            "name": "LoadLibraryA",
-            "ordinal": null
+            "name": "LoadLibraryA"
         },
         {
             "library": "msvcrt.dll",
@@ -286,8 +278,7 @@
             "iat_address": 13972199,
             "iat_value": 13972375,
             "is_ordinal": false,
-            "name": "memset",
-            "ordinal": null
+            "name": "memset"
         },
         {
             "library": "gdiplus.dll",
@@ -296,8 +287,7 @@
             "iat_address": 13972207,
             "iat_value": 13972384,
             "is_ordinal": false,
-            "name": "GdipDeleteFont",
-            "ordinal": null
+            "name": "GdipDeleteFont"
         },
         {
             "library": "winspool.drv",
@@ -306,8 +296,7 @@
             "iat_address": 13972215,
             "iat_value": 13972401,
             "is_ordinal": false,
-            "name": "ClosePrinter",
-            "ordinal": null
+            "name": "ClosePrinter"
         },
         {
             "library": "user32.dll",
@@ -316,8 +305,7 @@
             "iat_address": 13972223,
             "iat_value": 13972416,
             "is_ordinal": false,
-            "name": "wsprintfA",
-            "ordinal": null
+            "name": "wsprintfA"
         },
         {
             "library": "gdi32.dll",
@@ -326,8 +314,7 @@
             "iat_address": 13972231,
             "iat_value": 13972428,
             "is_ordinal": false,
-            "name": "CreateDCW",
-            "ordinal": null
+            "name": "CreateDCW"
         },
         {
             "library": "advapi32.dll",
@@ -336,8 +323,7 @@
             "iat_address": 13972239,
             "iat_value": 13972440,
             "is_ordinal": false,
-            "name": "RegOpenKeyExW",
-            "ordinal": null
+            "name": "RegOpenKeyExW"
         },
         {
             "library": "comctl32.dll",
@@ -346,8 +332,7 @@
             "iat_address": 13972247,
             "iat_value": 13972456,
             "is_ordinal": false,
-            "name": "InitCommonControlsEx",
-            "ordinal": null
+            "name": "InitCommonControlsEx"
         },
         {
             "library": "oleaut32.dll",
@@ -356,8 +341,7 @@
             "iat_address": 13972255,
             "iat_value": 13972479,
             "is_ordinal": false,
-            "name": "SafeArrayGetDim",
-            "ordinal": null
+            "name": "SafeArrayGetDim"
         },
         {
             "library": "ole32.dll",
@@ -366,8 +350,7 @@
             "iat_address": 13972263,
             "iat_value": 13972497,
             "is_ordinal": false,
-            "name": "CoInitialize",
-            "ordinal": null
+            "name": "CoInitialize"
         },
         {
             "library": "shell32.dll",
@@ -376,8 +359,7 @@
             "iat_address": 13972271,
             "iat_value": 13972512,
             "is_ordinal": false,
-            "name": "SHGetSpecialFolderLocation",
-            "ordinal": null
+            "name": "SHGetSpecialFolderLocation"
         },
         {
             "library": "ws2_32.dll",
@@ -386,8 +368,7 @@
             "iat_address": 13972279,
             "iat_value": 13972541,
             "is_ordinal": false,
-            "name": "WSAIoctl",
-            "ordinal": null
+            "name": "WSAIoctl"
         },
         {
             "library": "wsock32.dll",
@@ -396,8 +377,7 @@
             "iat_address": 13972287,
             "iat_value": 13972552,
             "is_ordinal": false,
-            "name": "WSAStartup",
-            "ordinal": null
+            "name": "WSAStartup"
         },
         {
             "library": "winmm.dll",
@@ -406,8 +386,7 @@
             "iat_address": 13972295,
             "iat_value": 13972565,
             "is_ordinal": false,
-            "name": "timeBeginPeriod",
-            "ordinal": null
+            "name": "timeBeginPeriod"
         },
         {
             "library": "icmp.dll",
@@ -416,8 +395,7 @@
             "iat_address": 13972303,
             "iat_value": 13972583,
             "is_ordinal": false,
-            "name": "IcmpCloseHandle",
-            "ordinal": null
+            "name": "IcmpCloseHandle"
         },
         {
             "library": "imagehlp.dll",
@@ -426,8 +404,7 @@
             "iat_address": 13972311,
             "iat_value": 13972601,
             "is_ordinal": false,
-            "name": "MakeSureDirectoryPathExists",
-            "ordinal": null
+            "name": "MakeSureDirectoryPathExists"
         },
         {
             "library": "iphlpapi.dll",
@@ -436,8 +413,7 @@
             "iat_address": 13972319,
             "iat_value": 13972631,
             "is_ordinal": false,
-            "name": "GetAdaptersInfo",
-            "ordinal": null
+            "name": "GetAdaptersInfo"
         },
         {
             "library": "msi.dll",
@@ -446,8 +422,7 @@
             "iat_address": 13972327,
             "iat_value": 13972649,
             "is_ordinal": false,
-            "name": "MsiEnumProductsW",
-            "ordinal": null
+            "name": "MsiEnumProductsW"
         },
         {
             "library": "netapi32.dll",
@@ -456,8 +431,7 @@
             "iat_address": 13972335,
             "iat_value": 13972668,
             "is_ordinal": false,
-            "name": "NetApiBufferFree",
-            "ordinal": null
+            "name": "NetApiBufferFree"
         },
         {
             "library": "setupapi.dll",
@@ -466,8 +440,7 @@
             "iat_address": 13972343,
             "iat_value": 13972687,
             "is_ordinal": false,
-            "name": "SetupIterateCabinetW",
-            "ordinal": null
+            "name": "SetupIterateCabinetW"
         },
         {
             "library": "urlmon.dll",
@@ -476,8 +449,7 @@
             "iat_address": 13972351,
             "iat_value": 13972710,
             "is_ordinal": false,
-            "name": "URLDownloadToFileW",
-            "ordinal": null
+            "name": "URLDownloadToFileW"
         },
         {
             "library": "userenv.dll",
@@ -486,8 +458,7 @@
             "iat_address": 13972359,
             "iat_value": 13972731,
             "is_ordinal": false,
-            "name": "GetDefaultUserProfileDirectoryW",
-            "ordinal": null
+            "name": "GetDefaultUserProfileDirectoryW"
         },
         {
             "library": "wininet.dll",
@@ -496,11 +467,9 @@
             "iat_address": 13972367,
             "iat_value": 13972765,
             "is_ordinal": false,
-            "name": "DeleteUrlCacheEntryW",
-            "ordinal": null
+            "name": "DeleteUrlCacheEntryW"
         }
     ],
-    "load_configuration": null,
     "resources_manager": {
         "langs_available": [
             "ENGLISH"
@@ -508,9 +477,6 @@
         "sublangs_available": [
             "ENGLISH_US"
         ],
-        "accelerators": null,
-        "dialogs": null,
-        "html": null,
         "icons": [
             {
                 "icon_id": 1,
@@ -546,7 +512,6 @@
             }
         ],
         "manifest": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\">\n  <assemblyIdentity\n    version=\"1.0.0.0\"\n    processorArchitecture=\"X86\"\n    name=\"CompanyName.ProductName.YourApp\"\n    type=\"win32\" />\n  <description></description>\n  <dependency>\n    <dependentAssembly>\n      <assemblyIdentity\n        type=\"win32\"\n        name=\"Microsoft.Windows.Common-Controls\"\n        version=\"6.0.0.0\"\n        processorArchitecture=\"X86\"\n        publicKeyToken=\"6595b64144ccf1df\"\n        language=\"*\" />\n    </dependentAssembly>\n  </dependency>\n\t<trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v2\">\n    <security>\n      <requestedPrivileges>\n        <requestedExecutionLevel\n          level=\"requireAdministrator\"\n          uiAccess=\"false\"/>\n        </requestedPrivileges>\n       </security>\n  </trustInfo>\n\n</assembly>",
-        "string_table": null,
         "version": {
             "type": 0,
             "fixed_file_info": {
@@ -602,20 +567,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "bc9a5e5323aa6671bd013ad69c3690458e5adb30b66eb42f9718b53f624281bc",
             "entropy": 1.5953173539594547,
@@ -627,20 +583,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "f4de764e0c25d509171cb6881129b0b38fbbc84e774a90108342f4ea55c0cf17",
             "entropy": 1.9608171129370664,
@@ -652,20 +599,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "713831e4b06a6788b4b858e9799a1c84064cfe77ad38669d430e1fc20bf4a379",
             "entropy": 2.20562443846294,
@@ -677,20 +615,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "a881c2d07c959476d513e9d519b8aff6bad067d96fff6549e6e16c5b669fbb3e",
             "entropy": 2.87137727174327,
@@ -702,20 +631,11 @@
             "parent_labels": [
                 "GROUP_ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "d58d7d4bbc58f023d4bb203dd967e15f6681460612b02ad935e7ff3979dc6102",
             "entropy": 2.659823405789291,
@@ -727,20 +647,11 @@
             "parent_labels": [
                 "VERSION"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "87877921cb27b084554e38b52653f17f26bfdc2fcc0947dccb6f98814d766d4d",
             "entropy": 3.2040717008105157,
@@ -752,20 +663,11 @@
             "parent_labels": [
                 "MANIFEST"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "73be60d13be4f58a165c75b1b9706812ebf610f779501c9884dcb829229599b6",
             "entropy": 4.8674020281101,
@@ -892,6 +794,5 @@
     "overlay": {
         "size": 6504,
         "entropy": 7.439576658849639
-    },
-    "relocations": null
+    }
 }

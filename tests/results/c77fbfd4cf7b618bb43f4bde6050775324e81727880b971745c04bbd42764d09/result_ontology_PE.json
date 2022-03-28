@@ -24,7 +24,6 @@
     "optional_header": {
         "addressof_entrypoint": 1866924,
         "baseof_code": 4096,
-        "baseof_data": null,
         "checksum": 3055055,
         "computed_checksum": 3047377,
         "dll_characteristics": 33120,
@@ -173,7 +172,6 @@
         "sha1": "ab720be437524d65e5d1ed5e92d6158618fc9eab",
         "md5": "9bc161b1b7db9a503682ca757816f516"
     },
-    "tls": null,
     "position_independent": true,
     "is_reproducible_build": false,
     "size_of_headers": 1024,
@@ -319,8 +317,7 @@
                 "cv_signature": "PDB_70",
                 "filename": "C:\\MeshAgent\\MeshAgent\\Release\\MeshService64.pdb",
                 "guid": "ce13904-f257-4c78-b319-7cb14d39c369"
-            },
-            "pogo": null
+            }
         },
         {
             "addressof_rawdata": 2780328,
@@ -331,9 +328,7 @@
             "sizeof_data": 20,
             "timestamp": 1630356811,
             "hr_timestamp": "2021-08-30T20:53:31.000000Z",
-            "type": "VC_FEATURE",
-            "code_view": null,
-            "pogo": null
+            "type": "VC_FEATURE"
         },
         {
             "addressof_rawdata": 2780348,
@@ -345,7 +340,6 @@
             "timestamp": 1630356811,
             "hr_timestamp": "2021-08-30T20:53:31.000000Z",
             "type": "POGO",
-            "code_view": null,
             "pogo": {
                 "entries": [
                     {
@@ -561,12 +555,9 @@
             "sizeof_data": 0,
             "timestamp": 1630356811,
             "hr_timestamp": "2021-08-30T20:53:31.000000Z",
-            "type": "ILTCG",
-            "code_view": null,
-            "pogo": null
+            "type": "ILTCG"
         }
     ],
-    "export": null,
     "imports": [
         {
             "library": "dbghelp.dll",
@@ -575,8 +566,7 @@
             "iat_address": 2058864,
             "iat_value": 2869688,
             "is_ordinal": false,
-            "name": "MiniDumpWriteDump",
-            "ordinal": null
+            "name": "MiniDumpWriteDump"
         },
         {
             "library": "dbghelp.dll",
@@ -585,8 +575,7 @@
             "iat_address": 2058872,
             "iat_value": 2869812,
             "is_ordinal": false,
-            "name": "SymFromAddr",
-            "ordinal": null
+            "name": "SymFromAddr"
         },
         {
             "library": "dbghelp.dll",
@@ -595,8 +584,7 @@
             "iat_address": 2058880,
             "iat_value": 2869798,
             "is_ordinal": false,
-            "name": "StackWalk64",
-            "ordinal": null
+            "name": "StackWalk64"
         },
         {
             "library": "dbghelp.dll",
@@ -605,8 +593,7 @@
             "iat_address": 2058888,
             "iat_value": 2869782,
             "is_ordinal": false,
-            "name": "SymInitialize",
-            "ordinal": null
+            "name": "SymInitialize"
         },
         {
             "library": "dbghelp.dll",
@@ -615,8 +602,7 @@
             "iat_address": 2058896,
             "iat_value": 2869754,
             "is_ordinal": false,
-            "name": "SymFunctionTableAccess64",
-            "ordinal": null
+            "name": "SymFunctionTableAccess64"
         },
         {
             "library": "dbghelp.dll",
@@ -625,8 +611,7 @@
             "iat_address": 2058904,
             "iat_value": 2869730,
             "is_ordinal": false,
-            "name": "SymGetLineFromAddr64",
-            "ordinal": null
+            "name": "SymGetLineFromAddr64"
         },
         {
             "library": "dbghelp.dll",
@@ -635,8 +620,7 @@
             "iat_address": 2058912,
             "iat_value": 2869708,
             "is_ordinal": false,
-            "name": "SymGetModuleBase64",
-            "ordinal": null
+            "name": "SymGetModuleBase64"
         },
         {
             "library": "IPHLPAPI.DLL",
@@ -645,8 +629,7 @@
             "iat_address": 2056832,
             "iat_value": 2869838,
             "is_ordinal": false,
-            "name": "GetAdaptersAddresses",
-            "ordinal": null
+            "name": "GetAdaptersAddresses"
         },
         {
             "library": "IPHLPAPI.DLL",
@@ -655,8 +638,7 @@
             "iat_address": 2056840,
             "iat_value": 2869880,
             "is_ordinal": false,
-            "name": "SendARP",
-            "ordinal": null
+            "name": "SendARP"
         },
         {
             "library": "IPHLPAPI.DLL",
@@ -665,8 +647,7 @@
             "iat_address": 2056848,
             "iat_value": 2869890,
             "is_ordinal": false,
-            "name": "ConvertLengthToIpv4Mask",
-            "ordinal": null
+            "name": "ConvertLengthToIpv4Mask"
         },
         {
             "library": "IPHLPAPI.DLL",
@@ -675,8 +656,7 @@
             "iat_address": 2056856,
             "iat_value": 2869862,
             "is_ordinal": false,
-            "name": "GetAdaptersInfo",
-            "ordinal": null
+            "name": "GetAdaptersInfo"
         },
         {
             "library": "WS2_32.dll",
@@ -705,8 +685,7 @@
             "iat_address": 2058600,
             "iat_value": 2869930,
             "is_ordinal": false,
-            "name": "WSASocketW",
-            "ordinal": null
+            "name": "WSASocketW"
         },
         {
             "library": "WS2_32.dll",
@@ -885,8 +864,7 @@
             "iat_address": 2058744,
             "iat_value": 2869944,
             "is_ordinal": false,
-            "name": "WSAIoctl",
-            "ordinal": null
+            "name": "WSAIoctl"
         },
         {
             "library": "WS2_32.dll",
@@ -895,8 +873,7 @@
             "iat_address": 2058752,
             "iat_value": 2869956,
             "is_ordinal": false,
-            "name": "GetAddrInfoW",
-            "ordinal": null
+            "name": "GetAddrInfoW"
         },
         {
             "library": "WS2_32.dll",
@@ -905,8 +882,7 @@
             "iat_address": 2058760,
             "iat_value": 2869972,
             "is_ordinal": false,
-            "name": "WSAResetEvent",
-            "ordinal": null
+            "name": "WSAResetEvent"
         },
         {
             "library": "WS2_32.dll",
@@ -915,8 +891,7 @@
             "iat_address": 2058768,
             "iat_value": 2869988,
             "is_ordinal": false,
-            "name": "WSAEventSelect",
-            "ordinal": null
+            "name": "WSAEventSelect"
         },
         {
             "library": "WS2_32.dll",
@@ -935,8 +910,7 @@
             "iat_address": 2058784,
             "iat_value": 2870006,
             "is_ordinal": false,
-            "name": "WSACreateEvent",
-            "ordinal": null
+            "name": "WSACreateEvent"
         },
         {
             "library": "WS2_32.dll",
@@ -945,8 +919,7 @@
             "iat_address": 2058792,
             "iat_value": 2870024,
             "is_ordinal": false,
-            "name": "WSACloseEvent",
-            "ordinal": null
+            "name": "WSACloseEvent"
         },
         {
             "library": "WS2_32.dll",
@@ -1015,8 +988,7 @@
             "iat_address": 2058848,
             "iat_value": 2870040,
             "is_ordinal": false,
-            "name": "FreeAddrInfoW",
-            "ordinal": null
+            "name": "FreeAddrInfoW"
         },
         {
             "library": "CRYPT32.dll",
@@ -1025,8 +997,7 @@
             "iat_address": 2056544,
             "iat_value": 2875266,
             "is_ordinal": false,
-            "name": "CertEnumCertificatesInStore",
-            "ordinal": null
+            "name": "CertEnumCertificatesInStore"
         },
         {
             "library": "CRYPT32.dll",
@@ -1035,8 +1006,7 @@
             "iat_address": 2056552,
             "iat_value": 2870068,
             "is_ordinal": false,
-            "name": "CertDeleteCertificateFromStore",
-            "ordinal": null
+            "name": "CertDeleteCertificateFromStore"
         },
         {
             "library": "CRYPT32.dll",
@@ -1045,8 +1015,7 @@
             "iat_address": 2056560,
             "iat_value": 2870102,
             "is_ordinal": false,
-            "name": "CryptAcquireCertificatePrivateKey",
-            "ordinal": null
+            "name": "CryptAcquireCertificatePrivateKey"
         },
         {
             "library": "CRYPT32.dll",
@@ -1055,8 +1024,7 @@
             "iat_address": 2056568,
             "iat_value": 2870138,
             "is_ordinal": false,
-            "name": "CertAddEncodedCertificateToStore",
-            "ordinal": null
+            "name": "CertAddEncodedCertificateToStore"
         },
         {
             "library": "CRYPT32.dll",
@@ -1065,8 +1033,7 @@
             "iat_address": 2056576,
             "iat_value": 2870174,
             "is_ordinal": false,
-            "name": "CryptMsgClose",
-            "ordinal": null
+            "name": "CryptMsgClose"
         },
         {
             "library": "CRYPT32.dll",
@@ -1075,8 +1042,7 @@
             "iat_address": 2056584,
             "iat_value": 2870190,
             "is_ordinal": false,
-            "name": "CryptMsgUpdate",
-            "ordinal": null
+            "name": "CryptMsgUpdate"
         },
         {
             "library": "CRYPT32.dll",
@@ -1085,8 +1051,7 @@
             "iat_address": 2056592,
             "iat_value": 2870208,
             "is_ordinal": false,
-            "name": "CryptExportPublicKeyInfo",
-            "ordinal": null
+            "name": "CryptExportPublicKeyInfo"
         },
         {
             "library": "CRYPT32.dll",
@@ -1095,8 +1060,7 @@
             "iat_address": 2056600,
             "iat_value": 2870236,
             "is_ordinal": false,
-            "name": "CertCreateSelfSignCertificate",
-            "ordinal": null
+            "name": "CertCreateSelfSignCertificate"
         },
         {
             "library": "CRYPT32.dll",
@@ -1105,8 +1069,7 @@
             "iat_address": 2056608,
             "iat_value": 2870268,
             "is_ordinal": false,
-            "name": "CertFreeCertificateContext",
-            "ordinal": null
+            "name": "CertFreeCertificateContext"
         },
         {
             "library": "CRYPT32.dll",
@@ -1115,8 +1078,7 @@
             "iat_address": 2056616,
             "iat_value": 2870298,
             "is_ordinal": false,
-            "name": "CryptMsgOpenToEncode",
-            "ordinal": null
+            "name": "CryptMsgOpenToEncode"
         },
         {
             "library": "CRYPT32.dll",
@@ -1125,8 +1087,7 @@
             "iat_address": 2056624,
             "iat_value": 2870322,
             "is_ordinal": false,
-            "name": "CertAddCertificateContextToStore",
-            "ordinal": null
+            "name": "CertAddCertificateContextToStore"
         },
         {
             "library": "CRYPT32.dll",
@@ -1135,8 +1096,7 @@
             "iat_address": 2056632,
             "iat_value": 2870358,
             "is_ordinal": false,
-            "name": "PFXExportCertStore",
-            "ordinal": null
+            "name": "PFXExportCertStore"
         },
         {
             "library": "CRYPT32.dll",
@@ -1145,8 +1105,7 @@
             "iat_address": 2056640,
             "iat_value": 2870380,
             "is_ordinal": false,
-            "name": "CryptSignAndEncodeCertificate",
-            "ordinal": null
+            "name": "CryptSignAndEncodeCertificate"
         },
         {
             "library": "CRYPT32.dll",
@@ -1155,8 +1114,7 @@
             "iat_address": 2056648,
             "iat_value": 2870412,
             "is_ordinal": false,
-            "name": "CertCloseStore",
-            "ordinal": null
+            "name": "CertCloseStore"
         },
         {
             "library": "CRYPT32.dll",
@@ -1165,8 +1123,7 @@
             "iat_address": 2056656,
             "iat_value": 2870430,
             "is_ordinal": false,
-            "name": "CertStrToNameA",
-            "ordinal": null
+            "name": "CertStrToNameA"
         },
         {
             "library": "CRYPT32.dll",
@@ -1175,8 +1132,7 @@
             "iat_address": 2056664,
             "iat_value": 2870448,
             "is_ordinal": false,
-            "name": "CryptMsgGetParam",
-            "ordinal": null
+            "name": "CryptMsgGetParam"
         },
         {
             "library": "CRYPT32.dll",
@@ -1185,8 +1141,7 @@
             "iat_address": 2056672,
             "iat_value": 2870468,
             "is_ordinal": false,
-            "name": "CryptEncodeObject",
-            "ordinal": null
+            "name": "CryptEncodeObject"
         },
         {
             "library": "CRYPT32.dll",
@@ -1195,8 +1150,7 @@
             "iat_address": 2056680,
             "iat_value": 2870488,
             "is_ordinal": false,
-            "name": "CertSetCertificateContextProperty",
-            "ordinal": null
+            "name": "CertSetCertificateContextProperty"
         },
         {
             "library": "CRYPT32.dll",
@@ -1205,8 +1159,7 @@
             "iat_address": 2056688,
             "iat_value": 2870524,
             "is_ordinal": false,
-            "name": "CertFindCertificateInStore",
-            "ordinal": null
+            "name": "CertFindCertificateInStore"
         },
         {
             "library": "CRYPT32.dll",
@@ -1215,8 +1168,7 @@
             "iat_address": 2056696,
             "iat_value": 2870554,
             "is_ordinal": false,
-            "name": "CryptMsgCalculateEncodedLength",
-            "ordinal": null
+            "name": "CryptMsgCalculateEncodedLength"
         },
         {
             "library": "CRYPT32.dll",
@@ -1225,8 +1177,7 @@
             "iat_address": 2056704,
             "iat_value": 2870588,
             "is_ordinal": false,
-            "name": "CertOpenStore",
-            "ordinal": null
+            "name": "CertOpenStore"
         },
         {
             "library": "CRYPT32.dll",
@@ -1235,8 +1186,7 @@
             "iat_address": 2056712,
             "iat_value": 2870604,
             "is_ordinal": false,
-            "name": "CertStrToNameW",
-            "ordinal": null
+            "name": "CertStrToNameW"
         },
         {
             "library": "CRYPT32.dll",
@@ -1245,8 +1195,7 @@
             "iat_address": 2056720,
             "iat_value": 2875296,
             "is_ordinal": false,
-            "name": "CertDuplicateCertificateContext",
-            "ordinal": null
+            "name": "CertDuplicateCertificateContext"
         },
         {
             "library": "CRYPT32.dll",
@@ -1255,8 +1204,7 @@
             "iat_address": 2056728,
             "iat_value": 2875330,
             "is_ordinal": false,
-            "name": "CertGetCertificateContextProperty",
-            "ordinal": null
+            "name": "CertGetCertificateContextProperty"
         },
         {
             "library": "VERSION.dll",
@@ -1265,8 +1213,7 @@
             "iat_address": 2058552,
             "iat_value": 2870634,
             "is_ordinal": false,
-            "name": "GetFileVersionInfoSizeW",
-            "ordinal": null
+            "name": "GetFileVersionInfoSizeW"
         },
         {
             "library": "VERSION.dll",
@@ -1275,8 +1222,7 @@
             "iat_address": 2058560,
             "iat_value": 2870678,
             "is_ordinal": false,
-            "name": "GetFileVersionInfoW",
-            "ordinal": null
+            "name": "GetFileVersionInfoW"
         },
         {
             "library": "VERSION.dll",
@@ -1285,8 +1231,7 @@
             "iat_address": 2058568,
             "iat_value": 2870660,
             "is_ordinal": false,
-            "name": "VerQueryValueA",
-            "ordinal": null
+            "name": "VerQueryValueA"
         },
         {
             "library": "gdiplus.dll",
@@ -1295,8 +1240,7 @@
             "iat_address": 2058928,
             "iat_value": 2870852,
             "is_ordinal": false,
-            "name": "GdipGetImageEncoders",
-            "ordinal": null
+            "name": "GdipGetImageEncoders"
         },
         {
             "library": "gdiplus.dll",
@@ -1305,8 +1249,7 @@
             "iat_address": 2058936,
             "iat_value": 2870834,
             "is_ordinal": false,
-            "name": "GdipCloneImage",
-            "ordinal": null
+            "name": "GdipCloneImage"
         },
         {
             "library": "gdiplus.dll",
@@ -1315,8 +1258,7 @@
             "iat_address": 2058944,
             "iat_value": 2870894,
             "is_ordinal": false,
-            "name": "GdiplusStartup",
-            "ordinal": null
+            "name": "GdiplusStartup"
         },
         {
             "library": "gdiplus.dll",
@@ -1325,8 +1267,7 @@
             "iat_address": 2058952,
             "iat_value": 2870822,
             "is_ordinal": false,
-            "name": "GdipAlloc",
-            "ordinal": null
+            "name": "GdipAlloc"
         },
         {
             "library": "gdiplus.dll",
@@ -1335,8 +1276,7 @@
             "iat_address": 2058960,
             "iat_value": 2870802,
             "is_ordinal": false,
-            "name": "GdipDisposeImage",
-            "ordinal": null
+            "name": "GdipDisposeImage"
         },
         {
             "library": "gdiplus.dll",
@@ -1345,8 +1285,7 @@
             "iat_address": 2058968,
             "iat_value": 2870790,
             "is_ordinal": false,
-            "name": "GdipFree",
-            "ordinal": null
+            "name": "GdipFree"
         },
         {
             "library": "gdiplus.dll",
@@ -1355,8 +1294,7 @@
             "iat_address": 2058976,
             "iat_value": 2870762,
             "is_ordinal": false,
-            "name": "GdipGetImageEncodersSize",
-            "ordinal": null
+            "name": "GdipGetImageEncodersSize"
         },
         {
             "library": "gdiplus.dll",
@@ -1365,8 +1303,7 @@
             "iat_address": 2058984,
             "iat_value": 2870738,
             "is_ordinal": false,
-            "name": "GdipSaveImageToStream",
-            "ordinal": null
+            "name": "GdipSaveImageToStream"
         },
         {
             "library": "gdiplus.dll",
@@ -1375,8 +1312,7 @@
             "iat_address": 2058992,
             "iat_value": 2870876,
             "is_ordinal": false,
-            "name": "GdiplusShutdown",
-            "ordinal": null
+            "name": "GdiplusShutdown"
         },
         {
             "library": "gdiplus.dll",
@@ -1385,8 +1321,7 @@
             "iat_address": 2059000,
             "iat_value": 2870712,
             "is_ordinal": false,
-            "name": "GdipLoadImageFromStream",
-            "ordinal": null
+            "name": "GdipLoadImageFromStream"
         },
         {
             "library": "ncrypt.dll",
@@ -1395,8 +1330,7 @@
             "iat_address": 2059016,
             "iat_value": 2870924,
             "is_ordinal": false,
-            "name": "NCryptFinalizeKey",
-            "ordinal": null
+            "name": "NCryptFinalizeKey"
         },
         {
             "library": "ncrypt.dll",
@@ -1405,8 +1339,7 @@
             "iat_address": 2059024,
             "iat_value": 2870944,
             "is_ordinal": false,
-            "name": "BCryptOpenAlgorithmProvider",
-            "ordinal": null
+            "name": "BCryptOpenAlgorithmProvider"
         },
         {
             "library": "ncrypt.dll",
@@ -1415,8 +1348,7 @@
             "iat_address": 2059032,
             "iat_value": 2870974,
             "is_ordinal": false,
-            "name": "NCryptOpenStorageProvider",
-            "ordinal": null
+            "name": "NCryptOpenStorageProvider"
         },
         {
             "library": "ncrypt.dll",
@@ -1425,8 +1357,7 @@
             "iat_address": 2059040,
             "iat_value": 2871052,
             "is_ordinal": false,
-            "name": "NCryptCreatePersistedKey",
-            "ordinal": null
+            "name": "NCryptCreatePersistedKey"
         },
         {
             "library": "ncrypt.dll",
@@ -1435,8 +1366,7 @@
             "iat_address": 2059048,
             "iat_value": 2871080,
             "is_ordinal": false,
-            "name": "NCryptFreeObject",
-            "ordinal": null
+            "name": "NCryptFreeObject"
         },
         {
             "library": "ncrypt.dll",
@@ -1445,8 +1375,7 @@
             "iat_address": 2059056,
             "iat_value": 2871100,
             "is_ordinal": false,
-            "name": "NCryptSetProperty",
-            "ordinal": null
+            "name": "NCryptSetProperty"
         },
         {
             "library": "ncrypt.dll",
@@ -1455,8 +1384,7 @@
             "iat_address": 2059064,
             "iat_value": 2871020,
             "is_ordinal": false,
-            "name": "BCryptCloseAlgorithmProvider",
-            "ordinal": null
+            "name": "BCryptCloseAlgorithmProvider"
         },
         {
             "library": "ncrypt.dll",
@@ -1465,8 +1393,7 @@
             "iat_address": 2059072,
             "iat_value": 2871002,
             "is_ordinal": false,
-            "name": "BCryptGenRandom",
-            "ordinal": null
+            "name": "BCryptGenRandom"
         },
         {
             "library": "KERNEL32.dll",
@@ -1475,8 +1402,7 @@
             "iat_address": 2056872,
             "iat_value": 2875412,
             "is_ordinal": false,
-            "name": "UnhandledExceptionFilter",
-            "ordinal": null
+            "name": "UnhandledExceptionFilter"
         },
         {
             "library": "KERNEL32.dll",
@@ -1485,8 +1411,7 @@
             "iat_address": 2056880,
             "iat_value": 2875392,
             "is_ordinal": false,
-            "name": "RtlVirtualUnwind",
-            "ordinal": null
+            "name": "RtlVirtualUnwind"
         },
         {
             "library": "KERNEL32.dll",
@@ -1495,8 +1420,7 @@
             "iat_address": 2056888,
             "iat_value": 2875366,
             "is_ordinal": false,
-            "name": "RtlLookupFunctionEntry",
-            "ordinal": null
+            "name": "RtlLookupFunctionEntry"
         },
         {
             "library": "KERNEL32.dll",
@@ -1505,8 +1429,7 @@
             "iat_address": 2056896,
             "iat_value": 2875552,
             "is_ordinal": false,
-            "name": "EnterCriticalSection",
-            "ordinal": null
+            "name": "EnterCriticalSection"
         },
         {
             "library": "KERNEL32.dll",
@@ -1515,8 +1438,7 @@
             "iat_address": 2056904,
             "iat_value": 2875576,
             "is_ordinal": false,
-            "name": "LeaveCriticalSection",
-            "ordinal": null
+            "name": "LeaveCriticalSection"
         },
         {
             "library": "KERNEL32.dll",
@@ -1525,8 +1447,7 @@
             "iat_address": 2056912,
             "iat_value": 2875600,
             "is_ordinal": false,
-            "name": "DeleteCriticalSection",
-            "ordinal": null
+            "name": "DeleteCriticalSection"
         },
         {
             "library": "KERNEL32.dll",
@@ -1535,8 +1456,7 @@
             "iat_address": 2056920,
             "iat_value": 2875624,
             "is_ordinal": false,
-            "name": "InitializeCriticalSectionAndSpinCount",
-            "ordinal": null
+            "name": "InitializeCriticalSectionAndSpinCount"
         },
         {
             "library": "KERNEL32.dll",
@@ -1545,8 +1465,7 @@
             "iat_address": 2056928,
             "iat_value": 2875664,
             "is_ordinal": false,
-            "name": "TlsAlloc",
-            "ordinal": null
+            "name": "TlsAlloc"
         },
         {
             "library": "KERNEL32.dll",
@@ -1555,8 +1474,7 @@
             "iat_address": 2056936,
             "iat_value": 2875676,
             "is_ordinal": false,
-            "name": "TlsGetValue",
-            "ordinal": null
+            "name": "TlsGetValue"
         },
         {
             "library": "KERNEL32.dll",
@@ -1565,8 +1483,7 @@
             "iat_address": 2056944,
             "iat_value": 2875690,
             "is_ordinal": false,
-            "name": "TlsSetValue",
-            "ordinal": null
+            "name": "TlsSetValue"
         },
         {
             "library": "KERNEL32.dll",
@@ -1575,8 +1492,7 @@
             "iat_address": 2056952,
             "iat_value": 2871132,
             "is_ordinal": false,
-            "name": "GetFullPathNameW",
-            "ordinal": null
+            "name": "GetFullPathNameW"
         },
         {
             "library": "KERNEL32.dll",
@@ -1585,8 +1501,7 @@
             "iat_address": 2056960,
             "iat_value": 2871152,
             "is_ordinal": false,
-            "name": "GetStdHandle",
-            "ordinal": null
+            "name": "GetStdHandle"
         },
         {
             "library": "KERNEL32.dll",
@@ -1595,8 +1510,7 @@
             "iat_address": 2056968,
             "iat_value": 2871168,
             "is_ordinal": false,
-            "name": "WriteFile",
-            "ordinal": null
+            "name": "WriteFile"
         },
         {
             "library": "KERNEL32.dll",
@@ -1605,8 +1519,7 @@
             "iat_address": 2056976,
             "iat_value": 2871180,
             "is_ordinal": false,
-            "name": "LoadLibraryExA",
-            "ordinal": null
+            "name": "LoadLibraryExA"
         },
         {
             "library": "KERNEL32.dll",
@@ -1615,8 +1528,7 @@
             "iat_address": 2056984,
             "iat_value": 2871198,
             "is_ordinal": false,
-            "name": "GetModuleFileNameW",
-            "ordinal": null
+            "name": "GetModuleFileNameW"
         },
         {
             "library": "KERNEL32.dll",
@@ -1625,8 +1537,7 @@
             "iat_address": 2056992,
             "iat_value": 2871220,
             "is_ordinal": false,
-            "name": "GetSystemPowerStatus",
-            "ordinal": null
+            "name": "GetSystemPowerStatus"
         },
         {
             "library": "KERNEL32.dll",
@@ -1635,8 +1546,7 @@
             "iat_address": 2057000,
             "iat_value": 2871244,
             "is_ordinal": false,
-            "name": "OpenProcess",
-            "ordinal": null
+            "name": "OpenProcess"
         },
         {
             "library": "KERNEL32.dll",
@@ -1645,8 +1555,7 @@
             "iat_address": 2057008,
             "iat_value": 2871258,
             "is_ordinal": false,
-            "name": "MultiByteToWideChar",
-            "ordinal": null
+            "name": "MultiByteToWideChar"
         },
         {
             "library": "KERNEL32.dll",
@@ -1655,8 +1564,7 @@
             "iat_address": 2057016,
             "iat_value": 2871280,
             "is_ordinal": false,
-            "name": "Sleep",
-            "ordinal": null
+            "name": "Sleep"
         },
         {
             "library": "KERNEL32.dll",
@@ -1665,8 +1573,7 @@
             "iat_address": 2057024,
             "iat_value": 2871288,
             "is_ordinal": false,
-            "name": "GetLastError",
-            "ordinal": null
+            "name": "GetLastError"
         },
         {
             "library": "KERNEL32.dll",
@@ -1675,8 +1582,7 @@
             "iat_address": 2057032,
             "iat_value": 2871304,
             "is_ordinal": false,
-            "name": "CloseHandle",
-            "ordinal": null
+            "name": "CloseHandle"
         },
         {
             "library": "KERNEL32.dll",
@@ -1685,8 +1591,7 @@
             "iat_address": 2057040,
             "iat_value": 2871318,
             "is_ordinal": false,
-            "name": "GetCurrentDirectoryW",
-            "ordinal": null
+            "name": "GetCurrentDirectoryW"
         },
         {
             "library": "KERNEL32.dll",
@@ -1695,8 +1600,7 @@
             "iat_address": 2057048,
             "iat_value": 2871342,
             "is_ordinal": false,
-            "name": "SetCurrentDirectoryW",
-            "ordinal": null
+            "name": "SetCurrentDirectoryW"
         },
         {
             "library": "KERNEL32.dll",
@@ -1705,8 +1609,7 @@
             "iat_address": 2057056,
             "iat_value": 2871366,
             "is_ordinal": false,
-            "name": "GetProcAddress",
-            "ordinal": null
+            "name": "GetProcAddress"
         },
         {
             "library": "KERNEL32.dll",
@@ -1715,8 +1618,7 @@
             "iat_address": 2057064,
             "iat_value": 2871384,
             "is_ordinal": false,
-            "name": "SetEnvironmentVariableA",
-            "ordinal": null
+            "name": "SetEnvironmentVariableA"
         },
         {
             "library": "KERNEL32.dll",
@@ -1725,8 +1627,7 @@
             "iat_address": 2057072,
             "iat_value": 2871410,
             "is_ordinal": false,
-            "name": "CreateProcessW",
-            "ordinal": null
+            "name": "CreateProcessW"
         },
         {
             "library": "KERNEL32.dll",
@@ -1735,8 +1636,7 @@
             "iat_address": 2057080,
             "iat_value": 2871428,
             "is_ordinal": false,
-            "name": "FreeLibrary",
-            "ordinal": null
+            "name": "FreeLibrary"
         },
         {
             "library": "KERNEL32.dll",
@@ -1745,8 +1645,7 @@
             "iat_address": 2057088,
             "iat_value": 2871442,
             "is_ordinal": false,
-            "name": "WideCharToMultiByte",
-            "ordinal": null
+            "name": "WideCharToMultiByte"
         },
         {
             "library": "KERNEL32.dll",
@@ -1755,8 +1654,7 @@
             "iat_address": 2057096,
             "iat_value": 2871464,
             "is_ordinal": false,
-            "name": "WaitForSingleObject",
-            "ordinal": null
+            "name": "WaitForSingleObject"
         },
         {
             "library": "KERNEL32.dll",
@@ -1765,8 +1663,7 @@
             "iat_address": 2057104,
             "iat_value": 2871486,
             "is_ordinal": false,
-            "name": "GetCurrentThreadId",
-            "ordinal": null
+            "name": "GetCurrentThreadId"
         },
         {
             "library": "KERNEL32.dll",
@@ -1775,8 +1672,7 @@
             "iat_address": 2057112,
             "iat_value": 2871508,
             "is_ordinal": false,
-            "name": "GetModuleHandleA",
-            "ordinal": null
+            "name": "GetModuleHandleA"
         },
         {
             "library": "KERNEL32.dll",
@@ -1785,8 +1681,7 @@
             "iat_address": 2057120,
             "iat_value": 2871528,
             "is_ordinal": false,
-            "name": "CreateThread",
-            "ordinal": null
+            "name": "CreateThread"
         },
         {
             "library": "KERNEL32.dll",
@@ -1795,8 +1690,7 @@
             "iat_address": 2057128,
             "iat_value": 2871544,
             "is_ordinal": false,
-            "name": "QueueUserAPC",
-            "ordinal": null
+            "name": "QueueUserAPC"
         },
         {
             "library": "KERNEL32.dll",
@@ -1805,8 +1699,7 @@
             "iat_address": 2057136,
             "iat_value": 2871560,
             "is_ordinal": false,
-            "name": "OpenThread",
-            "ordinal": null
+            "name": "OpenThread"
         },
         {
             "library": "KERNEL32.dll",
@@ -1815,8 +1708,7 @@
             "iat_address": 2057144,
             "iat_value": 2871574,
             "is_ordinal": false,
-            "name": "ReadFile",
-            "ordinal": null
+            "name": "ReadFile"
         },
         {
             "library": "KERNEL32.dll",
@@ -1825,8 +1717,7 @@
             "iat_address": 2057152,
             "iat_value": 2871586,
             "is_ordinal": false,
-            "name": "LoadLibraryA",
-            "ordinal": null
+            "name": "LoadLibraryA"
         },
         {
             "library": "KERNEL32.dll",
@@ -1835,8 +1726,7 @@
             "iat_address": 2057160,
             "iat_value": 2871602,
             "is_ordinal": false,
-            "name": "SleepEx",
-            "ordinal": null
+            "name": "SleepEx"
         },
         {
             "library": "KERNEL32.dll",
@@ -1845,8 +1735,7 @@
             "iat_address": 2057168,
             "iat_value": 2871612,
             "is_ordinal": false,
-            "name": "SetSystemPowerState",
-            "ordinal": null
+            "name": "SetSystemPowerState"
         },
         {
             "library": "KERNEL32.dll",
@@ -1855,8 +1744,7 @@
             "iat_address": 2057176,
             "iat_value": 2871634,
             "is_ordinal": false,
-            "name": "GetCurrentProcess",
-            "ordinal": null
+            "name": "GetCurrentProcess"
         },
         {
             "library": "KERNEL32.dll",
@@ -1865,8 +1753,7 @@
             "iat_address": 2057184,
             "iat_value": 2871654,
             "is_ordinal": false,
-            "name": "SetThreadExecutionState",
-            "ordinal": null
+            "name": "SetThreadExecutionState"
         },
         {
             "library": "KERNEL32.dll",
@@ -1875,8 +1762,7 @@
             "iat_address": 2057192,
             "iat_value": 2871680,
             "is_ordinal": false,
-            "name": "HeapFree",
-            "ordinal": null
+            "name": "HeapFree"
         },
         {
             "library": "KERNEL32.dll",
@@ -1885,8 +1771,7 @@
             "iat_address": 2057200,
             "iat_value": 2875704,
             "is_ordinal": false,
-            "name": "TlsFree",
-            "ordinal": null
+            "name": "TlsFree"
         },
         {
             "library": "KERNEL32.dll",
@@ -1895,8 +1780,7 @@
             "iat_address": 2057208,
             "iat_value": 2871704,
             "is_ordinal": false,
-            "name": "GetProcessHeap",
-            "ordinal": null
+            "name": "GetProcessHeap"
         },
         {
             "library": "KERNEL32.dll",
@@ -1905,8 +1789,7 @@
             "iat_address": 2057216,
             "iat_value": 2871722,
             "is_ordinal": false,
-            "name": "SystemTimeToFileTime",
-            "ordinal": null
+            "name": "SystemTimeToFileTime"
         },
         {
             "library": "KERNEL32.dll",
@@ -1915,8 +1798,7 @@
             "iat_address": 2057224,
             "iat_value": 2871746,
             "is_ordinal": false,
-            "name": "GetSystemTime",
-            "ordinal": null
+            "name": "GetSystemTime"
         },
         {
             "library": "KERNEL32.dll",
@@ -1925,8 +1807,7 @@
             "iat_address": 2057232,
             "iat_value": 2871762,
             "is_ordinal": false,
-            "name": "FileTimeToSystemTime",
-            "ordinal": null
+            "name": "FileTimeToSystemTime"
         },
         {
             "library": "KERNEL32.dll",
@@ -1935,8 +1816,7 @@
             "iat_address": 2057240,
             "iat_value": 2871786,
             "is_ordinal": false,
-            "name": "QueryPerformanceFrequency",
-            "ordinal": null
+            "name": "QueryPerformanceFrequency"
         },
         {
             "library": "KERNEL32.dll",
@@ -1945,8 +1825,7 @@
             "iat_address": 2057248,
             "iat_value": 2871814,
             "is_ordinal": false,
-            "name": "SystemTimeToTzSpecificLocalTime",
-            "ordinal": null
+            "name": "SystemTimeToTzSpecificLocalTime"
         },
         {
             "library": "KERNEL32.dll",
@@ -1955,8 +1834,7 @@
             "iat_address": 2057256,
             "iat_value": 2871848,
             "is_ordinal": false,
-            "name": "QueryPerformanceCounter",
-            "ordinal": null
+            "name": "QueryPerformanceCounter"
         },
         {
             "library": "KERNEL32.dll",
@@ -1965,8 +1843,7 @@
             "iat_address": 2057264,
             "iat_value": 2871874,
             "is_ordinal": false,
-            "name": "ReleaseSemaphore",
-            "ordinal": null
+            "name": "ReleaseSemaphore"
         },
         {
             "library": "KERNEL32.dll",
@@ -1975,8 +1852,7 @@
             "iat_address": 2057272,
             "iat_value": 2871894,
             "is_ordinal": false,
-            "name": "CreateSemaphoreA",
-            "ordinal": null
+            "name": "CreateSemaphoreA"
         },
         {
             "library": "KERNEL32.dll",
@@ -1985,8 +1861,7 @@
             "iat_address": 2057280,
             "iat_value": 2871914,
             "is_ordinal": false,
-            "name": "CancelIo",
-            "ordinal": null
+            "name": "CancelIo"
         },
         {
             "library": "KERNEL32.dll",
@@ -1995,8 +1870,7 @@
             "iat_address": 2057288,
             "iat_value": 2871926,
             "is_ordinal": false,
-            "name": "FindFirstFileW",
-            "ordinal": null
+            "name": "FindFirstFileW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2005,8 +1879,7 @@
             "iat_address": 2057296,
             "iat_value": 2871944,
             "is_ordinal": false,
-            "name": "FindNextFileW",
-            "ordinal": null
+            "name": "FindNextFileW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2015,8 +1888,7 @@
             "iat_address": 2057304,
             "iat_value": 2871960,
             "is_ordinal": false,
-            "name": "RemoveDirectoryW",
-            "ordinal": null
+            "name": "RemoveDirectoryW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2025,8 +1897,7 @@
             "iat_address": 2057312,
             "iat_value": 2871980,
             "is_ordinal": false,
-            "name": "GetFinalPathNameByHandleW",
-            "ordinal": null
+            "name": "GetFinalPathNameByHandleW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2035,8 +1906,7 @@
             "iat_address": 2057320,
             "iat_value": 2872008,
             "is_ordinal": false,
-            "name": "GetDriveTypeA",
-            "ordinal": null
+            "name": "GetDriveTypeA"
         },
         {
             "library": "KERNEL32.dll",
@@ -2045,8 +1915,7 @@
             "iat_address": 2057328,
             "iat_value": 2872024,
             "is_ordinal": false,
-            "name": "SetFilePointer",
-            "ordinal": null
+            "name": "SetFilePointer"
         },
         {
             "library": "KERNEL32.dll",
@@ -2055,8 +1924,7 @@
             "iat_address": 2057336,
             "iat_value": 2872042,
             "is_ordinal": false,
-            "name": "FindFirstVolumeA",
-            "ordinal": null
+            "name": "FindFirstVolumeA"
         },
         {
             "library": "KERNEL32.dll",
@@ -2065,8 +1933,7 @@
             "iat_address": 2057344,
             "iat_value": 2872062,
             "is_ordinal": false,
-            "name": "FindClose",
-            "ordinal": null
+            "name": "FindClose"
         },
         {
             "library": "KERNEL32.dll",
@@ -2075,8 +1942,7 @@
             "iat_address": 2057352,
             "iat_value": 2872074,
             "is_ordinal": false,
-            "name": "CreateFileW",
-            "ordinal": null
+            "name": "CreateFileW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2085,8 +1951,7 @@
             "iat_address": 2057360,
             "iat_value": 2872088,
             "is_ordinal": false,
-            "name": "GetVolumePathNamesForVolumeNameA",
-            "ordinal": null
+            "name": "GetVolumePathNamesForVolumeNameA"
         },
         {
             "library": "KERNEL32.dll",
@@ -2095,8 +1960,7 @@
             "iat_address": 2057368,
             "iat_value": 2872124,
             "is_ordinal": false,
-            "name": "GetFileAttributesExW",
-            "ordinal": null
+            "name": "GetFileAttributesExW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2105,8 +1969,7 @@
             "iat_address": 2057376,
             "iat_value": 2872148,
             "is_ordinal": false,
-            "name": "ReadDirectoryChangesW",
-            "ordinal": null
+            "name": "ReadDirectoryChangesW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2115,8 +1978,7 @@
             "iat_address": 2057384,
             "iat_value": 2872172,
             "is_ordinal": false,
-            "name": "FindNextVolumeA",
-            "ordinal": null
+            "name": "FindNextVolumeA"
         },
         {
             "library": "KERNEL32.dll",
@@ -2125,8 +1987,7 @@
             "iat_address": 2057392,
             "iat_value": 2872190,
             "is_ordinal": false,
-            "name": "FindVolumeClose",
-            "ordinal": null
+            "name": "FindVolumeClose"
         },
         {
             "library": "KERNEL32.dll",
@@ -2135,8 +1996,7 @@
             "iat_address": 2057400,
             "iat_value": 2872208,
             "is_ordinal": false,
-            "name": "GetDiskFreeSpaceExA",
-            "ordinal": null
+            "name": "GetDiskFreeSpaceExA"
         },
         {
             "library": "KERNEL32.dll",
@@ -2145,8 +2005,7 @@
             "iat_address": 2057408,
             "iat_value": 2872230,
             "is_ordinal": false,
-            "name": "CreateEventA",
-            "ordinal": null
+            "name": "CreateEventA"
         },
         {
             "library": "KERNEL32.dll",
@@ -2155,8 +2014,7 @@
             "iat_address": 2057416,
             "iat_value": 2872246,
             "is_ordinal": false,
-            "name": "GetModuleHandleExA",
-            "ordinal": null
+            "name": "GetModuleHandleExA"
         },
         {
             "library": "KERNEL32.dll",
@@ -2165,8 +2023,7 @@
             "iat_address": 2057424,
             "iat_value": 2872268,
             "is_ordinal": false,
-            "name": "WaitForMultipleObjectsEx",
-            "ordinal": null
+            "name": "WaitForMultipleObjectsEx"
         },
         {
             "library": "KERNEL32.dll",
@@ -2175,8 +2032,7 @@
             "iat_address": 2057432,
             "iat_value": 2872296,
             "is_ordinal": false,
-            "name": "CreateNamedPipeA",
-            "ordinal": null
+            "name": "CreateNamedPipeA"
         },
         {
             "library": "KERNEL32.dll",
@@ -2185,8 +2041,7 @@
             "iat_address": 2057440,
             "iat_value": 2872316,
             "is_ordinal": false,
-            "name": "DisconnectNamedPipe",
-            "ordinal": null
+            "name": "DisconnectNamedPipe"
         },
         {
             "library": "KERNEL32.dll",
@@ -2195,8 +2050,7 @@
             "iat_address": 2057448,
             "iat_value": 2872338,
             "is_ordinal": false,
-            "name": "CreateFileA",
-            "ordinal": null
+            "name": "CreateFileA"
         },
         {
             "library": "KERNEL32.dll",
@@ -2205,8 +2059,7 @@
             "iat_address": 2057456,
             "iat_value": 2872352,
             "is_ordinal": false,
-            "name": "CancelIoEx",
-            "ordinal": null
+            "name": "CancelIoEx"
         },
         {
             "library": "KERNEL32.dll",
@@ -2215,8 +2068,7 @@
             "iat_address": 2057464,
             "iat_value": 2872366,
             "is_ordinal": false,
-            "name": "LocalFree",
-            "ordinal": null
+            "name": "LocalFree"
         },
         {
             "library": "KERNEL32.dll",
@@ -2225,8 +2077,7 @@
             "iat_address": 2057472,
             "iat_value": 2872378,
             "is_ordinal": false,
-            "name": "ConnectNamedPipe",
-            "ordinal": null
+            "name": "ConnectNamedPipe"
         },
         {
             "library": "KERNEL32.dll",
@@ -2235,8 +2086,7 @@
             "iat_address": 2057480,
             "iat_value": 2872398,
             "is_ordinal": false,
-            "name": "SetConsoleOutputCP",
-            "ordinal": null
+            "name": "SetConsoleOutputCP"
         },
         {
             "library": "KERNEL32.dll",
@@ -2245,8 +2095,7 @@
             "iat_address": 2057488,
             "iat_value": 2872420,
             "is_ordinal": false,
-            "name": "IsDebuggerPresent",
-            "ordinal": null
+            "name": "IsDebuggerPresent"
         },
         {
             "library": "KERNEL32.dll",
@@ -2255,8 +2104,7 @@
             "iat_address": 2057496,
             "iat_value": 2875440,
             "is_ordinal": false,
-            "name": "SetUnhandledExceptionFilter",
-            "ordinal": null
+            "name": "SetUnhandledExceptionFilter"
         },
         {
             "library": "KERNEL32.dll",
@@ -2265,8 +2113,7 @@
             "iat_address": 2057504,
             "iat_value": 2872456,
             "is_ordinal": false,
-            "name": "CancelSynchronousIo",
-            "ordinal": null
+            "name": "CancelSynchronousIo"
         },
         {
             "library": "KERNEL32.dll",
@@ -2275,8 +2122,7 @@
             "iat_address": 2057512,
             "iat_value": 2872478,
             "is_ordinal": false,
-            "name": "SetEvent",
-            "ordinal": null
+            "name": "SetEvent"
         },
         {
             "library": "KERNEL32.dll",
@@ -2285,8 +2131,7 @@
             "iat_address": 2057520,
             "iat_value": 2872490,
             "is_ordinal": false,
-            "name": "WaitForSingleObjectEx",
-            "ordinal": null
+            "name": "WaitForSingleObjectEx"
         },
         {
             "library": "KERNEL32.dll",
@@ -2295,8 +2140,7 @@
             "iat_address": 2057528,
             "iat_value": 2872514,
             "is_ordinal": false,
-            "name": "ResetEvent",
-            "ordinal": null
+            "name": "ResetEvent"
         },
         {
             "library": "KERNEL32.dll",
@@ -2305,8 +2149,7 @@
             "iat_address": 2057536,
             "iat_value": 2872528,
             "is_ordinal": false,
-            "name": "GetThreadId",
-            "ordinal": null
+            "name": "GetThreadId"
         },
         {
             "library": "KERNEL32.dll",
@@ -2315,8 +2158,7 @@
             "iat_address": 2057544,
             "iat_value": 2872542,
             "is_ordinal": false,
-            "name": "GetCurrentProcessId",
-            "ordinal": null
+            "name": "GetCurrentProcessId"
         },
         {
             "library": "KERNEL32.dll",
@@ -2325,8 +2167,7 @@
             "iat_address": 2057552,
             "iat_value": 2872564,
             "is_ordinal": false,
-            "name": "GetEnvironmentStrings",
-            "ordinal": null
+            "name": "GetEnvironmentStrings"
         },
         {
             "library": "KERNEL32.dll",
@@ -2335,8 +2176,7 @@
             "iat_address": 2057560,
             "iat_value": 2872588,
             "is_ordinal": false,
-            "name": "FreeEnvironmentStringsA",
-            "ordinal": null
+            "name": "FreeEnvironmentStringsA"
         },
         {
             "library": "KERNEL32.dll",
@@ -2345,8 +2185,7 @@
             "iat_address": 2057568,
             "iat_value": 2872614,
             "is_ordinal": false,
-            "name": "CopyFileW",
-            "ordinal": null
+            "name": "CopyFileW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2355,8 +2194,7 @@
             "iat_address": 2057576,
             "iat_value": 2872626,
             "is_ordinal": false,
-            "name": "RtlCaptureContext",
-            "ordinal": null
+            "name": "RtlCaptureContext"
         },
         {
             "library": "KERNEL32.dll",
@@ -2365,8 +2203,7 @@
             "iat_address": 2057584,
             "iat_value": 2872646,
             "is_ordinal": false,
-            "name": "SuspendThread",
-            "ordinal": null
+            "name": "SuspendThread"
         },
         {
             "library": "KERNEL32.dll",
@@ -2375,8 +2212,7 @@
             "iat_address": 2057592,
             "iat_value": 2872662,
             "is_ordinal": false,
-            "name": "ResumeThread",
-            "ordinal": null
+            "name": "ResumeThread"
         },
         {
             "library": "KERNEL32.dll",
@@ -2385,8 +2221,7 @@
             "iat_address": 2057600,
             "iat_value": 2872678,
             "is_ordinal": false,
-            "name": "DuplicateHandle",
-            "ordinal": null
+            "name": "DuplicateHandle"
         },
         {
             "library": "KERNEL32.dll",
@@ -2395,8 +2230,7 @@
             "iat_address": 2057608,
             "iat_value": 2872696,
             "is_ordinal": false,
-            "name": "GetTickCount64",
-            "ordinal": null
+            "name": "GetTickCount64"
         },
         {
             "library": "KERNEL32.dll",
@@ -2405,8 +2239,7 @@
             "iat_address": 2057616,
             "iat_value": 2872714,
             "is_ordinal": false,
-            "name": "GetCurrentThread",
-            "ordinal": null
+            "name": "GetCurrentThread"
         },
         {
             "library": "KERNEL32.dll",
@@ -2415,8 +2248,7 @@
             "iat_address": 2057624,
             "iat_value": 2872734,
             "is_ordinal": false,
-            "name": "GetOverlappedResult",
-            "ordinal": null
+            "name": "GetOverlappedResult"
         },
         {
             "library": "KERNEL32.dll",
@@ -2425,8 +2257,7 @@
             "iat_address": 2057632,
             "iat_value": 2872756,
             "is_ordinal": false,
-            "name": "GetThreadContext",
-            "ordinal": null
+            "name": "GetThreadContext"
         },
         {
             "library": "KERNEL32.dll",
@@ -2435,8 +2266,7 @@
             "iat_address": 2057640,
             "iat_value": 2872776,
             "is_ordinal": false,
-            "name": "TerminateProcess",
-            "ordinal": null
+            "name": "TerminateProcess"
         },
         {
             "library": "KERNEL32.dll",
@@ -2445,8 +2275,7 @@
             "iat_address": 2057648,
             "iat_value": 2872796,
             "is_ordinal": false,
-            "name": "WTSGetActiveConsoleSessionId",
-            "ordinal": null
+            "name": "WTSGetActiveConsoleSessionId"
         },
         {
             "library": "KERNEL32.dll",
@@ -2455,8 +2284,7 @@
             "iat_address": 2057656,
             "iat_value": 2872828,
             "is_ordinal": false,
-            "name": "GetExitCodeProcess",
-            "ordinal": null
+            "name": "GetExitCodeProcess"
         },
         {
             "library": "KERNEL32.dll",
@@ -2465,8 +2293,7 @@
             "iat_address": 2057664,
             "iat_value": 2872850,
             "is_ordinal": false,
-            "name": "SetEndOfFile",
-            "ordinal": null
+            "name": "SetEndOfFile"
         },
         {
             "library": "KERNEL32.dll",
@@ -2475,8 +2302,7 @@
             "iat_address": 2057672,
             "iat_value": 2872866,
             "is_ordinal": false,
-            "name": "DeleteFileW",
-            "ordinal": null
+            "name": "DeleteFileW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2485,8 +2311,7 @@
             "iat_address": 2057680,
             "iat_value": 2872880,
             "is_ordinal": false,
-            "name": "SetFilePointerEx",
-            "ordinal": null
+            "name": "SetFilePointerEx"
         },
         {
             "library": "KERNEL32.dll",
@@ -2495,8 +2320,7 @@
             "iat_address": 2057688,
             "iat_value": 2872900,
             "is_ordinal": false,
-            "name": "SetConsoleCtrlHandler",
-            "ordinal": null
+            "name": "SetConsoleCtrlHandler"
         },
         {
             "library": "KERNEL32.dll",
@@ -2505,8 +2329,7 @@
             "iat_address": 2057696,
             "iat_value": 2872924,
             "is_ordinal": false,
-            "name": "FreeConsole",
-            "ordinal": null
+            "name": "FreeConsole"
         },
         {
             "library": "KERNEL32.dll",
@@ -2515,8 +2338,7 @@
             "iat_address": 2057704,
             "iat_value": 2872938,
             "is_ordinal": false,
-            "name": "SetLastError",
-            "ordinal": null
+            "name": "SetLastError"
         },
         {
             "library": "KERNEL32.dll",
@@ -2525,8 +2347,7 @@
             "iat_address": 2057712,
             "iat_value": 2872954,
             "is_ordinal": false,
-            "name": "GetFileType",
-            "ordinal": null
+            "name": "GetFileType"
         },
         {
             "library": "KERNEL32.dll",
@@ -2535,8 +2356,7 @@
             "iat_address": 2057720,
             "iat_value": 2876266,
             "is_ordinal": false,
-            "name": "EncodePointer",
-            "ordinal": null
+            "name": "EncodePointer"
         },
         {
             "library": "KERNEL32.dll",
@@ -2545,8 +2365,7 @@
             "iat_address": 2057728,
             "iat_value": 2872988,
             "is_ordinal": false,
-            "name": "SwitchToFiber",
-            "ordinal": null
+            "name": "SwitchToFiber"
         },
         {
             "library": "KERNEL32.dll",
@@ -2555,8 +2374,7 @@
             "iat_address": 2057736,
             "iat_value": 2873004,
             "is_ordinal": false,
-            "name": "DeleteFiber",
-            "ordinal": null
+            "name": "DeleteFiber"
         },
         {
             "library": "KERNEL32.dll",
@@ -2565,8 +2383,7 @@
             "iat_address": 2057744,
             "iat_value": 2873018,
             "is_ordinal": false,
-            "name": "CreateFiber",
-            "ordinal": null
+            "name": "CreateFiber"
         },
         {
             "library": "KERNEL32.dll",
@@ -2575,8 +2392,7 @@
             "iat_address": 2057752,
             "iat_value": 2873032,
             "is_ordinal": false,
-            "name": "GetSystemTimeAsFileTime",
-            "ordinal": null
+            "name": "GetSystemTimeAsFileTime"
         },
         {
             "library": "KERNEL32.dll",
@@ -2585,8 +2401,7 @@
             "iat_address": 2057760,
             "iat_value": 2873058,
             "is_ordinal": false,
-            "name": "ConvertFiberToThread",
-            "ordinal": null
+            "name": "ConvertFiberToThread"
         },
         {
             "library": "KERNEL32.dll",
@@ -2595,8 +2410,7 @@
             "iat_address": 2057768,
             "iat_value": 2873082,
             "is_ordinal": false,
-            "name": "ConvertThreadToFiber",
-            "ordinal": null
+            "name": "ConvertThreadToFiber"
         },
         {
             "library": "KERNEL32.dll",
@@ -2605,8 +2419,7 @@
             "iat_address": 2057776,
             "iat_value": 2873106,
             "is_ordinal": false,
-            "name": "GetEnvironmentVariableW",
-            "ordinal": null
+            "name": "GetEnvironmentVariableW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2615,8 +2428,7 @@
             "iat_address": 2057784,
             "iat_value": 2873132,
             "is_ordinal": false,
-            "name": "GetConsoleMode",
-            "ordinal": null
+            "name": "GetConsoleMode"
         },
         {
             "library": "KERNEL32.dll",
@@ -2625,8 +2437,7 @@
             "iat_address": 2057792,
             "iat_value": 2873150,
             "is_ordinal": false,
-            "name": "ReadConsoleA",
-            "ordinal": null
+            "name": "ReadConsoleA"
         },
         {
             "library": "KERNEL32.dll",
@@ -2635,8 +2446,7 @@
             "iat_address": 2057800,
             "iat_value": 2873166,
             "is_ordinal": false,
-            "name": "ReadConsoleW",
-            "ordinal": null
+            "name": "ReadConsoleW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2645,8 +2455,7 @@
             "iat_address": 2057808,
             "iat_value": 2873182,
             "is_ordinal": false,
-            "name": "SetConsoleMode",
-            "ordinal": null
+            "name": "SetConsoleMode"
         },
         {
             "library": "KERNEL32.dll",
@@ -2655,8 +2464,7 @@
             "iat_address": 2057816,
             "iat_value": 2875714,
             "is_ordinal": false,
-            "name": "LoadLibraryExW",
-            "ordinal": null
+            "name": "LoadLibraryExW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2665,8 +2473,7 @@
             "iat_address": 2057824,
             "iat_value": 2875732,
             "is_ordinal": false,
-            "name": "ExitProcess",
-            "ordinal": null
+            "name": "ExitProcess"
         },
         {
             "library": "KERNEL32.dll",
@@ -2675,8 +2482,7 @@
             "iat_address": 2057832,
             "iat_value": 2875746,
             "is_ordinal": false,
-            "name": "GetModuleHandleExW",
-            "ordinal": null
+            "name": "GetModuleHandleExW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2685,8 +2491,7 @@
             "iat_address": 2057840,
             "iat_value": 2875768,
             "is_ordinal": false,
-            "name": "CreateDirectoryW",
-            "ordinal": null
+            "name": "CreateDirectoryW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2695,8 +2500,7 @@
             "iat_address": 2057848,
             "iat_value": 2875788,
             "is_ordinal": false,
-            "name": "GetConsoleCP",
-            "ordinal": null
+            "name": "GetConsoleCP"
         },
         {
             "library": "KERNEL32.dll",
@@ -2705,8 +2509,7 @@
             "iat_address": 2057856,
             "iat_value": 2875804,
             "is_ordinal": false,
-            "name": "MoveFileExW",
-            "ordinal": null
+            "name": "MoveFileExW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2715,8 +2518,7 @@
             "iat_address": 2057864,
             "iat_value": 2875818,
             "is_ordinal": false,
-            "name": "SetEnvironmentVariableW",
-            "ordinal": null
+            "name": "SetEnvironmentVariableW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2725,8 +2527,7 @@
             "iat_address": 2057872,
             "iat_value": 2875844,
             "is_ordinal": false,
-            "name": "GetTimeZoneInformation",
-            "ordinal": null
+            "name": "GetTimeZoneInformation"
         },
         {
             "library": "KERNEL32.dll",
@@ -2735,8 +2536,7 @@
             "iat_address": 2057880,
             "iat_value": 2875870,
             "is_ordinal": false,
-            "name": "SetStdHandle",
-            "ordinal": null
+            "name": "SetStdHandle"
         },
         {
             "library": "KERNEL32.dll",
@@ -2745,8 +2545,7 @@
             "iat_address": 2057888,
             "iat_value": 2875886,
             "is_ordinal": false,
-            "name": "GetDriveTypeW",
-            "ordinal": null
+            "name": "GetDriveTypeW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2755,8 +2554,7 @@
             "iat_address": 2057896,
             "iat_value": 2875902,
             "is_ordinal": false,
-            "name": "PeekNamedPipe",
-            "ordinal": null
+            "name": "PeekNamedPipe"
         },
         {
             "library": "KERNEL32.dll",
@@ -2765,8 +2563,7 @@
             "iat_address": 2057904,
             "iat_value": 2875918,
             "is_ordinal": false,
-            "name": "GetCommandLineA",
-            "ordinal": null
+            "name": "GetCommandLineA"
         },
         {
             "library": "KERNEL32.dll",
@@ -2775,8 +2572,7 @@
             "iat_address": 2057912,
             "iat_value": 2875936,
             "is_ordinal": false,
-            "name": "GetCommandLineW",
-            "ordinal": null
+            "name": "GetCommandLineW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2785,8 +2581,7 @@
             "iat_address": 2057920,
             "iat_value": 2875954,
             "is_ordinal": false,
-            "name": "GetACP",
-            "ordinal": null
+            "name": "GetACP"
         },
         {
             "library": "KERNEL32.dll",
@@ -2795,8 +2590,7 @@
             "iat_address": 2057928,
             "iat_value": 2875964,
             "is_ordinal": false,
-            "name": "GetDateFormatW",
-            "ordinal": null
+            "name": "GetDateFormatW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2805,8 +2599,7 @@
             "iat_address": 2057936,
             "iat_value": 2875982,
             "is_ordinal": false,
-            "name": "GetTimeFormatW",
-            "ordinal": null
+            "name": "GetTimeFormatW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2815,8 +2608,7 @@
             "iat_address": 2057944,
             "iat_value": 2876000,
             "is_ordinal": false,
-            "name": "CompareStringW",
-            "ordinal": null
+            "name": "CompareStringW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2825,8 +2617,7 @@
             "iat_address": 2057952,
             "iat_value": 2876018,
             "is_ordinal": false,
-            "name": "LCMapStringW",
-            "ordinal": null
+            "name": "LCMapStringW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2835,8 +2626,7 @@
             "iat_address": 2057960,
             "iat_value": 2876034,
             "is_ordinal": false,
-            "name": "GetStringTypeW",
-            "ordinal": null
+            "name": "GetStringTypeW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2845,8 +2635,7 @@
             "iat_address": 2057968,
             "iat_value": 2876052,
             "is_ordinal": false,
-            "name": "HeapReAlloc",
-            "ordinal": null
+            "name": "HeapReAlloc"
         },
         {
             "library": "KERNEL32.dll",
@@ -2855,8 +2644,7 @@
             "iat_address": 2057976,
             "iat_value": 2876066,
             "is_ordinal": false,
-            "name": "FlushFileBuffers",
-            "ordinal": null
+            "name": "FlushFileBuffers"
         },
         {
             "library": "KERNEL32.dll",
@@ -2865,8 +2653,7 @@
             "iat_address": 2057984,
             "iat_value": 2876086,
             "is_ordinal": false,
-            "name": "WriteConsoleW",
-            "ordinal": null
+            "name": "WriteConsoleW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2875,8 +2662,7 @@
             "iat_address": 2057992,
             "iat_value": 2876102,
             "is_ordinal": false,
-            "name": "GetCPInfo",
-            "ordinal": null
+            "name": "GetCPInfo"
         },
         {
             "library": "KERNEL32.dll",
@@ -2885,8 +2671,7 @@
             "iat_address": 2058000,
             "iat_value": 2876114,
             "is_ordinal": false,
-            "name": "FindFirstFileExW",
-            "ordinal": null
+            "name": "FindFirstFileExW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2895,8 +2680,7 @@
             "iat_address": 2058008,
             "iat_value": 2875470,
             "is_ordinal": false,
-            "name": "IsProcessorFeaturePresent",
-            "ordinal": null
+            "name": "IsProcessorFeaturePresent"
         },
         {
             "library": "KERNEL32.dll",
@@ -2905,8 +2689,7 @@
             "iat_address": 2058016,
             "iat_value": 2875498,
             "is_ordinal": false,
-            "name": "InitializeSListHead",
-            "ordinal": null
+            "name": "InitializeSListHead"
         },
         {
             "library": "KERNEL32.dll",
@@ -2915,8 +2698,7 @@
             "iat_address": 2058024,
             "iat_value": 2875520,
             "is_ordinal": false,
-            "name": "GetStartupInfoW",
-            "ordinal": null
+            "name": "GetStartupInfoW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2925,8 +2707,7 @@
             "iat_address": 2058032,
             "iat_value": 2872440,
             "is_ordinal": false,
-            "name": "GetTempPathW",
-            "ordinal": null
+            "name": "GetTempPathW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2935,8 +2716,7 @@
             "iat_address": 2058040,
             "iat_value": 2875538,
             "is_ordinal": false,
-            "name": "RtlUnwindEx",
-            "ordinal": null
+            "name": "RtlUnwindEx"
         },
         {
             "library": "KERNEL32.dll",
@@ -2945,8 +2725,7 @@
             "iat_address": 2058048,
             "iat_value": 2876134,
             "is_ordinal": false,
-            "name": "IsValidCodePage",
-            "ordinal": null
+            "name": "IsValidCodePage"
         },
         {
             "library": "KERNEL32.dll",
@@ -2955,8 +2734,7 @@
             "iat_address": 2058056,
             "iat_value": 2876152,
             "is_ordinal": false,
-            "name": "GetOEMCP",
-            "ordinal": null
+            "name": "GetOEMCP"
         },
         {
             "library": "KERNEL32.dll",
@@ -2965,8 +2743,7 @@
             "iat_address": 2058064,
             "iat_value": 2876164,
             "is_ordinal": false,
-            "name": "GetEnvironmentStringsW",
-            "ordinal": null
+            "name": "GetEnvironmentStringsW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2975,8 +2752,7 @@
             "iat_address": 2058072,
             "iat_value": 2876190,
             "is_ordinal": false,
-            "name": "FreeEnvironmentStringsW",
-            "ordinal": null
+            "name": "FreeEnvironmentStringsW"
         },
         {
             "library": "KERNEL32.dll",
@@ -2985,8 +2761,7 @@
             "iat_address": 2058080,
             "iat_value": 2876216,
             "is_ordinal": false,
-            "name": "RaiseException",
-            "ordinal": null
+            "name": "RaiseException"
         },
         {
             "library": "KERNEL32.dll",
@@ -2995,8 +2770,7 @@
             "iat_address": 2058088,
             "iat_value": 2876234,
             "is_ordinal": false,
-            "name": "HeapSize",
-            "ordinal": null
+            "name": "HeapSize"
         },
         {
             "library": "KERNEL32.dll",
@@ -3005,8 +2779,7 @@
             "iat_address": 2058096,
             "iat_value": 2876246,
             "is_ordinal": false,
-            "name": "RtlPcToFileHeader",
-            "ordinal": null
+            "name": "RtlPcToFileHeader"
         },
         {
             "library": "KERNEL32.dll",
@@ -3015,8 +2788,7 @@
             "iat_address": 2058104,
             "iat_value": 2871692,
             "is_ordinal": false,
-            "name": "HeapAlloc",
-            "ordinal": null
+            "name": "HeapAlloc"
         },
         {
             "library": "KERNEL32.dll",
@@ -3025,8 +2797,7 @@
             "iat_address": 2058112,
             "iat_value": 2872968,
             "is_ordinal": false,
-            "name": "GetModuleHandleW",
-            "ordinal": null
+            "name": "GetModuleHandleW"
         },
         {
             "library": "USER32.dll",
@@ -3035,8 +2806,7 @@
             "iat_address": 2058176,
             "iat_value": 2873918,
             "is_ordinal": false,
-            "name": "GetWindowPlacement",
-            "ordinal": null
+            "name": "GetWindowPlacement"
         },
         {
             "library": "USER32.dll",
@@ -3045,8 +2815,7 @@
             "iat_address": 2058184,
             "iat_value": 2873904,
             "is_ordinal": false,
-            "name": "ShowWindow",
-            "ordinal": null
+            "name": "ShowWindow"
         },
         {
             "library": "USER32.dll",
@@ -3055,8 +2824,7 @@
             "iat_address": 2058192,
             "iat_value": 2873882,
             "is_ordinal": false,
-            "name": "SetWindowPlacement",
-            "ordinal": null
+            "name": "SetWindowPlacement"
         },
         {
             "library": "USER32.dll",
@@ -3065,8 +2833,7 @@
             "iat_address": 2058200,
             "iat_value": 2873864,
             "is_ordinal": false,
-            "name": "SetWindowTextA",
-            "ordinal": null
+            "name": "SetWindowTextA"
         },
         {
             "library": "USER32.dll",
@@ -3075,8 +2842,7 @@
             "iat_address": 2058208,
             "iat_value": 2873850,
             "is_ordinal": false,
-            "name": "GetDlgItem",
-            "ordinal": null
+            "name": "GetDlgItem"
         },
         {
             "library": "USER32.dll",
@@ -3085,8 +2851,7 @@
             "iat_address": 2058216,
             "iat_value": 2873832,
             "is_ordinal": false,
-            "name": "DialogBoxParamW",
-            "ordinal": null
+            "name": "DialogBoxParamW"
         },
         {
             "library": "USER32.dll",
@@ -3095,8 +2860,7 @@
             "iat_address": 2058224,
             "iat_value": 2873816,
             "is_ordinal": false,
-            "name": "EnableWindow",
-            "ordinal": null
+            "name": "EnableWindow"
         },
         {
             "library": "USER32.dll",
@@ -3105,8 +2869,7 @@
             "iat_address": 2058232,
             "iat_value": 2873802,
             "is_ordinal": false,
-            "name": "MessageBeep",
-            "ordinal": null
+            "name": "MessageBeep"
         },
         {
             "library": "USER32.dll",
@@ -3115,8 +2878,7 @@
             "iat_address": 2058240,
             "iat_value": 2873786,
             "is_ordinal": false,
-            "name": "ExitWindowsEx",
-            "ordinal": null
+            "name": "ExitWindowsEx"
         },
         {
             "library": "USER32.dll",
@@ -3125,8 +2887,7 @@
             "iat_address": 2058248,
             "iat_value": 2873758,
             "is_ordinal": false,
-            "name": "GetUserObjectInformationA",
-            "ordinal": null
+            "name": "GetUserObjectInformationA"
         },
         {
             "library": "USER32.dll",
@@ -3135,8 +2896,7 @@
             "iat_address": 2058256,
             "iat_value": 2873736,
             "is_ordinal": false,
-            "name": "EnumDisplayMonitors",
-            "ordinal": null
+            "name": "EnumDisplayMonitors"
         },
         {
             "library": "USER32.dll",
@@ -3145,8 +2905,7 @@
             "iat_address": 2058264,
             "iat_value": 2873716,
             "is_ordinal": false,
-            "name": "GetSystemMetrics",
-            "ordinal": null
+            "name": "GetSystemMetrics"
         },
         {
             "library": "USER32.dll",
@@ -3155,8 +2914,7 @@
             "iat_address": 2058272,
             "iat_value": 2873696,
             "is_ordinal": false,
-            "name": "SetThreadDesktop",
-            "ordinal": null
+            "name": "SetThreadDesktop"
         },
         {
             "library": "USER32.dll",
@@ -3165,8 +2923,7 @@
             "iat_address": 2058280,
             "iat_value": 2873676,
             "is_ordinal": false,
-            "name": "GetThreadDesktop",
-            "ordinal": null
+            "name": "GetThreadDesktop"
         },
         {
             "library": "USER32.dll",
@@ -3175,8 +2932,7 @@
             "iat_address": 2058288,
             "iat_value": 2873660,
             "is_ordinal": false,
-            "name": "CloseDesktop",
-            "ordinal": null
+            "name": "CloseDesktop"
         },
         {
             "library": "USER32.dll",
@@ -3185,8 +2941,7 @@
             "iat_address": 2058296,
             "iat_value": 2873646,
             "is_ordinal": false,
-            "name": "BlockInput",
-            "ordinal": null
+            "name": "BlockInput"
         },
         {
             "library": "USER32.dll",
@@ -3195,8 +2950,7 @@
             "iat_address": 2058304,
             "iat_value": 2873628,
             "is_ordinal": false,
-            "name": "GetMonitorInfoA",
-            "ordinal": null
+            "name": "GetMonitorInfoA"
         },
         {
             "library": "USER32.dll",
@@ -3205,8 +2959,7 @@
             "iat_address": 2058312,
             "iat_value": 2873608,
             "is_ordinal": false,
-            "name": "OpenInputDesktop",
-            "ordinal": null
+            "name": "OpenInputDesktop"
         },
         {
             "library": "USER32.dll",
@@ -3215,8 +2968,7 @@
             "iat_address": 2058320,
             "iat_value": 2873594,
             "is_ordinal": false,
-            "name": "GetMessageA",
-            "ordinal": null
+            "name": "GetMessageA"
         },
         {
             "library": "USER32.dll",
@@ -3225,8 +2977,7 @@
             "iat_address": 2058328,
             "iat_value": 2873572,
             "is_ordinal": false,
-            "name": "GetMessageExtraInfo",
-            "ordinal": null
+            "name": "GetMessageExtraInfo"
         },
         {
             "library": "USER32.dll",
@@ -3235,8 +2986,7 @@
             "iat_address": 2058336,
             "iat_value": 2873940,
             "is_ordinal": false,
-            "name": "SetWindowTextW",
-            "ordinal": null
+            "name": "SetWindowTextW"
         },
         {
             "library": "USER32.dll",
@@ -3245,8 +2995,7 @@
             "iat_address": 2058344,
             "iat_value": 2873538,
             "is_ordinal": false,
-            "name": "LoadCursorA",
-            "ordinal": null
+            "name": "LoadCursorA"
         },
         {
             "library": "USER32.dll",
@@ -3255,8 +3004,7 @@
             "iat_address": 2058352,
             "iat_value": 2873522,
             "is_ordinal": false,
-            "name": "DestroyWindow",
-            "ordinal": null
+            "name": "DestroyWindow"
         },
         {
             "library": "USER32.dll",
@@ -3265,8 +3013,7 @@
             "iat_address": 2058360,
             "iat_value": 2873514,
             "is_ordinal": false,
-            "name": "GetDC",
-            "ordinal": null
+            "name": "GetDC"
         },
         {
             "library": "USER32.dll",
@@ -3275,8 +3022,7 @@
             "iat_address": 2058368,
             "iat_value": 2873498,
             "is_ordinal": false,
-            "name": "PostMessageA",
-            "ordinal": null
+            "name": "PostMessageA"
         },
         {
             "library": "USER32.dll",
@@ -3285,8 +3031,7 @@
             "iat_address": 2058376,
             "iat_value": 2873484,
             "is_ordinal": false,
-            "name": "GetIconInfo",
-            "ordinal": null
+            "name": "GetIconInfo"
         },
         {
             "library": "USER32.dll",
@@ -3295,8 +3040,7 @@
             "iat_address": 2058384,
             "iat_value": 2873468,
             "is_ordinal": false,
-            "name": "GetCursorInfo",
-            "ordinal": null
+            "name": "GetCursorInfo"
         },
         {
             "library": "USER32.dll",
@@ -3305,8 +3049,7 @@
             "iat_address": 2058392,
             "iat_value": 2873450,
             "is_ordinal": false,
-            "name": "MapVirtualKeyA",
-            "ordinal": null
+            "name": "MapVirtualKeyA"
         },
         {
             "library": "USER32.dll",
@@ -3315,8 +3058,7 @@
             "iat_address": 2058400,
             "iat_value": 2873428,
             "is_ordinal": false,
-            "name": "GetForegroundWindow",
-            "ordinal": null
+            "name": "GetForegroundWindow"
         },
         {
             "library": "USER32.dll",
@@ -3325,8 +3067,7 @@
             "iat_address": 2058408,
             "iat_value": 2873410,
             "is_ordinal": false,
-            "name": "DefWindowProcA",
-            "ordinal": null
+            "name": "DefWindowProcA"
         },
         {
             "library": "USER32.dll",
@@ -3335,8 +3076,7 @@
             "iat_address": 2058416,
             "iat_value": 2873392,
             "is_ordinal": false,
-            "name": "CreateWindowExA",
-            "ordinal": null
+            "name": "CreateWindowExA"
         },
         {
             "library": "USER32.dll",
@@ -3345,8 +3085,7 @@
             "iat_address": 2058424,
             "iat_value": 2873372,
             "is_ordinal": false,
-            "name": "TranslateMessage",
-            "ordinal": null
+            "name": "TranslateMessage"
         },
         {
             "library": "USER32.dll",
@@ -3355,8 +3094,7 @@
             "iat_address": 2058432,
             "iat_value": 2873352,
             "is_ordinal": false,
-            "name": "UnregisterClassA",
-            "ordinal": null
+            "name": "UnregisterClassA"
         },
         {
             "library": "USER32.dll",
@@ -3365,8 +3103,7 @@
             "iat_address": 2058440,
             "iat_value": 2873338,
             "is_ordinal": false,
-            "name": "DrawIconEx",
-            "ordinal": null
+            "name": "DrawIconEx"
         },
         {
             "library": "USER32.dll",
@@ -3375,8 +3112,7 @@
             "iat_address": 2058448,
             "iat_value": 2873320,
             "is_ordinal": false,
-            "name": "SetWinEventHook",
-            "ordinal": null
+            "name": "SetWinEventHook"
         },
         {
             "library": "USER32.dll",
@@ -3385,8 +3121,7 @@
             "iat_address": 2058456,
             "iat_value": 2873300,
             "is_ordinal": false,
-            "name": "RegisterClassExA",
-            "ordinal": null
+            "name": "RegisterClassExA"
         },
         {
             "library": "USER32.dll",
@@ -3395,8 +3130,7 @@
             "iat_address": 2058464,
             "iat_value": 2873282,
             "is_ordinal": false,
-            "name": "UnhookWinEvent",
-            "ordinal": null
+            "name": "UnhookWinEvent"
         },
         {
             "library": "USER32.dll",
@@ -3405,8 +3139,7 @@
             "iat_address": 2058472,
             "iat_value": 2873260,
             "is_ordinal": false,
-            "name": "SetForegroundWindow",
-            "ordinal": null
+            "name": "SetForegroundWindow"
         },
         {
             "library": "USER32.dll",
@@ -3415,8 +3148,7 @@
             "iat_address": 2058480,
             "iat_value": 2873248,
             "is_ordinal": false,
-            "name": "ReleaseDC",
-            "ordinal": null
+            "name": "ReleaseDC"
         },
         {
             "library": "USER32.dll",
@@ -3425,8 +3157,7 @@
             "iat_address": 2058488,
             "iat_value": 2873236,
             "is_ordinal": false,
-            "name": "SendInput",
-            "ordinal": null
+            "name": "SendInput"
         },
         {
             "library": "USER32.dll",
@@ -3435,8 +3166,7 @@
             "iat_address": 2058496,
             "iat_value": 2873214,
             "is_ordinal": false,
-            "name": "SetProcessDPIAware",
-            "ordinal": null
+            "name": "SetProcessDPIAware"
         },
         {
             "library": "USER32.dll",
@@ -3445,8 +3175,7 @@
             "iat_address": 2058504,
             "iat_value": 2873958,
             "is_ordinal": false,
-            "name": "EndDialog",
-            "ordinal": null
+            "name": "EndDialog"
         },
         {
             "library": "USER32.dll",
@@ -3455,8 +3184,7 @@
             "iat_address": 2058512,
             "iat_value": 2873970,
             "is_ordinal": false,
-            "name": "GetProcessWindowStation",
-            "ordinal": null
+            "name": "GetProcessWindowStation"
         },
         {
             "library": "USER32.dll",
@@ -3465,8 +3193,7 @@
             "iat_address": 2058520,
             "iat_value": 2873996,
             "is_ordinal": false,
-            "name": "GetUserObjectInformationW",
-            "ordinal": null
+            "name": "GetUserObjectInformationW"
         },
         {
             "library": "USER32.dll",
@@ -3475,8 +3202,7 @@
             "iat_address": 2058528,
             "iat_value": 2874024,
             "is_ordinal": false,
-            "name": "MessageBoxW",
-            "ordinal": null
+            "name": "MessageBoxW"
         },
         {
             "library": "USER32.dll",
@@ -3485,8 +3211,7 @@
             "iat_address": 2058536,
             "iat_value": 2873552,
             "is_ordinal": false,
-            "name": "DispatchMessageA",
-            "ordinal": null
+            "name": "DispatchMessageA"
         },
         {
             "library": "GDI32.dll",
@@ -3495,8 +3220,7 @@
             "iat_address": 2056744,
             "iat_value": 2874080,
             "is_ordinal": false,
-            "name": "GetDIBits",
-            "ordinal": null
+            "name": "GetDIBits"
         },
         {
             "library": "GDI32.dll",
@@ -3505,8 +3229,7 @@
             "iat_address": 2056752,
             "iat_value": 2874202,
             "is_ordinal": false,
-            "name": "BitBlt",
-            "ordinal": null
+            "name": "BitBlt"
         },
         {
             "library": "GDI32.dll",
@@ -3515,8 +3238,7 @@
             "iat_address": 2056760,
             "iat_value": 2874188,
             "is_ordinal": false,
-            "name": "StretchBlt",
-            "ordinal": null
+            "name": "StretchBlt"
         },
         {
             "library": "GDI32.dll",
@@ -3525,8 +3247,7 @@
             "iat_address": 2056768,
             "iat_value": 2874176,
             "is_ordinal": false,
-            "name": "DeleteDC",
-            "ordinal": null
+            "name": "DeleteDC"
         },
         {
             "library": "GDI32.dll",
@@ -3535,8 +3256,7 @@
             "iat_address": 2056776,
             "iat_value": 2874156,
             "is_ordinal": false,
-            "name": "SetStretchBltMode",
-            "ordinal": null
+            "name": "SetStretchBltMode"
         },
         {
             "library": "GDI32.dll",
@@ -3545,8 +3265,7 @@
             "iat_address": 2056784,
             "iat_value": 2874130,
             "is_ordinal": false,
-            "name": "CreateCompatibleBitmap",
-            "ordinal": null
+            "name": "CreateCompatibleBitmap"
         },
         {
             "library": "GDI32.dll",
@@ -3555,8 +3274,7 @@
             "iat_address": 2056792,
             "iat_value": 2874114,
             "is_ordinal": false,
-            "name": "SelectObject",
-            "ordinal": null
+            "name": "SelectObject"
         },
         {
             "library": "GDI32.dll",
@@ -3565,8 +3283,7 @@
             "iat_address": 2056800,
             "iat_value": 2874050,
             "is_ordinal": false,
-            "name": "GetObjectA",
-            "ordinal": null
+            "name": "GetObjectA"
         },
         {
             "library": "GDI32.dll",
@@ -3575,8 +3292,7 @@
             "iat_address": 2056808,
             "iat_value": 2874064,
             "is_ordinal": false,
-            "name": "DeleteObject",
-            "ordinal": null
+            "name": "DeleteObject"
         },
         {
             "library": "GDI32.dll",
@@ -3585,8 +3301,7 @@
             "iat_address": 2056816,
             "iat_value": 2874092,
             "is_ordinal": false,
-            "name": "CreateCompatibleDC",
-            "ordinal": null
+            "name": "CreateCompatibleDC"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3595,8 +3310,7 @@
             "iat_address": 2056192,
             "iat_value": 2874860,
             "is_ordinal": false,
-            "name": "DeregisterEventSource",
-            "ordinal": null
+            "name": "DeregisterEventSource"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3605,8 +3319,7 @@
             "iat_address": 2056200,
             "iat_value": 2874968,
             "is_ordinal": false,
-            "name": "CryptGetProvParam",
-            "ordinal": null
+            "name": "CryptGetProvParam"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3615,8 +3328,7 @@
             "iat_address": 2056208,
             "iat_value": 2874948,
             "is_ordinal": false,
-            "name": "CryptSetHashParam",
-            "ordinal": null
+            "name": "CryptSetHashParam"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3625,8 +3337,7 @@
             "iat_address": 2056216,
             "iat_value": 2875096,
             "is_ordinal": false,
-            "name": "CryptEnumProvidersW",
-            "ordinal": null
+            "name": "CryptEnumProvidersW"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3635,8 +3346,7 @@
             "iat_address": 2056224,
             "iat_value": 2875078,
             "is_ordinal": false,
-            "name": "CryptSignHashW",
-            "ordinal": null
+            "name": "CryptSignHashW"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3645,8 +3355,7 @@
             "iat_address": 2056232,
             "iat_value": 2875058,
             "is_ordinal": false,
-            "name": "CryptDestroyHash",
-            "ordinal": null
+            "name": "CryptDestroyHash"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3655,8 +3364,7 @@
             "iat_address": 2056240,
             "iat_value": 2875040,
             "is_ordinal": false,
-            "name": "CryptCreateHash",
-            "ordinal": null
+            "name": "CryptCreateHash"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3665,8 +3373,7 @@
             "iat_address": 2056248,
             "iat_value": 2875024,
             "is_ordinal": false,
-            "name": "CryptDecrypt",
-            "ordinal": null
+            "name": "CryptDecrypt"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3675,8 +3382,7 @@
             "iat_address": 2056256,
             "iat_value": 2875006,
             "is_ordinal": false,
-            "name": "CryptExportKey",
-            "ordinal": null
+            "name": "CryptExportKey"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3685,8 +3391,7 @@
             "iat_address": 2056264,
             "iat_value": 2874222,
             "is_ordinal": false,
-            "name": "RegDeleteValueA",
-            "ordinal": null
+            "name": "RegDeleteValueA"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3695,8 +3400,7 @@
             "iat_address": 2056272,
             "iat_value": 2874240,
             "is_ordinal": false,
-            "name": "RegCreateKeyW",
-            "ordinal": null
+            "name": "RegCreateKeyW"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3705,8 +3409,7 @@
             "iat_address": 2056280,
             "iat_value": 2874256,
             "is_ordinal": false,
-            "name": "RegOpenKeyExA",
-            "ordinal": null
+            "name": "RegOpenKeyExA"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3715,8 +3418,7 @@
             "iat_address": 2056288,
             "iat_value": 2874272,
             "is_ordinal": false,
-            "name": "RegSetValueExA",
-            "ordinal": null
+            "name": "RegSetValueExA"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3725,8 +3427,7 @@
             "iat_address": 2056296,
             "iat_value": 2874290,
             "is_ordinal": false,
-            "name": "RegQueryValueExA",
-            "ordinal": null
+            "name": "RegQueryValueExA"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3735,8 +3436,7 @@
             "iat_address": 2056304,
             "iat_value": 2874310,
             "is_ordinal": false,
-            "name": "RegDeleteKeyA",
-            "ordinal": null
+            "name": "RegDeleteKeyA"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3745,8 +3445,7 @@
             "iat_address": 2056312,
             "iat_value": 2874326,
             "is_ordinal": false,
-            "name": "RegCloseKey",
-            "ordinal": null
+            "name": "RegCloseKey"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3755,8 +3454,7 @@
             "iat_address": 2056320,
             "iat_value": 2874340,
             "is_ordinal": false,
-            "name": "OpenProcessToken",
-            "ordinal": null
+            "name": "OpenProcessToken"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3765,8 +3463,7 @@
             "iat_address": 2056328,
             "iat_value": 2874360,
             "is_ordinal": false,
-            "name": "InitiateSystemShutdownA",
-            "ordinal": null
+            "name": "InitiateSystemShutdownA"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3775,8 +3472,7 @@
             "iat_address": 2056336,
             "iat_value": 2874386,
             "is_ordinal": false,
-            "name": "LookupPrivilegeValueA",
-            "ordinal": null
+            "name": "LookupPrivilegeValueA"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3785,8 +3481,7 @@
             "iat_address": 2056344,
             "iat_value": 2874410,
             "is_ordinal": false,
-            "name": "AdjustTokenPrivileges",
-            "ordinal": null
+            "name": "AdjustTokenPrivileges"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3795,8 +3490,7 @@
             "iat_address": 2056352,
             "iat_value": 2874434,
             "is_ordinal": false,
-            "name": "CryptReleaseContext",
-            "ordinal": null
+            "name": "CryptReleaseContext"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3805,8 +3499,7 @@
             "iat_address": 2056360,
             "iat_value": 2874456,
             "is_ordinal": false,
-            "name": "RegSetValueExW",
-            "ordinal": null
+            "name": "RegSetValueExW"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3815,8 +3508,7 @@
             "iat_address": 2056368,
             "iat_value": 2874474,
             "is_ordinal": false,
-            "name": "CryptDestroyKey",
-            "ordinal": null
+            "name": "CryptDestroyKey"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3825,8 +3517,7 @@
             "iat_address": 2056376,
             "iat_value": 2874492,
             "is_ordinal": false,
-            "name": "InitializeSecurityDescriptor",
-            "ordinal": null
+            "name": "InitializeSecurityDescriptor"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3835,8 +3526,7 @@
             "iat_address": 2056384,
             "iat_value": 2874524,
             "is_ordinal": false,
-            "name": "SetEntriesInAclA",
-            "ordinal": null
+            "name": "SetEntriesInAclA"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3845,8 +3535,7 @@
             "iat_address": 2056392,
             "iat_value": 2874544,
             "is_ordinal": false,
-            "name": "SetSecurityDescriptorDacl",
-            "ordinal": null
+            "name": "SetSecurityDescriptorDacl"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3855,8 +3544,7 @@
             "iat_address": 2056400,
             "iat_value": 2874572,
             "is_ordinal": false,
-            "name": "DuplicateTokenEx",
-            "ordinal": null
+            "name": "DuplicateTokenEx"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3865,8 +3553,7 @@
             "iat_address": 2056408,
             "iat_value": 2874592,
             "is_ordinal": false,
-            "name": "CreateProcessAsUserW",
-            "ordinal": null
+            "name": "CreateProcessAsUserW"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3875,8 +3562,7 @@
             "iat_address": 2056416,
             "iat_value": 2874616,
             "is_ordinal": false,
-            "name": "SetTokenInformation",
-            "ordinal": null
+            "name": "SetTokenInformation"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3885,8 +3571,7 @@
             "iat_address": 2056424,
             "iat_value": 2874638,
             "is_ordinal": false,
-            "name": "OpenServiceA",
-            "ordinal": null
+            "name": "OpenServiceA"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3895,8 +3580,7 @@
             "iat_address": 2056432,
             "iat_value": 2874654,
             "is_ordinal": false,
-            "name": "CheckTokenMembership",
-            "ordinal": null
+            "name": "CheckTokenMembership"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3905,8 +3589,7 @@
             "iat_address": 2056440,
             "iat_value": 2874678,
             "is_ordinal": false,
-            "name": "FreeSid",
-            "ordinal": null
+            "name": "FreeSid"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3915,8 +3598,7 @@
             "iat_address": 2056448,
             "iat_value": 2874688,
             "is_ordinal": false,
-            "name": "RegisterServiceCtrlHandlerExA",
-            "ordinal": null
+            "name": "RegisterServiceCtrlHandlerExA"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3925,8 +3607,7 @@
             "iat_address": 2056456,
             "iat_value": 2874720,
             "is_ordinal": false,
-            "name": "OpenSCManagerA",
-            "ordinal": null
+            "name": "OpenSCManagerA"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3935,8 +3616,7 @@
             "iat_address": 2056464,
             "iat_value": 2874738,
             "is_ordinal": false,
-            "name": "SetServiceStatus",
-            "ordinal": null
+            "name": "SetServiceStatus"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3945,8 +3625,7 @@
             "iat_address": 2056472,
             "iat_value": 2874758,
             "is_ordinal": false,
-            "name": "AllocateAndInitializeSid",
-            "ordinal": null
+            "name": "AllocateAndInitializeSid"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3955,8 +3634,7 @@
             "iat_address": 2056480,
             "iat_value": 2874786,
             "is_ordinal": false,
-            "name": "CloseServiceHandle",
-            "ordinal": null
+            "name": "CloseServiceHandle"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3965,8 +3643,7 @@
             "iat_address": 2056488,
             "iat_value": 2874808,
             "is_ordinal": false,
-            "name": "QueryServiceStatus",
-            "ordinal": null
+            "name": "QueryServiceStatus"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3975,8 +3652,7 @@
             "iat_address": 2056496,
             "iat_value": 2874830,
             "is_ordinal": false,
-            "name": "StartServiceCtrlDispatcherA",
-            "ordinal": null
+            "name": "StartServiceCtrlDispatcherA"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3985,8 +3661,7 @@
             "iat_address": 2056504,
             "iat_value": 2874924,
             "is_ordinal": false,
-            "name": "CryptAcquireContextW",
-            "ordinal": null
+            "name": "CryptAcquireContextW"
         },
         {
             "library": "ADVAPI32.dll",
@@ -3995,8 +3670,7 @@
             "iat_address": 2056512,
             "iat_value": 2874884,
             "is_ordinal": false,
-            "name": "RegisterEventSourceW",
-            "ordinal": null
+            "name": "RegisterEventSourceW"
         },
         {
             "library": "ADVAPI32.dll",
@@ -4005,8 +3679,7 @@
             "iat_address": 2056520,
             "iat_value": 2874908,
             "is_ordinal": false,
-            "name": "ReportEventW",
-            "ordinal": null
+            "name": "ReportEventW"
         },
         {
             "library": "ADVAPI32.dll",
@@ -4015,8 +3688,7 @@
             "iat_address": 2056528,
             "iat_value": 2874988,
             "is_ordinal": false,
-            "name": "CryptGetUserKey",
-            "ordinal": null
+            "name": "CryptGetUserKey"
         },
         {
             "library": "SHELL32.dll",
@@ -4025,8 +3697,7 @@
             "iat_address": 2058160,
             "iat_value": 2875132,
             "is_ordinal": false,
-            "name": "ShellExecuteExW",
-            "ordinal": null
+            "name": "ShellExecuteExW"
         },
         {
             "library": "ole32.dll",
@@ -4035,8 +3706,7 @@
             "iat_address": 2059088,
             "iat_value": 2875186,
             "is_ordinal": false,
-            "name": "CoCreateInstance",
-            "ordinal": null
+            "name": "CoCreateInstance"
         },
         {
             "library": "ole32.dll",
@@ -4045,8 +3715,7 @@
             "iat_address": 2059096,
             "iat_value": 2875206,
             "is_ordinal": false,
-            "name": "CoUninitialize",
-            "ordinal": null
+            "name": "CoUninitialize"
         },
         {
             "library": "ole32.dll",
@@ -4055,8 +3724,7 @@
             "iat_address": 2059104,
             "iat_value": 2875224,
             "is_ordinal": false,
-            "name": "CoInitializeEx",
-            "ordinal": null
+            "name": "CoInitializeEx"
         },
         {
             "library": "ole32.dll",
@@ -4065,8 +3733,7 @@
             "iat_address": 2059112,
             "iat_value": 2875162,
             "is_ordinal": false,
-            "name": "CreateStreamOnHGlobal",
-            "ordinal": null
+            "name": "CreateStreamOnHGlobal"
         },
         {
             "library": "OLEAUT32.dll",
@@ -4129,23 +3796,7 @@
         ],
         "guard_cf_function_count": 0,
         "guard_cf_function_table": 0,
-        "guard_flags": "GCF_INSTRUMENTED",
-        "code_integrity": null,
-        "guard_address_taken_iat_entry_count": null,
-        "guard_address_taken_iat_entry_table": null,
-        "guard_long_jump_target_count": null,
-        "guard_long_jump_target_table": null,
-        "dynamic_value_reloc_table": null,
-        "hybrid_metadata_pointer": null,
-        "dynamic_value_reloctable_offset": null,
-        "dynamic_value_reloctable_section": null,
-        "guard_rf_failure_routine": null,
-        "guard_rf_failure_routine_function_pointer": null,
-        "reserved2": null,
-        "guard_rf_verify_stackpointer_function_pointer": null,
-        "hotpatch_table_offset": null,
-        "addressof_unicode_string": null,
-        "reserved3": null
+        "guard_flags": "GCF_INSTRUMENTED"
     },
     "resources_manager": {
         "langs_available": [
@@ -4154,7 +3805,6 @@
         "sublangs_available": [
             "ENGLISH_US"
         ],
-        "accelerators": null,
         "dialogs": [
             {
                 "charset": 1,
@@ -4427,7 +4077,6 @@
                 "y": 100
             }
         ],
-        "html": null,
         "icons": [
             {
                 "icon_id": 1,
@@ -4455,7 +4104,6 @@
             }
         ],
         "manifest": "\\xef\\xbb\\xbf<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\" xmlns:asmv3=\"urn:schemas-microsoft-com:asm.v3\"><trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v3\"><security><requestedPrivileges><requestedExecutionLevel level=\"asInvoker\" uiAccess=\"false\"></requestedExecutionLevel></requestedPrivileges></security></trustInfo><asmv3:application><asmv3:windowsSettings xmlns=\"http://schemas.microsoft.com/SMI/2005/WindowsSettings\"> \r\n    </asmv3:windowsSettings></asmv3:application></assembly>",
-        "string_table": null,
         "version": {
             "type": 0,
             "fixed_file_info": {
@@ -4531,20 +4179,11 @@
             "parent_labels": [
                 "AFX_DIALOG_LAYOUT"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
             "entropy": 0.0,
@@ -4556,20 +4195,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "79910f03fd95b85e967ab66e19f32236e48de2bf575973836cc5e77522f3c80e",
             "entropy": 5.007120654020092,
@@ -4581,20 +4211,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "f4a66649f464900adb21c521cceeb12a1407ad9a98d6a43ca9b34e3a5951fd90",
             "entropy": 5.494551693242068,
@@ -4606,20 +4227,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "544ff916efbd39d8fc9df1012940eeb4bf9dd60130da3b722c6c6da85e37a196",
             "entropy": 4.331959129729646,
@@ -4631,20 +4243,11 @@
             "parent_labels": [
                 "DIALOG"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "c3e490453ec7acbad92714c9e0e3aae106fa175bcda0b98e49d02445d042c838",
             "entropy": 3.322570616044177,
@@ -4656,20 +4259,11 @@
             "parent_labels": [
                 "GROUP_ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "77a1efb6136f52dd2372987b13bf486aa75baeacb93bad009aa3e284c57b8694",
             "entropy": 2.458492225816881,
@@ -4681,20 +4275,11 @@
             "parent_labels": [
                 "VERSION"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "a092738cd41368ec3be931149122cb465258cadff07ef023ae7c85c6864a240e",
             "entropy": 3.311795736751042,
@@ -4706,20 +4291,11 @@
             "parent_labels": [
                 "MANIFEST"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "729f23c88f5ddfe459351fa8f5fdc775da2e89b48dd84cbd93845474c73cdc3d",
             "entropy": 5.055283258826469,
@@ -4874,6 +4450,5 @@
     "overlay": {
         "size": 6064,
         "entropy": 7.626679699227695
-    },
-    "relocations": null
+    }
 }

@@ -27,7 +27,6 @@
     "optional_header": {
         "addressof_entrypoint": 4096,
         "baseof_code": 4096,
-        "baseof_data": null,
         "checksum": 34531,
         "computed_checksum": 41625,
         "dll_characteristics": 32768,
@@ -79,7 +78,6 @@
         "overlay_number": 0,
         "used_bytes_in_the_last_page": 144
     },
-    "rich_header": null,
     "nx": false,
     "authentihash": {
         "sha512": "a32f4a7a3bb43f7092328050ec53cd2ef1c17f9f4891817b8696089a0176cc400cfa58ef68e7f8502138efcc757f30a4874681e60f2fcef0a43f73ccd5cc1057",
@@ -88,7 +86,6 @@
         "sha1": "41ef6731217bbadfd241d4f2e24728bc9da43ecb",
         "md5": "d8eea530ab79d0e0b06bb141267ffdcb"
     },
-    "tls": null,
     "position_independent": false,
     "is_reproducible_build": false,
     "size_of_headers": 1024,
@@ -399,11 +396,9 @@
                 "cv_signature": "PDB_70",
                 "filename": "",
                 "guid": "ed39a8cf-33c2-e067-7f3b-e7b551f8753"
-            },
-            "pogo": null
+            }
         }
     ],
-    "export": null,
     "imports": [
         {
             "library": "cygwin1.dll",
@@ -412,8 +407,7 @@
             "iat_address": 1642820,
             "iat_value": 1643084,
             "is_ordinal": false,
-            "name": "__cxa_atexit",
-            "ordinal": null
+            "name": "__cxa_atexit"
         },
         {
             "library": "cygwin1.dll",
@@ -422,8 +416,7 @@
             "iat_address": 1642828,
             "iat_value": 1643100,
             "is_ordinal": false,
-            "name": "__errno",
-            "ordinal": null
+            "name": "__errno"
         },
         {
             "library": "cygwin1.dll",
@@ -432,8 +425,7 @@
             "iat_address": 1642836,
             "iat_value": 1643112,
             "is_ordinal": false,
-            "name": "__getreent",
-            "ordinal": null
+            "name": "__getreent"
         },
         {
             "library": "cygwin1.dll",
@@ -442,8 +434,7 @@
             "iat_address": 1642844,
             "iat_value": 1643128,
             "is_ordinal": false,
-            "name": "__main",
-            "ordinal": null
+            "name": "__main"
         },
         {
             "library": "cygwin1.dll",
@@ -452,8 +443,7 @@
             "iat_address": 1642852,
             "iat_value": 1643140,
             "is_ordinal": false,
-            "name": "__memcpy_chk",
-            "ordinal": null
+            "name": "__memcpy_chk"
         },
         {
             "library": "cygwin1.dll",
@@ -462,8 +452,7 @@
             "iat_address": 1642860,
             "iat_value": 1643156,
             "is_ordinal": false,
-            "name": "__stpcpy_chk",
-            "ordinal": null
+            "name": "__stpcpy_chk"
         },
         {
             "library": "cygwin1.dll",
@@ -472,8 +461,7 @@
             "iat_address": 1642868,
             "iat_value": 1643172,
             "is_ordinal": false,
-            "name": "__strcpy_chk",
-            "ordinal": null
+            "name": "__strcpy_chk"
         },
         {
             "library": "cygwin1.dll",
@@ -482,8 +470,7 @@
             "iat_address": 1642876,
             "iat_value": 1643188,
             "is_ordinal": false,
-            "name": "_dll_crt0",
-            "ordinal": null
+            "name": "_dll_crt0"
         },
         {
             "library": "cygwin1.dll",
@@ -492,8 +479,7 @@
             "iat_address": 1642884,
             "iat_value": 1643200,
             "is_ordinal": false,
-            "name": "_impure_ptr",
-            "ordinal": null
+            "name": "_impure_ptr"
         },
         {
             "library": "cygwin1.dll",
@@ -502,8 +488,7 @@
             "iat_address": 1642892,
             "iat_value": 1643216,
             "is_ordinal": false,
-            "name": "calloc",
-            "ordinal": null
+            "name": "calloc"
         },
         {
             "library": "cygwin1.dll",
@@ -512,8 +497,7 @@
             "iat_address": 1642900,
             "iat_value": 1643228,
             "is_ordinal": false,
-            "name": "cygwin_detach_dll",
-            "ordinal": null
+            "name": "cygwin_detach_dll"
         },
         {
             "library": "cygwin1.dll",
@@ -522,8 +506,7 @@
             "iat_address": 1642908,
             "iat_value": 1643248,
             "is_ordinal": false,
-            "name": "cygwin_internal",
-            "ordinal": null
+            "name": "cygwin_internal"
         },
         {
             "library": "cygwin1.dll",
@@ -532,8 +515,7 @@
             "iat_address": 1642916,
             "iat_value": 1643268,
             "is_ordinal": false,
-            "name": "dll_dllcrt0",
-            "ordinal": null
+            "name": "dll_dllcrt0"
         },
         {
             "library": "cygwin1.dll",
@@ -542,8 +524,7 @@
             "iat_address": 1642924,
             "iat_value": 1643284,
             "is_ordinal": false,
-            "name": "exit",
-            "ordinal": null
+            "name": "exit"
         },
         {
             "library": "cygwin1.dll",
@@ -552,8 +533,7 @@
             "iat_address": 1642932,
             "iat_value": 1643292,
             "is_ordinal": false,
-            "name": "fclose",
-            "ordinal": null
+            "name": "fclose"
         },
         {
             "library": "cygwin1.dll",
@@ -562,8 +542,7 @@
             "iat_address": 1642940,
             "iat_value": 1643304,
             "is_ordinal": false,
-            "name": "fflush",
-            "ordinal": null
+            "name": "fflush"
         },
         {
             "library": "cygwin1.dll",
@@ -572,8 +551,7 @@
             "iat_address": 1642948,
             "iat_value": 1643316,
             "is_ordinal": false,
-            "name": "fopen",
-            "ordinal": null
+            "name": "fopen"
         },
         {
             "library": "cygwin1.dll",
@@ -582,8 +560,7 @@
             "iat_address": 1642956,
             "iat_value": 1643324,
             "is_ordinal": false,
-            "name": "fprintf",
-            "ordinal": null
+            "name": "fprintf"
         },
         {
             "library": "cygwin1.dll",
@@ -592,8 +569,7 @@
             "iat_address": 1642964,
             "iat_value": 1643336,
             "is_ordinal": false,
-            "name": "free",
-            "ordinal": null
+            "name": "free"
         },
         {
             "library": "cygwin1.dll",
@@ -602,8 +578,7 @@
             "iat_address": 1642972,
             "iat_value": 1643344,
             "is_ordinal": false,
-            "name": "fwrite",
-            "ordinal": null
+            "name": "fwrite"
         },
         {
             "library": "cygwin1.dll",
@@ -612,8 +587,7 @@
             "iat_address": 1642980,
             "iat_value": 1643356,
             "is_ordinal": false,
-            "name": "getc",
-            "ordinal": null
+            "name": "getc"
         },
         {
             "library": "cygwin1.dll",
@@ -622,8 +596,7 @@
             "iat_address": 1642988,
             "iat_value": 1643364,
             "is_ordinal": false,
-            "name": "malloc",
-            "ordinal": null
+            "name": "malloc"
         },
         {
             "library": "cygwin1.dll",
@@ -632,8 +605,7 @@
             "iat_address": 1642996,
             "iat_value": 1643376,
             "is_ordinal": false,
-            "name": "perror",
-            "ordinal": null
+            "name": "perror"
         },
         {
             "library": "cygwin1.dll",
@@ -642,8 +614,7 @@
             "iat_address": 1643004,
             "iat_value": 1643388,
             "is_ordinal": false,
-            "name": "posix_memalign",
-            "ordinal": null
+            "name": "posix_memalign"
         },
         {
             "library": "cygwin1.dll",
@@ -652,8 +623,7 @@
             "iat_address": 1643012,
             "iat_value": 1643408,
             "is_ordinal": false,
-            "name": "putc",
-            "ordinal": null
+            "name": "putc"
         },
         {
             "library": "cygwin1.dll",
@@ -662,8 +632,7 @@
             "iat_address": 1643020,
             "iat_value": 1643416,
             "is_ordinal": false,
-            "name": "realloc",
-            "ordinal": null
+            "name": "realloc"
         },
         {
             "library": "cygwin1.dll",
@@ -672,8 +641,7 @@
             "iat_address": 1643028,
             "iat_value": 1643428,
             "is_ordinal": false,
-            "name": "sprintf",
-            "ordinal": null
+            "name": "sprintf"
         },
         {
             "library": "cygwin1.dll",
@@ -682,8 +650,7 @@
             "iat_address": 1643036,
             "iat_value": 1643440,
             "is_ordinal": false,
-            "name": "strlen",
-            "ordinal": null
+            "name": "strlen"
         },
         {
             "library": "cygwin1.dll",
@@ -692,8 +659,7 @@
             "iat_address": 1643044,
             "iat_value": 1643452,
             "is_ordinal": false,
-            "name": "strncpy",
-            "ordinal": null
+            "name": "strncpy"
         },
         {
             "library": "cygwin1.dll",
@@ -702,8 +668,7 @@
             "iat_address": 1643052,
             "iat_value": 1643464,
             "is_ordinal": false,
-            "name": "strrchr",
-            "ordinal": null
+            "name": "strrchr"
         },
         {
             "library": "KERNEL32.dll",
@@ -712,28 +677,17 @@
             "iat_address": 1643068,
             "iat_value": 1643476,
             "is_ordinal": false,
-            "name": "GetModuleHandleA",
-            "ordinal": null
+            "name": "GetModuleHandleA"
         }
     ],
-    "load_configuration": null,
     "resources_manager": {
         "langs_available": [],
-        "sublangs_available": [],
-        "accelerators": null,
-        "dialogs": null,
-        "html": null,
-        "icons": null,
-        "manifest": null,
-        "string_table": null,
-        "version": null
+        "sublangs_available": []
     },
     "resources": [],
     "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
-    "signatures": null,
     "overlay": {
         "size": 0,
         "entropy": 0.0
-    },
-    "relocations": null
+    }
 }

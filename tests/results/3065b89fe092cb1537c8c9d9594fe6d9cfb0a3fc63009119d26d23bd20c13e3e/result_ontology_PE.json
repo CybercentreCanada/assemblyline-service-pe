@@ -138,7 +138,6 @@
         "sha1": "e21a4552c22aa311275fdbc6b708fc4fcff89192",
         "md5": "5cb4ad997bc09827a20d1114a2e41452"
     },
-    "tls": null,
     "position_independent": true,
     "is_reproducible_build": false,
     "size_of_headers": 1024,
@@ -202,8 +201,6 @@
             "fullname": ".rsrc\u0000\u0000\u0000"
         }
     ],
-    "debugs": null,
-    "export": null,
     "imports": [
         {
             "library": "KERNEL32.DLL",
@@ -212,8 +209,7 @@
             "iat_address": 559012,
             "iat_value": 559232,
             "is_ordinal": false,
-            "name": "LoadLibraryA",
-            "ordinal": null
+            "name": "LoadLibraryA"
         },
         {
             "library": "KERNEL32.DLL",
@@ -222,8 +218,7 @@
             "iat_address": 559016,
             "iat_value": 559246,
             "is_ordinal": false,
-            "name": "GetProcAddress",
-            "ordinal": null
+            "name": "GetProcAddress"
         },
         {
             "library": "KERNEL32.DLL",
@@ -232,8 +227,7 @@
             "iat_address": 559020,
             "iat_value": 559262,
             "is_ordinal": false,
-            "name": "VirtualProtect",
-            "ordinal": null
+            "name": "VirtualProtect"
         },
         {
             "library": "KERNEL32.DLL",
@@ -242,8 +236,7 @@
             "iat_address": 559024,
             "iat_value": 559278,
             "is_ordinal": false,
-            "name": "VirtualAlloc",
-            "ordinal": null
+            "name": "VirtualAlloc"
         },
         {
             "library": "KERNEL32.DLL",
@@ -252,8 +245,7 @@
             "iat_address": 559028,
             "iat_value": 559292,
             "is_ordinal": false,
-            "name": "VirtualFree",
-            "ordinal": null
+            "name": "VirtualFree"
         },
         {
             "library": "KERNEL32.DLL",
@@ -262,8 +254,7 @@
             "iat_address": 559032,
             "iat_value": 559306,
             "is_ordinal": false,
-            "name": "ExitProcess",
-            "ordinal": null
+            "name": "ExitProcess"
         },
         {
             "library": "ADVAPI32.dll",
@@ -272,8 +263,7 @@
             "iat_address": 559040,
             "iat_value": 559320,
             "is_ordinal": false,
-            "name": "RegCloseKey",
-            "ordinal": null
+            "name": "RegCloseKey"
         },
         {
             "library": "GDI32.dll",
@@ -282,8 +272,7 @@
             "iat_address": 559048,
             "iat_value": 559334,
             "is_ordinal": false,
-            "name": "SaveDC",
-            "ordinal": null
+            "name": "SaveDC"
         },
         {
             "library": "IPHLPAPI.DLL",
@@ -292,8 +281,7 @@
             "iat_address": 559056,
             "iat_value": 559342,
             "is_ordinal": false,
-            "name": "GetAdaptersInfo",
-            "ordinal": null
+            "name": "GetAdaptersInfo"
         },
         {
             "library": "OLEACC.dll",
@@ -302,8 +290,7 @@
             "iat_address": 559064,
             "iat_value": 559360,
             "is_ordinal": false,
-            "name": "LresultFromObject",
-            "ordinal": null
+            "name": "LresultFromObject"
         },
         {
             "library": "OLEAUT32.dll",
@@ -322,8 +309,7 @@
             "iat_address": 559080,
             "iat_value": 559380,
             "is_ordinal": false,
-            "name": "ShellExecuteW",
-            "ordinal": null
+            "name": "ShellExecuteW"
         },
         {
             "library": "USER32.dll",
@@ -332,8 +318,7 @@
             "iat_address": 559088,
             "iat_value": 559396,
             "is_ordinal": false,
-            "name": "GetDC",
-            "ordinal": null
+            "name": "GetDC"
         },
         {
             "library": "WINSPOOL.DRV",
@@ -342,8 +327,7 @@
             "iat_address": 559096,
             "iat_value": 559404,
             "is_ordinal": false,
-            "name": "OpenPrinterW",
-            "ordinal": null
+            "name": "OpenPrinterW"
         },
         {
             "library": "WS2_32.dll",
@@ -378,29 +362,7 @@
         "version": "SEH",
         "virtual_memory_threshold": 0,
         "se_handler_count": 41,
-        "se_handler_table": 4388048,
-        "guard_cf_check_function_pointer": null,
-        "guard_cf_dispatch_function_pointer": null,
-        "guard_cf_flags_list": null,
-        "guard_cf_function_count": null,
-        "guard_cf_function_table": null,
-        "guard_flags": null,
-        "code_integrity": null,
-        "guard_address_taken_iat_entry_count": null,
-        "guard_address_taken_iat_entry_table": null,
-        "guard_long_jump_target_count": null,
-        "guard_long_jump_target_table": null,
-        "dynamic_value_reloc_table": null,
-        "hybrid_metadata_pointer": null,
-        "dynamic_value_reloctable_offset": null,
-        "dynamic_value_reloctable_section": null,
-        "guard_rf_failure_routine": null,
-        "guard_rf_failure_routine_function_pointer": null,
-        "reserved2": null,
-        "guard_rf_verify_stackpointer_function_pointer": null,
-        "hotpatch_table_offset": null,
-        "addressof_unicode_string": null,
-        "reserved3": null
+        "se_handler_table": 4388048
     },
     "resources_manager": {
         "langs_available": [
@@ -415,8 +377,7 @@
             {
                 "accelerator_id": 50891,
                 "padding": -17915,
-                "ansi": "???",
-                "flags": null
+                "ansi": "???"
             },
             {
                 "accelerator_id": 12690,
@@ -426,11 +387,8 @@
             }
         ],
         "dialogs": [],
-        "html": null,
-        "icons": null,
         "manifest": "<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\">\r\n  <trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v3\">\r\n    <security>\r\n      <requestedPrivileges>\r\n        <requestedExecutionLevel level=\"asInvoker\" uiAccess=\"false\"></requestedExecutionLevel>\r\n      </requestedPrivileges>\r\n    </security>\r\n  </trustInfo>\r\n</assembly>",
-        "string_table": [],
-        "version": null
+        "string_table": []
     },
     "resources": [
         {
@@ -438,20 +396,11 @@
             "parent_labels": [
                 "IDR_BINARY"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1042,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "78c963fc53e2bf5e235f895e30625c416b5e3e5b5ddf47f3311592aa0f551104",
             "entropy": 7.999037569136436,
@@ -463,20 +412,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "844176a3ddcad0192f2cee6a7a49e7be833dd5c8c4de7d5a46f82a352fcff19b",
             "entropy": 7.770745371140747,
@@ -488,20 +428,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "8ec4f7c55d523ba362ea8f8a7f90cb95258108ec011c9012686701f8035b07df",
             "entropy": 7.3075207540606995,
@@ -513,20 +444,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "8a39e88637fb4291d7e52cc38b44d65839acd463e29a4623440a1f1958c5b32d",
             "entropy": 7.946400191302502,
@@ -538,20 +460,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "b033cde67b8828ee9fb942769dc7d52c1e58e0b6780bdea20cc8e4f34a644eb0",
             "entropy": 7.903368113814543,
@@ -563,20 +476,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "3789fc51ba1046ab6b2d2d143a1cf1216b980cf9b6c019d0380e728aaf45e253",
             "entropy": 7.85779326069085,
@@ -588,20 +492,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "94be39be0aa3319ae39dc20b4d9dea9171ba2b85e9b8ea5bc75ae76a7f4fd302",
             "entropy": 7.981578909849276,
@@ -613,20 +508,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "ae10c455b0e55f62c00a53011ec1a646c8e74835d547eefa1815b6bf765a90a5",
             "entropy": 7.956720774762248,
@@ -638,20 +524,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "f257508d18909cbf7ac280781631968aeadf8347b41f9d3bc84b38ef394c2a13",
             "entropy": 7.805872941553459,
@@ -663,20 +540,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "d891f5934663cc080136f20354ce0104e274a9d1e697ba10521ca6d3dd5aa505",
             "entropy": 7.739651499259316,
@@ -688,20 +556,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "a213d54e8a649bd582144444ff04330810736a416d3edfd136dd6a5516d91b6d",
             "entropy": 7.210375863850693,
@@ -713,20 +572,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "6c72653dcb5c69ed4156eabf2b2e6419bec63a8b1d5ee6c4cf74bcc8272b7a97",
             "entropy": 7.950383983136265,
@@ -738,20 +588,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "c4c4fbddf137c31e5285e734e75867c6c58094c44c8417d4ec559fc72378ff40",
             "entropy": 7.921284328787441,
@@ -763,20 +604,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "55785339ff7644a455cd6aa837bafd8ca05a1cc6f55f2c07fda1dc3ac6fe6290",
             "entropy": 7.863473836091744,
@@ -788,20 +620,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "dee164a14dfe356460998649dcebd2e59b872cd80d213d37317f6cdba8db6adc",
             "entropy": 7.980959984255092,
@@ -813,20 +636,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "e3cef3c9750de850c0f599b7ce800f95a79760fc4a06ad76f962005e85ea7939",
             "entropy": 7.956637784203043,
@@ -838,20 +652,11 @@
             "parent_labels": [
                 "ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "b8da8ede59945ef2a57c2c3a37bd9c7aa11a3391de365bc5aca7a0bc81078540",
             "entropy": 7.819904938573999,
@@ -863,20 +668,11 @@
             "parent_labels": [
                 "MENU"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "d635211b6190d87f904daf79ac6db1576bffbf53b6427c3216cc4d6f72a30d1f",
             "entropy": 5.918780730435346,
@@ -888,20 +684,11 @@
             "parent_labels": [
                 "DIALOG"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "fac83cbcff5ebfe055b92c1e365216c46a4a1475852cca42f8c8cdf7eeed1db5",
             "entropy": 7.663059829104346,
@@ -913,20 +700,11 @@
             "parent_labels": [
                 "STRING"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "f8fdffab4c8798e4a4104409a675a2b40455f2a383e932486771d1114cc9dcad",
             "entropy": 5.939183095358684,
@@ -938,20 +716,11 @@
             "parent_labels": [
                 "ACCELERATOR"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "376845dc53d441645de0285b9033ce7b9f857838cb04d681bd466105bf4d1496",
             "entropy": 4.0,
@@ -963,20 +732,11 @@
             "parent_labels": [
                 "GROUP_ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "991dd282be82295b6c148fdf1053ef34a6cd6392569af0c7309e4951099ee523",
             "entropy": 6.446119532376013,
@@ -988,20 +748,11 @@
             "parent_labels": [
                 "GROUP_ICON"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "96efbfc415e9341e2612870d9da9ccb1fd7f796f9fe0b338d8ff763441c7bfee",
             "entropy": 6.371925570493272,
@@ -1013,20 +764,11 @@
             "parent_labels": [
                 "MANIFEST"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 1033,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 1252,
             "sha256": "49a60be4b95b6d30da355a0c124af82b35000bce8f24f957d1c09ead47544a1e",
             "entropy": 4.795973602273464,
@@ -1035,10 +777,8 @@
         }
     ],
     "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
-    "signatures": null,
     "overlay": {
         "size": 9222,
         "entropy": 3.888234599240205
-    },
-    "relocations": null
+    }
 }

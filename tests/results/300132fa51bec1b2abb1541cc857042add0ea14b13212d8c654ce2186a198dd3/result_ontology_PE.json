@@ -77,7 +77,6 @@
         "overlay_number": 0,
         "used_bytes_in_the_last_page": 0
     },
-    "rich_header": null,
     "nx": false,
     "authentihash": {
         "sha512": "1e9093b4afe4a904cb30efe33965c0ceb07e88a0463c374f48b6362ff3716afb2b85b8df43bf136b785709b8c336980a2f6296d33799c7b57e4a45629065aefd",
@@ -112,8 +111,7 @@
             "size": 0,
             "sizeof_raw_data": 0,
             "virtual_address": 4096,
-            "virtual_size": 53248,
-            "fullname": null
+            "virtual_size": 53248
         },
         {
             "name": "\u0002\\xd2u\\xdb\\x8a\u0016\\xeb\\xd4",
@@ -132,12 +130,9 @@
             "size": 16010,
             "sizeof_raw_data": 16010,
             "virtual_address": 57344,
-            "virtual_size": 16384,
-            "fullname": null
+            "virtual_size": 16384
         }
     ],
-    "debugs": null,
-    "export": null,
     "imports": [
         {
             "library": "kernel32.dll",
@@ -146,8 +141,7 @@
             "iat_address": 57356,
             "iat_value": 73299,
             "is_ordinal": false,
-            "name": "LoadLibraryA",
-            "ordinal": null
+            "name": "LoadLibraryA"
         },
         {
             "library": "kernel32.dll",
@@ -156,25 +150,16 @@
             "iat_address": 57360,
             "iat_value": 73312,
             "is_ordinal": false,
-            "name": "GetProcAddress",
-            "ordinal": null
+            "name": "GetProcAddress"
         }
     ],
-    "load_configuration": null,
     "resources_manager": {
         "langs_available": [
             "NEUTRAL"
         ],
         "sublangs_available": [
             "DEFAULT"
-        ],
-        "accelerators": null,
-        "dialogs": null,
-        "html": null,
-        "icons": null,
-        "manifest": null,
-        "string_table": null,
-        "version": null
+        ]
     },
     "resources": [
         {
@@ -183,20 +168,11 @@
                 "RCDATA",
                 "DVCLAL"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 0,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "643295f2e8b8d0d5dbd2bccd930d076554c0a273875d4203876b1789f4ada967",
             "entropy": 3.375,
@@ -209,20 +185,11 @@
                 "RCDATA",
                 "PACKAGEINFO"
             ],
-            "characteristics": null,
             "num_childs": 0,
             "depth": 3,
-            "name": null,
             "resource_id": 0,
-            "resource_type": null,
             "is_data": true,
             "is_directory": false,
-            "major_version": null,
-            "minor_version": null,
-            "numberof_id_entries": null,
-            "numberof_name_entries": null,
-            "time_date_stamp": null,
-            "hr_time_date_stamp": null,
             "code_page": 0,
             "sha256": "9fc27cd0adfaddd8394191ef99ba549b3f4ecda6a47dc16c707a5ebbaa1ecad2",
             "entropy": 5.098231803727738,
@@ -231,10 +198,8 @@
         }
     ],
     "verify_signature": "VERIFICATION_FLAGS.NO_SIGNATURE",
-    "signatures": null,
     "overlay": {
         "size": 2361298,
         "entropy": 5.11172004574328
-    },
-    "relocations": null
+    }
 }
