@@ -11,7 +11,7 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "31b4ac701951fec83eac358c7072f8a62a85ae6d76a7bcb85f1ec505b139867b",
+                "sha256": "a04f5a58aa022b48bf1a9ae71aa9f6e5e9262ee0d1cc6f0384034faa60d8af92",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
                 "path": "/tmp/working_directory/features.json",
@@ -32,7 +32,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 500,
+        "score": 300,
         "sections": [
             {
                 "body": "[[\"Timestamp\", \"1530079054 (2018-06-27 05:57:34 +00:00 (UTC))\"], [\"Entrypoint\", \"0x3a84\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"10.0\"], [\"Operating System version\", \"5.1\"], [\"Subsystem version\", \"5.1\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", true], [\"Position Independent\", false], [\"Checksum\", \"0x000469ba\"]]",
@@ -384,35 +384,6 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "string_file_info",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"key\", \"4678323b0\"], [\"type\", 1]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 3,
-                "heuristic": {
-                    "heur_id": 13,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "langcode_items 1",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 4,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "items",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

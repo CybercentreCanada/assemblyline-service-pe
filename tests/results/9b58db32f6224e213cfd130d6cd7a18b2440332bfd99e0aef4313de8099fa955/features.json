@@ -7630,8 +7630,10 @@
         "reserved1": 0,
         "security_cookie": 17023952,
         "timedatestamp": 0,
-        "version": "UNKNOWN",
-        "virtual_memory_threshold": 0
+        "version": "SEH",
+        "virtual_memory_threshold": 0,
+        "se_handler_count": 267,
+        "se_handler_table": 16820176
     },
     "resources_manager": {
         "langs_available": [
@@ -9340,12 +9342,12 @@
                         "items": {
                             "ProductVersion": "5.1.2600.2180",
                             "ProductName": "Microsoft\u00ae Windows\u00ae Operating System",
-                            "LegalCopyright": "\u00a91998 Active Voice Corporation. All rights reserved.",
                             "OriginalFilename": "Dialer",
+                            "InternalName": "Dialer",
                             "FileVersion": "5.1.2600.2180",
+                            "LegalCopyright": "\u00a91998 Active Voice Corporation. All rights reserved.",
                             "FileDescription": "TAPI 3.0 Dialer and IP Multicast Conference Viewer",
-                            "CompanyName": "Microsoft Corporation",
-                            "InternalName": "Dialer"
+                            "CompanyName": "Microsoft Corporation"
                         }
                     }
                 ]

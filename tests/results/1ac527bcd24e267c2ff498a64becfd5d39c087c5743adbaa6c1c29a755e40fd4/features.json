@@ -1390,8 +1390,10 @@
         "reserved1": 0,
         "security_cookie": 4326608,
         "timedatestamp": 0,
-        "version": "UNKNOWN",
-        "virtual_memory_threshold": 0
+        "version": "SEH",
+        "virtual_memory_threshold": 0,
+        "se_handler_count": 97,
+        "se_handler_table": 4307968
     },
     "resources_manager": {
         "langs_available": [
@@ -2478,10 +2480,10 @@
                         "code_page": "WINDOWS_1252",
                         "items": {
                             "FileVersion": "2020.3.1                                                                                                                                                                                                                                                                                                    ",
-                            "Comments": "This installation was built with InstallAware: http://www.installaware.com",
                             "LegalCopyright": "                                                                                                                                                                                                                                                                                                            ",
                             "FileDescription": "                                                                                                                                                                                                                                                                                                            ",
-                            "CompanyName": "Alteryx, Inc.                                                                                                                                                                                                                                                                                               "
+                            "CompanyName": "Alteryx, Inc.                                                                                                                                                                                                                                                                                               ",
+                            "Comments": "This installation was built with InstallAware: http://www.installaware.com"
                         }
                     }
                 ]

@@ -11,7 +11,7 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "1d0e073c0482c63925108954289de770b11b6e04969454a4811da5b48e43e220",
+                "sha256": "17ca841351fd79d97524ea3cd478139892cb1bd39dd9edc4715f8a2aaf07886d",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
                 "path": "/tmp/working_directory/features.json",
@@ -32,7 +32,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 400,
+        "score": 200,
         "sections": [
             {
                 "body": "[[\"Timestamp\", \"1160092538 (2006-10-05 23:55:38 +00:00 (UTC))\"], [\"Entrypoint\", \"0x7f56\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"6.0\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
@@ -437,20 +437,13 @@
                 "auto_collapse": false
             },
             {
-                "body": "Found corrupted icons",
+                "body": "[[\"TABLE\", []], [\"IMAGE\", []]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 13,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {},
-                "title_text": "Corrupted resources",
+                "title_text": "Icons",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -509,7 +502,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"ProductVersion\", \"1 , 0 , 1 , 56 \"], [\"ProductName\", \"NVIDIA Corporation\"], [\"LegalCopyright\", \"(C) NVIDIA Corporation. All rights reserved.\"], [\"FileVersion\", \"1 , 0 , 1 , 56 \"], [\"FileDescription\", \"NVIDIA Uninstaller Utility\"], [\"CompanyName\", \"NVIDIA Corporation\"], [\"InternalName\", \"NVUnistall\"]]",
+                "body": "[[\"ProductVersion\", \"1 , 0 , 1 , 56 \"], [\"ProductName\", \"NVIDIA Corporation\"], [\"LegalCopyright\", \"(C) NVIDIA Corporation. All rights reserved.\"], [\"FileVersion\", \"1 , 0 , 1 , 56 \"], [\"CompanyName\", \"NVIDIA Corporation\"], [\"FileDescription\", \"NVIDIA Uninstaller Utility\"], [\"InternalName\", \"NVUnistall\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 4,

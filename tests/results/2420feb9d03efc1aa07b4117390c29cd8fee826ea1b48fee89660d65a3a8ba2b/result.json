@@ -11,7 +11,7 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "696013213ce14694c2c08be910743aa8c5273cfc02eb7951b4da52956b4ce82a",
+                "sha256": "45389d2c35ffe2cda707a11fac7e3d201c19751dbb7badaf111690f6f5d73bbe",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
                 "path": "/tmp/working_directory/features.json",
@@ -23,7 +23,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 550,
+        "score": 350,
         "sections": [
             {
                 "body": "1474392634 (2016-09-20 17:30:34 +00:00 (UTC))\n1494298062 (2017-05-09 02:47:42 +00:00 (UTC))\n1346857550 (2012-09-05 15:05:50 +00:00 (UTC))",
@@ -238,24 +238,6 @@
                     }
                 },
                 "title_text": "Entries",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Couldn't parse the forward information of oplk (1)",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 2,
-                "heuristic": {
-                    "heur_id": 13,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Corrupted resources",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

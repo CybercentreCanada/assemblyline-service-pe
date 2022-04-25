@@ -8,106 +8,21 @@
         "service_version": null,
         "service_name": null,
         "service_tool_version": null,
-        "supplementary": [
-            {
-                "name": "features.json",
-                "sha256": "212d8edfb0e89768f1568d29d4fe533da2d25ec4e7f0cd06612166d56fe4776a",
-                "description": "Features extracted from the PE file, as a JSON file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/features.json",
-                "is_section_image": false
-            }
-        ],
+        "supplementary": [],
         "extracted": [],
         "service_context": null,
         "service_debug_info": null
     },
     "result": {
-        "score": 400,
+        "score": 100,
         "sections": [
             {
-                "body": "[[\"Timestamp\", \"1239670995 (2009-04-14 01:03:15 +00:00 (UTC))\"], [\"Entrypoint\", \"0x0\"], [\"Machine\", \"I386\"], [\"Magic\", \"???\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"9.0\"], [\"Operating System version\", \"5.0\"], [\"Subsystem version\", \"5.0\"], [\"Subsystem\", \"WINDOWS_CUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "linker": {
-                                "timestamp": [
-                                    1239670995,
-                                    "2009-04-14 01:03:15 +00:00 (UTC)"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Headers",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Magic Name\", \"???\"], [\"Magic Value\", 0]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": {
-                    "heur_id": 18,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Invalid Magic",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"File Size\", 350], [\"Virtual Size\", 4096]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": {
-                    "heur_id": 24,
-                    "score": 0,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Mismatch file size",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
                 "body": null,
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": {
-                    "heur_id": 17,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "0 sections found in executable",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 0,
                 "heuristic": {
-                    "heur_id": 19,
+                    "heur_id": 7,
                     "score": 100,
                     "attack_ids": [],
                     "signatures": {},
@@ -115,18 +30,7 @@
                     "score_map": {}
                 },
                 "tags": {},
-                "title_text": "Sections",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Overlay",
+                "title_text": "This file looks like a PE but failed loading.",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             }

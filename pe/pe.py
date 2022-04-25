@@ -343,7 +343,12 @@ class PE(ServiceBase):
                 temp_path = os.path.join(self.working_directory, file_name)
                 with open(temp_path, "wb") as myfile:
                     myfile.write(bytearray(resource.content))
-                self.request.add_extracted(temp_path, file_name, f"{file_name} extracted from binary's resources")
+                self.request.add_extracted(
+                    temp_path,
+                    file_name,
+                    f"{file_name} extracted from binary's resources",
+                    safelist_interface=self.api_interface,
+                )
 
     def check_exe_resources(self):
         self.temp_res = None
@@ -372,7 +377,7 @@ class PE(ServiceBase):
             self.file_res.add_section(res)
 
     def add_headers(self):
-        self.features["name"] = self.binary.name
+        self.features["name"] = os.path.basename(self.binary.name)
         self.features["format"] = self.binary.format.name
         self.features["imphash"] = lief.PE.get_imphash(self.binary, mode=lief.PE.IMPHASH_MODE.PEFILE)
         # Somehow, that is different from binary.entrypoint
@@ -1111,6 +1116,8 @@ class PE(ServiceBase):
                             "width": icon.width,
                             "lang": icon.lang.name,
                             "sublang": icon.sublang.name,
+                            # TODO: Add hash as a structure with values similar to the authentihash
+                            # "hash": {"sha256": hashlib.sha256(bytearray(icon.pixels)).hexdigest()},
                         }
                     )
                     sub_res_table.add_row(
@@ -1177,6 +1184,8 @@ class PE(ServiceBase):
             sub_res = ResultOrderedKeyValueSection("Version")
             try:
                 version = self.binary.resources_manager.version
+                if isinstance(version, lief.lief_errors):
+                    raise ValueError(version)
                 self.features["resources_manager"]["version"] = {"type": version.type}
                 sub_res.add_item("Type", version.type)
                 if version.has_fixed_file_info:
@@ -1651,7 +1660,12 @@ class PE(ServiceBase):
                 temp_path = os.path.join(self.working_directory, file_name)
                 with open(temp_path, "wb") as f:
                     f.write(overlay)
-                self.request.add_extracted(temp_path, file_name, f"{file_name} extracted from binary's resources")
+                self.request.add_extracted(
+                    temp_path,
+                    file_name,
+                    f"{file_name} extracted from binary's resources",
+                    safelist_interface=self.api_interface,
+                )
 
             self.file_res.add_section(res)
 
@@ -1777,6 +1791,13 @@ class PE(ServiceBase):
                         for k, v in lancode_item["items"].items():
                             items.append({"key": k, "value": v})
                         lancode_item["items"] = items
+            if "html" in self.features["resources_manager"] and self.features["resources_manager"]["html"] == "":
+                del self.features["resources_manager"]["html"]
+            if (
+                "manifest" in self.features["resources_manager"]
+                and self.features["resources_manager"]["manifest"] == ""
+            ):
+                del self.features["resources_manager"]["manifest"]
 
         # Add hr_timestamps to every timestamp found
         self.features["header"]["hr_timestamp"] = datetime.datetime.utcfromtimestamp(

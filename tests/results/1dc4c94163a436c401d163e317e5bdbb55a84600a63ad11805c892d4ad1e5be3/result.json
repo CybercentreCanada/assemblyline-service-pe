@@ -11,7 +11,7 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "e426547141ffe3efe6e198cb8a5166cc0c59dcb9d0293703166196fcf43c9c37",
+                "sha256": "1f73129f14a4876422fb68fb1f9fd716da2e58ad6994ebaa00ef9ae96d6fd51a",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
                 "path": "/tmp/working_directory/features.json",
@@ -32,7 +32,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 200,
+        "score": 0,
         "sections": [
             {
                 "body": "[[\"Timestamp\", \"1187354584 (2007-08-17 12:43:04 +00:00 (UTC))\"], [\"Entrypoint\", \"0x14d8\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"1.0\"], [\"Linker version\", \"6.0\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
@@ -142,7 +142,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", -0.0], [\"Offset\", 20480], [\"Size\", 0], [\"Virtual Size\", 4096], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", 0.0], [\"Offset\", 20480], [\"Size\", 0], [\"Virtual Size\", 4096], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
                 "classification": "TLP:W",
                 "body_format": "MULTI",
                 "depth": 1,
@@ -214,7 +214,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", -0.0], [\"Offset\", 29696], [\"Size\", 0], [\"Virtual Size\", 4096], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", 0.0], [\"Offset\", 29696], [\"Size\", 0], [\"Virtual Size\", 4096], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
                 "classification": "TLP:W",
                 "body_format": "MULTI",
                 "depth": 1,
@@ -301,20 +301,13 @@
                 "auto_collapse": false
             },
             {
-                "body": "Found corrupted icons",
+                "body": "[[\"TABLE\", []], [\"IMAGE\", []]]",
                 "classification": "TLP:W",
-                "body_format": "TEXT",
+                "body_format": "MULTI",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 13,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {},
-                "title_text": "Corrupted resources",
+                "title_text": "Icons",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
@@ -341,7 +334,50 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 0], [\"translations\", \"6357106, 7536750, 6357100, 6881396, 7209071, 0, 78645252, 708, 5439489\"]]",
+                "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
+                "classification": "TLP:W",
+                "body_format": "ORDERED_KEY_VALUE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "versions": {
+                                "description": [
+                                    "Microsoft Firewall"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "string_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[[\"key\", \"080404B0\"], [\"type\", 1], [\"lang\", \"CHINESE\"], [\"sublang\", \"CHINESE_SIMPLIFIED\"], [\"code_page\", \"UTF_16\"]]",
+                "classification": "TLP:W",
+                "body_format": "ORDERED_KEY_VALUE",
+                "depth": 3,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "langcode_items 1",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[[\"LegalTrademarks\", \"Microsoft Firewall\"], [\"Comments\", \"Microsoft Firewall\"], [\"CompanyName\", \"Xiang Corporation\"], [\"FileDescription\", \"Microsoft Firewall\"], [\"Produc\\u5a4d\\u0090\\u0003\", \"\"], [\"LegalCopyright\", \"Microsoft\"]]",
+                "classification": "TLP:W",
+                "body_format": "ORDERED_KEY_VALUE",
+                "depth": 4,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "items",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 0], [\"translations\", \"78645252\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 2,

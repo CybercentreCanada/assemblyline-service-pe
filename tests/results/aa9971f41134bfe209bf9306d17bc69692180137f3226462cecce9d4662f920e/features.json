@@ -1466,8 +1466,10 @@
         "reserved1": 0,
         "security_cookie": 0,
         "timedatestamp": 0,
-        "version": "UNKNOWN",
-        "virtual_memory_threshold": 0
+        "version": "SEH",
+        "virtual_memory_threshold": 0,
+        "se_handler_count": 11,
+        "se_handler_table": 805315952
     },
     "resources_manager": {
         "langs_available": [
@@ -1605,14 +1607,14 @@
                         "items": {
                             "ProductVersion": "12.0.4518.1014",
                             "ProductName": "Microsoft Office OneNote",
+                            "OriginalFilename": "OneNoteM.exe",
                             "LegalTrademarks2": "Windows\u00ae is a registered trademark of Microsoft Corporation.",
                             "LegalTrademarks1": "Microsoft\u00ae is a registered trademark of Microsoft Corporation.",
-                            "LegalCopyright": "\u00a9 2006 Microsoft Corporation.  All rights reserved.",
-                            "OriginalFilename": "OneNoteM.exe",
+                            "InternalName": "QuickLauncher",
                             "FileVersion": "12.0.4518.1014",
+                            "LegalCopyright": "\u00a9 2006 Microsoft Corporation.  All rights reserved.",
                             "FileDescription": "Microsoft Office OneNote Quick Launcher",
-                            "CompanyName": "Microsoft Corporation",
-                            "InternalName": "QuickLauncher"
+                            "CompanyName": "Microsoft Corporation"
                         }
                     }
                 ]

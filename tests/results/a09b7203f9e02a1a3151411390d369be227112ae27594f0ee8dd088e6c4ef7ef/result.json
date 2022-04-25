@@ -11,7 +11,7 @@
         "supplementary": [
             {
                 "name": "features.json",
-                "sha256": "b6773ccde4b2e541719a9c9568da5cb4699c31b1f0978633d15e55933a6daffb",
+                "sha256": "b19068e6ea1c6a8dee71bfbcc4b909a23475cdb71b9555fea170125c25e0982e",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
                 "path": "/tmp/working_directory/features.json",
@@ -23,7 +23,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 200,
+        "score": 0,
         "sections": [
             {
                 "body": "[[\"Timestamp\", \"708992537 (1992-06-19 22:22:17 +00:00 (UTC))\"], [\"Entrypoint\", \"0x7f1a8\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"2.25\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
@@ -118,7 +118,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", -0.0], [\"Offset\", 521728], [\"Size\", 0], [\"Virtual Size\", 3293], [\"Characteristics\", \"MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", 0.0], [\"Offset\", 521728], [\"Size\", 0], [\"Virtual Size\", 3293], [\"Characteristics\", \"MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
                 "classification": "TLP:W",
                 "body_format": "MULTI",
                 "depth": 1,
@@ -166,7 +166,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", -0.0], [\"Offset\", 529920], [\"Size\", 0], [\"Virtual Size\", 132], [\"Characteristics\", \"MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", 0.0], [\"Offset\", 529920], [\"Size\", 0], [\"Virtual Size\", 132], [\"Characteristics\", \"MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
                 "classification": "TLP:W",
                 "body_format": "MULTI",
                 "depth": 1,
@@ -385,20 +385,70 @@
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "[[\"Type\", 0]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
-                "heuristic": {
-                    "heur_id": 13,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
+                "heuristic": null,
                 "tags": {},
                 "title_text": "Version",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 0], [\"file_os\", \"WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"APP\"], [\"file_version_LS\", 2490458], [\"file_version_MS\", 131078], [\"product_version_LS\", 1441796], [\"product_version_MS\", 131081], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+                "classification": "TLP:W",
+                "body_format": "ORDERED_KEY_VALUE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "fixed_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 0]]",
+                "classification": "TLP:W",
+                "body_format": "ORDERED_KEY_VALUE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "pe": {
+                            "versions": {
+                                "filename": [
+                                    "Murup.exe"
+                                ],
+                                "description": [
+                                    "Damufute Podopaco"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "title_text": "string_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[[\"key\", \"040904B0\"], [\"type\", 0], [\"lang\", \"ENGLISH\"], [\"sublang\", \"ENGLISH_US\"], [\"code_page\", \"UTF_16\"]]",
+                "classification": "TLP:W",
+                "body_format": "ORDERED_KEY_VALUE",
+                "depth": 3,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "langcode_items 1",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[[\"ProductName\", \"Hunor Cukip\"], [\"ProductVersion\", \"2.9.22.4\"], [\"LegalTrademarks\", \"\"], [\"LegalCopyright\", \"\"], [\"OriginalFilename\", \"Murup.exe\"], [\"FileVersion\", \"2.6.38.90\"], [\"CompanyName\", \"Dokefegelad\"], [\"FileDescription\", \"Damufute Podopaco\"], [\"InternalName\", \"Murup\"]]",
+                "classification": "TLP:W",
+                "body_format": "ORDERED_KEY_VALUE",
+                "depth": 4,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "items",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

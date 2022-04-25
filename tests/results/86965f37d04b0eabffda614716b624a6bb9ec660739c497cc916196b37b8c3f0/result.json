@@ -203,7 +203,7 @@
             },
             {
                 "name": "features.json",
-                "sha256": "bd0e1d2fb4cf8c0cc0daa387b42d785d310ed9adddf097f986cefb1c578d138c",
+                "sha256": "ec34929a412fd0cae8eb0ba7b86e9497487ae01ddef834ac64c39d08514922ff",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
                 "path": "/tmp/working_directory/features.json",
@@ -596,6 +596,17 @@
                 "heuristic": null,
                 "tags": {},
                 "title_text": "fixed_file_info",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"126484773\"]]",
+                "classification": "TLP:W",
+                "body_format": "ORDERED_KEY_VALUE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "var_file_info",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

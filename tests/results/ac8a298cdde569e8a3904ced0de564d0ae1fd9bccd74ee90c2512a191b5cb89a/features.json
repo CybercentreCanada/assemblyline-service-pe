@@ -1516,8 +1516,10 @@
         "reserved1": 0,
         "security_cookie": 4329552,
         "timedatestamp": 0,
-        "version": "UNKNOWN",
-        "virtual_memory_threshold": 0
+        "version": "SEH",
+        "virtual_memory_threshold": 0,
+        "se_handler_count": 3,
+        "se_handler_table": 4321520
     },
     "resources_manager": {
         "langs_available": [
@@ -1555,17 +1557,17 @@
                         "sublang": "DEFAULT",
                         "code_page": "UTF_16",
                         "items": {
-                            "BuildID": "20151216175450",
-                            "ProductName": "Firefox",
-                            "LegalTrademarks": "Mozilla",
-                            "ProductVersion": "43.0.1",
-                            "LegalCopyright": "License: MPL 2",
-                            "InternalName": "",
-                            "CompanyName": "Mozilla Foundation",
                             "FileDescription": "",
+                            "BuildID": "20151216175450",
+                            "CompanyName": "Mozilla Foundation",
+                            "InternalName": "",
+                            "LegalCopyright": "License: MPL 2",
                             "Comments": "",
+                            "FileVersion": "43.0.1",
                             "OriginalFilename": "maintenanceservice.exe",
-                            "FileVersion": "43.0.1"
+                            "ProductVersion": "43.0.1",
+                            "LegalTrademarks": "Mozilla",
+                            "ProductName": "Firefox"
                         }
                     }
                 ]

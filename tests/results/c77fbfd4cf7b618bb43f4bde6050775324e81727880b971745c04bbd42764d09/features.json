@@ -3803,11 +3803,11 @@
                         "items": {
                             "ProductVersion": "0, 0, 0, 0",
                             "ProductName": "Mesh Agent Service",
-                            "LegalCopyright": "Apache 2.0 License",
-                            "FileVersion": "0.2.1.3",
                             "OriginalFilename": "MeshAgent.exe",
-                            "FileDescription": "Mesh Agent Service",
-                            "InternalName": "MeshAgent"
+                            "InternalName": "MeshAgent",
+                            "FileVersion": "0.2.1.3",
+                            "LegalCopyright": "Apache 2.0 License",
+                            "FileDescription": "Mesh Agent Service"
                         }
                     }
                 ]
@@ -4149,7 +4149,7 @@
             }
         ]
     },
-    "verify_signature": "VERIFICATION_FLAGS.BAD_DIGEST | VERIFICATION_FLAGS.BAD_SIGNATURE",
+    "verify_signature": "VERIFICATION_FLAGS.BAD_SIGNATURE",
     "signatures": [
         {
             "version": 1,
@@ -4346,7 +4346,7 @@
                 "digest": "3aa4b4a3497a0ce005295e0d7751cea8589bcb1427b70f7af0589bf12655729d23d4f54c9c562804e3050110b6170a62",
                 "content_type": "1.3.6.1.4.1.311.2.1.4"
             },
-            "check": "VERIFICATION_FLAGS.BAD_DIGEST"
+            "check": "VERIFICATION_FLAGS.BAD_SIGNATURE"
         }
     ],
     "overlay": {

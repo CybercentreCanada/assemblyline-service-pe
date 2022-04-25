@@ -43,7 +43,7 @@
             },
             {
                 "name": "features.json",
-                "sha256": "d12e353cc142d4e17892f2c84d888aa6b80ce78e11414fab0cec5b23a3a568a0",
+                "sha256": "e221ff8aaf526c93160ab10d9297866274c60e06dadddff51fb1d3bf4353af4c",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
                 "path": "/tmp/working_directory/features.json",
@@ -184,7 +184,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", -0.0], [\"Offset\", 1024], [\"Size\", 0], [\"Virtual Size\", 1679360], [\"Characteristics\", \"CNT_UNINITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", 0.0], [\"Offset\", 1024], [\"Size\", 0], [\"Virtual Size\", 1679360], [\"Characteristics\", \"CNT_UNINITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
                 "classification": "TLP:W",
                 "body_format": "MULTI",
                 "depth": 1,
@@ -598,7 +598,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"ProductVersion\", \"2.1.4.4\"], [\"LegalCopyright\", \"Copyright \\u00a9 2017 Chip Digital GmbH\"], [\"FileDescription\", \"CHIP Secured Installer\"], [\"FileVersion\", \"2.1.4.4\"], [\"Comments\", \"CHIP Secured Installer\"]]",
+                "body": "[[\"\", \"\"], [\"LegalCopyright\", \"Copyright \\u00a9 2017 Chip Digital GmbH\"], [\"FileVersion\", \"2.1.4.4\"], [\"Comments\", \"CHIP Secured Installer\"], [\"FileDescription\", \"CHIP Secured Installer\"], [\"ProductVersion\", \"2.1.4.4\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 4,

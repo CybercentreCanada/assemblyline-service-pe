@@ -59,7 +59,7 @@
             },
             {
                 "name": "features.json",
-                "sha256": "562a47d5f82abfe604acf0e4f04efd04de7529e821a9a11a50d16efd3a62afe7",
+                "sha256": "a84cd25d02a66cfa14c244353b6a7618180338ffb910a820c4e6f91ea31accdc",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
                 "path": "/tmp/working_directory/features.json",
@@ -416,7 +416,7 @@
                 "auto_collapse": false
             },
             {
-                "body": null,
+                "body": "[[\"Type\", 0]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 1,
@@ -430,6 +430,17 @@
                 },
                 "tags": {},
                 "title_text": "Version",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 63], [\"file_os\", \"NT_WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"APP\"], [\"file_version_LS\", 0], [\"file_version_MS\", 0], [\"product_version_LS\", 0], [\"product_version_MS\", 0], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+                "classification": "TLP:W",
+                "body_format": "ORDERED_KEY_VALUE",
+                "depth": 2,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "fixed_file_info",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

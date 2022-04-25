@@ -976,8 +976,10 @@
         "security_cookie": 4309488,
         "timedatestamp": 0,
         "hr_timedatestamp": "1970-01-01T00:00:00.000000Z",
-        "version": "UNKNOWN",
-        "virtual_memory_threshold": 0
+        "version": "SEH",
+        "virtual_memory_threshold": 0,
+        "se_handler_count": 0,
+        "se_handler_table": 0
     },
     "resources_manager": {
         "langs_available": [
@@ -1069,13 +1071,7 @@
             "string_file_info": {
                 "key": "StringFileInfo",
                 "type": 1,
-                "langcode_items": [
-                    {
-                        "key": "4678323b0",
-                        "type": 1,
-                        "items": []
-                    }
-                ]
+                "langcode_items": []
             },
             "var_file_info": {
                 "key": "VarFileInfo",

@@ -1007,8 +1007,10 @@
         "security_cookie": 268509428,
         "timedatestamp": 0,
         "hr_timedatestamp": "1970-01-01T00:00:00.000000Z",
-        "version": "UNKNOWN",
-        "virtual_memory_threshold": 0
+        "version": "SEH",
+        "virtual_memory_threshold": 0,
+        "se_handler_count": 34,
+        "se_handler_table": 268503488
     },
     "resources_manager": {
         "langs_available": [
@@ -1070,12 +1072,12 @@
                                 "value": "21, 0, 0, 3"
                             },
                             {
-                                "key": "FileDescription",
-                                "value": "Plugin Dynamic Link Library"
-                            },
-                            {
                                 "key": "CompanyName",
                                 "value": "Beijing Rising Information Technology Co., Ltd."
+                            },
+                            {
+                                "key": "FileDescription",
+                                "value": "Plugin Dynamic Link Library"
                             },
                             {
                                 "key": "InternalName",

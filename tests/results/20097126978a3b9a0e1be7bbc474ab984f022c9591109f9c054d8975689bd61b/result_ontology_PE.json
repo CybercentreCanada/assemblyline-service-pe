@@ -211,7 +211,7 @@
                 "MEM_WRITE"
             ],
             "entropy": 0.0,
-            "entropy_without_padding": -0.0,
+            "entropy_without_padding": 0.0,
             "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "offset": 1024,
             "size": 0,
@@ -532,6 +532,72 @@
             "SWEDISH"
         ],
         "dialogs": [],
+        "icons": [
+            {
+                "icon_id": 55,
+                "planes": 1,
+                "height": 16,
+                "width": 16,
+                "lang": "SWEDISH",
+                "sublang": "SWEDISH"
+            },
+            {
+                "icon_id": 56,
+                "planes": 1,
+                "height": 20,
+                "width": 20,
+                "lang": "SWEDISH",
+                "sublang": "SWEDISH"
+            },
+            {
+                "icon_id": 57,
+                "planes": 1,
+                "height": 24,
+                "width": 24,
+                "lang": "SWEDISH",
+                "sublang": "SWEDISH"
+            },
+            {
+                "icon_id": 58,
+                "planes": 1,
+                "height": 32,
+                "width": 32,
+                "lang": "SWEDISH",
+                "sublang": "SWEDISH"
+            },
+            {
+                "icon_id": 59,
+                "planes": 1,
+                "height": 40,
+                "width": 40,
+                "lang": "SWEDISH",
+                "sublang": "SWEDISH"
+            },
+            {
+                "icon_id": 60,
+                "planes": 1,
+                "height": 48,
+                "width": 48,
+                "lang": "SWEDISH",
+                "sublang": "SWEDISH"
+            },
+            {
+                "icon_id": 61,
+                "planes": 1,
+                "height": 64,
+                "width": 64,
+                "lang": "SWEDISH",
+                "sublang": "SWEDISH"
+            },
+            {
+                "icon_id": 62,
+                "planes": 1,
+                "height": 0,
+                "width": 0,
+                "lang": "SWEDISH",
+                "sublang": "SWEDISH"
+            }
+        ],
         "manifest": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\">\n  <assemblyIdentity\n      version=\"1.0.0.0\"\n      processorArchitecture=\"*\"\n      name=\"client\"\n      type=\"win32\"\n  />\n  <description>uTorrent</description>\n\n  <!-- Enable Windows XP and higher themes with common controls -->\n  <dependency>\n    <dependentAssembly>\n      <assemblyIdentity\n        type=\"win32\"\n        name=\"Microsoft.Windows.Common-Controls\"\n        version=\"6.0.0.0\"\n        processorArchitecture=\"*\"\n        publicKeyToken=\"6595b64144ccf1df\"\n        language=\"*\"\n      />\n    </dependentAssembly>\n  </dependency>\n\n  <!-- Disable Windows Vista UAC compatability heuristics -->\n  <trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v2\">\n    <security>\n      <requestedPrivileges>\n        <requestedExecutionLevel level=\"asInvoker\"/>\n      </requestedPrivileges>\n    </security>\n  </trustInfo>\n  <compatibility xmlns=\"urn:schemas-microsoft-com:compatibility.v1\">\n    <application>\n      <!-- Windows 10 -->\n      <supportedOS Id=\"{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}\"/>\n      <!-- Windows 8.1 -->\n      <supportedOS Id=\"{1f676c76-80e1-4239-95bb-83d0f6d0da78}\"/>\n      <!-- Windows Vista -->\n      <supportedOS Id=\"{e2011457-1546-43c5-a5fe-008deee3d3f0}\"/>\n      <!-- Windows 7 -->\n      <supportedOS Id=\"{35138b9a-5d96-4fbd-8e2d-a2440225f93a}\"/>\n      <!-- Windows 8 -->\n      <supportedOS Id=\"{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}\"/>\n    </application>\n  </compatibility>\n  <!-- Enable Windows Vista-style font scaling on Vista -->\n  <asmv3:application xmlns:asmv3=\"urn:schemas-microsoft-com:asm.v3\">\n    <asmv3:windowsSettings xmlns=\"http://schemas.microsoft.com/SMI/2005/WindowsSettings\">\n      <dpiAware>false</dpiAware>\n    </asmv3:windowsSettings>\n  </asmv3:application>\n</assembly>\n",
         "version": {
             "type": 0,
@@ -586,12 +652,12 @@
                                 "value": "7.10.4.44633"
                             },
                             {
-                                "key": "FileDescription",
-                                "value": "BitTorrent"
-                            },
-                            {
                                 "key": "CompanyName",
                                 "value": "BitTorrent Inc."
+                            },
+                            {
+                                "key": "FileDescription",
+                                "value": "BitTorrent"
                             },
                             {
                                 "key": "InternalName",

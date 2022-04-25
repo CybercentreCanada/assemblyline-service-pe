@@ -138,7 +138,7 @@
                 "MEM_WRITE"
             ],
             "entropy": 0.0,
-            "entropy_without_padding": -0.0,
+            "entropy_without_padding": 0.0,
             "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "offset": 521728,
             "size": 0,
@@ -173,7 +173,7 @@
                 "MEM_WRITE"
             ],
             "entropy": 0.0,
-            "entropy_without_padding": -0.0,
+            "entropy_without_padding": 0.0,
             "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "offset": 529920,
             "size": 0,
@@ -3337,7 +3337,49 @@
             "Invalid floating point operation",
             "Floating point division by zero",
             "Floating point overflow"
-        ]
+        ],
+        "version": {
+            "type": 0,
+            "fixed_file_info": {
+                "file_date_ls": 0,
+                "file_date_ms": 0,
+                "file_flags": 0,
+                "file_flags_mask": 0,
+                "file_os": "WINDOWS32",
+                "file_subtype": "UNKNOWN",
+                "file_type": "APP",
+                "file_version_ls": 2490458,
+                "file_version_ms": 131078,
+                "product_version_ls": 1441796,
+                "product_version_ms": 131081,
+                "signature": 4277077181,
+                "struct_version": 65536
+            },
+            "string_file_info": {
+                "key": "StringFileInfo",
+                "type": 0,
+                "langcode_items": [
+                    {
+                        "key": "040904B0",
+                        "type": 0,
+                        "lang": "ENGLISH",
+                        "sublang": "ENGLISH_US",
+                        "code_page": "UTF_16",
+                        "items": {
+                            "ProductVersion": "2.9.22.4",
+                            "OriginalFilename": "Murup.exe",
+                            "ProductName": "Hunor Cukip",
+                            "LegalTrademarks": "",
+                            "InternalName": "Murup",
+                            "FileVersion": "2.6.38.90",
+                            "LegalCopyright": "",
+                            "FileDescription": "Damufute Podopaco",
+                            "CompanyName": "Dokefegelad"
+                        }
+                    }
+                ]
+            }
+        }
     },
     "resources": {
         "characteristics": 0,

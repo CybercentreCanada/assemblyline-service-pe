@@ -168,7 +168,7 @@
                 "MEM_WRITE"
             ],
             "entropy": 0.0,
-            "entropy_without_padding": -0.0,
+            "entropy_without_padding": 0.0,
             "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "offset": 1024,
             "size": 0,
@@ -592,16 +592,12 @@
                         "code_page": "UTF_16",
                         "items": [
                             {
-                                "key": "ProductVersion",
-                                "value": "2.1.4.4"
+                                "key": "",
+                                "value": ""
                             },
                             {
                                 "key": "LegalCopyright",
                                 "value": "Copyright \u00a9 2017 Chip Digital GmbH"
-                            },
-                            {
-                                "key": "FileDescription",
-                                "value": "CHIP Secured Installer"
                             },
                             {
                                 "key": "FileVersion",
@@ -610,6 +606,14 @@
                             {
                                 "key": "Comments",
                                 "value": "CHIP Secured Installer"
+                            },
+                            {
+                                "key": "FileDescription",
+                                "value": "CHIP Secured Installer"
+                            },
+                            {
+                                "key": "ProductVersion",
+                                "value": "2.1.4.4"
                             }
                         ]
                     }

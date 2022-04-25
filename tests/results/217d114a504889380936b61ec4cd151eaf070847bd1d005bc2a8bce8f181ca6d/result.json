@@ -171,7 +171,7 @@
             },
             {
                 "name": "features.json",
-                "sha256": "01606b97966ff12dc6b41316068474974b62999b1d12c3c0d817a2f087c44a7a",
+                "sha256": "6d01f198f99cd41a66409fa337cc1de9cb760562e50dceae30ad760f8e820d52",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
                 "path": "/tmp/working_directory/features.json",
@@ -539,6 +539,14 @@
                                     "AFX_DIALOG_LAYOUT"
                                 ]
                             }
+                        },
+                        "string": {
+                            "extracted": [
+                                "Dialog",
+                                "OK",
+                                "Cancel",
+                                "ustom1"
+                            ]
                         }
                     }
                 },
@@ -547,7 +555,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "Can't read dialog object",
+                "body": "Can't decode title of dialog item from dialog named Dialog",
                 "classification": "TLP:W",
                 "body_format": "TEXT",
                 "depth": 1,
@@ -633,7 +641,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"ProductVersion\", \"1.0.0.1\"], [\"ProductName\", \"TODO: <Product name>\"], [\"LegalCopyright\", \"Copyright (C) 2017\"], [\"OriginalFilename\", \"TODO: <Original filename>\"], [\"FileVersion\", \"1.0.0.1\"], [\"FileDescription\", \"TODO: <File description>\"], [\"CompanyName\", \"TODO: <Company name>\"], [\"InternalName\", \"TODO: <Internal name>\"]]",
+                "body": "[[\"ProductVersion\", \"1.0.0.1\"], [\"ProductName\", \"TODO: <Product name>\"], [\"LegalCopyright\", \"Copyright (C) 2017\"], [\"OriginalFilename\", \"TODO: <Original filename>\"], [\"FileVersion\", \"1.0.0.1\"], [\"CompanyName\", \"TODO: <Company name>\"], [\"FileDescription\", \"TODO: <File description>\"], [\"InternalName\", \"TODO: <Internal name>\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 4,

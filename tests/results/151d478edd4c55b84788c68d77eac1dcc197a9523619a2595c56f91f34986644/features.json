@@ -1216,8 +1216,10 @@
         "reserved1": 0,
         "security_cookie": 9721132,
         "timedatestamp": 1462953687,
-        "version": "UNKNOWN",
-        "virtual_memory_threshold": 0
+        "version": "SEH",
+        "virtual_memory_threshold": 0,
+        "se_handler_count": 0,
+        "se_handler_table": 0
     },
     "resources_manager": {
         "langs_available": [
@@ -1372,14 +1374,14 @@
                         "sublang": "ENGLISH_US",
                         "code_page": "WINDOWS_1252",
                         "items": {
-                            "LegalCopyright": "Copyright \u00a9 Alexander Roshal 1993-2011",
-                            "InternalName": "Uninstall WinRAR",
-                            "CompanyName": "Alexander Roshal",
-                            "FileDescription": "Uninstall WinRAR",
-                            "ProductName": "WinRAR",
-                            "ProductVersion": "4.1.0",
                             "OriginalFilename": "Uninstall.exe",
-                            "FileVersion": "4.1.0"
+                            "InternalName": "Uninstall WinRAR",
+                            "ProductVersion": "4.1.0",
+                            "FileVersion": "4.1.0",
+                            "LegalCopyright": "Copyright \u00a9 Alexander Roshal 1993-2011",
+                            "FileDescription": "Uninstall WinRAR",
+                            "CompanyName": "Alexander Roshal",
+                            "ProductName": "WinRAR"
                         }
                     }
                 ]

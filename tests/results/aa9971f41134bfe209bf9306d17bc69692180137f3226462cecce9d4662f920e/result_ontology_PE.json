@@ -1613,8 +1613,10 @@
         "security_cookie": 0,
         "timedatestamp": 0,
         "hr_timedatestamp": "1970-01-01T00:00:00.000000Z",
-        "version": "UNKNOWN",
-        "virtual_memory_threshold": 0
+        "version": "SEH",
+        "virtual_memory_threshold": 0,
+        "se_handler_count": 11,
+        "se_handler_table": 805315952
     },
     "resources_manager": {
         "langs_available": [
@@ -1779,12 +1781,12 @@
                                 "value": "12.0.4518.1014"
                             },
                             {
-                                "key": "FileDescription",
-                                "value": "Microsoft Office OneNote Quick Launcher"
-                            },
-                            {
                                 "key": "CompanyName",
                                 "value": "Microsoft Corporation"
+                            },
+                            {
+                                "key": "FileDescription",
+                                "value": "Microsoft Office OneNote Quick Launcher"
                             },
                             {
                                 "key": "InternalName",

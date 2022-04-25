@@ -139,7 +139,7 @@
                 "MEM_WRITE"
             ],
             "entropy": 0.0,
-            "entropy_without_padding": -0.0,
+            "entropy_without_padding": 0.0,
             "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "offset": 20480,
             "size": 0,
@@ -194,7 +194,7 @@
                 "MEM_WRITE"
             ],
             "entropy": 0.0,
-            "entropy_without_padding": -0.0,
+            "entropy_without_padding": 0.0,
             "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "offset": 29696,
             "size": 0,
@@ -958,6 +958,7 @@
             "CHINESE_SIMPLIFIED",
             "DEFAULT"
         ],
+        "icons": [],
         "version": {
             "type": 0,
             "fixed_file_info": {
@@ -975,19 +976,50 @@
                 "signature": 4277077181,
                 "struct_version": 65536
             },
+            "string_file_info": {
+                "key": "StringFileInfo",
+                "type": 1,
+                "langcode_items": [
+                    {
+                        "key": "080404B0",
+                        "type": 1,
+                        "lang": "CHINESE",
+                        "sublang": "CHINESE_SIMPLIFIED",
+                        "code_page": "UTF_16",
+                        "items": [
+                            {
+                                "key": "LegalTrademarks",
+                                "value": "Microsoft Firewall"
+                            },
+                            {
+                                "key": "Comments",
+                                "value": "Microsoft Firewall"
+                            },
+                            {
+                                "key": "CompanyName",
+                                "value": "Xiang Corporation"
+                            },
+                            {
+                                "key": "FileDescription",
+                                "value": "Microsoft Firewall"
+                            },
+                            {
+                                "key": "Produc\u5a4d\u0090\u0003",
+                                "value": ""
+                            },
+                            {
+                                "key": "LegalCopyright",
+                                "value": "Microsoft"
+                            }
+                        ]
+                    }
+                ]
+            },
             "var_file_info": {
                 "key": "VarFileInfo",
                 "type": 0,
                 "translations": [
-                    6357106,
-                    7536750,
-                    6357100,
-                    6881396,
-                    7209071,
-                    0,
-                    78645252,
-                    708,
-                    5439489
+                    78645252
                 ]
             }
         }

@@ -139,7 +139,7 @@
             },
             {
                 "name": "features.json",
-                "sha256": "6638d24c16743a551fe45e16a3f2f9bad39e793da05b73058dcdf1b9d436c93a",
+                "sha256": "beb8c19d820f54df8faeb465ea4ecfcc8e1845173c2655e8fcc538c1d297accc",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
                 "path": "/tmp/working_directory/features.json",
@@ -336,7 +336,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", -0.0], [\"Offset\", 0], [\"Size\", 0], [\"Virtual Size\", 819200], [\"Characteristics\", \"CNT_UNINITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
+                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", 0.0], [\"Offset\", 0], [\"Size\", 0], [\"Virtual Size\", 819200], [\"Characteristics\", \"CNT_UNINITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
                 "classification": "TLP:W",
                 "body_format": "MULTI",
                 "depth": 1,
@@ -592,7 +592,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"ProductVersion\", \"6.0.0.1\"], [\"FileDescription\", \"Downloader\"], [\"LegalCopyright\", \"\"], [\"FileVersion\", \"6.0.0.1\"], [\"OriginalFilename\", \"Downloader\"], [\"ProductName\", \"Downloader\"]]",
+                "body": "[[\"ProductVersion\", \"6.0.0.1\"], [\"ProductName\", \"Downloader\"], [\"FileDescription\", \"Downloader\"], [\"LegalCopyright\", \"\"], [\"OriginalFilename\", \"Downloader\"], [\"FileVersion\", \"6.0.0.1\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 4,

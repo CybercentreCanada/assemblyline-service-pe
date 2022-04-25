@@ -2618,8 +2618,39 @@
         "reserved1": 0,
         "security_cookie": 5497924,
         "timedatestamp": 0,
-        "version": "UNKNOWN",
-        "virtual_memory_threshold": 0
+        "version": "WIN10_0_16237",
+        "virtual_memory_threshold": 0,
+        "se_handler_count": 503,
+        "se_handler_table": 5453072,
+        "guard_cf_check_function_pointer": 5329932,
+        "guard_cf_dispatch_function_pointer": 0,
+        "guard_cf_flags_list": [
+            "GCF_INSTRUMENTED"
+        ],
+        "guard_cf_function_count": 0,
+        "guard_cf_function_table": 0,
+        "guard_flags": "GCF_INSTRUMENTED",
+        "code_integrity": {
+            "catalog": 0,
+            "catalog_offset": 0,
+            "flags": 0,
+            "reserved": 0
+        },
+        "guard_address_taken_iat_entry_count": 0,
+        "guard_address_taken_iat_entry_table": 0,
+        "guard_long_jump_target_count": 0,
+        "guard_long_jump_target_table": 0,
+        "dynamic_value_reloc_table": 0,
+        "hybrid_metadata_pointer": 0,
+        "dynamic_value_reloctable_offset": 0,
+        "dynamic_value_reloctable_section": 0,
+        "guard_rf_failure_routine": 0,
+        "guard_rf_failure_routine_function_pointer": 0,
+        "reserved2": 0,
+        "guard_rf_verify_stackpointer_function_pointer": 0,
+        "hotpatch_table_offset": 0,
+        "addressof_unicode_string": 0,
+        "reserved3": 0
     },
     "resources_manager": {
         "langs_available": [
@@ -2709,11 +2740,11 @@
                         "items": {
                             "ProductVersion": "2.8.3",
                             "ProductName": "Voice",
-                            "FileDescription": "Voice",
-                            "CompanyName": "www.google.com",
-                            "LegalCopyright": "Copyright (C) 1997-2018 google.com",
                             "OriginalFilename": "Voice",
-                            "FileVersion": "2.8.3"
+                            "FileVersion": "2.8.3",
+                            "LegalCopyright": "Copyright (C) 1997-2018 google.com",
+                            "FileDescription": "Voice",
+                            "CompanyName": "www.google.com"
                         }
                     }
                 ]

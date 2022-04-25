@@ -976,8 +976,10 @@
         "security_cookie": 4318436,
         "timedatestamp": 0,
         "hr_timedatestamp": "1970-01-01T00:00:00.000000Z",
-        "version": "UNKNOWN",
-        "virtual_memory_threshold": 0
+        "version": "SEH",
+        "virtual_memory_threshold": 0,
+        "se_handler_count": 13,
+        "se_handler_table": 4305760
     },
     "resources_manager": {
         "langs_available": [
@@ -1179,6 +1181,13 @@
                 "product_version_ms": 1507328,
                 "signature": 4277077181,
                 "struct_version": 65536
+            },
+            "var_file_info": {
+                "key": "VarFileInfo",
+                "type": 1,
+                "translations": [
+                    126484773
+                ]
             }
         }
     },

@@ -187,7 +187,7 @@
             },
             {
                 "name": "features.json",
-                "sha256": "50a4ec0deb58e64298c181c34c0ceb79e114fa138604908847ae112e1925106b",
+                "sha256": "51def7dfbe82329e23bcfd16dc7ab7aefba0a44c4253ca00fd45f19b6e042ed9",
                 "description": "Features extracted from the PE file, as a JSON file",
                 "classification": "TLP:W",
                 "path": "/tmp/working_directory/features.json",
@@ -583,11 +583,11 @@
                     "file": {
                         "pe": {
                             "versions": {
-                                "description": [
-                                    "d7x (PC Repair Multi-Tool)"
-                                ],
                                 "filename": [
                                     "d7x.exe"
+                                ],
+                                "description": [
+                                    "d7x (PC Repair Multi-Tool)"
                                 ]
                             }
                         }
@@ -609,7 +609,7 @@
                 "auto_collapse": false
             },
             {
-                "body": "[[\"ProductVersion\", \"21.09.2402\"], [\"InternalName\", \"d7x\"], [\"FileDescription\", \"d7x (PC Repair Multi-Tool)\"], [\"CompanyName\", \"d7xTech (formerly Foolish IT)\"], [\"LegalCopyright\", \"d7xTech (formerly Foolish IT)\"], [\"ProductName\", \"d7x\"], [\"OriginalFilename\", \"d7x.exe\"], [\"FileVersion\", \"21.09.2402\"]]",
+                "body": "[[\"ProductVersion\", \"21.09.2402\"], [\"OriginalFilename\", \"d7x.exe\"], [\"FileVersion\", \"21.09.2402\"], [\"InternalName\", \"d7x\"], [\"CompanyName\", \"d7xTech (formerly Foolish IT)\"], [\"FileDescription\", \"d7x (PC Repair Multi-Tool)\"], [\"LegalCopyright\", \"d7xTech (formerly Foolish IT)\"], [\"ProductName\", \"d7x\"]]",
                 "classification": "TLP:W",
                 "body_format": "ORDERED_KEY_VALUE",
                 "depth": 4,

@@ -1333,8 +1333,10 @@
         "security_cookie": 9721132,
         "timedatestamp": 1462953687,
         "hr_timedatestamp": "2016-05-11T08:01:27.000000Z",
-        "version": "UNKNOWN",
-        "virtual_memory_threshold": 0
+        "version": "SEH",
+        "virtual_memory_threshold": 0,
+        "se_handler_count": 0,
+        "se_handler_table": 0
     },
     "resources_manager": {
         "langs_available": [
@@ -1494,6 +1496,14 @@
                                 "value": "Copyright \u00a9 Alexander Roshal 1993-2011"
                             },
                             {
+                                "key": "ProductVersion",
+                                "value": "4.1.0"
+                            },
+                            {
+                                "key": "ProductName",
+                                "value": "WinRAR"
+                            },
+                            {
                                 "key": "InternalName",
                                 "value": "Uninstall WinRAR"
                             },
@@ -1504,14 +1514,6 @@
                             {
                                 "key": "FileDescription",
                                 "value": "Uninstall WinRAR"
-                            },
-                            {
-                                "key": "ProductName",
-                                "value": "WinRAR"
-                            },
-                            {
-                                "key": "ProductVersion",
-                                "value": "4.1.0"
                             },
                             {
                                 "key": "OriginalFilename",

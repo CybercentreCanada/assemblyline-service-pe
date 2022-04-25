@@ -1285,8 +1285,18 @@
         "security_cookie": 4882544,
         "timedatestamp": 0,
         "hr_timedatestamp": "1970-01-01T00:00:00.000000Z",
-        "version": "UNKNOWN",
-        "virtual_memory_threshold": 0
+        "version": "WIN_8_1",
+        "virtual_memory_threshold": 0,
+        "se_handler_count": 34,
+        "se_handler_table": 4874704,
+        "guard_cf_check_function_pointer": 4313412,
+        "guard_cf_dispatch_function_pointer": 0,
+        "guard_cf_flags_list": [
+            "GCF_INSTRUMENTED"
+        ],
+        "guard_cf_function_count": 0,
+        "guard_cf_function_table": 0,
+        "guard_flags": "GCF_INSTRUMENTED"
     },
     "resources_manager": {
         "langs_available": [
@@ -1296,6 +1306,521 @@
         "sublangs_available": [
             "ENGLISH_US",
             "DEFAULT"
+        ],
+        "dialogs": [
+            {
+                "charset": 1,
+                "cx": 309,
+                "cy": 176,
+                "dialogbox_style_list": [
+                    "FIXEDSYS",
+                    "SHELLFONT",
+                    "SETFONT",
+                    "MODALFRAME"
+                ],
+                "extended_style": "0",
+                "extended_style_list": [
+                    "FIXEDSYS",
+                    "SHELLFONT",
+                    "SETFONT",
+                    "MODALFRAME"
+                ],
+                "help_id": 1,
+                "items": [
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 1,
+                        "is_extended": true,
+                        "style": "1342242817",
+                        "title": "OK",
+                        "x": 198,
+                        "y": 155
+                    },
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 2,
+                        "is_extended": true,
+                        "style": "1342242816",
+                        "title": "Cancel",
+                        "x": 252,
+                        "y": 155
+                    }
+                ],
+                "lang": "RUSSIAN",
+                "point_size": 8,
+                "signature": 65535,
+                "style": "0",
+                "style_list": [
+                    "SYSMENU",
+                    "DLGFRAME",
+                    "POPUP",
+                    "BORDER",
+                    "CAPTION"
+                ],
+                "sub_lang": "DEFAULT",
+                "title": "Dialog",
+                "typeface": "MS Shell Dlg",
+                "version": 1,
+                "weight": 400,
+                "x": 0,
+                "y": 0
+            },
+            {
+                "charset": 1,
+                "cx": 309,
+                "cy": 176,
+                "dialogbox_style_list": [
+                    "FIXEDSYS",
+                    "SHELLFONT",
+                    "SETFONT",
+                    "MODALFRAME"
+                ],
+                "extended_style": "0",
+                "extended_style_list": [
+                    "FIXEDSYS",
+                    "SHELLFONT",
+                    "SETFONT",
+                    "MODALFRAME"
+                ],
+                "help_id": 1,
+                "items": [
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 1,
+                        "is_extended": true,
+                        "style": "1342242817",
+                        "title": "OK",
+                        "x": 198,
+                        "y": 155
+                    },
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 2,
+                        "is_extended": true,
+                        "style": "1342242816",
+                        "title": "Cancel",
+                        "x": 252,
+                        "y": 155
+                    }
+                ],
+                "lang": "RUSSIAN",
+                "point_size": 8,
+                "signature": 65535,
+                "style": "0",
+                "style_list": [
+                    "SYSMENU",
+                    "DLGFRAME",
+                    "POPUP",
+                    "BORDER",
+                    "CAPTION"
+                ],
+                "sub_lang": "DEFAULT",
+                "title": "Dialog",
+                "typeface": "MS Shell Dlg",
+                "version": 1,
+                "weight": 400,
+                "x": 0,
+                "y": 0
+            },
+            {
+                "charset": 1,
+                "cx": 309,
+                "cy": 176,
+                "dialogbox_style_list": [
+                    "FIXEDSYS",
+                    "SHELLFONT",
+                    "SETFONT",
+                    "MODALFRAME"
+                ],
+                "extended_style": "0",
+                "extended_style_list": [
+                    "FIXEDSYS",
+                    "SHELLFONT",
+                    "SETFONT",
+                    "MODALFRAME"
+                ],
+                "help_id": 1,
+                "items": [
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 1,
+                        "is_extended": true,
+                        "style": "1342242817",
+                        "title": "OK",
+                        "x": 198,
+                        "y": 155
+                    },
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 2,
+                        "is_extended": true,
+                        "style": "1342242816",
+                        "title": "Cancel",
+                        "x": 252,
+                        "y": 155
+                    }
+                ],
+                "lang": "RUSSIAN",
+                "point_size": 8,
+                "signature": 65535,
+                "style": "0",
+                "style_list": [
+                    "SYSMENU",
+                    "DLGFRAME",
+                    "POPUP",
+                    "BORDER",
+                    "CAPTION"
+                ],
+                "sub_lang": "DEFAULT",
+                "title": "Dialog",
+                "typeface": "MS Shell Dlg",
+                "version": 1,
+                "weight": 400,
+                "x": 0,
+                "y": 0
+            },
+            {
+                "charset": 1,
+                "cx": 309,
+                "cy": 176,
+                "dialogbox_style_list": [
+                    "FIXEDSYS",
+                    "SHELLFONT",
+                    "SETFONT",
+                    "MODALFRAME"
+                ],
+                "extended_style": "0",
+                "extended_style_list": [
+                    "FIXEDSYS",
+                    "SHELLFONT",
+                    "SETFONT",
+                    "MODALFRAME"
+                ],
+                "help_id": 1,
+                "items": [
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 1,
+                        "is_extended": true,
+                        "style": "1342242817",
+                        "title": "OK",
+                        "x": 198,
+                        "y": 155
+                    },
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 2,
+                        "is_extended": true,
+                        "style": "1342242816",
+                        "title": "",
+                        "x": 252,
+                        "y": 155
+                    },
+                    {
+                        "cx": 100,
+                        "cy": 15,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 1212,
+                        "is_extended": true,
+                        "style": "1342242848",
+                        "title": "",
+                        "x": 37,
+                        "y": 74
+                    },
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 1213,
+                        "is_extended": true,
+                        "style": "1342242816",
+                        "title": "ustom1",
+                        "x": 53,
+                        "y": 138
+                    },
+                    {
+                        "cx": 140,
+                        "cy": 100,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 1214,
+                        "is_extended": true,
+                        "style": "1342242840",
+                        "title": "",
+                        "x": 127,
+                        "y": 52
+                    },
+                    {
+                        "cx": 100,
+                        "cy": 15,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 1215,
+                        "is_extended": true,
+                        "style": "1342242848",
+                        "title": "",
+                        "x": 47,
+                        "y": 83
+                    },
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 1216,
+                        "is_extended": true,
+                        "style": "1342242816",
+                        "title": "ustom1",
+                        "x": 63,
+                        "y": 146
+                    },
+                    {
+                        "cx": 140,
+                        "cy": 100,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 1217,
+                        "is_extended": true,
+                        "style": "1342242840",
+                        "title": "",
+                        "x": 137,
+                        "y": 60
+                    }
+                ],
+                "lang": "RUSSIAN",
+                "point_size": 8,
+                "signature": 65535,
+                "style": "0",
+                "style_list": [
+                    "SYSMENU",
+                    "DLGFRAME",
+                    "POPUP",
+                    "BORDER",
+                    "CAPTION"
+                ],
+                "sub_lang": "DEFAULT",
+                "title": "Dialog",
+                "typeface": "MS Shell Dlg",
+                "version": 1,
+                "weight": 400,
+                "x": 0,
+                "y": 0
+            },
+            {
+                "charset": 1,
+                "cx": 309,
+                "cy": 176,
+                "dialogbox_style_list": [
+                    "FIXEDSYS",
+                    "SHELLFONT",
+                    "SETFONT",
+                    "MODALFRAME"
+                ],
+                "extended_style": "0",
+                "extended_style_list": [
+                    "FIXEDSYS",
+                    "SHELLFONT",
+                    "SETFONT",
+                    "MODALFRAME"
+                ],
+                "help_id": 1,
+                "items": [
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 1,
+                        "is_extended": true,
+                        "style": "1342242817",
+                        "title": "OK",
+                        "x": 198,
+                        "y": 155
+                    },
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 2,
+                        "is_extended": true,
+                        "style": "1342242816",
+                        "title": "Cancel",
+                        "x": 252,
+                        "y": 155
+                    }
+                ],
+                "lang": "RUSSIAN",
+                "point_size": 8,
+                "signature": 65535,
+                "style": "0",
+                "style_list": [
+                    "SYSMENU",
+                    "DLGFRAME",
+                    "POPUP",
+                    "BORDER",
+                    "CAPTION"
+                ],
+                "sub_lang": "DEFAULT",
+                "title": "Dialog",
+                "typeface": "MS Shell Dlg",
+                "version": 1,
+                "weight": 400,
+                "x": 0,
+                "y": 0
+            },
+            {
+                "charset": 1,
+                "cx": 309,
+                "cy": 176,
+                "dialogbox_style_list": [
+                    "FIXEDSYS",
+                    "SHELLFONT",
+                    "SETFONT",
+                    "MODALFRAME"
+                ],
+                "extended_style": "0",
+                "extended_style_list": [
+                    "FIXEDSYS",
+                    "SHELLFONT",
+                    "SETFONT",
+                    "MODALFRAME"
+                ],
+                "help_id": 1,
+                "items": [
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 1,
+                        "is_extended": true,
+                        "style": "1342242817",
+                        "title": "OK",
+                        "x": 198,
+                        "y": 155
+                    },
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 2,
+                        "is_extended": true,
+                        "style": "1342242816",
+                        "title": "Cancel",
+                        "x": 252,
+                        "y": 155
+                    }
+                ],
+                "lang": "RUSSIAN",
+                "point_size": 8,
+                "signature": 65535,
+                "style": "0",
+                "style_list": [
+                    "SYSMENU",
+                    "DLGFRAME",
+                    "POPUP",
+                    "BORDER",
+                    "CAPTION"
+                ],
+                "sub_lang": "DEFAULT",
+                "title": "Dialog",
+                "typeface": "MS Shell Dlg",
+                "version": 1,
+                "weight": 400,
+                "x": 0,
+                "y": 0
+            },
+            {
+                "charset": 1,
+                "cx": 309,
+                "cy": 176,
+                "dialogbox_style_list": [
+                    "FIXEDSYS",
+                    "SHELLFONT",
+                    "SETFONT",
+                    "MODALFRAME"
+                ],
+                "extended_style": "0",
+                "extended_style_list": [
+                    "FIXEDSYS",
+                    "SHELLFONT",
+                    "SETFONT",
+                    "MODALFRAME"
+                ],
+                "help_id": 1,
+                "items": [
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 1,
+                        "is_extended": true,
+                        "style": "1342242817",
+                        "title": "OK",
+                        "x": 198,
+                        "y": 155
+                    },
+                    {
+                        "cx": 50,
+                        "cy": 14,
+                        "extended_style": 0,
+                        "help_id": 0,
+                        "item_id": 2,
+                        "is_extended": true,
+                        "style": "1342242816",
+                        "title": "Cancel",
+                        "x": 252,
+                        "y": 155
+                    }
+                ],
+                "lang": "RUSSIAN",
+                "point_size": 8,
+                "signature": 65535,
+                "style": "0",
+                "style_list": [
+                    "SYSMENU",
+                    "DLGFRAME",
+                    "POPUP",
+                    "BORDER",
+                    "CAPTION"
+                ],
+                "sub_lang": "DEFAULT",
+                "title": "Dialog",
+                "typeface": "MS Shell Dlg",
+                "version": 1,
+                "weight": 400,
+                "x": 0,
+                "y": 0
+            }
         ],
         "icons": [
             {
@@ -1429,12 +1954,12 @@
                                 "value": "1.0.0.1"
                             },
                             {
-                                "key": "FileDescription",
-                                "value": "TODO: <File description>"
-                            },
-                            {
                                 "key": "CompanyName",
                                 "value": "TODO: <Company name>"
+                            },
+                            {
+                                "key": "FileDescription",
+                                "value": "TODO: <File description>"
                             },
                             {
                                 "key": "InternalName",
