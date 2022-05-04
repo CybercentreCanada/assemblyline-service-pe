@@ -53,7 +53,8 @@ cert_verification_entries = {
 
 accelerator_flags_entries = {entry.__int__(): entry for entry, txt in lief.PE.ACCELERATOR_FLAGS.__entries.values()}
 
-PACKED_SECTION_NAMES = [".UPX", ".UPX0", ".UPX1", ".ASPack", ".vmp0"]
+PACKED_SECTION_NAMES = ["UPX", "UPX0", "UPX1", "ASPack", "vmp0", "themida"]
+PACKED_SECTION_NAMES += [f".{x}" for x in PACKED_SECTION_NAMES]
 MALICIOUS_SECTION_NAMES = [(".bak", None), (".lol", None), (".rsrc", 3221487648)]
 
 
@@ -218,7 +219,7 @@ def generate_checksum(filename, checksum_offset):
 
 class PE(ServiceBase):
     def __init__(self, config=None):
-        super(PE, self).__init__(config)
+        super().__init__(config)
 
     def start(self):
         self.log.info("Starting PE")
@@ -712,6 +713,17 @@ class PE(ServiceBase):
                 section_section.add_subsection(heur_section)
 
             res.add_subsection(section_section)
+
+        empty_names = [section.name for section in self.binary.sections if section.name.strip() == ""]
+        if empty_names:
+            heur = Heuristic(20)
+            heur_section = ResultSection(heur.name, heuristic=heur)
+            if len(empty_names) > 1:
+                heur_section.add_line(f"PE contains {len(empty_names)} empty section names.")
+            else:
+                heur_section.add_line("PE contains an empty section name.")
+            res.add_subsection(heur_section)
+
         self.file_res.add_section(res)
 
     def add_debug(self):
@@ -1729,7 +1741,7 @@ class PE(ServiceBase):
 
         temp_path = os.path.join(self.working_directory, "features.json")
         with open(temp_path, "w") as f:
-            f.write(json.dumps(self.features))
+            json.dump(self.features, f)
         request.add_supplementary(temp_path, "features.json", "Features extracted from the PE file, as a JSON file")
 
         # generate_ontology will modify the self.features, which is why we save it upfront

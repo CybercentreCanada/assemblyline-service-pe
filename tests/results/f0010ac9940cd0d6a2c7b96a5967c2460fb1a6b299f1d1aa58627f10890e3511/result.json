@@ -80,7 +80,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 1000,
+        "score": 1200,
         "sections": [
             {
                 "body": "Extracted binary_0_10_2147484742_1031\nExtracted binary_0_10_2147484754_1031",
@@ -208,6 +208,24 @@
                 "auto_collapse": false
             },
             {
+                "body": "Section name: UPX0",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 20,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Common packed section name",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
                 "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 7.936099015021149], [\"Entropy without padding\", 7.936099015021149], [\"Offset\", 1024], [\"Size\", 343040], [\"Virtual Size\", 344064], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d2c8794a3e39050d32b749602c4a4094\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.84291, 7.88155, 7.87407, 7.89889, 7.88354, 7.91113, 7.82071, 7.45979, 7.89168, 7.8759, 7.88358, 7.90001, 7.88137, 7.88521, 7.90218, 7.88054, 7.8951, 7.88912, 7.89455, 7.86581, 7.88282, 7.90164, 7.87919, 7.88856, 7.87171, 7.8971, 7.88671, 7.88228, 7.88111, 7.87456, 7.88354, 7.89093, 7.9065, 7.89135, 7.90611, 7.89794, 7.91489, 7.89179, 7.91041, 7.89773, 7.79819, 7.75647, 7.79226, 7.70612, 7.84539, 7.59175, 7.72364, 7.80943, 7.77158, 7.51172]}}]]",
                 "classification": "TLP:W",
                 "body_format": "MULTI",
@@ -228,6 +246,24 @@
                     }
                 },
                 "title_text": "Section - UPX1",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Section name: UPX1",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 20,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Common packed section name",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },

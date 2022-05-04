@@ -53,7 +53,7 @@ def create_service_task(sample):
             "deep_scan": False,
             "service_name": "Not Important",
             "service_config": {},
-            "fileinfo": dict((k, v) for k, v in fileinfo(f"/tmp/{sample}").items() if k in fileinfo_keys),
+            "fileinfo": {k: v for k, v in fileinfo(f"/tmp/{sample}").items() if k in fileinfo_keys},
             "filename": sample,
             "min_classification": "TLP:WHITE",
             "max_files": 501,
@@ -122,23 +122,23 @@ class TestService:
         correct_path = os.path.join(SELF_LOCATION, "tests", "results", sample, "features.json")
         if os.path.exists(correct_path):
             with open(correct_path, "r") as f:
-                correct_result = json.loads(f.read())
+                correct_result = json.load(f)
 
             test_path = os.path.join(cls.working_directory, "features.json")
             with open(test_path, "r") as f:
-                test_result = json.loads(f.read())
+                test_result = json.load(f)
 
             if overwrite_results:
                 if test_result != correct_result:
                     with open(correct_path, "w") as f:
-                        f.write(json.dumps(test_result))
+                        json.dump(test_result, f)
             else:
                 assert test_result == correct_result
 
         correct_path = os.path.join(SELF_LOCATION, "tests", "results", sample, "result_ontology_PE.json")
         if os.path.exists(correct_path):
             with open(correct_path, "r") as f:
-                correct_result = json.loads(f.read())
+                correct_result = json.load(f)
 
             assert "PE" in cls.ontologies
             assert len(cls.ontologies["PE"]) == 1
@@ -147,7 +147,7 @@ class TestService:
             if overwrite_results:
                 if test_result != correct_result:
                     with open(correct_path, "w") as f:
-                        f.write(json.dumps(test_result))
+                        json.dump(test_result, f)
             else:
                 assert test_result == correct_result
 
@@ -157,7 +157,7 @@ class TestService:
         # Get the assumed "correct" result of the sample
         correct_path = os.path.join(SELF_LOCATION, "tests", "results", sample, "result.json")
         with open(correct_path, "r") as f:
-            correct_result = json.loads(f.read())
+            correct_result = json.load(f)
 
         # Assert values of the class instance are expected
         assert cls.file_res == service_request.result
@@ -166,31 +166,6 @@ class TestService:
         if overwrite_results:
             if test_result != correct_result:
                 with open(correct_path, "w") as f:
-                    f.write(json.dumps(test_result))
+                    json.dump(test_result, f)
         else:
             assert test_result == correct_result
-
-    @staticmethod
-    @pytest.mark.parametrize(
-        "sample", ["019f812bbb2304bbe1ce1dc24cdf6e43d486aff9e14fe0594a8fa17e0f3f5e47"], indirect=True
-    )
-    def generate_test_service(sample):  # remove generate to run it-ish
-        cls = pe.pe.PE()
-        cls.start()
-
-        task = Task(create_service_task(sample=sample))
-        service_request = ServiceRequest(task)
-        cls.execute(service_request)
-
-        import shutil
-
-        if sample != "8e8b38abf230ba9deeccf588c332293440e2b7fc40c62842b8beb2460184e548":
-            os.mkdir(os.path.join(SELF_LOCATION, "tests", "results", sample))
-
-            shutil.copyfile(
-                os.path.join(cls.working_directory, "features.json"),
-                os.path.join(SELF_LOCATION, "tests", "results", sample, "features.json"),
-            )
-
-            with open(os.path.join(SELF_LOCATION, "tests", "results", sample, "result.json"), "w") as result_file:
-                result_file.write(json.dumps(task.get_service_result()))

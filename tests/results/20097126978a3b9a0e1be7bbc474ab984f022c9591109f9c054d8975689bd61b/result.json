@@ -160,7 +160,7 @@
         "service_debug_info": null
     },
     "result": {
-        "score": 1050,
+        "score": 1250,
         "sections": [
             {
                 "body": "[[\"Timestamp\", \"1536793850 (2018-09-12 23:10:50 +00:00 (UTC))\"], [\"Entrypoint\", \"0x5088f0\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"14.0\"], [\"Operating System version\", \"5.1\"], [\"Subsystem version\", \"5.1\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", true], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
@@ -270,6 +270,24 @@
                 "auto_collapse": false
             },
             {
+                "body": "Section name: UPX0",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 20,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Common packed section name",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
                 "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 7.999887720337854], [\"Entropy without padding\", 7.999887720337853], [\"Offset\", 1024], [\"Size\", 1852928], [\"Virtual Size\", 1855488], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE\"], [\"MD5\", \"a04c20d3d0ea9f9b23c3b371480b99f5\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.99484, 7.99503, 7.99507, 7.99503, 7.99527, 7.99504, 7.99508, 7.99513, 7.99471, 7.99503, 7.99514, 7.99535, 7.9949, 7.995, 7.99554, 7.99535, 7.99464, 7.99556, 7.99487, 7.99516, 7.99508, 7.99464, 7.99526, 7.99572, 7.99605, 7.99467, 7.99522, 7.99586, 7.99477, 7.99504, 7.99477, 7.99473, 7.99527, 7.99373, 7.9954, 7.99501, 7.9954, 7.99433, 7.99595, 7.99503, 7.99496, 7.99471, 7.99538, 7.99566, 7.99515, 7.99484, 7.99481, 7.99513, 7.99545, 7.95801]}}]]",
                 "classification": "TLP:W",
                 "body_format": "MULTI",
@@ -290,6 +308,24 @@
                     }
                 },
                 "title_text": "Section - UPX1",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "Section name: UPX1",
+                "classification": "TLP:W",
+                "body_format": "TEXT",
+                "depth": 2,
+                "heuristic": {
+                    "heur_id": 20,
+                    "score": 100,
+                    "attack_ids": [],
+                    "signatures": {},
+                    "frequency": 1,
+                    "score_map": {}
+                },
+                "tags": {},
+                "title_text": "Common packed section name",
                 "zeroize_on_tag_safe": false,
                 "auto_collapse": false
             },
