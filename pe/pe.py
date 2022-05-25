@@ -337,10 +337,10 @@ class PE(ServiceBase):
                     self.recurse_resources(child, f"{parent_name}{resource.id}_")
         elif isinstance(resource, lief.PE.ResourceData):
             if resource.content[:2] == MZ or search_list_in_list(DOS_MODE, resource.content[:200]):
-                if self.temp_res is None:
-                    self.temp_res = ResultSection("Executable in resources", heuristic=Heuristic(12))
+                if len(resource.content) < self.config.get("heur12_min_size_byte", 60):
+                    return
                 file_name = f"binary_{parent_name}{resource.id}"
-                self.temp_res.add_line(f"Extracted {file_name}")
+                self.extracted_file_from_resources.append(file_name)
                 temp_path = os.path.join(self.working_directory, file_name)
                 with open(temp_path, "wb") as myfile:
                     myfile.write(bytearray(resource.content))
@@ -352,11 +352,14 @@ class PE(ServiceBase):
                 )
 
     def check_exe_resources(self):
-        self.temp_res = None
+        self.extracted_file_from_resources = []
         if self.binary.has_resources:
             self.recurse_resources(self.binary.resources, "")
-        if self.temp_res is not None:
-            self.file_res.add_section(self.temp_res)
+        if self.extracted_file_from_resources:
+            temp_res = ResultSection("Executable in resources", heuristic=Heuristic(12))
+            for file_name in self.extracted_file_from_resources:
+                temp_res.add_line(f"Extracted {file_name}")
+            self.file_res.add_section(temp_res)
 
     def check_dataless_resources(self):
         dataless_resources = []
