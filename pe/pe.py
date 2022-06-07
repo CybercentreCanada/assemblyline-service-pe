@@ -12,7 +12,7 @@ import lief
 import ordlookup
 import ssdeep
 from assemblyline.common.entropy import calculate_partition_entropy
-from assemblyline.odm.models.ontology.types import pe as odm_pe
+from assemblyline.odm.models.ontology.filetypes import PE as PE_ODM
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.result import (
@@ -203,9 +203,9 @@ def generate_checksum(filename, checksum_offset):
         if i == int(checksum_offset / 4):
             continue
         if i + 1 == (int(data_len / 4)) and remainder:
-            dword = struct.unpack("I", data[i * 4 :] + (b"\0" * (4 - remainder)))[0]
+            dword = struct.unpack("I", data[i * 4:] + (b"\0" * (4 - remainder)))[0]
         else:
-            dword = struct.unpack("I", data[i * 4 : i * 4 + 4])[0]
+            dword = struct.unpack("I", data[i * 4: i * 4 + 4])[0]
         checksum += dword
         if checksum >= 2 ** 32:
             checksum = (checksum & 0xFFFFFFFF) + (checksum >> 32)
@@ -1849,4 +1849,4 @@ class PE(ServiceBase):
                     certificate["valid_from"] = datetime.datetime(*certificate["valid_from"])
                     certificate["valid_to"] = datetime.datetime(*certificate["valid_to"])
 
-        self.attach_ontological_result(modelType=odm_pe.PE, data=self.features)
+        self.ontology.add_file_part(model=PE_ODM, data=self.features)
