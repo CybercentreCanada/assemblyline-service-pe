@@ -31,6 +31,9 @@ from assemblyline_v4_service.common.result import (
 )
 from PIL import Image
 
+# Disable logging from LIEF
+lief.logging.disable()
+
 MZ = [ord(x) for x in "MZ"]
 DOS_MODE = [ord(x) for x in "This program cannot be run in DOS mode"]
 ACCEPTED_ALGORITHMS = [
