@@ -31,6 +31,9 @@ from assemblyline_v4_service.common.result import (
 )
 from PIL import Image
 
+# Disable logging from LIEF
+lief.logging.disable()
+
 MZ = [ord(x) for x in "MZ"]
 DOS_MODE = [ord(x) for x in "This program cannot be run in DOS mode"]
 ACCEPTED_ALGORITHMS = [
@@ -203,9 +206,9 @@ def generate_checksum(filename, checksum_offset):
         if i == int(checksum_offset / 4):
             continue
         if i + 1 == (int(data_len / 4)) and remainder:
-            dword = struct.unpack("I", data[i * 4 :] + (b"\0" * (4 - remainder)))[0]
+            dword = struct.unpack("I", data[i * 4:] + (b"\0" * (4 - remainder)))[0]
         else:
-            dword = struct.unpack("I", data[i * 4 : i * 4 + 4])[0]
+            dword = struct.unpack("I", data[i * 4: i * 4 + 4])[0]
         checksum += dword
         if checksum >= 2 ** 32:
             checksum = (checksum & 0xFFFFFFFF) + (checksum >> 32)
