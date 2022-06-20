@@ -13,7 +13,7 @@ import lief
 import ordlookup
 import ssdeep
 from assemblyline.common.entropy import calculate_partition_entropy
-from assemblyline.odm.models.ontology.types import pe as odm_pe
+from assemblyline.odm.models.ontology.filetypes import pe as odm_pe
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.result import (
