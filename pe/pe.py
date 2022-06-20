@@ -1,4 +1,5 @@
 import copy
+import csv
 import datetime
 import hashlib
 import json
@@ -206,9 +207,9 @@ def generate_checksum(filename, checksum_offset):
         if i == int(checksum_offset / 4):
             continue
         if i + 1 == (int(data_len / 4)) and remainder:
-            dword = struct.unpack("I", data[i * 4:] + (b"\0" * (4 - remainder)))[0]
+            dword = struct.unpack("I", data[i * 4 :] + (b"\0" * (4 - remainder)))[0]
         else:
-            dword = struct.unpack("I", data[i * 4: i * 4 + 4])[0]
+            dword = struct.unpack("I", data[i * 4 : i * 4 + 4])[0]
         checksum += dword
         if checksum >= 2 ** 32:
             checksum = (checksum & 0xFFFFFFFF) + (checksum >> 32)
@@ -226,12 +227,27 @@ class PE(ServiceBase):
 
     def start(self):
         self.log.info("Starting PE")
+        # Loading Rich header resolutions
         self.rich_header_entries = {}
         with open(os.path.join(pathlib.Path(__file__).parent.resolve(), "comp_id.txt"), "r") as f:
             for line in f.read().splitlines():
                 if line and line[0] != "#":
                     k, v = line.split(" ", 1)
                     self.rich_header_entries[k] = v
+
+        # Loading Code Signing Certificate Blocklist (CSCB)
+        self.cscb = defaultdict(dict)
+        with open(os.path.join(pathlib.Path(__file__).parent.resolve(), "cscb.csv"), "r", newline="") as csvfile:
+            cscbreader = csv.reader(csvfile, quoting=csv.QUOTE_ALL, skipinitialspace=True)
+            for row in cscbreader:
+                if row[0].startswith("#"):
+                    continue
+                # row[1] = "serial_number"
+                # row[2] = "thumbprint"
+                # row[3] = "thumbprint_algorithm"
+                # row[-1] = "Reason"
+                self.cscb["serial_number"][row[1]] = row
+                self.cscb[row[3]][row[2]] = row
 
     def check_timestamps(self):
         """
@@ -1481,9 +1497,40 @@ class PE(ServiceBase):
                     )
                     signer_raw_hex = bytes.fromhex(extracted_cert_info["raw_hex"])
                     # The sha1 thumbprint generated this way match what VirusTotal reports for 'certificate thumbprints'
-                    sub_sub_sub_res.add_tag("cert.thumbprint", hashlib.sha1(signer_raw_hex).hexdigest())
-                    sub_sub_sub_res.add_tag("cert.thumbprint", hashlib.sha256(signer_raw_hex).hexdigest())
-                    sub_sub_sub_res.add_tag("cert.thumbprint", hashlib.md5(signer_raw_hex).hexdigest())
+                    sha1_hex = hashlib.sha1(signer_raw_hex).hexdigest()
+                    sha256_hex = hashlib.sha256(signer_raw_hex).hexdigest()
+                    md5_hex = hashlib.md5(signer_raw_hex).hexdigest()
+                    sub_sub_sub_res.add_tag("cert.thumbprint", sha1_hex)
+                    sub_sub_sub_res.add_tag("cert.thumbprint", sha256_hex)
+                    sub_sub_sub_res.add_tag("cert.thumbprint", md5_hex)
+                    cscb = []
+                    if "SHA1" in self.cscb:
+                        if sha1_hex in self.cscb["SHA1"]:
+                            cscb.append(("SHA1", sha1_hex, self.cscb["SHA1"][sha1_hex][-1]))
+                    if "SHA256" in self.cscb:
+                        if sha256_hex in self.cscb["SHA256"]:
+                            cscb.append(("SHA256", sha256_hex, self.cscb["SHA256"][sha256_hex][-1]))
+                    if "MD5" in self.cscb:
+                        if md5_hex in self.cscb["MD5"]:
+                            cscb.append(("MD5", md5_hex, self.cscb["MD5"][md5_hex][-1]))
+                    if "serial_number" in self.cscb:
+                        if extracted_cert_info["serial_number"] in self.cscb["serial_number"]:
+                            cscb.append(
+                                (
+                                    "serial_number",
+                                    extracted_cert_info["serial_number"],
+                                    self.cscb["serial_number"][extracted_cert_info["serial_number"]][-1],
+                                )
+                            )
+                    if cscb:
+                        heur = Heuristic(29)
+                        heur_section = ResultTableSection(heur.name, heuristic=heur)
+                        for element in cscb:
+                            heur_section.add_row(
+                                TableRow({"Type": element[0], "Value": element[1], "Family": element[2]})
+                            )
+                            heur_section.add_tag("attribution.family", element[2])
+                        sub_sub_sub_res.add_subsection(heur_section)
                     sub_sub_res.add_subsection(sub_sub_sub_res)
                 else:
                     heur = Heuristic(13)

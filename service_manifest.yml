@@ -229,6 +229,13 @@ heuristics:
     name: Possible decompression bomb DOS attack
     score: 200
 
+  - description: >-
+      MalwareBazaar maintains a list of code signing certificates used by threat actors to sign malware. Code signing certificates are dumped by ReversingLabs A1000 Malware Analysis Platform and manually vetted by abuse.ch.
+    filetype: "executable/windows"
+    heur_id: 29
+    name: MalwareBazaar Blacklisted certificate
+    score: 500
+
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
   cpu_cores: 1
