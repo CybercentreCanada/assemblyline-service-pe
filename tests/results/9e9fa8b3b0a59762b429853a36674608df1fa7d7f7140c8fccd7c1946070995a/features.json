@@ -1,0 +1,691 @@
+{
+    "name": "9e9fa8b3b0a59762b429853a36674608df1fa7d7f7140c8fccd7c1946070995a",
+    "format": "PE",
+    "imphash": "c7269d59926fa4252270f407e4dab043",
+    "entrypoint": 411296,
+    "header": {
+        "characteristics_hash": 546,
+        "characteristics_list": [
+            "LARGE_ADDRESS_AWARE",
+            "DEBUG_STRIPPED",
+            "EXECUTABLE_IMAGE"
+        ],
+        "machine": "AMD64",
+        "numberof_sections": 6,
+        "numberof_symbols": 0,
+        "signature": [
+            80,
+            69,
+            0,
+            0
+        ],
+        "timestamp": 0
+    },
+    "optional_header": {
+        "addressof_entrypoint": 411296,
+        "baseof_code": 4096,
+        "checksum": 0,
+        "dll_characteristics": 33120,
+        "dll_characteristics_lists": [
+            "HIGH_ENTROPY_VA",
+            "NX_COMPAT",
+            "DYNAMIC_BASE",
+            "TERMINAL_SERVER_AWARE"
+        ],
+        "file_alignment": 512,
+        "imagebase": 4194304,
+        "loader_flags": 0,
+        "magic": "PE32_PLUS",
+        "major_image_version": 1,
+        "major_linker_version": 3,
+        "major_operating_system_version": 6,
+        "major_subsystem_version": 6,
+        "minor_image_version": 0,
+        "minor_linker_version": 0,
+        "minor_operating_system_version": 1,
+        "minor_subsystem_version": 1,
+        "numberof_rva_and_size": 16,
+        "section_alignment": 4096,
+        "sizeof_code": 2066432,
+        "sizeof_headers": 1536,
+        "sizeof_heap_commit": 4096,
+        "sizeof_heap_reserve": 1048576,
+        "sizeof_image": 4898816,
+        "sizeof_initialized_data": 328192,
+        "sizeof_stack_commit": 4096,
+        "sizeof_stack_reserve": 2097152,
+        "sizeof_uninitialized_data": 0,
+        "subsystem": "WINDOWS_GUI",
+        "win32_version_value": 0,
+        "computed_checksum": 4560166
+    },
+    "dos_header": {
+        "addressof_new_exeheader": 128,
+        "addressof_relocation_table": 64,
+        "checksum": 0,
+        "file_size_in_pages": 3,
+        "header_size_in_paragraphs": 0,
+        "initial_ip": 0,
+        "initial_relative_cs": 0,
+        "initial_relative_ss": 0,
+        "initial_sp": 139,
+        "magic": 23117,
+        "maximum_extra_paragraphs": 65535,
+        "minimum_extra_paragraphs": 0,
+        "numberof_relocation": 4,
+        "oem_id": 0,
+        "oem_info": 0,
+        "overlay_number": 0,
+        "used_bytes_in_the_last_page": 144
+    },
+    "nx": true,
+    "authentihash": {
+        "sha512": "81ee8c9a06f484107c442aae11aa5db3d391008056cb760ca3bb50868f96ae7b918fbacdf3ccef2df1826e1dac7eafc5502749f542f73f79c3e294481570fb14",
+        "sha384": "42bb84378df5d9ee73b2d584b5bc4824d66b8541054e73533d5b803f6f641d05522edd505dd11bc463bd7608f22fc5b7",
+        "sha256": "dbcfa85e6f6acb3580a04357108995754429d64070e5b72e8fc220431a643ba4",
+        "sha1": "a899945d7abeb924ee510ce5a867ee4fc65185dc",
+        "md5": "16db090049d419cc79279afc78a45ba5"
+    },
+    "position_independent": true,
+    "is_reproducible_build": false,
+    "size_of_headers": 1024,
+    "virtual_size": 4898816,
+    "size": 4499408,
+    "sections": [
+        {
+            "name": ".text",
+            "characteristics_hash": 1610612768,
+            "characteristics_list": [
+                "CNT_CODE",
+                "MEM_EXECUTE",
+                "MEM_READ"
+            ],
+            "entropy": 6.171746648679192,
+            "entropy_without_padding": 6.17183357561405,
+            "md5": "c08106bcbaafd29a40ad4b3e96a5627a",
+            "offset": 1536,
+            "size": 2066432,
+            "sizeof_raw_data": 2066432,
+            "virtual_address": 4096,
+            "virtual_size": 2066376,
+            "fullname": ".text\u0000\u0000\u0000"
+        },
+        {
+            "name": ".rdata",
+            "characteristics_hash": 1073741888,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_READ"
+            ],
+            "entropy": 5.208799971138144,
+            "entropy_without_padding": 5.209523216916722,
+            "md5": "beeb3d314c52f6b238ed0414983da573",
+            "offset": 2067968,
+            "size": 2008064,
+            "sizeof_raw_data": 2008064,
+            "virtual_address": 2072576,
+            "virtual_size": 2007680,
+            "fullname": ".rdata\u0000\u0000"
+        },
+        {
+            "name": ".data",
+            "characteristics_hash": 3221225536,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_READ",
+                "MEM_WRITE"
+            ],
+            "entropy": 6.302761121525251,
+            "entropy_without_padding": 6.30276112152525,
+            "md5": "972579fbc5433531a72824f2f41e9a20",
+            "offset": 4076032,
+            "size": 328192,
+            "sizeof_raw_data": 328192,
+            "virtual_address": 4083712,
+            "virtual_size": 718752,
+            "fullname": ".data\u0000\u0000\u0000"
+        },
+        {
+            "name": ".idata",
+            "characteristics_hash": 3221225536,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_READ",
+                "MEM_WRITE"
+            ],
+            "entropy": 3.569913682555425,
+            "entropy_without_padding": 4.305439331096066,
+            "md5": "d5ce09736386aba25dc4e15466abe8b6",
+            "offset": 4404224,
+            "size": 1536,
+            "sizeof_raw_data": 1536,
+            "virtual_address": 4804608,
+            "virtual_size": 1164,
+            "fullname": ".idata\u0000\u0000"
+        },
+        {
+            "name": ".reloc",
+            "characteristics_hash": 1107296320,
+            "characteristics_list": [
+                "CNT_INITIALIZED_DATA",
+                "MEM_DISCARDABLE",
+                "MEM_READ"
+            ],
+            "entropy": 5.458372430828139,
+            "entropy_without_padding": 5.460617508202926,
+            "md5": "6be6e24d172cfcc193f5e83f1245a056",
+            "offset": 4405760,
+            "size": 84480,
+            "sizeof_raw_data": 84480,
+            "virtual_address": 4808704,
+            "virtual_size": 84094,
+            "fullname": ".reloc\u0000\u0000"
+        },
+        {
+            "name": ".symtab",
+            "characteristics_hash": 1107296256,
+            "characteristics_list": [
+                "MEM_DISCARDABLE",
+                "MEM_READ"
+            ],
+            "entropy": 0.020393135236084953,
+            "entropy_without_padding": 0.8112781244591329,
+            "md5": "07b5472d347d42780469fb2654b7fc54",
+            "offset": 4490240,
+            "size": 512,
+            "sizeof_raw_data": 512,
+            "virtual_address": 4894720,
+            "virtual_size": 4,
+            "fullname": ".symtab\u0000"
+        }
+    ],
+    "imports": {
+        "kernel32.dll": [
+            {
+                "data": 4804662,
+                "hint": 0,
+                "iat_address": 4083744,
+                "iat_value": 4804662,
+                "is_ordinal": false,
+                "name": "WriteFile"
+            },
+            {
+                "data": 4804674,
+                "hint": 0,
+                "iat_address": 4083752,
+                "iat_value": 4804674,
+                "is_ordinal": false,
+                "name": "WriteConsoleW"
+            },
+            {
+                "data": 4804690,
+                "hint": 0,
+                "iat_address": 4083760,
+                "iat_value": 4804690,
+                "is_ordinal": false,
+                "name": "WaitForMultipleObjects"
+            },
+            {
+                "data": 4804716,
+                "hint": 0,
+                "iat_address": 4083768,
+                "iat_value": 4804716,
+                "is_ordinal": false,
+                "name": "WaitForSingleObject"
+            },
+            {
+                "data": 4804738,
+                "hint": 0,
+                "iat_address": 4083776,
+                "iat_value": 4804738,
+                "is_ordinal": false,
+                "name": "VirtualQuery"
+            },
+            {
+                "data": 4804754,
+                "hint": 0,
+                "iat_address": 4083784,
+                "iat_value": 4804754,
+                "is_ordinal": false,
+                "name": "VirtualFree"
+            },
+            {
+                "data": 4804768,
+                "hint": 0,
+                "iat_address": 4083792,
+                "iat_value": 4804768,
+                "is_ordinal": false,
+                "name": "VirtualAlloc"
+            },
+            {
+                "data": 4804784,
+                "hint": 0,
+                "iat_address": 4083800,
+                "iat_value": 4804784,
+                "is_ordinal": false,
+                "name": "SwitchToThread"
+            },
+            {
+                "data": 4804802,
+                "hint": 0,
+                "iat_address": 4083808,
+                "iat_value": 4804802,
+                "is_ordinal": false,
+                "name": "SuspendThread"
+            },
+            {
+                "data": 4804818,
+                "hint": 0,
+                "iat_address": 4083816,
+                "iat_value": 4804818,
+                "is_ordinal": false,
+                "name": "Sleep"
+            },
+            {
+                "data": 4804826,
+                "hint": 0,
+                "iat_address": 4083824,
+                "iat_value": 4804826,
+                "is_ordinal": false,
+                "name": "SetWaitableTimer"
+            },
+            {
+                "data": 4804846,
+                "hint": 0,
+                "iat_address": 4083832,
+                "iat_value": 4804846,
+                "is_ordinal": false,
+                "name": "SetUnhandledExceptionFilter"
+            },
+            {
+                "data": 4804876,
+                "hint": 0,
+                "iat_address": 4083840,
+                "iat_value": 4804876,
+                "is_ordinal": false,
+                "name": "SetProcessPriorityBoost"
+            },
+            {
+                "data": 4804902,
+                "hint": 0,
+                "iat_address": 4083848,
+                "iat_value": 4804902,
+                "is_ordinal": false,
+                "name": "SetEvent"
+            },
+            {
+                "data": 4804914,
+                "hint": 0,
+                "iat_address": 4083856,
+                "iat_value": 4804914,
+                "is_ordinal": false,
+                "name": "SetErrorMode"
+            },
+            {
+                "data": 4804930,
+                "hint": 0,
+                "iat_address": 4083864,
+                "iat_value": 4804930,
+                "is_ordinal": false,
+                "name": "SetConsoleCtrlHandler"
+            },
+            {
+                "data": 4804954,
+                "hint": 0,
+                "iat_address": 4083872,
+                "iat_value": 4804954,
+                "is_ordinal": false,
+                "name": "ResumeThread"
+            },
+            {
+                "data": 4804970,
+                "hint": 0,
+                "iat_address": 4083880,
+                "iat_value": 4804970,
+                "is_ordinal": false,
+                "name": "PostQueuedCompletionStatus"
+            },
+            {
+                "data": 4805000,
+                "hint": 0,
+                "iat_address": 4083888,
+                "iat_value": 4805000,
+                "is_ordinal": false,
+                "name": "LoadLibraryA"
+            },
+            {
+                "data": 4805016,
+                "hint": 0,
+                "iat_address": 4083896,
+                "iat_value": 4805016,
+                "is_ordinal": false,
+                "name": "LoadLibraryW"
+            },
+            {
+                "data": 4805032,
+                "hint": 0,
+                "iat_address": 4083904,
+                "iat_value": 4805032,
+                "is_ordinal": false,
+                "name": "SetThreadContext"
+            },
+            {
+                "data": 4805052,
+                "hint": 0,
+                "iat_address": 4083912,
+                "iat_value": 4805052,
+                "is_ordinal": false,
+                "name": "GetThreadContext"
+            },
+            {
+                "data": 4805072,
+                "hint": 0,
+                "iat_address": 4083920,
+                "iat_value": 4805072,
+                "is_ordinal": false,
+                "name": "GetSystemInfo"
+            },
+            {
+                "data": 4805088,
+                "hint": 0,
+                "iat_address": 4083928,
+                "iat_value": 4805088,
+                "is_ordinal": false,
+                "name": "GetSystemDirectoryA"
+            },
+            {
+                "data": 4805110,
+                "hint": 0,
+                "iat_address": 4083936,
+                "iat_value": 4805110,
+                "is_ordinal": false,
+                "name": "GetStdHandle"
+            },
+            {
+                "data": 4805126,
+                "hint": 0,
+                "iat_address": 4083944,
+                "iat_value": 4805126,
+                "is_ordinal": false,
+                "name": "GetQueuedCompletionStatusEx"
+            },
+            {
+                "data": 4805156,
+                "hint": 0,
+                "iat_address": 4083952,
+                "iat_value": 4805156,
+                "is_ordinal": false,
+                "name": "GetProcessAffinityMask"
+            },
+            {
+                "data": 4805182,
+                "hint": 0,
+                "iat_address": 4083960,
+                "iat_value": 4805182,
+                "is_ordinal": false,
+                "name": "GetProcAddress"
+            },
+            {
+                "data": 4805200,
+                "hint": 0,
+                "iat_address": 4083968,
+                "iat_value": 4805200,
+                "is_ordinal": false,
+                "name": "GetEnvironmentStringsW"
+            },
+            {
+                "data": 4805226,
+                "hint": 0,
+                "iat_address": 4083976,
+                "iat_value": 4805226,
+                "is_ordinal": false,
+                "name": "GetConsoleMode"
+            },
+            {
+                "data": 4805244,
+                "hint": 0,
+                "iat_address": 4083984,
+                "iat_value": 4805244,
+                "is_ordinal": false,
+                "name": "FreeEnvironmentStringsW"
+            },
+            {
+                "data": 4805270,
+                "hint": 0,
+                "iat_address": 4083992,
+                "iat_value": 4805270,
+                "is_ordinal": false,
+                "name": "ExitProcess"
+            },
+            {
+                "data": 4805284,
+                "hint": 0,
+                "iat_address": 4084000,
+                "iat_value": 4805284,
+                "is_ordinal": false,
+                "name": "DuplicateHandle"
+            },
+            {
+                "data": 4805302,
+                "hint": 0,
+                "iat_address": 4084008,
+                "iat_value": 4805302,
+                "is_ordinal": false,
+                "name": "CreateWaitableTimerExW"
+            },
+            {
+                "data": 4805328,
+                "hint": 0,
+                "iat_address": 4084016,
+                "iat_value": 4805328,
+                "is_ordinal": false,
+                "name": "CreateThread"
+            },
+            {
+                "data": 4805344,
+                "hint": 0,
+                "iat_address": 4084024,
+                "iat_value": 4805344,
+                "is_ordinal": false,
+                "name": "CreateIoCompletionPort"
+            },
+            {
+                "data": 4805370,
+                "hint": 0,
+                "iat_address": 4084032,
+                "iat_value": 4805370,
+                "is_ordinal": false,
+                "name": "CreateFileA"
+            },
+            {
+                "data": 4805384,
+                "hint": 0,
+                "iat_address": 4084040,
+                "iat_value": 4805384,
+                "is_ordinal": false,
+                "name": "CreateEventA"
+            },
+            {
+                "data": 4805400,
+                "hint": 0,
+                "iat_address": 4084048,
+                "iat_value": 4805400,
+                "is_ordinal": false,
+                "name": "CloseHandle"
+            },
+            {
+                "data": 4805414,
+                "hint": 0,
+                "iat_address": 4084056,
+                "iat_value": 4805414,
+                "is_ordinal": false,
+                "name": "AddVectoredExceptionHandler"
+            }
+        ]
+    },
+    "verify_signature": "VERIFICATION_FLAGS.BAD_DIGEST | VERIFICATION_FLAGS.BAD_SIGNATURE",
+    "signatures": [
+        {
+            "version": 1,
+            "algorithm": "SHA_256",
+            "signers": [
+                {
+                    "version": 1,
+                    "issuer": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010",
+                    "serial_number": "33000003dffb6ae3f427ecb6a30000000003df",
+                    "encryption_algorithm": "RSA",
+                    "digest_algorithm": "SHA_256",
+                    "encrypted_digest": "796752ef2b6bc820c74e12522453e1dce3e9aa23a85266ebd95829ba398f7052869668c45cad66cec899c5b33696c6f7f9491bc9eb1318e5840f9985f93745c478e52253c06927f5368f22891b3f77206bb1da6535dc142c66685cef27c3d90b2c8c58316ecbce4e83863223dd9ce98c1b64ad2601ccbf76f0e0cfeef108aa1575c4e7d5314348bcb5cf6d3a7248561a506ee56ae5289cf154a8ad94f337cda2f9596b42d095d8c0df22537c2ffea6e8d30253cdd9631e7fc2ee5d173495d23fb458b75a912adf75307af14d5cd596d98f08ef31e73803b36a298c965d78c913d38a17bb913a5a7499aa218d9e56086f75cf041403c656f1d39fd44a50d1c30c",
+                    "cert": {
+                        "version": 3,
+                        "subject": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation",
+                        "issuer": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010",
+                        "serial_number": "33000003dffb6ae3f427ecb6a30000000003df",
+                        "key_type": "RSA",
+                        "key_usage": [],
+                        "certificate_policies": [],
+                        "ext_key_usage": [
+                            "1.3.6.1.4.1.311.61.6.1",
+                            "1.3.6.1.5.5.7.3.3"
+                        ],
+                        "valid_from": [
+                            2020,
+                            12,
+                            15,
+                            21,
+                            24,
+                            20
+                        ],
+                        "valid_to": [
+                            2021,
+                            12,
+                            2,
+                            21,
+                            24,
+                            20
+                        ],
+                        "signature": "1dc9ede05d844779feba09644278ef69763a67d3d7aee2bece624e646223e041c13f0c4a6a0a8f2093d33f51d697a106f18723e38395d54e597e35b78209fc7765e599cac068d96097aeaba929bc2cc21da2c666dda96087360472c3ab3c7071424aa67b7af69febf0cd321da119c3882189765a2a11858ba64581269ba6e65664adb8611e692fb242d629ebf881323a3ea72c75b21b1e012dd0d13dfac68619e149cec0706912d1987082481f5ba44f6b2304251a26f37f7a551003bac3ff6fd2d37519ee5e35094cbe9c551eecc66dfb948e009b3e728e1656eb853134d21d0f5252f2601321e9b6b5a2f1a9d588983c6839ed9823a1926c05429b7852f9ac",
+                        "signature_algorithm": "1.2.840.113549.1.1.11",
+                        "is_trusted": "BADCERT_EXPIRED | BADCERT_NOT_TRUSTED",
+                        "raw_hex": "308204fe308203e6a003020102021333000003dffb6ae3f427ecb6a30000000003df300d06092a864886f70d01010b0500307e310b3009060355040613025553311330110603550408130a57617368696e67746f6e3110300e060355040713075265646d6f6e64311e301c060355040a13154d6963726f736f667420436f72706f726174696f6e312830260603550403131f4d6963726f736f667420436f6465205369676e696e67205043412032303130301e170d3230313231353231323432305a170d3231313230323231323432305a3074310b3009060355040613025553311330110603550408130a57617368696e67746f6e3110300e060355040713075265646d6f6e64311e301c060355040a13154d6963726f736f667420436f72706f726174696f6e311e301c060355040313154d6963726f736f667420436f72706f726174696f6e30820122300d06092a864886f70d01010105000382010f003082010a0282010100ec0df01ff26a95f31e8ae207adedc29975d56c7c20483f70e44e6af9b952fd1f34644c9046cbf032fd2f99ea04c2ddbe92e5f989431f8667dd707a3db238ba5fcc62f65bbcb14966a8937d17e6e5d81acf2b368fc6b6745aa3e8625ea13a0a6fd2582c450b45682d273dbfae16384f618e8b2d5f7fee6a9ad423549c746921414764e8da997de8e3d2e1b3db890035ff0aa9ecded8777d6b68af7e0359c88ed5db34f401fc3937976609753de0b4c930fc964ff7543711e93fc826575ebefe473602e88ca3295cabcf3d6d4af6832702c739f932c0ac60a2a4c203360c5bca23c084bbc24d60303a979c9ca41ab3ab243e0ed836f59adcd74880688eee61e9b10203010001a382017d30820179301f0603551d2504183016060a2b0601040182373d060106082b06010505070303301d0603551d0e0416041481ce8bb5b5ccc946dde0a329736126079765d34230540603551d11044d304ba4493047312d302b060355040b13244d6963726f736f6674204972656c616e64204f7065726174696f6e73204c696d69746564311630140603550405130d3233303836352b343633313334301f0603551d23041830168014e6fc5f7bbb220058e4724eb5f421742332e6efac30560603551d1f044f304d304ba049a0478645687474703a2f2f63726c2e6d6963726f736f66742e636f6d2f706b692f63726c2f70726f64756374732f4d6963436f645369675043415f323031302d30372d30362e63726c305a06082b06010505070101044e304c304a06082b06010505073002863e687474703a2f2f7777772e6d6963726f736f66742e636f6d2f706b692f63657274732f4d6963436f645369675043415f323031302d30372d30362e637274300c0603551d130101ff04023000300d06092a864886f70d01010b050003820101001dc9ede05d844779feba09644278ef69763a67d3d7aee2bece624e646223e041c13f0c4a6a0a8f2093d33f51d697a106f18723e38395d54e597e35b78209fc7765e599cac068d96097aeaba929bc2cc21da2c666dda96087360472c3ab3c7071424aa67b7af69febf0cd321da119c3882189765a2a11858ba64581269ba6e65664adb8611e692fb242d629ebf881323a3ea72c75b21b1e012dd0d13dfac68619e149cec0706912d1987082481f5ba44f6b2304251a26f37f7a551003bac3ff6fd2d37519ee5e35094cbe9c551eecc66dfb948e009b3e728e1656eb853134d21d0f5252f2601321e9b6b5a2f1a9d588983c6839ed9823a1926c05429b7852f9ac",
+                        "rsa_info": {
+                            "d_param": "",
+                            "e_param": "0000000000000000000000000000010001",
+                            "n_param": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ec0df01ff26a95f31e8ae207adedc29975d56c7c20483f70e44e6af9b952fd1f34644c9046cbf032fd2f99ea04c2ddbe92e5f989431f8667dd707a3db238ba5fcc62f65bbcb14966a8937d17e6e5d81acf2b368fc6b6745aa3e8625ea13a0a6fd2582c450b45682d273dbfae16384f618e8b2d5f7fee6a9ad423549c746921414764e8da997de8e3d2e1b3db890035ff0aa9ecded8777d6b68af7e0359c88ed5db34f401fc3937976609753de0b4c930fc964ff7543711e93fc826575ebefe473602e88ca3295cabcf3d6d4af6832702c739f932c0ac60a2a4c203360c5bca23c084bbc24d60303a979c9ca41ab3ab243e0ed836f59adcd74880688eee61e9b1",
+                            "p_param": "",
+                            "q_param": ""
+                        },
+                        "key_size": 2048
+                    },
+                    "authenticated_attributes": [
+                        "CONTENT_TYPE",
+                        "MS_SPC_STATEMENT_TYPE",
+                        "PKCS9_MESSAGE_DIGEST",
+                        "GENERIC_TYPE",
+                        "SPC_SP_OPUS_INFO"
+                    ],
+                    "unauthenticated_attributes": [
+                        "GENERIC_TYPE"
+                    ]
+                }
+            ],
+            "certificates": [
+                {
+                    "version": 3,
+                    "subject": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation",
+                    "issuer": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010",
+                    "serial_number": "33000003dffb6ae3f427ecb6a30000000003df",
+                    "key_type": "RSA",
+                    "key_usage": [],
+                    "certificate_policies": [],
+                    "ext_key_usage": [
+                        "1.3.6.1.4.1.311.61.6.1",
+                        "1.3.6.1.5.5.7.3.3"
+                    ],
+                    "valid_from": [
+                        2020,
+                        12,
+                        15,
+                        21,
+                        24,
+                        20
+                    ],
+                    "valid_to": [
+                        2021,
+                        12,
+                        2,
+                        21,
+                        24,
+                        20
+                    ],
+                    "signature": "1dc9ede05d844779feba09644278ef69763a67d3d7aee2bece624e646223e041c13f0c4a6a0a8f2093d33f51d697a106f18723e38395d54e597e35b78209fc7765e599cac068d96097aeaba929bc2cc21da2c666dda96087360472c3ab3c7071424aa67b7af69febf0cd321da119c3882189765a2a11858ba64581269ba6e65664adb8611e692fb242d629ebf881323a3ea72c75b21b1e012dd0d13dfac68619e149cec0706912d1987082481f5ba44f6b2304251a26f37f7a551003bac3ff6fd2d37519ee5e35094cbe9c551eecc66dfb948e009b3e728e1656eb853134d21d0f5252f2601321e9b6b5a2f1a9d588983c6839ed9823a1926c05429b7852f9ac",
+                    "signature_algorithm": "1.2.840.113549.1.1.11",
+                    "is_trusted": "BADCERT_EXPIRED | BADCERT_NOT_TRUSTED",
+                    "raw_hex": "308204fe308203e6a003020102021333000003dffb6ae3f427ecb6a30000000003df300d06092a864886f70d01010b0500307e310b3009060355040613025553311330110603550408130a57617368696e67746f6e3110300e060355040713075265646d6f6e64311e301c060355040a13154d6963726f736f667420436f72706f726174696f6e312830260603550403131f4d6963726f736f667420436f6465205369676e696e67205043412032303130301e170d3230313231353231323432305a170d3231313230323231323432305a3074310b3009060355040613025553311330110603550408130a57617368696e67746f6e3110300e060355040713075265646d6f6e64311e301c060355040a13154d6963726f736f667420436f72706f726174696f6e311e301c060355040313154d6963726f736f667420436f72706f726174696f6e30820122300d06092a864886f70d01010105000382010f003082010a0282010100ec0df01ff26a95f31e8ae207adedc29975d56c7c20483f70e44e6af9b952fd1f34644c9046cbf032fd2f99ea04c2ddbe92e5f989431f8667dd707a3db238ba5fcc62f65bbcb14966a8937d17e6e5d81acf2b368fc6b6745aa3e8625ea13a0a6fd2582c450b45682d273dbfae16384f618e8b2d5f7fee6a9ad423549c746921414764e8da997de8e3d2e1b3db890035ff0aa9ecded8777d6b68af7e0359c88ed5db34f401fc3937976609753de0b4c930fc964ff7543711e93fc826575ebefe473602e88ca3295cabcf3d6d4af6832702c739f932c0ac60a2a4c203360c5bca23c084bbc24d60303a979c9ca41ab3ab243e0ed836f59adcd74880688eee61e9b10203010001a382017d30820179301f0603551d2504183016060a2b0601040182373d060106082b06010505070303301d0603551d0e0416041481ce8bb5b5ccc946dde0a329736126079765d34230540603551d11044d304ba4493047312d302b060355040b13244d6963726f736f6674204972656c616e64204f7065726174696f6e73204c696d69746564311630140603550405130d3233303836352b343633313334301f0603551d23041830168014e6fc5f7bbb220058e4724eb5f421742332e6efac30560603551d1f044f304d304ba049a0478645687474703a2f2f63726c2e6d6963726f736f66742e636f6d2f706b692f63726c2f70726f64756374732f4d6963436f645369675043415f323031302d30372d30362e63726c305a06082b06010505070101044e304c304a06082b06010505073002863e687474703a2f2f7777772e6d6963726f736f66742e636f6d2f706b692f63657274732f4d6963436f645369675043415f323031302d30372d30362e637274300c0603551d130101ff04023000300d06092a864886f70d01010b050003820101001dc9ede05d844779feba09644278ef69763a67d3d7aee2bece624e646223e041c13f0c4a6a0a8f2093d33f51d697a106f18723e38395d54e597e35b78209fc7765e599cac068d96097aeaba929bc2cc21da2c666dda96087360472c3ab3c7071424aa67b7af69febf0cd321da119c3882189765a2a11858ba64581269ba6e65664adb8611e692fb242d629ebf881323a3ea72c75b21b1e012dd0d13dfac68619e149cec0706912d1987082481f5ba44f6b2304251a26f37f7a551003bac3ff6fd2d37519ee5e35094cbe9c551eecc66dfb948e009b3e728e1656eb853134d21d0f5252f2601321e9b6b5a2f1a9d588983c6839ed9823a1926c05429b7852f9ac",
+                    "rsa_info": {
+                        "d_param": "",
+                        "e_param": "0000000000000000000000000000010001",
+                        "n_param": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ec0df01ff26a95f31e8ae207adedc29975d56c7c20483f70e44e6af9b952fd1f34644c9046cbf032fd2f99ea04c2ddbe92e5f989431f8667dd707a3db238ba5fcc62f65bbcb14966a8937d17e6e5d81acf2b368fc6b6745aa3e8625ea13a0a6fd2582c450b45682d273dbfae16384f618e8b2d5f7fee6a9ad423549c746921414764e8da997de8e3d2e1b3db890035ff0aa9ecded8777d6b68af7e0359c88ed5db34f401fc3937976609753de0b4c930fc964ff7543711e93fc826575ebefe473602e88ca3295cabcf3d6d4af6832702c739f932c0ac60a2a4c203360c5bca23c084bbc24d60303a979c9ca41ab3ab243e0ed836f59adcd74880688eee61e9b1",
+                        "p_param": "",
+                        "q_param": ""
+                    },
+                    "key_size": 2048
+                },
+                {
+                    "version": 3,
+                    "subject": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010",
+                    "issuer": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Root Certificate Authority 2010",
+                    "serial_number": "610c524c000000000003",
+                    "key_type": "RSA",
+                    "key_usage": [
+                        "CRL_SIGN",
+                        "KEY_CERT_SIGN",
+                        "DIGITAL_SIGNATURE"
+                    ],
+                    "certificate_policies": [
+                        "1.3.6.1.4.1.311.46.3"
+                    ],
+                    "ext_key_usage": [],
+                    "valid_from": [
+                        2010,
+                        7,
+                        6,
+                        20,
+                        40,
+                        17
+                    ],
+                    "valid_to": [
+                        2025,
+                        7,
+                        6,
+                        20,
+                        50,
+                        17
+                    ],
+                    "signature": "1a74ef574f297bc4168578b850d322fc099dac8297f834ff2a2c979512e5e4bfcfbf93c8e334a9db81b8dc1e00bed2356fafe57f799577e502d4f1ebd8cd4e1e1b61a2c25a231af08ca86251456708e33f3c1e93f8308517c83940a6d70eb32129e5a5a1698c2293cc7498e7a14743f253acc00f30697ffed225206d6f61d3df07d5d972002c6986763d51dba63948c937616d07dd5319cba7d661c2bfe283ab0fe06b9b95d67d2851b0894a51a49a6cc8b71f4a1a0e69a9d7dcc17ed14970aab6adbb72476317faa6d6a2a686eca810449b63b6b2698906c746867a183fe8c51d21d57bf902232dc541cbbf1d4cc816efb19c7ffc224b498a6e15e3a67f765bd1537991859dd5d2db3d7335f33cae54b252476ac0aa1395d28e11da99675e328cfb3785d1dc75859c87c65a5785c2bfdd0d8f8c9b2debb4eecf27d3b55e69faa4160401a7246773cf4d4fb6de0556977af7e9524df477054f85c6d80bf18eed4209d10d76e3235678222636becab18c6eaa1de485da4733628fa4c991335f711e40af9865c922e84221258a1c2d60d9378941892a160fd7613c94686052efd64799a08040ee1581773e9ce053181a501d38959b1e663313273917788736ce4ec35fb2f53d4753b6e0e5db0b613d2ad7922cce375a3e404231a41f1008c2569cbf245d51029d6a79d217d3dac1948e077b257144ab066ae6d4c6df239a9675c5",
+                    "signature_algorithm": "1.2.840.113549.1.1.11",
+                    "is_trusted": "BADCERT_NOT_TRUSTED",
+                    "raw_hex": "3082067030820458a003020102020a610c524c000000000003300d06092a864886f70d01010b0500308188310b3009060355040613025553311330110603550408130a57617368696e67746f6e3110300e060355040713075265646d6f6e64311e301c060355040a13154d6963726f736f667420436f72706f726174696f6e31323030060355040313294d6963726f736f667420526f6f7420436572746966696361746520417574686f726974792032303130301e170d3130303730363230343031375a170d3235303730363230353031375a307e310b3009060355040613025553311330110603550408130a57617368696e67746f6e3110300e060355040713075265646d6f6e64311e301c060355040a13154d6963726f736f667420436f72706f726174696f6e312830260603550403131f4d6963726f736f667420436f6465205369676e696e6720504341203230313030820122300d06092a864886f70d01010105000382010f003082010a0282010100e90e64507967b5c4e3fd09004c9e94acf75668ea44d8cfc5584fa9a5767c6d45bad33992b4a41ef9f96582e417d28ffd449c08e86593ce2c5584bf7d08e32e2ba8412b18b7a24b6e494c6b1507ded1d2c2891e7194cdb57f4bb4af08d8cc88d66b17943a93ce263fece6fe349857d51d5d49f6b22a2ed585bb593ff890b42b8374ca2bb33b46e3f04649c1176654c91cbd1dc455625772f867b9252034de5da6a5955eab2880cdd5b29ee503b563d3b214c8c1c88a260a597f07ecff0eed8012354c12a6be525bf5a6dae08b0b4877d68547d510b9c6e8aaee8b6a2d055c60c6b42a5b9c231c5f45e31a141e6f37cb1933806a894da36a66637893d530cf951f0203010001a38201e3308201df301006092b06010401823715010403020100301d0603551d0e04160414e6fc5f7bbb220058e4724eb5f421742332e6efac301906092b0601040182371402040c1e0a00530075006200430041300b0603551d0f040403020186300f0603551d130101ff040530030101ff301f0603551d23041830168014d5f656cb8fe8a25c6268d13d94905bd7ce9a18c430560603551d1f044f304d304ba049a0478645687474703a2f2f63726c2e6d6963726f736f66742e636f6d2f706b692f63726c2f70726f64756374732f4d6963526f6f4365724175745f323031302d30362d32332e63726c305a06082b06010505070101044e304c304a06082b06010505073002863e687474703a2f2f7777772e6d6963726f736f66742e636f6d2f706b692f63657274732f4d6963526f6f4365724175745f323031302d30362d32332e63727430819d0603551d2004819530819230818f06092b0601040182372e03308181303d06082b060105050702011631687474703a2f2f7777772e6d6963726f736f66742e636f6d2f504b492f646f63732f4350532f64656661756c742e68746d304006082b0601050507020230341e32201d004c006500670061006c005f0050006f006c006900630079005f00530074006100740065006d0065006e0074002e201d300d06092a864886f70d01010b050003820201001a74ef574f297bc4168578b850d322fc099dac8297f834ff2a2c979512e5e4bfcfbf93c8e334a9db81b8dc1e00bed2356fafe57f799577e502d4f1ebd8cd4e1e1b61a2c25a231af08ca86251456708e33f3c1e93f8308517c83940a6d70eb32129e5a5a1698c2293cc7498e7a14743f253acc00f30697ffed225206d6f61d3df07d5d972002c6986763d51dba63948c937616d07dd5319cba7d661c2bfe283ab0fe06b9b95d67d2851b0894a51a49a6cc8b71f4a1a0e69a9d7dcc17ed14970aab6adbb72476317faa6d6a2a686eca810449b63b6b2698906c746867a183fe8c51d21d57bf902232dc541cbbf1d4cc816efb19c7ffc224b498a6e15e3a67f765bd1537991859dd5d2db3d7335f33cae54b252476ac0aa1395d28e11da99675e328cfb3785d1dc75859c87c65a5785c2bfdd0d8f8c9b2debb4eecf27d3b55e69faa4160401a7246773cf4d4fb6de0556977af7e9524df477054f85c6d80bf18eed4209d10d76e3235678222636becab18c6eaa1de485da4733628fa4c991335f711e40af9865c922e84221258a1c2d60d9378941892a160fd7613c94686052efd64799a08040ee1581773e9ce053181a501d38959b1e663313273917788736ce4ec35fb2f53d4753b6e0e5db0b613d2ad7922cce375a3e404231a41f1008c2569cbf245d51029d6a79d217d3dac1948e077b257144ab066ae6d4c6df239a9675c5",
+                    "rsa_info": {
+                        "d_param": "",
+                        "e_param": "0000000000000000000000000000010001",
+                        "n_param": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e90e64507967b5c4e3fd09004c9e94acf75668ea44d8cfc5584fa9a5767c6d45bad33992b4a41ef9f96582e417d28ffd449c08e86593ce2c5584bf7d08e32e2ba8412b18b7a24b6e494c6b1507ded1d2c2891e7194cdb57f4bb4af08d8cc88d66b17943a93ce263fece6fe349857d51d5d49f6b22a2ed585bb593ff890b42b8374ca2bb33b46e3f04649c1176654c91cbd1dc455625772f867b9252034de5da6a5955eab2880cdd5b29ee503b563d3b214c8c1c88a260a597f07ecff0eed8012354c12a6be525bf5a6dae08b0b4877d68547d510b9c6e8aaee8b6a2d055c60c6b42a5b9c231c5f45e31a141e6f37cb1933806a894da36a66637893d530cf951f",
+                        "p_param": "",
+                        "q_param": ""
+                    },
+                    "key_size": 2048
+                }
+            ],
+            "content_info": {
+                "algorithm": "SHA_256",
+                "digest": "37ea281d9c10933f24285c844adbc7d4a23ed1e935bf1cb4a657fe27bff7a813",
+                "content_type": "1.3.6.1.4.1.311.2.1.4"
+            },
+            "check": "OK"
+        }
+    ],
+    "overlay": {
+        "size": 8656,
+        "entropy": 7.317864936414564
+    }
+}

@@ -6,6 +6,7 @@ import json
 import os
 import pathlib
 import struct
+import subprocess
 from collections import defaultdict
 from io import BytesIO
 
@@ -207,9 +208,9 @@ def generate_checksum(filename, checksum_offset):
         if i == int(checksum_offset / 4):
             continue
         if i + 1 == (int(data_len / 4)) and remainder:
-            dword = struct.unpack("I", data[i * 4:] + (b"\0" * (4 - remainder)))[0]
+            dword = struct.unpack("I", data[i * 4 :] + (b"\0" * (4 - remainder)))[0]
         else:
-            dword = struct.unpack("I", data[i * 4: i * 4 + 4])[0]
+            dword = struct.unpack("I", data[i * 4 : i * 4 + 4])[0]
         checksum += dword
         if checksum >= 2 ** 32:
             checksum = (checksum & 0xFFFFFFFF) + (checksum >> 32)
@@ -896,6 +897,14 @@ class PE(ServiceBase):
         res.add_tag("file.pe.imports.imphash", self.features["imphash"])
         res.add_tag("file.pe.imports.fuzzy", calc_impfuzzy(self.features["imports"], sort=False))
         res.add_tag("file.pe.imports.sorted_fuzzy", calc_impfuzzy(self.features["imports"], sort=True))
+
+        cmd = ["./pe/c_gimphash_linux", self.file_path]
+        proc = subprocess.run(cmd, capture_output=True, text=True)
+        if proc.returncode == 0 and len(proc.stderr) == 0:
+            output = proc.stdout.split()
+            if len(output) == 2 and len(output[0]) == 64:
+                res.add_tag("file.pe.imports.gimphash", output[0])
+
         self.file_res.add_section(res)
 
     def add_configuration(self):

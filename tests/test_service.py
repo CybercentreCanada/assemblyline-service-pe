@@ -136,22 +136,6 @@ class TestService:
             else:
                 assert test_result == correct_result
 
-        correct_path = os.path.join(SELF_LOCATION, "tests", "results", sample, "result_ontology_PE.json")
-        if os.path.exists(correct_path):
-            with open(correct_path, "r") as f:
-                correct_result = json.load(f)
-
-            assert "PE" in cls.ontologies
-            assert len(cls.ontologies["PE"]) == 1
-            test_result = cls.ontologies["PE"][0]
-
-            if overwrite_results:
-                if test_result != correct_result:
-                    with open(correct_path, "w") as f:
-                        json.dump(test_result, f)
-            else:
-                assert test_result == correct_result
-
         # Get the result of execute() from the test method
         test_result = task.get_service_result()
 
