@@ -1865,12 +1865,9 @@ class PE(ServiceBase):
                         for k, v in lancode_item["items"].items():
                             items.append({"key": k, "value": v})
                         lancode_item["items"] = items
-            if "html" in self.features["resources_manager"] and self.features["resources_manager"]["html"] == "":
+            if "html" in self.features["resources_manager"] and not self.features["resources_manager"]["html"]:
                 del self.features["resources_manager"]["html"]
-            if (
-                "manifest" in self.features["resources_manager"]
-                and self.features["resources_manager"]["manifest"] == ""
-            ):
+            if "manifest" in self.features["resources_manager"] and not self.features["resources_manager"]["manifest"]:
                 del self.features["resources_manager"]["manifest"]
 
         # Add hr_timestamps to every timestamp found
