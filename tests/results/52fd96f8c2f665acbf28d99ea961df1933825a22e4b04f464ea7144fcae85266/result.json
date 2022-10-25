@@ -1,488 +1,628 @@
 {
-    "classification": "TLP:W",
-    "response": {
-        "milestones": {
-            "service_started": null,
-            "service_completed": null
-        },
-        "service_version": null,
-        "service_name": null,
-        "service_tool_version": null,
-        "supplementary": [
-            {
-                "name": "icon_0.ico",
-                "sha256": "5efacdecb516b18aae19799a5e99e2064d077c93db5db9e321d83918254a916a",
-                "description": "Icon 0 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_0.ico.thumb",
-                "sha256": "5efacdecb516b18aae19799a5e99e2064d077c93db5db9e321d83918254a916a",
-                "description": "Icon 0 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_1.ico",
-                "sha256": "3ad7494dd7dffe36ec130110ac72aa892be8c0fc125b658646356790c4aa9edb",
-                "description": "Icon 1 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_1.ico.thumb",
-                "sha256": "3ad7494dd7dffe36ec130110ac72aa892be8c0fc125b658646356790c4aa9edb",
-                "description": "Icon 1 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "certificate.1.1",
-                "sha256": "4c7e7ac08b96c9c0d46f20b17eb62f5ae91d499f87f8b64df1aed77c7b200e2c",
-                "description": "certificate.1.1 extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/certificate.1.1",
-                "is_section_image": false
-            },
-            {
-                "name": "certificate.1.2",
-                "sha256": "aa2fb386ae0809d4ca16eefdf52bcf1beb37ac68e04f21625d316d09d82be735",
-                "description": "certificate.1.2 extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/certificate.1.2",
-                "is_section_image": false
-            },
-            {
-                "name": "features.json",
-                "sha256": "661cebd6235e426467ea659c0061df040710be35a5d342181491745fe96403c1",
-                "description": "Features extracted from the PE file, as a JSON file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/features.json",
-                "is_section_image": false
-            }
-        ],
-        "extracted": [
-            {
-                "name": "overlay",
-                "sha256": "89a5a50017b3bc8db9373d5b33d0ec3297676bfda1d824a1e289e1d61cf18578",
-                "description": "overlay extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/overlay",
-                "is_section_image": false
-            }
-        ],
-        "service_context": null,
-        "service_debug_info": null
-    },
-    "result": {
-        "score": 600,
-        "sections": [
-            {
-                "body": "[[\"Timestamp\", \"1475715000 (2016-10-06 00:50:00 +00:00 (UTC))\"], [\"Entrypoint\", \"0x33c6e\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"8.0\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x00040659\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "linker": {
-                                "timestamp": [
-                                    1475715000,
-                                    "2016-10-06 00:50:00 +00:00 (UTC)"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Headers",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"sha512\", \"b188fa97418b7ebfb59c569a10f24de653c2504158162f2f66dfcd4528b9327eac6bcb0bed07bada791d34aa8a7da558e39fd4f7d389aa13b67f09982b89a391\"], [\"sha384\", \"93e340b3a28a1823ffe7e658fbc71b6deee9b9dd6f863f8d2bb96eec90ebcb420397739ed0936f689fa13fc611fd6f7d\"], [\"sha256\", \"b2ab91b4fa7498cc2b0d2685fe6a5fb74920e26ec7ea116b3d18f4afb08f3fd8\"], [\"sha1\", \"0c3dba4f0119b3e91341fe038fbcfb5e1e7c912c\"], [\"md5\", \"89a692e0b794f0c1a97777137c2c0bef\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Sections",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 7.716531291806911], [\"Entropy without padding\", 7.721908400337875], [\"Offset\", 512], [\"Size\", 204288], [\"Virtual Size\", 203892], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"fa481fe8bbc858d6ff131de884d42392\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.91792, 5.65032, 7.88661, 7.89949, 7.87047, 7.88607, 7.86732, 7.85009, 7.87952, 7.85781, 7.89458, 7.92069, 7.91971, 7.91271, 7.91026, 7.91373, 7.91548, 7.89147, 7.90354, 7.895, 7.88382, 7.87759, 7.88546, 7.89081, 7.88584, 7.88954, 7.89161, 7.88993, 7.90414, 7.82654, 7.67789, 7.20743, 3.93717, 6.28989, 7.38984, 7.42229, 6.95944, 5.91566, 4.34728, 2.79398, 4.6981, 6.76299, 7.35268, 6.88198, 5.91937, 4.166, 1.8506, 4.96967, 5.65702, 5.09625]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".text"
-                                ],
-                                "hash": [
-                                    "fa481fe8bbc858d6ff131de884d42392"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .text",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Section name\", \".text\"], [\"Entropy:\", 7.716531291806911], [\"Entropy without padding\", 7.721908400337875]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.91792, 5.65032, 7.88661, 7.89949, 7.87047, 7.88607, 7.86732, 7.85009, 7.87952, 7.85781, 7.89458, 7.92069, 7.91971, 7.91271, 7.91026, 7.91373, 7.91548, 7.89147, 7.90354, 7.895, 7.88382, 7.87759, 7.88546, 7.89081, 7.88584, 7.88954, 7.89161, 7.88993, 7.90414, 7.82654, 7.67789, 7.20743, 3.93717, 6.28989, 7.38984, 7.42229, 6.95944, 5.91566, 4.34728, 2.79398, 4.6981, 6.76299, 7.35268, 6.88198, 5.91937, 4.166, 1.8506, 4.96967, 5.65702, 5.09625]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 2,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "High section entropy",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.931830177187271], [\"Entropy without padding\", 5.125478989977709], [\"Offset\", 204800], [\"Size\", 6144], [\"Virtual Size\", 5756], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"69135b9f1785102bb68e7aa84ec33cd1\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.61702, 1.20008, 2.28562, 4.03994, 4.79557, 4.0372, 4.46313, 4.80901, 4.0823, 4.89845, 4.30149, 2.33118, 2.88644, 3.18336, 2.81441, 3.41379, 4.10607, 4.1873, 4.26324, 4.09162, 3.62209, 3.28252, 3.17863, 3.1988, 2.79116, 3.29297, 3.54758, 3.75083, 5.20142, 4.9165, 3.49073, 3.17313, 3.2985, 3.10107, 2.79945, 3.25943, 3.33244, 3.81347, 4.22896, 4.55928, 4.51388, 3.9349, 3.3598, 3.54011, 2.95472, 2.09748, 2.11392, -0.0, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".rsrc"
-                                ],
-                                "hash": [
-                                    "69135b9f1785102bb68e7aa84ec33cd1"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .rsrc",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.10191042566270775], [\"Entropy without padding\", 1.9473387961875537], [\"Offset\", 210944], [\"Size\", 512], [\"Virtual Size\", 12], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"78b665808943aba3c4bab0dbcce006ed\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.04945, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".reloc"
-                                ],
-                                "hash": [
-                                    "78b665808943aba3c4bab0dbcce006ed"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .reloc",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Debugs",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Timestamp\", \"1475715000 (2016-10-06 00:50:00 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"C:\\\\Jenkins\\\\workspace\\\\release-7545WinMobile6Package-8.2-i4-build\\\\7545WinMobile6Cab\\\\Components\\\\WinCECommon\\\\Sensors\\\\UI\\\\Compass\\\\CompassCalibrate\\\\obj\\\\Release\\\\CompassCalibrate.pdb\"], [\"GUID\", \"c6f1670-fec3-4e99-a340-8acb4ebd4b1\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "pdb_filename": [
-                                "C:\\Jenkins\\workspace\\release-7545WinMobile6Package-8.2-i4-build\\7545WinMobile6Cab\\Components\\WinCECommon\\Sensors\\UI\\Compass\\CompassCalibrate\\obj\\Release\\CompassCalibrate.pdb"
-                            ],
-                            "debug": {
-                                "guid": [
-                                    "c6f1670-fec3-4e99-a340-8acb4ebd4b1"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "CODEVIEW",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "imports": {
-                                "sorted_sha1": [
-                                    "b520d94a992a90264f86563103d3f841d2503d34"
-                                ],
-                                "imphash": [
-                                    "f34d5f2d4577ed6d9ceec516c1f5a744"
-                                ],
-                                "fuzzy": [
-                                    "3:rGsLdAIEK:tf"
-                                ],
-                                "sorted_fuzzy": [
-                                    "3:rGsLdAIEK:tf"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Imports",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "_CorExeMain",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "mscoree.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Languages\", \"NEUTRAL, ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US, DEFAULT\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "resources": {
-                                "language": [
-                                    "NEUTRAL",
-                                    "ENGLISH"
-                                ],
-                                "name": [
-                                    "CEUX",
-                                    "HI_RES_AWARE"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Resources",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"TABLE\", [{\"ID\": 2, \"Lang\": \"NEUTRAL\", \"Size\": \"16x16\", \"Size (bytes)\": 1128, \"Saved as\": \"icon_0.ico\"}, {\"ID\": 3, \"Lang\": \"NEUTRAL\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_1.ico\"}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"5efacdecb516b18aae19799a5e99e2064d077c93db5db9e321d83918254a916a\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"5efacdecb516b18aae19799a5e99e2064d077c93db5db9e321d83918254a916a\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_1.ico\", \"sha256\": \"3ad7494dd7dffe36ec130110ac72aa892be8c0fc125b658646356790c4aa9edb\", \"description\": \"Icon 1 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_1.ico.thumb\", \"sha256\": \"3ad7494dd7dffe36ec130110ac72aa892be8c0fc125b658646356790c4aa9edb\", \"description\": \"Icon 1 extracted from the PE file (thumbnail)\"}}]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Icons",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[{\"SHA256\": \"47dc540c94ceb704a23875c11273e16bb0b8a87aed84de911f2133568115f254\", \"Type\": \"CEUX\", \"Entropy\": 1.0}, {\"SHA256\": \"2ed463b5e746dc25e5f9f44657cf9d88ceb1728064aaea729ddcd60df21a8560\", \"Type\": \"ICON\", \"Entropy\": 5.434238037851782}, {\"SHA256\": \"f8cebc2ace856d6a84e5d2f6e90213b99f594be84e82b539fce4dd885c6137b3\", \"Type\": \"ICON\", \"Entropy\": 4.960103658586375}, {\"SHA256\": \"e353efb407c1644dee284d666c5029d172e592b44f7b34fca0fe1955373d2ac2\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.306038575653617}]",
-                "classification": "TLP:W",
-                "body_format": "TABLE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Summary",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Signatures",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "OK found while verifying signature : OK",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": {
-                    "heur_id": 2,
-                    "score": 0,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Signed EXE",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 1], [\"Algorithm\", \"SHA1\"], [\"Content Info Algorithm\", \"SHA1\"], [\"Content Info Digest\", \"0c3dba4f0119b3e91341fe038fbcfb5e1e7c912c\"], [\"Content Info Content Type\", \"1.3.6.1.4.1.311.2.1.4\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Signature - 1",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 1], [\"Digest Algorithm\", \"SHA1\"], [\"Authenticated Attributes\", \"SPC_SP_OPUS_INFO, CONTENT_TYPE, PKCS9_MESSAGE_DIGEST\"], [\"Unauthenticated Attributes\", \"\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Signer - 1",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 3], [\"Subject\", \"CN=Psion Teklogix Privileged Signing Cert\"], [\"Issuer\", \"CN=Psion Teklogix Privileged Root\"], [\"Serial Number\", \"1bede4f8af8e27b04b392276777c3508\"], [\"Valid From\", \"2007-02-20T16:28:16\"], [\"Valid To\", \"2039-12-31T23:59:59\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 3,
-                "heuristic": null,
-                "tags": {
-                    "cert": {
-                        "subject": [
-                            "CN=Psion Teklogix Privileged Signing Cert"
-                        ],
-                        "issuer": [
-                            "CN=Psion Teklogix Privileged Root"
-                        ],
-                        "serial_no": [
-                            "1bede4f8af8e27b04b392276777c3508"
-                        ],
-                        "valid": {
-                            "start": [
-                                "2007-02-20T16:28:16"
-                            ],
-                            "end": [
-                                "2039-12-31T23:59:59"
-                            ]
-                        },
-                        "thumbprint": [
-                            "f3002f6e021b41b2c6893d51c1e88f78553b4f2e",
-                            "aa2fb386ae0809d4ca16eefdf52bcf1beb37ac68e04f21625d316d09d82be735",
-                            "dbd76aa1cf97d7359371a8634be79d9f"
-                        ]
-                    }
-                },
-                "title_text": "Signer Certificate",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 3], [\"Subject\", \"CN=Psion Teklogix Privileged Root\"], [\"Issuer\", \"CN=Psion Teklogix Privileged Root\"], [\"SHA1\", \"3ad31b54362cc3263c0b86202179baf3b02f79f2\"], [\"SHA256\", \"4c7e7ac08b96c9c0d46f20b17eb62f5ae91d499f87f8b64df1aed77c7b200e2c\"], [\"MD5\", \"fbb9d51fd4ad97b58fdd7ff724a72162\"], [\"Serial Number\", \"99b6fbd7e80b8ba747631e77e3a2d09c\"], [\"Valid From\", \"2007-02-20T16:26:51\"], [\"Valid To\", \"2039-12-31T23:59:59\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Certificate - 1",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 3], [\"Subject\", \"CN=Psion Teklogix Privileged Signing Cert\"], [\"Issuer\", \"CN=Psion Teklogix Privileged Root\"], [\"SHA1\", \"f3002f6e021b41b2c6893d51c1e88f78553b4f2e\"], [\"SHA256\", \"aa2fb386ae0809d4ca16eefdf52bcf1beb37ac68e04f21625d316d09d82be735\"], [\"MD5\", \"dbd76aa1cf97d7359371a8634be79d9f\"], [\"Serial Number\", \"1bede4f8af8e27b04b392276777c3508\"], [\"Valid From\", \"2007-02-20T16:28:16\"], [\"Valid To\", \"2039-12-31T23:59:59\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Certificate - 2",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"TEXT\", \"All issuers matching is usually a sign of it being self-signed\"], [\"ORDERED_KEY_VALUE\", [[\"Issuer\", \"CN=Psion Teklogix Privileged Root\"]]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 2,
-                "heuristic": {
-                    "heur_id": 3,
-                    "score": 500,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Same issuer for all certificates",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 1624]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.88183, 4.17303, 4.12728, 3.71184, 4.77909, 4.77909, 4.62015, 4.29425, 4.36971, 4.36971, 4.45319, 4.98379, 4.92318, 4.98379, 4.77909, 4.90031, 4.08955, 4.86258, 4.92318, 4.86258, 4.98379, 4.92318, 4.53667, 4.68076, 4.12728, 3.83911, 3.89971, 4.43031, 4.86258, 4.8397, 5.04439, 4.98379, 4.63501, 4.80197, 4.80197, 4.68076, 4.80197, 4.92318, 4.98379, 4.47606, 4.29425, 4.92318, 4.33198, 4.15016, 4.77909, 4.98379, 5.04439, 4.77909, 4.80197, 0.59167]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Overlay",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            }
-        ]
-    },
-    "sha256": "52fd96f8c2f665acbf28d99ea961df1933825a22e4b04f464ea7144fcae85266",
-    "type": "executable/windows/pe32",
-    "size": 213080,
+  "extra": {
     "drop_file": false,
+    "score": 600,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1475715000 (2016-10-06 00:50:00 +00:00 (UTC))\"], [\"Entrypoint\", \"0x33c6e\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"8.0\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x00040659\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  1475715000,
+                  "2016-10-06 00:50:00 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"sha512\", \"b188fa97418b7ebfb59c569a10f24de653c2504158162f2f66dfcd4528b9327eac6bcb0bed07bada791d34aa8a7da558e39fd4f7d389aa13b67f09982b89a391\"], [\"sha384\", \"93e340b3a28a1823ffe7e658fbc71b6deee9b9dd6f863f8d2bb96eec90ebcb420397739ed0936f689fa13fc611fd6f7d\"], [\"sha256\", \"b2ab91b4fa7498cc2b0d2685fe6a5fb74920e26ec7ea116b3d18f4afb08f3fd8\"], [\"sha1\", \"0c3dba4f0119b3e91341fe038fbcfb5e1e7c912c\"], [\"md5\", \"89a692e0b794f0c1a97777137c2c0bef\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 7.716531291806911], [\"Entropy without padding\", 7.721908400337875], [\"Offset\", 512], [\"Size\", 204288], [\"Virtual Size\", 203892], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"fa481fe8bbc858d6ff131de884d42392\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.91792, 5.65032, 7.88661, 7.89949, 7.87047, 7.88607, 7.86732, 7.85009, 7.87952, 7.85781, 7.89458, 7.92069, 7.91971, 7.91271, 7.91026, 7.91373, 7.91548, 7.89147, 7.90354, 7.895, 7.88382, 7.87759, 7.88546, 7.89081, 7.88584, 7.88954, 7.89161, 7.88993, 7.90414, 7.82654, 7.67789, 7.20743, 3.93717, 6.28989, 7.38984, 7.42229, 6.95944, 5.91566, 4.34728, 2.79398, 4.6981, 6.76299, 7.35268, 6.88198, 5.91937, 4.166, 1.8506, 4.96967, 5.65702, 5.09625]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "fa481fe8bbc858d6ff131de884d42392"
+                ],
+                "name": [
+                  ".text"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .text",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Section name\", \".text\"], [\"Entropy:\", 7.716531291806911], [\"Entropy without padding\", 7.721908400337875]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.91792, 5.65032, 7.88661, 7.89949, 7.87047, 7.88607, 7.86732, 7.85009, 7.87952, 7.85781, 7.89458, 7.92069, 7.91971, 7.91271, 7.91026, 7.91373, 7.91548, 7.89147, 7.90354, 7.895, 7.88382, 7.87759, 7.88546, 7.89081, 7.88584, 7.88954, 7.89161, 7.88993, 7.90414, 7.82654, 7.67789, 7.20743, 3.93717, 6.28989, 7.38984, 7.42229, 6.95944, 5.91566, 4.34728, 2.79398, 4.6981, 6.76299, 7.35268, 6.88198, 5.91937, 4.166, 1.8506, 4.96967, 5.65702, 5.09625]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 4,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "High section entropy",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.931830177187271], [\"Entropy without padding\", 5.125478989977709], [\"Offset\", 204800], [\"Size\", 6144], [\"Virtual Size\", 5756], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"69135b9f1785102bb68e7aa84ec33cd1\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.61702, 1.20008, 2.28562, 4.03994, 4.79557, 4.0372, 4.46313, 4.80901, 4.0823, 4.89845, 4.30149, 2.33118, 2.88644, 3.18336, 2.81441, 3.41379, 4.10607, 4.1873, 4.26324, 4.09162, 3.62209, 3.28252, 3.17863, 3.1988, 2.79116, 3.29297, 3.54758, 3.75083, 5.20142, 4.9165, 3.49073, 3.17313, 3.2985, 3.10107, 2.79945, 3.25943, 3.33244, 3.81347, 4.22896, 4.55928, 4.51388, 3.9349, 3.3598, 3.54011, 2.95472, 2.09748, 2.11392, -0.0, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "69135b9f1785102bb68e7aa84ec33cd1"
+                ],
+                "name": [
+                  ".rsrc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rsrc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.10191042566270775], [\"Entropy without padding\", 1.9473387961875537], [\"Offset\", 210944], [\"Size\", 512], [\"Virtual Size\", 12], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"78b665808943aba3c4bab0dbcce006ed\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.04945, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "78b665808943aba3c4bab0dbcce006ed"
+                ],
+                "name": [
+                  ".reloc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .reloc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Debugs",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1475715000 (2016-10-06 00:50:00 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"C:\\\\Jenkins\\\\workspace\\\\release-7545WinMobile6Package-8.2-i4-build\\\\7545WinMobile6Cab\\\\Components\\\\WinCECommon\\\\Sensors\\\\UI\\\\Compass\\\\CompassCalibrate\\\\obj\\\\Release\\\\CompassCalibrate.pdb\"], [\"GUID\", \"c6f1670-fec3-4e99-a340-8acb4ebd4b1\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "debug": {
+                "guid": [
+                  "c6f1670-fec3-4e99-a340-8acb4ebd4b1"
+                ]
+              },
+              "pdb_filename": [
+                "C:\\Jenkins\\workspace\\release-7545WinMobile6Package-8.2-i4-build\\7545WinMobile6Cab\\Components\\WinCECommon\\Sensors\\UI\\Compass\\CompassCalibrate\\obj\\Release\\CompassCalibrate.pdb"
+              ]
+            }
+          }
+        },
+        "title_text": "CODEVIEW",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "imports": {
+                "fuzzy": [
+                  "3:rGsLdAIEK:tf"
+                ],
+                "imphash": [
+                  "f34d5f2d4577ed6d9ceec516c1f5a744"
+                ],
+                "sorted_fuzzy": [
+                  "3:rGsLdAIEK:tf"
+                ],
+                "sorted_sha1": [
+                  "b520d94a992a90264f86563103d3f841d2503d34"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Imports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "_CorExeMain",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "mscoree.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Languages\", \"NEUTRAL, ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US, DEFAULT\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "NEUTRAL",
+                  "ENGLISH"
+                ],
+                "name": [
+                  "CEUX",
+                  "HI_RES_AWARE"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"TABLE\", [{\"ID\": 2, \"Lang\": \"NEUTRAL\", \"Size\": \"16x16\", \"Size (bytes)\": 1128, \"Saved as\": \"icon_0.ico\"}, {\"ID\": 3, \"Lang\": \"NEUTRAL\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_1.ico\"}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"5efacdecb516b18aae19799a5e99e2064d077c93db5db9e321d83918254a916a\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"5efacdecb516b18aae19799a5e99e2064d077c93db5db9e321d83918254a916a\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_1.ico\", \"sha256\": \"3ad7494dd7dffe36ec130110ac72aa892be8c0fc125b658646356790c4aa9edb\", \"description\": \"Icon 1 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_1.ico.thumb\", \"sha256\": \"3ad7494dd7dffe36ec130110ac72aa892be8c0fc125b658646356790c4aa9edb\", \"description\": \"Icon 1 extracted from the PE file (thumbnail)\"}}]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Icons",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[{\"SHA256\": \"47dc540c94ceb704a23875c11273e16bb0b8a87aed84de911f2133568115f254\", \"Type\": \"CEUX\", \"Entropy\": 1.0}, {\"SHA256\": \"2ed463b5e746dc25e5f9f44657cf9d88ceb1728064aaea729ddcd60df21a8560\", \"Type\": \"ICON\", \"Entropy\": 5.434238037851782}, {\"SHA256\": \"f8cebc2ace856d6a84e5d2f6e90213b99f594be84e82b539fce4dd885c6137b3\", \"Type\": \"ICON\", \"Entropy\": 4.960103658586375}, {\"SHA256\": \"e353efb407c1644dee284d666c5029d172e592b44f7b34fca0fe1955373d2ac2\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.306038575653617}]",
+        "body_format": "TABLE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Summary",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Signatures",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "OK found while verifying signature : OK",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 2,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Signed EXE",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 1], [\"Algorithm\", \"SHA1\"], [\"Content Info Algorithm\", \"SHA1\"], [\"Content Info Digest\", \"0c3dba4f0119b3e91341fe038fbcfb5e1e7c912c\"], [\"Content Info Content Type\", \"1.3.6.1.4.1.311.2.1.4\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Signature - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 1], [\"Digest Algorithm\", \"SHA1\"], [\"Authenticated Attributes\", \"SPC_SP_OPUS_INFO, CONTENT_TYPE, PKCS9_MESSAGE_DIGEST\"], [\"Unauthenticated Attributes\", \"\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Signer - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"CN=Psion Teklogix Privileged Signing Cert\"], [\"Issuer\", \"CN=Psion Teklogix Privileged Root\"], [\"Serial Number\", \"1bede4f8af8e27b04b392276777c3508\"], [\"Valid From\", \"2007-02-20T16:28:16\"], [\"Valid To\", \"2039-12-31T23:59:59\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 3,
+        "heuristic": null,
+        "tags": {
+          "cert": {
+            "issuer": [
+              "CN=Psion Teklogix Privileged Root"
+            ],
+            "serial_no": [
+              "1bede4f8af8e27b04b392276777c3508"
+            ],
+            "subject": [
+              "CN=Psion Teklogix Privileged Signing Cert"
+            ],
+            "thumbprint": [
+              "f3002f6e021b41b2c6893d51c1e88f78553b4f2e",
+              "aa2fb386ae0809d4ca16eefdf52bcf1beb37ac68e04f21625d316d09d82be735",
+              "dbd76aa1cf97d7359371a8634be79d9f"
+            ],
+            "valid": {
+              "end": [
+                "2039-12-31T23:59:59"
+              ],
+              "start": [
+                "2007-02-20T16:28:16"
+              ]
+            }
+          }
+        },
+        "title_text": "Signer Certificate",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"CN=Psion Teklogix Privileged Root\"], [\"Issuer\", \"CN=Psion Teklogix Privileged Root\"], [\"SHA1\", \"3ad31b54362cc3263c0b86202179baf3b02f79f2\"], [\"SHA256\", \"4c7e7ac08b96c9c0d46f20b17eb62f5ae91d499f87f8b64df1aed77c7b200e2c\"], [\"MD5\", \"fbb9d51fd4ad97b58fdd7ff724a72162\"], [\"Serial Number\", \"99b6fbd7e80b8ba747631e77e3a2d09c\"], [\"Valid From\", \"2007-02-20T16:26:51\"], [\"Valid To\", \"2039-12-31T23:59:59\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Certificate - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"CN=Psion Teklogix Privileged Signing Cert\"], [\"Issuer\", \"CN=Psion Teklogix Privileged Root\"], [\"SHA1\", \"f3002f6e021b41b2c6893d51c1e88f78553b4f2e\"], [\"SHA256\", \"aa2fb386ae0809d4ca16eefdf52bcf1beb37ac68e04f21625d316d09d82be735\"], [\"MD5\", \"dbd76aa1cf97d7359371a8634be79d9f\"], [\"Serial Number\", \"1bede4f8af8e27b04b392276777c3508\"], [\"Valid From\", \"2007-02-20T16:28:16\"], [\"Valid To\", \"2039-12-31T23:59:59\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Certificate - 2",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"TEXT\", \"All issuers matching is usually a sign of it being self-signed\"], [\"ORDERED_KEY_VALUE\", [[\"Issuer\", \"CN=Psion Teklogix Privileged Root\"]]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 3,
+          "score": 500,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Same issuer for all certificates",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 1624]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.88183, 4.17303, 4.12728, 3.71184, 4.77909, 4.77909, 4.62015, 4.29425, 4.36971, 4.36971, 4.45319, 4.98379, 4.92318, 4.98379, 4.77909, 4.90031, 4.08955, 4.86258, 4.92318, 4.86258, 4.98379, 4.92318, 4.53667, 4.68076, 4.12728, 3.83911, 3.89971, 4.43031, 4.86258, 4.8397, 5.04439, 4.98379, 4.63501, 4.80197, 4.80197, 4.68076, 4.80197, 4.92318, 4.98379, 4.47606, 4.29425, 4.92318, 4.33198, 4.15016, 4.77909, 4.98379, 5.04439, 4.77909, 4.80197, 0.59167]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [
+      {
+        "name": "overlay",
+        "sha256": "89a5a50017b3bc8db9373d5b33d0ec3297676bfda1d824a1e289e1d61cf18578"
+      }
+    ],
+    "supplementary": [
+      {
+        "name": "icon_1.ico",
+        "sha256": "3ad7494dd7dffe36ec130110ac72aa892be8c0fc125b658646356790c4aa9edb"
+      },
+      {
+        "name": "icon_1.ico.thumb",
+        "sha256": "3ad7494dd7dffe36ec130110ac72aa892be8c0fc125b658646356790c4aa9edb"
+      },
+      {
+        "name": "certificate.1.1",
+        "sha256": "4c7e7ac08b96c9c0d46f20b17eb62f5ae91d499f87f8b64df1aed77c7b200e2c"
+      },
+      {
+        "name": "icon_0.ico",
+        "sha256": "5efacdecb516b18aae19799a5e99e2064d077c93db5db9e321d83918254a916a"
+      },
+      {
+        "name": "icon_0.ico.thumb",
+        "sha256": "5efacdecb516b18aae19799a5e99e2064d077c93db5db9e321d83918254a916a"
+      },
+      {
+        "name": "features.json",
+        "sha256": "661cebd6235e426467ea659c0061df040710be35a5d342181491745fe96403c1"
+      },
+      {
+        "name": "certificate.1.2",
+        "sha256": "aa2fb386ae0809d4ca16eefdf52bcf1beb37ac68e04f21625d316d09d82be735"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 2,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 3,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 4,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "cert.issuer": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "CN=Psion Teklogix Privileged Root"
+        }
+      ],
+      "cert.serial_no": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "1bede4f8af8e27b04b392276777c3508"
+        }
+      ],
+      "cert.subject": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "CN=Psion Teklogix Privileged Signing Cert"
+        }
+      ],
+      "cert.thumbprint": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "aa2fb386ae0809d4ca16eefdf52bcf1beb37ac68e04f21625d316d09d82be735"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "dbd76aa1cf97d7359371a8634be79d9f"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "f3002f6e021b41b2c6893d51c1e88f78553b4f2e"
+        }
+      ],
+      "cert.valid.end": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2039-12-31T23:59:59"
+        }
+      ],
+      "cert.valid.start": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2007-02-20T16:28:16"
+        }
+      ],
+      "file.pe.debug.guid": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "c6f1670-fec3-4e99-a340-8acb4ebd4b1"
+        }
+      ],
+      "file.pe.imports.fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "3:rGsLdAIEK:tf"
+        }
+      ],
+      "file.pe.imports.imphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "f34d5f2d4577ed6d9ceec516c1f5a744"
+        }
+      ],
+      "file.pe.imports.sorted_fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "3:rGsLdAIEK:tf"
+        }
+      ],
+      "file.pe.imports.sorted_sha1": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "b520d94a992a90264f86563103d3f841d2503d34"
+        }
+      ],
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 1475715000
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2016-10-06 00:50:00 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.pdb_filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C:\\Jenkins\\workspace\\release-7545WinMobile6Package-8.2-i4-build\\7545WinMobile6Cab\\Components\\WinCECommon\\Sensors\\UI\\Compass\\CompassCalibrate\\obj\\Release\\CompassCalibrate.pdb"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ENGLISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
+        }
+      ],
+      "file.pe.resources.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "CEUX"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "HI_RES_AWARE"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "69135b9f1785102bb68e7aa84ec33cd1"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "78b665808943aba3c4bab0dbcce006ed"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "fa481fe8bbc858d6ff131de884d42392"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".reloc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rsrc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".text"
+        }
+      ]
+    },
     "temp_submission_data": {}
+  }
 }

@@ -1,439 +1,581 @@
 {
-    "classification": "TLP:W",
-    "response": {
-        "milestones": {
-            "service_started": null,
-            "service_completed": null
-        },
-        "service_version": null,
-        "service_name": null,
-        "service_tool_version": null,
-        "supplementary": [
-            {
-                "name": "features.json",
-                "sha256": "d24fd5707c18d0df7433065228df2326a4e077450721b4772349e408701fa76e",
-                "description": "Features extracted from the PE file, as a JSON file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/features.json",
-                "is_section_image": false
-            }
-        ],
-        "extracted": [],
-        "service_context": null,
-        "service_debug_info": null
-    },
-    "result": {
-        "score": 201,
-        "sections": [
-            {
-                "body": "2147483704 (2038-01-19 03:15:04 +00:00 (UTC))",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": {
-                    "heur_id": 26,
-                    "score": 1,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Future timestamp found",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "0 -> 10 -> 2147483784",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": {
-                    "heur_id": 15,
-                    "score": 200,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Resource directories that does not contain a leaf data node",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Timestamp\", \"708992537 (1992-06-19 22:22:17 +00:00 (UTC))\"], [\"Entrypoint\", \"0xc8f4\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"2.25\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "linker": {
-                                "timestamp": [
-                                    708992537,
-                                    "1992-06-19 22:22:17 +00:00 (UTC)"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Headers",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"sha512\", \"008dc4c4c2227f82f8a9d8c2e2cedff60d3d135a1024f5d1692144e0d626ab0ba5b1ac6c0ad6b393c8548578151aeb1988b0b60355357ab38bb6fa2617b10104\"], [\"sha384\", \"17dabcee194ab3a77b398e11ad0585bc1ea7d1a49f9fd1e145f2a34415aa07bf3a13bb79bce246dfbb8d704269266585\"], [\"sha256\", \"d348f5212f8bb9727d3fb812d4a01a8f0d8100751d622a146ed0d293c922babe\"], [\"sha1\", \"0019b8e985df6a2d653eb04b9580829068375b30\"], [\"md5\", \"5d8d710dd391ce4a543562d89c0bbd62\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Sections",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.471248464153397], [\"Entropy without padding\", 6.48705781322188], [\"Offset\", 1024], [\"Size\", 47616], [\"Virtual Size\", 47412], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"90bb62e7a81685b88a744ffc0141bd93\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.67266, 5.96286, 6.15642, 6.20826, 6.12541, 6.09354, 6.41093, 7.10647, 6.11153, 6.47517, 6.22968, 6.3325, 6.17126, 6.2052, 5.81708, 6.06962, 4.75472, 4.67777, 3.67803, 3.54022, 5.12452, 6.4727, 6.35208, 6.48441, 6.41206, 5.89523, 6.03232, 6.03763, 6.10226, 5.9676, 5.48637, 4.71251, 5.84233, 5.69911, 5.69167, 6.12723, 6.24979, 6.09338, 5.85199, 5.49054, 5.80033, 5.4061, 5.9471, 5.77352, 5.39062, 5.86325, 5.92262, 5.67969, 6.03026, 4.9275]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    "CODE"
-                                ],
-                                "hash": [
-                                    "90bb62e7a81685b88a744ffc0141bd93"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - CODE",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.750739448433844], [\"Entropy without padding\", 5.756038328208414], [\"Offset\", 48640], [\"Size\", 52224], [\"Virtual Size\", 52152], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"5d932e4213bd8b1943965c68b99c6808\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.49484, 6.05444, 7.03628, 2.67705, 2.52435, 4.47844, 1.74471, 5.5691, 4.06531, 5.31623, 5.27522, 2.60334, 1.92153, 3.889, 5.0485, 5.89745, 5.8138, 5.77119, 5.87661, 5.14975, 4.35825, 2.04253, 5.17042, 5.88092, 5.94103, 4.40357, 5.34511, 3.52395, 6.3685, 4.0561, 5.45128, 4.29243, 5.74586, 5.96877, 4.04193, 4.56721, 5.11567, 5.11353, 4.51111, 5.66728, 5.79234, 4.97564, 3.56393, 2.40909, 3.78671, 5.16053, 6.061, 5.06132, 5.00158, 5.57978]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    "DATA"
-                                ],
-                                "hash": [
-                                    "5d932e4213bd8b1943965c68b99c6808"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - DATA",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", 0.0], [\"Offset\", 100864], [\"Size\", 0], [\"Virtual Size\", 3377], [\"Characteristics\", \"MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    "BSS"
-                                ],
-                                "hash": [
-                                    "d41d8cd98f00b204e9800998ecf8427e"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - BSS",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.437857568402913], [\"Entropy without padding\", 4.867357471212378], [\"Offset\", 100864], [\"Size\", 3584], [\"Virtual Size\", 3098], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"a7ee09dc28e3a46ea70fafad1e7d6d9f\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.58279, 1.93613, 1.94662, 3.29248, 3.02314, 2.81258, 3.15503, 3.17721, 3.20141, 3.18942, 3.90313, 3.67038, 3.68229, 4.02257, 4.22355, 3.98636, 4.07108, 3.89054, 4.05403, 4.42906, 4.15335, 4.16339, 4.15743, 4.09592, 3.26148, 3.85118, 3.86621, 3.75114, 4.03514, 4.21783, 3.92691, 4.19744, 4.12445, 3.79411, 4.18991, 3.89564, 4.08864, 4.0078, 3.97275, 3.8577, 4.1232, 4.24116, 4.00538, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".idata"
-                                ],
-                                "hash": [
-                                    "a7ee09dc28e3a46ea70fafad1e7d6d9f"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .idata",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", 0.0], [\"Offset\", 104448], [\"Size\", 0], [\"Virtual Size\", 8], [\"Characteristics\", \"MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".tls"
-                                ],
-                                "hash": [
-                                    "d41d8cd98f00b204e9800998ecf8427e"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .tls",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.2069200177871819], [\"Entropy without padding\", 2.21577067413792], [\"Offset\", 104448], [\"Size\", 512], [\"Virtual Size\", 24], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_SHARED, MEM_READ\"], [\"MD5\", \"4f02445a99a06f7f44ea34a84fd2c9ac\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.66353, 1.27761, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".rdata"
-                                ],
-                                "hash": [
-                                    "4f02445a99a06f7f44ea34a84fd2c9ac"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .rdata",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.311710319598857], [\"Entropy without padding\", 6.616025197699217], [\"Offset\", 104960], [\"Size\", 4096], [\"Virtual Size\", 3672], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_SHARED, MEM_READ\"], [\"MD5\", \"42581aa01bf5466bf71ce41138e11c7f\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.10634, 4.73441, 4.46899, 4.78194, 4.55824, 5.03434, 4.81828, 4.60709, 5.04799, 4.40165, 3.93298, 3.90963, 4.32703, 3.9487, 4.05892, 3.88768, 3.99748, 3.98176, 4.00756, 4.05145, 3.97115, 4.1271, 4.80735, 4.88595, 4.92417, 4.06518, 4.66557, 4.55394, 3.67878, 3.94625, 4.09828, 4.24832, 4.48424, 4.74576, 4.6976, 5.19858, 5.17317, 5.09433, 4.92861, 4.16375, 4.34147, 4.04169, 3.95585, 4.16125, 3.33993, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".reloc"
-                                ],
-                                "hash": [
-                                    "42581aa01bf5466bf71ce41138e11c7f"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .reloc",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.639110572902039], [\"Entropy without padding\", 0.6705866053817384], [\"Offset\", 109056], [\"Size\", 6144], [\"Virtual Size\", 5812], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_SHARED, MEM_READ\"], [\"MD5\", \"f2fc4546753c931307cd41b487308aa3\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.7935, 4.59208, 4.9751, 3.44369, 1.08411, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".rsrc"
-                                ],
-                                "hash": [
-                                    "f2fc4546753c931307cd41b487308aa3"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .rsrc",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "imports": {
-                                "sorted_sha1": [
-                                    "d554f57625a6896894985b95679d629ab382fd6d"
-                                ],
-                                "imphash": [
-                                    "8444cb12b0bf5cd5fdfdc6cb46071e4c"
-                                ],
-                                "fuzzy": [
-                                    "48:8cfp95E56n340Ms4/At3cduIOB+4Q5u9u5F9OS/L:8cfp95EU340Mso43cMIl4g"
-                                ],
-                                "sorted_fuzzy": [
-                                    "48:mCQXOL988U3pwec6dqczf+oCOs770994+4QF55uA:wX2988ywec5cT+oCOs7+4+"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Imports",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "DeleteCriticalSection, LeaveCriticalSection, EnterCriticalSection, InitializeCriticalSection, VirtualFree, VirtualAlloc, LocalFree, LocalAlloc, GetTickCount, QueryPerformanceCounter, GetVersion, GetCurrentThreadId, WideCharToMultiByte, lstrlenA, lstrcpynA, LoadLibraryExA, GetThreadLocale, GetStartupInfoA, GetProcAddress, GetModuleHandleA, GetModuleFileNameA, GetLocaleInfoA, GetCommandLineA, FreeLibrary, FindFirstFileA, FindClose, ExitProcess, CreateThread, WriteFile, UnhandledExceptionFilter, RtlUnwind, RaiseException, GetStdHandle, TlsSetValue, TlsGetValue, LocalAlloc, GetModuleHandleA, lstrlenW, lstrlenA, lstrcpynW, lstrcpynA, lstrcpyW, lstrcpyA, lstrcmpW, lstrcmpA, lstrcatW, lstrcatA, WriteFile, WideCharToMultiByte, VirtualQuery, VirtualFree, VirtualAlloc, UpdateResourceW, TerminateProcess, Sleep, SizeofResource, SetFilePointer, SetFileAttributesW, RemoveDirectoryW, ReadFile, OpenProcess, OpenEventA, MultiByteToWideChar, MoveFileExW, MoveFileW, LockResource, LoadResource, LoadLibraryExW, LoadLibraryA, GlobalFindAtomA, GlobalAddAtomA, GetVolumeInformationW, GetVersionExA, GetThreadLocale, GetTempPathW, GetStringTypeExA, GetStdHandle, GetShortPathNameW, GetProcAddress, GetModuleHandleA, GetModuleFileNameW, GetModuleFileNameA, GetLogicalDriveStringsW, GetLocaleInfoA, GetFileSize, GetFileAttributesW, GetDriveTypeW, GetDiskFreeSpaceA, GetCurrentDirectoryW, GetCommandLineW, GetCPInfo, GetBinaryTypeW, GetACP, FreeResource, FreeLibrary, FindResourceW, FindNextFileW, FindFirstFileExW, FindClose, EnumResourceNamesW, EnumResourceLanguagesW, EnumCalendarInfoA, EndUpdateResourceW, DeleteFileW, CreateProcessW, CreateFileW, CreateEventA, CreateDirectoryW, CloseHandle, BeginUpdateResourceW",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "kernel32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "GetKeyboardType, LoadStringA, MessageBoxA, CharNextA, MessageBoxA, LoadStringA, GetSystemMetrics, CharNextA, CharToOemA",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "user32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "RegQueryValueExA, RegOpenKeyExA, RegCloseKey, RegQueryValueExA, RegOpenKeyExA, RegEnumValueA, RegCloseKey",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "advapi32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "SysFreeString, SysReAllocStringLen",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "oleaut32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "CoCreateInstance, CoInitialize, CoUninitialize",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "ole32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Languages\", \"NEUTRAL\"], [\"Sublanguages\", \"DEFAULT\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "resources": {
-                                "language": [
-                                    "NEUTRAL"
-                                ],
-                                "name": [
-                                    "DVCLAL",
-                                    "PACKAGEINFO"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Resources",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[{\"SHA256\": \"95347bcfd203e45c2062e2f5f224d39b02589a75ebbe4381d43c0565efefee6e\", \"Type\": \"RCDATA\", \"Entropy\": 5.043603385880926}]",
-                "classification": "TLP:W",
-                "body_format": "TABLE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Summary",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Overlay",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            }
-        ]
-    },
-    "sha256": "90782764a190af654f819c604fcb45820b453fb1f75f23ce0005d91bddce3aa1",
-    "type": "executable/windows/pe32",
-    "size": 115200,
+  "extra": {
     "drop_file": false,
+    "score": 201,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "2147483704 (2038-01-19 03:15:04 +00:00 (UTC))",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 26,
+          "score": 1,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Future timestamp found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "0 -> 10 -> 2147483784",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 15,
+          "score": 200,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Resource directories that does not contain a leaf data node",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"708992537 (1992-06-19 22:22:17 +00:00 (UTC))\"], [\"Entrypoint\", \"0xc8f4\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"2.25\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  708992537,
+                  "1992-06-19 22:22:17 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"sha512\", \"008dc4c4c2227f82f8a9d8c2e2cedff60d3d135a1024f5d1692144e0d626ab0ba5b1ac6c0ad6b393c8548578151aeb1988b0b60355357ab38bb6fa2617b10104\"], [\"sha384\", \"17dabcee194ab3a77b398e11ad0585bc1ea7d1a49f9fd1e145f2a34415aa07bf3a13bb79bce246dfbb8d704269266585\"], [\"sha256\", \"d348f5212f8bb9727d3fb812d4a01a8f0d8100751d622a146ed0d293c922babe\"], [\"sha1\", \"0019b8e985df6a2d653eb04b9580829068375b30\"], [\"md5\", \"5d8d710dd391ce4a543562d89c0bbd62\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.471248464153397], [\"Entropy without padding\", 6.48705781322188], [\"Offset\", 1024], [\"Size\", 47616], [\"Virtual Size\", 47412], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"90bb62e7a81685b88a744ffc0141bd93\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.67266, 5.96286, 6.15642, 6.20826, 6.12541, 6.09354, 6.41093, 7.10647, 6.11153, 6.47517, 6.22968, 6.3325, 6.17126, 6.2052, 5.81708, 6.06962, 4.75472, 4.67777, 3.67803, 3.54022, 5.12452, 6.4727, 6.35208, 6.48441, 6.41206, 5.89523, 6.03232, 6.03763, 6.10226, 5.9676, 5.48637, 4.71251, 5.84233, 5.69911, 5.69167, 6.12723, 6.24979, 6.09338, 5.85199, 5.49054, 5.80033, 5.4061, 5.9471, 5.77352, 5.39062, 5.86325, 5.92262, 5.67969, 6.03026, 4.9275]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "90bb62e7a81685b88a744ffc0141bd93"
+                ],
+                "name": [
+                  "CODE"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - CODE",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.750739448433844], [\"Entropy without padding\", 5.756038328208414], [\"Offset\", 48640], [\"Size\", 52224], [\"Virtual Size\", 52152], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"5d932e4213bd8b1943965c68b99c6808\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.49484, 6.05444, 7.03628, 2.67705, 2.52435, 4.47844, 1.74471, 5.5691, 4.06531, 5.31623, 5.27522, 2.60334, 1.92153, 3.889, 5.0485, 5.89745, 5.8138, 5.77119, 5.87661, 5.14975, 4.35825, 2.04253, 5.17042, 5.88092, 5.94103, 4.40357, 5.34511, 3.52395, 6.3685, 4.0561, 5.45128, 4.29243, 5.74586, 5.96877, 4.04193, 4.56721, 5.11567, 5.11353, 4.51111, 5.66728, 5.79234, 4.97564, 3.56393, 2.40909, 3.78671, 5.16053, 6.061, 5.06132, 5.00158, 5.57978]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "5d932e4213bd8b1943965c68b99c6808"
+                ],
+                "name": [
+                  "DATA"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - DATA",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", 0.0], [\"Offset\", 100864], [\"Size\", 0], [\"Virtual Size\", 3377], [\"Characteristics\", \"MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "d41d8cd98f00b204e9800998ecf8427e"
+                ],
+                "name": [
+                  "BSS"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - BSS",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.437857568402913], [\"Entropy without padding\", 4.867357471212378], [\"Offset\", 100864], [\"Size\", 3584], [\"Virtual Size\", 3098], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"a7ee09dc28e3a46ea70fafad1e7d6d9f\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.58279, 1.93613, 1.94662, 3.29248, 3.02314, 2.81258, 3.15503, 3.17721, 3.20141, 3.18942, 3.90313, 3.67038, 3.68229, 4.02257, 4.22355, 3.98636, 4.07108, 3.89054, 4.05403, 4.42906, 4.15335, 4.16339, 4.15743, 4.09592, 3.26148, 3.85118, 3.86621, 3.75114, 4.03514, 4.21783, 3.92691, 4.19744, 4.12445, 3.79411, 4.18991, 3.89564, 4.08864, 4.0078, 3.97275, 3.8577, 4.1232, 4.24116, 4.00538, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "a7ee09dc28e3a46ea70fafad1e7d6d9f"
+                ],
+                "name": [
+                  ".idata"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .idata",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", 0.0], [\"Offset\", 104448], [\"Size\", 0], [\"Virtual Size\", 8], [\"Characteristics\", \"MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "d41d8cd98f00b204e9800998ecf8427e"
+                ],
+                "name": [
+                  ".tls"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .tls",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.2069200177871819], [\"Entropy without padding\", 2.21577067413792], [\"Offset\", 104448], [\"Size\", 512], [\"Virtual Size\", 24], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_SHARED, MEM_READ\"], [\"MD5\", \"4f02445a99a06f7f44ea34a84fd2c9ac\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.66353, 1.27761, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "4f02445a99a06f7f44ea34a84fd2c9ac"
+                ],
+                "name": [
+                  ".rdata"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rdata",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.311710319598857], [\"Entropy without padding\", 6.616025197699217], [\"Offset\", 104960], [\"Size\", 4096], [\"Virtual Size\", 3672], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_SHARED, MEM_READ\"], [\"MD5\", \"42581aa01bf5466bf71ce41138e11c7f\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.10634, 4.73441, 4.46899, 4.78194, 4.55824, 5.03434, 4.81828, 4.60709, 5.04799, 4.40165, 3.93298, 3.90963, 4.32703, 3.9487, 4.05892, 3.88768, 3.99748, 3.98176, 4.00756, 4.05145, 3.97115, 4.1271, 4.80735, 4.88595, 4.92417, 4.06518, 4.66557, 4.55394, 3.67878, 3.94625, 4.09828, 4.24832, 4.48424, 4.74576, 4.6976, 5.19858, 5.17317, 5.09433, 4.92861, 4.16375, 4.34147, 4.04169, 3.95585, 4.16125, 3.33993, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "42581aa01bf5466bf71ce41138e11c7f"
+                ],
+                "name": [
+                  ".reloc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .reloc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.639110572902039], [\"Entropy without padding\", 0.6705866053817384], [\"Offset\", 109056], [\"Size\", 6144], [\"Virtual Size\", 5812], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_SHARED, MEM_READ\"], [\"MD5\", \"f2fc4546753c931307cd41b487308aa3\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.7935, 4.59208, 4.9751, 3.44369, 1.08411, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "f2fc4546753c931307cd41b487308aa3"
+                ],
+                "name": [
+                  ".rsrc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rsrc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "imports": {
+                "fuzzy": [
+                  "48:8cfp95E56n340Ms4/At3cduIOB+4Q5u9u5F9OS/L:8cfp95EU340Mso43cMIl4g"
+                ],
+                "imphash": [
+                  "8444cb12b0bf5cd5fdfdc6cb46071e4c"
+                ],
+                "sorted_fuzzy": [
+                  "48:mCQXOL988U3pwec6dqczf+oCOs770994+4QF55uA:wX2988ywec5cT+oCOs7+4+"
+                ],
+                "sorted_sha1": [
+                  "d554f57625a6896894985b95679d629ab382fd6d"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Imports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "DeleteCriticalSection, LeaveCriticalSection, EnterCriticalSection, InitializeCriticalSection, VirtualFree, VirtualAlloc, LocalFree, LocalAlloc, GetTickCount, QueryPerformanceCounter, GetVersion, GetCurrentThreadId, WideCharToMultiByte, lstrlenA, lstrcpynA, LoadLibraryExA, GetThreadLocale, GetStartupInfoA, GetProcAddress, GetModuleHandleA, GetModuleFileNameA, GetLocaleInfoA, GetCommandLineA, FreeLibrary, FindFirstFileA, FindClose, ExitProcess, CreateThread, WriteFile, UnhandledExceptionFilter, RtlUnwind, RaiseException, GetStdHandle, TlsSetValue, TlsGetValue, LocalAlloc, GetModuleHandleA, lstrlenW, lstrlenA, lstrcpynW, lstrcpynA, lstrcpyW, lstrcpyA, lstrcmpW, lstrcmpA, lstrcatW, lstrcatA, WriteFile, WideCharToMultiByte, VirtualQuery, VirtualFree, VirtualAlloc, UpdateResourceW, TerminateProcess, Sleep, SizeofResource, SetFilePointer, SetFileAttributesW, RemoveDirectoryW, ReadFile, OpenProcess, OpenEventA, MultiByteToWideChar, MoveFileExW, MoveFileW, LockResource, LoadResource, LoadLibraryExW, LoadLibraryA, GlobalFindAtomA, GlobalAddAtomA, GetVolumeInformationW, GetVersionExA, GetThreadLocale, GetTempPathW, GetStringTypeExA, GetStdHandle, GetShortPathNameW, GetProcAddress, GetModuleHandleA, GetModuleFileNameW, GetModuleFileNameA, GetLogicalDriveStringsW, GetLocaleInfoA, GetFileSize, GetFileAttributesW, GetDriveTypeW, GetDiskFreeSpaceA, GetCurrentDirectoryW, GetCommandLineW, GetCPInfo, GetBinaryTypeW, GetACP, FreeResource, FreeLibrary, FindResourceW, FindNextFileW, FindFirstFileExW, FindClose, EnumResourceNamesW, EnumResourceLanguagesW, EnumCalendarInfoA, EndUpdateResourceW, DeleteFileW, CreateProcessW, CreateFileW, CreateEventA, CreateDirectoryW, CloseHandle, BeginUpdateResourceW",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "kernel32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "GetKeyboardType, LoadStringA, MessageBoxA, CharNextA, MessageBoxA, LoadStringA, GetSystemMetrics, CharNextA, CharToOemA",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "user32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "RegQueryValueExA, RegOpenKeyExA, RegCloseKey, RegQueryValueExA, RegOpenKeyExA, RegEnumValueA, RegCloseKey",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "advapi32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "SysFreeString, SysReAllocStringLen",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "oleaut32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "CoCreateInstance, CoInitialize, CoUninitialize",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "ole32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Languages\", \"NEUTRAL\"], [\"Sublanguages\", \"DEFAULT\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "NEUTRAL"
+                ],
+                "name": [
+                  "DVCLAL",
+                  "PACKAGEINFO"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[{\"SHA256\": \"95347bcfd203e45c2062e2f5f224d39b02589a75ebbe4381d43c0565efefee6e\", \"Type\": \"RCDATA\", \"Entropy\": 5.043603385880926}]",
+        "body_format": "TABLE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Summary",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "d24fd5707c18d0df7433065228df2326a4e077450721b4772349e408701fa76e"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 15,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 26,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.pe.imports.fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "48:8cfp95E56n340Ms4/At3cduIOB+4Q5u9u5F9OS/L:8cfp95EU340Mso43cMIl4g"
+        }
+      ],
+      "file.pe.imports.imphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "8444cb12b0bf5cd5fdfdc6cb46071e4c"
+        }
+      ],
+      "file.pe.imports.sorted_fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "48:mCQXOL988U3pwec6dqczf+oCOs770994+4QF55uA:wX2988ywec5cT+oCOs7+4+"
+        }
+      ],
+      "file.pe.imports.sorted_sha1": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "d554f57625a6896894985b95679d629ab382fd6d"
+        }
+      ],
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 708992537
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "1992-06-19 22:22:17 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
+        }
+      ],
+      "file.pe.resources.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "DVCLAL"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "PACKAGEINFO"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "42581aa01bf5466bf71ce41138e11c7f"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "4f02445a99a06f7f44ea34a84fd2c9ac"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "5d932e4213bd8b1943965c68b99c6808"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "90bb62e7a81685b88a744ffc0141bd93"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "a7ee09dc28e3a46ea70fafad1e7d6d9f"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "f2fc4546753c931307cd41b487308aa3"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".idata"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rdata"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".reloc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rsrc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".tls"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "BSS"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "CODE"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "DATA"
+        }
+      ]
+    },
     "temp_submission_data": {}
+  }
 }
