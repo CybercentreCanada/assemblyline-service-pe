@@ -1,236 +1,272 @@
 {
-    "classification": "TLP:W",
-    "response": {
-        "milestones": {
-            "service_started": null,
-            "service_completed": null
-        },
-        "service_version": null,
-        "service_name": null,
-        "service_tool_version": null,
-        "supplementary": [
-            {
-                "name": "icon_0.ico",
-                "sha256": "770ea4ce584f30c47c99f24ed8a2c0bd0322347e870096cd0f9d546286d4922f",
-                "description": "Icon 0 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_0.ico.thumb",
-                "sha256": "770ea4ce584f30c47c99f24ed8a2c0bd0322347e870096cd0f9d546286d4922f",
-                "description": "Icon 0 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "features.json",
-                "sha256": "36fe5f75164083acd3a0a5d30aa25ec68ce0ed296562c081a9e067de956bbc42",
-                "description": "Features extracted from the PE file, as a JSON file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/features.json",
-                "is_section_image": false
-            }
-        ],
-        "extracted": [],
-        "service_context": null,
-        "service_debug_info": null
-    },
-    "result": {
-        "score": 250,
-        "sections": [
-            {
-                "body": "[[\"Timestamp\", \"1546277936 (2018-12-31 17:38:56 +00:00 (UTC))\"], [\"Entrypoint\", \"0x1a9f49\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"5.12\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "linker": {
-                                "timestamp": [
-                                    1546277936,
-                                    "2018-12-31 17:38:56 +00:00 (UTC)"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Headers",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"03d66c1bb0ed3815ed5240669f9d7036\"]]], [\"TABLE\", [{\"ID\": \"0x00000000\", \"Compiler Information\": \"[---] Unmarked objects (old)\", \"Count\": 1}]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "rich_header": {
-                                "hash": [
-                                    "03d66c1bb0ed3815ed5240669f9d7036"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Rich Headers - Key: 2286892065",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"sha512\", \"bacd07ecb911c4b855a048044cea575f02d0191156e8d562b1cdb24038821522d626408141cbc724443964d8536b6aaffb30f5f573e9464edc21ad2b2788de5d\"], [\"sha384\", \"0e51e6db6efb1fb0ceabcd26814c15e385b21913925ce4d1962e651dc52971ddd3d4884505367c08df2bae32df695126\"], [\"sha256\", \"a66ab482642d1950ce72385f470f0b7eb33083edecbc9c22ad5ae269385dd8b6\"], [\"sha1\", \"b730059f249c8497721cf7205c7c76c880e35ff5\"], [\"md5\", \"669cfbc3780aca76bfec4bfe1bfeee8f\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Sections",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 7.297203565952431], [\"Entropy without padding\", 7.2968651084310165], [\"Offset\", 512], [\"Size\", 1751040], [\"Virtual Size\", 1750716], [\"Characteristics\", \"CNT_CODE, MEM_LOCKED, MEM_READ, MEM_WRITE\"], [\"MD5\", \"2967a5df33344695593fe9f61a0a6783\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.84701, 5.54171, 5.89345, 6.13585, 5.57622, 4.97093, 3.99795, 4.83514, 5.28787, 4.1436, 4.61704, 5.18074, 4.77191, 3.75812, 5.43922, 5.63879, 4.7893, 4.61765, 4.65588, 5.6048, 5.37269, 6.69151, 7.87432, 7.42559, 7.33276, 7.85778, 6.76957, 7.8139, 7.61558, 6.9588, 4.93558, 6.4192, 5.53167, 6.74199, 6.66783, 7.47106, 4.23819, 6.71129, 3.75332, 7.32686, 5.53095, 5.33739, 6.8671, 4.79915, 4.60266, 7.28014, 7.76108, 7.82461, 7.93615, 7.76888]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".text"
-                                ],
-                                "hash": [
-                                    "2967a5df33344695593fe9f61a0a6783"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .text",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.2709549389208945], [\"Entropy without padding\", 6.242260376823509], [\"Offset\", 1751552], [\"Size\", 4608], [\"Virtual Size\", 4444], [\"Characteristics\", \"CNT_CODE, MEM_LOCKED, MEM_READ, MEM_WRITE\"], [\"MD5\", \"06646d0c5c3bd5eb1138b8aee1385550\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.34024, 1.9876, 3.8403, 5.04675, 5.10839, 4.72132, 4.95785, 5.00901, 4.90145, 4.67544, 4.84641, 4.70509, 5.06011, 4.64367, 4.88415, 4.86374, 5.15425, 5.06823, 5.11124, 4.93922, 4.99275, 5.20537, 5.26177, 4.9096, 5.17575, 5.12462, 5.13274, 5.02524, 5.04672, 5.13274, 5.10312, 4.99035, 5.06011, 4.90957, 4.99559, 4.73998, 4.79001, 4.84426, 4.79923, 4.41241, 4.31015, 4.49469, 4.14183, 3.4089, 3.04321, 2.83506, 0.9331, 1.95282, 2.76218, 2.72138]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".rsrc"
-                                ],
-                                "hash": [
-                                    "06646d0c5c3bd5eb1138b8aee1385550"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .rsrc",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Section name: .rsrc\nCharacteristics: CNT_CODE, MEM_LOCKED, MEM_READ, MEM_WRITE",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 2,
-                "heuristic": {
-                    "heur_id": 21,
-                    "score": 250,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Malicious section name",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Languages\", \"ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "resources": {
-                                "language": [
-                                    "ENGLISH"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Resources",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_0.ico\"}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"770ea4ce584f30c47c99f24ed8a2c0bd0322347e870096cd0f9d546286d4922f\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"770ea4ce584f30c47c99f24ed8a2c0bd0322347e870096cd0f9d546286d4922f\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Icons",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[{\"SHA256\": \"b04775cd3e06c3eb938dc9457ceb73589703f91759d095b046f3e8b8e538e8c9\", \"Type\": \"ICON\", \"Entropy\": 6.348607205578606}, {\"SHA256\": \"bd7b891000b776021bd2d3790a165561c6134cea734f0d70a52a9b9c0b363321\", \"Type\": \"GROUP_ICON\", \"Entropy\": 1.943751954420502}]",
-                "classification": "TLP:W",
-                "body_format": "TABLE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Summary",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Overlay",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            }
-        ]
-    },
-    "sha256": "0000196472487b07e62e680d379acdd77a88504b0b90602fc3aae1ef96639286",
-    "type": "executable/windows/pe32",
-    "size": 1756160,
+  "extra": {
     "drop_file": false,
+    "score": 250,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1546277936 (2018-12-31 17:38:56 +00:00 (UTC))\"], [\"Entrypoint\", \"0x1a9f49\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"5.12\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  1546277936,
+                  "2018-12-31 17:38:56 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"03d66c1bb0ed3815ed5240669f9d7036\"]]], [\"TABLE\", [{\"ID\": \"0x00000000\", \"Compiler Information\": \"[---] Unmarked objects (old)\", \"Count\": 1}]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "rich_header": {
+                "hash": [
+                  "03d66c1bb0ed3815ed5240669f9d7036"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Rich Headers - Key: 2286892065",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"sha512\", \"bacd07ecb911c4b855a048044cea575f02d0191156e8d562b1cdb24038821522d626408141cbc724443964d8536b6aaffb30f5f573e9464edc21ad2b2788de5d\"], [\"sha384\", \"0e51e6db6efb1fb0ceabcd26814c15e385b21913925ce4d1962e651dc52971ddd3d4884505367c08df2bae32df695126\"], [\"sha256\", \"a66ab482642d1950ce72385f470f0b7eb33083edecbc9c22ad5ae269385dd8b6\"], [\"sha1\", \"b730059f249c8497721cf7205c7c76c880e35ff5\"], [\"md5\", \"669cfbc3780aca76bfec4bfe1bfeee8f\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 7.297203565952431], [\"Entropy without padding\", 7.2968651084310165], [\"Offset\", 512], [\"Size\", 1751040], [\"Virtual Size\", 1750716], [\"Characteristics\", \"CNT_CODE, MEM_LOCKED, MEM_READ, MEM_WRITE\"], [\"MD5\", \"2967a5df33344695593fe9f61a0a6783\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.84701, 5.54171, 5.89345, 6.13585, 5.57622, 4.97093, 3.99795, 4.83514, 5.28787, 4.1436, 4.61704, 5.18074, 4.77191, 3.75812, 5.43922, 5.63879, 4.7893, 4.61765, 4.65588, 5.6048, 5.37269, 6.69151, 7.87432, 7.42559, 7.33276, 7.85778, 6.76957, 7.8139, 7.61558, 6.9588, 4.93558, 6.4192, 5.53167, 6.74199, 6.66783, 7.47106, 4.23819, 6.71129, 3.75332, 7.32686, 5.53095, 5.33739, 6.8671, 4.79915, 4.60266, 7.28014, 7.76108, 7.82461, 7.93615, 7.76888]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "2967a5df33344695593fe9f61a0a6783"
+                ],
+                "name": [
+                  ".text"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .text",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.2709549389208945], [\"Entropy without padding\", 6.242260376823509], [\"Offset\", 1751552], [\"Size\", 4608], [\"Virtual Size\", 4444], [\"Characteristics\", \"CNT_CODE, MEM_LOCKED, MEM_READ, MEM_WRITE\"], [\"MD5\", \"06646d0c5c3bd5eb1138b8aee1385550\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.34024, 1.9876, 3.8403, 5.04675, 5.10839, 4.72132, 4.95785, 5.00901, 4.90145, 4.67544, 4.84641, 4.70509, 5.06011, 4.64367, 4.88415, 4.86374, 5.15425, 5.06823, 5.11124, 4.93922, 4.99275, 5.20537, 5.26177, 4.9096, 5.17575, 5.12462, 5.13274, 5.02524, 5.04672, 5.13274, 5.10312, 4.99035, 5.06011, 4.90957, 4.99559, 4.73998, 4.79001, 4.84426, 4.79923, 4.41241, 4.31015, 4.49469, 4.14183, 3.4089, 3.04321, 2.83506, 0.9331, 1.95282, 2.76218, 2.72138]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "06646d0c5c3bd5eb1138b8aee1385550"
+                ],
+                "name": [
+                  ".rsrc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rsrc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Section name: .rsrc\nCharacteristics: CNT_CODE, MEM_LOCKED, MEM_READ, MEM_WRITE",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 21,
+          "score": 250,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Malicious section name",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Languages\", \"ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "ENGLISH"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_0.ico\"}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"770ea4ce584f30c47c99f24ed8a2c0bd0322347e870096cd0f9d546286d4922f\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"770ea4ce584f30c47c99f24ed8a2c0bd0322347e870096cd0f9d546286d4922f\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Icons",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[{\"SHA256\": \"b04775cd3e06c3eb938dc9457ceb73589703f91759d095b046f3e8b8e538e8c9\", \"Type\": \"ICON\", \"Entropy\": 6.348607205578606}, {\"SHA256\": \"bd7b891000b776021bd2d3790a165561c6134cea734f0d70a52a9b9c0b363321\", \"Type\": \"GROUP_ICON\", \"Entropy\": 1.943751954420502}]",
+        "body_format": "TABLE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Summary",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "36fe5f75164083acd3a0a5d30aa25ec68ce0ed296562c081a9e067de956bbc42"
+      },
+      {
+        "name": "icon_0.ico",
+        "sha256": "770ea4ce584f30c47c99f24ed8a2c0bd0322347e870096cd0f9d546286d4922f"
+      },
+      {
+        "name": "icon_0.ico.thumb",
+        "sha256": "770ea4ce584f30c47c99f24ed8a2c0bd0322347e870096cd0f9d546286d4922f"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 21,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 1546277936
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2018-12-31 17:38:56 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ENGLISH"
+        }
+      ],
+      "file.pe.rich_header.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "03d66c1bb0ed3815ed5240669f9d7036"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "06646d0c5c3bd5eb1138b8aee1385550"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2967a5df33344695593fe9f61a0a6783"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rsrc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".text"
+        }
+      ]
+    },
     "temp_submission_data": {}
+  }
 }

@@ -227,7 +227,7 @@ class PE(ServiceBase):
         super().__init__(config)
 
     def start(self):
-        self.log.info("Starting PE")
+        self.log.debug("Starting PE")
         # Loading Rich header resolutions
         self.rich_header_entries = {}
         with open(os.path.join(pathlib.Path(__file__).parent.resolve(), "comp_id.txt"), "r") as f:

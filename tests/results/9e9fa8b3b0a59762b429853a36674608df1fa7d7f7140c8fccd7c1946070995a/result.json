@@ -1,412 +1,557 @@
 {
-    "classification": "TLP:W",
-    "response": {
-        "milestones": {
-            "service_started": null,
-            "service_completed": null
-        },
-        "service_version": null,
-        "service_name": null,
-        "service_tool_version": null,
-        "supplementary": [
-            {
-                "name": "certificate.1.1",
-                "sha256": "4a838904e732a380e2856a9d6fee926e5c57eb59336292ac5d9e47c9b2c1ed13",
-                "description": "certificate.1.1 extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/certificate.1.1",
-                "is_section_image": false
-            },
-            {
-                "name": "certificate.1.2",
-                "sha256": "9aad6c1a83a1b974ba574a995af35b8ca772da919270db1605a8b81e1bbc896f",
-                "description": "certificate.1.2 extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/certificate.1.2",
-                "is_section_image": false
-            },
-            {
-                "name": "features.json",
-                "sha256": "90c8a644557ca949e36af8098c7e9384b92b74f602c503b5c0a7aee1bc357a76",
-                "description": "Features extracted from the PE file, as a JSON file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/features.json",
-                "is_section_image": false
-            }
-        ],
-        "extracted": [
-            {
-                "name": "overlay",
-                "sha256": "80fb951d64dba9994176b9cbd1d6179ffcb0023e27f16f1a8f858036fcbae34e",
-                "description": "overlay extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/overlay",
-                "is_section_image": false
-            }
-        ],
-        "service_context": null,
-        "service_debug_info": null
-    },
-    "result": {
-        "score": 300,
-        "sections": [
-            {
-                "body": "[[\"Timestamp\", \"0 (1970-01-01 00:00:00 +00:00 (UTC))\"], [\"Entrypoint\", \"0x646a0\"], [\"Machine\", \"AMD64\"], [\"Magic\", \"PE32_PLUS\"], [\"Image version\", \"1.0\"], [\"Linker version\", \"3.0\"], [\"Operating System version\", \"6.1\"], [\"Subsystem version\", \"6.1\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x00000000\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "linker": {
-                                "timestamp": [
-                                    0,
-                                    "1970-01-01 00:00:00 +00:00 (UTC)"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Headers",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"sha512\", \"81ee8c9a06f484107c442aae11aa5db3d391008056cb760ca3bb50868f96ae7b918fbacdf3ccef2df1826e1dac7eafc5502749f542f73f79c3e294481570fb14\"], [\"sha384\", \"42bb84378df5d9ee73b2d584b5bc4824d66b8541054e73533d5b803f6f641d05522edd505dd11bc463bd7608f22fc5b7\"], [\"sha256\", \"dbcfa85e6f6acb3580a04357108995754429d64070e5b72e8fc220431a643ba4\"], [\"sha1\", \"a899945d7abeb924ee510ce5a867ee4fc65185dc\"], [\"md5\", \"16db090049d419cc79279afc78a45ba5\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Sections",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.171746648679192], [\"Entropy without padding\", 6.17183357561405], [\"Offset\", 1536], [\"Size\", 2066432], [\"Virtual Size\", 2066376], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"c08106bcbaafd29a40ad4b3e96a5627a\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.08777, 6.2395, 6.17697, 6.15786, 6.03272, 6.11473, 6.10815, 6.07326, 6.03606, 5.89478, 6.03804, 6.30826, 6.05392, 6.02766, 5.9971, 6.04814, 6.12148, 6.02925, 6.16357, 6.18996, 6.06135, 5.69345, 5.85866, 5.68357, 6.17747, 6.01246, 5.9899, 6.47559, 6.52358, 6.58749, 6.10547, 5.90665, 6.12259, 5.8142, 6.05453, 5.89782, 5.78828, 6.01313, 6.0425, 6.01696, 6.07631, 6.05829, 6.08239, 5.98318, 5.9852, 5.93783, 5.90439, 5.89899, 5.92657, 5.91511]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".text"
-                                ],
-                                "hash": [
-                                    "c08106bcbaafd29a40ad4b3e96a5627a"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .text",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.208799971138144], [\"Entropy without padding\", 5.209523216916722], [\"Offset\", 2067968], [\"Size\", 2008064], [\"Virtual Size\", 2007680], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"beeb3d314c52f6b238ed0414983da573\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.43049, 5.04321, 2.78578, 3.38738, 3.46298, 3.17846, 3.16513, 3.36616, 3.67206, 5.38399, 4.84152, 6.29338, 3.51954, 3.40503, 3.45931, 3.55859, 3.56706, 3.44315, 3.20199, 3.00042, 5.29456, 4.94903, 5.09042, 4.90334, 5.67367, 5.92803, 5.85108, 5.92467, 5.33154, 6.02594, 5.78291, 5.60011, 5.63382, 5.92823, 5.94737, 6.04446, 6.03656, 6.02224, 3.43021, 3.25034, 3.17687, 3.37183, 3.22073, 3.40456, 3.30323, 3.37945, 3.36399, 3.53686, 3.56544, 3.43506]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".rdata"
-                                ],
-                                "hash": [
-                                    "beeb3d314c52f6b238ed0414983da573"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .rdata",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.302761121525251], [\"Entropy without padding\", 6.30276112152525], [\"Offset\", 4076032], [\"Size\", 328192], [\"Virtual Size\", 718752], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"972579fbc5433531a72824f2f41e9a20\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.62592, 2.86031, 2.7549, 4.01594, 5.95171, 4.91152, 6.17811, 5.42156, 7.03813, 7.52657, 4.13406, 4.66951, 4.58945, 4.50858, 4.33614, 7.45156, 5.53259, 4.34342, 5.25869, 7.74653, 7.44065, 6.5866, 5.03402, 1.71823, 2.0874, 3.83105, 6.22504, 6.62648, 6.16955, 5.79665, 7.58865, 7.97218, 7.97325, 7.96857, 7.97334, 7.96827, 7.9731, 7.97336, 7.97013, 7.97054, 7.97088, 7.9707, 7.97606, 7.44328, 1.89336, 1.11383, 1.14605, 1.74589, 2.18528, 0.42751]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".data"
-                                ],
-                                "hash": [
-                                    "972579fbc5433531a72824f2f41e9a20"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .data",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.569913682555425], [\"Entropy without padding\", 4.305439331096066], [\"Offset\", 4404224], [\"Size\", 1536], [\"Virtual Size\", 1164], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d5ce09736386aba25dc4e15466abe8b6\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.66041, 3.03112, 3.6468, 4.01808, 3.53755, 3.7798, 3.40529, 3.5619, 3.88583, 3.49738, 3.67969, 3.59884, 3.97792, 3.57501, 3.36513, 3.74098, 3.6106, 4.1313, 3.98645, 3.51049, 3.71985, 3.95357, 3.68052, 3.13921, 3.76855, 3.48292, 3.9621, 1.64973, 1.8345, 1.8345, 1.8345, 1.8345, 1.8345, 1.85909, 1.75441, 1.64973, 1.96353, 0.61207, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".idata"
-                                ],
-                                "hash": [
-                                    "d5ce09736386aba25dc4e15466abe8b6"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .idata",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.458372430828139], [\"Entropy without padding\", 5.460617508202926], [\"Offset\", 4405760], [\"Size\", 84480], [\"Virtual Size\", 84094], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"6be6e24d172cfcc193f5e83f1245a056\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.05098, 5.15031, 5.31881, 5.38079, 5.19246, 5.288, 5.36897, 5.36588, 5.38816, 5.35303, 5.42685, 5.4109, 5.36364, 5.40976, 5.43816, 5.3576, 5.35203, 5.40934, 5.30315, 5.11145, 4.96424, 4.96412, 4.96155, 4.96378, 5.40341, 5.44048, 5.43307, 5.42615, 5.44411, 5.44922, 5.42656, 5.44142, 5.44875, 5.44214, 5.43524, 5.45955, 5.44957, 5.44832, 5.45328, 5.44509, 5.42603, 5.45373, 5.45126, 5.43671, 5.43009, 5.43303, 5.46042, 5.43525, 5.17525, 4.76328]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".reloc"
-                                ],
-                                "hash": [
-                                    "6be6e24d172cfcc193f5e83f1245a056"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .reloc",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.020393135236084953], [\"Entropy without padding\", 0.8112781244591329], [\"Offset\", 4490240], [\"Size\", 512], [\"Virtual Size\", 4], [\"Characteristics\", \"MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"07b5472d347d42780469fb2654b7fc54\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.4395, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".symtab"
-                                ],
-                                "hash": [
-                                    "07b5472d347d42780469fb2654b7fc54"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .symtab",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "imports": {
-                                "sorted_sha1": [
-                                    "6d0481e38767cbe2767ab6c191cc5141992530e5"
-                                ],
-                                "imphash": [
-                                    "c7269d59926fa4252270f407e4dab043"
-                                ],
-                                "fuzzy": [
-                                    "24:UbVjhN5O+VuT2oLtXOr6kwmDruMztxdEr6tP:K5O+VAXOmGx0oP"
-                                ],
-                                "sorted_fuzzy": [
-                                    "24:nJ614douuMBRDNQkaVOLb3TydX8JOmQzbVjP:nJbunrpdX8JOm4"
-                                ],
-                                "gimphash": [
-                                    "50f5783c2188897815d9b34a77aa4df70ac96a71542ddc79b94fef8ce7ba2120"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Imports",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "WriteFile, WriteConsoleW, WaitForMultipleObjects, WaitForSingleObject, VirtualQuery, VirtualFree, VirtualAlloc, SwitchToThread, SuspendThread, Sleep, SetWaitableTimer, SetUnhandledExceptionFilter, SetProcessPriorityBoost, SetEvent, SetErrorMode, SetConsoleCtrlHandler, ResumeThread, PostQueuedCompletionStatus, LoadLibraryA, LoadLibraryW, SetThreadContext, GetThreadContext, GetSystemInfo, GetSystemDirectoryA, GetStdHandle, GetQueuedCompletionStatusEx, GetProcessAffinityMask, GetProcAddress, GetEnvironmentStringsW, GetConsoleMode, FreeEnvironmentStringsW, ExitProcess, DuplicateHandle, CreateWaitableTimerExW, CreateThread, CreateIoCompletionPort, CreateFileA, CreateEventA, CloseHandle, AddVectoredExceptionHandler",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "kernel32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Signatures",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 1], [\"Algorithm\", \"SHA256\"], [\"Content Info Algorithm\", \"SHA256\"], [\"Content Info Digest\", \"37ea281d9c10933f24285c844adbc7d4a23ed1e935bf1cb4a657fe27bff7a813\"], [\"Content Info Content Type\", \"1.3.6.1.4.1.311.2.1.4\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Signature - 1",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 1], [\"Digest Algorithm\", \"SHA256\"], [\"Authenticated Attributes\", \"CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST, GENERIC_TYPE, SPC_SP_OPUS_INFO\"], [\"Unauthenticated Attributes\", \"GENERIC_TYPE\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Signer - 1",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation\"], [\"Issuer\", \"C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010\"], [\"Serial Number\", \"33000003dffb6ae3f427ecb6a30000000003df\"], [\"Valid From\", \"2020-12-15T21:24:20\"], [\"Valid To\", \"2021-12-02T21:24:20\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 3,
-                "heuristic": null,
-                "tags": {
-                    "cert": {
-                        "subject": [
-                            "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation"
-                        ],
-                        "issuer": [
-                            "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010"
-                        ],
-                        "serial_no": [
-                            "33000003dffb6ae3f427ecb6a30000000003df"
-                        ],
-                        "valid": {
-                            "start": [
-                                "2020-12-15T21:24:20"
-                            ],
-                            "end": [
-                                "2021-12-02T21:24:20"
-                            ]
-                        },
-                        "thumbprint": [
-                            "914a09c2e02c696af394048bcb8d95449bcd5b9e",
-                            "4a838904e732a380e2856a9d6fee926e5c57eb59336292ac5d9e47c9b2c1ed13",
-                            "4068b1b0494efa79f5a751dcca8111cd"
-                        ]
-                    }
-                },
-                "title_text": "Signer Certificate",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation\"], [\"Issuer\", \"C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010\"], [\"SHA1\", \"914a09c2e02c696af394048bcb8d95449bcd5b9e\"], [\"SHA256\", \"4a838904e732a380e2856a9d6fee926e5c57eb59336292ac5d9e47c9b2c1ed13\"], [\"MD5\", \"4068b1b0494efa79f5a751dcca8111cd\"], [\"Serial Number\", \"33000003dffb6ae3f427ecb6a30000000003df\"], [\"Valid From\", \"2020-12-15T21:24:20\"], [\"Valid To\", \"2021-12-02T21:24:20\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Certificate - 1",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010\"], [\"Issuer\", \"C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Root Certificate Authority 2010\"], [\"SHA1\", \"8bfe3107712b3c886b1c96aaec89984914dc9b6b\"], [\"SHA256\", \"9aad6c1a83a1b974ba574a995af35b8ca772da919270db1605a8b81e1bbc896f\"], [\"MD5\", \"b7a7b4605e33389f48b33d17cae73006\"], [\"Serial Number\", \"610c524c000000000003\"], [\"Valid From\", \"2010-07-06T20:40:17\"], [\"Valid To\", \"2025-07-06T20:50:17\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Certificate - 2",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"TEXT\", \"The signature does not match the authentihash data found for sha256\"], [\"ORDERED_KEY_VALUE\", [[\"Signature\", \"37ea281d9c10933f24285c844adbc7d4a23ed1e935bf1cb4a657fe27bff7a813\"], [\"Authentihash data\", \"dbcfa85e6f6acb3580a04357108995754429d64070e5b72e8fc220431a643ba4\"]]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 2,
-                "heuristic": {
-                    "heur_id": 1,
-                    "score": 300,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Signature hash not found in authentihash data",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 8656]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.5123, 5.4824, 5.52543, 6.96582, 6.28287, 5.83852, 6.05357, 6.92266, 5.97047, 5.25691, 6.61246, 6.72774, 6.01, 5.37479, 5.77752, 6.82073, 6.86953, 6.80281, 5.60868, 5.99122, 6.43829, 6.70217, 5.73193, 5.49489, 5.64911, 5.31897, 6.00987, 6.96148, 6.46938, 5.4321, 6.75588, 6.54035, 5.23579, 6.14769, 6.86237, 5.8661, 5.31858, 5.38541, 6.90401, 6.94283, 6.87387, 5.56914, 5.95955, 5.37495, 6.26404, 5.85072, 5.92246, 5.78355, 6.72855, 6.46949]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Overlay",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            }
-        ]
-    },
-    "sha256": "9e9fa8b3b0a59762b429853a36674608df1fa7d7f7140c8fccd7c1946070995a",
-    "type": "executable/windows/pe64",
-    "size": 4499408,
+  "extra": {
     "drop_file": false,
+    "score": 300,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"0 (1970-01-01 00:00:00 +00:00 (UTC))\"], [\"Entrypoint\", \"0x646a0\"], [\"Machine\", \"AMD64\"], [\"Magic\", \"PE32_PLUS\"], [\"Image version\", \"1.0\"], [\"Linker version\", \"3.0\"], [\"Operating System version\", \"6.1\"], [\"Subsystem version\", \"6.1\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x00000000\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  0,
+                  "1970-01-01 00:00:00 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"sha512\", \"81ee8c9a06f484107c442aae11aa5db3d391008056cb760ca3bb50868f96ae7b918fbacdf3ccef2df1826e1dac7eafc5502749f542f73f79c3e294481570fb14\"], [\"sha384\", \"42bb84378df5d9ee73b2d584b5bc4824d66b8541054e73533d5b803f6f641d05522edd505dd11bc463bd7608f22fc5b7\"], [\"sha256\", \"dbcfa85e6f6acb3580a04357108995754429d64070e5b72e8fc220431a643ba4\"], [\"sha1\", \"a899945d7abeb924ee510ce5a867ee4fc65185dc\"], [\"md5\", \"16db090049d419cc79279afc78a45ba5\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.171746648679192], [\"Entropy without padding\", 6.17183357561405], [\"Offset\", 1536], [\"Size\", 2066432], [\"Virtual Size\", 2066376], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"c08106bcbaafd29a40ad4b3e96a5627a\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.08777, 6.2395, 6.17697, 6.15786, 6.03272, 6.11473, 6.10815, 6.07326, 6.03606, 5.89478, 6.03804, 6.30826, 6.05392, 6.02766, 5.9971, 6.04814, 6.12148, 6.02925, 6.16357, 6.18996, 6.06135, 5.69345, 5.85866, 5.68357, 6.17747, 6.01246, 5.9899, 6.47559, 6.52358, 6.58749, 6.10547, 5.90665, 6.12259, 5.8142, 6.05453, 5.89782, 5.78828, 6.01313, 6.0425, 6.01696, 6.07631, 6.05829, 6.08239, 5.98318, 5.9852, 5.93783, 5.90439, 5.89899, 5.92657, 5.91511]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "c08106bcbaafd29a40ad4b3e96a5627a"
+                ],
+                "name": [
+                  ".text"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .text",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.208799971138144], [\"Entropy without padding\", 5.209523216916722], [\"Offset\", 2067968], [\"Size\", 2008064], [\"Virtual Size\", 2007680], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"beeb3d314c52f6b238ed0414983da573\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.43049, 5.04321, 2.78578, 3.38738, 3.46298, 3.17846, 3.16513, 3.36616, 3.67206, 5.38399, 4.84152, 6.29338, 3.51954, 3.40503, 3.45931, 3.55859, 3.56706, 3.44315, 3.20199, 3.00042, 5.29456, 4.94903, 5.09042, 4.90334, 5.67367, 5.92803, 5.85108, 5.92467, 5.33154, 6.02594, 5.78291, 5.60011, 5.63382, 5.92823, 5.94737, 6.04446, 6.03656, 6.02224, 3.43021, 3.25034, 3.17687, 3.37183, 3.22073, 3.40456, 3.30323, 3.37945, 3.36399, 3.53686, 3.56544, 3.43506]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "beeb3d314c52f6b238ed0414983da573"
+                ],
+                "name": [
+                  ".rdata"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rdata",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.302761121525251], [\"Entropy without padding\", 6.30276112152525], [\"Offset\", 4076032], [\"Size\", 328192], [\"Virtual Size\", 718752], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"972579fbc5433531a72824f2f41e9a20\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.62592, 2.86031, 2.7549, 4.01594, 5.95171, 4.91152, 6.17811, 5.42156, 7.03813, 7.52657, 4.13406, 4.66951, 4.58945, 4.50858, 4.33614, 7.45156, 5.53259, 4.34342, 5.25869, 7.74653, 7.44065, 6.5866, 5.03402, 1.71823, 2.0874, 3.83105, 6.22504, 6.62648, 6.16955, 5.79665, 7.58865, 7.97218, 7.97325, 7.96857, 7.97334, 7.96827, 7.9731, 7.97336, 7.97013, 7.97054, 7.97088, 7.9707, 7.97606, 7.44328, 1.89336, 1.11383, 1.14605, 1.74589, 2.18528, 0.42751]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "972579fbc5433531a72824f2f41e9a20"
+                ],
+                "name": [
+                  ".data"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .data",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.569913682555425], [\"Entropy without padding\", 4.305439331096066], [\"Offset\", 4404224], [\"Size\", 1536], [\"Virtual Size\", 1164], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d5ce09736386aba25dc4e15466abe8b6\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.66041, 3.03112, 3.6468, 4.01808, 3.53755, 3.7798, 3.40529, 3.5619, 3.88583, 3.49738, 3.67969, 3.59884, 3.97792, 3.57501, 3.36513, 3.74098, 3.6106, 4.1313, 3.98645, 3.51049, 3.71985, 3.95357, 3.68052, 3.13921, 3.76855, 3.48292, 3.9621, 1.64973, 1.8345, 1.8345, 1.8345, 1.8345, 1.8345, 1.85909, 1.75441, 1.64973, 1.96353, 0.61207, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "d5ce09736386aba25dc4e15466abe8b6"
+                ],
+                "name": [
+                  ".idata"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .idata",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.458372430828139], [\"Entropy without padding\", 5.460617508202926], [\"Offset\", 4405760], [\"Size\", 84480], [\"Virtual Size\", 84094], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"6be6e24d172cfcc193f5e83f1245a056\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.05098, 5.15031, 5.31881, 5.38079, 5.19246, 5.288, 5.36897, 5.36588, 5.38816, 5.35303, 5.42685, 5.4109, 5.36364, 5.40976, 5.43816, 5.3576, 5.35203, 5.40934, 5.30315, 5.11145, 4.96424, 4.96412, 4.96155, 4.96378, 5.40341, 5.44048, 5.43307, 5.42615, 5.44411, 5.44922, 5.42656, 5.44142, 5.44875, 5.44214, 5.43524, 5.45955, 5.44957, 5.44832, 5.45328, 5.44509, 5.42603, 5.45373, 5.45126, 5.43671, 5.43009, 5.43303, 5.46042, 5.43525, 5.17525, 4.76328]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "6be6e24d172cfcc193f5e83f1245a056"
+                ],
+                "name": [
+                  ".reloc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .reloc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.020393135236084953], [\"Entropy without padding\", 0.8112781244591329], [\"Offset\", 4490240], [\"Size\", 512], [\"Virtual Size\", 4], [\"Characteristics\", \"MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"07b5472d347d42780469fb2654b7fc54\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.4395, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "07b5472d347d42780469fb2654b7fc54"
+                ],
+                "name": [
+                  ".symtab"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .symtab",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "imports": {
+                "fuzzy": [
+                  "24:UbVjhN5O+VuT2oLtXOr6kwmDruMztxdEr6tP:K5O+VAXOmGx0oP"
+                ],
+                "gimphash": [
+                  "50f5783c2188897815d9b34a77aa4df70ac96a71542ddc79b94fef8ce7ba2120"
+                ],
+                "imphash": [
+                  "c7269d59926fa4252270f407e4dab043"
+                ],
+                "sorted_fuzzy": [
+                  "24:nJ614douuMBRDNQkaVOLb3TydX8JOmQzbVjP:nJbunrpdX8JOm4"
+                ],
+                "sorted_sha1": [
+                  "6d0481e38767cbe2767ab6c191cc5141992530e5"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Imports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "WriteFile, WriteConsoleW, WaitForMultipleObjects, WaitForSingleObject, VirtualQuery, VirtualFree, VirtualAlloc, SwitchToThread, SuspendThread, Sleep, SetWaitableTimer, SetUnhandledExceptionFilter, SetProcessPriorityBoost, SetEvent, SetErrorMode, SetConsoleCtrlHandler, ResumeThread, PostQueuedCompletionStatus, LoadLibraryA, LoadLibraryW, SetThreadContext, GetThreadContext, GetSystemInfo, GetSystemDirectoryA, GetStdHandle, GetQueuedCompletionStatusEx, GetProcessAffinityMask, GetProcAddress, GetEnvironmentStringsW, GetConsoleMode, FreeEnvironmentStringsW, ExitProcess, DuplicateHandle, CreateWaitableTimerExW, CreateThread, CreateIoCompletionPort, CreateFileA, CreateEventA, CloseHandle, AddVectoredExceptionHandler",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "kernel32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Signatures",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 1], [\"Algorithm\", \"SHA256\"], [\"Content Info Algorithm\", \"SHA256\"], [\"Content Info Digest\", \"37ea281d9c10933f24285c844adbc7d4a23ed1e935bf1cb4a657fe27bff7a813\"], [\"Content Info Content Type\", \"1.3.6.1.4.1.311.2.1.4\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Signature - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 1], [\"Digest Algorithm\", \"SHA256\"], [\"Authenticated Attributes\", \"CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST, GENERIC_TYPE, SPC_SP_OPUS_INFO\"], [\"Unauthenticated Attributes\", \"GENERIC_TYPE\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Signer - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation\"], [\"Issuer\", \"C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010\"], [\"Serial Number\", \"33000003dffb6ae3f427ecb6a30000000003df\"], [\"Valid From\", \"2020-12-15T21:24:20\"], [\"Valid To\", \"2021-12-02T21:24:20\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 3,
+        "heuristic": null,
+        "tags": {
+          "cert": {
+            "issuer": [
+              "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010"
+            ],
+            "serial_no": [
+              "33000003dffb6ae3f427ecb6a30000000003df"
+            ],
+            "subject": [
+              "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation"
+            ],
+            "thumbprint": [
+              "914a09c2e02c696af394048bcb8d95449bcd5b9e",
+              "4a838904e732a380e2856a9d6fee926e5c57eb59336292ac5d9e47c9b2c1ed13",
+              "4068b1b0494efa79f5a751dcca8111cd"
+            ],
+            "valid": {
+              "end": [
+                "2021-12-02T21:24:20"
+              ],
+              "start": [
+                "2020-12-15T21:24:20"
+              ]
+            }
+          }
+        },
+        "title_text": "Signer Certificate",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation\"], [\"Issuer\", \"C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010\"], [\"SHA1\", \"914a09c2e02c696af394048bcb8d95449bcd5b9e\"], [\"SHA256\", \"4a838904e732a380e2856a9d6fee926e5c57eb59336292ac5d9e47c9b2c1ed13\"], [\"MD5\", \"4068b1b0494efa79f5a751dcca8111cd\"], [\"Serial Number\", \"33000003dffb6ae3f427ecb6a30000000003df\"], [\"Valid From\", \"2020-12-15T21:24:20\"], [\"Valid To\", \"2021-12-02T21:24:20\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Certificate - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010\"], [\"Issuer\", \"C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Root Certificate Authority 2010\"], [\"SHA1\", \"8bfe3107712b3c886b1c96aaec89984914dc9b6b\"], [\"SHA256\", \"9aad6c1a83a1b974ba574a995af35b8ca772da919270db1605a8b81e1bbc896f\"], [\"MD5\", \"b7a7b4605e33389f48b33d17cae73006\"], [\"Serial Number\", \"610c524c000000000003\"], [\"Valid From\", \"2010-07-06T20:40:17\"], [\"Valid To\", \"2025-07-06T20:50:17\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Certificate - 2",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"TEXT\", \"The signature does not match the authentihash data found for sha256\"], [\"ORDERED_KEY_VALUE\", [[\"Signature\", \"37ea281d9c10933f24285c844adbc7d4a23ed1e935bf1cb4a657fe27bff7a813\"], [\"Authentihash data\", \"dbcfa85e6f6acb3580a04357108995754429d64070e5b72e8fc220431a643ba4\"]]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 300,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Signature hash not found in authentihash data",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 8656]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.5123, 5.4824, 5.52543, 6.96582, 6.28287, 5.83852, 6.05357, 6.92266, 5.97047, 5.25691, 6.61246, 6.72774, 6.01, 5.37479, 5.77752, 6.82073, 6.86953, 6.80281, 5.60868, 5.99122, 6.43829, 6.70217, 5.73193, 5.49489, 5.64911, 5.31897, 6.00987, 6.96148, 6.46938, 5.4321, 6.75588, 6.54035, 5.23579, 6.14769, 6.86237, 5.8661, 5.31858, 5.38541, 6.90401, 6.94283, 6.87387, 5.56914, 5.95955, 5.37495, 6.26404, 5.85072, 5.92246, 5.78355, 6.72855, 6.46949]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [
+      {
+        "name": "overlay",
+        "sha256": "80fb951d64dba9994176b9cbd1d6179ffcb0023e27f16f1a8f858036fcbae34e"
+      }
+    ],
+    "supplementary": [
+      {
+        "name": "certificate.1.1",
+        "sha256": "4a838904e732a380e2856a9d6fee926e5c57eb59336292ac5d9e47c9b2c1ed13"
+      },
+      {
+        "name": "features.json",
+        "sha256": "90c8a644557ca949e36af8098c7e9384b92b74f602c503b5c0a7aee1bc357a76"
+      },
+      {
+        "name": "certificate.1.2",
+        "sha256": "9aad6c1a83a1b974ba574a995af35b8ca772da919270db1605a8b81e1bbc896f"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "cert.issuer": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010"
+        }
+      ],
+      "cert.serial_no": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "33000003dffb6ae3f427ecb6a30000000003df"
+        }
+      ],
+      "cert.subject": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation"
+        }
+      ],
+      "cert.thumbprint": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "4068b1b0494efa79f5a751dcca8111cd"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "4a838904e732a380e2856a9d6fee926e5c57eb59336292ac5d9e47c9b2c1ed13"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "914a09c2e02c696af394048bcb8d95449bcd5b9e"
+        }
+      ],
+      "cert.valid.end": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2021-12-02T21:24:20"
+        }
+      ],
+      "cert.valid.start": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2020-12-15T21:24:20"
+        }
+      ],
+      "file.pe.imports.fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "24:UbVjhN5O+VuT2oLtXOr6kwmDruMztxdEr6tP:K5O+VAXOmGx0oP"
+        }
+      ],
+      "file.pe.imports.gimphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "50f5783c2188897815d9b34a77aa4df70ac96a71542ddc79b94fef8ce7ba2120"
+        }
+      ],
+      "file.pe.imports.imphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "c7269d59926fa4252270f407e4dab043"
+        }
+      ],
+      "file.pe.imports.sorted_fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "24:nJ614douuMBRDNQkaVOLb3TydX8JOmQzbVjP:nJbunrpdX8JOm4"
+        }
+      ],
+      "file.pe.imports.sorted_sha1": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "6d0481e38767cbe2767ab6c191cc5141992530e5"
+        }
+      ],
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 0
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "1970-01-01 00:00:00 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "07b5472d347d42780469fb2654b7fc54"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "6be6e24d172cfcc193f5e83f1245a056"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "972579fbc5433531a72824f2f41e9a20"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "beeb3d314c52f6b238ed0414983da573"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "c08106bcbaafd29a40ad4b3e96a5627a"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "d5ce09736386aba25dc4e15466abe8b6"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".data"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".idata"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rdata"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".reloc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".symtab"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".text"
+        }
+      ]
+    },
     "temp_submission_data": {}
+  }
 }
