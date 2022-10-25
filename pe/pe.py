@@ -1057,6 +1057,7 @@ class PE(ServiceBase):
                     pass
                 self.features["resources_manager"]["accelerators"].append(accelerator_dict)
         if self.binary.resources_manager.has_dialogs:
+            corrupted_dialog_section = None
             try:
                 dialogs_list = []
                 for dialog in self.binary.resources_manager.dialogs:
@@ -1077,15 +1078,23 @@ class PE(ServiceBase):
                         "style": str(dialog.style),  # .name
                         "style_list": [style.name for style in dialog.style_list],
                         "sub_lang": dialog.sub_lang.name,
-                        "title": dialog.title,
+                        "title": "",
                         "typeface": dialog.typeface,
                         "version": dialog.version,
                         "weight": dialog.weight,
                         "x": dialog.x,
                         "y": dialog.y,
                     }
-                    if dialog.title != "":
-                        res.add_tag("file.string.extracted", dialog.title)
+                    try:
+                        dialog_dict["title"] = dialog.title
+                        if dialog.title != "":
+                            res.add_tag("file.string.extracted", dialog.title)
+                    except UnicodeDecodeError:
+                        del dialog_dict["title"]
+                        if corrupted_dialog_section is None:
+                            heur = Heuristic(13)
+                            corrupted_dialog_section = ResultSection(heur.name, heuristic=heur, parent=res)
+                        corrupted_dialog_section.add_line("Can't decode main title of dialog")
                     for item in dialog.items:
                         item_dict = {
                             "cx": item.cx,
@@ -1104,10 +1113,15 @@ class PE(ServiceBase):
                             if item.title != "":
                                 res.add_tag("file.string.extracted", item.title)
                         except UnicodeDecodeError:
-                            heur = Heuristic(13)
-                            heur_section = ResultSection(heur.name, heuristic=heur)
-                            heur_section.add_line(f"Can't decode title of dialog item from dialog named {dialog.title}")
-                            res.add_subsection(heur_section)
+                            if corrupted_dialog_section is None:
+                                heur = Heuristic(13)
+                                corrupted_dialog_section = ResultSection(heur.name, heuristic=heur, parent=res)
+                            if "title" in dialog_dict and dialog_dict["title"]:
+                                corrupted_dialog_section.add_line(
+                                    f"Can't decode title of dialog item from dialog named {dialog.title}"
+                                )
+                            else:
+                                corrupted_dialog_section.add_line("Can't decode title of dialog item")
                         dialog_dict["items"].append(item_dict)
                     dialogs_list.append(dialog_dict)
 
