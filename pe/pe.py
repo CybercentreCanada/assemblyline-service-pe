@@ -1773,7 +1773,6 @@ class PE(ServiceBase):
                             f"{file_name} extracted from binary's resources",
                             safelist_interface=self.api_interface,
                         )
-
                 else:
                     file_name = "overlay"
                     temp_path = os.path.join(self.working_directory, file_name)
