@@ -1712,7 +1712,7 @@ class PE(ServiceBase):
             self.features["size"] <= self.config.get("overlay_analysis_file_max_size", 50000000)
             or self.request.deep_scan
         ):
-            res = ResultMultiSection("Overlay")
+            res = ResultMultiSection("Overlay", parent=self.file_res)
             overlay = bytearray(self.binary.overlay)
             entropy_data = calculate_partition_entropy(BytesIO(overlay))
             self.features["overlay"] = {"size": len(overlay), "entropy": entropy_data[0]}
@@ -1724,10 +1724,9 @@ class PE(ServiceBase):
                     "heur25_min_overlay_size", 31457280
                 ) and self.features["overlay"]["entropy"] < self.config.get("heur25_min_overlay_entropy", 0.5):
                     heur = Heuristic(25)
-                    heur_section = ResultSection(heur.name, heuristic=heur)
+                    heur_section = ResultSection(heur.name, heuristic=heur, parent=res)
                     heur_section.add_line(f"Overlay Size: {self.features['overlay']['size']}")
                     heur_section.add_line(f"Overlay Entropy: {self.features['overlay']['entropy']}")
-                    res.add_subsection(heur_section)
 
                     file_name = "pe_without_overlay"
                     temp_path = os.path.join(self.working_directory, file_name)
@@ -1744,18 +1743,48 @@ class PE(ServiceBase):
                 )
                 res.add_section_part(overlay_graph_section)
 
-                file_name = "overlay"
-                temp_path = os.path.join(self.working_directory, file_name)
-                with open(temp_path, "wb") as f:
-                    f.write(overlay)
-                self.request.add_extracted(
-                    temp_path,
-                    file_name,
-                    f"{file_name} extracted from binary's resources",
-                    safelist_interface=self.api_interface,
-                )
+                pe = self.binary
+                overlays = {}
+                while True:
+                    try:
+                        pe_array = bytearray(pe.overlay)
+                        pe = lief.parse(pe_array)
+                        if pe is None:
+                            break
+                        pe_no_overlay = pe_array[: -len(pe.overlay)]
+                        h = hashlib.sha256(pe_no_overlay).hexdigest()
+                        if h not in overlays:
+                            overlays[h] = (1, pe_array)
+                        else:
+                            overlays[h] = (overlays[h][0] + 1, pe_array)
+                    except Exception:
+                        break
+                if len(overlays) > 1 or any(count > 1 for count, _ in overlays.values()):
+                    stacked_overlays = ResultSection("Multiple PE stacked", parent=res)
+                    for h, (count, data) in overlays.items():
+                        stacked_overlays.add_line(f"{h} was seen {count} time{'s' if count > 1 else ''}")
+                        file_name = f"{h}_overlay"
+                        temp_path = os.path.join(self.working_directory, file_name)
+                        with open(temp_path, "wb") as f:
+                            f.write(data)
+                        self.request.add_extracted(
+                            temp_path,
+                            file_name,
+                            f"{file_name} extracted from binary's resources",
+                            safelist_interface=self.api_interface,
+                        )
 
-            self.file_res.add_section(res)
+                else:
+                    file_name = "overlay"
+                    temp_path = os.path.join(self.working_directory, file_name)
+                    with open(temp_path, "wb") as f:
+                        f.write(overlay)
+                    self.request.add_extracted(
+                        temp_path,
+                        file_name,
+                        f"{file_name} extracted from binary's resources",
+                        safelist_interface=self.api_interface,
+                    )
 
     def add_optional(self):
         if self.request.deep_scan and self.binary.has_relocations:
