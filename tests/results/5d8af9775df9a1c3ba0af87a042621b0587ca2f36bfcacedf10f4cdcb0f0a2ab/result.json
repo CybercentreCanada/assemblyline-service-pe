@@ -1,733 +1,954 @@
 {
-    "classification": "TLP:W",
-    "response": {
-        "milestones": {
-            "service_started": null,
-            "service_completed": null
-        },
-        "service_version": null,
-        "service_name": null,
-        "service_tool_version": null,
-        "supplementary": [
-            {
-                "name": "certificate.1.1",
-                "sha256": "0e0fabf3c4fb549fc156e7fe8f3c8966c8e09ffbba31e650b18214064245b54f",
-                "description": "certificate.1.1 extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/certificate.1.1",
-                "is_section_image": false
-            },
-            {
-                "name": "certificate.1.2",
-                "sha256": "4f32d5dc00f715250abcc486511e37f501a899deb3bf7ea8adbbd3aef1c412da",
-                "description": "certificate.1.2 extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/certificate.1.2",
-                "is_section_image": false
-            },
-            {
-                "name": "certificate.1.3",
-                "sha256": "534b9b1a31a38b4e0bf9a291f408337c25a2e011d460fdff495ce473fb168a8e",
-                "description": "certificate.1.3 extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/certificate.1.3",
-                "is_section_image": false
-            },
-            {
-                "name": "certificate.1.4",
-                "sha256": "d92bf8e9fa867dbd8b794c6a49e6ff1fcfac71f3d7f4ae55bb9587eb24ac6489",
-                "description": "certificate.1.4 extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/certificate.1.4",
-                "is_section_image": false
-            },
-            {
-                "name": "features.json",
-                "sha256": "1d927aaf0664633b195ed08c1ebf05040511f4c1df5708392e4f42b7d22e8d47",
-                "description": "Features extracted from the PE file, as a JSON file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/features.json",
-                "is_section_image": false
-            }
-        ],
-        "extracted": [
-            {
-                "name": "overlay",
-                "sha256": "7e3589f5f903ff483b50ecdd840268b937f338bf32febe7d22fded993732922e",
-                "description": "overlay extracted from binary's resources",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/overlay",
-                "is_section_image": false
-            }
-        ],
-        "service_context": null,
-        "service_debug_info": null
-    },
-    "result": {
-        "score": 0,
-        "sections": [
-            {
-                "body": "[[\"Timestamp\", \"1497976520 (2017-06-20 16:35:20 +00:00 (UTC))\"], [\"Entrypoint\", \"0x23f24\"], [\"Machine\", \"AMD64\"], [\"Magic\", \"PE32_PLUS\"], [\"Image version\", \"10.0\"], [\"Linker version\", \"14.0\"], [\"Operating System version\", \"10.0\"], [\"Subsystem version\", \"10.0\"], [\"Subsystem\", \"NATIVE\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x0003a89b\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "linker": {
-                                "timestamp": [
-                                    1497976520,
-                                    "2017-06-20 16:35:20 +00:00 (UTC)"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Headers",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"3a1fa9cd7a1ad4028b8f22debb6cc23b\"]]], [\"TABLE\", [{\"ID\": \"0x01025e95\", \"Compiler Information\": \"[LNK] VS2015 UPD3 build 24213\", \"Count\": 1}, {\"ID\": \"0x00ff5e92\", \"Compiler Information\": \"[RES] VS2015 UPD3 build 24210\", \"Count\": 1}, {\"ID\": \"0x01045e95\", \"Compiler Information\": \"[ C ] VS2015 UPD3 build 24213\", \"Count\": 23}, {\"ID\": \"0x01045d6d\", \"Compiler Information\": \"Unknown object 0x01045d6d\", \"Count\": 13}, {\"ID\": \"0x01035d6d\", \"Compiler Information\": \"Unknown object 0x01035d6d\", \"Count\": 4}, {\"ID\": \"0x01055d6d\", \"Compiler Information\": \"Unknown object 0x01055d6d\", \"Count\": 3}, {\"ID\": \"0x01065d6d\", \"Compiler Information\": \"Unknown object 0x01065d6d\", \"Count\": 3}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 49}, {\"ID\": \"0x01015d6d\", \"Compiler Information\": \"Unknown object 0x01015d6d\", \"Count\": 7}, {\"ID\": \"0x00b977fc\", \"Compiler Information\": \"Unknown object 0x00b977fc\", \"Count\": 2}, {\"ID\": \"0x01075d6d\", \"Compiler Information\": \"Unknown object 0x01075d6d\", \"Count\": 3}]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "rich_header": {
-                                "hash": [
-                                    "3a1fa9cd7a1ad4028b8f22debb6cc23b"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Rich Headers - Key: 249823288",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"sha512\", \"963e00f50e11f14290f899dd9d0ed00561e62b6996a32f1b2f703e85438ebab86eb3c19575cb3187dbde726c8bda62cb41b8a718bee99d6e8f13e52fc1e1bbbe\"], [\"sha384\", \"4a5d64dacfa93a87fb70cc10cf8abda9c9ef87f5af3dc230f52cb31c29b4f5bf2460b6742738c4f243e9957fd68cce4e\"], [\"sha256\", \"e513e4a5d219cde085a44bd25b56341a9ce6948c26ea298d36a6a049a3e98859\"], [\"sha1\", \"e1b37b37c210a6195f0b9d9f3d71b073b391b71e\"], [\"md5\", \"74b5527b259a1d86dee42770b72e6380\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Sections",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.352666164049938], [\"Entropy without padding\", 6.353629128838633], [\"Offset\", 1024], [\"Size\", 146432], [\"Virtual Size\", 146392], [\"Characteristics\", \"CNT_CODE, MEM_NOT_PAGED, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"7d8b0bf4c0652cd0ad857a38737a30b6\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.26807, 6.245, 6.18921, 6.2107, 6.1116, 6.20764, 6.15568, 6.36678, 6.22697, 6.15832, 6.3067, 6.31376, 6.35072, 6.20963, 6.23872, 6.21177, 6.18581, 6.25075, 6.14135, 6.1796, 6.1603, 6.06669, 6.07751, 6.11093, 6.21398, 6.13181, 6.14605, 6.16874, 6.32462, 6.24266, 6.16273, 6.0804, 5.9751, 5.95651, 6.0718, 6.21156, 6.03822, 6.08579, 5.96089, 6.03651, 6.10101, 6.19455, 6.1795, 5.94923, 6.04736, 6.07819, 6.00433, 6.19595, 6.28696, 5.83674]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".text"
-                                ],
-                                "hash": [
-                                    "7d8b0bf4c0652cd0ad857a38737a30b6"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .text",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.428425611253239], [\"Entropy without padding\", 5.521955713019017], [\"Offset\", 147456], [\"Size\", 9216], [\"Virtual Size\", 8988], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_NOT_PAGED, MEM_READ\"], [\"MD5\", \"3e5c5dfaa8d599f07290125a4ec36e97\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.06543, 2.3444, 4.24919, 6.59729, 6.15802, 1.92608, 4.89103, 5.31426, 4.42287, 3.35217, 6.89687, 3.46517, 1.0245, 4.56908, 4.32948, 4.16423, 4.30005, 4.71008, 4.88107, 4.63798, 4.66935, 4.70984, 4.43449, 4.49605, 4.95393, 4.85616, 4.89038, 4.66588, 4.67978, 4.60546, 4.7986, 4.6309, 4.46765, 4.70271, 4.37929, 4.70695, 4.89378, 4.60362, 4.53457, 4.65372, 4.72238, 4.68338, 4.6621, 4.8041, 4.82591, 4.85682, 4.52194, 4.5892, 2.74249, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".rdata"
-                                ],
-                                "hash": [
-                                    "3e5c5dfaa8d599f07290125a4ec36e97"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .rdata",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.5567417401586714], [\"Entropy without padding\", 1.5567417401586714], [\"Offset\", 156672], [\"Size\", 1024], [\"Virtual Size\", 4936], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_NOT_PAGED, MEM_READ, MEM_WRITE\"], [\"MD5\", \"91befc33a510f405b163f00d9cf03883\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.85408, 1.3447, 1.60168, 1.50644, 1.85408, 1.3447, 2.24853, 0.8181, 2.39355, 0.72286, 2.05805, 1.60168, 2.10157, 1.3447, 2.24853, 0.8181, 2.52473, 0.8181, 2.05805, 1.3447, 1.75884, 1.60168, 1.60168, -0.0, -0.0, 0.8181, 2.35451, 0.2762, 3.55852, 1.75884, 1.75884, -0.0, 1.3447, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".data"
-                                ],
-                                "hash": [
-                                    "91befc33a510f405b163f00d9cf03883"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .data",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.147738676387703], [\"Entropy without padding\", 5.327778975062275], [\"Offset\", 157696], [\"Size\", 4096], [\"Virtual Size\", 3900], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_NOT_PAGED, MEM_READ\"], [\"MD5\", \"711fe50eec73993c43e1686c6cbb0a44\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.42884, 3.45151, 3.54505, 3.60229, 3.6304, 3.59309, 3.2452, 3.46193, 3.6242, 3.60229, 3.70357, 3.60229, 3.73269, 3.52912, 3.63938, 3.49128, 3.55827, 3.58388, 3.68391, 3.54226, 4.01846, 3.81291, 4.2576, 3.90398, 4.06723, 3.89193, 4.03061, 3.89477, 4.01968, 4.0063, 4.08918, 4.0655, 4.02349, 3.99233, 4.17766, 4.03191, 4.00335, 3.59119, 3.83021, 3.82112, 3.74906, 3.62156, 3.79186, 3.71078, 3.84064, 3.64157, 3.81625, 2.37894, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".pdata"
-                                ],
-                                "hash": [
-                                    "711fe50eec73993c43e1686c6cbb0a44"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .pdata",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.020393135236084953], [\"Entropy without padding\", 0.8112781244591329], [\"Offset\", 161792], [\"Size\", 512], [\"Virtual Size\", 4], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_NOT_PAGED, MEM_READ\"], [\"MD5\", \"64d1f04ee674327483852f238bb2c4a5\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.4395, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".gfids"
-                                ],
-                                "hash": [
-                                    "64d1f04ee674327483852f238bb2c4a5"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .gfids",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.177835985451223], [\"Entropy without padding\", 6.260743340726834], [\"Offset\", 162304], [\"Size\", 12800], [\"Virtual Size\", 12464], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"b229caa66aceda4057d4b17ff669bfea\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.71855, 5.57798, 5.48589, 5.28015, 5.47161, 5.63278, 5.42292, 5.42028, 5.38537, 5.66208, 5.53894, 5.6018, 5.45045, 5.30028, 5.42005, 5.15832, 5.37765, 5.65274, 5.25535, 5.14596, 5.17368, 5.2868, 5.62344, 5.33355, 5.43723, 4.64954, 5.94243, 5.56315, 5.84572, 5.57664, 5.7538, 5.35079, 5.59136, 5.53733, 5.83617, 5.05887, 5.57457, 5.32676, 5.38694, 5.48249, 5.71644, 5.57094, 5.35206, 5.82847, 5.61335, 5.66591, 5.60372, 4.16128, 2.85402, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    "PAGE"
-                                ],
-                                "hash": [
-                                    "b229caa66aceda4057d4b17ff669bfea"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - PAGE",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.541907170152721], [\"Entropy without padding\", 5.819354752706165], [\"Offset\", 175104], [\"Size\", 2560], [\"Virtual Size\", 2370], [\"Characteristics\", \"CNT_CODE, MEM_DISCARDABLE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"25f6a7022f5c4c71b5d2d692f2489781\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.53257, 4.90776, 3.70925, 4.22235, 4.75311, 4.24758, 4.18642, 4.5412, 5.16949, 4.5415, 4.77978, 4.55335, 4.91669, 4.47718, 3.7078, 2.3083, 1.43829, 1.28391, 2.10734, 1.77749, 2.17676, 1.77749, 2.12378, 1.88345, 3.24758, 4.41911, 4.62593, 4.42662, 4.38623, 4.63344, 4.08828, 4.44064, 4.28376, 4.26718, 4.36421, 4.34219, 4.19585, 4.70478, 4.02351, 4.18245, 4.44305, 4.6644, 4.29479, 4.58238, 3.94497, 3.16955, -0.0, -0.0, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    "INIT"
-                                ],
-                                "hash": [
-                                    "25f6a7022f5c4c71b5d2d692f2489781"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - INIT",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.255694573643533], [\"Entropy without padding\", 4.399744434568197], [\"Offset\", 177664], [\"Size\", 8192], [\"Virtual Size\", 7848], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"fce428f8b38a141365326dc01f6da955\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.5598, 2.17242, 3.45766, 3.08408, 3.00022, 3.12234, 3.27623, 3.15599, 3.13443, 3.09227, 3.14757, 3.28109, 3.88922, 2.60015, 3.99568, 2.86678, 3.64753, 3.92323, 2.89824, 3.63521, 3.59143, 3.26214, 3.52877, 3.57217, 3.40845, 3.80899, 3.46394, 3.44511, 2.55648, 3.96503, 2.99106, 2.98401, 2.37742, 1.49246, 1.62281, 1.48751, 2.18428, 3.06322, 3.0779, 3.37621, 3.15509, 3.17843, 5.20644, 6.6128, 6.75216, 6.69878, 6.73774, 5.90837, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".rsrc"
-                                ],
-                                "hash": [
-                                    "fce428f8b38a141365326dc01f6da955"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .rsrc",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.7451227946533565], [\"Entropy without padding\", 4.614863099158172], [\"Offset\", 185856], [\"Size\", 512], [\"Virtual Size\", 124], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"ec9c9a5dcc4f7c68b6b03414f8781a72\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.40401, 2.84535, 2.84535, 2.04945, 3.02717, 2.2999, 2.40401, 2.40401, 2.40401, 2.04945, 2.40401, 0.4395, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".reloc"
-                                ],
-                                "hash": [
-                                    "ec9c9a5dcc4f7c68b6b03414f8781a72"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .reloc",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Debugs",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Timestamp\", \"1497976520 (2017-06-20 16:35:20 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"D:\\\\buildagent_prod\\\\p4\\\\1326309012\\\\drivers\\\\TeeDriver\\\\TEEDriver\\\\x64\\\\PgPoFxrelease\\\\TEEDriverW8x64.pdb\"], [\"GUID\", \"edabcfe6-9edb-4fbf-a052-31be8032f925\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "pdb_filename": [
-                                "D:\\buildagent_prod\\p4\\1326309012\\drivers\\TeeDriver\\TEEDriver\\x64\\PgPoFxrelease\\TEEDriverW8x64.pdb"
-                            ],
-                            "debug": {
-                                "guid": [
-                                    "edabcfe6-9edb-4fbf-a052-31be8032f925"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "CODEVIEW",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Timestamp\", \"1497976520 (2017-06-20 16:35:20 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "POGO",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "imports": {
-                                "sorted_sha1": [
-                                    "0ac5ba13215b87077ac09f978670ba4257a89a50"
-                                ],
-                                "imphash": [
-                                    "9031ce6e59723c6b3aebb68d1aae2bae"
-                                ],
-                                "fuzzy": [
-                                    "24:ZitgyGEmBkOnQMGmzmiVfwdY2Wg2MWlyEWoOmwgXugXN8o54G1xToI50Q2RxFbyt:f46lQek93I/kDebus9n"
-                                ],
-                                "sorted_fuzzy": [
-                                    "24:oz8Y2Wg2zJqBuqxG1RxdTNMGmG8ot54miVUQ2EWEmoI5oOmwgXugXFbnfwwg2QBk:ULQMkuZz2VImk9QruFu"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Imports",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "SecLookupWellKnownSid",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "ksecdd.sys",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "memcpy_s, RtlInitUnicodeString, RtlGUIDFromString, KeSetEvent, MmUnmapLockedPages, RtlGetVersion, RtlInitAnsiString, RtlAnsiStringToUnicodeString, RtlFreeUnicodeString, KeDelayExecutionThread, KeInitializeEvent, EtwWrite, MmGetSystemRoutineAddress, RtlCompareMemory, IoWMIRegistrationControl, EtwRegister, EtwUnregister, ZwQueryInformationToken, MmUnmapIoSpace, PoFxCompleteIdleState, PoRegisterPowerSettingCallback, PoUnregisterPowerSettingCallback, KeClearEvent, KeWaitForSingleObject, MmBuildMdlForNonPagedPool, IoAllocateMdl, IoFreeMdl, IoAllocateErrorLogEntry, IoWriteErrorLogEntry, PoFxCompleteIdleCondition, ZwPowerInformation, MmMapLockedPagesSpecifyCache, IoIs32bitProcess, RtlAnsiCharToUnicodeChar, ZwOpenProcessTokenEx, RtlEqualSid, RtlCopyUnicodeString, RtlValidSid, ZwClose, ExFreePoolWithTag, ExAllocatePoolWithTag, MmMapIoSpace",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "ntoskrnl.exe",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "KeStallExecutionProcessor",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "HAL.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "WdfVersionBindClass, WdfVersionUnbind, WdfVersionBind, WdfVersionUnbindClass",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "WDFLDR.SYS",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Languages\", \"ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "resources": {
-                                "language": [
-                                    "ENGLISH"
-                                ],
-                                "name": [
-                                    "MOFDATA",
-                                    "MOFRESOURCENAME",
-                                    "WEVT_TEMPLATE"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Resources",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Type\", 0]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Version",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 8], [\"file_flags_mask\", 63], [\"file_os\", \"NT_WINDOWS32\"], [\"file_subtype\", \"DRV_SYSTEM\"], [\"file_type\", \"DRV\"], [\"file_version_LS\", 1032], [\"file_version_MS\", 720903], [\"product_version_LS\", 1032], [\"product_version_MS\", 720903], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "fixed_file_info",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "versions": {
-                                "filename": [
-                                    "TeeDriverx64.sys"
-                                ],
-                                "description": [
-                                    "Intel(R) Management Engine Interface"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "string_file_info",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"key\", \"040904B0\"], [\"type\", 1], [\"lang\", \"ENGLISH\"], [\"sublang\", \"ENGLISH_US\"], [\"code_page\", \"UTF_16\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 3,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "langcode_items 1",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ProductVersion\", \"11.7.0.1032\"], [\"ProductName\", \"Intel(R) Management Engine Interface\"], [\"LegalCopyright\", \"Copyright \\u00a9 2006-2015, Intel Corporation. All rights reserved.\"], [\"OriginalFilename\", \"TeeDriverx64.sys\"], [\"FileVersion\", \"11.7.0.1032\"], [\"CompanyName\", \"Intel Corporation\"], [\"FileDescription\", \"Intel(R) Management Engine Interface\"], [\"InternalName\", \"TeeDriverx64.sys\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 4,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "items",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78644233\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "var_file_info",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[{\"SHA256\": \"e0ee72ee67a6faeb57d5fbe39351575922717fba3fb7b61cca8b33ac2f46977f\", \"Type\": \"MOFDATA\", \"Entropy\": 7.515681058365994}, {\"SHA256\": \"ef1539ff613b078aa26becbe1585c8357c6162fab5d2af631b20a0b0a9e9ae3a\", \"Type\": \"WEVT_TEMPLATE\", \"Entropy\": 3.6137962793878327}, {\"SHA256\": \"ebaa70f31f8654fda12f626f5be11532dfaea4b2d6a1c888ea8e8d2c06db14c1\", \"Type\": \"MESSAGETABLE\", \"Entropy\": 3.5726301311127493}, {\"SHA256\": \"a42d31efe33d819a562db99e2cedfa09921ce45888a289ab6bb76545b67552a4\", \"Type\": \"VERSION\", \"Entropy\": 3.4988956304471044}]",
-                "classification": "TLP:W",
-                "body_format": "TABLE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Summary",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Signatures",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "OK found while verifying signature : OK",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": {
-                    "heur_id": 2,
-                    "score": 0,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Signed EXE",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 1], [\"Algorithm\", \"SHA256\"], [\"Content Info Algorithm\", \"SHA256\"], [\"Content Info Digest\", \"e513e4a5d219cde085a44bd25b56341a9ce6948c26ea298d36a6a049a3e98859\"], [\"Content Info Content Type\", \"1.3.6.1.4.1.311.2.1.4\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Signature - 1",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 1], [\"Digest Algorithm\", \"SHA256\"], [\"Authenticated Attributes\", \"CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST\"], [\"Unauthenticated Attributes\", \"GENERIC_TYPE, MS_SPC_NESTED_SIGN\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Signer - 1",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=CA, L=Santa Clara, O=Intel Corporation, OU=EIG, CN=Intel(R) Embedded Subsystems and IP Blocks Group\"], [\"Issuer\", \"C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing CA 7B\"], [\"Serial Number\", \"56000001757376cd78ad000c9a000000000175\"], [\"Valid From\", \"2016-11-08T10:13:40\"], [\"Valid To\", \"2018-11-08T10:13:40\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 3,
-                "heuristic": null,
-                "tags": {
-                    "cert": {
-                        "subject": [
-                            "C=US, ST=CA, L=Santa Clara, O=Intel Corporation, OU=EIG, CN=Intel(R) Embedded Subsystems and IP Blocks Group"
-                        ],
-                        "issuer": [
-                            "C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing CA 7B"
-                        ],
-                        "serial_no": [
-                            "56000001757376cd78ad000c9a000000000175"
-                        ],
-                        "valid": {
-                            "start": [
-                                "2016-11-08T10:13:40"
-                            ],
-                            "end": [
-                                "2018-11-08T10:13:40"
-                            ]
-                        },
-                        "thumbprint": [
-                            "c442d3bdf3d1bf5173cdb1b0ec361ea7d684c6bd",
-                            "534b9b1a31a38b4e0bf9a291f408337c25a2e011d460fdff495ce473fb168a8e",
-                            "dbe03121c1e4cb13c32aeb2f79a00efa"
-                        ]
-                    }
-                },
-                "title_text": "Signer Certificate",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 3], [\"Subject\", \"C=SE, O=AddTrust AB, OU=AddTrust External TTP Network, CN=AddTrust External CA Root\"], [\"Issuer\", \"C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Verification Root\"], [\"SHA1\", \"a75ac657aa7a4cdfe5f9de393e69efcab659d250\"], [\"SHA256\", \"0e0fabf3c4fb549fc156e7fe8f3c8966c8e09ffbba31e650b18214064245b54f\"], [\"MD5\", \"de157879d086e0e00fecfe0a30ad5c23\"], [\"Serial Number\", \"3300000035d8d5595b0671412b000000000035\"], [\"Valid From\", \"2013-08-15T20:26:30\"], [\"Valid To\", \"2023-08-15T20:36:30\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Certificate - 1",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 3], [\"Subject\", \"C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Certification Authority\"], [\"Issuer\", \"C=SE, O=AddTrust AB, OU=AddTrust External TTP Network, CN=AddTrust External CA Root\"], [\"SHA1\", \"f5ad0bcc1ad56cd150725b1c866c30ad92ef21b0\"], [\"SHA256\", \"4f32d5dc00f715250abcc486511e37f501a899deb3bf7ea8adbbd3aef1c412da\"], [\"MD5\", \"1edaf9ae99ce2920667d0e9a8b3f8c9c\"], [\"Serial Number\", \"2766ee56eb49f38eabd770a2fc84de22\"], [\"Valid From\", \"2000-05-30T10:48:38\"], [\"Valid To\", \"2020-05-30T10:48:38\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Certificate - 2",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=CA, L=Santa Clara, O=Intel Corporation, OU=EIG, CN=Intel(R) Embedded Subsystems and IP Blocks Group\"], [\"Issuer\", \"C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing CA 7B\"], [\"SHA1\", \"c442d3bdf3d1bf5173cdb1b0ec361ea7d684c6bd\"], [\"SHA256\", \"534b9b1a31a38b4e0bf9a291f408337c25a2e011d460fdff495ce473fb168a8e\"], [\"MD5\", \"dbe03121c1e4cb13c32aeb2f79a00efa\"], [\"Serial Number\", \"56000001757376cd78ad000c9a000000000175\"], [\"Valid From\", \"2016-11-08T10:13:40\"], [\"Valid To\", \"2018-11-08T10:13:40\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Certificate - 3",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing CA 7B\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Certification Authority\"], [\"SHA1\", \"a32f56a57d828436fad2ad4ec1fadb66340c8d5a\"], [\"SHA256\", \"d92bf8e9fa867dbd8b794c6a49e6ff1fcfac71f3d7f4ae55bb9587eb24ac6489\"], [\"MD5\", \"02a03b711048591fb331dab2a42683dc\"], [\"Serial Number\", \"069b5e99277284c8767f1368a7deb0f3\"], [\"Valid From\", \"2015-10-28T00:00:00\"], [\"Valid To\", \"2021-06-17T23:59:59\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Certificate - 4",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 19616]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.99386, 7.177, 6.9829, 7.49386, 6.31041, 7.47929, 6.78575, 6.98793, 7.07102, 6.40908, 7.46628, 6.71681, 7.31108, 6.98519, 6.22726, 7.47967, 6.49688, 6.88313, 6.07987, 7.25578, 7.11433, 7.12114, 6.28234, 7.02107, 6.75242, 7.42821, 6.41502, 7.0733, 5.97136, 7.16605, 5.91088, 7.21977, 6.40158, 6.79411, 7.26631, 6.97569, 6.70091, 6.68178, 5.71838, 7.08255, 6.04447, 7.27357, 7.05933, 6.92954, 6.63339, 7.25048, 6.19417, 6.98598, 6.21477, 7.3085]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Overlay",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            }
-        ]
-    },
-    "sha256": "5d8af9775df9a1c3ba0af87a042621b0587ca2f36bfcacedf10f4cdcb0f0a2ab",
+  "extra": {
     "drop_file": false,
+    "score": 0,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1497976520 (2017-06-20 16:35:20 +00:00 (UTC))\"], [\"Entrypoint\", \"0x23f24\"], [\"Machine\", \"AMD64\"], [\"Magic\", \"PE32_PLUS\"], [\"Image version\", \"10.0\"], [\"Linker version\", \"14.0\"], [\"Operating System version\", \"10.0\"], [\"Subsystem version\", \"10.0\"], [\"Subsystem\", \"NATIVE\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x0003a89b\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  1497976520,
+                  "2017-06-20 16:35:20 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"3a1fa9cd7a1ad4028b8f22debb6cc23b\"]]], [\"TABLE\", [{\"ID\": \"0x01025e95\", \"Compiler Information\": \"[LNK] VS2015 UPD3 build 24213\", \"Count\": 1}, {\"ID\": \"0x00ff5e92\", \"Compiler Information\": \"[RES] VS2015 UPD3 build 24210\", \"Count\": 1}, {\"ID\": \"0x01045e95\", \"Compiler Information\": \"[ C ] VS2015 UPD3 build 24213\", \"Count\": 23}, {\"ID\": \"0x01045d6d\", \"Compiler Information\": \"Unknown object 0x01045d6d\", \"Count\": 13}, {\"ID\": \"0x01035d6d\", \"Compiler Information\": \"Unknown object 0x01035d6d\", \"Count\": 4}, {\"ID\": \"0x01055d6d\", \"Compiler Information\": \"Unknown object 0x01055d6d\", \"Count\": 3}, {\"ID\": \"0x01065d6d\", \"Compiler Information\": \"Unknown object 0x01065d6d\", \"Count\": 3}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 49}, {\"ID\": \"0x01015d6d\", \"Compiler Information\": \"Unknown object 0x01015d6d\", \"Count\": 7}, {\"ID\": \"0x00b977fc\", \"Compiler Information\": \"Unknown object 0x00b977fc\", \"Count\": 2}, {\"ID\": \"0x01075d6d\", \"Compiler Information\": \"Unknown object 0x01075d6d\", \"Count\": 3}]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "rich_header": {
+                "hash": [
+                  "3a1fa9cd7a1ad4028b8f22debb6cc23b"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Rich Headers - Key: 249823288",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"sha512\", \"963e00f50e11f14290f899dd9d0ed00561e62b6996a32f1b2f703e85438ebab86eb3c19575cb3187dbde726c8bda62cb41b8a718bee99d6e8f13e52fc1e1bbbe\"], [\"sha384\", \"4a5d64dacfa93a87fb70cc10cf8abda9c9ef87f5af3dc230f52cb31c29b4f5bf2460b6742738c4f243e9957fd68cce4e\"], [\"sha256\", \"e513e4a5d219cde085a44bd25b56341a9ce6948c26ea298d36a6a049a3e98859\"], [\"sha1\", \"e1b37b37c210a6195f0b9d9f3d71b073b391b71e\"], [\"md5\", \"74b5527b259a1d86dee42770b72e6380\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.352666164049938], [\"Entropy without padding\", 6.353629128838633], [\"Offset\", 1024], [\"Size\", 146432], [\"Virtual Size\", 146392], [\"Characteristics\", \"CNT_CODE, MEM_NOT_PAGED, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"7d8b0bf4c0652cd0ad857a38737a30b6\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.26807, 6.245, 6.18921, 6.2107, 6.1116, 6.20764, 6.15568, 6.36678, 6.22697, 6.15832, 6.3067, 6.31376, 6.35072, 6.20963, 6.23872, 6.21177, 6.18581, 6.25075, 6.14135, 6.1796, 6.1603, 6.06669, 6.07751, 6.11093, 6.21398, 6.13181, 6.14605, 6.16874, 6.32462, 6.24266, 6.16273, 6.0804, 5.9751, 5.95651, 6.0718, 6.21156, 6.03822, 6.08579, 5.96089, 6.03651, 6.10101, 6.19455, 6.1795, 5.94923, 6.04736, 6.07819, 6.00433, 6.19595, 6.28696, 5.83674]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "7d8b0bf4c0652cd0ad857a38737a30b6"
+                ],
+                "name": [
+                  ".text"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .text",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.428425611253239], [\"Entropy without padding\", 5.521955713019017], [\"Offset\", 147456], [\"Size\", 9216], [\"Virtual Size\", 8988], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_NOT_PAGED, MEM_READ\"], [\"MD5\", \"3e5c5dfaa8d599f07290125a4ec36e97\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.06543, 2.3444, 4.24919, 6.59729, 6.15802, 1.92608, 4.89103, 5.31426, 4.42287, 3.35217, 6.89687, 3.46517, 1.0245, 4.56908, 4.32948, 4.16423, 4.30005, 4.71008, 4.88107, 4.63798, 4.66935, 4.70984, 4.43449, 4.49605, 4.95393, 4.85616, 4.89038, 4.66588, 4.67978, 4.60546, 4.7986, 4.6309, 4.46765, 4.70271, 4.37929, 4.70695, 4.89378, 4.60362, 4.53457, 4.65372, 4.72238, 4.68338, 4.6621, 4.8041, 4.82591, 4.85682, 4.52194, 4.5892, 2.74249, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "3e5c5dfaa8d599f07290125a4ec36e97"
+                ],
+                "name": [
+                  ".rdata"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rdata",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.5567417401586714], [\"Entropy without padding\", 1.5567417401586714], [\"Offset\", 156672], [\"Size\", 1024], [\"Virtual Size\", 4936], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_NOT_PAGED, MEM_READ, MEM_WRITE\"], [\"MD5\", \"91befc33a510f405b163f00d9cf03883\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.85408, 1.3447, 1.60168, 1.50644, 1.85408, 1.3447, 2.24853, 0.8181, 2.39355, 0.72286, 2.05805, 1.60168, 2.10157, 1.3447, 2.24853, 0.8181, 2.52473, 0.8181, 2.05805, 1.3447, 1.75884, 1.60168, 1.60168, -0.0, -0.0, 0.8181, 2.35451, 0.2762, 3.55852, 1.75884, 1.75884, -0.0, 1.3447, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "91befc33a510f405b163f00d9cf03883"
+                ],
+                "name": [
+                  ".data"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .data",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.147738676387703], [\"Entropy without padding\", 5.327778975062275], [\"Offset\", 157696], [\"Size\", 4096], [\"Virtual Size\", 3900], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_NOT_PAGED, MEM_READ\"], [\"MD5\", \"711fe50eec73993c43e1686c6cbb0a44\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.42884, 3.45151, 3.54505, 3.60229, 3.6304, 3.59309, 3.2452, 3.46193, 3.6242, 3.60229, 3.70357, 3.60229, 3.73269, 3.52912, 3.63938, 3.49128, 3.55827, 3.58388, 3.68391, 3.54226, 4.01846, 3.81291, 4.2576, 3.90398, 4.06723, 3.89193, 4.03061, 3.89477, 4.01968, 4.0063, 4.08918, 4.0655, 4.02349, 3.99233, 4.17766, 4.03191, 4.00335, 3.59119, 3.83021, 3.82112, 3.74906, 3.62156, 3.79186, 3.71078, 3.84064, 3.64157, 3.81625, 2.37894, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "711fe50eec73993c43e1686c6cbb0a44"
+                ],
+                "name": [
+                  ".pdata"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .pdata",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.020393135236084953], [\"Entropy without padding\", 0.8112781244591329], [\"Offset\", 161792], [\"Size\", 512], [\"Virtual Size\", 4], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_NOT_PAGED, MEM_READ\"], [\"MD5\", \"64d1f04ee674327483852f238bb2c4a5\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.4395, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "64d1f04ee674327483852f238bb2c4a5"
+                ],
+                "name": [
+                  ".gfids"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .gfids",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.177835985451223], [\"Entropy without padding\", 6.260743340726834], [\"Offset\", 162304], [\"Size\", 12800], [\"Virtual Size\", 12464], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"b229caa66aceda4057d4b17ff669bfea\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.71855, 5.57798, 5.48589, 5.28015, 5.47161, 5.63278, 5.42292, 5.42028, 5.38537, 5.66208, 5.53894, 5.6018, 5.45045, 5.30028, 5.42005, 5.15832, 5.37765, 5.65274, 5.25535, 5.14596, 5.17368, 5.2868, 5.62344, 5.33355, 5.43723, 4.64954, 5.94243, 5.56315, 5.84572, 5.57664, 5.7538, 5.35079, 5.59136, 5.53733, 5.83617, 5.05887, 5.57457, 5.32676, 5.38694, 5.48249, 5.71644, 5.57094, 5.35206, 5.82847, 5.61335, 5.66591, 5.60372, 4.16128, 2.85402, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "b229caa66aceda4057d4b17ff669bfea"
+                ],
+                "name": [
+                  "PAGE"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - PAGE",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.541907170152721], [\"Entropy without padding\", 5.819354752706165], [\"Offset\", 175104], [\"Size\", 2560], [\"Virtual Size\", 2370], [\"Characteristics\", \"CNT_CODE, MEM_DISCARDABLE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"25f6a7022f5c4c71b5d2d692f2489781\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.53257, 4.90776, 3.70925, 4.22235, 4.75311, 4.24758, 4.18642, 4.5412, 5.16949, 4.5415, 4.77978, 4.55335, 4.91669, 4.47718, 3.7078, 2.3083, 1.43829, 1.28391, 2.10734, 1.77749, 2.17676, 1.77749, 2.12378, 1.88345, 3.24758, 4.41911, 4.62593, 4.42662, 4.38623, 4.63344, 4.08828, 4.44064, 4.28376, 4.26718, 4.36421, 4.34219, 4.19585, 4.70478, 4.02351, 4.18245, 4.44305, 4.6644, 4.29479, 4.58238, 3.94497, 3.16955, -0.0, -0.0, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "25f6a7022f5c4c71b5d2d692f2489781"
+                ],
+                "name": [
+                  "INIT"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - INIT",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.255694573643533], [\"Entropy without padding\", 4.399744434568197], [\"Offset\", 177664], [\"Size\", 8192], [\"Virtual Size\", 7848], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"fce428f8b38a141365326dc01f6da955\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.5598, 2.17242, 3.45766, 3.08408, 3.00022, 3.12234, 3.27623, 3.15599, 3.13443, 3.09227, 3.14757, 3.28109, 3.88922, 2.60015, 3.99568, 2.86678, 3.64753, 3.92323, 2.89824, 3.63521, 3.59143, 3.26214, 3.52877, 3.57217, 3.40845, 3.80899, 3.46394, 3.44511, 2.55648, 3.96503, 2.99106, 2.98401, 2.37742, 1.49246, 1.62281, 1.48751, 2.18428, 3.06322, 3.0779, 3.37621, 3.15509, 3.17843, 5.20644, 6.6128, 6.75216, 6.69878, 6.73774, 5.90837, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "fce428f8b38a141365326dc01f6da955"
+                ],
+                "name": [
+                  ".rsrc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rsrc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.7451227946533565], [\"Entropy without padding\", 4.614863099158172], [\"Offset\", 185856], [\"Size\", 512], [\"Virtual Size\", 124], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"ec9c9a5dcc4f7c68b6b03414f8781a72\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.40401, 2.84535, 2.84535, 2.04945, 3.02717, 2.2999, 2.40401, 2.40401, 2.40401, 2.04945, 2.40401, 0.4395, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0, 0, 0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "ec9c9a5dcc4f7c68b6b03414f8781a72"
+                ],
+                "name": [
+                  ".reloc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .reloc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Debugs",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1497976520 (2017-06-20 16:35:20 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"D:\\\\buildagent_prod\\\\p4\\\\1326309012\\\\drivers\\\\TeeDriver\\\\TEEDriver\\\\x64\\\\PgPoFxrelease\\\\TEEDriverW8x64.pdb\"], [\"GUID\", \"edabcfe6-9edb-4fbf-a052-31be8032f925\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "debug": {
+                "guid": [
+                  "edabcfe6-9edb-4fbf-a052-31be8032f925"
+                ]
+              },
+              "pdb_filename": [
+                "D:\\buildagent_prod\\p4\\1326309012\\drivers\\TeeDriver\\TEEDriver\\x64\\PgPoFxrelease\\TEEDriverW8x64.pdb"
+              ]
+            }
+          }
+        },
+        "title_text": "CODEVIEW",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1497976520 (2017-06-20 16:35:20 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "POGO",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "imports": {
+                "fuzzy": [
+                  "24:ZitgyGEmBkOnQMGmzmiVfwdY2Wg2MWlyEWoOmwgXugXN8o54G1xToI50Q2RxFbyt:f46lQek93I/kDebus9n"
+                ],
+                "imphash": [
+                  "9031ce6e59723c6b3aebb68d1aae2bae"
+                ],
+                "sorted_fuzzy": [
+                  "24:oz8Y2Wg2zJqBuqxG1RxdTNMGmG8ot54miVUQ2EWEmoI5oOmwgXugXFbnfwwg2QBk:ULQMkuZz2VImk9QruFu"
+                ],
+                "sorted_sha1": [
+                  "0ac5ba13215b87077ac09f978670ba4257a89a50"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Imports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "SecLookupWellKnownSid",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "ksecdd.sys",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "memcpy_s, RtlInitUnicodeString, RtlGUIDFromString, KeSetEvent, MmUnmapLockedPages, RtlGetVersion, RtlInitAnsiString, RtlAnsiStringToUnicodeString, RtlFreeUnicodeString, KeDelayExecutionThread, KeInitializeEvent, EtwWrite, MmGetSystemRoutineAddress, RtlCompareMemory, IoWMIRegistrationControl, EtwRegister, EtwUnregister, ZwQueryInformationToken, MmUnmapIoSpace, PoFxCompleteIdleState, PoRegisterPowerSettingCallback, PoUnregisterPowerSettingCallback, KeClearEvent, KeWaitForSingleObject, MmBuildMdlForNonPagedPool, IoAllocateMdl, IoFreeMdl, IoAllocateErrorLogEntry, IoWriteErrorLogEntry, PoFxCompleteIdleCondition, ZwPowerInformation, MmMapLockedPagesSpecifyCache, IoIs32bitProcess, RtlAnsiCharToUnicodeChar, ZwOpenProcessTokenEx, RtlEqualSid, RtlCopyUnicodeString, RtlValidSid, ZwClose, ExFreePoolWithTag, ExAllocatePoolWithTag, MmMapIoSpace",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "ntoskrnl.exe",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "KeStallExecutionProcessor",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "HAL.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "WdfVersionBindClass, WdfVersionUnbind, WdfVersionBind, WdfVersionUnbindClass",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "WDFLDR.SYS",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Languages\", \"ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "ENGLISH"
+                ],
+                "name": [
+                  "MOFDATA",
+                  "MOFRESOURCENAME",
+                  "WEVT_TEMPLATE"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Type\", 0]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Version",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 8], [\"file_flags_mask\", 63], [\"file_os\", \"NT_WINDOWS32\"], [\"file_subtype\", \"DRV_SYSTEM\"], [\"file_type\", \"DRV\"], [\"file_version_LS\", 1032], [\"file_version_MS\", 720903], [\"product_version_LS\", 1032], [\"product_version_MS\", 720903], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "fixed_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "versions": {
+                "description": [
+                  "Intel(R) Management Engine Interface"
+                ],
+                "filename": [
+                  "TeeDriverx64.sys"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "string_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"040904B0\"], [\"type\", 1], [\"lang\", \"ENGLISH\"], [\"sublang\", \"ENGLISH_US\"], [\"code_page\", \"UTF_16\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 3,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "langcode_items 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ProductVersion\", \"11.7.0.1032\"], [\"ProductName\", \"Intel(R) Management Engine Interface\"], [\"LegalCopyright\", \"Copyright \\u00a9 2006-2015, Intel Corporation. All rights reserved.\"], [\"OriginalFilename\", \"TeeDriverx64.sys\"], [\"FileVersion\", \"11.7.0.1032\"], [\"CompanyName\", \"Intel Corporation\"], [\"FileDescription\", \"Intel(R) Management Engine Interface\"], [\"InternalName\", \"TeeDriverx64.sys\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 4,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "items",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78644233\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "var_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[{\"SHA256\": \"e0ee72ee67a6faeb57d5fbe39351575922717fba3fb7b61cca8b33ac2f46977f\", \"Type\": \"MOFDATA\", \"Entropy\": 7.515681058365994}, {\"SHA256\": \"ef1539ff613b078aa26becbe1585c8357c6162fab5d2af631b20a0b0a9e9ae3a\", \"Type\": \"WEVT_TEMPLATE\", \"Entropy\": 3.6137962793878327}, {\"SHA256\": \"ebaa70f31f8654fda12f626f5be11532dfaea4b2d6a1c888ea8e8d2c06db14c1\", \"Type\": \"MESSAGETABLE\", \"Entropy\": 3.5726301311127493}, {\"SHA256\": \"a42d31efe33d819a562db99e2cedfa09921ce45888a289ab6bb76545b67552a4\", \"Type\": \"VERSION\", \"Entropy\": 3.4988956304471044}]",
+        "body_format": "TABLE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Summary",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Signatures",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "OK found while verifying signature : OK",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 2,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Signed EXE",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 1], [\"Algorithm\", \"SHA256\"], [\"Content Info Algorithm\", \"SHA256\"], [\"Content Info Digest\", \"e513e4a5d219cde085a44bd25b56341a9ce6948c26ea298d36a6a049a3e98859\"], [\"Content Info Content Type\", \"1.3.6.1.4.1.311.2.1.4\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Signature - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 1], [\"Digest Algorithm\", \"SHA256\"], [\"Authenticated Attributes\", \"CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST\"], [\"Unauthenticated Attributes\", \"GENERIC_TYPE, MS_SPC_NESTED_SIGN\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Signer - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=CA, L=Santa Clara, O=Intel Corporation, OU=EIG, CN=Intel(R) Embedded Subsystems and IP Blocks Group\"], [\"Issuer\", \"C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing CA 7B\"], [\"Serial Number\", \"56000001757376cd78ad000c9a000000000175\"], [\"Valid From\", \"2016-11-08T10:13:40\"], [\"Valid To\", \"2018-11-08T10:13:40\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 3,
+        "heuristic": null,
+        "tags": {
+          "cert": {
+            "issuer": [
+              "C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing CA 7B"
+            ],
+            "serial_no": [
+              "56000001757376cd78ad000c9a000000000175"
+            ],
+            "subject": [
+              "C=US, ST=CA, L=Santa Clara, O=Intel Corporation, OU=EIG, CN=Intel(R) Embedded Subsystems and IP Blocks Group"
+            ],
+            "thumbprint": [
+              "c442d3bdf3d1bf5173cdb1b0ec361ea7d684c6bd",
+              "534b9b1a31a38b4e0bf9a291f408337c25a2e011d460fdff495ce473fb168a8e",
+              "dbe03121c1e4cb13c32aeb2f79a00efa"
+            ],
+            "valid": {
+              "end": [
+                "2018-11-08T10:13:40"
+              ],
+              "start": [
+                "2016-11-08T10:13:40"
+              ]
+            }
+          }
+        },
+        "title_text": "Signer Certificate",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=SE, O=AddTrust AB, OU=AddTrust External TTP Network, CN=AddTrust External CA Root\"], [\"Issuer\", \"C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Verification Root\"], [\"SHA1\", \"a75ac657aa7a4cdfe5f9de393e69efcab659d250\"], [\"SHA256\", \"0e0fabf3c4fb549fc156e7fe8f3c8966c8e09ffbba31e650b18214064245b54f\"], [\"MD5\", \"de157879d086e0e00fecfe0a30ad5c23\"], [\"Serial Number\", \"3300000035d8d5595b0671412b000000000035\"], [\"Valid From\", \"2013-08-15T20:26:30\"], [\"Valid To\", \"2023-08-15T20:36:30\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Certificate - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Certification Authority\"], [\"Issuer\", \"C=SE, O=AddTrust AB, OU=AddTrust External TTP Network, CN=AddTrust External CA Root\"], [\"SHA1\", \"f5ad0bcc1ad56cd150725b1c866c30ad92ef21b0\"], [\"SHA256\", \"4f32d5dc00f715250abcc486511e37f501a899deb3bf7ea8adbbd3aef1c412da\"], [\"MD5\", \"1edaf9ae99ce2920667d0e9a8b3f8c9c\"], [\"Serial Number\", \"2766ee56eb49f38eabd770a2fc84de22\"], [\"Valid From\", \"2000-05-30T10:48:38\"], [\"Valid To\", \"2020-05-30T10:48:38\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Certificate - 2",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=CA, L=Santa Clara, O=Intel Corporation, OU=EIG, CN=Intel(R) Embedded Subsystems and IP Blocks Group\"], [\"Issuer\", \"C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing CA 7B\"], [\"SHA1\", \"c442d3bdf3d1bf5173cdb1b0ec361ea7d684c6bd\"], [\"SHA256\", \"534b9b1a31a38b4e0bf9a291f408337c25a2e011d460fdff495ce473fb168a8e\"], [\"MD5\", \"dbe03121c1e4cb13c32aeb2f79a00efa\"], [\"Serial Number\", \"56000001757376cd78ad000c9a000000000175\"], [\"Valid From\", \"2016-11-08T10:13:40\"], [\"Valid To\", \"2018-11-08T10:13:40\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Certificate - 3",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing CA 7B\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Certification Authority\"], [\"SHA1\", \"a32f56a57d828436fad2ad4ec1fadb66340c8d5a\"], [\"SHA256\", \"d92bf8e9fa867dbd8b794c6a49e6ff1fcfac71f3d7f4ae55bb9587eb24ac6489\"], [\"MD5\", \"02a03b711048591fb331dab2a42683dc\"], [\"Serial Number\", \"069b5e99277284c8767f1368a7deb0f3\"], [\"Valid From\", \"2015-10-28T00:00:00\"], [\"Valid To\", \"2021-06-17T23:59:59\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Certificate - 4",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 19616]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.99386, 7.177, 6.9829, 7.49386, 6.31041, 7.47929, 6.78575, 6.98793, 7.07102, 6.40908, 7.46628, 6.71681, 7.31108, 6.98519, 6.22726, 7.47967, 6.49688, 6.88313, 6.07987, 7.25578, 7.11433, 7.12114, 6.28234, 7.02107, 6.75242, 7.42821, 6.41502, 7.0733, 5.97136, 7.16605, 5.91088, 7.21977, 6.40158, 6.79411, 7.26631, 6.97569, 6.70091, 6.68178, 5.71838, 7.08255, 6.04447, 7.27357, 7.05933, 6.92954, 6.63339, 7.25048, 6.19417, 6.98598, 6.21477, 7.3085]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [
+      {
+        "name": "overlay",
+        "sha256": "7e3589f5f903ff483b50ecdd840268b937f338bf32febe7d22fded993732922e"
+      }
+    ],
+    "supplementary": [
+      {
+        "name": "certificate.1.1",
+        "sha256": "0e0fabf3c4fb549fc156e7fe8f3c8966c8e09ffbba31e650b18214064245b54f"
+      },
+      {
+        "name": "features.json",
+        "sha256": "1d927aaf0664633b195ed08c1ebf05040511f4c1df5708392e4f42b7d22e8d47"
+      },
+      {
+        "name": "certificate.1.2",
+        "sha256": "4f32d5dc00f715250abcc486511e37f501a899deb3bf7ea8adbbd3aef1c412da"
+      },
+      {
+        "name": "certificate.1.3",
+        "sha256": "534b9b1a31a38b4e0bf9a291f408337c25a2e011d460fdff495ce473fb168a8e"
+      },
+      {
+        "name": "certificate.1.4",
+        "sha256": "d92bf8e9fa867dbd8b794c6a49e6ff1fcfac71f3d7f4ae55bb9587eb24ac6489"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 2,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "cert.issuer": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing CA 7B"
+        }
+      ],
+      "cert.serial_no": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "56000001757376cd78ad000c9a000000000175"
+        }
+      ],
+      "cert.subject": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C=US, ST=CA, L=Santa Clara, O=Intel Corporation, OU=EIG, CN=Intel(R) Embedded Subsystems and IP Blocks Group"
+        }
+      ],
+      "cert.thumbprint": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "534b9b1a31a38b4e0bf9a291f408337c25a2e011d460fdff495ce473fb168a8e"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "c442d3bdf3d1bf5173cdb1b0ec361ea7d684c6bd"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "dbe03121c1e4cb13c32aeb2f79a00efa"
+        }
+      ],
+      "cert.valid.end": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2018-11-08T10:13:40"
+        }
+      ],
+      "cert.valid.start": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2016-11-08T10:13:40"
+        }
+      ],
+      "file.pe.debug.guid": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "edabcfe6-9edb-4fbf-a052-31be8032f925"
+        }
+      ],
+      "file.pe.imports.fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "24:ZitgyGEmBkOnQMGmzmiVfwdY2Wg2MWlyEWoOmwgXugXN8o54G1xToI50Q2RxFbyt:f46lQek93I/kDebus9n"
+        }
+      ],
+      "file.pe.imports.imphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "9031ce6e59723c6b3aebb68d1aae2bae"
+        }
+      ],
+      "file.pe.imports.sorted_fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "24:oz8Y2Wg2zJqBuqxG1RxdTNMGmG8ot54miVUQ2EWEmoI5oOmwgXugXFbnfwwg2QBk:ULQMkuZz2VImk9QruFu"
+        }
+      ],
+      "file.pe.imports.sorted_sha1": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "0ac5ba13215b87077ac09f978670ba4257a89a50"
+        }
+      ],
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 1497976520
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2017-06-20 16:35:20 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.pdb_filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "D:\\buildagent_prod\\p4\\1326309012\\drivers\\TeeDriver\\TEEDriver\\x64\\PgPoFxrelease\\TEEDriverW8x64.pdb"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ENGLISH"
+        }
+      ],
+      "file.pe.resources.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "MOFDATA"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "MOFRESOURCENAME"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "WEVT_TEMPLATE"
+        }
+      ],
+      "file.pe.rich_header.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "3a1fa9cd7a1ad4028b8f22debb6cc23b"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "25f6a7022f5c4c71b5d2d692f2489781"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "3e5c5dfaa8d599f07290125a4ec36e97"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "64d1f04ee674327483852f238bb2c4a5"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "711fe50eec73993c43e1686c6cbb0a44"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "7d8b0bf4c0652cd0ad857a38737a30b6"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "91befc33a510f405b163f00d9cf03883"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "b229caa66aceda4057d4b17ff669bfea"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ec9c9a5dcc4f7c68b6b03414f8781a72"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "fce428f8b38a141365326dc01f6da955"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".data"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".gfids"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".pdata"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rdata"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".reloc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rsrc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".text"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "INIT"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "PAGE"
+        }
+      ],
+      "file.pe.versions.description": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Intel(R) Management Engine Interface"
+        }
+      ],
+      "file.pe.versions.filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "TeeDriverx64.sys"
+        }
+      ]
+    },
     "temp_submission_data": {}
+  }
 }

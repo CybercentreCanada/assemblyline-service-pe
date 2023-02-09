@@ -1,10 +1,12 @@
 import copy
+import csv
 import datetime
 import hashlib
 import json
 import os
 import pathlib
 import struct
+import subprocess
 from collections import defaultdict
 from io import BytesIO
 
@@ -30,6 +32,9 @@ from assemblyline_v4_service.common.result import (
     TextSectionBody,
 )
 from PIL import Image
+
+# Disable logging from LIEF
+lief.logging.disable()
 
 MZ = [ord(x) for x in "MZ"]
 DOS_MODE = [ord(x) for x in "This program cannot be run in DOS mode"]
@@ -203,9 +208,9 @@ def generate_checksum(filename, checksum_offset):
         if i == int(checksum_offset / 4):
             continue
         if i + 1 == (int(data_len / 4)) and remainder:
-            dword = struct.unpack("I", data[i * 4:] + (b"\0" * (4 - remainder)))[0]
+            dword = struct.unpack("I", data[i * 4 :] + (b"\0" * (4 - remainder)))[0]
         else:
-            dword = struct.unpack("I", data[i * 4: i * 4 + 4])[0]
+            dword = struct.unpack("I", data[i * 4 : i * 4 + 4])[0]
         checksum += dword
         if checksum >= 2 ** 32:
             checksum = (checksum & 0xFFFFFFFF) + (checksum >> 32)
@@ -222,13 +227,28 @@ class PE(ServiceBase):
         super().__init__(config)
 
     def start(self):
-        self.log.info("Starting PE")
+        self.log.debug("Starting PE")
+        # Loading Rich header resolutions
         self.rich_header_entries = {}
         with open(os.path.join(pathlib.Path(__file__).parent.resolve(), "comp_id.txt"), "r") as f:
             for line in f.read().splitlines():
                 if line and line[0] != "#":
                     k, v = line.split(" ", 1)
                     self.rich_header_entries[k] = v
+
+        # Loading Code Signing Certificate Blocklist (CSCB)
+        self.cscb = defaultdict(dict)
+        with open(os.path.join(pathlib.Path(__file__).parent.resolve(), "cscb.csv"), "r", newline="") as csvfile:
+            cscbreader = csv.reader(csvfile, quoting=csv.QUOTE_ALL, skipinitialspace=True)
+            for row in cscbreader:
+                if row[0].startswith("#"):
+                    continue
+                # row[1] = "serial_number"
+                # row[2] = "thumbprint"
+                # row[3] = "thumbprint_algorithm"
+                # row[-1] = "Reason"
+                self.cscb["serial_number"][row[1]] = row
+                self.cscb[row[3]][row[2]] = row
 
     def check_timestamps(self):
         """
@@ -337,10 +357,10 @@ class PE(ServiceBase):
                     self.recurse_resources(child, f"{parent_name}{resource.id}_")
         elif isinstance(resource, lief.PE.ResourceData):
             if resource.content[:2] == MZ or search_list_in_list(DOS_MODE, resource.content[:200]):
-                if self.temp_res is None:
-                    self.temp_res = ResultSection("Executable in resources", heuristic=Heuristic(12))
+                if len(resource.content) < self.config.get("heur12_min_size_byte", 60):
+                    return
                 file_name = f"binary_{parent_name}{resource.id}"
-                self.temp_res.add_line(f"Extracted {file_name}")
+                self.extracted_file_from_resources.append(file_name)
                 temp_path = os.path.join(self.working_directory, file_name)
                 with open(temp_path, "wb") as myfile:
                     myfile.write(bytearray(resource.content))
@@ -352,11 +372,14 @@ class PE(ServiceBase):
                 )
 
     def check_exe_resources(self):
-        self.temp_res = None
+        self.extracted_file_from_resources = []
         if self.binary.has_resources:
             self.recurse_resources(self.binary.resources, "")
-        if self.temp_res is not None:
-            self.file_res.add_section(self.temp_res)
+        if self.extracted_file_from_resources:
+            temp_res = ResultSection("Executable in resources", heuristic=Heuristic(12))
+            for file_name in self.extracted_file_from_resources:
+                temp_res.add_line(f"Extracted {file_name}")
+            self.file_res.add_section(temp_res)
 
     def check_dataless_resources(self):
         dataless_resources = []
@@ -874,6 +897,14 @@ class PE(ServiceBase):
         res.add_tag("file.pe.imports.imphash", self.features["imphash"])
         res.add_tag("file.pe.imports.fuzzy", calc_impfuzzy(self.features["imports"], sort=False))
         res.add_tag("file.pe.imports.sorted_fuzzy", calc_impfuzzy(self.features["imports"], sort=True))
+
+        cmd = ["./pe/c_gimphash_linux", self.file_path]
+        proc = subprocess.run(cmd, capture_output=True, text=True)
+        if proc.returncode == 0 and len(proc.stderr) == 0:
+            output = proc.stdout.split()
+            if len(output) == 2 and len(output[0]) == 64:
+                res.add_tag("file.pe.imports.gimphash", output[0])
+
         self.file_res.add_section(res)
 
     def add_configuration(self):
@@ -1026,6 +1057,7 @@ class PE(ServiceBase):
                     pass
                 self.features["resources_manager"]["accelerators"].append(accelerator_dict)
         if self.binary.resources_manager.has_dialogs:
+            corrupted_dialog_section = None
             try:
                 dialogs_list = []
                 for dialog in self.binary.resources_manager.dialogs:
@@ -1046,15 +1078,23 @@ class PE(ServiceBase):
                         "style": str(dialog.style),  # .name
                         "style_list": [style.name for style in dialog.style_list],
                         "sub_lang": dialog.sub_lang.name,
-                        "title": dialog.title,
+                        "title": "",
                         "typeface": dialog.typeface,
                         "version": dialog.version,
                         "weight": dialog.weight,
                         "x": dialog.x,
                         "y": dialog.y,
                     }
-                    if dialog.title != "":
-                        res.add_tag("file.string.extracted", dialog.title)
+                    try:
+                        dialog_dict["title"] = dialog.title
+                        if dialog.title != "":
+                            res.add_tag("file.string.extracted", dialog.title)
+                    except UnicodeDecodeError:
+                        del dialog_dict["title"]
+                        if corrupted_dialog_section is None:
+                            heur = Heuristic(13)
+                            corrupted_dialog_section = ResultSection(heur.name, heuristic=heur, parent=res)
+                        corrupted_dialog_section.add_line("Can't decode main title of dialog")
                     for item in dialog.items:
                         item_dict = {
                             "cx": item.cx,
@@ -1073,10 +1113,15 @@ class PE(ServiceBase):
                             if item.title != "":
                                 res.add_tag("file.string.extracted", item.title)
                         except UnicodeDecodeError:
-                            heur = Heuristic(13)
-                            heur_section = ResultSection(heur.name, heuristic=heur)
-                            heur_section.add_line(f"Can't decode title of dialog item from dialog named {dialog.title}")
-                            res.add_subsection(heur_section)
+                            if corrupted_dialog_section is None:
+                                heur = Heuristic(13)
+                                corrupted_dialog_section = ResultSection(heur.name, heuristic=heur, parent=res)
+                            if "title" in dialog_dict and dialog_dict["title"]:
+                                corrupted_dialog_section.add_line(
+                                    f"Can't decode title of dialog item from dialog named {dialog.title}"
+                                )
+                            else:
+                                corrupted_dialog_section.add_line("Can't decode title of dialog item")
                         dialog_dict["items"].append(item_dict)
                     dialogs_list.append(dialog_dict)
 
@@ -1475,9 +1520,40 @@ class PE(ServiceBase):
                     )
                     signer_raw_hex = bytes.fromhex(extracted_cert_info["raw_hex"])
                     # The sha1 thumbprint generated this way match what VirusTotal reports for 'certificate thumbprints'
-                    sub_sub_sub_res.add_tag("cert.thumbprint", hashlib.sha1(signer_raw_hex).hexdigest())
-                    sub_sub_sub_res.add_tag("cert.thumbprint", hashlib.sha256(signer_raw_hex).hexdigest())
-                    sub_sub_sub_res.add_tag("cert.thumbprint", hashlib.md5(signer_raw_hex).hexdigest())
+                    sha1_hex = hashlib.sha1(signer_raw_hex).hexdigest()
+                    sha256_hex = hashlib.sha256(signer_raw_hex).hexdigest()
+                    md5_hex = hashlib.md5(signer_raw_hex).hexdigest()
+                    sub_sub_sub_res.add_tag("cert.thumbprint", sha1_hex)
+                    sub_sub_sub_res.add_tag("cert.thumbprint", sha256_hex)
+                    sub_sub_sub_res.add_tag("cert.thumbprint", md5_hex)
+                    cscb = []
+                    if "SHA1" in self.cscb:
+                        if sha1_hex in self.cscb["SHA1"]:
+                            cscb.append(("SHA1", sha1_hex, self.cscb["SHA1"][sha1_hex][-1]))
+                    if "SHA256" in self.cscb:
+                        if sha256_hex in self.cscb["SHA256"]:
+                            cscb.append(("SHA256", sha256_hex, self.cscb["SHA256"][sha256_hex][-1]))
+                    if "MD5" in self.cscb:
+                        if md5_hex in self.cscb["MD5"]:
+                            cscb.append(("MD5", md5_hex, self.cscb["MD5"][md5_hex][-1]))
+                    if "serial_number" in self.cscb:
+                        if extracted_cert_info["serial_number"] in self.cscb["serial_number"]:
+                            cscb.append(
+                                (
+                                    "serial_number",
+                                    extracted_cert_info["serial_number"],
+                                    self.cscb["serial_number"][extracted_cert_info["serial_number"]][-1],
+                                )
+                            )
+                    if cscb:
+                        heur = Heuristic(29)
+                        heur_section = ResultTableSection(heur.name, heuristic=heur)
+                        for element in cscb:
+                            heur_section.add_row(
+                                TableRow({"Type": element[0], "Value": element[1], "Family": element[2]})
+                            )
+                            heur_section.add_tag("attribution.family", element[2])
+                        sub_sub_sub_res.add_subsection(heur_section)
                     sub_sub_res.add_subsection(sub_sub_sub_res)
                 else:
                     heur = Heuristic(13)
@@ -1636,7 +1712,7 @@ class PE(ServiceBase):
             self.features["size"] <= self.config.get("overlay_analysis_file_max_size", 50000000)
             or self.request.deep_scan
         ):
-            res = ResultMultiSection("Overlay")
+            res = ResultMultiSection("Overlay", parent=self.file_res)
             overlay = bytearray(self.binary.overlay)
             entropy_data = calculate_partition_entropy(BytesIO(overlay))
             self.features["overlay"] = {"size": len(overlay), "entropy": entropy_data[0]}
@@ -1648,10 +1724,9 @@ class PE(ServiceBase):
                     "heur25_min_overlay_size", 31457280
                 ) and self.features["overlay"]["entropy"] < self.config.get("heur25_min_overlay_entropy", 0.5):
                     heur = Heuristic(25)
-                    heur_section = ResultSection(heur.name, heuristic=heur)
+                    heur_section = ResultSection(heur.name, heuristic=heur, parent=res)
                     heur_section.add_line(f"Overlay Size: {self.features['overlay']['size']}")
                     heur_section.add_line(f"Overlay Entropy: {self.features['overlay']['entropy']}")
-                    res.add_subsection(heur_section)
 
                     file_name = "pe_without_overlay"
                     temp_path = os.path.join(self.working_directory, file_name)
@@ -1668,18 +1743,47 @@ class PE(ServiceBase):
                 )
                 res.add_section_part(overlay_graph_section)
 
-                file_name = "overlay"
-                temp_path = os.path.join(self.working_directory, file_name)
-                with open(temp_path, "wb") as f:
-                    f.write(overlay)
-                self.request.add_extracted(
-                    temp_path,
-                    file_name,
-                    f"{file_name} extracted from binary's resources",
-                    safelist_interface=self.api_interface,
-                )
-
-            self.file_res.add_section(res)
+                pe = self.binary
+                overlays = {}
+                while True:
+                    try:
+                        pe_array = bytearray(pe.overlay)
+                        pe = lief.parse(pe_array)
+                        if pe is None:
+                            break
+                        pe_no_overlay = pe_array[: -len(pe.overlay)]
+                        h = hashlib.sha256(pe_no_overlay).hexdigest()
+                        if h not in overlays:
+                            overlays[h] = (1, pe_array)
+                        else:
+                            overlays[h] = (overlays[h][0] + 1, pe_array)
+                    except Exception:
+                        break
+                if len(overlays) > 1 or any(count > 1 for count, _ in overlays.values()):
+                    stacked_overlays = ResultSection("Multiple PE stacked", parent=res)
+                    for h, (count, data) in overlays.items():
+                        stacked_overlays.add_line(f"{h} was seen {count} time{'s' if count > 1 else ''}")
+                        file_name = f"{h}_overlay"
+                        temp_path = os.path.join(self.working_directory, file_name)
+                        with open(temp_path, "wb") as f:
+                            f.write(data)
+                        self.request.add_extracted(
+                            temp_path,
+                            file_name,
+                            f"{file_name} extracted from binary's resources",
+                            safelist_interface=self.api_interface,
+                        )
+                else:
+                    file_name = "overlay"
+                    temp_path = os.path.join(self.working_directory, file_name)
+                    with open(temp_path, "wb") as f:
+                        f.write(overlay)
+                    self.request.add_extracted(
+                        temp_path,
+                        file_name,
+                        f"{file_name} extracted from binary's resources",
+                        safelist_interface=self.api_interface,
+                    )
 
     def add_optional(self):
         if self.request.deep_scan and self.binary.has_relocations:
@@ -1803,12 +1907,9 @@ class PE(ServiceBase):
                         for k, v in lancode_item["items"].items():
                             items.append({"key": k, "value": v})
                         lancode_item["items"] = items
-            if "html" in self.features["resources_manager"] and self.features["resources_manager"]["html"] == "":
+            if "html" in self.features["resources_manager"] and not self.features["resources_manager"]["html"]:
                 del self.features["resources_manager"]["html"]
-            if (
-                "manifest" in self.features["resources_manager"]
-                and self.features["resources_manager"]["manifest"] == ""
-            ):
+            if "manifest" in self.features["resources_manager"] and not self.features["resources_manager"]["manifest"]:
                 del self.features["resources_manager"]["manifest"]
 
         # Add hr_timestamps to every timestamp found

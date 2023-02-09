@@ -1,884 +1,1379 @@
 {
-    "classification": "TLP:W",
-    "response": {
-        "milestones": {
-            "service_started": null,
-            "service_completed": null
-        },
-        "service_version": null,
-        "service_name": null,
-        "service_tool_version": null,
-        "supplementary": [
-            {
-                "name": "icon_0.ico",
-                "sha256": "362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0",
-                "description": "Icon 0 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_0.ico.thumb",
-                "sha256": "362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0",
-                "description": "Icon 0 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_1.ico",
-                "sha256": "a53f757a2f47e35bd04116073a5894476d8a5c776ef0951ca5c4cd0b389fcf7d",
-                "description": "Icon 1 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_1.ico.thumb",
-                "sha256": "a53f757a2f47e35bd04116073a5894476d8a5c776ef0951ca5c4cd0b389fcf7d",
-                "description": "Icon 1 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_2.ico",
-                "sha256": "bfe6c15de194312077365a2b358553fb43deac6bad683c2f63fb346105a6a393",
-                "description": "Icon 2 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_2.ico.thumb",
-                "sha256": "bfe6c15de194312077365a2b358553fb43deac6bad683c2f63fb346105a6a393",
-                "description": "Icon 2 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_3.ico",
-                "sha256": "ff3c0ac9d3d1da40b88317942811d9a72cfbdc7c10322f1c645b63c167403181",
-                "description": "Icon 3 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_3.ico.thumb",
-                "sha256": "ff3c0ac9d3d1da40b88317942811d9a72cfbdc7c10322f1c645b63c167403181",
-                "description": "Icon 3 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_4.ico",
-                "sha256": "28fb5e426761f7ee7255ee09cead066bbcfa95f1bf691c01a468ca654c9b23f1",
-                "description": "Icon 4 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_4.ico.thumb",
-                "sha256": "28fb5e426761f7ee7255ee09cead066bbcfa95f1bf691c01a468ca654c9b23f1",
-                "description": "Icon 4 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_5.ico",
-                "sha256": "f58945e866c0b78efcdbb63ae1bcb4791856e6d2df3119332cf9aa057d31aa7f",
-                "description": "Icon 5 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_5.ico.thumb",
-                "sha256": "f58945e866c0b78efcdbb63ae1bcb4791856e6d2df3119332cf9aa057d31aa7f",
-                "description": "Icon 5 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_6.ico",
-                "sha256": "418b40cf97a94b1f7e62c554072364c4643264d3c879c43b0c3d412670b78074",
-                "description": "Icon 6 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_6.ico.thumb",
-                "sha256": "418b40cf97a94b1f7e62c554072364c4643264d3c879c43b0c3d412670b78074",
-                "description": "Icon 6 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_7.ico",
-                "sha256": "f07d9c8d3a54f119a1540107270aab223a4c837af093ffe9e3fea897ee5bdbe4",
-                "description": "Icon 7 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_7.ico.thumb",
-                "sha256": "f07d9c8d3a54f119a1540107270aab223a4c837af093ffe9e3fea897ee5bdbe4",
-                "description": "Icon 7 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_8.ico",
-                "sha256": "362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0",
-                "description": "Icon 8 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_8.ico.thumb",
-                "sha256": "362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0",
-                "description": "Icon 8 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_9.ico",
-                "sha256": "62e9bc172a4c13a064dfb30fdb08608c93d4e608dfcbe57419318b25d2f44760",
-                "description": "Icon 9 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_9.ico.thumb",
-                "sha256": "62e9bc172a4c13a064dfb30fdb08608c93d4e608dfcbe57419318b25d2f44760",
-                "description": "Icon 9 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_10.ico",
-                "sha256": "b685831c3925a33a053edb7503765e302e0cf5b4bbe76c6f036067b25ee7419e",
-                "description": "Icon 10 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_10.ico.thumb",
-                "sha256": "b685831c3925a33a053edb7503765e302e0cf5b4bbe76c6f036067b25ee7419e",
-                "description": "Icon 10 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_11.ico",
-                "sha256": "8648acd2a99da5aa01dc36eef0003861fc68d73dbe6c32215d5a68d1550365d3",
-                "description": "Icon 11 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_11.ico.thumb",
-                "sha256": "8648acd2a99da5aa01dc36eef0003861fc68d73dbe6c32215d5a68d1550365d3",
-                "description": "Icon 11 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_12.ico",
-                "sha256": "c771bde14e8f6537109add6f660d10cd77a90b9071158696b219b88c679ef1ed",
-                "description": "Icon 12 extracted from the PE file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "icon_12.ico.thumb",
-                "sha256": "c771bde14e8f6537109add6f660d10cd77a90b9071158696b219b88c679ef1ed",
-                "description": "Icon 12 extracted from the PE file (thumbnail)",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory",
-                "is_section_image": true
-            },
-            {
-                "name": "features.json",
-                "sha256": "8ef18c1246b021e2f7eaf9d47192ed10384f327034ff9288001ea4fc5d5e49fd",
-                "description": "Features extracted from the PE file, as a JSON file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/features.json",
-                "is_section_image": false
-            }
-        ],
-        "extracted": [],
-        "service_context": null,
-        "service_debug_info": null
-    },
-    "result": {
-        "score": 0,
-        "sections": [
-            {
-                "body": "[[\"Timestamp\", \"1091599591 (2004-08-04 06:06:31 +00:00 (UTC))\"], [\"Entrypoint\", \"0x2eb81\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"5.1\"], [\"Linker version\", \"7.10\"], [\"Operating System version\", \"5.1\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00084d4c\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "linker": {
-                                "timestamp": [
-                                    1091599591,
-                                    "2004-08-04 06:06:31 +00:00 (UTC)"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Headers",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"1012097a43cae12a26c093fe4d5bab95\"]]], [\"TABLE\", [{\"ID\": \"0x005a0fc3\", \"Compiler Information\": \"[LNK] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 1}, {\"ID\": \"0x005c0fc3\", \"Compiler Information\": \"[EXP] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 1}, {\"ID\": \"0x00600fc3\", \"Compiler Information\": \"[C++] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 60}, {\"ID\": \"0x005e0fc3\", \"Compiler Information\": \"[RES] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 1}, {\"ID\": \"0x005f0fc3\", \"Compiler Information\": \"[ C ] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 26}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 870}, {\"ID\": \"0x005d0fc3\", \"Compiler Information\": \"[IMP] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 33}, {\"ID\": \"0x000f0fc3\", \"Compiler Information\": \"[ASM] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 4}, {\"ID\": \"0x00690813\", \"Compiler Information\": \"Unknown object 0x00690813\", \"Count\": 2}]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "rich_header": {
-                                "hash": [
-                                    "1012097a43cae12a26c093fe4d5bab95"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Rich Headers - Key: 3389934576",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"sha512\", \"b139dbc158763608c8ef23547dd57e4d63d396a67628c65b42bfa5e9ad4e66647e03176a1876665f3c51f4a05b10f9446975c61b6774a1b1d7b42a86953e007e\"], [\"sha384\", \"16d17b501d41bde2d3652d3e4788f29f6ed45f6c48e20b27a6a82c1de09a83f7fabbbf4eb4b3ee9fee1480ba2922492d\"], [\"sha256\", \"8bd5a9cf1e804705ab7528f434d68ce8ce1aac7a790bab797ae030c16a9641ee\"], [\"sha1\", \"60120ca95bb0c8d2b0062c01673ffb927230bc30\"], [\"md5\", \"bf33ad935ca0bbaf300c443eb68bcaaa\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Sections",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.184668385181863], [\"Entropy without padding\", 6.1896314541793975], [\"Offset\", 1024], [\"Size\", 234496], [\"Virtual Size\", 234181], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"69b371454c8150be9a0621dc7ffe22ce\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.8352, 4.57805, 4.52179, 4.47508, 4.29266, 4.44449, 4.75944, 2.86632, 5.47932, 6.15303, 6.30024, 6.17862, 6.14958, 6.15355, 6.03548, 6.11717, 6.21423, 6.13673, 6.08217, 6.21974, 6.11989, 6.08652, 6.14738, 6.23554, 6.20416, 6.10194, 6.23383, 6.16185, 5.96358, 6.18364, 6.10076, 6.14321, 6.14303, 6.21266, 6.23679, 6.14245, 6.11439, 6.13843, 5.91473, 3.42194, 6.14029, 5.94436, 6.21781, 5.34966, 5.37098, 3.30557, 3.36498, 3.60176, 5.7822, 5.38657]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".text"
-                                ],
-                                "hash": [
-                                    "69b371454c8150be9a0621dc7ffe22ce"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .text",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.824781531401602], [\"Entropy without padding\", 4.824781531401601], [\"Offset\", 235520], [\"Size\", 5120], [\"Virtual Size\", 6896], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"f071b90453a12c2be89a50896db16fce\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.52386, 4.06673, 3.69213, 4.38417, 4.43203, 4.66959, 4.59991, 4.41712, 4.64979, 4.36398, 2.96811, 3.88957, 4.3895, 4.40134, 4.80435, 4.68569, 4.4553, 4.58689, 4.67891, 3.92513, 3.95383, 3.98481, 4.21091, 3.65067, 4.14131, 4.53742, 4.32401, 3.84065, 4.40369, 4.23325, 3.73637, 4.07536, 4.48787, 4.19985, 4.32004, 2.95715, 2.90173, 2.96795, 3.29289, 2.49088, 2.32293, 3.59696, 4.14171, 4.26082, 4.08595, 4.24674, 4.25861, 4.30796, 3.58703, 2.24632]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".data"
-                                ],
-                                "hash": [
-                                    "f071b90453a12c2be89a50896db16fce"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .data",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.997325647785224], [\"Entropy without padding\", 4.999768269742733], [\"Offset\", 240640], [\"Size\", 298496], [\"Virtual Size\", 298216], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"6c3a344aa61744cfd5304e755220574f\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.43612, 4.86128, 5.68658, 6.70719, 5.65957, 4.97496, 4.43438, 4.32892, 4.47205, 4.90946, 4.00441, 2.9653, 2.33657, 2.98099, 3.34443, 4.20945, 3.17539, 1.17443, 2.72909, 2.54737, 1.54591, 2.93431, 0.45228, 1.71948, 0.22518, 0.20076, 1.24202, 1.05046, 0.14935, 0.28163, 1.80623, 0.27855, 2.78255, 3.7925, 5.92905, 5.61171, 3.17701, 1.98965, 4.56797, 3.55296, 3.9415, 1.85812, 1.92897, 1.9201, 2.58861, 3.30803, 3.25016, 3.41967, 3.47014, 3.15315]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".rsrc"
-                                ],
-                                "hash": [
-                                    "6c3a344aa61744cfd5304e755220574f"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .rsrc",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Debugs",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Timestamp\", \"1091599591 (2004-08-04 06:06:31 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"dialer.pdb\"], [\"GUID\", \"7fdc3f15-8ef9-4afa-9859-bf6c8de983b\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "pdb_filename": [
-                                "dialer.pdb"
-                            ],
-                            "debug": {
-                                "guid": [
-                                    "7fdc3f15-8ef9-4afa-9859-bf6c8de983b"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "CODEVIEW",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Name: dialer.exe\nVersion: 0.0\nTimestamp: 1091599590 (2004-08-04 06:06:30 +00:00 (UTC))",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "exports": {
-                                "module_name": [
-                                    "dialer.exe"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Export",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Name: _BScrollGetWindowHandle@4, ordinal: 1\nName: _BScrollInit@44, ordinal: 2\nName: _BScrollStart@4, ordinal: 3\nName: _BScrollStop@4, ordinal: 4\nName: _BScrollTerm@4, ordinal: 5\nName: _BScrollWndProc@16, ordinal: 6\nName: _CreateDIBPalette@8, ordinal: 7\nName: _GfxBitmapBackfill@12, ordinal: 8\nName: _GfxBitmapDisplay@20, ordinal: 9\nName: _GfxBitmapDrawTransparent@24, ordinal: 10\nName: _GfxBitmapScroll@20, ordinal: 11\nName: _GfxDeviceIsMono@4, ordinal: 12\nName: _GfxHideHourglass@4, ordinal: 13\nName: _GfxLoadBitmapEx@12, ordinal: 14\nName: _GfxShowHourglass@4, ordinal: 15\nName: _GfxTextExtentTruncate@12, ordinal: 16\nName: _MemAllocEx@20, ordinal: 17\nName: _MemFreeEx@16, ordinal: 18\nName: _MemInit@8, ordinal: 19\nName: _MemReAllocEx@24, ordinal: 20\nName: _MemSize@8, ordinal: 21\nName: _MemTerm@4, ordinal: 22\nName: _StrAtoI@4, ordinal: 23\nName: _StrAtoL@4, ordinal: 24\nName: _StrChrCat@8, ordinal: 25\nName: _StrChrCatLeft@8, ordinal: 26\nName: _StrClean@12, ordinal: 27\nName: _StrCpyXChr@12, ordinal: 28\nName: _StrDup@4, ordinal: 29\nName: _StrDupFree@4, ordinal: 30\nName: _StrGetLastChr@4, ordinal: 31\nName: _StrGetRow@16, ordinal: 32\nName: _StrGetRowColumnCount@12, ordinal: 33\nName: _StrInsert@8, ordinal: 34\nName: _StrItoA@12, ordinal: 35\nName: _StrLtoA@12, ordinal: 36\nName: _StrSetLastChr@8, ordinal: 37\nName: _StrSetN@12, ordinal: 38\nName: _StrTrimChr@8, ordinal: 39\nName: _StrTrimChrLeading@8, ordinal: 40\nName: _StrTrimQuotes@4, ordinal: 41\nName: _StrTrimWhite@4, ordinal: 42\nName: _StrTrimWhiteLeading@4, ordinal: 43\nName: _TraceGetLevel@4, ordinal: 44\nName: _TraceInit@8, ordinal: 45\nName: _TraceOutput@12, ordinal: 46\nName: TracePrintf, ordinal: 47\nName: _TraceSetLevel@8, ordinal: 48\nName: _TraceTerm@4, ordinal: 49",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "exports": {
-                                "function_name": [
-                                    "_BScrollGetWindowHandle@4",
-                                    "_BScrollInit@44",
-                                    "_BScrollStart@4",
-                                    "_BScrollStop@4",
-                                    "_BScrollTerm@4",
-                                    "_BScrollWndProc@16",
-                                    "_CreateDIBPalette@8",
-                                    "_GfxBitmapBackfill@12",
-                                    "_GfxBitmapDisplay@20",
-                                    "_GfxBitmapDrawTransparent@24",
-                                    "_GfxBitmapScroll@20",
-                                    "_GfxDeviceIsMono@4",
-                                    "_GfxHideHourglass@4",
-                                    "_GfxLoadBitmapEx@12",
-                                    "_GfxShowHourglass@4",
-                                    "_GfxTextExtentTruncate@12",
-                                    "_MemAllocEx@20",
-                                    "_MemFreeEx@16",
-                                    "_MemInit@8",
-                                    "_MemReAllocEx@24",
-                                    "_MemSize@8",
-                                    "_MemTerm@4",
-                                    "_StrAtoI@4",
-                                    "_StrAtoL@4",
-                                    "_StrChrCat@8",
-                                    "_StrChrCatLeft@8",
-                                    "_StrClean@12",
-                                    "_StrCpyXChr@12",
-                                    "_StrDup@4",
-                                    "_StrDupFree@4",
-                                    "_StrGetLastChr@4",
-                                    "_StrGetRow@16",
-                                    "_StrGetRowColumnCount@12",
-                                    "_StrInsert@8",
-                                    "_StrItoA@12",
-                                    "_StrLtoA@12",
-                                    "_StrSetLastChr@8",
-                                    "_StrSetN@12",
-                                    "_StrTrimChr@8",
-                                    "_StrTrimChrLeading@8",
-                                    "_StrTrimQuotes@4",
-                                    "_StrTrimWhite@4",
-                                    "_StrTrimWhiteLeading@4",
-                                    "_TraceGetLevel@4",
-                                    "_TraceInit@8",
-                                    "_TraceOutput@12",
-                                    "TracePrintf",
-                                    "_TraceSetLevel@8",
-                                    "_TraceTerm@4"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Entries",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "imports": {
-                                "sorted_sha1": [
-                                    "d4f13dd5b7805bf12d6654722495180a4f4329e0"
-                                ],
-                                "imphash": [
-                                    "02c3f6b4018572e7a446fe853ac114e2"
-                                ],
-                                "fuzzy": [
-                                    "96:HKY3+HJKUt+TsppGipfrd/+i7iXG+RGUQpGO1qbKdLpvv6mlX2wc+pRPhdp8NidZ:Hr4cUtKERTNpiXG9nS++mGQPhdpTYof"
-                                ],
-                                "sorted_fuzzy": [
-                                    "96:ddKdXdUsaXdrliK1bZ2QYHywp1FBGkjSj/hU+iSU4AHjSQKXN/JGMLKTWUGtOBI2:dAo7i1hwhUQUNjSQKXN8M2iUGRLYafQ"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Imports",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "561, 2717, 5285, 6279, 6278, 4124, 4272, 2756, 2362, 1761, 4704, 6371, 3810, 2885, 1105, 6195, 3087, 2294, 617, 5297, 6350, 6348, 2028, 986, 520, 4154, 6113, 2613, 5208, 296, 940, 942, 4426, 3621, 2406, 3568, 1634, 4583, 4582, 4893, 4364, 4886, 4335, 4343, 4884, 4525, 4539, 4537, 4520, 4523, 4518, 4958, 4955, 4103, 5236, 3743, 1719, 5256, 1264, 4717, 1840, 4238, 6451, 2855, 2574, 4396, 3365, 3635, 693, 2857, 686, 384, 6168, 5871, 5785, 755, 2966, 470, 3288, 2089, 2400, 5619, 3297, 283, 2854, 1933, 810, 4266, 3393, 3728, 3084, 2755, 4215, 2576, 3649, 2430, 2858, 1637, 5616, 3991, 6266, 2092, 997, 6567, 915, 1863, 4186, 5592, 400, 702, 5630, 1808, 795, 956, 3614, 3133, 3397, 3716, 773, 501, 326, 2563, 1083, 5596, 5783, 5869, 3562, 602, 2634, 535, 1795, 4225, 6150, 2522, 4358, 4051, 5467, 4116, 2381, 5230, 6365, 5275, 5244, 2436, 298, 620, 4448, 6331, 1930, 4263, 3290, 4360, 1703, 2615, 5058, 554, 807, 4800, 6060, 3490, 6105, 291, 6437, 5880, 2916, 2538, 2293, 3579, 543, 803, 802, 542, 3517, 1764, 6362, 2405, 2016, 4214, 2573, 4395, 3634, 692, 2637, 3281, 6896, 3566, 3687, 459, 5781, 640, 6153, 323, 816, 562, 5787, 5617, 6330, 2606, 1085, 537, 4273, 6125, 4078, 879, 882, 609, 656, 2567, 4390, 3569, 3605, 3798, 4442, 4665, 4670, 4584, 1834, 4237, 3332, 6205, 3865, 5248, 3806, 5024, 4493, 2715, 2382, 3054, 5094, 5097, 4461, 4298, 3345, 5006, 5468, 3398, 2874, 2873, 4146, 4072, 5233, 5278, 2641, 1658, 4430, 4421, 796, 674, 529, 366, 4407, 5996, 2109, 6325, 4451, 1941, 1173, 5801, 613, 289, 4688, 998, 5638, 3867, 2350, 3993, 1937, 4268, 5070, 560, 813, 3000, 4158, 5881, 6142, 4279, 2112, 1791, 3348, 614, 1191, 290, 3688, 4128, 4292, 5784, 941, 2746, 3494, 2507, 355, 3516, 652, 715, 4420, 4617, 6171, 6076, 3193, 3449, 4381, 3733, 4616, 5710, 5303, 4074, 5298, 5296, 3341, 2388, 5193, 1089, 3917, 2391, 4852, 1569, 4947, 5649, 3167, 5573, 1739, 5736, 5239, 2534, 2502, 6332, 3060, 3053, 4690, 1203, 5930, 2078, 2910, 5568, 1144, 354, 1172, 538, 925, 922, 5210, 1165, 6396, 2732, 2793, 1594, 1196, 5593, 4817, 641, 3998, 2478, 4233, 1817, 5852, 2776, 858, 3658, 1081, 3291, 540, 4155, 800, 3909, 3282, 2859, 823, 825, 2115, 4418, 4621, 4075, 3074, 3820, 3826, 3825, 2971, 3076, 2980, 3257, 3131, 4459, 3254, 3142, 2977, 5727, 2504, 2546, 4480, 1143, 2371, 4294, 4270, 818, 567, 3737, 4692, 4847, 4229, 324, 3592, 4419, 5276, 1767, 6048, 2506, 4992, 4370, 5261, 3191, 3442, 815, 743, 4269, 4604, 4606, 3313, 870, 996, 3805, 919, 937, 935, 5977, 2879, 5601, 273, 1961, 603, 4414, 3871, 6565, 6376, 6374, 6193, 6375, 3792, 6211, 5180, 6381, 2806, 2810, 1971, 665, 6398, 1220, 338, 1633, 415, 5273, 2116, 2438, 5257, 1720, 5059, 3744, 6372, 2047, 2640, 4435, 4831, 3793, 5286, 4347, 6370, 5157, 2377, 5237, 4401, 1768, 4073, 6051, 1708, 861",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "MFC42u.DLL",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "_onexit, ?terminate@@YAXXZ, __dllonexit, ??1type_info@@UAE@XZ, _except_handler3, __set_app_type, __p__fmode, __p__commode, _adjust_fdiv, __setusermatherr, _initterm, __wgetmainargs, _wcmdln, exit, _cexit, _XcptFilter, _exit, __CxxFrameHandler, wcscmp, _controlfp, wcscpy, _c_exit, iswctype, _wcsnicmp, _itow, _ltow, memmove, wcstoul, _wtol, _wtoi, _wcsicmp, towupper, _snwprintf, wcschr, _ftol, free, _wcsdup, _purecall, wcsncpy, swprintf, wcslen",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "msvcrt.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "18, 32, 16, 21, 23, 17, 20, 11, 10",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "ATL.DLL",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "RegQueryValueExA, RegCloseKey, RegDeleteKeyW, RegDeleteValueW, RegSetValueW, RegQueryValueExW, RegOpenKeyExW, RegCreateKeyExW, RegSetValueExW, RegOpenKeyExA, GetUserNameW",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "ADVAPI32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "GetModuleHandleA, SetUnhandledExceptionFilter, UnhandledExceptionFilter, TerminateProcess, GetSystemTimeAsFileTime, GetCurrentProcessId, QueryPerformanceCounter, GetTempPathW, GetTempFileNameW, CreateDirectoryW, FindResourceW, LoadResource, LockResource, lstrcmpiW, GetCurrentThreadId, GetModuleHandleW, FormatMessageW, LoadLibraryA, GetCurrentProcess, ExpandEnvironmentStringsW, ResetEvent, WaitForMultipleObjects, LoadLibraryW, GetProcAddress, FreeLibrary, lstrcpynW, IsBadWritePtr, Sleep, GlobalHandle, CreateFileW, WriteFile, GlobalAlloc, GlobalUnlock, GlobalReAlloc, GlobalFree, GlobalLock, lstrcpyW, lstrcatW, lstrlenW, GetLastError, GetPrivateProfileStringW, CreateThread, SetEvent, InterlockedDecrement, DeleteFileW, GetTickCount, WaitForSingleObject, TerminateThread, CloseHandle, CreateEventW, InterlockedIncrement, GetWindowsDirectoryW, EnterCriticalSection, LeaveCriticalSection, DeleteCriticalSection, InitializeCriticalSection, HeapFree, GetProcessHeap, FreeConsole, OutputDebugStringW, SetConsoleScreenBufferSize, GetStdHandle, AllocConsole, GetPrivateProfileIntW, HeapAlloc, WritePrivateProfileStringW, HeapSize, HeapReAlloc, GetStartupInfoW",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "KERNEL32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "CreateFontIndirectW, GetTextExtentPoint32W, CreateSolidBrush, GetObjectW, DeleteObject, PatBlt, SelectObject, SetBkColor, ExtTextOutW, StretchBlt, GetDIBColorTable, CreatePen, RealizePalette, SelectPalette, GetStockObject, CreatePalette, SetBkMode, SetTextColor, GetDIBits, CreateDCW, CreateCompatibleDC, DeleteDC, GetDeviceCaps, CreateCompatibleBitmap, CreateHalftonePalette, BitBlt, GetSystemPaletteEntries, Rectangle, CreatePolygonRgn, PtInRegion, SetPixel, GetPixel, ExtFloodFill, CreateBitmap, SetMapMode, GetMapMode, DPtoLP, GetTextExtentPointW, CreateDIBitmap",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "GDI32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "SetActiveWindow, SetForegroundWindow, EndDeferWindowPos, DeferWindowPos, BeginDeferWindowPos, GetActiveWindow, SystemParametersInfoW, GetSystemMetrics, SetFocus, GetFocus, GetClientRect, GetDesktopWindow, FindWindowW, GetLastActivePopup, LoadCursorW, LoadIconW, SetWindowPos, GetDlgItem, WinHelpW, RegisterClassExW, DefWindowProcW, SetClassLongW, GetSysColor, CopyRect, FillRect, DrawFocusRect, DrawTextW, GetParent, SetMenuItemInfoW, GetMenuState, GetMenuItemInfoW, GetMenuItemCount, ReleaseDC, GetDC, GetSubMenu, LoadMenuW, ValidateRect, KillTimer, IsIconic, GetDlgCtrlID, CreatePopupMenu, AppendMenuW, CheckMenuRadioItem, GetDCEx, SetCapture, SetCursor, ReleaseCapture, ShowWindow, IntersectRect, GetWindow, SetRectEmpty, LoadImageW, CheckMenuItem, EnableMenuItem, GetMenuStringW, LoadBitmapW, DeleteMenu, GetMenuItemID, InsertMenuW, ModifyMenuW, RemoveMenu, GetMenu, TrackPopupMenuEx, MapWindowPoints, DestroyMenu, TrackPopupMenu, SetMenuDefaultItem, MessageBoxW, MessageBeep, RegisterWindowMessageW, CallWindowProcW, InvertRect, DestroyWindow, SetTimer, RedrawWindow, IsWindowVisible, SetWindowLongW, GetWindowRect, EqualRect, OffsetRect, SetRect, PtInRect, IsRectEmpty, IsWindow, PostMessageW, GetCursorPos, SendMessageW, EnableWindow, InvalidateRect, UpdateWindow, CharPrevW, wvsprintfW, GetClassInfoW, RegisterClassW, CreateWindowExW, BeginPaint, EndPaint, ScreenToClient, ClientToScreen, GetWindowLongW, CharNextW",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "USER32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "ImageList_AddMasked, ImageList_LoadImageW, ImageList_Destroy, CreateToolbarEx, ImageList_Draw, ImageList_SetOverlayImage, ImageList_DrawEx, InitCommonControlsEx, ImageList_GetImageCount",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "COMCTL32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "NetApiBufferFree, DsGetDcNameW",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "NETAPI32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "CoTaskMemFree, CoInitialize, CoInitializeEx, CoUninitialize, CoCreateInstance",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "ole32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "7, 6, 162, 201, 2",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "OLEAUT32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "SHAppBarMessage, Shell_NotifyIconW, SHGetSpecialFolderPathW, ShellExecuteW",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "SHELL32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "DrawDibOpen, DrawDibDraw, DrawDibClose",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "MSVFW32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "sndPlaySoundW",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "WINMM.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "145, 13, 133, 147, 135, 191, 73, 208, 26, 36, 140, 27, 41, 224, 206, 14",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "WLDAP32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Languages\", \"ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "resources": {
-                                "language": [
-                                    "ENGLISH"
-                                ],
-                                "name": [
-                                    "AVI",
-                                    "REGISTRY"
-                                ]
-                            }
-                        },
-                        "string": {
-                            "extracted": [
-                                "About Phone Dialer",
-                                "&More Information",
-                                "OK",
-                                "Phone Dialer 1.50",
-                                "Developed for Microsoft by Active Voice.  (C)1998 Active Voice Corporation.\nAll rights reserved.",
-                                "Active Voice offers a full range of messaging and communications software designed for Microsoft Windows(R) and BackOffice(tm).",
-                                "For more information, a free upgrade to the latest version of this program, or other software, visit: http://www.activevoice.com/dialer",
-                                "Add ILS Server",
-                                "&Server Address",
-                                "Cancel",
-                                "Video",
-                                "More Speed Dial Entries",
-                                "Select Entry to Dial",
-                                "List1",
-                                "Place &Call",
-                                "&Edit...",
-                                "Edit Speed Dial List",
-                                "Entrie&s",
-                                "&OK",
-                                "&Cancel",
-                                "Move &Up",
-                                "Move &Down",
-                                "&Add...",
-                                "&Remove",
-                                "Speed Dial",
-                                "Enter a display name and a phone number or network address",
-                                "&Display name:",
-                                "&Number or address:",
-                                "Dial as",
-                                "&Phone call",
-                                "Int&ernet call",
-                                "Internet &conference",
-                                "Take Picture",
-                                "&Video Device",
-                                "&Format...",
-                                "&Source...",
-                                "&Display...",
-                                "&Take Picture",
-                                "Preview",
-                                "Add User",
-                                "Enter the name of the user to add.  You must search the network directory to verify that the user exists.",
-                                "&User:",
-                                "&Search",
-                                "Search &Results:",
-                                "&Add"
-                            ]
-                        }
-                    }
-                },
-                "title_text": "Resources",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 296, \"Saved as\": \"icon_0.ico\"}, {\"ID\": 2, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 744, \"Saved as\": \"icon_1.ico\"}, {\"ID\": 3, \"Lang\": \"ENGLISH\", \"Size\": \"48x48\", \"Size (bytes)\": 3752, \"Saved as\": \"icon_2.ico\"}, {\"ID\": 4, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 2216, \"Saved as\": \"icon_3.ico\"}, {\"ID\": 5, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 1384, \"Saved as\": \"icon_4.ico\"}, {\"ID\": 6, \"Lang\": \"ENGLISH\", \"Size\": \"48x48\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_5.ico\"}, {\"ID\": 7, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_6.ico\"}, {\"ID\": 8, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 1128, \"Saved as\": \"icon_7.ico\"}, {\"ID\": 12, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 296, \"Saved as\": \"icon_8.ico\"}, {\"ID\": 9, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 744, \"Saved as\": \"icon_9.ico\"}, {\"ID\": 10, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 296, \"Saved as\": \"icon_10.ico\"}, {\"ID\": 11, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 296, \"Saved as\": \"icon_11.ico\"}, {\"ID\": 13, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 744, \"Saved as\": \"icon_12.ico\"}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_1.ico\", \"sha256\": \"a53f757a2f47e35bd04116073a5894476d8a5c776ef0951ca5c4cd0b389fcf7d\", \"description\": \"Icon 1 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_1.ico.thumb\", \"sha256\": \"a53f757a2f47e35bd04116073a5894476d8a5c776ef0951ca5c4cd0b389fcf7d\", \"description\": \"Icon 1 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_2.ico\", \"sha256\": \"bfe6c15de194312077365a2b358553fb43deac6bad683c2f63fb346105a6a393\", \"description\": \"Icon 2 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_2.ico.thumb\", \"sha256\": \"bfe6c15de194312077365a2b358553fb43deac6bad683c2f63fb346105a6a393\", \"description\": \"Icon 2 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_3.ico\", \"sha256\": \"ff3c0ac9d3d1da40b88317942811d9a72cfbdc7c10322f1c645b63c167403181\", \"description\": \"Icon 3 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_3.ico.thumb\", \"sha256\": \"ff3c0ac9d3d1da40b88317942811d9a72cfbdc7c10322f1c645b63c167403181\", \"description\": \"Icon 3 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_4.ico\", \"sha256\": \"28fb5e426761f7ee7255ee09cead066bbcfa95f1bf691c01a468ca654c9b23f1\", \"description\": \"Icon 4 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_4.ico.thumb\", \"sha256\": \"28fb5e426761f7ee7255ee09cead066bbcfa95f1bf691c01a468ca654c9b23f1\", \"description\": \"Icon 4 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_5.ico\", \"sha256\": \"f58945e866c0b78efcdbb63ae1bcb4791856e6d2df3119332cf9aa057d31aa7f\", \"description\": \"Icon 5 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_5.ico.thumb\", \"sha256\": \"f58945e866c0b78efcdbb63ae1bcb4791856e6d2df3119332cf9aa057d31aa7f\", \"description\": \"Icon 5 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_6.ico\", \"sha256\": \"418b40cf97a94b1f7e62c554072364c4643264d3c879c43b0c3d412670b78074\", \"description\": \"Icon 6 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_6.ico.thumb\", \"sha256\": \"418b40cf97a94b1f7e62c554072364c4643264d3c879c43b0c3d412670b78074\", \"description\": \"Icon 6 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_7.ico\", \"sha256\": \"f07d9c8d3a54f119a1540107270aab223a4c837af093ffe9e3fea897ee5bdbe4\", \"description\": \"Icon 7 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_7.ico.thumb\", \"sha256\": \"f07d9c8d3a54f119a1540107270aab223a4c837af093ffe9e3fea897ee5bdbe4\", \"description\": \"Icon 7 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_8.ico\", \"sha256\": \"362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0\", \"description\": \"Icon 8 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_8.ico.thumb\", \"sha256\": \"362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0\", \"description\": \"Icon 8 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_9.ico\", \"sha256\": \"62e9bc172a4c13a064dfb30fdb08608c93d4e608dfcbe57419318b25d2f44760\", \"description\": \"Icon 9 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_9.ico.thumb\", \"sha256\": \"62e9bc172a4c13a064dfb30fdb08608c93d4e608dfcbe57419318b25d2f44760\", \"description\": \"Icon 9 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_10.ico\", \"sha256\": \"b685831c3925a33a053edb7503765e302e0cf5b4bbe76c6f036067b25ee7419e\", \"description\": \"Icon 10 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_10.ico.thumb\", \"sha256\": \"b685831c3925a33a053edb7503765e302e0cf5b4bbe76c6f036067b25ee7419e\", \"description\": \"Icon 10 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_11.ico\", \"sha256\": \"8648acd2a99da5aa01dc36eef0003861fc68d73dbe6c32215d5a68d1550365d3\", \"description\": \"Icon 11 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_11.ico.thumb\", \"sha256\": \"8648acd2a99da5aa01dc36eef0003861fc68d73dbe6c32215d5a68d1550365d3\", \"description\": \"Icon 11 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_12.ico\", \"sha256\": \"c771bde14e8f6537109add6f660d10cd77a90b9071158696b219b88c679ef1ed\", \"description\": \"Icon 12 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_12.ico.thumb\", \"sha256\": \"c771bde14e8f6537109add6f660d10cd77a90b9071158696b219b88c679ef1ed\", \"description\": \"Icon 12 extracted from the PE file (thumbnail)\"}}]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Icons",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Type\", 0]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Version",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 63], [\"file_os\", \"NT_WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"APP\"], [\"file_version_LS\", 170395780], [\"file_version_MS\", 327681], [\"product_version_LS\", 170395780], [\"product_version_MS\", 327681], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "fixed_file_info",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "versions": {
-                                "filename": [
-                                    "Dialer"
-                                ],
-                                "description": [
-                                    "TAPI 3.0 Dialer and IP Multicast Conference Viewer"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "string_file_info",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"key\", \"040904B0\"], [\"type\", 1], [\"lang\", \"ENGLISH\"], [\"sublang\", \"ENGLISH_US\"], [\"code_page\", \"UTF_16\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 3,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "langcode_items 1",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ProductVersion\", \"5.1.2600.2180\"], [\"ProductName\", \"Microsoft\\u00ae Windows\\u00ae Operating System\"], [\"LegalCopyright\", \"\\u00a91998 Active Voice Corporation. All rights reserved.\"], [\"OriginalFilename\", \"Dialer\"], [\"FileVersion\", \"5.1.2600.2180\"], [\"CompanyName\", \"Microsoft Corporation\"], [\"FileDescription\", \"TAPI 3.0 Dialer and IP Multicast Conference Viewer\"], [\"InternalName\", \"Dialer\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 4,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "items",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78644233\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "var_file_info",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[{\"SHA256\": \"eb533c246e86f1a46f627fd653627552f70339290e6fd8b4db1c63d95fabfebb\", \"Type\": \"AVI\", \"Entropy\": 2.3882714586268112}, {\"SHA256\": \"29e9dbddcc8cb90fd393b1be123a0e4d14fde1f6ba85cf409e3cefd1fe817caa\", \"Type\": \"AVI\", \"Entropy\": 1.8872424420416296}, {\"SHA256\": \"7792bc0ac31153aaa40dc7429a471d071c1a297d356f798131881f422e56dc67\", \"Type\": \"AVI\", \"Entropy\": 1.919145656288193}, {\"SHA256\": \"f085b9d86a6f05f5653c8a55c2b5364de09ef7f6efb4351366aa2352e3aeb6a2\", \"Type\": \"AVI\", \"Entropy\": 1.8849794062257315}, {\"SHA256\": \"ee7012fdec02769cae93fdd877eb6ade97de4463cea53c0716cd5498557ac776\", \"Type\": \"AVI\", \"Entropy\": 1.8957399418903573}, {\"SHA256\": \"2c943c62c261616817bcac4cdd8e32dd9f7346b24d72d6004f5e46f3ea136c62\", \"Type\": \"REGISTRY\", \"Entropy\": 5.1979527109879955}, {\"SHA256\": \"4ea37e6c022576fab1a7300ad197cce1a9c2832504a2fd1952cc15396f0b47a6\", \"Type\": \"REGISTRY\", \"Entropy\": 5.150179895694644}, {\"SHA256\": \"89d2c7cf3f67fb372a7fce4570694a498b1c35ee062f34935e46c21c4e0bf207\", \"Type\": \"REGISTRY\", \"Entropy\": 5.215352327628009}, {\"SHA256\": \"57d04320cb96a953a6446715d274bc6a9782044777679cef2426c0728a505a51\", \"Type\": \"CURSOR\", \"Entropy\": 2.7051599847055696}, {\"SHA256\": \"9cc4de765ab007871ae3017de4c01858a66f525876ea079283c879107a3c957a\", \"Type\": \"BITMAP\", \"Entropy\": 4.4724586470870165}, {\"SHA256\": \"b2f8a6ba394b536dc17380d74d0020962d80f09869c2e2a200177f7659bd69a5\", \"Type\": \"BITMAP\", \"Entropy\": 4.260837024267665}, {\"SHA256\": \"d860340635e412198f15b53da9c0d0bb9f50da89b89901b6c0e1ca4c021c0a8a\", \"Type\": \"BITMAP\", \"Entropy\": 3.8678649147576065}, {\"SHA256\": \"32582b8741aefe064f63ab4d6adab40d3a4be54481309b71d2198a04a374f39c\", \"Type\": \"BITMAP\", \"Entropy\": 4.453370686523898}, {\"SHA256\": \"d36d36c04856e8203d3ed39938acdd45c84497605d9e90f8dce8f576688b6047\", \"Type\": \"BITMAP\", \"Entropy\": 4.085597140293716}, {\"SHA256\": \"16ae2d044c6e6146a3f018095802990260d114b7a145762fd855cfe5a5aada52\", \"Type\": \"BITMAP\", \"Entropy\": 4.042522795098373}, {\"SHA256\": \"b68a43b33afe9171090b19c394c1a8adfd55144b789ee3a9ac2a3c44b530241a\", \"Type\": \"BITMAP\", \"Entropy\": 4.417543123248805}, {\"SHA256\": \"02fd59cf28d0ede3e3d9a3f5542edaf385ac77e3260399c28e059caa3b5a1255\", \"Type\": \"BITMAP\", \"Entropy\": 3.292322885919776}, {\"SHA256\": \"7f66aae72f506c61e69a8df126282a206152c8dc63c59f8a43661b8cb1963dbb\", \"Type\": \"BITMAP\", \"Entropy\": 2.5415374895364975}, {\"SHA256\": \"3be0cfd1a7d6dd59e4a4def433b5c6409df0707fbe90cd96710524d98d1d142c\", \"Type\": \"BITMAP\", \"Entropy\": 3.355918693541978}, {\"SHA256\": \"d16f94dab9f64730fcd6684dbd1d0fe04244af043771c9e9e88c760edaf821b3\", \"Type\": \"BITMAP\", \"Entropy\": 2.78068222607146}, {\"SHA256\": \"6b92e7369f67eb869d4b75dfefd8661e1f65c4d02d51c5a8d6897433f0481c99\", \"Type\": \"BITMAP\", \"Entropy\": 4.140895521579915}, {\"SHA256\": \"2259fffa0878941dbd5b8bd42587960d1083815b0bce785231d080b122f57443\", \"Type\": \"BITMAP\", \"Entropy\": 4.568727599047842}, {\"SHA256\": \"319dcd4ba3b9851cf378a808fd83571b581d31d949d65fa6d84fb671ad7427ed\", \"Type\": \"BITMAP\", \"Entropy\": 4.122460845738168}, {\"SHA256\": \"3f422e508d60752d503be08f59e9506fc49fb5ced4e27882b5da1a4a74641bec\", \"Type\": \"BITMAP\", \"Entropy\": 4.087759364652384}, {\"SHA256\": \"39bc79d848cc3c867151f032e288a920b77df26bb9f36bae99f3b83e0e667bd4\", \"Type\": \"BITMAP\", \"Entropy\": 3.698534457108104}, {\"SHA256\": \"5e882d9b78da7991fb71da4258087dca517e38fbf639b4382250bb32c7e1f1d0\", \"Type\": \"BITMAP\", \"Entropy\": 3.360704677972296}, {\"SHA256\": \"d641d75b771f3fde2a73aacde0e8a09ed3c5e6d476d4438be3fdd13da1be63b5\", \"Type\": \"BITMAP\", \"Entropy\": 3.127035618346359}, {\"SHA256\": \"a8186e599c7c130e2059f948c6878e87a0ae3471d5671d8718efc761a5aa9f42\", \"Type\": \"BITMAP\", \"Entropy\": 3.451246614834602}, {\"SHA256\": \"8ed62b72066ba724ae570f6bf1bb72665255a0d97adb4423b4221153d23f1a07\", \"Type\": \"BITMAP\", \"Entropy\": 3.455999372213261}, {\"SHA256\": \"1a9d5cb4b69db48fe9b937e060b49b69ac5bb71467615d57e874dcf35dd87901\", \"Type\": \"BITMAP\", \"Entropy\": 3.940835245425399}, {\"SHA256\": \"8307819a630694f823abb8e034e238d045f7cc87b1de63d2402372564624dd67\", \"Type\": \"BITMAP\", \"Entropy\": 3.1326834627480364}, {\"SHA256\": \"17c6265fcf770ed7bcaeaf0d7017ebc67a335c77b5994861704f813851a26388\", \"Type\": \"BITMAP\", \"Entropy\": 2.41089119661428}, {\"SHA256\": \"65e7856f1a33da08945acf187365419ebffb378da6a7f68e86c3c6d4fdf04126\", \"Type\": \"BITMAP\", \"Entropy\": 4.095286178633302}, {\"SHA256\": \"aea6eb547308c160a6c66ef640d7b6a0947742d0ece9588dfa8b3c2d279e6696\", \"Type\": \"BITMAP\", \"Entropy\": 1.7926538171542923}, {\"SHA256\": \"aef0d8b5f716d15fd6b5f8ea2d42336288de439b3cbb6451e5eb4638a1ac5342\", \"Type\": \"BITMAP\", \"Entropy\": 2.352496743407235}, {\"SHA256\": \"7d2acadd4d80cc36d42f1f8f88765d36a6da185b5eec18dee3c58a67f4fdde0e\", \"Type\": \"BITMAP\", \"Entropy\": 3.797515412647192}, {\"SHA256\": \"9742189f91171d6a437597fe044185aa50f0f62cd4a630aa7fc2d8051aabcd3d\", \"Type\": \"BITMAP\", \"Entropy\": 4.472745709749584}, {\"SHA256\": \"b35e6e5dc0e3554b5de43a4e852d4c139a11153cc3ee8495f55b34b3430b9f76\", \"Type\": \"BITMAP\", \"Entropy\": 2.0865344198063482}, {\"SHA256\": \"cc5637552736b8ee9222269d2e54ed3bd81fff18854b07a935ee73174b7cf6e2\", \"Type\": \"BITMAP\", \"Entropy\": 0.9475942918663124}, {\"SHA256\": \"15a8682ca7cfb03e9cf6d6032a97a322a0069e20c432015cd14361a275eb8c5b\", \"Type\": \"BITMAP\", \"Entropy\": 4.475683415595029}, {\"SHA256\": \"2056ca85abe4b0237644f87b29771ed260f9217005bd2bd358f8d61780b47cf3\", \"Type\": \"ICON\", \"Entropy\": 3.8295952851897233}, {\"SHA256\": \"9b89a93b314184352a5165592009e110572f4a36c2d954a06b89e15de9d91aa5\", \"Type\": \"ICON\", \"Entropy\": 3.7498200812421745}, {\"SHA256\": \"7bc393f66a9ae432519ae7aa3ea0f0418b713a0304468854d6cb2c24b3f63606\", \"Type\": \"ICON\", \"Entropy\": 5.451541776150999}, {\"SHA256\": \"4a64c9d84101ac1006ac494ab230aba88d4a963042e43a6af90a5b39abe9cbca\", \"Type\": \"ICON\", \"Entropy\": 5.8947479581834274}, {\"SHA256\": \"fb5ba5dd757b8105e2f8d0333f68e34cd3a2c24a83739b2ce3310c4492c5f54e\", \"Type\": \"ICON\", \"Entropy\": 6.041025352864386}, {\"SHA256\": \"da9a39b2bd07cf285abad6572f96c79633e52cfa29818505515c1a30684cc0cc\", \"Type\": \"ICON\", \"Entropy\": 5.997251151654069}, {\"SHA256\": \"d1ae6ff5379fef26ca151088e8d5b8e7f766bc7b599401a93ea74a395dca3370\", \"Type\": \"ICON\", \"Entropy\": 6.343464757581019}, {\"SHA256\": \"451b93e70ed6a704951ea09cb8585f7c188f00700f5e9c9aa346923bd82d8c34\", \"Type\": \"ICON\", \"Entropy\": 6.660276331233526}, {\"SHA256\": \"16856332883869ede6ff3e9732b6c4972953001a8ef05661924e9d02616b9bcb\", \"Type\": \"ICON\", \"Entropy\": 3.0286705214218808}, {\"SHA256\": \"9e3d96c245e4ea842a34a798eceb95cff27ffe09d3cb376515cf1565fec2d7f9\", \"Type\": \"ICON\", \"Entropy\": 2.6408503008990807}, {\"SHA256\": \"d3e0b4910ec40289bf75f565f1369c1a2d577f4f3e5c75e06708f7c459193422\", \"Type\": \"ICON\", \"Entropy\": 2.911693555985926}, {\"SHA256\": \"ee331f18c884b976b9213b2f1d01676cd60c253b7b5c56bafa9b49c3d4fdb15a\", \"Type\": \"ICON\", \"Entropy\": 3.8543732971880766}, {\"SHA256\": \"feb65443cb1ced4f6ef4fb8bf2d4f1bdaf501d46b149ccf3617e60293da1951c\", \"Type\": \"ICON\", \"Entropy\": 2.8544888228046474}, {\"SHA256\": \"ce79cb6fd3498f95382249a6347d9027cc734eb90a92b0669055631839a4cd20\", \"Type\": \"MENU\", \"Entropy\": 3.404687555456367}, {\"SHA256\": \"6650a55ea6d5ad20ad2ba5ec2857f2e86d8123abeb06e7c4706e6675029480ad\", \"Type\": \"MENU\", \"Entropy\": 3.394744945346714}, {\"SHA256\": \"00664103a3894495bb2354a78bcc4cfff60b70c724a6d616686d0de27330dc1c\", \"Type\": \"MENU\", \"Entropy\": 3.224278337421984}, {\"SHA256\": \"38cf78d77da9bbaf950d9e4f9b66abd4678ee6f55f5e45c12c067c27f158ae09\", \"Type\": \"MENU\", \"Entropy\": 3.1903137267703396}, {\"SHA256\": \"5a0d2566401b3e7067df0f80774d2b00db551840ae5dd370bbc7660afe796c84\", \"Type\": \"MENU\", \"Entropy\": 3.2231775928017603}, {\"SHA256\": \"11a6fa33c72fbd86f0667c3ff7600727d76bda2a45e5f351b1e6bf65f6ab3210\", \"Type\": \"MENU\", \"Entropy\": 3.177775774711569}, {\"SHA256\": \"0c5d7b5bd0cb56255c911a3a0095811a17868ff78f9016691c7cd329138c6b31\", \"Type\": \"MENU\", \"Entropy\": 2.7800588372835544}, {\"SHA256\": \"5c8f857bb7441b88b3aeadebac4d42fa57d0dce6f4d5501edc0a14389bb0f5f9\", \"Type\": \"DIALOG\", \"Entropy\": 3.476682484331761}, {\"SHA256\": \"4f3300e11000341f911166faa2a6ba0644b1c08dfbcbeabbe59f265264dccaf5\", \"Type\": \"DIALOG\", \"Entropy\": 2.9799677644442397}, {\"SHA256\": \"6b9689d1831c2191f512e0f1fa91f34861410e030065c3e4ebbac29d4bf81de5\", \"Type\": \"DIALOG\", \"Entropy\": 3.394986215547015}, {\"SHA256\": \"2bb44d42119116262262a5cc1222db33a925515e1f307f86d01c3aa0ef0afdf0\", \"Type\": \"DIALOG\", \"Entropy\": 2.7554638839690457}, {\"SHA256\": \"edee8d30da9ad39ccd50a2533cc1a49e229e77eae86104ac33662885be9faf82\", \"Type\": \"DIALOG\", \"Entropy\": 3.2046905695165475}, {\"SHA256\": \"0a8fb13c7bcdb8417e022714403a54051e26f94736beab1b6beaaaa4efd009ef\", \"Type\": \"DIALOG\", \"Entropy\": 3.248123331852334}, {\"SHA256\": \"5131d67f4c6fc279eea557c9620b6dbb68570eaaaea640786681ede560fcbffd\", \"Type\": \"DIALOG\", \"Entropy\": 3.1932800696279515}, {\"SHA256\": \"a640e0d5405bf490923ecdcfe2d7cfcaaea421507824d2fe84633d4ebf2e6ebe\", \"Type\": \"DIALOG\", \"Entropy\": 3.1380953514114207}, {\"SHA256\": \"47823d434ecf3342bc4880a598a7fb613be26235efd80d59489b0ea7b71495cb\", \"Type\": \"DIALOG\", \"Entropy\": 3.2604516223947213}, {\"SHA256\": \"19bb264b1f9f2a512a37951aa2415d3c62af7d549d5fbd45a2a434caf8eda79b\", \"Type\": \"DIALOG\", \"Entropy\": 2.40020470625279}, {\"SHA256\": \"9aee3dd028d7cbebcb8eda5f0737de7df5f3e0a46d29203bf06cb933a6c5795b\", \"Type\": \"DIALOG\", \"Entropy\": 3.1846510736003046}, {\"SHA256\": \"6ff63e0dcc0f097def5d491badf48c506b6ce79e7bd7827d613f966377c14c72\", \"Type\": \"DIALOG\", \"Entropy\": 3.5188975171144703}, {\"SHA256\": \"363d88487fca99a7fcf14b1c9ad8faf230f33c0c52112681f7737dd1eea1f06d\", \"Type\": \"DIALOG\", \"Entropy\": 3.2543944358618946}, {\"SHA256\": \"98a908ff5e246185f2ab2b4748ce899d6975c7f03ab03ec1d001381f69b864a2\", \"Type\": \"DIALOG\", \"Entropy\": 3.297606658963791}, {\"SHA256\": \"5ccc7d03839b481e876d2b4f2f359a4d3f5700ba5fbb7ee1a447f5e50c36b40e\", \"Type\": \"DIALOG\", \"Entropy\": 3.2527275541535206}, {\"SHA256\": \"b751d56a3da99a806555be125cd3f78670db3b32decc090d5f755718c3ebc8e6\", \"Type\": \"STRING\", \"Entropy\": 2.8437288795973474}, {\"SHA256\": \"51ee8e330449278573994ecca95b596a1aa6bea5f89f90025e9929cbae841f89\", \"Type\": \"STRING\", \"Entropy\": 3.1538047713979083}, {\"SHA256\": \"f3aafb2ab02d34e8daa3c0fe24f1f4363490ebcd3d062d7e0e3a2af9ea43dcac\", \"Type\": \"STRING\", \"Entropy\": 2.88810926276059}, {\"SHA256\": \"63f74ff7f3cbcddab7c309892451c2dcfd93baab16fa693abd43f6658b55c5d2\", \"Type\": \"STRING\", \"Entropy\": 1.4377544837306804}, {\"SHA256\": \"29ca8fac0c4975f8acb40365920f5c56199bf8826c3c52a02cb15c5442a845ee\", \"Type\": \"STRING\", \"Entropy\": 2.8729214466778}, {\"SHA256\": \"587bf59128217312ec30824a2c940288ec64b3debf815b3a0f2d83d32c1a99c8\", \"Type\": \"STRING\", \"Entropy\": 3.166390399406097}, {\"SHA256\": \"806ebdd5e598b0e53c8a7b40c49e6cae3057e464f708e3034784fd0af3dea4d1\", \"Type\": \"STRING\", \"Entropy\": 3.1050847709809863}, {\"SHA256\": \"9fa3d971445803a1f94c0e2951ed6ca339322aa356a4164d2d4df07ca43308d9\", \"Type\": \"STRING\", \"Entropy\": 3.1037919095517448}, {\"SHA256\": \"d16c84bf40214a358543bbb5071915cc40ef4bf7c6bd44f3017117e6afd1e676\", \"Type\": \"STRING\", \"Entropy\": 3.0015173763033953}, {\"SHA256\": \"0261042b85e3da07e7ee281e0d1a04a7a2de66e121297d772cb86190a26fb170\", \"Type\": \"STRING\", \"Entropy\": 2.80178344618287}, {\"SHA256\": \"75031be9839460b865d1c8faebc6d9bc4c4bbbac9e61625e884a3b6698d9b010\", \"Type\": \"STRING\", \"Entropy\": 2.841733580847522}, {\"SHA256\": \"5bac2ec494bca82895d47eba55e44054219c860d2ac7a89aaf0e14a7569fed09\", \"Type\": \"STRING\", \"Entropy\": 2.886171427242613}, {\"SHA256\": \"556adcf9b6f78ef7278f3d045f796a17d9cda546bbcd8d2b4d3a4dd1dc0a9668\", \"Type\": \"STRING\", \"Entropy\": 2.98191765163378}, {\"SHA256\": \"3114f7a1585d39fef9f7c95047884289d538dd9766e8ffd88b45c558d17b0aaa\", \"Type\": \"STRING\", \"Entropy\": 3.124365261295341}, {\"SHA256\": \"6d2e076e77feb1dd3e928d347b6ccc027168bce40774031791f099b26017d3b2\", \"Type\": \"STRING\", \"Entropy\": 3.173092500785792}, {\"SHA256\": \"2e570d45b131489b3138558ed471bffd5c922138100481b4cf61fff4baeba7f8\", \"Type\": \"STRING\", \"Entropy\": 3.4591518030585084}, {\"SHA256\": \"1e395784b00d6cb80db664ea722a293b3e5766c96ac5a030413635b9dd98af92\", \"Type\": \"STRING\", \"Entropy\": 3.253374315675421}, {\"SHA256\": \"529fd0808a82d9a6775f0b8b12d394d2aa3e688a18bb1f4af6413ce6c91e01eb\", \"Type\": \"STRING\", \"Entropy\": 3.250346331295249}, {\"SHA256\": \"67ed892c07999d248ec26ff8a5039b70d8d60a8d2bb046b4a89a0642d0f06d68\", \"Type\": \"STRING\", \"Entropy\": 3.206712338180258}, {\"SHA256\": \"81427758aaf91fb2e9492f0cef4a5132d5a311eab882804494da068089af03d6\", \"Type\": \"STRING\", \"Entropy\": 3.0573484983141044}, {\"SHA256\": \"fe7ef5dfe3f5f5009e41c2d12ffca4660a7536118c492b291d4eef7f257dcbc6\", \"Type\": \"STRING\", \"Entropy\": 2.8192227390563147}, {\"SHA256\": \"c3614084eee92b9196e69ec152653ae205e9a3cd11b1cc29e965083123b52f5c\", \"Type\": \"STRING\", \"Entropy\": 2.5983604008155345}, {\"SHA256\": \"dde80408c8757031943401aa12ac699b9c9f323f2c7b0ec0c999b47fec27e9e8\", \"Type\": \"STRING\", \"Entropy\": 3.2920717055788993}, {\"SHA256\": \"63d076292297bff317b3119253a2bae3d30617c8e810c336996e6664e9fd4d35\", \"Type\": \"STRING\", \"Entropy\": 3.1801825107412114}, {\"SHA256\": \"da6a323650bf1bf4333fd7fe9fabd93c995fcd14425331d459752aadebb5f754\", \"Type\": \"STRING\", \"Entropy\": 2.7775407315220004}, {\"SHA256\": \"9a9b59d0e1f53e39626e9b2f4b4ce130d645fd90063bfe97ab658984edd77b0a\", \"Type\": \"STRING\", \"Entropy\": 2.252628788448228}, {\"SHA256\": \"389e58fdcaada7730bb7f6bf2e9b01328e0dbb87f5d27ef09771ec472639b2a2\", \"Type\": \"STRING\", \"Entropy\": 3.1725698001569302}, {\"SHA256\": \"3fc9875a6019315ce6799d7a3ba63c03b0b3ff968f9d1a510df8664e00193075\", \"Type\": \"STRING\", \"Entropy\": 2.627879563521811}, {\"SHA256\": \"f7bea941aea320f4526ca6436d76f2ac7523488bc64011854843894794d76586\", \"Type\": \"STRING\", \"Entropy\": 3.1562198132714476}, {\"SHA256\": \"41f4dd4badae2064a65c0c2c48310eb3d809375bcf0ea79a2112d639c1b98596\", \"Type\": \"STRING\", \"Entropy\": 1.7825323694326443}, {\"SHA256\": \"591951d18bda28ac337e09d8eba63b2ad44d966fbb04a36f5a95bac4c33b0ba6\", \"Type\": \"STRING\", \"Entropy\": 2.452087865985815}, {\"SHA256\": \"b2fb3e91f61b95d9f88c940181b7ac40c26ae0c48983c4e100b8d66f8a3d4c89\", \"Type\": \"STRING\", \"Entropy\": 3.151627321995557}, {\"SHA256\": \"a9aa1f389cdb6975ee3ca3a46c4d06cf76cfde22993e67f2c854badd6c759e38\", \"Type\": \"STRING\", \"Entropy\": 2.8623209894595454}, {\"SHA256\": \"4c18a270e59194879807b44fa39543b54ac09a239e6b174b26eab71cbaa91561\", \"Type\": \"STRING\", \"Entropy\": 3.205049047299221}, {\"SHA256\": \"68567338037b59ec10364cd75151c7c4f2cf63cb3b0ae229346f95797d9f59b4\", \"Type\": \"STRING\", \"Entropy\": 3.2878760520566814}, {\"SHA256\": \"57278560c119436710e31827507c20328fa18731103030e8fe051bb1046e7664\", \"Type\": \"STRING\", \"Entropy\": 2.8789549929076896}, {\"SHA256\": \"2b0fe37ea4fd72b9bfe35c24e37c7a61973345b912afb53eed96f4124a96dd09\", \"Type\": \"STRING\", \"Entropy\": 2.8542417573215384}, {\"SHA256\": \"74c4467f1e266c2394edc25751fd2c28f356af1ba9327607431c792d32972201\", \"Type\": \"STRING\", \"Entropy\": 3.244977938507183}, {\"SHA256\": \"b356938bba5033769a5ab6704a5313d1e5a5f5518a31fdcc3649b495337c9123\", \"Type\": \"STRING\", \"Entropy\": 2.8731537586598446}, {\"SHA256\": \"946ea760f04bc15aea5b2a9840ddb270e324fef561b0e075dfa664a83039178d\", \"Type\": \"STRING\", \"Entropy\": 2.809708349626258}, {\"SHA256\": \"29faa7840c32a400f08926dc1c934945aa22cdb633507b451611ed484111d69b\", \"Type\": \"STRING\", \"Entropy\": 3.040449555455187}, {\"SHA256\": \"856f98741ab3ea63440eaad0d53581d3a710bc867fa0b0c82f59a2ce305b3d72\", \"Type\": \"STRING\", \"Entropy\": 3.337008857405373}, {\"SHA256\": \"49feb5e0ee57fc0bbde8a82508cd6ac4e9b4759d37d815744375abf8c0e2312e\", \"Type\": \"STRING\", \"Entropy\": 2.929670942944608}, {\"SHA256\": \"69d0a36b71bb5242edcf4359012a5e36b73629baaa08023f9d9834a119fccc67\", \"Type\": \"STRING\", \"Entropy\": 2.2274473367694325}, {\"SHA256\": \"a81094b9335364b8195dd430efb5a5de9bc600de3215a0c46963dda8c158b0ef\", \"Type\": \"STRING\", \"Entropy\": 3.284840331552562}, {\"SHA256\": \"0459cc57dd5521dc9db0e1d46093ee295103f1765727811785de20e9b7bf8407\", \"Type\": \"STRING\", \"Entropy\": 3.272622516502905}, {\"SHA256\": \"3a681c87cda891bf46a67c315bb5fe1a533d8b82630283cc7e044c2cc679301d\", \"Type\": \"STRING\", \"Entropy\": 3.0571913782216247}, {\"SHA256\": \"baeec46b0d39ec3003342db695fb26c03e4f23fe1c019dd1ed55fcb9ddec52a6\", \"Type\": \"STRING\", \"Entropy\": 3.1633231150525662}, {\"SHA256\": \"9f6e296d0d908c7014fa479fe8c3b5dc42c0560c0a02332673b0c146736d4a41\", \"Type\": \"STRING\", \"Entropy\": 2.992190180970831}, {\"SHA256\": \"3a5c06e15e97f6777b17438a6d96c77316e4eb252083185681923c0fb7910bd6\", \"Type\": \"STRING\", \"Entropy\": 2.9951529979141625}, {\"SHA256\": \"dd799981dabfbf42e00570ed95d077624cd8fd7b7294200e5cf8ad75b48cc593\", \"Type\": \"STRING\", \"Entropy\": 3.231622606818528}, {\"SHA256\": \"10d84d5f6c2f6b84310e3c2ac9d6c0e1399893b63a933a3f0acdca61efce6559\", \"Type\": \"STRING\", \"Entropy\": 2.9976456260117796}, {\"SHA256\": \"9cd79e5f57d777fe4a1be9ced67fd1d81e5ad073bd654eafb295731ac2ccdcb9\", \"Type\": \"STRING\", \"Entropy\": 2.7937316633989417}, {\"SHA256\": \"54b8d438128230dedb0831da8e387208109c9ad2e8fa82d90e2653a5fef65091\", \"Type\": \"STRING\", \"Entropy\": 3.216785506523262}, {\"SHA256\": \"8336689018f6502ea9cc29e7775c94f99c3fbca652dbd23d278f70d82d34b9b2\", \"Type\": \"STRING\", \"Entropy\": 3.4540447865172816}, {\"SHA256\": \"13cc7123bfa3b45ebafa50c6496c9ce35e771e5e135d9ce5eb5263d7cb896908\", \"Type\": \"STRING\", \"Entropy\": 2.724411894933382}, {\"SHA256\": \"3fe03043c95ec2bfa8e8eb3b44a8dcfada11f1a857f247adee8cf121e2594fab\", \"Type\": \"STRING\", \"Entropy\": 2.841322029372729}, {\"SHA256\": \"ee2c7c2b669ec88f7b3f32c13a86304c5fd503e2640b10965cefac2363c0005f\", \"Type\": \"STRING\", \"Entropy\": 2.948032501035684}, {\"SHA256\": \"0c2b3b55c2cf9996b60d01c9612fd8a267d0d936082cc9987e47d101c8b40e67\", \"Type\": \"STRING\", \"Entropy\": 2.6724919827269376}, {\"SHA256\": \"6bab69416c0b50f7047333583a23310723ca9d7d1b503b0e2c2d5e3a0393cf21\", \"Type\": \"STRING\", \"Entropy\": 3.2001119974887993}, {\"SHA256\": \"c52de20b37a9ae90d7369a50e4bf0f6231af657bec06f70bf91cb9ff68ed9a04\", \"Type\": \"STRING\", \"Entropy\": 3.3393279128575863}, {\"SHA256\": \"d0220e46f996212b0ad12bc39646364341d58831b2c2292b6617538def7ff582\", \"Type\": \"STRING\", \"Entropy\": 3.1473829637842945}, {\"SHA256\": \"af697c6c13e51d86e918fd8790402a13f1beff4a7fd43d4f575efa3bfabd1bc4\", \"Type\": \"STRING\", \"Entropy\": 3.310729805189795}, {\"SHA256\": \"17512eeee2514219730d9622dfc6f17578d635fdcfc33bfd15905cbe17e23bcb\", \"Type\": \"STRING\", \"Entropy\": 2.8444486930451935}, {\"SHA256\": \"cd7979529a4d0e277eb6b81376719db47df2f6a843e239e6ff9fe1a5b565d93c\", \"Type\": \"STRING\", \"Entropy\": 3.045039569509756}, {\"SHA256\": \"08c66ca2ba1c9a94f701fb72ef8d412763c13dc78e9db5b07367bb99798780d2\", \"Type\": \"STRING\", \"Entropy\": 2.979710506297147}, {\"SHA256\": \"c6d248df186f2f4ab599f81a4c33e53026ee2a3ce7169732254562e9c29a9885\", \"Type\": \"STRING\", \"Entropy\": 3.1243837676693764}, {\"SHA256\": \"c9d529fc5b28f83928d8d6d24f561b3e387811c74c192be97fc4a1ff2ed4f1b2\", \"Type\": \"STRING\", \"Entropy\": 3.2918350997524746}, {\"SHA256\": \"7cb90644559642a71e12fd32171f151d9225de1e3b3e2443876a809d1c8aa826\", \"Type\": \"STRING\", \"Entropy\": 2.7619117217011686}, {\"SHA256\": \"8e2c6cc45c6ae2f4c12ebf8cbbe27bd8ec803377e6aac41871e512e89f7e3887\", \"Type\": \"STRING\", \"Entropy\": 3.0140645009476525}, {\"SHA256\": \"3205d9d8683ecd9998428a442a3b721cc7d7ce8d4e4c31063f02d99791dc28d0\", \"Type\": \"STRING\", \"Entropy\": 2.913437440932319}, {\"SHA256\": \"fc3f6f769e88ce894bba9f4078aaea4a47db8284f3fafb6ff844f8a5406feaba\", \"Type\": \"STRING\", \"Entropy\": 3.1996128967690214}, {\"SHA256\": \"51e46939a67865d6b8ac14859e035fb360773e494243ba263a65b8ec06944ea2\", \"Type\": \"STRING\", \"Entropy\": 2.3812332308555217}, {\"SHA256\": \"d49d69ce0065c20e5c4cbde3a7b45dfb86c7ef56a72cadff70a0002441b8d6e6\", \"Type\": \"STRING\", \"Entropy\": 3.237616952781071}, {\"SHA256\": \"f4d2054bad5a30d07ffde08fafdf7a0deed4e343526816a67ecbbd068b84ad81\", \"Type\": \"STRING\", \"Entropy\": 2.835572426200111}, {\"SHA256\": \"0cce65df387f67147c75ac921bc6512fb5fc8dc86d3a60a2e0c2ba2d4845539b\", \"Type\": \"STRING\", \"Entropy\": 3.0477660015035815}, {\"SHA256\": \"934c6ae73724aa444c9e02c81312cec0d60006e496e65664eb5069e1378e6cee\", \"Type\": \"STRING\", \"Entropy\": 2.6253904018832572}, {\"SHA256\": \"dcdadca52ded03471f3c6983045f73426b2fb95adb072840f4d8cb5d5c73dbc0\", \"Type\": \"ACCELERATOR\", \"Entropy\": 3.214868710445169}, {\"SHA256\": \"ef309b720f166673cad840a88e7636e9161ad91415cc7c176010cebba07757e5\", \"Type\": \"GROUP_CURSOR\", \"Entropy\": 2.019240704636849}, {\"SHA256\": \"508f2872d643fd001f83004571f14e7e0802c4774ae3ce12ae274ab6759ff40e\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.8115831294237212}, {\"SHA256\": \"e03ca89042dd41574baa264f8b55be15286e9c1460a2c7e7b125c87c81e2fb65\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.023219672335508}, {\"SHA256\": \"76e0b897fbf717a27413b60b6f5fef407bf00165c1425503a098f89090e266b1\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.5580510765444573}, {\"SHA256\": \"2ef8f3005787231e5b1b5baaa4e31980f4f0eb0eb40d74513cd03b5f684f2e8f\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.023219672335508}, {\"SHA256\": \"aa1ea7a598091ab2b87c82b8760d87c8fb44850147f30ca6149009a574f335a3\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.3232196723355076}, {\"SHA256\": \"4ee833eb1434db4026c824ab833c3c0befec41a0fe7c4dc9f12196b7698ab823\", \"Type\": \"VERSION\", \"Entropy\": 3.519064918879649}, {\"SHA256\": \"6a03c5093a38e8dfd2cd983e80b93f8dd717962f7230b20aed5d76924c219e12\", \"Type\": \"MANIFEST\", \"Entropy\": 5.072424054257969}, {\"SHA256\": \"4f56a625291c11bb60fc2b32eb33a5ec143b8738d6f93d4ea30f9c8847fb3d8a\", \"Type\": \"???\", \"Entropy\": 3.306890595608519}, {\"SHA256\": \"699dbe9bd5bf878c1dd8c10df3299f414236b1840fece1ec747b9d0cfe2de499\", \"Type\": \"???\", \"Entropy\": 2.321928094887362}, {\"SHA256\": \"55491e532aacb6f6371e224114c3102eca50dd4cdd5e46464a0b3a7f23978e78\", \"Type\": \"???\", \"Entropy\": 3.044110417748401}, {\"SHA256\": \"634a85d9b7949de13822c1712ee871eca82994bca9f30a616dfc5069da8706c1\", \"Type\": \"???\", \"Entropy\": 2.875}, {\"SHA256\": \"f5c6dd122a2c78a84ff153f5ebb49af188ae89a870534a7ac3091201c5ee9676\", \"Type\": \"???\", \"Entropy\": 3.1464393446710153}, {\"SHA256\": \"0669dea9c8e823d49cb699ca67c383b578b96d114caaf98624f2a7719b502c80\", \"Type\": \"???\", \"Entropy\": 3.4056390622295662}, {\"SHA256\": \"5394ef9be74a63be279edbe6f0e59f6f3711ef3a6fb42752322a491d42953b11\", \"Type\": \"???\", \"Entropy\": 3.8323328717505136}, {\"SHA256\": \"76f605070694577cd5adbe0ded901f52ddbd04adbef05517e69aa3e7c0523504\", \"Type\": \"???\", \"Entropy\": 3.3851744471284113}]",
-                "classification": "TLP:W",
-                "body_format": "TABLE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Summary",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Overlay",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            }
-        ]
-    },
-    "sha256": "9b58db32f6224e213cfd130d6cd7a18b2440332bfd99e0aef4313de8099fa955",
+  "extra": {
     "drop_file": false,
+    "score": 0,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1091599591 (2004-08-04 06:06:31 +00:00 (UTC))\"], [\"Entrypoint\", \"0x2eb81\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"5.1\"], [\"Linker version\", \"7.10\"], [\"Operating System version\", \"5.1\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00084d4c\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  1091599591,
+                  "2004-08-04 06:06:31 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"1012097a43cae12a26c093fe4d5bab95\"]]], [\"TABLE\", [{\"ID\": \"0x005a0fc3\", \"Compiler Information\": \"[LNK] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 1}, {\"ID\": \"0x005c0fc3\", \"Compiler Information\": \"[EXP] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 1}, {\"ID\": \"0x00600fc3\", \"Compiler Information\": \"[C++] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 60}, {\"ID\": \"0x005e0fc3\", \"Compiler Information\": \"[RES] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 1}, {\"ID\": \"0x005f0fc3\", \"Compiler Information\": \"[ C ] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 26}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 870}, {\"ID\": \"0x005d0fc3\", \"Compiler Information\": \"[IMP] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 33}, {\"ID\": \"0x000f0fc3\", \"Compiler Information\": \"[ASM] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 4}, {\"ID\": \"0x00690813\", \"Compiler Information\": \"Unknown object 0x00690813\", \"Count\": 2}]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "rich_header": {
+                "hash": [
+                  "1012097a43cae12a26c093fe4d5bab95"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Rich Headers - Key: 3389934576",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"sha512\", \"b139dbc158763608c8ef23547dd57e4d63d396a67628c65b42bfa5e9ad4e66647e03176a1876665f3c51f4a05b10f9446975c61b6774a1b1d7b42a86953e007e\"], [\"sha384\", \"16d17b501d41bde2d3652d3e4788f29f6ed45f6c48e20b27a6a82c1de09a83f7fabbbf4eb4b3ee9fee1480ba2922492d\"], [\"sha256\", \"8bd5a9cf1e804705ab7528f434d68ce8ce1aac7a790bab797ae030c16a9641ee\"], [\"sha1\", \"60120ca95bb0c8d2b0062c01673ffb927230bc30\"], [\"md5\", \"bf33ad935ca0bbaf300c443eb68bcaaa\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.184668385181863], [\"Entropy without padding\", 6.1896314541793975], [\"Offset\", 1024], [\"Size\", 234496], [\"Virtual Size\", 234181], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"69b371454c8150be9a0621dc7ffe22ce\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.8352, 4.57805, 4.52179, 4.47508, 4.29266, 4.44449, 4.75944, 2.86632, 5.47932, 6.15303, 6.30024, 6.17862, 6.14958, 6.15355, 6.03548, 6.11717, 6.21423, 6.13673, 6.08217, 6.21974, 6.11989, 6.08652, 6.14738, 6.23554, 6.20416, 6.10194, 6.23383, 6.16185, 5.96358, 6.18364, 6.10076, 6.14321, 6.14303, 6.21266, 6.23679, 6.14245, 6.11439, 6.13843, 5.91473, 3.42194, 6.14029, 5.94436, 6.21781, 5.34966, 5.37098, 3.30557, 3.36498, 3.60176, 5.7822, 5.38657]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "69b371454c8150be9a0621dc7ffe22ce"
+                ],
+                "name": [
+                  ".text"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .text",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.824781531401602], [\"Entropy without padding\", 4.824781531401601], [\"Offset\", 235520], [\"Size\", 5120], [\"Virtual Size\", 6896], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"f071b90453a12c2be89a50896db16fce\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.52386, 4.06673, 3.69213, 4.38417, 4.43203, 4.66959, 4.59991, 4.41712, 4.64979, 4.36398, 2.96811, 3.88957, 4.3895, 4.40134, 4.80435, 4.68569, 4.4553, 4.58689, 4.67891, 3.92513, 3.95383, 3.98481, 4.21091, 3.65067, 4.14131, 4.53742, 4.32401, 3.84065, 4.40369, 4.23325, 3.73637, 4.07536, 4.48787, 4.19985, 4.32004, 2.95715, 2.90173, 2.96795, 3.29289, 2.49088, 2.32293, 3.59696, 4.14171, 4.26082, 4.08595, 4.24674, 4.25861, 4.30796, 3.58703, 2.24632]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "f071b90453a12c2be89a50896db16fce"
+                ],
+                "name": [
+                  ".data"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .data",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.997325647785224], [\"Entropy without padding\", 4.999768269742733], [\"Offset\", 240640], [\"Size\", 298496], [\"Virtual Size\", 298216], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"6c3a344aa61744cfd5304e755220574f\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.43612, 4.86128, 5.68658, 6.70719, 5.65957, 4.97496, 4.43438, 4.32892, 4.47205, 4.90946, 4.00441, 2.9653, 2.33657, 2.98099, 3.34443, 4.20945, 3.17539, 1.17443, 2.72909, 2.54737, 1.54591, 2.93431, 0.45228, 1.71948, 0.22518, 0.20076, 1.24202, 1.05046, 0.14935, 0.28163, 1.80623, 0.27855, 2.78255, 3.7925, 5.92905, 5.61171, 3.17701, 1.98965, 4.56797, 3.55296, 3.9415, 1.85812, 1.92897, 1.9201, 2.58861, 3.30803, 3.25016, 3.41967, 3.47014, 3.15315]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "6c3a344aa61744cfd5304e755220574f"
+                ],
+                "name": [
+                  ".rsrc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rsrc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Debugs",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1091599591 (2004-08-04 06:06:31 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"dialer.pdb\"], [\"GUID\", \"7fdc3f15-8ef9-4afa-9859-bf6c8de983b\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "debug": {
+                "guid": [
+                  "7fdc3f15-8ef9-4afa-9859-bf6c8de983b"
+                ]
+              },
+              "pdb_filename": [
+                "dialer.pdb"
+              ]
+            }
+          }
+        },
+        "title_text": "CODEVIEW",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Name: dialer.exe\nVersion: 0.0\nTimestamp: 1091599590 (2004-08-04 06:06:30 +00:00 (UTC))",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "exports": {
+                "module_name": [
+                  "dialer.exe"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Export",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Name: _BScrollGetWindowHandle@4, ordinal: 1\nName: _BScrollInit@44, ordinal: 2\nName: _BScrollStart@4, ordinal: 3\nName: _BScrollStop@4, ordinal: 4\nName: _BScrollTerm@4, ordinal: 5\nName: _BScrollWndProc@16, ordinal: 6\nName: _CreateDIBPalette@8, ordinal: 7\nName: _GfxBitmapBackfill@12, ordinal: 8\nName: _GfxBitmapDisplay@20, ordinal: 9\nName: _GfxBitmapDrawTransparent@24, ordinal: 10\nName: _GfxBitmapScroll@20, ordinal: 11\nName: _GfxDeviceIsMono@4, ordinal: 12\nName: _GfxHideHourglass@4, ordinal: 13\nName: _GfxLoadBitmapEx@12, ordinal: 14\nName: _GfxShowHourglass@4, ordinal: 15\nName: _GfxTextExtentTruncate@12, ordinal: 16\nName: _MemAllocEx@20, ordinal: 17\nName: _MemFreeEx@16, ordinal: 18\nName: _MemInit@8, ordinal: 19\nName: _MemReAllocEx@24, ordinal: 20\nName: _MemSize@8, ordinal: 21\nName: _MemTerm@4, ordinal: 22\nName: _StrAtoI@4, ordinal: 23\nName: _StrAtoL@4, ordinal: 24\nName: _StrChrCat@8, ordinal: 25\nName: _StrChrCatLeft@8, ordinal: 26\nName: _StrClean@12, ordinal: 27\nName: _StrCpyXChr@12, ordinal: 28\nName: _StrDup@4, ordinal: 29\nName: _StrDupFree@4, ordinal: 30\nName: _StrGetLastChr@4, ordinal: 31\nName: _StrGetRow@16, ordinal: 32\nName: _StrGetRowColumnCount@12, ordinal: 33\nName: _StrInsert@8, ordinal: 34\nName: _StrItoA@12, ordinal: 35\nName: _StrLtoA@12, ordinal: 36\nName: _StrSetLastChr@8, ordinal: 37\nName: _StrSetN@12, ordinal: 38\nName: _StrTrimChr@8, ordinal: 39\nName: _StrTrimChrLeading@8, ordinal: 40\nName: _StrTrimQuotes@4, ordinal: 41\nName: _StrTrimWhite@4, ordinal: 42\nName: _StrTrimWhiteLeading@4, ordinal: 43\nName: _TraceGetLevel@4, ordinal: 44\nName: _TraceInit@8, ordinal: 45\nName: _TraceOutput@12, ordinal: 46\nName: TracePrintf, ordinal: 47\nName: _TraceSetLevel@8, ordinal: 48\nName: _TraceTerm@4, ordinal: 49",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "exports": {
+                "function_name": [
+                  "_BScrollGetWindowHandle@4",
+                  "_BScrollInit@44",
+                  "_BScrollStart@4",
+                  "_BScrollStop@4",
+                  "_BScrollTerm@4",
+                  "_BScrollWndProc@16",
+                  "_CreateDIBPalette@8",
+                  "_GfxBitmapBackfill@12",
+                  "_GfxBitmapDisplay@20",
+                  "_GfxBitmapDrawTransparent@24",
+                  "_GfxBitmapScroll@20",
+                  "_GfxDeviceIsMono@4",
+                  "_GfxHideHourglass@4",
+                  "_GfxLoadBitmapEx@12",
+                  "_GfxShowHourglass@4",
+                  "_GfxTextExtentTruncate@12",
+                  "_MemAllocEx@20",
+                  "_MemFreeEx@16",
+                  "_MemInit@8",
+                  "_MemReAllocEx@24",
+                  "_MemSize@8",
+                  "_MemTerm@4",
+                  "_StrAtoI@4",
+                  "_StrAtoL@4",
+                  "_StrChrCat@8",
+                  "_StrChrCatLeft@8",
+                  "_StrClean@12",
+                  "_StrCpyXChr@12",
+                  "_StrDup@4",
+                  "_StrDupFree@4",
+                  "_StrGetLastChr@4",
+                  "_StrGetRow@16",
+                  "_StrGetRowColumnCount@12",
+                  "_StrInsert@8",
+                  "_StrItoA@12",
+                  "_StrLtoA@12",
+                  "_StrSetLastChr@8",
+                  "_StrSetN@12",
+                  "_StrTrimChr@8",
+                  "_StrTrimChrLeading@8",
+                  "_StrTrimQuotes@4",
+                  "_StrTrimWhite@4",
+                  "_StrTrimWhiteLeading@4",
+                  "_TraceGetLevel@4",
+                  "_TraceInit@8",
+                  "_TraceOutput@12",
+                  "TracePrintf",
+                  "_TraceSetLevel@8",
+                  "_TraceTerm@4"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Entries",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "imports": {
+                "fuzzy": [
+                  "96:HKY3+HJKUt+TsppGipfrd/+i7iXG+RGUQpGO1qbKdLpvv6mlX2wc+pRPhdp8NidZ:Hr4cUtKERTNpiXG9nS++mGQPhdpTYof"
+                ],
+                "imphash": [
+                  "02c3f6b4018572e7a446fe853ac114e2"
+                ],
+                "sorted_fuzzy": [
+                  "96:ddKdXdUsaXdrliK1bZ2QYHywp1FBGkjSj/hU+iSU4AHjSQKXN/JGMLKTWUGtOBI2:dAo7i1hwhUQUNjSQKXN8M2iUGRLYafQ"
+                ],
+                "sorted_sha1": [
+                  "d4f13dd5b7805bf12d6654722495180a4f4329e0"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Imports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "561, 2717, 5285, 6279, 6278, 4124, 4272, 2756, 2362, 1761, 4704, 6371, 3810, 2885, 1105, 6195, 3087, 2294, 617, 5297, 6350, 6348, 2028, 986, 520, 4154, 6113, 2613, 5208, 296, 940, 942, 4426, 3621, 2406, 3568, 1634, 4583, 4582, 4893, 4364, 4886, 4335, 4343, 4884, 4525, 4539, 4537, 4520, 4523, 4518, 4958, 4955, 4103, 5236, 3743, 1719, 5256, 1264, 4717, 1840, 4238, 6451, 2855, 2574, 4396, 3365, 3635, 693, 2857, 686, 384, 6168, 5871, 5785, 755, 2966, 470, 3288, 2089, 2400, 5619, 3297, 283, 2854, 1933, 810, 4266, 3393, 3728, 3084, 2755, 4215, 2576, 3649, 2430, 2858, 1637, 5616, 3991, 6266, 2092, 997, 6567, 915, 1863, 4186, 5592, 400, 702, 5630, 1808, 795, 956, 3614, 3133, 3397, 3716, 773, 501, 326, 2563, 1083, 5596, 5783, 5869, 3562, 602, 2634, 535, 1795, 4225, 6150, 2522, 4358, 4051, 5467, 4116, 2381, 5230, 6365, 5275, 5244, 2436, 298, 620, 4448, 6331, 1930, 4263, 3290, 4360, 1703, 2615, 5058, 554, 807, 4800, 6060, 3490, 6105, 291, 6437, 5880, 2916, 2538, 2293, 3579, 543, 803, 802, 542, 3517, 1764, 6362, 2405, 2016, 4214, 2573, 4395, 3634, 692, 2637, 3281, 6896, 3566, 3687, 459, 5781, 640, 6153, 323, 816, 562, 5787, 5617, 6330, 2606, 1085, 537, 4273, 6125, 4078, 879, 882, 609, 656, 2567, 4390, 3569, 3605, 3798, 4442, 4665, 4670, 4584, 1834, 4237, 3332, 6205, 3865, 5248, 3806, 5024, 4493, 2715, 2382, 3054, 5094, 5097, 4461, 4298, 3345, 5006, 5468, 3398, 2874, 2873, 4146, 4072, 5233, 5278, 2641, 1658, 4430, 4421, 796, 674, 529, 366, 4407, 5996, 2109, 6325, 4451, 1941, 1173, 5801, 613, 289, 4688, 998, 5638, 3867, 2350, 3993, 1937, 4268, 5070, 560, 813, 3000, 4158, 5881, 6142, 4279, 2112, 1791, 3348, 614, 1191, 290, 3688, 4128, 4292, 5784, 941, 2746, 3494, 2507, 355, 3516, 652, 715, 4420, 4617, 6171, 6076, 3193, 3449, 4381, 3733, 4616, 5710, 5303, 4074, 5298, 5296, 3341, 2388, 5193, 1089, 3917, 2391, 4852, 1569, 4947, 5649, 3167, 5573, 1739, 5736, 5239, 2534, 2502, 6332, 3060, 3053, 4690, 1203, 5930, 2078, 2910, 5568, 1144, 354, 1172, 538, 925, 922, 5210, 1165, 6396, 2732, 2793, 1594, 1196, 5593, 4817, 641, 3998, 2478, 4233, 1817, 5852, 2776, 858, 3658, 1081, 3291, 540, 4155, 800, 3909, 3282, 2859, 823, 825, 2115, 4418, 4621, 4075, 3074, 3820, 3826, 3825, 2971, 3076, 2980, 3257, 3131, 4459, 3254, 3142, 2977, 5727, 2504, 2546, 4480, 1143, 2371, 4294, 4270, 818, 567, 3737, 4692, 4847, 4229, 324, 3592, 4419, 5276, 1767, 6048, 2506, 4992, 4370, 5261, 3191, 3442, 815, 743, 4269, 4604, 4606, 3313, 870, 996, 3805, 919, 937, 935, 5977, 2879, 5601, 273, 1961, 603, 4414, 3871, 6565, 6376, 6374, 6193, 6375, 3792, 6211, 5180, 6381, 2806, 2810, 1971, 665, 6398, 1220, 338, 1633, 415, 5273, 2116, 2438, 5257, 1720, 5059, 3744, 6372, 2047, 2640, 4435, 4831, 3793, 5286, 4347, 6370, 5157, 2377, 5237, 4401, 1768, 4073, 6051, 1708, 861",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "MFC42u.DLL",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "_onexit, ?terminate@@YAXXZ, __dllonexit, ??1type_info@@UAE@XZ, _except_handler3, __set_app_type, __p__fmode, __p__commode, _adjust_fdiv, __setusermatherr, _initterm, __wgetmainargs, _wcmdln, exit, _cexit, _XcptFilter, _exit, __CxxFrameHandler, wcscmp, _controlfp, wcscpy, _c_exit, iswctype, _wcsnicmp, _itow, _ltow, memmove, wcstoul, _wtol, _wtoi, _wcsicmp, towupper, _snwprintf, wcschr, _ftol, free, _wcsdup, _purecall, wcsncpy, swprintf, wcslen",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "msvcrt.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "18, 32, 16, 21, 23, 17, 20, 11, 10",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "ATL.DLL",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "RegQueryValueExA, RegCloseKey, RegDeleteKeyW, RegDeleteValueW, RegSetValueW, RegQueryValueExW, RegOpenKeyExW, RegCreateKeyExW, RegSetValueExW, RegOpenKeyExA, GetUserNameW",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "ADVAPI32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "GetModuleHandleA, SetUnhandledExceptionFilter, UnhandledExceptionFilter, TerminateProcess, GetSystemTimeAsFileTime, GetCurrentProcessId, QueryPerformanceCounter, GetTempPathW, GetTempFileNameW, CreateDirectoryW, FindResourceW, LoadResource, LockResource, lstrcmpiW, GetCurrentThreadId, GetModuleHandleW, FormatMessageW, LoadLibraryA, GetCurrentProcess, ExpandEnvironmentStringsW, ResetEvent, WaitForMultipleObjects, LoadLibraryW, GetProcAddress, FreeLibrary, lstrcpynW, IsBadWritePtr, Sleep, GlobalHandle, CreateFileW, WriteFile, GlobalAlloc, GlobalUnlock, GlobalReAlloc, GlobalFree, GlobalLock, lstrcpyW, lstrcatW, lstrlenW, GetLastError, GetPrivateProfileStringW, CreateThread, SetEvent, InterlockedDecrement, DeleteFileW, GetTickCount, WaitForSingleObject, TerminateThread, CloseHandle, CreateEventW, InterlockedIncrement, GetWindowsDirectoryW, EnterCriticalSection, LeaveCriticalSection, DeleteCriticalSection, InitializeCriticalSection, HeapFree, GetProcessHeap, FreeConsole, OutputDebugStringW, SetConsoleScreenBufferSize, GetStdHandle, AllocConsole, GetPrivateProfileIntW, HeapAlloc, WritePrivateProfileStringW, HeapSize, HeapReAlloc, GetStartupInfoW",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "KERNEL32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "CreateFontIndirectW, GetTextExtentPoint32W, CreateSolidBrush, GetObjectW, DeleteObject, PatBlt, SelectObject, SetBkColor, ExtTextOutW, StretchBlt, GetDIBColorTable, CreatePen, RealizePalette, SelectPalette, GetStockObject, CreatePalette, SetBkMode, SetTextColor, GetDIBits, CreateDCW, CreateCompatibleDC, DeleteDC, GetDeviceCaps, CreateCompatibleBitmap, CreateHalftonePalette, BitBlt, GetSystemPaletteEntries, Rectangle, CreatePolygonRgn, PtInRegion, SetPixel, GetPixel, ExtFloodFill, CreateBitmap, SetMapMode, GetMapMode, DPtoLP, GetTextExtentPointW, CreateDIBitmap",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "GDI32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "SetActiveWindow, SetForegroundWindow, EndDeferWindowPos, DeferWindowPos, BeginDeferWindowPos, GetActiveWindow, SystemParametersInfoW, GetSystemMetrics, SetFocus, GetFocus, GetClientRect, GetDesktopWindow, FindWindowW, GetLastActivePopup, LoadCursorW, LoadIconW, SetWindowPos, GetDlgItem, WinHelpW, RegisterClassExW, DefWindowProcW, SetClassLongW, GetSysColor, CopyRect, FillRect, DrawFocusRect, DrawTextW, GetParent, SetMenuItemInfoW, GetMenuState, GetMenuItemInfoW, GetMenuItemCount, ReleaseDC, GetDC, GetSubMenu, LoadMenuW, ValidateRect, KillTimer, IsIconic, GetDlgCtrlID, CreatePopupMenu, AppendMenuW, CheckMenuRadioItem, GetDCEx, SetCapture, SetCursor, ReleaseCapture, ShowWindow, IntersectRect, GetWindow, SetRectEmpty, LoadImageW, CheckMenuItem, EnableMenuItem, GetMenuStringW, LoadBitmapW, DeleteMenu, GetMenuItemID, InsertMenuW, ModifyMenuW, RemoveMenu, GetMenu, TrackPopupMenuEx, MapWindowPoints, DestroyMenu, TrackPopupMenu, SetMenuDefaultItem, MessageBoxW, MessageBeep, RegisterWindowMessageW, CallWindowProcW, InvertRect, DestroyWindow, SetTimer, RedrawWindow, IsWindowVisible, SetWindowLongW, GetWindowRect, EqualRect, OffsetRect, SetRect, PtInRect, IsRectEmpty, IsWindow, PostMessageW, GetCursorPos, SendMessageW, EnableWindow, InvalidateRect, UpdateWindow, CharPrevW, wvsprintfW, GetClassInfoW, RegisterClassW, CreateWindowExW, BeginPaint, EndPaint, ScreenToClient, ClientToScreen, GetWindowLongW, CharNextW",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "USER32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "ImageList_AddMasked, ImageList_LoadImageW, ImageList_Destroy, CreateToolbarEx, ImageList_Draw, ImageList_SetOverlayImage, ImageList_DrawEx, InitCommonControlsEx, ImageList_GetImageCount",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "COMCTL32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "NetApiBufferFree, DsGetDcNameW",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "NETAPI32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "CoTaskMemFree, CoInitialize, CoInitializeEx, CoUninitialize, CoCreateInstance",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "ole32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "7, 6, 162, 201, 2",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "OLEAUT32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "SHAppBarMessage, Shell_NotifyIconW, SHGetSpecialFolderPathW, ShellExecuteW",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "SHELL32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "DrawDibOpen, DrawDibDraw, DrawDibClose",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "MSVFW32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "sndPlaySoundW",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "WINMM.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "145, 13, 133, 147, 135, 191, 73, 208, 26, 36, 140, 27, 41, 224, 206, 14",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "WLDAP32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Languages\", \"ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "ENGLISH"
+                ],
+                "name": [
+                  "AVI",
+                  "REGISTRY"
+                ]
+              }
+            },
+            "string": {
+              "extracted": [
+                "About Phone Dialer",
+                "&More Information",
+                "OK",
+                "Phone Dialer 1.50",
+                "Developed for Microsoft by Active Voice.  (C)1998 Active Voice Corporation.\nAll rights reserved.",
+                "Active Voice offers a full range of messaging and communications software designed for Microsoft Windows(R) and BackOffice(tm).",
+                "For more information, a free upgrade to the latest version of this program, or other software, visit: http://www.activevoice.com/dialer",
+                "Add ILS Server",
+                "&Server Address",
+                "Cancel",
+                "Video",
+                "More Speed Dial Entries",
+                "Select Entry to Dial",
+                "List1",
+                "Place &Call",
+                "&Edit...",
+                "Edit Speed Dial List",
+                "Entrie&s",
+                "&OK",
+                "&Cancel",
+                "Move &Up",
+                "Move &Down",
+                "&Add...",
+                "&Remove",
+                "Speed Dial",
+                "Enter a display name and a phone number or network address",
+                "&Display name:",
+                "&Number or address:",
+                "Dial as",
+                "&Phone call",
+                "Int&ernet call",
+                "Internet &conference",
+                "Take Picture",
+                "&Video Device",
+                "&Format...",
+                "&Source...",
+                "&Display...",
+                "&Take Picture",
+                "Preview",
+                "Add User",
+                "Enter the name of the user to add.  You must search the network directory to verify that the user exists.",
+                "&User:",
+                "&Search",
+                "Search &Results:",
+                "&Add"
+              ]
+            }
+          }
+        },
+        "title_text": "Resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 296, \"Saved as\": \"icon_0.ico\"}, {\"ID\": 2, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 744, \"Saved as\": \"icon_1.ico\"}, {\"ID\": 3, \"Lang\": \"ENGLISH\", \"Size\": \"48x48\", \"Size (bytes)\": 3752, \"Saved as\": \"icon_2.ico\"}, {\"ID\": 4, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 2216, \"Saved as\": \"icon_3.ico\"}, {\"ID\": 5, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 1384, \"Saved as\": \"icon_4.ico\"}, {\"ID\": 6, \"Lang\": \"ENGLISH\", \"Size\": \"48x48\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_5.ico\"}, {\"ID\": 7, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_6.ico\"}, {\"ID\": 8, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 1128, \"Saved as\": \"icon_7.ico\"}, {\"ID\": 12, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 296, \"Saved as\": \"icon_8.ico\"}, {\"ID\": 9, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 744, \"Saved as\": \"icon_9.ico\"}, {\"ID\": 10, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 296, \"Saved as\": \"icon_10.ico\"}, {\"ID\": 11, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 296, \"Saved as\": \"icon_11.ico\"}, {\"ID\": 13, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 744, \"Saved as\": \"icon_12.ico\"}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_1.ico\", \"sha256\": \"a53f757a2f47e35bd04116073a5894476d8a5c776ef0951ca5c4cd0b389fcf7d\", \"description\": \"Icon 1 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_1.ico.thumb\", \"sha256\": \"a53f757a2f47e35bd04116073a5894476d8a5c776ef0951ca5c4cd0b389fcf7d\", \"description\": \"Icon 1 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_2.ico\", \"sha256\": \"bfe6c15de194312077365a2b358553fb43deac6bad683c2f63fb346105a6a393\", \"description\": \"Icon 2 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_2.ico.thumb\", \"sha256\": \"bfe6c15de194312077365a2b358553fb43deac6bad683c2f63fb346105a6a393\", \"description\": \"Icon 2 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_3.ico\", \"sha256\": \"ff3c0ac9d3d1da40b88317942811d9a72cfbdc7c10322f1c645b63c167403181\", \"description\": \"Icon 3 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_3.ico.thumb\", \"sha256\": \"ff3c0ac9d3d1da40b88317942811d9a72cfbdc7c10322f1c645b63c167403181\", \"description\": \"Icon 3 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_4.ico\", \"sha256\": \"28fb5e426761f7ee7255ee09cead066bbcfa95f1bf691c01a468ca654c9b23f1\", \"description\": \"Icon 4 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_4.ico.thumb\", \"sha256\": \"28fb5e426761f7ee7255ee09cead066bbcfa95f1bf691c01a468ca654c9b23f1\", \"description\": \"Icon 4 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_5.ico\", \"sha256\": \"f58945e866c0b78efcdbb63ae1bcb4791856e6d2df3119332cf9aa057d31aa7f\", \"description\": \"Icon 5 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_5.ico.thumb\", \"sha256\": \"f58945e866c0b78efcdbb63ae1bcb4791856e6d2df3119332cf9aa057d31aa7f\", \"description\": \"Icon 5 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_6.ico\", \"sha256\": \"418b40cf97a94b1f7e62c554072364c4643264d3c879c43b0c3d412670b78074\", \"description\": \"Icon 6 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_6.ico.thumb\", \"sha256\": \"418b40cf97a94b1f7e62c554072364c4643264d3c879c43b0c3d412670b78074\", \"description\": \"Icon 6 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_7.ico\", \"sha256\": \"f07d9c8d3a54f119a1540107270aab223a4c837af093ffe9e3fea897ee5bdbe4\", \"description\": \"Icon 7 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_7.ico.thumb\", \"sha256\": \"f07d9c8d3a54f119a1540107270aab223a4c837af093ffe9e3fea897ee5bdbe4\", \"description\": \"Icon 7 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_8.ico\", \"sha256\": \"362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0\", \"description\": \"Icon 8 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_8.ico.thumb\", \"sha256\": \"362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0\", \"description\": \"Icon 8 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_9.ico\", \"sha256\": \"62e9bc172a4c13a064dfb30fdb08608c93d4e608dfcbe57419318b25d2f44760\", \"description\": \"Icon 9 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_9.ico.thumb\", \"sha256\": \"62e9bc172a4c13a064dfb30fdb08608c93d4e608dfcbe57419318b25d2f44760\", \"description\": \"Icon 9 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_10.ico\", \"sha256\": \"b685831c3925a33a053edb7503765e302e0cf5b4bbe76c6f036067b25ee7419e\", \"description\": \"Icon 10 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_10.ico.thumb\", \"sha256\": \"b685831c3925a33a053edb7503765e302e0cf5b4bbe76c6f036067b25ee7419e\", \"description\": \"Icon 10 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_11.ico\", \"sha256\": \"8648acd2a99da5aa01dc36eef0003861fc68d73dbe6c32215d5a68d1550365d3\", \"description\": \"Icon 11 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_11.ico.thumb\", \"sha256\": \"8648acd2a99da5aa01dc36eef0003861fc68d73dbe6c32215d5a68d1550365d3\", \"description\": \"Icon 11 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_12.ico\", \"sha256\": \"c771bde14e8f6537109add6f660d10cd77a90b9071158696b219b88c679ef1ed\", \"description\": \"Icon 12 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_12.ico.thumb\", \"sha256\": \"c771bde14e8f6537109add6f660d10cd77a90b9071158696b219b88c679ef1ed\", \"description\": \"Icon 12 extracted from the PE file (thumbnail)\"}}]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Icons",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Type\", 0]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Version",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 63], [\"file_os\", \"NT_WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"APP\"], [\"file_version_LS\", 170395780], [\"file_version_MS\", 327681], [\"product_version_LS\", 170395780], [\"product_version_MS\", 327681], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "fixed_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "versions": {
+                "description": [
+                  "TAPI 3.0 Dialer and IP Multicast Conference Viewer"
+                ],
+                "filename": [
+                  "Dialer"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "string_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"040904B0\"], [\"type\", 1], [\"lang\", \"ENGLISH\"], [\"sublang\", \"ENGLISH_US\"], [\"code_page\", \"UTF_16\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 3,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "langcode_items 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ProductVersion\", \"5.1.2600.2180\"], [\"ProductName\", \"Microsoft\\u00ae Windows\\u00ae Operating System\"], [\"LegalCopyright\", \"\\u00a91998 Active Voice Corporation. All rights reserved.\"], [\"OriginalFilename\", \"Dialer\"], [\"FileVersion\", \"5.1.2600.2180\"], [\"CompanyName\", \"Microsoft Corporation\"], [\"FileDescription\", \"TAPI 3.0 Dialer and IP Multicast Conference Viewer\"], [\"InternalName\", \"Dialer\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 4,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "items",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78644233\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "var_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[{\"SHA256\": \"eb533c246e86f1a46f627fd653627552f70339290e6fd8b4db1c63d95fabfebb\", \"Type\": \"AVI\", \"Entropy\": 2.3882714586268112}, {\"SHA256\": \"29e9dbddcc8cb90fd393b1be123a0e4d14fde1f6ba85cf409e3cefd1fe817caa\", \"Type\": \"AVI\", \"Entropy\": 1.8872424420416296}, {\"SHA256\": \"7792bc0ac31153aaa40dc7429a471d071c1a297d356f798131881f422e56dc67\", \"Type\": \"AVI\", \"Entropy\": 1.919145656288193}, {\"SHA256\": \"f085b9d86a6f05f5653c8a55c2b5364de09ef7f6efb4351366aa2352e3aeb6a2\", \"Type\": \"AVI\", \"Entropy\": 1.8849794062257315}, {\"SHA256\": \"ee7012fdec02769cae93fdd877eb6ade97de4463cea53c0716cd5498557ac776\", \"Type\": \"AVI\", \"Entropy\": 1.8957399418903573}, {\"SHA256\": \"2c943c62c261616817bcac4cdd8e32dd9f7346b24d72d6004f5e46f3ea136c62\", \"Type\": \"REGISTRY\", \"Entropy\": 5.1979527109879955}, {\"SHA256\": \"4ea37e6c022576fab1a7300ad197cce1a9c2832504a2fd1952cc15396f0b47a6\", \"Type\": \"REGISTRY\", \"Entropy\": 5.150179895694644}, {\"SHA256\": \"89d2c7cf3f67fb372a7fce4570694a498b1c35ee062f34935e46c21c4e0bf207\", \"Type\": \"REGISTRY\", \"Entropy\": 5.215352327628009}, {\"SHA256\": \"57d04320cb96a953a6446715d274bc6a9782044777679cef2426c0728a505a51\", \"Type\": \"CURSOR\", \"Entropy\": 2.7051599847055696}, {\"SHA256\": \"9cc4de765ab007871ae3017de4c01858a66f525876ea079283c879107a3c957a\", \"Type\": \"BITMAP\", \"Entropy\": 4.4724586470870165}, {\"SHA256\": \"b2f8a6ba394b536dc17380d74d0020962d80f09869c2e2a200177f7659bd69a5\", \"Type\": \"BITMAP\", \"Entropy\": 4.260837024267665}, {\"SHA256\": \"d860340635e412198f15b53da9c0d0bb9f50da89b89901b6c0e1ca4c021c0a8a\", \"Type\": \"BITMAP\", \"Entropy\": 3.8678649147576065}, {\"SHA256\": \"32582b8741aefe064f63ab4d6adab40d3a4be54481309b71d2198a04a374f39c\", \"Type\": \"BITMAP\", \"Entropy\": 4.453370686523898}, {\"SHA256\": \"d36d36c04856e8203d3ed39938acdd45c84497605d9e90f8dce8f576688b6047\", \"Type\": \"BITMAP\", \"Entropy\": 4.085597140293716}, {\"SHA256\": \"16ae2d044c6e6146a3f018095802990260d114b7a145762fd855cfe5a5aada52\", \"Type\": \"BITMAP\", \"Entropy\": 4.042522795098373}, {\"SHA256\": \"b68a43b33afe9171090b19c394c1a8adfd55144b789ee3a9ac2a3c44b530241a\", \"Type\": \"BITMAP\", \"Entropy\": 4.417543123248805}, {\"SHA256\": \"02fd59cf28d0ede3e3d9a3f5542edaf385ac77e3260399c28e059caa3b5a1255\", \"Type\": \"BITMAP\", \"Entropy\": 3.292322885919776}, {\"SHA256\": \"7f66aae72f506c61e69a8df126282a206152c8dc63c59f8a43661b8cb1963dbb\", \"Type\": \"BITMAP\", \"Entropy\": 2.5415374895364975}, {\"SHA256\": \"3be0cfd1a7d6dd59e4a4def433b5c6409df0707fbe90cd96710524d98d1d142c\", \"Type\": \"BITMAP\", \"Entropy\": 3.355918693541978}, {\"SHA256\": \"d16f94dab9f64730fcd6684dbd1d0fe04244af043771c9e9e88c760edaf821b3\", \"Type\": \"BITMAP\", \"Entropy\": 2.78068222607146}, {\"SHA256\": \"6b92e7369f67eb869d4b75dfefd8661e1f65c4d02d51c5a8d6897433f0481c99\", \"Type\": \"BITMAP\", \"Entropy\": 4.140895521579915}, {\"SHA256\": \"2259fffa0878941dbd5b8bd42587960d1083815b0bce785231d080b122f57443\", \"Type\": \"BITMAP\", \"Entropy\": 4.568727599047842}, {\"SHA256\": \"319dcd4ba3b9851cf378a808fd83571b581d31d949d65fa6d84fb671ad7427ed\", \"Type\": \"BITMAP\", \"Entropy\": 4.122460845738168}, {\"SHA256\": \"3f422e508d60752d503be08f59e9506fc49fb5ced4e27882b5da1a4a74641bec\", \"Type\": \"BITMAP\", \"Entropy\": 4.087759364652384}, {\"SHA256\": \"39bc79d848cc3c867151f032e288a920b77df26bb9f36bae99f3b83e0e667bd4\", \"Type\": \"BITMAP\", \"Entropy\": 3.698534457108104}, {\"SHA256\": \"5e882d9b78da7991fb71da4258087dca517e38fbf639b4382250bb32c7e1f1d0\", \"Type\": \"BITMAP\", \"Entropy\": 3.360704677972296}, {\"SHA256\": \"d641d75b771f3fde2a73aacde0e8a09ed3c5e6d476d4438be3fdd13da1be63b5\", \"Type\": \"BITMAP\", \"Entropy\": 3.127035618346359}, {\"SHA256\": \"a8186e599c7c130e2059f948c6878e87a0ae3471d5671d8718efc761a5aa9f42\", \"Type\": \"BITMAP\", \"Entropy\": 3.451246614834602}, {\"SHA256\": \"8ed62b72066ba724ae570f6bf1bb72665255a0d97adb4423b4221153d23f1a07\", \"Type\": \"BITMAP\", \"Entropy\": 3.455999372213261}, {\"SHA256\": \"1a9d5cb4b69db48fe9b937e060b49b69ac5bb71467615d57e874dcf35dd87901\", \"Type\": \"BITMAP\", \"Entropy\": 3.940835245425399}, {\"SHA256\": \"8307819a630694f823abb8e034e238d045f7cc87b1de63d2402372564624dd67\", \"Type\": \"BITMAP\", \"Entropy\": 3.1326834627480364}, {\"SHA256\": \"17c6265fcf770ed7bcaeaf0d7017ebc67a335c77b5994861704f813851a26388\", \"Type\": \"BITMAP\", \"Entropy\": 2.41089119661428}, {\"SHA256\": \"65e7856f1a33da08945acf187365419ebffb378da6a7f68e86c3c6d4fdf04126\", \"Type\": \"BITMAP\", \"Entropy\": 4.095286178633302}, {\"SHA256\": \"aea6eb547308c160a6c66ef640d7b6a0947742d0ece9588dfa8b3c2d279e6696\", \"Type\": \"BITMAP\", \"Entropy\": 1.7926538171542923}, {\"SHA256\": \"aef0d8b5f716d15fd6b5f8ea2d42336288de439b3cbb6451e5eb4638a1ac5342\", \"Type\": \"BITMAP\", \"Entropy\": 2.352496743407235}, {\"SHA256\": \"7d2acadd4d80cc36d42f1f8f88765d36a6da185b5eec18dee3c58a67f4fdde0e\", \"Type\": \"BITMAP\", \"Entropy\": 3.797515412647192}, {\"SHA256\": \"9742189f91171d6a437597fe044185aa50f0f62cd4a630aa7fc2d8051aabcd3d\", \"Type\": \"BITMAP\", \"Entropy\": 4.472745709749584}, {\"SHA256\": \"b35e6e5dc0e3554b5de43a4e852d4c139a11153cc3ee8495f55b34b3430b9f76\", \"Type\": \"BITMAP\", \"Entropy\": 2.0865344198063482}, {\"SHA256\": \"cc5637552736b8ee9222269d2e54ed3bd81fff18854b07a935ee73174b7cf6e2\", \"Type\": \"BITMAP\", \"Entropy\": 0.9475942918663124}, {\"SHA256\": \"15a8682ca7cfb03e9cf6d6032a97a322a0069e20c432015cd14361a275eb8c5b\", \"Type\": \"BITMAP\", \"Entropy\": 4.475683415595029}, {\"SHA256\": \"2056ca85abe4b0237644f87b29771ed260f9217005bd2bd358f8d61780b47cf3\", \"Type\": \"ICON\", \"Entropy\": 3.8295952851897233}, {\"SHA256\": \"9b89a93b314184352a5165592009e110572f4a36c2d954a06b89e15de9d91aa5\", \"Type\": \"ICON\", \"Entropy\": 3.7498200812421745}, {\"SHA256\": \"7bc393f66a9ae432519ae7aa3ea0f0418b713a0304468854d6cb2c24b3f63606\", \"Type\": \"ICON\", \"Entropy\": 5.451541776150999}, {\"SHA256\": \"4a64c9d84101ac1006ac494ab230aba88d4a963042e43a6af90a5b39abe9cbca\", \"Type\": \"ICON\", \"Entropy\": 5.8947479581834274}, {\"SHA256\": \"fb5ba5dd757b8105e2f8d0333f68e34cd3a2c24a83739b2ce3310c4492c5f54e\", \"Type\": \"ICON\", \"Entropy\": 6.041025352864386}, {\"SHA256\": \"da9a39b2bd07cf285abad6572f96c79633e52cfa29818505515c1a30684cc0cc\", \"Type\": \"ICON\", \"Entropy\": 5.997251151654069}, {\"SHA256\": \"d1ae6ff5379fef26ca151088e8d5b8e7f766bc7b599401a93ea74a395dca3370\", \"Type\": \"ICON\", \"Entropy\": 6.343464757581019}, {\"SHA256\": \"451b93e70ed6a704951ea09cb8585f7c188f00700f5e9c9aa346923bd82d8c34\", \"Type\": \"ICON\", \"Entropy\": 6.660276331233526}, {\"SHA256\": \"16856332883869ede6ff3e9732b6c4972953001a8ef05661924e9d02616b9bcb\", \"Type\": \"ICON\", \"Entropy\": 3.0286705214218808}, {\"SHA256\": \"9e3d96c245e4ea842a34a798eceb95cff27ffe09d3cb376515cf1565fec2d7f9\", \"Type\": \"ICON\", \"Entropy\": 2.6408503008990807}, {\"SHA256\": \"d3e0b4910ec40289bf75f565f1369c1a2d577f4f3e5c75e06708f7c459193422\", \"Type\": \"ICON\", \"Entropy\": 2.911693555985926}, {\"SHA256\": \"ee331f18c884b976b9213b2f1d01676cd60c253b7b5c56bafa9b49c3d4fdb15a\", \"Type\": \"ICON\", \"Entropy\": 3.8543732971880766}, {\"SHA256\": \"feb65443cb1ced4f6ef4fb8bf2d4f1bdaf501d46b149ccf3617e60293da1951c\", \"Type\": \"ICON\", \"Entropy\": 2.8544888228046474}, {\"SHA256\": \"ce79cb6fd3498f95382249a6347d9027cc734eb90a92b0669055631839a4cd20\", \"Type\": \"MENU\", \"Entropy\": 3.404687555456367}, {\"SHA256\": \"6650a55ea6d5ad20ad2ba5ec2857f2e86d8123abeb06e7c4706e6675029480ad\", \"Type\": \"MENU\", \"Entropy\": 3.394744945346714}, {\"SHA256\": \"00664103a3894495bb2354a78bcc4cfff60b70c724a6d616686d0de27330dc1c\", \"Type\": \"MENU\", \"Entropy\": 3.224278337421984}, {\"SHA256\": \"38cf78d77da9bbaf950d9e4f9b66abd4678ee6f55f5e45c12c067c27f158ae09\", \"Type\": \"MENU\", \"Entropy\": 3.1903137267703396}, {\"SHA256\": \"5a0d2566401b3e7067df0f80774d2b00db551840ae5dd370bbc7660afe796c84\", \"Type\": \"MENU\", \"Entropy\": 3.2231775928017603}, {\"SHA256\": \"11a6fa33c72fbd86f0667c3ff7600727d76bda2a45e5f351b1e6bf65f6ab3210\", \"Type\": \"MENU\", \"Entropy\": 3.177775774711569}, {\"SHA256\": \"0c5d7b5bd0cb56255c911a3a0095811a17868ff78f9016691c7cd329138c6b31\", \"Type\": \"MENU\", \"Entropy\": 2.7800588372835544}, {\"SHA256\": \"5c8f857bb7441b88b3aeadebac4d42fa57d0dce6f4d5501edc0a14389bb0f5f9\", \"Type\": \"DIALOG\", \"Entropy\": 3.476682484331761}, {\"SHA256\": \"4f3300e11000341f911166faa2a6ba0644b1c08dfbcbeabbe59f265264dccaf5\", \"Type\": \"DIALOG\", \"Entropy\": 2.9799677644442397}, {\"SHA256\": \"6b9689d1831c2191f512e0f1fa91f34861410e030065c3e4ebbac29d4bf81de5\", \"Type\": \"DIALOG\", \"Entropy\": 3.394986215547015}, {\"SHA256\": \"2bb44d42119116262262a5cc1222db33a925515e1f307f86d01c3aa0ef0afdf0\", \"Type\": \"DIALOG\", \"Entropy\": 2.7554638839690457}, {\"SHA256\": \"edee8d30da9ad39ccd50a2533cc1a49e229e77eae86104ac33662885be9faf82\", \"Type\": \"DIALOG\", \"Entropy\": 3.2046905695165475}, {\"SHA256\": \"0a8fb13c7bcdb8417e022714403a54051e26f94736beab1b6beaaaa4efd009ef\", \"Type\": \"DIALOG\", \"Entropy\": 3.248123331852334}, {\"SHA256\": \"5131d67f4c6fc279eea557c9620b6dbb68570eaaaea640786681ede560fcbffd\", \"Type\": \"DIALOG\", \"Entropy\": 3.1932800696279515}, {\"SHA256\": \"a640e0d5405bf490923ecdcfe2d7cfcaaea421507824d2fe84633d4ebf2e6ebe\", \"Type\": \"DIALOG\", \"Entropy\": 3.1380953514114207}, {\"SHA256\": \"47823d434ecf3342bc4880a598a7fb613be26235efd80d59489b0ea7b71495cb\", \"Type\": \"DIALOG\", \"Entropy\": 3.2604516223947213}, {\"SHA256\": \"19bb264b1f9f2a512a37951aa2415d3c62af7d549d5fbd45a2a434caf8eda79b\", \"Type\": \"DIALOG\", \"Entropy\": 2.40020470625279}, {\"SHA256\": \"9aee3dd028d7cbebcb8eda5f0737de7df5f3e0a46d29203bf06cb933a6c5795b\", \"Type\": \"DIALOG\", \"Entropy\": 3.1846510736003046}, {\"SHA256\": \"6ff63e0dcc0f097def5d491badf48c506b6ce79e7bd7827d613f966377c14c72\", \"Type\": \"DIALOG\", \"Entropy\": 3.5188975171144703}, {\"SHA256\": \"363d88487fca99a7fcf14b1c9ad8faf230f33c0c52112681f7737dd1eea1f06d\", \"Type\": \"DIALOG\", \"Entropy\": 3.2543944358618946}, {\"SHA256\": \"98a908ff5e246185f2ab2b4748ce899d6975c7f03ab03ec1d001381f69b864a2\", \"Type\": \"DIALOG\", \"Entropy\": 3.297606658963791}, {\"SHA256\": \"5ccc7d03839b481e876d2b4f2f359a4d3f5700ba5fbb7ee1a447f5e50c36b40e\", \"Type\": \"DIALOG\", \"Entropy\": 3.2527275541535206}, {\"SHA256\": \"b751d56a3da99a806555be125cd3f78670db3b32decc090d5f755718c3ebc8e6\", \"Type\": \"STRING\", \"Entropy\": 2.8437288795973474}, {\"SHA256\": \"51ee8e330449278573994ecca95b596a1aa6bea5f89f90025e9929cbae841f89\", \"Type\": \"STRING\", \"Entropy\": 3.1538047713979083}, {\"SHA256\": \"f3aafb2ab02d34e8daa3c0fe24f1f4363490ebcd3d062d7e0e3a2af9ea43dcac\", \"Type\": \"STRING\", \"Entropy\": 2.88810926276059}, {\"SHA256\": \"63f74ff7f3cbcddab7c309892451c2dcfd93baab16fa693abd43f6658b55c5d2\", \"Type\": \"STRING\", \"Entropy\": 1.4377544837306804}, {\"SHA256\": \"29ca8fac0c4975f8acb40365920f5c56199bf8826c3c52a02cb15c5442a845ee\", \"Type\": \"STRING\", \"Entropy\": 2.8729214466778}, {\"SHA256\": \"587bf59128217312ec30824a2c940288ec64b3debf815b3a0f2d83d32c1a99c8\", \"Type\": \"STRING\", \"Entropy\": 3.166390399406097}, {\"SHA256\": \"806ebdd5e598b0e53c8a7b40c49e6cae3057e464f708e3034784fd0af3dea4d1\", \"Type\": \"STRING\", \"Entropy\": 3.1050847709809863}, {\"SHA256\": \"9fa3d971445803a1f94c0e2951ed6ca339322aa356a4164d2d4df07ca43308d9\", \"Type\": \"STRING\", \"Entropy\": 3.1037919095517448}, {\"SHA256\": \"d16c84bf40214a358543bbb5071915cc40ef4bf7c6bd44f3017117e6afd1e676\", \"Type\": \"STRING\", \"Entropy\": 3.0015173763033953}, {\"SHA256\": \"0261042b85e3da07e7ee281e0d1a04a7a2de66e121297d772cb86190a26fb170\", \"Type\": \"STRING\", \"Entropy\": 2.80178344618287}, {\"SHA256\": \"75031be9839460b865d1c8faebc6d9bc4c4bbbac9e61625e884a3b6698d9b010\", \"Type\": \"STRING\", \"Entropy\": 2.841733580847522}, {\"SHA256\": \"5bac2ec494bca82895d47eba55e44054219c860d2ac7a89aaf0e14a7569fed09\", \"Type\": \"STRING\", \"Entropy\": 2.886171427242613}, {\"SHA256\": \"556adcf9b6f78ef7278f3d045f796a17d9cda546bbcd8d2b4d3a4dd1dc0a9668\", \"Type\": \"STRING\", \"Entropy\": 2.98191765163378}, {\"SHA256\": \"3114f7a1585d39fef9f7c95047884289d538dd9766e8ffd88b45c558d17b0aaa\", \"Type\": \"STRING\", \"Entropy\": 3.124365261295341}, {\"SHA256\": \"6d2e076e77feb1dd3e928d347b6ccc027168bce40774031791f099b26017d3b2\", \"Type\": \"STRING\", \"Entropy\": 3.173092500785792}, {\"SHA256\": \"2e570d45b131489b3138558ed471bffd5c922138100481b4cf61fff4baeba7f8\", \"Type\": \"STRING\", \"Entropy\": 3.4591518030585084}, {\"SHA256\": \"1e395784b00d6cb80db664ea722a293b3e5766c96ac5a030413635b9dd98af92\", \"Type\": \"STRING\", \"Entropy\": 3.253374315675421}, {\"SHA256\": \"529fd0808a82d9a6775f0b8b12d394d2aa3e688a18bb1f4af6413ce6c91e01eb\", \"Type\": \"STRING\", \"Entropy\": 3.250346331295249}, {\"SHA256\": \"67ed892c07999d248ec26ff8a5039b70d8d60a8d2bb046b4a89a0642d0f06d68\", \"Type\": \"STRING\", \"Entropy\": 3.206712338180258}, {\"SHA256\": \"81427758aaf91fb2e9492f0cef4a5132d5a311eab882804494da068089af03d6\", \"Type\": \"STRING\", \"Entropy\": 3.0573484983141044}, {\"SHA256\": \"fe7ef5dfe3f5f5009e41c2d12ffca4660a7536118c492b291d4eef7f257dcbc6\", \"Type\": \"STRING\", \"Entropy\": 2.8192227390563147}, {\"SHA256\": \"c3614084eee92b9196e69ec152653ae205e9a3cd11b1cc29e965083123b52f5c\", \"Type\": \"STRING\", \"Entropy\": 2.5983604008155345}, {\"SHA256\": \"dde80408c8757031943401aa12ac699b9c9f323f2c7b0ec0c999b47fec27e9e8\", \"Type\": \"STRING\", \"Entropy\": 3.2920717055788993}, {\"SHA256\": \"63d076292297bff317b3119253a2bae3d30617c8e810c336996e6664e9fd4d35\", \"Type\": \"STRING\", \"Entropy\": 3.1801825107412114}, {\"SHA256\": \"da6a323650bf1bf4333fd7fe9fabd93c995fcd14425331d459752aadebb5f754\", \"Type\": \"STRING\", \"Entropy\": 2.7775407315220004}, {\"SHA256\": \"9a9b59d0e1f53e39626e9b2f4b4ce130d645fd90063bfe97ab658984edd77b0a\", \"Type\": \"STRING\", \"Entropy\": 2.252628788448228}, {\"SHA256\": \"389e58fdcaada7730bb7f6bf2e9b01328e0dbb87f5d27ef09771ec472639b2a2\", \"Type\": \"STRING\", \"Entropy\": 3.1725698001569302}, {\"SHA256\": \"3fc9875a6019315ce6799d7a3ba63c03b0b3ff968f9d1a510df8664e00193075\", \"Type\": \"STRING\", \"Entropy\": 2.627879563521811}, {\"SHA256\": \"f7bea941aea320f4526ca6436d76f2ac7523488bc64011854843894794d76586\", \"Type\": \"STRING\", \"Entropy\": 3.1562198132714476}, {\"SHA256\": \"41f4dd4badae2064a65c0c2c48310eb3d809375bcf0ea79a2112d639c1b98596\", \"Type\": \"STRING\", \"Entropy\": 1.7825323694326443}, {\"SHA256\": \"591951d18bda28ac337e09d8eba63b2ad44d966fbb04a36f5a95bac4c33b0ba6\", \"Type\": \"STRING\", \"Entropy\": 2.452087865985815}, {\"SHA256\": \"b2fb3e91f61b95d9f88c940181b7ac40c26ae0c48983c4e100b8d66f8a3d4c89\", \"Type\": \"STRING\", \"Entropy\": 3.151627321995557}, {\"SHA256\": \"a9aa1f389cdb6975ee3ca3a46c4d06cf76cfde22993e67f2c854badd6c759e38\", \"Type\": \"STRING\", \"Entropy\": 2.8623209894595454}, {\"SHA256\": \"4c18a270e59194879807b44fa39543b54ac09a239e6b174b26eab71cbaa91561\", \"Type\": \"STRING\", \"Entropy\": 3.205049047299221}, {\"SHA256\": \"68567338037b59ec10364cd75151c7c4f2cf63cb3b0ae229346f95797d9f59b4\", \"Type\": \"STRING\", \"Entropy\": 3.2878760520566814}, {\"SHA256\": \"57278560c119436710e31827507c20328fa18731103030e8fe051bb1046e7664\", \"Type\": \"STRING\", \"Entropy\": 2.8789549929076896}, {\"SHA256\": \"2b0fe37ea4fd72b9bfe35c24e37c7a61973345b912afb53eed96f4124a96dd09\", \"Type\": \"STRING\", \"Entropy\": 2.8542417573215384}, {\"SHA256\": \"74c4467f1e266c2394edc25751fd2c28f356af1ba9327607431c792d32972201\", \"Type\": \"STRING\", \"Entropy\": 3.244977938507183}, {\"SHA256\": \"b356938bba5033769a5ab6704a5313d1e5a5f5518a31fdcc3649b495337c9123\", \"Type\": \"STRING\", \"Entropy\": 2.8731537586598446}, {\"SHA256\": \"946ea760f04bc15aea5b2a9840ddb270e324fef561b0e075dfa664a83039178d\", \"Type\": \"STRING\", \"Entropy\": 2.809708349626258}, {\"SHA256\": \"29faa7840c32a400f08926dc1c934945aa22cdb633507b451611ed484111d69b\", \"Type\": \"STRING\", \"Entropy\": 3.040449555455187}, {\"SHA256\": \"856f98741ab3ea63440eaad0d53581d3a710bc867fa0b0c82f59a2ce305b3d72\", \"Type\": \"STRING\", \"Entropy\": 3.337008857405373}, {\"SHA256\": \"49feb5e0ee57fc0bbde8a82508cd6ac4e9b4759d37d815744375abf8c0e2312e\", \"Type\": \"STRING\", \"Entropy\": 2.929670942944608}, {\"SHA256\": \"69d0a36b71bb5242edcf4359012a5e36b73629baaa08023f9d9834a119fccc67\", \"Type\": \"STRING\", \"Entropy\": 2.2274473367694325}, {\"SHA256\": \"a81094b9335364b8195dd430efb5a5de9bc600de3215a0c46963dda8c158b0ef\", \"Type\": \"STRING\", \"Entropy\": 3.284840331552562}, {\"SHA256\": \"0459cc57dd5521dc9db0e1d46093ee295103f1765727811785de20e9b7bf8407\", \"Type\": \"STRING\", \"Entropy\": 3.272622516502905}, {\"SHA256\": \"3a681c87cda891bf46a67c315bb5fe1a533d8b82630283cc7e044c2cc679301d\", \"Type\": \"STRING\", \"Entropy\": 3.0571913782216247}, {\"SHA256\": \"baeec46b0d39ec3003342db695fb26c03e4f23fe1c019dd1ed55fcb9ddec52a6\", \"Type\": \"STRING\", \"Entropy\": 3.1633231150525662}, {\"SHA256\": \"9f6e296d0d908c7014fa479fe8c3b5dc42c0560c0a02332673b0c146736d4a41\", \"Type\": \"STRING\", \"Entropy\": 2.992190180970831}, {\"SHA256\": \"3a5c06e15e97f6777b17438a6d96c77316e4eb252083185681923c0fb7910bd6\", \"Type\": \"STRING\", \"Entropy\": 2.9951529979141625}, {\"SHA256\": \"dd799981dabfbf42e00570ed95d077624cd8fd7b7294200e5cf8ad75b48cc593\", \"Type\": \"STRING\", \"Entropy\": 3.231622606818528}, {\"SHA256\": \"10d84d5f6c2f6b84310e3c2ac9d6c0e1399893b63a933a3f0acdca61efce6559\", \"Type\": \"STRING\", \"Entropy\": 2.9976456260117796}, {\"SHA256\": \"9cd79e5f57d777fe4a1be9ced67fd1d81e5ad073bd654eafb295731ac2ccdcb9\", \"Type\": \"STRING\", \"Entropy\": 2.7937316633989417}, {\"SHA256\": \"54b8d438128230dedb0831da8e387208109c9ad2e8fa82d90e2653a5fef65091\", \"Type\": \"STRING\", \"Entropy\": 3.216785506523262}, {\"SHA256\": \"8336689018f6502ea9cc29e7775c94f99c3fbca652dbd23d278f70d82d34b9b2\", \"Type\": \"STRING\", \"Entropy\": 3.4540447865172816}, {\"SHA256\": \"13cc7123bfa3b45ebafa50c6496c9ce35e771e5e135d9ce5eb5263d7cb896908\", \"Type\": \"STRING\", \"Entropy\": 2.724411894933382}, {\"SHA256\": \"3fe03043c95ec2bfa8e8eb3b44a8dcfada11f1a857f247adee8cf121e2594fab\", \"Type\": \"STRING\", \"Entropy\": 2.841322029372729}, {\"SHA256\": \"ee2c7c2b669ec88f7b3f32c13a86304c5fd503e2640b10965cefac2363c0005f\", \"Type\": \"STRING\", \"Entropy\": 2.948032501035684}, {\"SHA256\": \"0c2b3b55c2cf9996b60d01c9612fd8a267d0d936082cc9987e47d101c8b40e67\", \"Type\": \"STRING\", \"Entropy\": 2.6724919827269376}, {\"SHA256\": \"6bab69416c0b50f7047333583a23310723ca9d7d1b503b0e2c2d5e3a0393cf21\", \"Type\": \"STRING\", \"Entropy\": 3.2001119974887993}, {\"SHA256\": \"c52de20b37a9ae90d7369a50e4bf0f6231af657bec06f70bf91cb9ff68ed9a04\", \"Type\": \"STRING\", \"Entropy\": 3.3393279128575863}, {\"SHA256\": \"d0220e46f996212b0ad12bc39646364341d58831b2c2292b6617538def7ff582\", \"Type\": \"STRING\", \"Entropy\": 3.1473829637842945}, {\"SHA256\": \"af697c6c13e51d86e918fd8790402a13f1beff4a7fd43d4f575efa3bfabd1bc4\", \"Type\": \"STRING\", \"Entropy\": 3.310729805189795}, {\"SHA256\": \"17512eeee2514219730d9622dfc6f17578d635fdcfc33bfd15905cbe17e23bcb\", \"Type\": \"STRING\", \"Entropy\": 2.8444486930451935}, {\"SHA256\": \"cd7979529a4d0e277eb6b81376719db47df2f6a843e239e6ff9fe1a5b565d93c\", \"Type\": \"STRING\", \"Entropy\": 3.045039569509756}, {\"SHA256\": \"08c66ca2ba1c9a94f701fb72ef8d412763c13dc78e9db5b07367bb99798780d2\", \"Type\": \"STRING\", \"Entropy\": 2.979710506297147}, {\"SHA256\": \"c6d248df186f2f4ab599f81a4c33e53026ee2a3ce7169732254562e9c29a9885\", \"Type\": \"STRING\", \"Entropy\": 3.1243837676693764}, {\"SHA256\": \"c9d529fc5b28f83928d8d6d24f561b3e387811c74c192be97fc4a1ff2ed4f1b2\", \"Type\": \"STRING\", \"Entropy\": 3.2918350997524746}, {\"SHA256\": \"7cb90644559642a71e12fd32171f151d9225de1e3b3e2443876a809d1c8aa826\", \"Type\": \"STRING\", \"Entropy\": 2.7619117217011686}, {\"SHA256\": \"8e2c6cc45c6ae2f4c12ebf8cbbe27bd8ec803377e6aac41871e512e89f7e3887\", \"Type\": \"STRING\", \"Entropy\": 3.0140645009476525}, {\"SHA256\": \"3205d9d8683ecd9998428a442a3b721cc7d7ce8d4e4c31063f02d99791dc28d0\", \"Type\": \"STRING\", \"Entropy\": 2.913437440932319}, {\"SHA256\": \"fc3f6f769e88ce894bba9f4078aaea4a47db8284f3fafb6ff844f8a5406feaba\", \"Type\": \"STRING\", \"Entropy\": 3.1996128967690214}, {\"SHA256\": \"51e46939a67865d6b8ac14859e035fb360773e494243ba263a65b8ec06944ea2\", \"Type\": \"STRING\", \"Entropy\": 2.3812332308555217}, {\"SHA256\": \"d49d69ce0065c20e5c4cbde3a7b45dfb86c7ef56a72cadff70a0002441b8d6e6\", \"Type\": \"STRING\", \"Entropy\": 3.237616952781071}, {\"SHA256\": \"f4d2054bad5a30d07ffde08fafdf7a0deed4e343526816a67ecbbd068b84ad81\", \"Type\": \"STRING\", \"Entropy\": 2.835572426200111}, {\"SHA256\": \"0cce65df387f67147c75ac921bc6512fb5fc8dc86d3a60a2e0c2ba2d4845539b\", \"Type\": \"STRING\", \"Entropy\": 3.0477660015035815}, {\"SHA256\": \"934c6ae73724aa444c9e02c81312cec0d60006e496e65664eb5069e1378e6cee\", \"Type\": \"STRING\", \"Entropy\": 2.6253904018832572}, {\"SHA256\": \"dcdadca52ded03471f3c6983045f73426b2fb95adb072840f4d8cb5d5c73dbc0\", \"Type\": \"ACCELERATOR\", \"Entropy\": 3.214868710445169}, {\"SHA256\": \"ef309b720f166673cad840a88e7636e9161ad91415cc7c176010cebba07757e5\", \"Type\": \"GROUP_CURSOR\", \"Entropy\": 2.019240704636849}, {\"SHA256\": \"508f2872d643fd001f83004571f14e7e0802c4774ae3ce12ae274ab6759ff40e\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.8115831294237212}, {\"SHA256\": \"e03ca89042dd41574baa264f8b55be15286e9c1460a2c7e7b125c87c81e2fb65\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.023219672335508}, {\"SHA256\": \"76e0b897fbf717a27413b60b6f5fef407bf00165c1425503a098f89090e266b1\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.5580510765444573}, {\"SHA256\": \"2ef8f3005787231e5b1b5baaa4e31980f4f0eb0eb40d74513cd03b5f684f2e8f\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.023219672335508}, {\"SHA256\": \"aa1ea7a598091ab2b87c82b8760d87c8fb44850147f30ca6149009a574f335a3\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.3232196723355076}, {\"SHA256\": \"4ee833eb1434db4026c824ab833c3c0befec41a0fe7c4dc9f12196b7698ab823\", \"Type\": \"VERSION\", \"Entropy\": 3.519064918879649}, {\"SHA256\": \"6a03c5093a38e8dfd2cd983e80b93f8dd717962f7230b20aed5d76924c219e12\", \"Type\": \"MANIFEST\", \"Entropy\": 5.072424054257969}, {\"SHA256\": \"4f56a625291c11bb60fc2b32eb33a5ec143b8738d6f93d4ea30f9c8847fb3d8a\", \"Type\": \"???\", \"Entropy\": 3.306890595608519}, {\"SHA256\": \"699dbe9bd5bf878c1dd8c10df3299f414236b1840fece1ec747b9d0cfe2de499\", \"Type\": \"???\", \"Entropy\": 2.321928094887362}, {\"SHA256\": \"55491e532aacb6f6371e224114c3102eca50dd4cdd5e46464a0b3a7f23978e78\", \"Type\": \"???\", \"Entropy\": 3.044110417748401}, {\"SHA256\": \"634a85d9b7949de13822c1712ee871eca82994bca9f30a616dfc5069da8706c1\", \"Type\": \"???\", \"Entropy\": 2.875}, {\"SHA256\": \"f5c6dd122a2c78a84ff153f5ebb49af188ae89a870534a7ac3091201c5ee9676\", \"Type\": \"???\", \"Entropy\": 3.1464393446710153}, {\"SHA256\": \"0669dea9c8e823d49cb699ca67c383b578b96d114caaf98624f2a7719b502c80\", \"Type\": \"???\", \"Entropy\": 3.4056390622295662}, {\"SHA256\": \"5394ef9be74a63be279edbe6f0e59f6f3711ef3a6fb42752322a491d42953b11\", \"Type\": \"???\", \"Entropy\": 3.8323328717505136}, {\"SHA256\": \"76f605070694577cd5adbe0ded901f52ddbd04adbef05517e69aa3e7c0523504\", \"Type\": \"???\", \"Entropy\": 3.3851744471284113}]",
+        "body_format": "TABLE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Summary",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": [
+      {
+        "name": "icon_4.ico",
+        "sha256": "28fb5e426761f7ee7255ee09cead066bbcfa95f1bf691c01a468ca654c9b23f1"
+      },
+      {
+        "name": "icon_4.ico.thumb",
+        "sha256": "28fb5e426761f7ee7255ee09cead066bbcfa95f1bf691c01a468ca654c9b23f1"
+      },
+      {
+        "name": "icon_0.ico",
+        "sha256": "362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0"
+      },
+      {
+        "name": "icon_0.ico.thumb",
+        "sha256": "362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0"
+      },
+      {
+        "name": "icon_8.ico",
+        "sha256": "362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0"
+      },
+      {
+        "name": "icon_8.ico.thumb",
+        "sha256": "362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0"
+      },
+      {
+        "name": "icon_6.ico",
+        "sha256": "418b40cf97a94b1f7e62c554072364c4643264d3c879c43b0c3d412670b78074"
+      },
+      {
+        "name": "icon_6.ico.thumb",
+        "sha256": "418b40cf97a94b1f7e62c554072364c4643264d3c879c43b0c3d412670b78074"
+      },
+      {
+        "name": "icon_9.ico",
+        "sha256": "62e9bc172a4c13a064dfb30fdb08608c93d4e608dfcbe57419318b25d2f44760"
+      },
+      {
+        "name": "icon_9.ico.thumb",
+        "sha256": "62e9bc172a4c13a064dfb30fdb08608c93d4e608dfcbe57419318b25d2f44760"
+      },
+      {
+        "name": "icon_11.ico",
+        "sha256": "8648acd2a99da5aa01dc36eef0003861fc68d73dbe6c32215d5a68d1550365d3"
+      },
+      {
+        "name": "icon_11.ico.thumb",
+        "sha256": "8648acd2a99da5aa01dc36eef0003861fc68d73dbe6c32215d5a68d1550365d3"
+      },
+      {
+        "name": "features.json",
+        "sha256": "8ef18c1246b021e2f7eaf9d47192ed10384f327034ff9288001ea4fc5d5e49fd"
+      },
+      {
+        "name": "icon_1.ico",
+        "sha256": "a53f757a2f47e35bd04116073a5894476d8a5c776ef0951ca5c4cd0b389fcf7d"
+      },
+      {
+        "name": "icon_1.ico.thumb",
+        "sha256": "a53f757a2f47e35bd04116073a5894476d8a5c776ef0951ca5c4cd0b389fcf7d"
+      },
+      {
+        "name": "icon_10.ico",
+        "sha256": "b685831c3925a33a053edb7503765e302e0cf5b4bbe76c6f036067b25ee7419e"
+      },
+      {
+        "name": "icon_10.ico.thumb",
+        "sha256": "b685831c3925a33a053edb7503765e302e0cf5b4bbe76c6f036067b25ee7419e"
+      },
+      {
+        "name": "icon_2.ico",
+        "sha256": "bfe6c15de194312077365a2b358553fb43deac6bad683c2f63fb346105a6a393"
+      },
+      {
+        "name": "icon_2.ico.thumb",
+        "sha256": "bfe6c15de194312077365a2b358553fb43deac6bad683c2f63fb346105a6a393"
+      },
+      {
+        "name": "icon_12.ico",
+        "sha256": "c771bde14e8f6537109add6f660d10cd77a90b9071158696b219b88c679ef1ed"
+      },
+      {
+        "name": "icon_12.ico.thumb",
+        "sha256": "c771bde14e8f6537109add6f660d10cd77a90b9071158696b219b88c679ef1ed"
+      },
+      {
+        "name": "icon_7.ico",
+        "sha256": "f07d9c8d3a54f119a1540107270aab223a4c837af093ffe9e3fea897ee5bdbe4"
+      },
+      {
+        "name": "icon_7.ico.thumb",
+        "sha256": "f07d9c8d3a54f119a1540107270aab223a4c837af093ffe9e3fea897ee5bdbe4"
+      },
+      {
+        "name": "icon_5.ico",
+        "sha256": "f58945e866c0b78efcdbb63ae1bcb4791856e6d2df3119332cf9aa057d31aa7f"
+      },
+      {
+        "name": "icon_5.ico.thumb",
+        "sha256": "f58945e866c0b78efcdbb63ae1bcb4791856e6d2df3119332cf9aa057d31aa7f"
+      },
+      {
+        "name": "icon_3.ico",
+        "sha256": "ff3c0ac9d3d1da40b88317942811d9a72cfbdc7c10322f1c645b63c167403181"
+      },
+      {
+        "name": "icon_3.ico.thumb",
+        "sha256": "ff3c0ac9d3d1da40b88317942811d9a72cfbdc7c10322f1c645b63c167403181"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [],
+    "tags": {
+      "file.pe.debug.guid": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "7fdc3f15-8ef9-4afa-9859-bf6c8de983b"
+        }
+      ],
+      "file.pe.exports.function_name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "TracePrintf"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_BScrollGetWindowHandle@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_BScrollInit@44"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_BScrollStart@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_BScrollStop@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_BScrollTerm@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_BScrollWndProc@16"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_CreateDIBPalette@8"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_GfxBitmapBackfill@12"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_GfxBitmapDisplay@20"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_GfxBitmapDrawTransparent@24"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_GfxBitmapScroll@20"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_GfxDeviceIsMono@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_GfxHideHourglass@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_GfxLoadBitmapEx@12"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_GfxShowHourglass@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_GfxTextExtentTruncate@12"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_MemAllocEx@20"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_MemFreeEx@16"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_MemInit@8"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_MemReAllocEx@24"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_MemSize@8"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_MemTerm@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrAtoI@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrAtoL@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrChrCat@8"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrChrCatLeft@8"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrClean@12"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrCpyXChr@12"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrDup@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrDupFree@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrGetLastChr@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrGetRow@16"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrGetRowColumnCount@12"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrInsert@8"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrItoA@12"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrLtoA@12"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrSetLastChr@8"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrSetN@12"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrTrimChr@8"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrTrimChrLeading@8"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrTrimQuotes@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrTrimWhite@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_StrTrimWhiteLeading@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_TraceGetLevel@4"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_TraceInit@8"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_TraceOutput@12"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_TraceSetLevel@8"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_TraceTerm@4"
+        }
+      ],
+      "file.pe.exports.module_name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "dialer.exe"
+        }
+      ],
+      "file.pe.imports.fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "96:HKY3+HJKUt+TsppGipfrd/+i7iXG+RGUQpGO1qbKdLpvv6mlX2wc+pRPhdp8NidZ:Hr4cUtKERTNpiXG9nS++mGQPhdpTYof"
+        }
+      ],
+      "file.pe.imports.imphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "02c3f6b4018572e7a446fe853ac114e2"
+        }
+      ],
+      "file.pe.imports.sorted_fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "96:ddKdXdUsaXdrliK1bZ2QYHywp1FBGkjSj/hU+iSU4AHjSQKXN/JGMLKTWUGtOBI2:dAo7i1hwhUQUNjSQKXN8M2iUGRLYafQ"
+        }
+      ],
+      "file.pe.imports.sorted_sha1": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "d4f13dd5b7805bf12d6654722495180a4f4329e0"
+        }
+      ],
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 1091599591
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2004-08-04 06:06:31 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.pdb_filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "dialer.pdb"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ENGLISH"
+        }
+      ],
+      "file.pe.resources.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "AVI"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "REGISTRY"
+        }
+      ],
+      "file.pe.rich_header.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "1012097a43cae12a26c093fe4d5bab95"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "69b371454c8150be9a0621dc7ffe22ce"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "6c3a344aa61744cfd5304e755220574f"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "f071b90453a12c2be89a50896db16fce"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".data"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rsrc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".text"
+        }
+      ],
+      "file.pe.versions.description": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "TAPI 3.0 Dialer and IP Multicast Conference Viewer"
+        }
+      ],
+      "file.pe.versions.filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Dialer"
+        }
+      ],
+      "file.string.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Add"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Add..."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Cancel"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Display name:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Display..."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Edit..."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Format..."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&More Information"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Number or address:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&OK"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Phone call"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Remove"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Search"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Server Address"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Source..."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Take Picture"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&User:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Video Device"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "About Phone Dialer"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Active Voice offers a full range of messaging and communications software designed for Microsoft Windows(R) and BackOffice(tm)."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Add ILS Server"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Add User"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Cancel"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Developed for Microsoft by Active Voice.  (C)1998 Active Voice Corporation.\nAll rights reserved."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Dial as"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Edit Speed Dial List"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Enter a display name and a phone number or network address"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Enter the name of the user to add.  You must search the network directory to verify that the user exists."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Entrie&s"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "For more information, a free upgrade to the latest version of this program, or other software, visit: http://www.activevoice.com/dialer"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Int&ernet call"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Internet &conference"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "List1"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "More Speed Dial Entries"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Move &Down"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Move &Up"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "OK"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Phone Dialer 1.50"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Place &Call"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Preview"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Search &Results:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Select Entry to Dial"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Speed Dial"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Take Picture"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Video"
+        }
+      ]
+    },
     "temp_submission_data": {}
+  }
 }

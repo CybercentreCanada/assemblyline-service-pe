@@ -1,388 +1,484 @@
 {
-    "classification": "TLP:W",
-    "response": {
-        "milestones": {
-            "service_started": null,
-            "service_completed": null
-        },
-        "service_version": null,
-        "service_name": null,
-        "service_tool_version": null,
-        "supplementary": [
-            {
-                "name": "features.json",
-                "sha256": "45389d2c35ffe2cda707a11fac7e3d201c19751dbb7badaf111690f6f5d73bbe",
-                "description": "Features extracted from the PE file, as a JSON file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/features.json",
-                "is_section_image": false
-            }
-        ],
-        "extracted": [],
-        "service_context": null,
-        "service_debug_info": null
-    },
-    "result": {
-        "score": 350,
-        "sections": [
-            {
-                "body": "1474392634 (2016-09-20 17:30:34 +00:00 (UTC))\n1494298062 (2017-05-09 02:47:42 +00:00 (UTC))\n1346857550 (2012-09-05 15:05:50 +00:00 (UTC))",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": {
-                    "heur_id": 11,
-                    "score": 250,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "Multiple different non-zero timestamps",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Timestamp\", \"1346857550 (2012-09-05 15:05:50 +00:00 (UTC))\"], [\"Entrypoint\", \"0x1253\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"5.1\"], [\"Linker version\", \"15.0\"], [\"Operating System version\", \"5.1\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", true], [\"Checksum\", \"0x000c0efb\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "linker": {
-                                "timestamp": [
-                                    1346857550,
-                                    "2012-09-05 15:05:50 +00:00 (UTC)"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Headers",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"sha512\", \"95da6d30cb8e5e8c94c4dcb4878b722d92fd3d85f67aea669114a04da4bd4b1d44fa536f989333d325ee9241c39cda6b19ad3ad2953e01ad5a244118ed5cfa31\"], [\"sha384\", \"f988d682a1ee196de064dc0ab1643bac7251b1af8f11ec67aa18808854f36d01dc2377cf78e57d2d08e0b152194eaf0e\"], [\"sha256\", \"bf67b2a3729312b9de9f4d4cef20397a48e1b2b6499052a81fbc944bb420688d\"], [\"sha1\", \"ed36459563de049088b11f9b30abcbe7eafca9df\"], [\"md5\", \"4455859615c9505dd1e2956bc2000c71\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Sections",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 7.998772170927656], [\"Entropy without padding\", 7.99879481530801], [\"Offset\", 512], [\"Size\", 735744], [\"Virtual Size\", 735711], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"3480dd0dfac7093002acf92df857a604\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.52392, 7.98755, 7.98637, 7.98807, 7.98628, 7.98684, 7.98796, 7.98835, 7.98634, 7.98772, 7.98844, 7.9892, 7.98802, 7.98652, 7.98944, 7.98753, 7.98934, 7.98902, 7.987, 7.97625, 7.96368, 7.95322, 7.76346, 7.98495, 7.9848, 7.98717, 7.9875, 7.98758, 7.98799, 7.98725, 7.98531, 7.98451, 7.98627, 7.98837, 7.98724, 7.98872, 7.98608, 7.98601, 7.98765, 7.98682, 7.98698, 7.98731, 7.98635, 7.98746, 7.98883, 7.98754, 7.98468, 7.9847, 7.9456, 7.67394]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".text"
-                                ],
-                                "hash": [
-                                    "3480dd0dfac7093002acf92df857a604"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .text",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Section name\", \".text\"], [\"Entropy:\", 7.998772170927656], [\"Entropy without padding\", 7.99879481530801]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.52392, 7.98755, 7.98637, 7.98807, 7.98628, 7.98684, 7.98796, 7.98835, 7.98634, 7.98772, 7.98844, 7.9892, 7.98802, 7.98652, 7.98944, 7.98753, 7.98934, 7.98902, 7.987, 7.97625, 7.96368, 7.95322, 7.76346, 7.98495, 7.9848, 7.98717, 7.9875, 7.98758, 7.98799, 7.98725, 7.98531, 7.98451, 7.98627, 7.98837, 7.98724, 7.98872, 7.98608, 7.98601, 7.98765, 7.98682, 7.98698, 7.98731, 7.98635, 7.98746, 7.98883, 7.98754, 7.98468, 7.9847, 7.9456, 7.67394]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 2,
-                "heuristic": {
-                    "heur_id": 4,
-                    "score": 100,
-                    "attack_ids": [],
-                    "signatures": {},
-                    "frequency": 1,
-                    "score_map": {}
-                },
-                "tags": {},
-                "title_text": "High section entropy",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.006082273843231], [\"Entropy without padding\", 6.372767466720216], [\"Offset\", 736256], [\"Size\", 4096], [\"Virtual Size\", 3766], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_WRITE\"], [\"MD5\", \"8dcbb71f3828539116c3be6a6547b94f\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.09502, -0.0, -0.0, -0.0, -0.0, -0.0, 2.79233, 4.64259, 5.55736, 5.99768, 6.05566, 5.90932, 6.00688, 5.9489, 6.02207, 5.98249, 6.02207, 5.93847, 5.8225, 5.19807, 5.86652, 5.99768, 6.04048, 6.08005, 5.93969, 5.9917, 5.94292, 5.97329, 2.98047, 3.27088, 3.17877, 2.55275, 2.1275, 3.0064, 3.39327, 4.1308, 4.69115, 4.63469, 4.74316, 4.79885, 4.63914, 4.48209, 4.65138, 4.74894, 4.48532, 4.17096, -0.0, -0.0, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".ydata"
-                                ],
-                                "hash": [
-                                    "8dcbb71f3828539116c3be6a6547b94f"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .ydata",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 2.2355233109931776], [\"Entropy without padding\", 2.302109765587239], [\"Offset\", 740352], [\"Size\", 7168], [\"Virtual Size\", 6928], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"554708cfe705a43d72a342fd117664c6\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.10887, 3.13085, 6.19158, 6.14766, 6.23516, 6.14766, 6.19158, 6.14766, 6.14766, 6.23516, 6.19158, 6.19158, 6.14766, 1.87532, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".rsrc"
-                                ],
-                                "hash": [
-                                    "554708cfe705a43d72a342fd117664c6"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .rsrc",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Debugs",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Timestamp\", \"1494298062 (2017-05-09 02:47:42 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "UNKNOWN",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Name: nmv.ocx\nVersion: 0.0\nTimestamp: 1474392634 (2016-09-20 17:30:34 +00:00 (UTC))",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "exports": {
-                                "module_name": [
-                                    "nmv.ocx"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Export",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Name: oplk, ordinal: 1",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "exports": {
-                                "function_name": [
-                                    "oplk"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Entries",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "imports": {
-                                "sorted_sha1": [
-                                    "e20c1f561b0f649091f98bda8095c393efe6f9de"
-                                ],
-                                "imphash": [
-                                    "762e0fa3c4a01433b7575bd6524046cf"
-                                ],
-                                "fuzzy": [
-                                    "24:0WGzQJSLk6U0bV34QR+SQSEUGtKQn6WPdqze5hABNcMgQJi:/JSY6U0bV3zR4SlUKQn6WQUhABNE"
-                                ],
-                                "sorted_fuzzy": [
-                                    "24:NggQJaIZYIEASwQW/LbuEU6U0JSV3RGt4Qb+SQSLkn6Gd:NfZASwQ2il6U0JSV3RUzb4SYn6Gd"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Imports",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "JetCloseDatabase, JetBeginTransaction",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "esent.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Extend, Recover, Chkdsk",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "untfs.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "DispatchMessageW, LoadIconW, DialogBoxParamA, LoadBitmapA, GetDlgItemTextA, GetMessageA, IsCharLowerA, GetPropW, LoadCursorA, GetClassLongW, CreateWindowExA, InsertMenuA, wsprintfA, PostMessageA",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "user32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "GetModuleHandleA, CopyFileA, VirtualAlloc, SleepEx, GetCurrentProcessId, GetConsoleTitleW, LoadLibraryExA, SetVolumeLabelW, CloseHandle, CreateSemaphoreW, FindFirstFileW, GetVolumeNameForVolumeMountPointA, CreateMutexA, GetStartupInfoA",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "kernel32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "SHDefExtractIconA, SHGetFileInfoW, StrRChrA, ShellMessageBoxW, SHCreateDirectoryExA, DllRegisterServer, StrStrW, FindExecutableW, ExtractIconW, ShellAboutW",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "shell32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "CoCreateActivity, SafeRef, RecycleSurrogate, CoLoadServices",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "comsvcs.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Languages\", \"NEUTRAL\"], [\"Sublanguages\", \"DEFAULT\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "resources": {
-                                "language": [
-                                    "NEUTRAL"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Resources",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[{\"SHA256\": \"2e2864a828be87127533df78fbdfd66e8aa21f041b145b259352eddf0f7398e2\", \"Type\": \"DIALOG\", \"Entropy\": 7.089577574184466}, {\"SHA256\": \"256984cb62bc879971463ff0ff7567042dc95d8b0fb2bc676f246c2293c77ae8\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"256984cb62bc879971463ff0ff7567042dc95d8b0fb2bc676f246c2293c77ae8\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"256984cb62bc879971463ff0ff7567042dc95d8b0fb2bc676f246c2293c77ae8\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}]",
-                "classification": "TLP:W",
-                "body_format": "TABLE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Summary",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Overlay",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            }
-        ]
-    },
-    "sha256": "2420feb9d03efc1aa07b4117390c29cd8fee826ea1b48fee89660d65a3a8ba2b",
+  "extra": {
     "drop_file": false,
+    "score": 350,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "1474392634 (2016-09-20 17:30:34 +00:00 (UTC))\n1494298062 (2017-05-09 02:47:42 +00:00 (UTC))\n1346857550 (2012-09-05 15:05:50 +00:00 (UTC))",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 11,
+          "score": 250,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Multiple different non-zero timestamps",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1346857550 (2012-09-05 15:05:50 +00:00 (UTC))\"], [\"Entrypoint\", \"0x1253\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"5.1\"], [\"Linker version\", \"15.0\"], [\"Operating System version\", \"5.1\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", true], [\"Checksum\", \"0x000c0efb\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  1346857550,
+                  "2012-09-05 15:05:50 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"sha512\", \"95da6d30cb8e5e8c94c4dcb4878b722d92fd3d85f67aea669114a04da4bd4b1d44fa536f989333d325ee9241c39cda6b19ad3ad2953e01ad5a244118ed5cfa31\"], [\"sha384\", \"f988d682a1ee196de064dc0ab1643bac7251b1af8f11ec67aa18808854f36d01dc2377cf78e57d2d08e0b152194eaf0e\"], [\"sha256\", \"bf67b2a3729312b9de9f4d4cef20397a48e1b2b6499052a81fbc944bb420688d\"], [\"sha1\", \"ed36459563de049088b11f9b30abcbe7eafca9df\"], [\"md5\", \"4455859615c9505dd1e2956bc2000c71\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 7.998772170927656], [\"Entropy without padding\", 7.99879481530801], [\"Offset\", 512], [\"Size\", 735744], [\"Virtual Size\", 735711], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"3480dd0dfac7093002acf92df857a604\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.52392, 7.98755, 7.98637, 7.98807, 7.98628, 7.98684, 7.98796, 7.98835, 7.98634, 7.98772, 7.98844, 7.9892, 7.98802, 7.98652, 7.98944, 7.98753, 7.98934, 7.98902, 7.987, 7.97625, 7.96368, 7.95322, 7.76346, 7.98495, 7.9848, 7.98717, 7.9875, 7.98758, 7.98799, 7.98725, 7.98531, 7.98451, 7.98627, 7.98837, 7.98724, 7.98872, 7.98608, 7.98601, 7.98765, 7.98682, 7.98698, 7.98731, 7.98635, 7.98746, 7.98883, 7.98754, 7.98468, 7.9847, 7.9456, 7.67394]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "3480dd0dfac7093002acf92df857a604"
+                ],
+                "name": [
+                  ".text"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .text",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Section name\", \".text\"], [\"Entropy:\", 7.998772170927656], [\"Entropy without padding\", 7.99879481530801]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.52392, 7.98755, 7.98637, 7.98807, 7.98628, 7.98684, 7.98796, 7.98835, 7.98634, 7.98772, 7.98844, 7.9892, 7.98802, 7.98652, 7.98944, 7.98753, 7.98934, 7.98902, 7.987, 7.97625, 7.96368, 7.95322, 7.76346, 7.98495, 7.9848, 7.98717, 7.9875, 7.98758, 7.98799, 7.98725, 7.98531, 7.98451, 7.98627, 7.98837, 7.98724, 7.98872, 7.98608, 7.98601, 7.98765, 7.98682, 7.98698, 7.98731, 7.98635, 7.98746, 7.98883, 7.98754, 7.98468, 7.9847, 7.9456, 7.67394]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 4,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "High section entropy",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.006082273843231], [\"Entropy without padding\", 6.372767466720216], [\"Offset\", 736256], [\"Size\", 4096], [\"Virtual Size\", 3766], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_WRITE\"], [\"MD5\", \"8dcbb71f3828539116c3be6a6547b94f\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.09502, -0.0, -0.0, -0.0, -0.0, -0.0, 2.79233, 4.64259, 5.55736, 5.99768, 6.05566, 5.90932, 6.00688, 5.9489, 6.02207, 5.98249, 6.02207, 5.93847, 5.8225, 5.19807, 5.86652, 5.99768, 6.04048, 6.08005, 5.93969, 5.9917, 5.94292, 5.97329, 2.98047, 3.27088, 3.17877, 2.55275, 2.1275, 3.0064, 3.39327, 4.1308, 4.69115, 4.63469, 4.74316, 4.79885, 4.63914, 4.48209, 4.65138, 4.74894, 4.48532, 4.17096, -0.0, -0.0, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "8dcbb71f3828539116c3be6a6547b94f"
+                ],
+                "name": [
+                  ".ydata"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .ydata",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 2.2355233109931776], [\"Entropy without padding\", 2.302109765587239], [\"Offset\", 740352], [\"Size\", 7168], [\"Virtual Size\", 6928], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"554708cfe705a43d72a342fd117664c6\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.10887, 3.13085, 6.19158, 6.14766, 6.23516, 6.14766, 6.19158, 6.14766, 6.14766, 6.23516, 6.19158, 6.19158, 6.14766, 1.87532, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "554708cfe705a43d72a342fd117664c6"
+                ],
+                "name": [
+                  ".rsrc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rsrc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Debugs",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1494298062 (2017-05-09 02:47:42 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "UNKNOWN",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Name: nmv.ocx\nVersion: 0.0\nTimestamp: 1474392634 (2016-09-20 17:30:34 +00:00 (UTC))",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "exports": {
+                "module_name": [
+                  "nmv.ocx"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Export",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Name: oplk, ordinal: 1",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "exports": {
+                "function_name": [
+                  "oplk"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Entries",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "imports": {
+                "fuzzy": [
+                  "24:0WGzQJSLk6U0bV34QR+SQSEUGtKQn6WPdqze5hABNcMgQJi:/JSY6U0bV3zR4SlUKQn6WQUhABNE"
+                ],
+                "imphash": [
+                  "762e0fa3c4a01433b7575bd6524046cf"
+                ],
+                "sorted_fuzzy": [
+                  "24:NggQJaIZYIEASwQW/LbuEU6U0JSV3RGt4Qb+SQSLkn6Gd:NfZASwQ2il6U0JSV3RUzb4SYn6Gd"
+                ],
+                "sorted_sha1": [
+                  "e20c1f561b0f649091f98bda8095c393efe6f9de"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Imports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "JetCloseDatabase, JetBeginTransaction",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "esent.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Extend, Recover, Chkdsk",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "untfs.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "DispatchMessageW, LoadIconW, DialogBoxParamA, LoadBitmapA, GetDlgItemTextA, GetMessageA, IsCharLowerA, GetPropW, LoadCursorA, GetClassLongW, CreateWindowExA, InsertMenuA, wsprintfA, PostMessageA",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "user32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "GetModuleHandleA, CopyFileA, VirtualAlloc, SleepEx, GetCurrentProcessId, GetConsoleTitleW, LoadLibraryExA, SetVolumeLabelW, CloseHandle, CreateSemaphoreW, FindFirstFileW, GetVolumeNameForVolumeMountPointA, CreateMutexA, GetStartupInfoA",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "kernel32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "SHDefExtractIconA, SHGetFileInfoW, StrRChrA, ShellMessageBoxW, SHCreateDirectoryExA, DllRegisterServer, StrStrW, FindExecutableW, ExtractIconW, ShellAboutW",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "shell32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "CoCreateActivity, SafeRef, RecycleSurrogate, CoLoadServices",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "comsvcs.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Languages\", \"NEUTRAL\"], [\"Sublanguages\", \"DEFAULT\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "NEUTRAL"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[{\"SHA256\": \"2e2864a828be87127533df78fbdfd66e8aa21f041b145b259352eddf0f7398e2\", \"Type\": \"DIALOG\", \"Entropy\": 7.089577574184466}, {\"SHA256\": \"256984cb62bc879971463ff0ff7567042dc95d8b0fb2bc676f246c2293c77ae8\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"256984cb62bc879971463ff0ff7567042dc95d8b0fb2bc676f246c2293c77ae8\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"256984cb62bc879971463ff0ff7567042dc95d8b0fb2bc676f246c2293c77ae8\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}]",
+        "body_format": "TABLE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Summary",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "45389d2c35ffe2cda707a11fac7e3d201c19751dbb7badaf111690f6f5d73bbe"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 4,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 11,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.pe.exports.function_name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "oplk"
+        }
+      ],
+      "file.pe.exports.module_name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "nmv.ocx"
+        }
+      ],
+      "file.pe.imports.fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "24:0WGzQJSLk6U0bV34QR+SQSEUGtKQn6WPdqze5hABNcMgQJi:/JSY6U0bV3zR4SlUKQn6WQUhABNE"
+        }
+      ],
+      "file.pe.imports.imphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "762e0fa3c4a01433b7575bd6524046cf"
+        }
+      ],
+      "file.pe.imports.sorted_fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "24:NggQJaIZYIEASwQW/LbuEU6U0JSV3RGt4Qb+SQSLkn6Gd:NfZASwQ2il6U0JSV3RUzb4SYn6Gd"
+        }
+      ],
+      "file.pe.imports.sorted_sha1": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "e20c1f561b0f649091f98bda8095c393efe6f9de"
+        }
+      ],
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 1346857550
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2012-09-05 15:05:50 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "3480dd0dfac7093002acf92df857a604"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "554708cfe705a43d72a342fd117664c6"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "8dcbb71f3828539116c3be6a6547b94f"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rsrc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".text"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".ydata"
+        }
+      ]
+    },
     "temp_submission_data": {}
+  }
 }

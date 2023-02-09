@@ -1,505 +1,660 @@
 {
-    "classification": "TLP:W",
-    "response": {
-        "milestones": {
-            "service_started": null,
-            "service_completed": null
-        },
-        "service_version": null,
-        "service_name": null,
-        "service_tool_version": null,
-        "supplementary": [
-            {
-                "name": "features.json",
-                "sha256": "ed811c0eb81e16e0519941a7173b916c5dac05e747fec58fa57e51384d884cbf",
-                "description": "Features extracted from the PE file, as a JSON file",
-                "classification": "TLP:W",
-                "path": "/tmp/working_directory/features.json",
-                "is_section_image": false
-            }
-        ],
-        "extracted": [],
-        "service_context": null,
-        "service_debug_info": null
-    },
-    "result": {
-        "score": 0,
-        "sections": [
-            {
-                "body": "[[\"Timestamp\", \"1259829217 (2009-12-03 08:33:37 +00:00 (UTC))\"], [\"Entrypoint\", \"0x8c27\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"7.10\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "linker": {
-                                "timestamp": [
-                                    1259829217,
-                                    "2009-12-03 08:33:37 +00:00 (UTC)"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Headers",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"7295dac656339843fa8a8424a1f3dbbc\"]]], [\"TABLE\", [{\"ID\": \"0x005a178e\", \"Compiler Information\": \"[LNK] VS2003 (.NET) SP1 build 6030\", \"Count\": 1}, {\"ID\": \"0x005e0bec\", \"Compiler Information\": \"[RES] VS2003 (.NET) build 3052\", \"Count\": 1}, {\"ID\": \"0x005c178e\", \"Compiler Information\": \"[EXP] VS2003 (.NET) SP1 build 6030\", \"Count\": 1}, {\"ID\": \"0x0060178e\", \"Compiler Information\": \"[C++] VS2003 (.NET) SP1 build 6030\", \"Count\": 14}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 90}, {\"ID\": \"0x005d0883\", \"Compiler Information\": \"Unknown object 0x005d0883\", \"Count\": 7}, {\"ID\": \"0x005f178e\", \"Compiler Information\": \"[ C ] VS2003 (.NET) SP1 build 6030\", \"Count\": 72}, {\"ID\": \"0x000f178e\", \"Compiler Information\": \"[ASM] VS2003 (.NET) SP1 build 6030\", \"Count\": 23}, {\"ID\": \"0x00690813\", \"Compiler Information\": \"Unknown object 0x00690813\", \"Count\": 1}]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "rich_header": {
-                                "hash": [
-                                    "7295dac656339843fa8a8424a1f3dbbc"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Rich Headers - Key: 3855160698",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"sha512\", \"af3038dd4d81535640272aaa1a39472d42af9015d6ac763cc83da2030ae480268c1e9c40361a70b5b4fa075515becbeca2aba09e57d5c4294c010e04715b285e\"], [\"sha384\", \"aabb29eb53ef8f3b407af3f1a882bb1ec6d8efede74330df45af76126ba8c5ab596d776b19da4e6fb53421609b02a708\"], [\"sha256\", \"3f6293f361e4e107d6d2de09faff34166ac3e19e770de3fca4476f70666a1208\"], [\"sha1\", \"2c5098c30af4bdf0f36f2b4f9561c6f88033506d\"], [\"md5\", \"fa6427ce53d91a1e1fc0a2931eedcd77\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Authentihash",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Sections",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.347413464778387], [\"Entropy without padding\", 6.516666885004611], [\"Offset\", 4096], [\"Size\", 57344], [\"Virtual Size\", 54638], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"bf6edbaf088e770ea2d56b3dec129774\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.70253, 6.10513, 5.85246, 5.85103, 6.03476, 6.0525, 4.9633, 5.68137, 6.00196, 5.6111, 5.74195, 6.25135, 6.16111, 6.21029, 6.00719, 5.98786, 5.91292, 5.75597, 5.86404, 5.83883, 5.58477, 5.54163, 5.3934, 5.12388, 6.11559, 5.90174, 6.23453, 6.31437, 6.11934, 6.30772, 6.22784, 6.28917, 6.20223, 6.08081, 6.14027, 6.23246, 6.17493, 6.42771, 6.44423, 6.20392, 6.46789, 6.31544, 6.06164, 6.05995, 6.40352, 6.51499, 5.17516, 3.79308, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".text"
-                                ],
-                                "hash": [
-                                    "bf6edbaf088e770ea2d56b3dec129774"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .text",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.723705899534099], [\"Entropy without padding\", 5.157529285705733], [\"Offset\", 61440], [\"Size\", 12288], [\"Virtual Size\", 10860], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"22a388eb05652f7e7385fd96dbf4f498\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.92809, 5.36001, 6.22934, 7.11252, 4.99728, 4.79811, 5.0683, 3.9154, 4.34241, 4.43567, 4.61787, 2.83373, 6.00466, 4.73161, 4.62879, 4.57638, 4.69369, 4.70568, 3.58467, 0.40542, 2.19675, 0.14326, 2.64338, 2.25223, 3.90642, 3.86299, 2.75781, 3.17077, 2.56253, 2.67325, 2.77393, 2.48364, 2.32671, 2.91051, 3.08215, 3.03005, 3.27745, 4.06949, 4.74153, 5.17874, 4.7314, 4.8146, 4.82782, 4.8316, 1.07033, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".rdata"
-                                ],
-                                "hash": [
-                                    "22a388eb05652f7e7385fd96dbf4f498"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .rdata",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.8734741931452772], [\"Entropy without padding\", 1.8734741931452772], [\"Offset\", 73728], [\"Size\", 4096], [\"Virtual Size\", 4960], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"c712915e08027263c728ac732d6170f6\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.46109, 3.76908, 4.13517, 2.29987, 0.42081, 0.22641, -0.0, 2.24189, 1.79011, 1.73365, 1.8481, 1.59225, 1.38792, 0.18982, -0.0, 0.09502, 0.46923, 1.14344, 1.52487, 2.80886, 3.09154, 2.29399, 2.09865, 2.30543, 2.99709, 2.55391, 3.14094, 1.67414, 0.2844, 2.236, 1.9274, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".data"
-                                ],
-                                "hash": [
-                                    "c712915e08027263c728ac732d6170f6"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .data",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.262646695466118], [\"Entropy without padding\", 3.3918952375055094], [\"Offset\", 77824], [\"Size\", 4096], [\"Virtual Size\", 1208], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"849cfa6632506b9d339fed8b36340133\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.39336, 2.28469, 2.52313, 2.97543, 3.15814, 2.95103, 2.93185, 3.08375, 3.16259, 3.0741, 3.11381, 2.84709, 3.04543, 2.95946, 2.20829, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".rsrc"
-                                ],
-                                "hash": [
-                                    "849cfa6632506b9d339fed8b36340133"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .rsrc",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.5363847191517674], [\"Entropy without padding\", 4.639863572600817], [\"Offset\", 81920], [\"Size\", 8192], [\"Virtual Size\", 5782], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"90ad33f24bca2deecaec93b145f445b5\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.51726, 5.49024, 5.19361, 5.699, 5.18848, 5.50617, 5.5725, 5.29528, 5.31239, 5.21662, 5.53979, 5.6616, 5.349, 5.53965, 5.64642, 5.00971, 5.02123, 4.90494, 4.57486, 4.84581, 0.74469, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".reloc"
-                                ],
-                                "hash": [
-                                    "90ad33f24bca2deecaec93b145f445b5"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .reloc",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.5584145358774627], [\"Entropy without padding\", 0.5584145358774627], [\"Offset\", 90112], [\"Size\", 61440], [\"Virtual Size\", 61440], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ, MEM_WRITE\"], [\"MD5\", \"43e224228de2ef17ab55a0a788d46e97\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [-0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 1.37459, 7.40295, 7.05555, -0.0, -0.0, -0.0]}}]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "sections": {
-                                "name": [
-                                    ".rmnet"
-                                ],
-                                "hash": [
-                                    "43e224228de2ef17ab55a0a788d46e97"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Section - .rmnet",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Debugs",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Timestamp\", \"1259829217 (2009-12-03 08:33:37 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"C:\\\\DistributedAutoLink\\\\Temp\\\\CompileOutputDir\\\\rsscan.pdb\"], [\"GUID\", \"cdfa33c3-e0d7-4175-946f-4eef8dee1989\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "pdb_filename": [
-                                "C:\\DistributedAutoLink\\Temp\\CompileOutputDir\\rsscan.pdb"
-                            ],
-                            "debug": {
-                                "guid": [
-                                    "cdfa33c3-e0d7-4175-946f-4eef8dee1989"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "CODEVIEW",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Name: rsscan.dll\nVersion: 0.0\nTimestamp: 1259829217 (2009-12-03 08:33:37 +00:00 (UTC))",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "exports": {
-                                "module_name": [
-                                    "rsscan.dll"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Export",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "Name: CreatePluginManager, ordinal: 1\nName: CreateScanEngine, ordinal: 2",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "exports": {
-                                "function_name": [
-                                    "CreatePluginManager",
-                                    "CreateScanEngine"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Entries",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": null,
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "imports": {
-                                "sorted_sha1": [
-                                    "6eb76566d32e1a1dd9472e4416dd43615b0ffd55"
-                                ],
-                                "imphash": [
-                                    "028671ee99a1ece96d9d3f10b23e770f"
-                                ],
-                                "fuzzy": [
-                                    "24:ifeDoVV4WCeDNEMYlSPOovgcfw37JGhT4yRv5FQHaqEdHJ1l1wMk:ifs3MYwmXcfmEhcCHqEdHJ1TW"
-                                ],
-                                "sorted_fuzzy": [
-                                    "24:FM21p9fCeDvt1Oovx1uEdvgAV4WCuDlYyEd3e/CBLoOGivJdsOLvo:nPfCYwY1J6mEd3e/CB0OGks+vo"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Imports",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "GetFileVersionInfoSizeA, GetFileVersionInfoA, VerQueryValueA",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "VERSION.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "FreeLibrary, GetProcAddress, LoadLibraryA, GetModuleFileNameA, FindClose, GetPrivateProfileStringA, CreateDirectoryA, CopyFileA, FindNextFileA, FindFirstFileA, GetFileAttributesA, GetModuleHandleA, HeapAlloc, HeapFree, RtlUnwind, RaiseException, ExitProcess, GetLastError, WideCharToMultiByte, GetCurrentThreadId, GetCommandLineA, GetVersionExA, DeleteCriticalSection, LeaveCriticalSection, EnterCriticalSection, HeapDestroy, HeapCreate, VirtualFree, VirtualAlloc, HeapReAlloc, IsBadWritePtr, TlsAlloc, SetLastError, TlsFree, TlsSetValue, TlsGetValue, SetUnhandledExceptionFilter, QueryPerformanceCounter, GetTickCount, GetCurrentProcessId, GetSystemTimeAsFileTime, TerminateProcess, GetCurrentProcess, HeapSize, SetHandleCount, GetStdHandle, GetFileType, GetStartupInfoA, FreeEnvironmentStringsA, GetEnvironmentStrings, FreeEnvironmentStringsW, GetEnvironmentStringsW, UnhandledExceptionFilter, WriteFile, InitializeCriticalSection, InterlockedExchange, VirtualQuery, IsBadReadPtr, IsBadCodePtr, GetACP, GetOEMCP, GetCPInfo, GetLocaleInfoA, GetStringTypeA, MultiByteToWideChar, GetStringTypeW, LCMapStringA, LCMapStringW, VirtualProtect, GetSystemInfo",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "KERNEL32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "RegQueryValueExA, RegCloseKey, RegOpenKeyExA",
-                "classification": "TLP:W",
-                "body_format": "TEXT",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "ADVAPI32.dll",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Languages\", \"CHINESE\"], [\"Sublanguages\", \"CHINESE_SIMPLIFIED\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "resources": {
-                                "language": [
-                                    "CHINESE"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "Resources",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"Type\", 0]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Version",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 23], [\"file_os\", \"WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"DLL\"], [\"file_version_LS\", 3], [\"file_version_MS\", 1376256], [\"product_version_LS\", 0], [\"product_version_MS\", 1376256], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "fixed_file_info",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "pe": {
-                            "versions": {
-                                "filename": [
-                                    "rsscan.dll"
-                                ],
-                                "description": [
-                                    "Plugin Dynamic Link Library"
-                                ]
-                            }
-                        }
-                    }
-                },
-                "title_text": "string_file_info",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"key\", \"080404b0\"], [\"type\", 1], [\"lang\", \"CHINESE\"], [\"sublang\", \"CHINESE_SIMPLIFIED\"], [\"code_page\", \"UTF_16\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 3,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "langcode_items 1",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"SpecialBuild\", \"954548001562500\"], [\"ProductVersion\", \"21, 0, 0, 0\"], [\"ProductName\", \"Rising AntiVirus 2009\"], [\"LegalCopyright\", \"Copyright(C) 2009-2010 Beijing Rising Information Technology Co., Ltd. All Rights Reserved.\"], [\"OriginalFilename\", \"rsscan.dll\"], [\"FileVersion\", \"21, 0, 0, 3\"], [\"CompanyName\", \"Beijing Rising Information Technology Co., Ltd.\"], [\"FileDescription\", \"Plugin Dynamic Link Library\"], [\"InternalName\", \"Beijing Rising Information Technology Co., Ltd.\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 4,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "items",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78645252\"]]",
-                "classification": "TLP:W",
-                "body_format": "ORDERED_KEY_VALUE",
-                "depth": 2,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "var_file_info",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[{\"SHA256\": \"c341fa6d5790a6357af322eadf92a8b187df789c53a626444340a4b5c8d0e037\", \"Type\": \"VERSION\", \"Entropy\": 3.49783356161407}]",
-                "classification": "TLP:W",
-                "body_format": "TABLE",
-                "depth": 1,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Summary",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]]]]",
-                "classification": "TLP:W",
-                "body_format": "MULTI",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "Overlay",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            }
-        ]
-    },
-    "sha256": "80fcfadbc54d862fa63cd7c098e8c5110a45ac70aaa1616eb0c7d739624e9a2a",
+  "extra": {
     "drop_file": false,
+    "score": 0,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1259829217 (2009-12-03 08:33:37 +00:00 (UTC))\"], [\"Entrypoint\", \"0x8c27\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"7.10\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  1259829217,
+                  "2009-12-03 08:33:37 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"7295dac656339843fa8a8424a1f3dbbc\"]]], [\"TABLE\", [{\"ID\": \"0x005a178e\", \"Compiler Information\": \"[LNK] VS2003 (.NET) SP1 build 6030\", \"Count\": 1}, {\"ID\": \"0x005e0bec\", \"Compiler Information\": \"[RES] VS2003 (.NET) build 3052\", \"Count\": 1}, {\"ID\": \"0x005c178e\", \"Compiler Information\": \"[EXP] VS2003 (.NET) SP1 build 6030\", \"Count\": 1}, {\"ID\": \"0x0060178e\", \"Compiler Information\": \"[C++] VS2003 (.NET) SP1 build 6030\", \"Count\": 14}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 90}, {\"ID\": \"0x005d0883\", \"Compiler Information\": \"Unknown object 0x005d0883\", \"Count\": 7}, {\"ID\": \"0x005f178e\", \"Compiler Information\": \"[ C ] VS2003 (.NET) SP1 build 6030\", \"Count\": 72}, {\"ID\": \"0x000f178e\", \"Compiler Information\": \"[ASM] VS2003 (.NET) SP1 build 6030\", \"Count\": 23}, {\"ID\": \"0x00690813\", \"Compiler Information\": \"Unknown object 0x00690813\", \"Count\": 1}]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "rich_header": {
+                "hash": [
+                  "7295dac656339843fa8a8424a1f3dbbc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Rich Headers - Key: 3855160698",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"sha512\", \"af3038dd4d81535640272aaa1a39472d42af9015d6ac763cc83da2030ae480268c1e9c40361a70b5b4fa075515becbeca2aba09e57d5c4294c010e04715b285e\"], [\"sha384\", \"aabb29eb53ef8f3b407af3f1a882bb1ec6d8efede74330df45af76126ba8c5ab596d776b19da4e6fb53421609b02a708\"], [\"sha256\", \"3f6293f361e4e107d6d2de09faff34166ac3e19e770de3fca4476f70666a1208\"], [\"sha1\", \"2c5098c30af4bdf0f36f2b4f9561c6f88033506d\"], [\"md5\", \"fa6427ce53d91a1e1fc0a2931eedcd77\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.347413464778387], [\"Entropy without padding\", 6.516666885004611], [\"Offset\", 4096], [\"Size\", 57344], [\"Virtual Size\", 54638], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"bf6edbaf088e770ea2d56b3dec129774\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.70253, 6.10513, 5.85246, 5.85103, 6.03476, 6.0525, 4.9633, 5.68137, 6.00196, 5.6111, 5.74195, 6.25135, 6.16111, 6.21029, 6.00719, 5.98786, 5.91292, 5.75597, 5.86404, 5.83883, 5.58477, 5.54163, 5.3934, 5.12388, 6.11559, 5.90174, 6.23453, 6.31437, 6.11934, 6.30772, 6.22784, 6.28917, 6.20223, 6.08081, 6.14027, 6.23246, 6.17493, 6.42771, 6.44423, 6.20392, 6.46789, 6.31544, 6.06164, 6.05995, 6.40352, 6.51499, 5.17516, 3.79308, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "bf6edbaf088e770ea2d56b3dec129774"
+                ],
+                "name": [
+                  ".text"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .text",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.723705899534099], [\"Entropy without padding\", 5.157529285705733], [\"Offset\", 61440], [\"Size\", 12288], [\"Virtual Size\", 10860], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"22a388eb05652f7e7385fd96dbf4f498\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.92809, 5.36001, 6.22934, 7.11252, 4.99728, 4.79811, 5.0683, 3.9154, 4.34241, 4.43567, 4.61787, 2.83373, 6.00466, 4.73161, 4.62879, 4.57638, 4.69369, 4.70568, 3.58467, 0.40542, 2.19675, 0.14326, 2.64338, 2.25223, 3.90642, 3.86299, 2.75781, 3.17077, 2.56253, 2.67325, 2.77393, 2.48364, 2.32671, 2.91051, 3.08215, 3.03005, 3.27745, 4.06949, 4.74153, 5.17874, 4.7314, 4.8146, 4.82782, 4.8316, 1.07033, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "22a388eb05652f7e7385fd96dbf4f498"
+                ],
+                "name": [
+                  ".rdata"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rdata",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.8734741931452772], [\"Entropy without padding\", 1.8734741931452772], [\"Offset\", 73728], [\"Size\", 4096], [\"Virtual Size\", 4960], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"c712915e08027263c728ac732d6170f6\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.46109, 3.76908, 4.13517, 2.29987, 0.42081, 0.22641, -0.0, 2.24189, 1.79011, 1.73365, 1.8481, 1.59225, 1.38792, 0.18982, -0.0, 0.09502, 0.46923, 1.14344, 1.52487, 2.80886, 3.09154, 2.29399, 2.09865, 2.30543, 2.99709, 2.55391, 3.14094, 1.67414, 0.2844, 2.236, 1.9274, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "c712915e08027263c728ac732d6170f6"
+                ],
+                "name": [
+                  ".data"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .data",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.262646695466118], [\"Entropy without padding\", 3.3918952375055094], [\"Offset\", 77824], [\"Size\", 4096], [\"Virtual Size\", 1208], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"849cfa6632506b9d339fed8b36340133\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.39336, 2.28469, 2.52313, 2.97543, 3.15814, 2.95103, 2.93185, 3.08375, 3.16259, 3.0741, 3.11381, 2.84709, 3.04543, 2.95946, 2.20829, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "849cfa6632506b9d339fed8b36340133"
+                ],
+                "name": [
+                  ".rsrc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rsrc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.5363847191517674], [\"Entropy without padding\", 4.639863572600817], [\"Offset\", 81920], [\"Size\", 8192], [\"Virtual Size\", 5782], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"90ad33f24bca2deecaec93b145f445b5\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.51726, 5.49024, 5.19361, 5.699, 5.18848, 5.50617, 5.5725, 5.29528, 5.31239, 5.21662, 5.53979, 5.6616, 5.349, 5.53965, 5.64642, 5.00971, 5.02123, 4.90494, 4.57486, 4.84581, 0.74469, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "90ad33f24bca2deecaec93b145f445b5"
+                ],
+                "name": [
+                  ".reloc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .reloc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.5584145358774627], [\"Entropy without padding\", 0.5584145358774627], [\"Offset\", 90112], [\"Size\", 61440], [\"Virtual Size\", 61440], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ, MEM_WRITE\"], [\"MD5\", \"43e224228de2ef17ab55a0a788d46e97\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [-0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 1.37459, 7.40295, 7.05555, -0.0, -0.0, -0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "43e224228de2ef17ab55a0a788d46e97"
+                ],
+                "name": [
+                  ".rmnet"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rmnet",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Debugs",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1259829217 (2009-12-03 08:33:37 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"C:\\\\DistributedAutoLink\\\\Temp\\\\CompileOutputDir\\\\rsscan.pdb\"], [\"GUID\", \"cdfa33c3-e0d7-4175-946f-4eef8dee1989\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "debug": {
+                "guid": [
+                  "cdfa33c3-e0d7-4175-946f-4eef8dee1989"
+                ]
+              },
+              "pdb_filename": [
+                "C:\\DistributedAutoLink\\Temp\\CompileOutputDir\\rsscan.pdb"
+              ]
+            }
+          }
+        },
+        "title_text": "CODEVIEW",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Name: rsscan.dll\nVersion: 0.0\nTimestamp: 1259829217 (2009-12-03 08:33:37 +00:00 (UTC))",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "exports": {
+                "module_name": [
+                  "rsscan.dll"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Export",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Name: CreatePluginManager, ordinal: 1\nName: CreateScanEngine, ordinal: 2",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "exports": {
+                "function_name": [
+                  "CreatePluginManager",
+                  "CreateScanEngine"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Entries",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "imports": {
+                "fuzzy": [
+                  "24:ifeDoVV4WCeDNEMYlSPOovgcfw37JGhT4yRv5FQHaqEdHJ1l1wMk:ifs3MYwmXcfmEhcCHqEdHJ1TW"
+                ],
+                "imphash": [
+                  "028671ee99a1ece96d9d3f10b23e770f"
+                ],
+                "sorted_fuzzy": [
+                  "24:FM21p9fCeDvt1Oovx1uEdvgAV4WCuDlYyEd3e/CBLoOGivJdsOLvo:nPfCYwY1J6mEd3e/CB0OGks+vo"
+                ],
+                "sorted_sha1": [
+                  "6eb76566d32e1a1dd9472e4416dd43615b0ffd55"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Imports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "GetFileVersionInfoSizeA, GetFileVersionInfoA, VerQueryValueA",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "VERSION.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "FreeLibrary, GetProcAddress, LoadLibraryA, GetModuleFileNameA, FindClose, GetPrivateProfileStringA, CreateDirectoryA, CopyFileA, FindNextFileA, FindFirstFileA, GetFileAttributesA, GetModuleHandleA, HeapAlloc, HeapFree, RtlUnwind, RaiseException, ExitProcess, GetLastError, WideCharToMultiByte, GetCurrentThreadId, GetCommandLineA, GetVersionExA, DeleteCriticalSection, LeaveCriticalSection, EnterCriticalSection, HeapDestroy, HeapCreate, VirtualFree, VirtualAlloc, HeapReAlloc, IsBadWritePtr, TlsAlloc, SetLastError, TlsFree, TlsSetValue, TlsGetValue, SetUnhandledExceptionFilter, QueryPerformanceCounter, GetTickCount, GetCurrentProcessId, GetSystemTimeAsFileTime, TerminateProcess, GetCurrentProcess, HeapSize, SetHandleCount, GetStdHandle, GetFileType, GetStartupInfoA, FreeEnvironmentStringsA, GetEnvironmentStrings, FreeEnvironmentStringsW, GetEnvironmentStringsW, UnhandledExceptionFilter, WriteFile, InitializeCriticalSection, InterlockedExchange, VirtualQuery, IsBadReadPtr, IsBadCodePtr, GetACP, GetOEMCP, GetCPInfo, GetLocaleInfoA, GetStringTypeA, MultiByteToWideChar, GetStringTypeW, LCMapStringA, LCMapStringW, VirtualProtect, GetSystemInfo",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "KERNEL32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "RegQueryValueExA, RegCloseKey, RegOpenKeyExA",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "ADVAPI32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Languages\", \"CHINESE\"], [\"Sublanguages\", \"CHINESE_SIMPLIFIED\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "CHINESE"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Type\", 0]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Version",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 23], [\"file_os\", \"WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"DLL\"], [\"file_version_LS\", 3], [\"file_version_MS\", 1376256], [\"product_version_LS\", 0], [\"product_version_MS\", 1376256], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "fixed_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "versions": {
+                "description": [
+                  "Plugin Dynamic Link Library"
+                ],
+                "filename": [
+                  "rsscan.dll"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "string_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"080404b0\"], [\"type\", 1], [\"lang\", \"CHINESE\"], [\"sublang\", \"CHINESE_SIMPLIFIED\"], [\"code_page\", \"UTF_16\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 3,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "langcode_items 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"SpecialBuild\", \"954548001562500\"], [\"ProductVersion\", \"21, 0, 0, 0\"], [\"ProductName\", \"Rising AntiVirus 2009\"], [\"LegalCopyright\", \"Copyright(C) 2009-2010 Beijing Rising Information Technology Co., Ltd. All Rights Reserved.\"], [\"OriginalFilename\", \"rsscan.dll\"], [\"FileVersion\", \"21, 0, 0, 3\"], [\"CompanyName\", \"Beijing Rising Information Technology Co., Ltd.\"], [\"FileDescription\", \"Plugin Dynamic Link Library\"], [\"InternalName\", \"Beijing Rising Information Technology Co., Ltd.\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 4,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "items",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78645252\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "var_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[{\"SHA256\": \"c341fa6d5790a6357af322eadf92a8b187df789c53a626444340a4b5c8d0e037\", \"Type\": \"VERSION\", \"Entropy\": 3.49783356161407}]",
+        "body_format": "TABLE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Summary",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "ed811c0eb81e16e0519941a7173b916c5dac05e747fec58fa57e51384d884cbf"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [],
+    "tags": {
+      "file.pe.debug.guid": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "cdfa33c3-e0d7-4175-946f-4eef8dee1989"
+        }
+      ],
+      "file.pe.exports.function_name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "CreatePluginManager"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "CreateScanEngine"
+        }
+      ],
+      "file.pe.exports.module_name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "rsscan.dll"
+        }
+      ],
+      "file.pe.imports.fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "24:ifeDoVV4WCeDNEMYlSPOovgcfw37JGhT4yRv5FQHaqEdHJ1l1wMk:ifs3MYwmXcfmEhcCHqEdHJ1TW"
+        }
+      ],
+      "file.pe.imports.imphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "028671ee99a1ece96d9d3f10b23e770f"
+        }
+      ],
+      "file.pe.imports.sorted_fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "24:FM21p9fCeDvt1Oovx1uEdvgAV4WCuDlYyEd3e/CBLoOGivJdsOLvo:nPfCYwY1J6mEd3e/CB0OGks+vo"
+        }
+      ],
+      "file.pe.imports.sorted_sha1": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "6eb76566d32e1a1dd9472e4416dd43615b0ffd55"
+        }
+      ],
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 1259829217
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2009-12-03 08:33:37 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.pdb_filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C:\\DistributedAutoLink\\Temp\\CompileOutputDir\\rsscan.pdb"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "CHINESE"
+        }
+      ],
+      "file.pe.rich_header.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "7295dac656339843fa8a8424a1f3dbbc"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "22a388eb05652f7e7385fd96dbf4f498"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "43e224228de2ef17ab55a0a788d46e97"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "849cfa6632506b9d339fed8b36340133"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "90ad33f24bca2deecaec93b145f445b5"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "bf6edbaf088e770ea2d56b3dec129774"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "c712915e08027263c728ac732d6170f6"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".data"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rdata"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".reloc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rmnet"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rsrc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".text"
+        }
+      ],
+      "file.pe.versions.description": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Plugin Dynamic Link Library"
+        }
+      ],
+      "file.pe.versions.filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "rsscan.dll"
+        }
+      ]
+    },
     "temp_submission_data": {}
+  }
 }

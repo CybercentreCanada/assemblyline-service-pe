@@ -24,6 +24,7 @@ config:
   overlay_analysis_file_max_size: 50000000
   heur4_max_section_entropy: 7.5
   heur11_allowed_timestamp_range: 86400
+  heur12_min_size_byte: 60
   heur22_flag_more_recent_than_days: 3
   heur24_allowed_mismatch_file_size: 0.25
   heur25_min_overlay_size: 31457280
@@ -114,7 +115,7 @@ heuristics:
     filetype: "executable/windows"
     heur_id: 12
     name: Executable in resources
-    score: 800
+    score: 200
 
   - description: >-
        This file contains heavily corrupted resources.
@@ -227,6 +228,13 @@ heuristics:
     heur_id: 28
     name: Possible decompression bomb DOS attack
     score: 200
+
+  - description: >-
+      MalwareBazaar maintains a list of code signing certificates used by threat actors to sign malware. Code signing certificates are dumped by ReversingLabs A1000 Malware Analysis Platform and manually vetted by abuse.ch.
+    filetype: "executable/windows"
+    heur_id: 29
+    name: MalwareBazaar Blacklisted certificate
+    score: 500
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
