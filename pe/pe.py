@@ -212,7 +212,7 @@ def generate_checksum(filename, checksum_offset):
         else:
             dword = struct.unpack("I", data[i * 4 : i * 4 + 4])[0]
         checksum += dword
-        if checksum >= 2 ** 32:
+        if checksum >= 2**32:
             checksum = (checksum & 0xFFFFFFFF) + (checksum >> 32)
 
     checksum = (checksum & 0xFFFF) + (checksum >> 16)
@@ -837,7 +837,7 @@ class PE(ServiceBase):
         hr_timestamp = datetime.datetime.utcfromtimestamp(export.timestamp).strftime("%Y-%m-%d %H:%M:%S +00:00 (UTC)")
         res.add_line(f"Timestamp: {export.timestamp} ({hr_timestamp})")
 
-        sub_res = ResultSection("Entries")
+        sub_res = ResultSection("Entries", parent=res)
         for entry in export.entries:
             entry_dict = {
                 "address": entry.address,
@@ -849,8 +849,10 @@ class PE(ServiceBase):
                 # "size": entry.size, #In the docs, but not in the dir()
                 # "value": entry.value, #In the docs, but not in the dir()
             }
-            sub_res.add_line(f"Name: {entry.name}, ordinal: {entry.ordinal}")
-            sub_res.add_tag("file.pe.exports.function_name", entry.name)
+            if len(self.features["export"]["entries"]) < 100:
+                sub_res.add_line(f"Name: {entry.name}, ordinal: {entry.ordinal}")
+                sub_res.add_tag("file.pe.exports.function_name", entry.name)
+
             try:
                 entry_dict["forward_information"] = {
                     "function": entry.forward_information.function,
@@ -859,12 +861,20 @@ class PE(ServiceBase):
             except UnicodeDecodeError:
                 del entry_dict["forward_information"]
                 heur = Heuristic(13)
-                heur_section = ResultSection(heur.name, heuristic=heur)
+                heur_section = ResultSection(heur.name, heuristic=heur, parent=sub_res)
                 heur_section.add_line(f"Couldn't parse the forward information of {entry.name} ({entry.ordinal})")
-                sub_res.add_subsection(heur_section)
             self.features["export"]["entries"].append(entry_dict)
 
-        res.add_subsection(sub_res)
+        if len(self.features["export"]["entries"]) > 100:
+            heur = Heuristic(30)
+            heur_section = ResultSection(heur.name, heuristic=heur, parent=res)
+            heur_section.add_line(
+                f'A total of {len(self.features["export"]["entries"])} exports found, but only the first 100 are shown.'
+            )
+            if export.name == "node.exe":
+                heur = Heuristic(31)
+                heur_section = ResultSection(heur.name, heuristic=heur, parent=res, body=heur.description)
+
         self.file_res.add_section(res)
 
     def add_imports(self):
