@@ -18,6 +18,8 @@ enabled: true
 is_external: false
 licence_count: 0
 
+privileged: true
+
 config:
   trusted_certs: ["/usr/share/ca-certificates/mozilla/"]
   hash_generation_max_size: 5000000
@@ -235,6 +237,20 @@ heuristics:
     heur_id: 29
     name: MalwareBazaar Blacklisted certificate
     score: 500
+
+  - description: >-
+      There is more exports than we wish to show in the interface, so some information is going to be missing.
+    filetype: "executable/windows"
+    heur_id: 30
+    name: Too many exports
+    score: 0
+
+  - description: >-
+      The executable may have been compiled out of a nodejs project with the use of the pkg (github.com/vercel/pkg) tool. A tool like pkg-unpacker (github.com/LockBlock-dev/pkg-unpacker) is likely to be able to unpack it, but will probably only yield the original source code in a compiled V8 bytecode format.
+    filetype: "executable/windows"
+    heur_id: 31
+    name: NodeJS compiled executable
+    score: 0
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG

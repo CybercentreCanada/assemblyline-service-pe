@@ -1,0 +1,1492 @@
+{
+  "extra": {
+    "drop_file": false,
+    "score": 0,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1657322818 (2022-07-08 23:26:58 +00:00 (UTC))\"], [\"Entrypoint\", \"0x10ac2f8\"], [\"Machine\", \"AMD64\"], [\"Magic\", \"PE32_PLUS\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"14.29\"], [\"Operating System version\", \"6.0\"], [\"Subsystem version\", \"6.0\"], [\"Subsystem\", \"WINDOWS_CUI\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x00000000\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  1657322818,
+                  "2022-07-08 23:26:58 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"8dd10ade1b5012e53689a711e5864d63\"]]], [\"TABLE\", [{\"ID\": \"0x010275c1\", \"Compiler Information\": \"[LNK] VS2019 v16.11.15 build 30145\", \"Count\": 1}, {\"ID\": \"0x00970000\", \"Compiler Information\": \"Unknown object 0x00970000\", \"Count\": 1}, {\"ID\": \"0x00ff75c1\", \"Compiler Information\": \"[RES] VS2019 v16.11.15 build 30145\", \"Count\": 1}, {\"ID\": \"0x010075c1\", \"Compiler Information\": \"[EXP] VS2019 v16.11.15 build 30145\", \"Count\": 1}, {\"ID\": \"0x010975c1\", \"Compiler Information\": \"Unknown object 0x010975c1\", \"Count\": 4}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 405}, {\"ID\": \"0x010172d3\", \"Compiler Information\": \"Unknown object 0x010172d3\", \"Count\": 23}, {\"ID\": \"0x010475c1\", \"Compiler Information\": \"[ C ] VS2019 v16.11.15 build 30145\", \"Count\": 849}, {\"ID\": \"0x010575c1\", \"Compiler Information\": \"[C++] VS2019 v16.11.15 build 30145\", \"Count\": 1378}, {\"ID\": \"0x010375c1\", \"Compiler Information\": \"[ASM] VS2019 v16.11.15 build 30145\", \"Count\": 2}, {\"ID\": \"0x00000000\", \"Compiler Information\": \"[---] Unmarked objects (old)\", \"Count\": 30}, {\"ID\": \"0x00fd6f66\", \"Compiler Information\": \"Unknown object 0x00fd6f66\", \"Count\": 12}, {\"ID\": \"0x01057552\", \"Compiler Information\": \"Unknown object 0x01057552\", \"Count\": 97}, {\"ID\": \"0x01037552\", \"Compiler Information\": \"Unknown object 0x01037552\", \"Count\": 10}, {\"ID\": \"0x01047552\", \"Compiler Information\": \"Unknown object 0x01047552\", \"Count\": 19}, {\"ID\": \"0x010472d3\", \"Compiler Information\": \"Unknown object 0x010472d3\", \"Count\": 46}, {\"ID\": \"0x010572d3\", \"Compiler Information\": \"Unknown object 0x010572d3\", \"Count\": 208}, {\"ID\": \"0x010372d3\", \"Compiler Information\": \"Unknown object 0x010372d3\", \"Count\": 24}]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "rich_header": {
+                "hash": [
+                  "8dd10ade1b5012e53689a711e5864d63"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Rich Headers - Key: 4046381874",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"File Size\", 78414778], [\"Virtual Size\", 37457920]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 24,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Mismatch file size",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"sha512\", \"bd7eeb1afc5647db3fee36707c0fcbd64e01dcdb302b1f174943dcf8aea1e0de7c18b7f9c071f74f4d3354ed9bc7d2bd9d4649e5c92b774b1cc1f6ca4c101047\"], [\"sha384\", \"6d7c5923b42b9afa119c81eb77684693a9858cb537f90475b983bca28e89957a1b80e7f4ef8d973cce8cc674f2b93717\"], [\"sha256\", \"031a3e86c2a21a5630cfda63f748396a7e7ccb8106ea0f1f0965059ca7a736db\"], [\"sha1\", \"66f7b67713d0f90a78dddd99732f09ed7a34b8b2\"], [\"md5\", \"920af36b1c603b02efa1343af2e6adf3\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.462355472267666], [\"Entropy without padding\", 6.462435736062323], [\"Offset\", 1024], [\"Size\", 17792512], [\"Virtual Size\", 17792064], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"7ff811e53e91692c74554cb15f627f2e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.60931, 6.6281, 6.32469, 6.29136, 6.34786, 6.30272, 6.275, 6.42694, 6.38959, 6.38033, 6.45348, 6.33009, 6.31266, 6.13451, 6.19918, 6.31748, 6.4124, 6.46226, 6.34292, 6.35891, 6.30729, 6.4191, 6.3505, 6.32909, 6.33368, 6.34605, 6.29119, 6.26631, 6.33886, 6.31014, 6.38879, 6.23245, 6.33131, 6.42405, 6.3323, 6.34816, 6.35819, 6.39615, 6.45269, 6.4729, 6.48633, 6.51175, 6.49694, 6.17432, 6.18952, 6.30919, 6.27263, 6.28624, 6.39484, 6.56429]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "7ff811e53e91692c74554cb15f627f2e"
+                ],
+                "name": [
+                  ".text"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .text",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.206484120630267], [\"Entropy without padding\", 6.206498952331115], [\"Offset\", 17793536], [\"Size\", 15697408], [\"Virtual Size\", 15697348], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"a4f957558421d7ffc97c520a03736201\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.0953, 4.95826, 5.08082, 5.11853, 5.05313, 4.98049, 5.07749, 4.87352, 4.97321, 3.50908, 4.45545, 3.62683, 3.31316, 5.5067, 6.40111, 5.74746, 5.09291, 6.01706, 5.16623, 5.27262, 5.24375, 5.8228, 5.18083, 5.18885, 6.02583, 6.11357, 5.20543, 5.70946, 4.75372, 5.75299, 4.50649, 6.10693, 5.16315, 6.09922, 5.78686, 5.5966, 5.80839, 5.97395, 7.99898, 7.35151, 6.44205, 6.05084, 6.1899, 7.08099, 5.12845, 5.11834, 5.12278, 5.09106, 5.04675, 5.31889]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "a4f957558421d7ffc97c520a03736201"
+                ],
+                "name": [
+                  ".rdata"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rdata",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.5014335271393655], [\"Entropy without padding\", 3.501433527139364], [\"Offset\", 33490944], [\"Size\", 186880], [\"Virtual Size\", 2984236], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d2d86d1a7fd7661de7074d191730e9be\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.47244, 3.01379, 3.12628, 3.25776, 2.71303, 2.61948, 2.66323, 3.0372, 2.80417, 3.69228, 3.47355, 2.62746, 2.65086, 2.63588, 2.66702, 2.66384, 2.66042, 2.66576, 2.76335, 0.90227, 0.88018, 0.88279, 0.87952, 1.18272, 0.98451, 1.1621, 2.20706, 2.43411, 2.30425, 2.40096, 2.10547, 2.00645, 1.99533, 2.42124, 2.53979, 2.50822, 2.57586, 2.16833, 1.43949, 2.46672, 4.82629, 4.68418, 4.79647, 4.74332, 4.66318, 4.57123, 4.52876, 4.59185, 4.48281, 4.31165]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "d2d86d1a7fd7661de7074d191730e9be"
+                ],
+                "name": [
+                  ".data"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .data",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.780767036445384], [\"Entropy without padding\", 6.782471986717514], [\"Offset\", 33677824], [\"Size\", 842240], [\"Virtual Size\", 841896], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"7c7dd899fc914d0919cf1eb2bef4e7fb\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.13964, 6.09461, 6.16458, 6.15876, 6.21203, 6.16753, 6.23749, 6.15594, 6.10649, 6.04685, 6.22149, 6.13171, 6.13432, 6.02811, 5.89137, 6.07794, 6.15264, 6.19765, 6.18812, 6.236, 6.15771, 6.19285, 6.19272, 6.19718, 6.22751, 6.23663, 6.29776, 6.18615, 6.2293, 6.1665, 6.20941, 6.14112, 6.18511, 6.15617, 6.18511, 6.16107, 5.62956, 5.98379, 6.13145, 6.2058, 6.21486, 6.18896, 6.04199, 6.01475, 6.13184, 6.08409, 6.28245, 6.0711, 6.04046, 5.95034]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "7c7dd899fc914d0919cf1eb2bef4e7fb"
+                ],
+                "name": [
+                  ".pdata"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .pdata",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 2.8750917380890164], [\"Entropy without padding\", 4.108597934400731], [\"Offset\", 34520064], [\"Size\", 512], [\"Virtual Size\", 244], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"27931c106c58fbe03bb12872283529b7\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.66353, 2.41309, 2.41309, 2.16264, 2.41309, 2.66353, 2.41309, 2.16264, 2.41309, 2.41309, 2.41309, 2.16264, 2.66353, 2.41309, 2.41309, 2.1867, 2.41309, 2.41309, 2.41309, 2.41309, 2.41309, 2.66353, 0.86586, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "27931c106c58fbe03bb12872283529b7"
+                ],
+                "name": [
+                  "_RDATA"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - _RDATA",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.082102642648605], [\"Entropy without padding\", 4.62484505380788], [\"Offset\", 34520576], [\"Size\", 142336], [\"Virtual Size\", 6120], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"ba30cb369d6dfb8b58e89051d88bf60e\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.6831, 4.0165, 3.28846, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.75009]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "ba30cb369d6dfb8b58e89051d88bf60e"
+                ],
+                "name": [
+                  ".rsrc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rsrc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.488361285409071], [\"Entropy without padding\", 5.489361335525942], [\"Offset\", 34662912], [\"Size\", 115712], [\"Virtual Size\", 115492], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"81be29a4ac9aa11476a8fae36ba3ee7a\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.45358, 5.42068, 5.42735, 5.42079, 5.43835, 5.39527, 5.43667, 5.446, 5.45097, 5.44555, 5.42456, 5.32986, 5.44385, 5.44492, 5.44796, 5.4356, 5.35656, 5.36741, 5.31934, 5.29982, 5.449, 5.44731, 5.31209, 5.38435, 5.22481, 5.39755, 5.41641, 5.4243, 5.33682, 5.44173, 5.41323, 5.45062, 5.40291, 5.36058, 5.41982, 5.38555, 5.42896, 5.4213, 5.39399, 5.4043, 5.43066, 5.38988, 5.4185, 5.43588, 5.39693, 5.43717, 5.44435, 5.43353, 5.44755, 5.20795]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "81be29a4ac9aa11476a8fae36ba3ee7a"
+                ],
+                "name": [
+                  ".reloc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .reloc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Debugs",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1657322818 (2022-07-08 23:26:58 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"C:\\\\Users\\\\runneradmin\\\\AppData\\\\Local\\\\Temp\\\\pkg.d7c6a10fb0263a69b4596321\\\\node\\\\out\\\\Release\\\\node.pdb\"], [\"GUID\", \"f7fd18cf-693c-4e31-a646-97c63ad0b6e3\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "debug": {
+                "guid": [
+                  "f7fd18cf-693c-4e31-a646-97c63ad0b6e3"
+                ]
+              },
+              "pdb_filename": [
+                "C:\\Users\\runneradmin\\AppData\\Local\\Temp\\pkg.d7c6a10fb0263a69b4596321\\node\\out\\Release\\node.pdb"
+              ]
+            }
+          }
+        },
+        "title_text": "CODEVIEW",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1657322818 (2022-07-08 23:26:58 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "VC_FEATURE",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1657322818 (2022-07-08 23:26:58 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "POGO",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Name: .text, Size: 473856\nName: .text$di, Size: 14496\nName: .text$mn, Size: 17261488\nName: .text$mn$00, Size: 64\nName: .text$x, Size: 32048\nName: .text$yd, Size: 10112\nName: .idata$5, Size: 3112\nName: .00cfg, Size: 40\nName: .CRT$XCA, Size: 8\nName: .CRT$XCAA, Size: 8\nName: .CRT$XCC, Size: 88\nName: .CRT$XCL, Size: 16\nName: .CRT$XCU, Size: 248\nName: .CRT$XCZ, Size: 8\nName: .CRT$XDA, Size: 8\nName: .CRT$XDZ, Size: 8\nName: .CRT$XIA, Size: 8\nName: .CRT$XIAA, Size: 8\nName: .CRT$XIAC, Size: 8\nName: .CRT$XIC, Size: 56\nName: .CRT$XIZ, Size: 8\nName: .CRT$XLA, Size: 8\nName: .CRT$XLC, Size: 8\nName: .CRT$XLZ, Size: 8\nName: .CRT$XPA, Size: 8\nName: .CRT$XPX, Size: 16\nName: .CRT$XPXA, Size: 8\nName: .CRT$XPZ, Size: 8\nName: .CRT$XTA, Size: 8\nName: .CRT$XTZ, Size: 8\nName: .rdata, Size: 12482688\nName: .rdata$T, Size: 40\nName: .rdata$r, Size: 57412\nName: .rdata$voltmd, Size: 144988\nName: .rdata$zETW2, Size: 52\nName: .rdata$zzzdbg, Size: 1284\nName: .rtc$IAA, Size: 8\nName: .rtc$IZZ, Size: 8\nName: .rtc$TAA, Size: 8\nName: .rtc$TZZ, Size: 8\nName: .tls, Size: 8\nName: .tls$, Size: 93\nName: .tls$ZZZ, Size: 3\nName: .xdata, Size: 829856\nName: .xdata$x, Size: 1432\nName: .edata, Size: 2165220\nName: .idata$2, Size: 220\nName: .idata$3, Size: 24\nName: .idata$4, Size: 3112\nName: .idata$6, Size: 7172\nName: .data, Size: 150064\nName: .data$r, Size: 16144\nName: .data$rs, Size: 20576\nName: .bss, Size: 2797452\nName: .pdata, Size: 841896\nName: _RDATA, Size: 244\nName: .rsrc$01, Size: 544\nName: .rsrc$02, Size: 141400",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "POGO - LCTG",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1657322818 (2022-07-08 23:26:58 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "ILTCG",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Name: node.exe\nVersion: 0.0\nTimestamp: 4294967295 (2106-02-07 06:28:15 +00:00 (UTC))",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "exports": {
+                "module_name": [
+                  "node.exe"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Export",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Name: ??$Add@VIsolate@internal@v8@@@?$Dictionary@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVIsolate@12@V312@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z, ordinal: 1\nName: ??$Add@VIsolate@internal@v8@@@?$Dictionary@VNameDictionary@internal@v8@@VNameDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNameDictionary@internal@v8@@@12@PEAVIsolate@12@V312@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z, ordinal: 2\nName: ??$Add@VIsolate@internal@v8@@@?$Dictionary@VNumberDictionary@internal@v8@@VNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNumberDictionary@internal@v8@@@12@PEAVIsolate@12@V312@IV?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z, ordinal: 3\nName: ??$Add@VIsolate@internal@v8@@@?$Dictionary@VSimpleNumberDictionary@internal@v8@@VSimpleNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VSimpleNumberDictionary@internal@v8@@@12@PEAVIsolate@12@V312@IV?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z, ordinal: 4\nName: ??$Add@VIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@SA?AV?$MaybeHandle@VOrderedNameDictionary@internal@v8@@@12@PEAVIsolate@12@V?$Handle@VOrderedNameDictionary@internal@v8@@@12@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@@Z, ordinal: 5\nName: ??$Add@VLocalIsolate@internal@v8@@@?$Dictionary@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z, ordinal: 6\nName: ??$Add@VLocalIsolate@internal@v8@@@?$Dictionary@VNameDictionary@internal@v8@@VNameDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNameDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z, ordinal: 7\nName: ??$Add@VLocalIsolate@internal@v8@@@?$Dictionary@VNumberDictionary@internal@v8@@VNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNumberDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@IV?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z, ordinal: 8\nName: ??$Add@VLocalIsolate@internal@v8@@@?$Dictionary@VSimpleNumberDictionary@internal@v8@@VSimpleNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VSimpleNumberDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@IV?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z, ordinal: 9\nName: ??$Add@VLocalIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@SA?AV?$MaybeHandle@VOrderedNameDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V?$Handle@VOrderedNameDictionary@internal@v8@@@12@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@@Z, ordinal: 10\nName: ??$Allocate@VIsolate@internal@v8@@@AstConsString@internal@v8@@AEBA?AV?$Handle@VString@internal@v8@@@12@PEAVIsolate@12@@Z, ordinal: 11\nName: ??$Allocate@VIsolate@internal@v8@@@DescriptorArray@internal@v8@@SA?AV?$Handle@VDescriptorArray@internal@v8@@@12@PEAVIsolate@12@HHW4AllocationType@12@@Z, ordinal: 12\nName: ??$Allocate@VIsolate@internal@v8@@@OrderedHashMap@internal@v8@@SA?AV?$MaybeHandle@VOrderedHashMap@internal@v8@@@12@PEAVIsolate@12@HW4AllocationType@12@@Z, ordinal: 13\nName: ??$Allocate@VIsolate@internal@v8@@@OrderedHashSet@internal@v8@@SA?AV?$MaybeHandle@VOrderedHashSet@internal@v8@@@12@PEAVIsolate@12@HW4AllocationType@12@@Z, ordinal: 14\nName: ??$Allocate@VIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@SA?AV?$MaybeHandle@VOrderedNameDictionary@internal@v8@@@12@PEAVIsolate@12@HW4AllocationType@12@@Z, ordinal: 15\nName: ??$Allocate@VLocalIsolate@internal@v8@@@AstConsString@internal@v8@@AEBA?AV?$Handle@VString@internal@v8@@@12@PEAVLocalIsolate@12@@Z, ordinal: 16\nName: ??$Allocate@VLocalIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@SA?AV?$MaybeHandle@VOrderedNameDictionary@internal@v8@@@12@PEAVLocalIsolate@12@HW4AllocationType@12@@Z, ordinal: 17\nName: ??$AllocateFlat@VIsolate@internal@v8@@@AstConsString@internal@v8@@QEBA?AV?$Handle@VString@internal@v8@@@12@PEAVIsolate@12@@Z, ordinal: 18\nName: ??$AllocateFlat@VLocalIsolate@internal@v8@@@AstConsString@internal@v8@@QEBA?AV?$Handle@VString@internal@v8@@@12@PEAVLocalIsolate@12@@Z, ordinal: 19\nName: ??$AllocatePage@$00VSemiSpace@internal@v8@@@MemoryAllocator@internal@v8@@QEAAPEAVPage@12@_KPEAVSemiSpace@12@W4Executability@12@@Z, ordinal: 20\nName: ??$AllocatePage@$0A@VPagedSpace@internal@v8@@@MemoryAllocator@internal@v8@@QEAAPEAVPage@12@_KPEAVPagedSpace@12@W4Executability@12@@Z, ordinal: 21\nName: ??$AllocatePage@$0A@VSemiSpace@internal@v8@@@MemoryAllocator@internal@v8@@QEAAPEAVPage@12@_KPEAVSemiSpace@12@W4Executability@12@@Z, ordinal: 22\nName: ??$AllocateScopeInfos@VIsolate@internal@v8@@@DeclarationScope@internal@v8@@SAXPEAVParseInfo@12@PEAVIsolate@12@@Z, ordinal: 23\nName: ??$AllocateScopeInfos@VLocalIsolate@internal@v8@@@DeclarationScope@internal@v8@@SAXPEAVParseInfo@12@PEAVLocalIsolate@12@@Z, ordinal: 24\nName: ??$AllocateScopeInfosRecursively@VIsolate@internal@v8@@@Scope@internal@v8@@AEAAXPEAVIsolate@12@V?$MaybeHandle@VScopeInfo@internal@v8@@@12@@Z, ordinal: 25\nName: ??$AllocateScopeInfosRecursively@VLocalIsolate@internal@v8@@@Scope@internal@v8@@AEAAXPEAVLocalIsolate@12@V?$MaybeHandle@VScopeInfo@internal@v8@@@12@@Z, ordinal: 26\nName: ??$AllocateSlotSet@$00@MemoryChunk@internal@v8@@QEAAPEAVSlotSet@12@XZ, ordinal: 27\nName: ??$AllocateSlotSet@$0A@@MemoryChunk@internal@v8@@QEAAPEAVSlotSet@12@XZ, ordinal: 28\nName: ??$At@VIsolate@internal@v8@@@ConstantArrayBuilder@interpreter@internal@v8@@QEBA?AV?$MaybeHandle@VObject@internal@v8@@@23@_KPEAVIsolate@23@@Z, ordinal: 29\nName: ??$At@VLocalIsolate@internal@v8@@@ConstantArrayBuilder@interpreter@internal@v8@@QEBA?AV?$MaybeHandle@VObject@internal@v8@@@23@_KPEAVLocalIsolate@23@@Z, ordinal: 30\nName: ??$BigIntLiteral@VIsolate@internal@v8@@@internal@v8@@YA?AV?$MaybeHandle@VBigInt@internal@v8@@@01@PEAVIsolate@01@PEBD@Z, ordinal: 31\nName: ??$BigIntLiteral@VLocalIsolate@internal@v8@@@internal@v8@@YA?AV?$MaybeHandle@VBigInt@internal@v8@@@01@PEAVLocalIsolate@01@PEBD@Z, ordinal: 32\nName: ??$BuildValue@VIsolate@internal@v8@@@Literal@internal@v8@@QEBA?AV?$Handle@VObject@internal@v8@@@12@PEAVIsolate@12@@Z, ordinal: 33\nName: ??$BuildValue@VLocalIsolate@internal@v8@@@Literal@internal@v8@@QEBA?AV?$Handle@VObject@internal@v8@@@12@PEAVLocalIsolate@12@@Z, ordinal: 34\nName: ??$ConvertDouble@H@internal@v8@@YAHN@Z, ordinal: 35\nName: ??$ConvertDouble@I@internal@v8@@YAIN@Z, ordinal: 36\nName: ??$ConvertDouble@M@internal@v8@@YAMN@Z, ordinal: 37\nName: ??$ConvertDouble@N@internal@v8@@YANN@Z, ordinal: 38\nName: ??$ConvertDouble@_J@internal@v8@@YA_JN@Z, ordinal: 39\nName: ??$ConvertDouble@_K@internal@v8@@YA_KN@Z, ordinal: 40\nName: ??$ConvertDouble@_N@internal@v8@@YA_NN@Z, ordinal: 41\nName: ??$Create@VIsolate@internal@v8@@@ScopeInfo@internal@v8@@SA?AV?$Handle@VScopeInfo@internal@v8@@@12@PEAVIsolate@12@PEAVZone@12@PEAVScope@12@V?$MaybeHandle@VScopeInfo@internal@v8@@@12@@Z, ordinal: 42\nName: ??$Create@VLocalIsolate@internal@v8@@@ScopeInfo@internal@v8@@SA?AV?$Handle@VScopeInfo@internal@v8@@@12@PEAVLocalIsolate@12@PEAVZone@12@PEAVScope@12@V?$MaybeHandle@VScopeInfo@internal@v8@@@12@@Z, ordinal: 43\nName: ??$CreateScript@VIsolate@internal@v8@@@ParseInfo@internal@v8@@QEAA?AV?$Handle@VScript@internal@v8@@@12@PEAVIsolate@12@V?$Handle@VString@internal@v8@@@12@V?$MaybeHandle@VFixedArray@internal@v8@@@12@VScriptOriginOptions@2@W4NativesFlag@12@@Z, ordinal: 44\nName: ??$CreateScript@VLocalIsolate@internal@v8@@@ParseInfo@internal@v8@@QEAA?AV?$Handle@VScript@internal@v8@@@12@PEAVLocalIsolate@12@V?$Handle@VString@internal@v8@@@12@V?$MaybeHandle@VFixedArray@internal@v8@@@12@VScriptOriginOptions@2@W4NativesFlag@12@@Z, ordinal: 45\nName: ??$Decode@E@Utf8Decoder@internal@v8@@QEAAXPEAEAEBV?$Vector@$$CBE@base@2@@Z, ordinal: 46\nName: ??$Decode@G@Utf8Decoder@internal@v8@@QEAAXPEAGAEBV?$Vector@$$CBE@base@2@@Z, ordinal: 47\nName: ??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VCompilationCacheTable@internal@v8@@VCompilationCacheShape@23@@internal@v8@@SA?AV?$Handle@VCompilationCacheTable@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 48\nName: ??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VEphemeronHashTable@internal@v8@@VObjectHashTableShape@23@@internal@v8@@SA?AV?$Handle@VEphemeronHashTable@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 49\nName: ??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 50\nName: ??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VNameDictionary@internal@v8@@VNameDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNameDictionary@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 51\nName: ??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VNumberDictionary@internal@v8@@VNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNumberDictionary@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 52\nName: ??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VObjectHashSet@internal@v8@@VObjectHashSetShape@23@@internal@v8@@SA?AV?$Handle@VObjectHashSet@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 53\nName: ??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VObjectHashTable@internal@v8@@VObjectHashTableShape@23@@internal@v8@@SA?AV?$Handle@VObjectHashTable@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 54\nName: ??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VSimpleNumberDictionary@internal@v8@@VSimpleNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VSimpleNumberDictionary@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 55\nName: ??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VStringSet@internal@v8@@VStringSetShape@23@@internal@v8@@SA?AV?$Handle@VStringSet@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 56\nName: ??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VCompilationCacheTable@internal@v8@@VCompilationCacheShape@23@@internal@v8@@SA?AV?$Handle@VCompilationCacheTable@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 57\nName: ??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VEphemeronHashTable@internal@v8@@VObjectHashTableShape@23@@internal@v8@@SA?AV?$Handle@VEphemeronHashTable@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 58\nName: ??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 59\nName: ??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VNameDictionary@internal@v8@@VNameDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNameDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 60\nName: ??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VNumberDictionary@internal@v8@@VNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNumberDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 61\nName: ??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VObjectHashSet@internal@v8@@VObjectHashSetShape@23@@internal@v8@@SA?AV?$Handle@VObjectHashSet@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 62\nName: ??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VObjectHashTable@internal@v8@@VObjectHashTableShape@23@@internal@v8@@SA?AV?$Handle@VObjectHashTable@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 63\nName: ??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VSimpleNumberDictionary@internal@v8@@VSimpleNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VSimpleNumberDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 64\nName: ??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VStringSet@internal@v8@@VStringSetShape@23@@internal@v8@@SA?AV?$Handle@VStringSet@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z, ordinal: 65\nName: ??$EnsureGrowable@VIsolate@internal@v8@@@?$OrderedHashTable@VOrderedHashMap@internal@v8@@$01@internal@v8@@SA?AV?$MaybeHandle@VOrderedHashMap@internal@v8@@@12@PEAVIsolate@12@V?$Handle@VOrderedHashMap@internal@v8@@@12@@Z, ordinal: 66\nName: ??$EnsureGrowable@VIsolate@internal@v8@@@?$OrderedHashTable@VOrderedHashSet@internal@v8@@$00@internal@v8@@SA?AV?$MaybeHandle@VOrderedHashSet@internal@v8@@@12@PEAVIsolate@12@V?$Handle@VOrderedHashSet@internal@v8@@@12@@Z, ordinal: 67\nName: ??$FindEntry@VIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@QEAA?AVInternalIndex@12@PEAVIsolate@12@VObject@12@@Z, ordinal: 68\nName: ??$FindEntry@VLocalIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@QEAA?AVInternalIndex@12@PEAVLocalIsolate@12@VObject@12@@Z, ordinal: 69\nName: ??$Free@$00@MemoryAllocator@internal@v8@@QEAAXPEAVMemoryChunk@12@@Z, ordinal: 70\nName: ??$Free@$01@MemoryAllocator@internal@v8@@QEAAXPEAVMemoryChunk@12@@Z, ordinal: 71\nName: ??$Free@$02@MemoryAllocator@internal@v8@@QEAAXPEAVMemoryChunk@12@@Z, ordinal: 72\nName: ??$Free@$0A@@MemoryAllocator@internal@v8@@QEAAXPEAVMemoryChunk@12@@Z, ordinal: 73\nName: ??$GetBoilerplateValue@VIsolate@internal@v8@@@MaterializedLiteral@internal@v8@@IEAA?AV?$Handle@VObject@internal@v8@@@12@PEAVExpression@12@PEAVIsolate@12@@Z, ordinal: 74\nName: ??$GetBoilerplateValue@VLocalIsolate@internal@v8@@@MaterializedLiteral@internal@v8@@IEAA?AV?$Handle@VObject@internal@v8@@@12@PEAVExpression@12@PEAVLocalIsolate@12@@Z, ordinal: 75\nName: ??$GetConstantForIndexOperand@VIsolate@internal@v8@@@BytecodeArrayIterator@interpreter@internal@v8@@QEBA?AV?$Handle@VObject@internal@v8@@@23@HPEAVIsolate@23@@Z, ordinal: 76\nName: ??$InitFromFunctionLiteral@VIsolate@internal@v8@@@SharedFunctionInfo@internal@v8@@SAXPEAVIsolate@12@V?$Handle@VSharedFunctionInfo@internal@v8@@@12@PEAVFunctionLiteral@12@_N@Z, ordinal: 77\nName: ??$InitFromFunctionLiteral@VLocalIsolate@internal@v8@@@SharedFunctionInfo@internal@v8@@SAXPEAVLocalIsolate@12@V?$Handle@VSharedFunctionInfo@internal@v8@@@12@PEAVFunctionLiteral@12@_N@Z, ordinal: 78\nName: ??$InitLineEnds@VIsolate@internal@v8@@@Script@internal@v8@@SAXPEAVIsolate@12@V?$Handle@VScript@internal@v8@@@12@@Z, ordinal: 79\nName: ??$InitLineEnds@VLocalIsolate@internal@v8@@@Script@internal@v8@@SAXPEAVLocalIsolate@12@V?$Handle@VScript@internal@v8@@@12@@Z, ordinal: 80\nName: ??$Initialize@VIsolate@internal@v8@@@SwissNameDictionary@internal@v8@@QEAAXPEAVIsolate@12@VByteArray@12@H@Z, ordinal: 81\nName: ??$Initialize@VLocalIsolate@internal@v8@@@SwissNameDictionary@internal@v8@@QEAAXPEAVLocalIsolate@12@VByteArray@12@H@Z, ordinal: 82\nName: ??$Internalize@VIsolate@internal@v8@@@AstRawString@internal@v8@@QEAAXPEAVIsolate@12@@Z, ordinal: 83\nName: ??$Internalize@VIsolate@internal@v8@@@AstValueFactory@internal@v8@@QEAAXPEAVIsolate@12@@Z, ordinal: 84\nName: ??$Internalize@VLocalIsolate@internal@v8@@@AstRawString@internal@v8@@QEAAXPEAVLocalIsolate@12@@Z, ordinal: 85\nName: ??$Internalize@VLocalIsolate@internal@v8@@@AstValueFactory@internal@v8@@QEAAXPEAVLocalIsolate@12@@Z, ordinal: 86\nName: ??$InternalizeStringWithKey@V?$SeqSubStringKey@VSeqOneByteString@internal@v8@@@internal@v8@@@?$FactoryBase@VFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SeqSubStringKey@VSeqOneByteString@internal@v8@@@12@@Z, ordinal: 87\nName: ??$InternalizeStringWithKey@V?$SeqSubStringKey@VSeqTwoByteString@internal@v8@@@internal@v8@@@?$FactoryBase@VFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SeqSubStringKey@VSeqTwoByteString@internal@v8@@@12@@Z, ordinal: 88\nName: ??$InternalizeStringWithKey@V?$SequentialStringKey@E@internal@v8@@@?$FactoryBase@VFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SequentialStringKey@E@12@@Z, ordinal: 89\nName: ??$InternalizeStringWithKey@V?$SequentialStringKey@E@internal@v8@@@?$FactoryBase@VLocalFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SequentialStringKey@E@12@@Z, ordinal: 90\nName: ??$InternalizeStringWithKey@V?$SequentialStringKey@G@internal@v8@@@?$FactoryBase@VFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SequentialStringKey@G@12@@Z, ordinal: 91\nName: ??$InternalizeStringWithKey@V?$SequentialStringKey@G@internal@v8@@@?$FactoryBase@VLocalFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SequentialStringKey@G@12@@Z, ordinal: 92\nName: ??$MakeCheckOpString@HH@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HHPEBD@Z, ordinal: 93\nName: ??$MakeCheckOpString@II@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IIPEBD@Z, ordinal: 94\nName: ??$MakeCheckOpString@JJ@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@JJPEBD@Z, ordinal: 95\nName: ??$MakeCheckOpString@KK@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@KKPEBD@Z, ordinal: 96\nName: ??$MakeCheckOpString@PEBXPEBX@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBX0PEBD@Z, ordinal: 97\nName: ??$MakeCheckOpString@_J_J@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_J0PEBD@Z, ordinal: 98\nName: ??$MakeCheckOpString@_K_K@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_K0PEBD@Z, ordinal: 99\nName: ??$New@VIsolate@internal@v8@@@?$BaseNameDictionary@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVIsolate@12@HW4AllocationType@12@W4MinimumCapacity@12@@Z, ordinal: 100",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "exports": {
+                "function_name": [
+                  "??$Add@VIsolate@internal@v8@@@?$Dictionary@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVIsolate@12@V312@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z",
+                  "??$Add@VIsolate@internal@v8@@@?$Dictionary@VNameDictionary@internal@v8@@VNameDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNameDictionary@internal@v8@@@12@PEAVIsolate@12@V312@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z",
+                  "??$Add@VIsolate@internal@v8@@@?$Dictionary@VNumberDictionary@internal@v8@@VNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNumberDictionary@internal@v8@@@12@PEAVIsolate@12@V312@IV?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z",
+                  "??$Add@VIsolate@internal@v8@@@?$Dictionary@VSimpleNumberDictionary@internal@v8@@VSimpleNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VSimpleNumberDictionary@internal@v8@@@12@PEAVIsolate@12@V312@IV?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z",
+                  "??$Add@VIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@SA?AV?$MaybeHandle@VOrderedNameDictionary@internal@v8@@@12@PEAVIsolate@12@V?$Handle@VOrderedNameDictionary@internal@v8@@@12@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@@Z",
+                  "??$Add@VLocalIsolate@internal@v8@@@?$Dictionary@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z",
+                  "??$Add@VLocalIsolate@internal@v8@@@?$Dictionary@VNameDictionary@internal@v8@@VNameDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNameDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z",
+                  "??$Add@VLocalIsolate@internal@v8@@@?$Dictionary@VNumberDictionary@internal@v8@@VNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNumberDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@IV?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z",
+                  "??$Add@VLocalIsolate@internal@v8@@@?$Dictionary@VSimpleNumberDictionary@internal@v8@@VSimpleNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VSimpleNumberDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@IV?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z",
+                  "??$Add@VLocalIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@SA?AV?$MaybeHandle@VOrderedNameDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V?$Handle@VOrderedNameDictionary@internal@v8@@@12@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@@Z",
+                  "??$Allocate@VIsolate@internal@v8@@@AstConsString@internal@v8@@AEBA?AV?$Handle@VString@internal@v8@@@12@PEAVIsolate@12@@Z",
+                  "??$Allocate@VIsolate@internal@v8@@@DescriptorArray@internal@v8@@SA?AV?$Handle@VDescriptorArray@internal@v8@@@12@PEAVIsolate@12@HHW4AllocationType@12@@Z",
+                  "??$Allocate@VIsolate@internal@v8@@@OrderedHashMap@internal@v8@@SA?AV?$MaybeHandle@VOrderedHashMap@internal@v8@@@12@PEAVIsolate@12@HW4AllocationType@12@@Z",
+                  "??$Allocate@VIsolate@internal@v8@@@OrderedHashSet@internal@v8@@SA?AV?$MaybeHandle@VOrderedHashSet@internal@v8@@@12@PEAVIsolate@12@HW4AllocationType@12@@Z",
+                  "??$Allocate@VIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@SA?AV?$MaybeHandle@VOrderedNameDictionary@internal@v8@@@12@PEAVIsolate@12@HW4AllocationType@12@@Z",
+                  "??$Allocate@VLocalIsolate@internal@v8@@@AstConsString@internal@v8@@AEBA?AV?$Handle@VString@internal@v8@@@12@PEAVLocalIsolate@12@@Z",
+                  "??$Allocate@VLocalIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@SA?AV?$MaybeHandle@VOrderedNameDictionary@internal@v8@@@12@PEAVLocalIsolate@12@HW4AllocationType@12@@Z",
+                  "??$AllocateFlat@VIsolate@internal@v8@@@AstConsString@internal@v8@@QEBA?AV?$Handle@VString@internal@v8@@@12@PEAVIsolate@12@@Z",
+                  "??$AllocateFlat@VLocalIsolate@internal@v8@@@AstConsString@internal@v8@@QEBA?AV?$Handle@VString@internal@v8@@@12@PEAVLocalIsolate@12@@Z",
+                  "??$AllocatePage@$00VSemiSpace@internal@v8@@@MemoryAllocator@internal@v8@@QEAAPEAVPage@12@_KPEAVSemiSpace@12@W4Executability@12@@Z",
+                  "??$AllocatePage@$0A@VPagedSpace@internal@v8@@@MemoryAllocator@internal@v8@@QEAAPEAVPage@12@_KPEAVPagedSpace@12@W4Executability@12@@Z",
+                  "??$AllocatePage@$0A@VSemiSpace@internal@v8@@@MemoryAllocator@internal@v8@@QEAAPEAVPage@12@_KPEAVSemiSpace@12@W4Executability@12@@Z",
+                  "??$AllocateScopeInfos@VIsolate@internal@v8@@@DeclarationScope@internal@v8@@SAXPEAVParseInfo@12@PEAVIsolate@12@@Z",
+                  "??$AllocateScopeInfos@VLocalIsolate@internal@v8@@@DeclarationScope@internal@v8@@SAXPEAVParseInfo@12@PEAVLocalIsolate@12@@Z",
+                  "??$AllocateScopeInfosRecursively@VIsolate@internal@v8@@@Scope@internal@v8@@AEAAXPEAVIsolate@12@V?$MaybeHandle@VScopeInfo@internal@v8@@@12@@Z",
+                  "??$AllocateScopeInfosRecursively@VLocalIsolate@internal@v8@@@Scope@internal@v8@@AEAAXPEAVLocalIsolate@12@V?$MaybeHandle@VScopeInfo@internal@v8@@@12@@Z",
+                  "??$AllocateSlotSet@$00@MemoryChunk@internal@v8@@QEAAPEAVSlotSet@12@XZ",
+                  "??$AllocateSlotSet@$0A@@MemoryChunk@internal@v8@@QEAAPEAVSlotSet@12@XZ",
+                  "??$At@VIsolate@internal@v8@@@ConstantArrayBuilder@interpreter@internal@v8@@QEBA?AV?$MaybeHandle@VObject@internal@v8@@@23@_KPEAVIsolate@23@@Z",
+                  "??$At@VLocalIsolate@internal@v8@@@ConstantArrayBuilder@interpreter@internal@v8@@QEBA?AV?$MaybeHandle@VObject@internal@v8@@@23@_KPEAVLocalIsolate@23@@Z",
+                  "??$BigIntLiteral@VIsolate@internal@v8@@@internal@v8@@YA?AV?$MaybeHandle@VBigInt@internal@v8@@@01@PEAVIsolate@01@PEBD@Z",
+                  "??$BigIntLiteral@VLocalIsolate@internal@v8@@@internal@v8@@YA?AV?$MaybeHandle@VBigInt@internal@v8@@@01@PEAVLocalIsolate@01@PEBD@Z",
+                  "??$BuildValue@VIsolate@internal@v8@@@Literal@internal@v8@@QEBA?AV?$Handle@VObject@internal@v8@@@12@PEAVIsolate@12@@Z",
+                  "??$BuildValue@VLocalIsolate@internal@v8@@@Literal@internal@v8@@QEBA?AV?$Handle@VObject@internal@v8@@@12@PEAVLocalIsolate@12@@Z",
+                  "??$ConvertDouble@H@internal@v8@@YAHN@Z",
+                  "??$ConvertDouble@I@internal@v8@@YAIN@Z",
+                  "??$ConvertDouble@M@internal@v8@@YAMN@Z",
+                  "??$ConvertDouble@N@internal@v8@@YANN@Z",
+                  "??$ConvertDouble@_J@internal@v8@@YA_JN@Z",
+                  "??$ConvertDouble@_K@internal@v8@@YA_KN@Z",
+                  "??$ConvertDouble@_N@internal@v8@@YA_NN@Z",
+                  "??$Create@VIsolate@internal@v8@@@ScopeInfo@internal@v8@@SA?AV?$Handle@VScopeInfo@internal@v8@@@12@PEAVIsolate@12@PEAVZone@12@PEAVScope@12@V?$MaybeHandle@VScopeInfo@internal@v8@@@12@@Z",
+                  "??$Create@VLocalIsolate@internal@v8@@@ScopeInfo@internal@v8@@SA?AV?$Handle@VScopeInfo@internal@v8@@@12@PEAVLocalIsolate@12@PEAVZone@12@PEAVScope@12@V?$MaybeHandle@VScopeInfo@internal@v8@@@12@@Z",
+                  "??$CreateScript@VIsolate@internal@v8@@@ParseInfo@internal@v8@@QEAA?AV?$Handle@VScript@internal@v8@@@12@PEAVIsolate@12@V?$Handle@VString@internal@v8@@@12@V?$MaybeHandle@VFixedArray@internal@v8@@@12@VScriptOriginOptions@2@W4NativesFlag@12@@Z",
+                  "??$CreateScript@VLocalIsolate@internal@v8@@@ParseInfo@internal@v8@@QEAA?AV?$Handle@VScript@internal@v8@@@12@PEAVLocalIsolate@12@V?$Handle@VString@internal@v8@@@12@V?$MaybeHandle@VFixedArray@internal@v8@@@12@VScriptOriginOptions@2@W4NativesFlag@12@@Z",
+                  "??$Decode@E@Utf8Decoder@internal@v8@@QEAAXPEAEAEBV?$Vector@$$CBE@base@2@@Z",
+                  "??$Decode@G@Utf8Decoder@internal@v8@@QEAAXPEAGAEBV?$Vector@$$CBE@base@2@@Z",
+                  "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VCompilationCacheTable@internal@v8@@VCompilationCacheShape@23@@internal@v8@@SA?AV?$Handle@VCompilationCacheTable@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VEphemeronHashTable@internal@v8@@VObjectHashTableShape@23@@internal@v8@@SA?AV?$Handle@VEphemeronHashTable@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VNameDictionary@internal@v8@@VNameDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNameDictionary@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VNumberDictionary@internal@v8@@VNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNumberDictionary@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VObjectHashSet@internal@v8@@VObjectHashSetShape@23@@internal@v8@@SA?AV?$Handle@VObjectHashSet@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VObjectHashTable@internal@v8@@VObjectHashTableShape@23@@internal@v8@@SA?AV?$Handle@VObjectHashTable@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VSimpleNumberDictionary@internal@v8@@VSimpleNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VSimpleNumberDictionary@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VStringSet@internal@v8@@VStringSetShape@23@@internal@v8@@SA?AV?$Handle@VStringSet@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VCompilationCacheTable@internal@v8@@VCompilationCacheShape@23@@internal@v8@@SA?AV?$Handle@VCompilationCacheTable@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VEphemeronHashTable@internal@v8@@VObjectHashTableShape@23@@internal@v8@@SA?AV?$Handle@VEphemeronHashTable@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VNameDictionary@internal@v8@@VNameDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNameDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VNumberDictionary@internal@v8@@VNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNumberDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VObjectHashSet@internal@v8@@VObjectHashSetShape@23@@internal@v8@@SA?AV?$Handle@VObjectHashSet@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VObjectHashTable@internal@v8@@VObjectHashTableShape@23@@internal@v8@@SA?AV?$Handle@VObjectHashTable@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VSimpleNumberDictionary@internal@v8@@VSimpleNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VSimpleNumberDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VStringSet@internal@v8@@VStringSetShape@23@@internal@v8@@SA?AV?$Handle@VStringSet@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z",
+                  "??$EnsureGrowable@VIsolate@internal@v8@@@?$OrderedHashTable@VOrderedHashMap@internal@v8@@$01@internal@v8@@SA?AV?$MaybeHandle@VOrderedHashMap@internal@v8@@@12@PEAVIsolate@12@V?$Handle@VOrderedHashMap@internal@v8@@@12@@Z",
+                  "??$EnsureGrowable@VIsolate@internal@v8@@@?$OrderedHashTable@VOrderedHashSet@internal@v8@@$00@internal@v8@@SA?AV?$MaybeHandle@VOrderedHashSet@internal@v8@@@12@PEAVIsolate@12@V?$Handle@VOrderedHashSet@internal@v8@@@12@@Z",
+                  "??$FindEntry@VIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@QEAA?AVInternalIndex@12@PEAVIsolate@12@VObject@12@@Z",
+                  "??$FindEntry@VLocalIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@QEAA?AVInternalIndex@12@PEAVLocalIsolate@12@VObject@12@@Z",
+                  "??$Free@$00@MemoryAllocator@internal@v8@@QEAAXPEAVMemoryChunk@12@@Z",
+                  "??$Free@$01@MemoryAllocator@internal@v8@@QEAAXPEAVMemoryChunk@12@@Z",
+                  "??$Free@$02@MemoryAllocator@internal@v8@@QEAAXPEAVMemoryChunk@12@@Z",
+                  "??$Free@$0A@@MemoryAllocator@internal@v8@@QEAAXPEAVMemoryChunk@12@@Z",
+                  "??$GetBoilerplateValue@VIsolate@internal@v8@@@MaterializedLiteral@internal@v8@@IEAA?AV?$Handle@VObject@internal@v8@@@12@PEAVExpression@12@PEAVIsolate@12@@Z",
+                  "??$GetBoilerplateValue@VLocalIsolate@internal@v8@@@MaterializedLiteral@internal@v8@@IEAA?AV?$Handle@VObject@internal@v8@@@12@PEAVExpression@12@PEAVLocalIsolate@12@@Z",
+                  "??$GetConstantForIndexOperand@VIsolate@internal@v8@@@BytecodeArrayIterator@interpreter@internal@v8@@QEBA?AV?$Handle@VObject@internal@v8@@@23@HPEAVIsolate@23@@Z",
+                  "??$InitFromFunctionLiteral@VIsolate@internal@v8@@@SharedFunctionInfo@internal@v8@@SAXPEAVIsolate@12@V?$Handle@VSharedFunctionInfo@internal@v8@@@12@PEAVFunctionLiteral@12@_N@Z",
+                  "??$InitFromFunctionLiteral@VLocalIsolate@internal@v8@@@SharedFunctionInfo@internal@v8@@SAXPEAVLocalIsolate@12@V?$Handle@VSharedFunctionInfo@internal@v8@@@12@PEAVFunctionLiteral@12@_N@Z",
+                  "??$InitLineEnds@VIsolate@internal@v8@@@Script@internal@v8@@SAXPEAVIsolate@12@V?$Handle@VScript@internal@v8@@@12@@Z",
+                  "??$InitLineEnds@VLocalIsolate@internal@v8@@@Script@internal@v8@@SAXPEAVLocalIsolate@12@V?$Handle@VScript@internal@v8@@@12@@Z",
+                  "??$Initialize@VIsolate@internal@v8@@@SwissNameDictionary@internal@v8@@QEAAXPEAVIsolate@12@VByteArray@12@H@Z",
+                  "??$Initialize@VLocalIsolate@internal@v8@@@SwissNameDictionary@internal@v8@@QEAAXPEAVLocalIsolate@12@VByteArray@12@H@Z",
+                  "??$Internalize@VIsolate@internal@v8@@@AstRawString@internal@v8@@QEAAXPEAVIsolate@12@@Z",
+                  "??$Internalize@VIsolate@internal@v8@@@AstValueFactory@internal@v8@@QEAAXPEAVIsolate@12@@Z",
+                  "??$Internalize@VLocalIsolate@internal@v8@@@AstRawString@internal@v8@@QEAAXPEAVLocalIsolate@12@@Z",
+                  "??$Internalize@VLocalIsolate@internal@v8@@@AstValueFactory@internal@v8@@QEAAXPEAVLocalIsolate@12@@Z",
+                  "??$InternalizeStringWithKey@V?$SeqSubStringKey@VSeqOneByteString@internal@v8@@@internal@v8@@@?$FactoryBase@VFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SeqSubStringKey@VSeqOneByteString@internal@v8@@@12@@Z",
+                  "??$InternalizeStringWithKey@V?$SeqSubStringKey@VSeqTwoByteString@internal@v8@@@internal@v8@@@?$FactoryBase@VFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SeqSubStringKey@VSeqTwoByteString@internal@v8@@@12@@Z",
+                  "??$InternalizeStringWithKey@V?$SequentialStringKey@E@internal@v8@@@?$FactoryBase@VFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SequentialStringKey@E@12@@Z",
+                  "??$InternalizeStringWithKey@V?$SequentialStringKey@E@internal@v8@@@?$FactoryBase@VLocalFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SequentialStringKey@E@12@@Z",
+                  "??$InternalizeStringWithKey@V?$SequentialStringKey@G@internal@v8@@@?$FactoryBase@VFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SequentialStringKey@G@12@@Z",
+                  "??$InternalizeStringWithKey@V?$SequentialStringKey@G@internal@v8@@@?$FactoryBase@VLocalFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SequentialStringKey@G@12@@Z",
+                  "??$MakeCheckOpString@HH@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HHPEBD@Z",
+                  "??$MakeCheckOpString@II@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IIPEBD@Z",
+                  "??$MakeCheckOpString@JJ@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@JJPEBD@Z",
+                  "??$MakeCheckOpString@KK@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@KKPEBD@Z",
+                  "??$MakeCheckOpString@PEBXPEBX@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBX0PEBD@Z",
+                  "??$MakeCheckOpString@_J_J@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_J0PEBD@Z",
+                  "??$MakeCheckOpString@_K_K@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_K0PEBD@Z",
+                  "??$New@VIsolate@internal@v8@@@?$BaseNameDictionary@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVIsolate@12@HW4AllocationType@12@W4MinimumCapacity@12@@Z"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Entries",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "A total of 26775 exports found, but only the first 100 are shown.",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 30,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Too many exports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "The executable may have been compiled out of a nodejs project with the use of the pkg (github.com/vercel/pkg) tool. A tool like pkg-unpacker (github.com/LockBlock-dev/pkg-unpacker) is likely to be able to unpack it, but will probably only yield the original source code in a compiled V8 bytecode format.",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 31,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "NodeJS compiled executable",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "imports": {
+                "fuzzy": [
+                  "192:JeW92FX/rbFrTisrck/gkehFpiV37W5W/bF7E:JejViMlQFpi5uIx7E"
+                ],
+                "imphash": [
+                  "66b10d8b5718b0fd6fb4865843d44280"
+                ],
+                "sorted_fuzzy": [
+                  "192:umSmZTk0V+GW5W6SRzaa9CS5WK8mHbDqFH4lL:G6+GuuRWa9CS5H8f8"
+                ],
+                "sorted_sha1": [
+                  "ee36e071aff700479f9fa059deefd4437ca5da3e"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Imports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "SymSetSearchPathW, SymGetSearchPathW, SymGetModuleBase64, SymFunctionTableAccess64, StackWalk64, SymSetOptions, SymFromAddr, SymInitialize, SymGetLineFromAddr64, SymCleanup, UnDecorateSymbolName",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "dbghelp.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "getnameinfo, freeaddrinfo, getaddrinfo, 116, 112, 15, 8, 14, 3, 7, 115, 19, 57, 151, 52, 1, 20, 17, WSAIoctl, 16, FreeAddrInfoW, GetAddrInfoW, GetNameInfoW, 18, WSASocketW, WSASend, WSAGetOverlappedResult, WSADuplicateSocketW, 22, 13, 9, WSASendTo, WSARecvFrom, WSARecv, 21, 6, 5, 10, 4, 2, 111, 23",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "WS2_32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "ConvertInterfaceIndexToLuid, GetAdaptersAddresses, ConvertInterfaceLuidToNameW",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "IPHLPAPI.DLL",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "EnumProcessModules, GetProcessMemoryInfo, GetModuleFileNameExW",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "PSAPI.DLL",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "GetUserProfileDirectoryW",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "USERENV.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "CryptSetHashParam, GetUserNameW, RegCloseKey, RegEnumKeyExA, RegOpenKeyExA, RegQueryValueExA, RegEnumKeyExW, EventWriteTransfer, EventUnregister, EventRegister, ReportEventW, RegisterEventSourceW, DeregisterEventSource, CryptEnumProvidersW, CryptSignHashW, CryptDestroyHash, CryptCreateHash, CryptDecrypt, CryptExportKey, CryptGetUserKey, CryptGetProvParam, OpenProcessToken, CryptDestroyKey, CryptReleaseContext, CryptAcquireContextW, SetSecurityInfo, GetSecurityInfo, SetEntriesInAclA, FreeSid, AllocateAndInitializeSid, SystemFunction036, RegGetValueW, RegQueryValueExW, RegOpenKeyExW, RegQueryInfoKeyW",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "ADVAPI32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "GetProcessWindowStation, MapVirtualKeyW, DispatchMessageA, TranslateMessage, MessageBoxW, GetSystemMetrics, GetMessageA, GetUserObjectInformationW",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "USER32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "CertCloseStore, CertEnumCertificatesInStore, CertFindCertificateInStore, CertDuplicateCertificateContext, CertFreeCertificateContext, CertGetCertificateContextProperty, CertOpenStore",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "CRYPT32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "BCryptGenRandom",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "bcrypt.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "RtlCaptureContext, RtlLookupFunctionEntry, WaitForSingleObjectEx, GetCPInfo, GetStringTypeW, InitializeSListHead, IsProcessorFeaturePresent, UnhandledExceptionFilter, InterlockedPushEntrySList, RtlUnwindEx, RtlPcToFileHeader, RaiseException, ExitProcess, SetStdHandle, CreateThread, ExitThread, FreeLibraryAndExitThread, GetFileAttributesExW, SetFileAttributesW, GetConsoleOutputCP, GetDriveTypeW, GetCommandLineA, GetCommandLineW, HeapFree, HeapAlloc, CompareStringW, GetLocaleInfoW, IsValidLocale, GetUserDefaultLCID, EnumSystemLocalesW, HeapReAlloc, SetEndOfFile, OutputDebugStringW, HeapSize, FindFirstFileExW, IsValidCodePage, GetOEMCP, GetProcessHeap, CreateEventW, InitializeConditionVariable, VerSetConditionMask, VerifyVersionInfoW, GetEnvironmentVariableA, WideCharToMultiByte, GetLastError, GetLocalTime, SetConsoleCtrlHandler, CloseHandle, WaitForSingleObject, CreateRemoteThread, OpenProcess, OpenFileMappingW, MapViewOfFile, UnmapViewOfFile, GetFileType, RemoveVectoredExceptionHandler, RtlCaptureStackBackTrace, GetStdHandle, GetCurrentProcess, GetCurrentProcessId, VirtualQuery, MultiByteToWideChar, WriteConsoleW, LocalFree, FormatMessageA, InitOnceExecuteOnce, CreateEventA, GetModuleHandleA, GetProcAddress, LoadLibraryA, GetEnvironmentStringsW, FreeEnvironmentStringsW, GetEnvironmentVariableW, SetEnvironmentVariableW, SetCurrentDirectoryW, GetCurrentDirectoryW, GetTempPathW, SetLastError, QueryPerformanceCounter, QueryPerformanceFrequency, InitializeCriticalSection, EnterCriticalSection, LeaveCriticalSection, Sleep, GetProcessTimes, SetPriorityClass, GetPriorityClass, GlobalMemoryStatusEx, GetSystemInfo, GetSystemTimeAsFileTime, GetVersionExW, GetModuleFileNameW, GetProcessIoCounters, VerifyVersionInfoA, FileTimeToSystemTime, GetConsoleTitleW, SetConsoleTitleW, CreateToolhelp32Snapshot, Process32First, Process32Next, SetHandleInformation, CreateIoCompletionPort, SetFileCompletionNotificationModes, CreateFileA, CreateFileW, DuplicateHandle, PostQueuedCompletionStatus, SetEvent, ResetEvent, QueueUserWorkItem, RegisterWaitForSingleObject, UnregisterWait, GetConsoleMode, SetConsoleMode, GetNumberOfConsoleInputEvents, ReadConsoleInputW, ReadConsoleW, FillConsoleOutputCharacterW, FillConsoleOutputAttribute, GetConsoleCursorInfo, SetConsoleCursorInfo, GetConsoleScreenBufferInfo, SetConsoleCursorPosition, SetConsoleTextAttribute, WriteConsoleInputW, CancelIoEx, CancelIo, SwitchToThread, GetStartupInfoW, GetFileAttributesW, TerminateProcess, GetExitCodeProcess, CreateProcessW, UnregisterWaitEx, CreateJobObjectW, AssignProcessToJobObject, SetInformationJobObject, LCMapStringW, TryEnterCriticalSection, DeleteCriticalSection, RtlUnwind, WakeConditionVariable, WakeAllConditionVariable, SleepConditionVariableCS, ReleaseSemaphore, CreateSemaphoreW, GetCurrentThread, ResumeThread, TlsAlloc, TlsGetValue, TlsSetValue, TlsFree, GetNativeSystemInfo, CreateSemaphoreA, FlushFileBuffers, ReadFile, WriteFile, ConnectNamedPipe, SetNamedPipeHandleState, PeekNamedPipe, CreateNamedPipeW, WaitNamedPipeW, CancelSynchronousIo, CreateNamedPipeA, GetNamedPipeHandleStateA, GetLongPathNameW, GetShortPathNameW, ReadDirectoryChangesW, CreateDirectoryW, FindClose, FindFirstFileW, FindNextFileW, GetDiskFreeSpaceW, GetFileInformationByHandle, GetFileSizeEx, GetFinalPathNameByHandleW, GetFullPathNameW, RemoveDirectoryW, SetFilePointerEx, SetFileTime, DeviceIoControl, FlushViewOfFile, CreateFileMappingA, ReOpenFile, CopyFileW, MoveFileExW, CreateHardLinkW, GetFileInformationByHandleEx, CreateSymbolicLinkW, DebugBreak, FreeLibrary, LoadLibraryExW, SetErrorMode, GetQueuedCompletionStatus, ReadConsoleA, InitializeCriticalSectionAndSpinCount, GetCurrentThreadId, LoadLibraryW, GetModuleHandleW, GetSystemTime, SystemTimeToFileTime, FormatMessageW, SwitchToFiber, DeleteFiber, CreateFiber, ConvertFiberToThread, ConvertThreadToFiber, RtlVirtualUnwind, GetModuleHandleExW, AddVectoredExceptionHandler, RtlAddFunctionTable, RtlDeleteFunctionTable, VirtualProtect, IsDebuggerPresent, OutputDebugStringA, OpenThread, SuspendThread, GetThreadContext, GetLocaleInfoEx, GetNumberFormatEx, GetCurrencyFormatEx, ResolveLocaleName, SystemTimeToTzSpecificLocalTime, GetTimeZoneInformation, GetTimeFormatEx, GetDateFormatEx, GetVersionExA, ExpandEnvironmentStringsA, GetWindowsDirectoryA, GetTickCount, GetACP, GetDynamicTimeZoneInformation, GetGeoInfoW, GetUserGeoID, CreateFileMappingW, LocaleNameToLCID, LCIDToLocaleName, ReleaseSRWLockExclusive, ReleaseSRWLockShared, AcquireSRWLockExclusive, AcquireSRWLockShared, TryAcquireSRWLockExclusive, TryAcquireSRWLockShared, DeleteFileA, GetFileSize, GetTempPathA, GetTempFileNameA, GetThreadTimes, VirtualAlloc, VirtualFree, SetThreadPriority, GetThreadPriority, QueryThreadCycleTime, SleepConditionVariableSRW, SetUnhandledExceptionFilter, InitializeSRWLock, InitializeCriticalSectionEx, InitOnceBeginInitialize, InitOnceComplete, EncodePointer, DecodePointer, LCMapStringEx, FlsAlloc, FlsGetValue, FlsSetValue, FlsFree",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "KERNEL32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "timeGetTime",
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "WINMM.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Languages\", \"ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "ENGLISH"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_0.ico\"}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"241b8140a8ff414cbd3f8311b27728923ba30a98c076063fd1846934fdef0373\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"241b8140a8ff414cbd3f8311b27728923ba30a98c076063fd1846934fdef0373\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}]]]",
+        "body_format": "MULTI",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Icons",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Type\", 0]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Version",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 63], [\"file_os\", \"NT_WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"APP\"], [\"file_version_LS\", 0], [\"file_version_MS\", 131077], [\"product_version_LS\", 0], [\"product_version_MS\", 131077], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "fixed_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "versions": {
+                "description": [
+                  "Install"
+                ],
+                "filename": [
+                  "node.exe"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "string_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"040904b0\"], [\"type\", 1], [\"lang\", \"ENGLISH\"], [\"sublang\", \"ENGLISH_US\"], [\"code_page\", \"UTF_16\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 3,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "langcode_items 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"LegalCopyright\", \"Copyright Node.js contributors. MIT license.\"], [\"ProductVersion\", \"2.5.0.0\"], [\"InternalName\", \"node\"], [\"CompanyName\", \"Node.js\"], [\"FileDescription\", \"Install\"], [\"ProductName\", \"GameSetup\"], [\"OriginalFilename\", \"node.exe\"], [\"FileVersion\", \"2.5.5\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 4,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "items",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78644233\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 2,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "var_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[{\"SHA256\": \"48361ab81c8731d6b8aa924ec4f4b90b305df01664c1b0408687dd6fb84ba3a0\", \"Type\": \"ICON\", \"Entropy\": 3.638159912676701}, {\"SHA256\": \"a14e70ed824f3f17d3a51136aa08839954d6d3ccadaa067415c7bfc08e6636b0\", \"Type\": \"GROUP_ICON\", \"Entropy\": 1.7814963295286754}, {\"SHA256\": \"72b7c1bb9ceef17ff7165da96c0c97942bf180a941221dce0d920d18dcc48527\", \"Type\": \"VERSION\", \"Entropy\": 3.3387259516344057}, {\"SHA256\": \"3e9fb184c1a5da021cf6d4c78a440a2600aa656e27a99ee50aac85884fc862e9\", \"Type\": \"MANIFEST\", \"Entropy\": 5.329804710312299}]",
+        "body_format": "TABLE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Summary",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": [
+      {
+        "name": "icon_0.ico",
+        "sha256": "241b8140a8ff414cbd3f8311b27728923ba30a98c076063fd1846934fdef0373"
+      },
+      {
+        "name": "icon_0.ico.thumb",
+        "sha256": "241b8140a8ff414cbd3f8311b27728923ba30a98c076063fd1846934fdef0373"
+      },
+      {
+        "name": "features.json",
+        "sha256": "42475046acb9ffcb9145e56bfe98282482eba2f5ca324ffed48f8ca2bb08bdad"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 24,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 30,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 31,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.pe.debug.guid": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "f7fd18cf-693c-4e31-a646-97c63ad0b6e3"
+        }
+      ],
+      "file.pe.exports.function_name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Add@VIsolate@internal@v8@@@?$Dictionary@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVIsolate@12@V312@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Add@VIsolate@internal@v8@@@?$Dictionary@VNameDictionary@internal@v8@@VNameDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNameDictionary@internal@v8@@@12@PEAVIsolate@12@V312@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Add@VIsolate@internal@v8@@@?$Dictionary@VNumberDictionary@internal@v8@@VNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNumberDictionary@internal@v8@@@12@PEAVIsolate@12@V312@IV?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Add@VIsolate@internal@v8@@@?$Dictionary@VSimpleNumberDictionary@internal@v8@@VSimpleNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VSimpleNumberDictionary@internal@v8@@@12@PEAVIsolate@12@V312@IV?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Add@VIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@SA?AV?$MaybeHandle@VOrderedNameDictionary@internal@v8@@@12@PEAVIsolate@12@V?$Handle@VOrderedNameDictionary@internal@v8@@@12@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Add@VLocalIsolate@internal@v8@@@?$Dictionary@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Add@VLocalIsolate@internal@v8@@@?$Dictionary@VNameDictionary@internal@v8@@VNameDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNameDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Add@VLocalIsolate@internal@v8@@@?$Dictionary@VNumberDictionary@internal@v8@@VNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNumberDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@IV?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Add@VLocalIsolate@internal@v8@@@?$Dictionary@VSimpleNumberDictionary@internal@v8@@VSimpleNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VSimpleNumberDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@IV?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@PEAVInternalIndex@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Add@VLocalIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@SA?AV?$MaybeHandle@VOrderedNameDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V?$Handle@VOrderedNameDictionary@internal@v8@@@12@V?$Handle@VName@internal@v8@@@12@V?$Handle@VObject@internal@v8@@@12@VPropertyDetails@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Allocate@VIsolate@internal@v8@@@AstConsString@internal@v8@@AEBA?AV?$Handle@VString@internal@v8@@@12@PEAVIsolate@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Allocate@VIsolate@internal@v8@@@DescriptorArray@internal@v8@@SA?AV?$Handle@VDescriptorArray@internal@v8@@@12@PEAVIsolate@12@HHW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Allocate@VIsolate@internal@v8@@@OrderedHashMap@internal@v8@@SA?AV?$MaybeHandle@VOrderedHashMap@internal@v8@@@12@PEAVIsolate@12@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Allocate@VIsolate@internal@v8@@@OrderedHashSet@internal@v8@@SA?AV?$MaybeHandle@VOrderedHashSet@internal@v8@@@12@PEAVIsolate@12@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Allocate@VIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@SA?AV?$MaybeHandle@VOrderedNameDictionary@internal@v8@@@12@PEAVIsolate@12@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Allocate@VLocalIsolate@internal@v8@@@AstConsString@internal@v8@@AEBA?AV?$Handle@VString@internal@v8@@@12@PEAVLocalIsolate@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Allocate@VLocalIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@SA?AV?$MaybeHandle@VOrderedNameDictionary@internal@v8@@@12@PEAVLocalIsolate@12@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$AllocateFlat@VIsolate@internal@v8@@@AstConsString@internal@v8@@QEBA?AV?$Handle@VString@internal@v8@@@12@PEAVIsolate@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$AllocateFlat@VLocalIsolate@internal@v8@@@AstConsString@internal@v8@@QEBA?AV?$Handle@VString@internal@v8@@@12@PEAVLocalIsolate@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$AllocatePage@$00VSemiSpace@internal@v8@@@MemoryAllocator@internal@v8@@QEAAPEAVPage@12@_KPEAVSemiSpace@12@W4Executability@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$AllocatePage@$0A@VPagedSpace@internal@v8@@@MemoryAllocator@internal@v8@@QEAAPEAVPage@12@_KPEAVPagedSpace@12@W4Executability@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$AllocatePage@$0A@VSemiSpace@internal@v8@@@MemoryAllocator@internal@v8@@QEAAPEAVPage@12@_KPEAVSemiSpace@12@W4Executability@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$AllocateScopeInfos@VIsolate@internal@v8@@@DeclarationScope@internal@v8@@SAXPEAVParseInfo@12@PEAVIsolate@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$AllocateScopeInfos@VLocalIsolate@internal@v8@@@DeclarationScope@internal@v8@@SAXPEAVParseInfo@12@PEAVLocalIsolate@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$AllocateScopeInfosRecursively@VIsolate@internal@v8@@@Scope@internal@v8@@AEAAXPEAVIsolate@12@V?$MaybeHandle@VScopeInfo@internal@v8@@@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$AllocateScopeInfosRecursively@VLocalIsolate@internal@v8@@@Scope@internal@v8@@AEAAXPEAVLocalIsolate@12@V?$MaybeHandle@VScopeInfo@internal@v8@@@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$AllocateSlotSet@$00@MemoryChunk@internal@v8@@QEAAPEAVSlotSet@12@XZ"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$AllocateSlotSet@$0A@@MemoryChunk@internal@v8@@QEAAPEAVSlotSet@12@XZ"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$At@VIsolate@internal@v8@@@ConstantArrayBuilder@interpreter@internal@v8@@QEBA?AV?$MaybeHandle@VObject@internal@v8@@@23@_KPEAVIsolate@23@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$At@VLocalIsolate@internal@v8@@@ConstantArrayBuilder@interpreter@internal@v8@@QEBA?AV?$MaybeHandle@VObject@internal@v8@@@23@_KPEAVLocalIsolate@23@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$BigIntLiteral@VIsolate@internal@v8@@@internal@v8@@YA?AV?$MaybeHandle@VBigInt@internal@v8@@@01@PEAVIsolate@01@PEBD@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$BigIntLiteral@VLocalIsolate@internal@v8@@@internal@v8@@YA?AV?$MaybeHandle@VBigInt@internal@v8@@@01@PEAVLocalIsolate@01@PEBD@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$BuildValue@VIsolate@internal@v8@@@Literal@internal@v8@@QEBA?AV?$Handle@VObject@internal@v8@@@12@PEAVIsolate@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$BuildValue@VLocalIsolate@internal@v8@@@Literal@internal@v8@@QEBA?AV?$Handle@VObject@internal@v8@@@12@PEAVLocalIsolate@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$ConvertDouble@H@internal@v8@@YAHN@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$ConvertDouble@I@internal@v8@@YAIN@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$ConvertDouble@M@internal@v8@@YAMN@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$ConvertDouble@N@internal@v8@@YANN@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$ConvertDouble@_J@internal@v8@@YA_JN@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$ConvertDouble@_K@internal@v8@@YA_KN@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$ConvertDouble@_N@internal@v8@@YA_NN@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Create@VIsolate@internal@v8@@@ScopeInfo@internal@v8@@SA?AV?$Handle@VScopeInfo@internal@v8@@@12@PEAVIsolate@12@PEAVZone@12@PEAVScope@12@V?$MaybeHandle@VScopeInfo@internal@v8@@@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Create@VLocalIsolate@internal@v8@@@ScopeInfo@internal@v8@@SA?AV?$Handle@VScopeInfo@internal@v8@@@12@PEAVLocalIsolate@12@PEAVZone@12@PEAVScope@12@V?$MaybeHandle@VScopeInfo@internal@v8@@@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$CreateScript@VIsolate@internal@v8@@@ParseInfo@internal@v8@@QEAA?AV?$Handle@VScript@internal@v8@@@12@PEAVIsolate@12@V?$Handle@VString@internal@v8@@@12@V?$MaybeHandle@VFixedArray@internal@v8@@@12@VScriptOriginOptions@2@W4NativesFlag@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$CreateScript@VLocalIsolate@internal@v8@@@ParseInfo@internal@v8@@QEAA?AV?$Handle@VScript@internal@v8@@@12@PEAVLocalIsolate@12@V?$Handle@VString@internal@v8@@@12@V?$MaybeHandle@VFixedArray@internal@v8@@@12@VScriptOriginOptions@2@W4NativesFlag@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Decode@E@Utf8Decoder@internal@v8@@QEAAXPEAEAEBV?$Vector@$$CBE@base@2@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Decode@G@Utf8Decoder@internal@v8@@QEAAXPEAGAEBV?$Vector@$$CBE@base@2@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VCompilationCacheTable@internal@v8@@VCompilationCacheShape@23@@internal@v8@@SA?AV?$Handle@VCompilationCacheTable@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VEphemeronHashTable@internal@v8@@VObjectHashTableShape@23@@internal@v8@@SA?AV?$Handle@VEphemeronHashTable@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VNameDictionary@internal@v8@@VNameDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNameDictionary@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VNumberDictionary@internal@v8@@VNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNumberDictionary@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VObjectHashSet@internal@v8@@VObjectHashSetShape@23@@internal@v8@@SA?AV?$Handle@VObjectHashSet@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VObjectHashTable@internal@v8@@VObjectHashTableShape@23@@internal@v8@@SA?AV?$Handle@VObjectHashTable@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VSimpleNumberDictionary@internal@v8@@VSimpleNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VSimpleNumberDictionary@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VIsolate@internal@v8@@@?$HashTable@VStringSet@internal@v8@@VStringSetShape@23@@internal@v8@@SA?AV?$Handle@VStringSet@internal@v8@@@12@PEAVIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VCompilationCacheTable@internal@v8@@VCompilationCacheShape@23@@internal@v8@@SA?AV?$Handle@VCompilationCacheTable@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VEphemeronHashTable@internal@v8@@VObjectHashTableShape@23@@internal@v8@@SA?AV?$Handle@VEphemeronHashTable@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VNameDictionary@internal@v8@@VNameDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNameDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VNumberDictionary@internal@v8@@VNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VNumberDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VObjectHashSet@internal@v8@@VObjectHashSetShape@23@@internal@v8@@SA?AV?$Handle@VObjectHashSet@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VObjectHashTable@internal@v8@@VObjectHashTableShape@23@@internal@v8@@SA?AV?$Handle@VObjectHashTable@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VSimpleNumberDictionary@internal@v8@@VSimpleNumberDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VSimpleNumberDictionary@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureCapacity@VLocalIsolate@internal@v8@@@?$HashTable@VStringSet@internal@v8@@VStringSetShape@23@@internal@v8@@SA?AV?$Handle@VStringSet@internal@v8@@@12@PEAVLocalIsolate@12@V312@HW4AllocationType@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureGrowable@VIsolate@internal@v8@@@?$OrderedHashTable@VOrderedHashMap@internal@v8@@$01@internal@v8@@SA?AV?$MaybeHandle@VOrderedHashMap@internal@v8@@@12@PEAVIsolate@12@V?$Handle@VOrderedHashMap@internal@v8@@@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$EnsureGrowable@VIsolate@internal@v8@@@?$OrderedHashTable@VOrderedHashSet@internal@v8@@$00@internal@v8@@SA?AV?$MaybeHandle@VOrderedHashSet@internal@v8@@@12@PEAVIsolate@12@V?$Handle@VOrderedHashSet@internal@v8@@@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$FindEntry@VIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@QEAA?AVInternalIndex@12@PEAVIsolate@12@VObject@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$FindEntry@VLocalIsolate@internal@v8@@@OrderedNameDictionary@internal@v8@@QEAA?AVInternalIndex@12@PEAVLocalIsolate@12@VObject@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Free@$00@MemoryAllocator@internal@v8@@QEAAXPEAVMemoryChunk@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Free@$01@MemoryAllocator@internal@v8@@QEAAXPEAVMemoryChunk@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Free@$02@MemoryAllocator@internal@v8@@QEAAXPEAVMemoryChunk@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Free@$0A@@MemoryAllocator@internal@v8@@QEAAXPEAVMemoryChunk@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$GetBoilerplateValue@VIsolate@internal@v8@@@MaterializedLiteral@internal@v8@@IEAA?AV?$Handle@VObject@internal@v8@@@12@PEAVExpression@12@PEAVIsolate@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$GetBoilerplateValue@VLocalIsolate@internal@v8@@@MaterializedLiteral@internal@v8@@IEAA?AV?$Handle@VObject@internal@v8@@@12@PEAVExpression@12@PEAVLocalIsolate@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$GetConstantForIndexOperand@VIsolate@internal@v8@@@BytecodeArrayIterator@interpreter@internal@v8@@QEBA?AV?$Handle@VObject@internal@v8@@@23@HPEAVIsolate@23@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$InitFromFunctionLiteral@VIsolate@internal@v8@@@SharedFunctionInfo@internal@v8@@SAXPEAVIsolate@12@V?$Handle@VSharedFunctionInfo@internal@v8@@@12@PEAVFunctionLiteral@12@_N@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$InitFromFunctionLiteral@VLocalIsolate@internal@v8@@@SharedFunctionInfo@internal@v8@@SAXPEAVLocalIsolate@12@V?$Handle@VSharedFunctionInfo@internal@v8@@@12@PEAVFunctionLiteral@12@_N@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$InitLineEnds@VIsolate@internal@v8@@@Script@internal@v8@@SAXPEAVIsolate@12@V?$Handle@VScript@internal@v8@@@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$InitLineEnds@VLocalIsolate@internal@v8@@@Script@internal@v8@@SAXPEAVLocalIsolate@12@V?$Handle@VScript@internal@v8@@@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Initialize@VIsolate@internal@v8@@@SwissNameDictionary@internal@v8@@QEAAXPEAVIsolate@12@VByteArray@12@H@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Initialize@VLocalIsolate@internal@v8@@@SwissNameDictionary@internal@v8@@QEAAXPEAVLocalIsolate@12@VByteArray@12@H@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Internalize@VIsolate@internal@v8@@@AstRawString@internal@v8@@QEAAXPEAVIsolate@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Internalize@VIsolate@internal@v8@@@AstValueFactory@internal@v8@@QEAAXPEAVIsolate@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Internalize@VLocalIsolate@internal@v8@@@AstRawString@internal@v8@@QEAAXPEAVLocalIsolate@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$Internalize@VLocalIsolate@internal@v8@@@AstValueFactory@internal@v8@@QEAAXPEAVLocalIsolate@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$InternalizeStringWithKey@V?$SeqSubStringKey@VSeqOneByteString@internal@v8@@@internal@v8@@@?$FactoryBase@VFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SeqSubStringKey@VSeqOneByteString@internal@v8@@@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$InternalizeStringWithKey@V?$SeqSubStringKey@VSeqTwoByteString@internal@v8@@@internal@v8@@@?$FactoryBase@VFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SeqSubStringKey@VSeqTwoByteString@internal@v8@@@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$InternalizeStringWithKey@V?$SequentialStringKey@E@internal@v8@@@?$FactoryBase@VFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SequentialStringKey@E@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$InternalizeStringWithKey@V?$SequentialStringKey@E@internal@v8@@@?$FactoryBase@VLocalFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SequentialStringKey@E@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$InternalizeStringWithKey@V?$SequentialStringKey@G@internal@v8@@@?$FactoryBase@VFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SequentialStringKey@G@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$InternalizeStringWithKey@V?$SequentialStringKey@G@internal@v8@@@?$FactoryBase@VLocalFactory@internal@v8@@@internal@v8@@QEAA?AV?$Handle@VString@internal@v8@@@12@PEAV?$SequentialStringKey@G@12@@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$MakeCheckOpString@HH@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HHPEBD@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$MakeCheckOpString@II@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IIPEBD@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$MakeCheckOpString@JJ@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@JJPEBD@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$MakeCheckOpString@KK@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@KKPEBD@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$MakeCheckOpString@PEBXPEBX@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBX0PEBD@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$MakeCheckOpString@_J_J@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_J0PEBD@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$MakeCheckOpString@_K_K@base@v8@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_K0PEBD@Z"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??$New@VIsolate@internal@v8@@@?$BaseNameDictionary@VGlobalDictionary@internal@v8@@VGlobalDictionaryShape@23@@internal@v8@@SA?AV?$Handle@VGlobalDictionary@internal@v8@@@12@PEAVIsolate@12@HW4AllocationType@12@W4MinimumCapacity@12@@Z"
+        }
+      ],
+      "file.pe.exports.module_name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "node.exe"
+        }
+      ],
+      "file.pe.imports.fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "192:JeW92FX/rbFrTisrck/gkehFpiV37W5W/bF7E:JejViMlQFpi5uIx7E"
+        }
+      ],
+      "file.pe.imports.imphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "66b10d8b5718b0fd6fb4865843d44280"
+        }
+      ],
+      "file.pe.imports.sorted_fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "192:umSmZTk0V+GW5W6SRzaa9CS5WK8mHbDqFH4lL:G6+GuuRWa9CS5H8f8"
+        }
+      ],
+      "file.pe.imports.sorted_sha1": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ee36e071aff700479f9fa059deefd4437ca5da3e"
+        }
+      ],
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 1657322818
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2022-07-08 23:26:58 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.pdb_filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C:\\Users\\runneradmin\\AppData\\Local\\Temp\\pkg.d7c6a10fb0263a69b4596321\\node\\out\\Release\\node.pdb"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ENGLISH"
+        }
+      ],
+      "file.pe.rich_header.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "8dd10ade1b5012e53689a711e5864d63"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "27931c106c58fbe03bb12872283529b7"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "7c7dd899fc914d0919cf1eb2bef4e7fb"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "7ff811e53e91692c74554cb15f627f2e"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "81be29a4ac9aa11476a8fae36ba3ee7a"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "a4f957558421d7ffc97c520a03736201"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ba30cb369d6dfb8b58e89051d88bf60e"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "d2d86d1a7fd7661de7074d191730e9be"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".data"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".pdata"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rdata"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".reloc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rsrc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".text"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_RDATA"
+        }
+      ],
+      "file.pe.versions.description": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Install"
+        }
+      ],
+      "file.pe.versions.filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "node.exe"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
+}
