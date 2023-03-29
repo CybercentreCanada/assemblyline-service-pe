@@ -138,7 +138,7 @@ heuristics:
     filetype: "executable/windows"
     heur_id: 15
     name: Dataless resources
-    score: 200
+    score: 0
 
   - description: >-
        Unreadable PDB filename.
@@ -194,7 +194,7 @@ heuristics:
     filetype: "executable/windows"
     heur_id: 23
     name: Invalid optional header checksum
-    score: 200
+    score: 0
 
   - description: >-
        The file size is very different from the reported virtual size.
