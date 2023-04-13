@@ -33,6 +33,8 @@ from assemblyline_v4_service.common.result import (
 )
 from PIL import Image
 
+from . import unmapper
+
 # Disable logging from LIEF
 lief.logging.disable()
 
@@ -1836,6 +1838,20 @@ class PE(ServiceBase):
             res = ResultSection("This file looks like a PE but failed loading.", heuristic=Heuristic(7))
             self.file_res.add_section(res)
             return
+
+        if unmapper.is_mapped(self.binary):
+            in_data = pathlib.Path(request.file_path).read_bytes()
+            out_data = unmapper.unmap(self.binary, in_data)
+            file_name = f"{request.sha256}_unmapped"
+            temp_path = os.path.join(self.working_directory, file_name)
+            with open(temp_path, "wb") as f:
+                f.write(out_data)
+            self.request.add_extracted(
+                temp_path,
+                file_name,
+                f"{file_name} unmapped from binary",
+                safelist_interface=self.api_interface,
+            )
 
         self.check_timestamps()
         self.check_exe_resources()
