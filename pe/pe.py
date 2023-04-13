@@ -1852,7 +1852,6 @@ class PE(ServiceBase):
                 f"{file_name} unmapped from binary",
                 safelist_interface=self.api_interface,
             )
-            return
 
         self.check_timestamps()
         self.check_exe_resources()

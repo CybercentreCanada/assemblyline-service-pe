@@ -1,21 +1,297 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 0,
-    "sections": []
+    "score": 251,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "1678096835 (2023-03-06 10:00:35 +00:00 (UTC))\n2165445902 (2038-08-15 00:45:02 +00:00 (UTC))",
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 11,
+          "score": 250,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Multiple different non-zero timestamps",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "2165445902 (2038-08-15 00:45:02 +00:00 (UTC))",
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 26,
+          "score": 1,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Future timestamp found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "0",
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 15,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Resource directories that does not contain a leaf data node",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1678096835 (2023-03-06 10:00:35 +00:00 (UTC))\"], [\"Entrypoint\", \"0x2b03e\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"48.0\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x00000000\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  1678096835,
+                  "2023-03-06 10:00:35 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"sha512\", \"deee8af806593dbdcfb015b9161a5b4d6376d15fb34b4278edb5ff660e7f81045c121bdb35661b7cd7ffda9f594287ba2a1301e29ab79ad75efeb98d161645d8\"], [\"sha384\", \"efd14b7002c230ac6b3ec5affdb881861321d956f7d9148843bfebd44a8f20a8a09c1d6e40d5c66ee647787185f8a68b\"], [\"sha256\", \"638f3314bd6395a8c4e10446a574d0ceddd606dd4c1eeb8d33f36cc7889563a4\"], [\"sha1\", \"832f496dc4eafd17402a5afe0cacfadf369ec0b0\"], [\"md5\", \"20bedf916fdf0200757202014ed88c1e\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.009369342361083], [\"Entropy without padding\", 6.005984799139137], [\"Offset\", 8192], [\"Size\", 172032], [\"Virtual Size\", 168004], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"5de8f7bb6164ce3087761d3b9d01819c\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.0, 0.0, 4.10396, 5.2181, 5.1243, 5.23568, 5.46974, 5.42506, 5.38291, 5.39091, 5.36045, 5.42996, 5.4642, 5.47011, 5.41965, 5.4404, 5.41287, 5.44537, 5.25872, 5.37039, 5.07605, 5.61015, 5.41463, 5.41052, 5.51477, 5.38068, 5.44274, 5.46085, 5.42307, 5.36786, 5.35879, 5.45076, 5.40406, 5.47508, 7.0947, 7.27359, 7.36622, 7.35051, 7.23857, 7.24519, 5.33408, 5.42101, 4.32054, 4.77176, 5.74093, 6.08765, 5.87363, 4.94201, 4.82964, 5.77527]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "5de8f7bb6164ce3087761d3b9d01819c"
+                ],
+                "name": [
+                  ".text"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .text",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.453077504187917], [\"Entropy without padding\", 4.479983617195276], [\"Offset\", 180224], [\"Size\", 8192], [\"Virtual Size\", 1350], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"e3da2c71d4e553822ef9aaec680f1168\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.29665, 3.32953, 3.6955, 3.37292, 3.69228, 4.02662, 3.63099, 3.43744, 3.82131, 3.00695, 3.78437, 4.01486, 3.34535, 4.07938, 3.64358, 3.56325, 3.73244, 3.31694, 3.54743, 3.73109, 3.76002, 3.10175, 3.67969, 3.22756, 3.40986, 3.40664, 3.11831, 3.72922, 3.05649, 3.21039, 3.55066, 3.47438, 3.93775, 3.05304, 3.51777, 3.71131, 2.68129, 3.66471, 3.62776, 3.63713, 3.47438, 3.04538, 3.56003, 2.80999, 3.13921, 2.92798, 3.65534, 2.97001, 4.01486, 2.41896]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "e3da2c71d4e553822ef9aaec680f1168"
+                ],
+                "name": [
+                  ".rsrc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rsrc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.491746666296525], [\"Entropy without padding\", 2.584962500721156], [\"Offset\", 188416], [\"Size\", 8192], [\"Virtual Size\", 12], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"b9745c431479b8f60bc8794eb73da877\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.66353, 1.78993, 2.91398, 3.0958, 2.91398, 3.0958, 2.84535, 2.48171, 2.2999, 2.66353, 1.86763, 2.84535, 3.27761, 2.55034, 2.2999, 2.73216, 2.55034, 3.02717, 2.73216, 2.55034, 3.27761, 3.0958, 2.84535, 1.24067, 0.94566, 3.02717, 3.0958, 2.66353, 3.0958, 3.27761, 1.34859, 2.66353, 2.91398, 3.0958, 2.84535, 2.84535, 2.91398, 2.91398, 2.55034, 2.73216, 3.27761, 1.67293, 2.66353, 2.91398, 2.2999, 3.27761, 2.25163, 0.0, 0.0, 0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "b9745c431479b8f60bc8794eb73da877"
+                ],
+                "name": [
+                  ".reloc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .reloc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Languages\", \"\"], [\"Sublanguages\", \"\"]]",
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TABLE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Summary",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 25600]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.49047, 4.43099, 4.50795, 4.59212, 4.50249, 4.51979, 4.79554, 4.88738, 4.66249, 5.33088, 0.57906, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}]]",
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      }
+    ]
   },
   "files": {
     "extracted": [
+      {
+        "name": "overlay",
+        "sha256": "1a1076705b8b311811866e60fb0a81e1ee59906001ffb8d2f66c8b7a8b7f7995"
+      },
       {
         "name": "5501d662207c91a3136e79ccad1a9f94d22ff7e22bd7e535ff78c930139591e0_unmapped",
         "sha256": "73d0d0e7d63f1dee2e92f5db7ea2e3f6daac762afff12a3286774c6be296311e"
       }
     ],
-    "supplementary": []
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "4a1f576340dbf1bb97036ab60a2ac4e2206133aa57b94a53e441bb4aba00e035"
+      }
+    ]
   },
   "results": {
-    "heuristics": [],
-    "tags": {},
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 11,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 15,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 26,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 1678096835
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2023-03-06 10:00:35 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "5de8f7bb6164ce3087761d3b9d01819c"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "b9745c431479b8f60bc8794eb73da877"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "e3da2c71d4e553822ef9aaec680f1168"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".reloc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rsrc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".text"
+        }
+      ]
+    },
     "temp_submission_data": {}
   }
 }
