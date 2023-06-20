@@ -404,7 +404,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ProductVersion\", \"12.0.4518.1014\"], [\"ProductName\", \"Microsoft Office OneNote\"], [\"LegalTrademarks2\", \"Windows\\u00ae is a registered trademark of Microsoft Corporation.\"], [\"LegalTrademarks1\", \"Microsoft\\u00ae is a registered trademark of Microsoft Corporation.\"], [\"LegalCopyright\", \"\\u00a9 2006 Microsoft Corporation.  All rights reserved.\"], [\"OriginalFilename\", \"OneNoteM.exe\"], [\"FileVersion\", \"12.0.4518.1014\"], [\"CompanyName\", \"Microsoft Corporation\"], [\"FileDescription\", \"Microsoft Office OneNote Quick Launcher\"], [\"InternalName\", \"QuickLauncher\"]]",
+        "body": "[[\"ProductVersion\", \"12.0.4518.1014\"], [\"ProductName\", \"Microsoft Office OneNote\"], [\"OriginalFilename\", \"OneNoteM.exe\"], [\"LegalTrademarks2\", \"Windows\\u00ae is a registered trademark of Microsoft Corporation.\"], [\"LegalTrademarks1\", \"Microsoft\\u00ae is a registered trademark of Microsoft Corporation.\"], [\"InternalName\", \"QuickLauncher\"], [\"FileVersion\", \"12.0.4518.1014\"], [\"LegalCopyright\", \"\\u00a9 2006 Microsoft Corporation.  All rights reserved.\"], [\"FileDescription\", \"Microsoft Office OneNote Quick Launcher\"], [\"CompanyName\", \"Microsoft Corporation\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -519,7 +519,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA\"], [\"Issuer\", \"C=ZA, ST=Western Cape, L=Durbanville, O=Thawte, OU=Thawte Certification, CN=Thawte Timestamping CA\"], [\"SHA1\", \"f46ac0c6efbb8c6a14f55f09e2d37df4c0de012d\"], [\"SHA256\", \"1c1983300c10fb262c0b2304b7be15aaba10ae356ebbbb177583dc44774eb080\"], [\"MD5\", \"6823267ab35ec7a5449904bb4d8041a7\"], [\"Serial Number\", \"47bf1995df8d524643f7db6d480d31a4\"], [\"Valid From\", \"2003-12-04T00:00:00\"], [\"Valid To\", \"2013-12-03T23:59:59\"]]",
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, O=VeriSign\\\\, Inc., CN=VeriSign Time Stamping Services CA\"], [\"Issuer\", \"C=ZA, ST=Western Cape, L=Durbanville, O=Thawte, OU=Thawte Certification, CN=Thawte Timestamping CA\"], [\"SHA1\", \"f46ac0c6efbb8c6a14f55f09e2d37df4c0de012d\"], [\"SHA256\", \"1c1983300c10fb262c0b2304b7be15aaba10ae356ebbbb177583dc44774eb080\"], [\"MD5\", \"6823267ab35ec7a5449904bb4d8041a7\"], [\"Serial Number\", \"47bf1995df8d524643f7db6d480d31a4\"], [\"Valid From\", \"2003-12-04T00:00:00\"], [\"Valid To\", \"2013-12-03T23:59:59\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -531,7 +531,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer\"], [\"Issuer\", \"C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA\"], [\"SHA1\", \"817e78267300cb0fe5d631357851db366123a690\"], [\"SHA256\", \"2ade3fa71fa82fed7022b48b5c6dbace27ea4c48b9bfd98db84ee13f7b706fb6\"], [\"MD5\", \"5340e91a17595750554527215846ee71\"], [\"Serial Number\", \"0de92bf0d4d82988183205095e9a7688\"], [\"Valid From\", \"2003-12-04T00:00:00\"], [\"Valid To\", \"2008-12-03T23:59:59\"]]",
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, O=VeriSign\\\\, Inc., CN=VeriSign Time Stamping Services Signer\"], [\"Issuer\", \"C=US, O=VeriSign\\\\, Inc., CN=VeriSign Time Stamping Services CA\"], [\"SHA1\", \"817e78267300cb0fe5d631357851db366123a690\"], [\"SHA256\", \"2ade3fa71fa82fed7022b48b5c6dbace27ea4c48b9bfd98db84ee13f7b706fb6\"], [\"MD5\", \"5340e91a17595750554527215846ee71\"], [\"Serial Number\", \"0de92bf0d4d82988183205095e9a7688\"], [\"Valid From\", \"2003-12-04T00:00:00\"], [\"Valid To\", \"2008-12-03T23:59:59\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -614,16 +614,16 @@
     "extracted": [],
     "supplementary": [
       {
-        "name": "features.json",
-        "sha256": "132f57ec3020ca7f4f18a9811bd3ef1f26a0ecb62edcf85b448be3c0b429a988"
-      },
-      {
         "name": "icon_5.ico",
         "sha256": "1ba7d671a3293bff2719c3f2d2495d8f8e7e58b0eec9b1e976541ba517f04155"
       },
       {
         "name": "certificate.1.1",
         "sha256": "1c1983300c10fb262c0b2304b7be15aaba10ae356ebbbb177583dc44774eb080"
+      },
+      {
+        "name": "features.json",
+        "sha256": "22ddee382f7572aa6e806fe42251c1c254bdc364e13c7bee3524ac38c6763048"
       },
       {
         "name": "icon_3.ico",

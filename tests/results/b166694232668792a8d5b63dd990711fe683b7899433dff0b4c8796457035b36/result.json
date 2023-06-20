@@ -481,7 +481,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ProductVersion\", \"2.40                                              \"], [\"ProductName\", \"KeePass Password Safe                                       \"], [\"LegalCopyright\", \"Copyright (c) 2003-2018 Dominik Reichl                                                              \"], [\"Comments\", \"This installation was built with Inno Setup.\"], [\"CompanyName\", \"Dominik Reichl                                              \"], [\"FileDescription\", \"KeePass Password Safe 2.40 Setup                            \"], [\"FileVersion\", \"2.40.0.0            \"]]",
+        "body": "[[\"ProductVersion\", \"2.40                                              \"], [\"ProductName\", \"KeePass Password Safe                                       \"], [\"FileVersion\", \"2.40.0.0            \"], [\"LegalCopyright\", \"Copyright (c) 2003-2018 Dominik Reichl                                                              \"], [\"FileDescription\", \"KeePass Password Safe 2.40 Setup                            \"], [\"CompanyName\", \"Dominik Reichl                                              \"], [\"Comments\", \"This installation was built with Inno Setup.\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -578,7 +578,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=DE, O=Open Source Developer, L=Metzingen, CN=Open Source Developer, Dominik Reichl, emailAddress=cert@dominik-reichl.de\"], [\"Issuer\", \"C=PL, O=Unizeto Technologies S.A., OU=Certum Certification Authority, CN=Certum Code Signing CA SHA2\"], [\"Serial Number\", \"100d34f8908adfca54bdcc60139a7da8\"], [\"Valid From\", \"2018-01-31T15:40:37\"], [\"Valid To\", \"2019-01-31T15:40:37\"]]",
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=DE, O=Open Source Developer, L=Metzingen, CN=Open Source Developer\\\\, Dominik Reichl, emailAddress=cert@dominik-reichl.de\"], [\"Issuer\", \"C=PL, O=Unizeto Technologies S.A., OU=Certum Certification Authority, CN=Certum Code Signing CA SHA2\"], [\"Serial Number\", \"100d34f8908adfca54bdcc60139a7da8\"], [\"Valid From\", \"2018-01-31T15:40:37\"], [\"Valid To\", \"2019-01-31T15:40:37\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -593,7 +593,7 @@
               "100d34f8908adfca54bdcc60139a7da8"
             ],
             "subject": [
-              "C=DE, O=Open Source Developer, L=Metzingen, CN=Open Source Developer, Dominik Reichl, emailAddress=cert@dominik-reichl.de"
+              "C=DE, O=Open Source Developer, L=Metzingen, CN=Open Source Developer\\, Dominik Reichl, emailAddress=cert@dominik-reichl.de"
             ],
             "thumbprint": [
               "0641c6747c18b7449b28c22daeb353efc1ec7231",
@@ -627,7 +627,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=DE, O=Open Source Developer, L=Metzingen, CN=Open Source Developer, Dominik Reichl, emailAddress=cert@dominik-reichl.de\"], [\"Issuer\", \"C=PL, O=Unizeto Technologies S.A., OU=Certum Certification Authority, CN=Certum Code Signing CA SHA2\"], [\"SHA1\", \"0641c6747c18b7449b28c22daeb353efc1ec7231\"], [\"SHA256\", \"9bc06dc3614e82154d40d8f8d7b787d2cbe86c13a2b3e1d7409abdd8fa4cbd95\"], [\"MD5\", \"15fe938b3bc88a44ab7fa81ff76b645f\"], [\"Serial Number\", \"100d34f8908adfca54bdcc60139a7da8\"], [\"Valid From\", \"2018-01-31T15:40:37\"], [\"Valid To\", \"2019-01-31T15:40:37\"]]",
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=DE, O=Open Source Developer, L=Metzingen, CN=Open Source Developer\\\\, Dominik Reichl, emailAddress=cert@dominik-reichl.de\"], [\"Issuer\", \"C=PL, O=Unizeto Technologies S.A., OU=Certum Certification Authority, CN=Certum Code Signing CA SHA2\"], [\"SHA1\", \"0641c6747c18b7449b28c22daeb353efc1ec7231\"], [\"SHA256\", \"9bc06dc3614e82154d40d8f8d7b787d2cbe86c13a2b3e1d7409abdd8fa4cbd95\"], [\"MD5\", \"15fe938b3bc88a44ab7fa81ff76b645f\"], [\"Serial Number\", \"100d34f8908adfca54bdcc60139a7da8\"], [\"Valid From\", \"2018-01-31T15:40:37\"], [\"Valid To\", \"2019-01-31T15:40:37\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -692,16 +692,16 @@
         "sha256": "9bc06dc3614e82154d40d8f8d7b787d2cbe86c13a2b3e1d7409abdd8fa4cbd95"
       },
       {
+        "name": "features.json",
+        "sha256": "b734beddc61bda0567da38e089378bce85fb63b5a8e194f77f38f1daa51c6e47"
+      },
+      {
         "name": "icon_1.ico",
         "sha256": "dc383766219116a1b76a018feeae1a0fcc52f4f9bdaf590f51ac9df3002a0b42"
       },
       {
         "name": "icon_1.ico.thumb",
         "sha256": "dc383766219116a1b76a018feeae1a0fcc52f4f9bdaf590f51ac9df3002a0b42"
-      },
-      {
-        "name": "features.json",
-        "sha256": "e86e34048971980c4aa3d0432ecba5f83e0e75fdf6075c9e56374c12b62a0bd5"
       }
     ]
   },
@@ -742,7 +742,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "C=DE, O=Open Source Developer, L=Metzingen, CN=Open Source Developer, Dominik Reichl, emailAddress=cert@dominik-reichl.de"
+          "value": "C=DE, O=Open Source Developer, L=Metzingen, CN=Open Source Developer\\, Dominik Reichl, emailAddress=cert@dominik-reichl.de"
         }
       ],
       "cert.thumbprint": [

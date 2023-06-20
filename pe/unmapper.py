@@ -52,9 +52,11 @@ def unmap(pe: lief.PE.Binary, in_data):
 
     unmapped = lief.parse(raw=headers)
     unmapped.remove_all_relocations()
-    builder = lief.PE.Builder(unmapped)
+    builder = lief.PE.Builder(unmapped).build_dos_stub(False)
     builder.build()
-    return bytes(builder.get_build())
+    out_data = bytes(builder.get_build())
+    # Keep the DOS STUB from the original file.
+    return out_data[:0x40] + in_data[0x40:0x80] + out_data[0x80:]
 
 
 if __name__ == "__main__":

@@ -572,7 +572,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ProductVersion\", \"1.0.0.1\"], [\"ProductName\", \"Samsung Magician\"], [\"LegalCopyright\", \"Copyright \\u00a9 2022 SAMSUNG Electronics Co. Ltd. All rights reserved.\"], [\"OriginalFilename\", \"PleaseWaitWindow.exe\"], [\"FileVersion\", \"1, 0, 0, 96\"], [\"CompanyName\", \"Samsung Electronics.\"], [\"FileDescription\", \"PleaseWaitWindow\"], [\"InternalName\", \"PleaseWaitWindow.exe\"]]",
+        "body": "[[\"ProductVersion\", \"1.0.0.1\"], [\"ProductName\", \"Samsung Magician\"], [\"OriginalFilename\", \"PleaseWaitWindow.exe\"], [\"InternalName\", \"PleaseWaitWindow.exe\"], [\"FileVersion\", \"1, 0, 0, 96\"], [\"LegalCopyright\", \"Copyright \\u00a9 2022 SAMSUNG Electronics Co. Ltd. All rights reserved.\"], [\"FileDescription\", \"PleaseWaitWindow\"], [\"CompanyName\", \"Samsung Electronics.\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -761,7 +761,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA\"], [\"Issuer\", \"C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root G4\"], [\"SHA1\", \"b6c8af834d4e53b673c76872aa8c950c7c54df5f\"], [\"SHA256\", \"281734d4592d1291d27190709cb510b07e22c405d5e0d6119b70e73589f98acf\"], [\"MD5\", \"9e3e4fa44117441dba73c28e983fc05f\"], [\"Serial Number\", \"073637b724547cd847acfd28662a5e5b\"], [\"Valid From\", \"2022-03-23T00:00:00\"], [\"Valid To\", \"2037-03-22T23:59:59\"]]",
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, O=DigiCert\\\\, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA\"], [\"Issuer\", \"C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root G4\"], [\"SHA1\", \"b6c8af834d4e53b673c76872aa8c950c7c54df5f\"], [\"SHA256\", \"281734d4592d1291d27190709cb510b07e22c405d5e0d6119b70e73589f98acf\"], [\"MD5\", \"9e3e4fa44117441dba73c28e983fc05f\"], [\"Serial Number\", \"073637b724547cd847acfd28662a5e5b\"], [\"Valid From\", \"2022-03-23T00:00:00\"], [\"Valid To\", \"2037-03-22T23:59:59\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -785,7 +785,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2022 - 2\"], [\"Issuer\", \"C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA\"], [\"SHA1\", \"8508f386515cb3d3077db6b4b7c07f1b4a5e41de\"], [\"SHA256\", \"9da69015c349c6c1897845ba3582ad70c88fa4293bdb6abe9c2bd2539279e63b\"], [\"MD5\", \"66f9031dc6c0977d67725305cc719de3\"], [\"Serial Number\", \"0a7a4a889ec99942900663384d86979d\"], [\"Valid From\", \"2022-03-29T00:00:00\"], [\"Valid To\", \"2033-03-14T23:59:59\"]]",
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, O=DigiCert\\\\, Inc., CN=DigiCert Timestamp 2022 - 2\"], [\"Issuer\", \"C=US, O=DigiCert\\\\, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA\"], [\"SHA1\", \"8508f386515cb3d3077db6b4b7c07f1b4a5e41de\"], [\"SHA256\", \"9da69015c349c6c1897845ba3582ad70c88fa4293bdb6abe9c2bd2539279e63b\"], [\"MD5\", \"66f9031dc6c0977d67725305cc719de3\"], [\"Serial Number\", \"0a7a4a889ec99942900663384d86979d\"], [\"Valid From\", \"2022-03-29T00:00:00\"], [\"Valid To\", \"2033-03-14T23:59:59\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -854,6 +854,10 @@
         "sha256": "9da69015c349c6c1897845ba3582ad70c88fa4293bdb6abe9c2bd2539279e63b"
       },
       {
+        "name": "features.json",
+        "sha256": "a605cc81ca8c3e36ead364e86ac1539270c1484529eafdecee18d88944ce5e12"
+      },
+      {
         "name": "certificate.1.2",
         "sha256": "b617253b3695fd498d645bd8278d1bdae2bc36bd4da713c6938e3fe6b0cdb9a4"
       },
@@ -872,10 +876,6 @@
       {
         "name": "icon_2.ico.thumb",
         "sha256": "d91877a154872bb11310ed44014ee1861a357cf933c478de9f5af090b912846b"
-      },
-      {
-        "name": "features.json",
-        "sha256": "e430ba040efaca02bbf459b10858d054554bec6c83adbd0eff8d811da5d2eeb5"
       },
       {
         "name": "icon_4.ico",

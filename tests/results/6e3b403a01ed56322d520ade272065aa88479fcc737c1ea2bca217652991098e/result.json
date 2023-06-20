@@ -407,7 +407,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, postalCode=32118, ST=FL, L=Daytona Beach, ??=3280C S. Atlantic Av. #50, O=AaaTeX Corp., CN=AaaTeX Corp.\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO Code Signing CA 2\"], [\"Serial Number\", \"00abf2b91fafceebf697f6501322f3d213\"], [\"Valid From\", \"2012-03-07T00:00:00\"], [\"Valid To\", \"2014-03-07T23:59:59\"]]",
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, postalCode=32118, ST=FL, L=Daytona Beach, ??=3280C S. Atlantic Av. \\\\#50, O=AaaTeX Corp., CN=AaaTeX Corp.\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO Code Signing CA 2\"], [\"Serial Number\", \"00abf2b91fafceebf697f6501322f3d213\"], [\"Valid From\", \"2012-03-07T00:00:00\"], [\"Valid To\", \"2014-03-07T23:59:59\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -422,7 +422,7 @@
               "00abf2b91fafceebf697f6501322f3d213"
             ],
             "subject": [
-              "C=US, postalCode=32118, ST=FL, L=Daytona Beach, ??=3280C S. Atlantic Av. #50, O=AaaTeX Corp., CN=AaaTeX Corp."
+              "C=US, postalCode=32118, ST=FL, L=Daytona Beach, ??=3280C S. Atlantic Av. \\#50, O=AaaTeX Corp., CN=AaaTeX Corp."
             ],
             "thumbprint": [
               "bccb5cc674b43edb4abce395d464857203c64a32",
@@ -480,7 +480,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, postalCode=32118, ST=FL, L=Daytona Beach, ??=3280C S. Atlantic Av. #50, O=AaaTeX Corp., CN=AaaTeX Corp.\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO Code Signing CA 2\"], [\"SHA1\", \"bccb5cc674b43edb4abce395d464857203c64a32\"], [\"SHA256\", \"04b4c3f1ad6b2bc1afe0eba7a587ccf7ae744f1e52a4fc4b1de6540ba603f85e\"], [\"MD5\", \"ce0f5e3d80887d92f75dec150a9538b0\"], [\"Serial Number\", \"00abf2b91fafceebf697f6501322f3d213\"], [\"Valid From\", \"2012-03-07T00:00:00\"], [\"Valid To\", \"2014-03-07T23:59:59\"]]",
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, postalCode=32118, ST=FL, L=Daytona Beach, ??=3280C S. Atlantic Av. \\\\#50, O=AaaTeX Corp., CN=AaaTeX Corp.\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO Code Signing CA 2\"], [\"SHA1\", \"bccb5cc674b43edb4abce395d464857203c64a32\"], [\"SHA256\", \"04b4c3f1ad6b2bc1afe0eba7a587ccf7ae744f1e52a4fc4b1de6540ba603f85e\"], [\"MD5\", \"ce0f5e3d80887d92f75dec150a9538b0\"], [\"Serial Number\", \"00abf2b91fafceebf697f6501322f3d213\"], [\"Valid From\", \"2012-03-07T00:00:00\"], [\"Valid To\", \"2014-03-07T23:59:59\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -536,6 +536,10 @@
         "sha256": "04b4c3f1ad6b2bc1afe0eba7a587ccf7ae744f1e52a4fc4b1de6540ba603f85e"
       },
       {
+        "name": "features.json",
+        "sha256": "0c5f470358e9429dba935a7e5f8e52e72125008ab55682fab9293343c255852a"
+      },
+      {
         "name": "certificate.1.2",
         "sha256": "2463525300d9e8e0a6f5d79e2b20b9f5182fe40d3fd7c85ddaf48e6c25bedf5d"
       },
@@ -546,10 +550,6 @@
       {
         "name": "certificate.1.3",
         "sha256": "8ef8f2565be30e7ce7ba6302bb18b42a3acd148a0ddb4779e4c03e862f39589b"
-      },
-      {
-        "name": "features.json",
-        "sha256": "a052ab10ef180dec5a899aaa50d9c9a87677f06a793cacd47783c4eaa303b986"
       },
       {
         "name": "icon_0.ico",
@@ -601,7 +601,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "C=US, postalCode=32118, ST=FL, L=Daytona Beach, ??=3280C S. Atlantic Av. #50, O=AaaTeX Corp., CN=AaaTeX Corp."
+          "value": "C=US, postalCode=32118, ST=FL, L=Daytona Beach, ??=3280C S. Atlantic Av. \\#50, O=AaaTeX Corp., CN=AaaTeX Corp."
         }
       ],
       "cert.thumbprint": [

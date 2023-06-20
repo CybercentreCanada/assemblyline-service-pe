@@ -782,7 +782,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"FileDescription\", \"Firefox\"], [\"BuildID\", \"20210927121355\"], [\"CompanyName\", \"Mozilla Corporation\"], [\"InternalName\", \"Firefox\"], [\"LegalCopyright\", \"\\u00a9Firefox and Mozilla Developers; available under the MPL 2 license.\"], [\"Comments\", \"\"], [\"FileVersion\", \"78.15.0\"], [\"OriginalFilename\", \"firefox.exe\"], [\"ProductVersion\", \"78.15.0\"], [\"LegalTrademarks\", \"Firefox is a Trademark of The Mozilla Foundation.\"], [\"ProductName\", \"Firefox\"]]",
+        "body": "[[\"BuildID\", \"20210927121355\"], [\"OriginalFilename\", \"firefox.exe\"], [\"ProductName\", \"Firefox\"], [\"LegalTrademarks\", \"Firefox is a Trademark of The Mozilla Foundation.\"], [\"InternalName\", \"Firefox\"], [\"ProductVersion\", \"78.15.0\"], [\"FileVersion\", \"78.15.0\"], [\"CompanyName\", \"Mozilla Corporation\"], [\"FileDescription\", \"Firefox\"], [\"LegalCopyright\", \"\\u00a9Firefox and Mozilla Developers; available under the MPL 2 license.\"], [\"Comments\", \"\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -964,7 +964,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021\"], [\"Issuer\", \"C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured ID Timestamping CA\"], [\"SHA1\", \"e1d782a8e191beef6bca1691b5aab494a6249bf3\"], [\"SHA256\", \"b3109006bc0ad98307915729e04403415c83e3292b614f26964c8d3571ecf5a9\"], [\"MD5\", \"f62947d81db58c478df72136bb219366\"], [\"Serial Number\", \"0d424ae0be3a88ff604021ce1400f0dd\"], [\"Valid From\", \"2021-01-01T00:00:00\"], [\"Valid To\", \"2031-01-06T00:00:00\"]]",
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, O=DigiCert\\\\, Inc., CN=DigiCert Timestamp 2021\"], [\"Issuer\", \"C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured ID Timestamping CA\"], [\"SHA1\", \"e1d782a8e191beef6bca1691b5aab494a6249bf3\"], [\"SHA256\", \"b3109006bc0ad98307915729e04403415c83e3292b614f26964c8d3571ecf5a9\"], [\"MD5\", \"f62947d81db58c478df72136bb219366\"], [\"Serial Number\", \"0d424ae0be3a88ff604021ce1400f0dd\"], [\"Valid From\", \"2021-01-01T00:00:00\"], [\"Valid To\", \"2031-01-06T00:00:00\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -1049,10 +1049,6 @@
         "sha256": "51044706bd237b91b89b781337e6d62656c69f0fcffbe8e43741367948127862"
       },
       {
-        "name": "features.json",
-        "sha256": "5fedf60710954283152f3030970331eccd620651f17246a57419a0e73b8ca62c"
-      },
-      {
         "name": "certificate.1.3",
         "sha256": "854b470dd8c92c875fe4a726ad1619507fc0bdcee9e936b5963daf0eb26426a3"
       },
@@ -1063,6 +1059,10 @@
       {
         "name": "icon_5.ico.thumb",
         "sha256": "9be0c98e8670ffdc37016d6cf955c9cb6de337bdb9be01e62efde8e326f4f8b7"
+      },
+      {
+        "name": "features.json",
+        "sha256": "b2257302be4e18c484f3a0da9a1e2acccb7c303a75218c6b6022060b1419ce60"
       },
       {
         "name": "certificate.1.5",

@@ -358,7 +358,7 @@ class PE(ServiceBase):
                 for child in resource.childs:
                     self.recurse_resources(child, f"{parent_name}{resource.id}_")
         elif isinstance(resource, lief.PE.ResourceData):
-            if resource.content[:2] == MZ or search_list_in_list(DOS_MODE, resource.content[:200]):
+            if resource.content[:2] == MZ or search_list_in_list(DOS_MODE, resource.content[:200].tolist()):
                 if len(resource.content) < self.config.get("heur12_min_size_byte", 60):
                     return
                 file_name = f"binary_{parent_name}{resource.id}"
@@ -620,7 +620,8 @@ class PE(ServiceBase):
                 authentihash_value = self.binary.authentihash(lief.PE.ALGORITHMS(i)).hex()
                 self.features["authentihash"][authentihash] = authentihash_value
                 sub_res.add_item(authentihash, authentihash_value)
-            except lief.bad_format:
+            except Exception:  # lief.bad_format:
+                raise
                 if sub_res.heuristic is None:
                     sub_res.set_heuristic(17)
         res.add_subsection(sub_res)
@@ -726,7 +727,8 @@ class PE(ServiceBase):
 
             try:
                 self.binary.get_section(section.name)
-            except lief.not_found:
+            except Exception:  # lief.not_found:
+                raise
                 heur = Heuristic(14)
                 heur_section = ResultMultiSection(heur.name, heuristic=heur)
                 heur_text_body = TextSectionBody()
@@ -1229,7 +1231,8 @@ class PE(ServiceBase):
                     heur_section.add_lines(unshowable_icons)
                     sub_res.add_subsection(heur_section)
                 res.add_subsection(sub_res)
-            except lief.corrupted:
+            except Exception:
+                raise
                 heur = Heuristic(13)
                 heur_section = ResultSection(heur.name, heuristic=heur)
                 heur_section.add_line("Found corrupted icons")
@@ -1316,7 +1319,8 @@ class PE(ServiceBase):
                             sub_sub_sub_res.add_item("sublang", langcodeitem.sublang.name)
                             lancodeitem_dict["code_page"] = langcodeitem.code_page.name
                             sub_sub_sub_res.add_item("code_page", langcodeitem.code_page.name)
-                        except lief.corrupted:
+                        except Exception:
+                            raise
                             sub_sub_sub_res.set_heuristic(13)
                             del lancodeitem_dict["lang"]
                             del lancodeitem_dict["sublang"]
@@ -1347,10 +1351,10 @@ class PE(ServiceBase):
                     sub_sub_res.add_item("type", version.var_file_info.type)
                     sub_sub_res.add_item("translations", ", ".join(map(str, version.var_file_info.translations)))
                     sub_res.add_subsection(sub_sub_res)
-            except lief.not_found:
-                sub_res.set_heuristic(13)
-            except lief.read_out_of_bound:
-                sub_res.set_heuristic(13)
+            # except lief.not_found:
+            #    sub_res.set_heuristic(13)
+            # except lief.read_out_of_bound:
+            #    sub_res.set_heuristic(13)
             except ValueError:
                 sub_res.set_heuristic(13)
             res.add_subsection(sub_res)
@@ -1760,7 +1764,7 @@ class PE(ServiceBase):
                 while True:
                     try:
                         pe_array = bytearray(pe.overlay)
-                        pe = lief.parse(pe_array)
+                        pe = lief.parse(io=BytesIO(pe_array))
                         if pe is None:
                             break
                         pe_no_overlay = pe_array[: -len(pe.overlay)]
@@ -1831,7 +1835,8 @@ class PE(ServiceBase):
 
         try:
             self.binary = lief.parse(self.file_path)
-        except (lief.bad_format, lief.read_out_of_bound):
+        except Exception:  # (lief.bad_format, lief.read_out_of_bound):
+            raise
             self.binary = None
 
         if self.binary is None:
