@@ -6,6 +6,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"Timestamp\", \"1091599297 (2004-08-04 06:01:37 +00:00 (UTC))\"], [\"Entrypoint\", \"0x645c\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"5.1\"], [\"Linker version\", \"7.10\"], [\"Operating System version\", \"5.1\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x0014f99f\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 0,
@@ -27,7 +28,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"87c02cf7ae3b70f2eeb1122540dff093\"]]], [\"TABLE\", [{\"ID\": \"0x005a0fc3\", \"Compiler Information\": \"[LNK] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 1}, {\"ID\": \"0x005f0fc3\", \"Compiler Information\": \"[ C ] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 27}, {\"ID\": \"0x005e0fc3\", \"Compiler Information\": \"[RES] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 1}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 134}, {\"ID\": \"0x005d0fc3\", \"Compiler Information\": \"[IMP] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 13}]]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"87c02cf7ae3b70f2eeb1122540dff093\"]], {}], [\"TABLE\", [{\"ID\": \"0x005a0fc3\", \"Compiler Information\": \"[LNK] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 1}, {\"ID\": \"0x005f0fc3\", \"Compiler Information\": \"[ C ] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 27}, {\"ID\": \"0x005e0fc3\", \"Compiler Information\": \"[RES] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 1}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 134}, {\"ID\": \"0x005d0fc3\", \"Compiler Information\": \"[IMP] Windows Server 2003 SP1 DDK build 4035 (*)\", \"Count\": 13}], {\"column_order\": [\"ID\", \"Compiler Information\", \"Count\"]}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -49,6 +51,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"sha512\", \"833511d5035d8d40bc3ae609f292842dc305fe42721531c2565884d7919a97c49ddb0acef5b58b40fac9a3bd5a0f5d475e6a9a006152c1e2d1526e8599d8f7c8\"], [\"sha384\", \"61951a1706e1a67c872d1fd77ee6d5fe8d54eebc2277804d53f3517145e318c460db172fe2f01c969dc84dcac6a5329c\"], [\"sha256\", \"d1e5840912f7d2052550ab2a2f084b5ab6a5b4c78265500e7cab13429df2c308\"], [\"sha1\", \"bfe284bfe184756bba956ea5cbda601a64c2b05f\"], [\"md5\", \"bc0807ed2e624ba431d6cd66aad7c199\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -60,6 +63,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"Optional header checksum\", \"0x0014f99f\"], [\"Computed checksum\", \"0x001a26b4\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -78,6 +82,7 @@
       {
         "auto_collapse": false,
         "body": null,
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
@@ -88,7 +93,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.565016114356476], [\"Entropy without padding\", 6.584348711590472], [\"Offset\", 1024], [\"Size\", 39424], [\"Virtual Size\", 39212], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"17a6fbe18a834b6f3462304415675d36\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.2788, 5.31379, 5.96167, 5.81099, 5.70956, 5.84697, 5.91687, 5.69847, 5.45049, 5.97938, 6.05082, 5.76434, 6.10551, 5.78011, 5.81159, 5.77302, 6.06424, 5.84633, 5.9115, 5.97082, 5.99242, 5.89965, 5.88831, 5.53207, 5.85773, 5.82606, 5.68051, 5.93165, 5.96772, 5.99402, 5.94764, 5.93771, 5.88054, 5.76773, 5.91702, 6.16824, 5.87167, 5.85885, 6.256, 6.21754, 6.2932, 6.17988, 6.18774, 6.12208, 6.42776, 6.04463, 4.91429, 5.00736, 5.09752, 4.3203]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.565016114356476], [\"Entropy without padding\", 6.584348711590472], [\"Offset\", 1024], [\"Size\", 39424], [\"Virtual Size\", 39212], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"17a6fbe18a834b6f3462304415675d36\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.2788, 5.31379, 5.96167, 5.81099, 5.70956, 5.84697, 5.91687, 5.69847, 5.45049, 5.97938, 6.05082, 5.76434, 6.10551, 5.78011, 5.81159, 5.77302, 6.06424, 5.84633, 5.9115, 5.97082, 5.99242, 5.89965, 5.88831, 5.53207, 5.85773, 5.82606, 5.68051, 5.93165, 5.96772, 5.99402, 5.94764, 5.93771, 5.88054, 5.76773, 5.91702, 6.16824, 5.87167, 5.85885, 6.256, 6.21754, 6.2932, 6.17988, 6.18774, 6.12208, 6.42776, 6.04463, 4.91429, 5.00736, 5.09752, 4.3203]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -112,7 +118,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.247999525438143], [\"Entropy without padding\", 4.247999525438143], [\"Offset\", 40448], [\"Size\", 1024], [\"Virtual Size\", 7140], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"99858e86526942a66950c7139f78a725\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.93854, 4.1066, 3.78494, 3.53517, 3.88018, 3.82089, 3.65376, 3.78494, 3.17281, 3.3447, 3.65376, 3.59447, 3.55852, 3.36804, 3.3447, 3.72565, 3.55852, 3.59447, 3.42258, 3.65376, 3.3321, 4.01137, 3.78494, 3.6897, 2.71521, 4.1066, 3.78494, 3.53517, 3.88018, 3.82089, 3.65376, 3.78494, 3.17281, 2.86851, 2.20307, 0.2762, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.247999525438143], [\"Entropy without padding\", 4.247999525438143], [\"Offset\", 40448], [\"Size\", 1024], [\"Virtual Size\", 7140], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"99858e86526942a66950c7139f78a725\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.93854, 4.1066, 3.78494, 3.53517, 3.88018, 3.82089, 3.65376, 3.78494, 3.17281, 3.3447, 3.65376, 3.59447, 3.55852, 3.36804, 3.3447, 3.72565, 3.55852, 3.59447, 3.42258, 3.65376, 3.3321, 4.01137, 3.78494, 3.6897, 2.71521, 4.1066, 3.78494, 3.53517, 3.88018, 3.82089, 3.65376, 3.78494, 3.17281, 2.86851, 2.20307, 0.2762, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -136,7 +143,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 7.659922578477451], [\"Entropy without padding\", 7.659920080484905], [\"Offset\", 41472], [\"Size\", 1639424], [\"Virtual Size\", 1639416], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"9ac4e3d9a006ab2aa8a080db6664aa34\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.12209, 5.28477, 6.09393, 5.77741, 5.67153, 5.30407, 6.20848, 5.15126, 2.88097, 6.13011, 5.55472, 5.88058, 7.99147, 7.99313, 7.99173, 7.9935, 7.99404, 7.99375, 7.99458, 7.99474, 7.99577, 7.99463, 7.99451, 7.99414, 7.99528, 7.99469, 7.99335, 7.99427, 7.99479, 7.99368, 7.99444, 7.99508, 7.9944, 7.99511, 7.99367, 7.99394, 7.99433, 7.99486, 7.99409, 7.99428, 7.99465, 7.99452, 7.9943, 7.99359, 7.99457, 7.99447, 7.99394, 7.99363, 7.99373, 7.91734]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 7.659922578477451], [\"Entropy without padding\", 7.659920080484905], [\"Offset\", 41472], [\"Size\", 1639424], [\"Virtual Size\", 1639416], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"9ac4e3d9a006ab2aa8a080db6664aa34\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.12209, 5.28477, 6.09393, 5.77741, 5.67153, 5.30407, 6.20848, 5.15126, 2.88097, 6.13011, 5.55472, 5.88058, 7.99147, 7.99313, 7.99173, 7.9935, 7.99404, 7.99375, 7.99458, 7.99474, 7.99577, 7.99463, 7.99451, 7.99414, 7.99528, 7.99469, 7.99335, 7.99427, 7.99479, 7.99368, 7.99444, 7.99508, 7.9944, 7.99511, 7.99367, 7.99394, 7.99433, 7.99486, 7.99409, 7.99428, 7.99465, 7.99452, 7.9943, 7.99359, 7.99457, 7.99447, 7.99394, 7.99363, 7.99373, 7.91734]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -160,7 +168,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Section name\", \".rsrc\"], [\"Entropy:\", 7.659922578477451], [\"Entropy without padding\", 7.659920080484905]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.12209, 5.28477, 6.09393, 5.77741, 5.67153, 5.30407, 6.20848, 5.15126, 2.88097, 6.13011, 5.55472, 5.88058, 7.99147, 7.99313, 7.99173, 7.9935, 7.99404, 7.99375, 7.99458, 7.99474, 7.99577, 7.99463, 7.99451, 7.99414, 7.99528, 7.99469, 7.99335, 7.99427, 7.99479, 7.99368, 7.99444, 7.99508, 7.9944, 7.99511, 7.99367, 7.99394, 7.99433, 7.99486, 7.99409, 7.99428, 7.99465, 7.99452, 7.9943, 7.99359, 7.99457, 7.99447, 7.99394, 7.99363, 7.99373, 7.91734]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Section name\", \".rsrc\"], [\"Entropy:\", 7.659922578477451], [\"Entropy without padding\", 7.659920080484905]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.12209, 5.28477, 6.09393, 5.77741, 5.67153, 5.30407, 6.20848, 5.15126, 2.88097, 6.13011, 5.55472, 5.88058, 7.99147, 7.99313, 7.99173, 7.9935, 7.99404, 7.99375, 7.99458, 7.99474, 7.99577, 7.99463, 7.99451, 7.99414, 7.99528, 7.99469, 7.99335, 7.99427, 7.99479, 7.99368, 7.99444, 7.99508, 7.9944, 7.99511, 7.99367, 7.99394, 7.99433, 7.99486, 7.99409, 7.99428, 7.99465, 7.99452, 7.9943, 7.99359, 7.99457, 7.99447, 7.99394, 7.99363, 7.99373, 7.91734]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 2,
@@ -179,6 +188,7 @@
       {
         "auto_collapse": false,
         "body": null,
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
@@ -190,6 +200,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"Timestamp\", \"1091599297 (2004-08-04 06:01:37 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"wextract.pdb\"], [\"GUID\", \"d7d69840-5f73-4917-94da-c7321b22c512\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -214,6 +225,7 @@
       {
         "auto_collapse": false,
         "body": null,
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
@@ -244,6 +256,7 @@
       {
         "auto_collapse": false,
         "body": "FreeSid, AllocateAndInitializeSid, EqualSid, GetTokenInformation, OpenProcessToken, AdjustTokenPrivileges, LookupPrivilegeValueA, RegCloseKey, RegDeleteValueA, RegOpenKeyExA, RegSetValueExA, RegQueryValueExA, RegCreateKeyExA, RegQueryInfoKeyA",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
@@ -255,6 +268,7 @@
       {
         "auto_collapse": false,
         "body": "LocalFree, LocalAlloc, GetLastError, GetCurrentProcess, lstrlenA, GetModuleFileNameA, GetSystemDirectoryA, _lclose, _llseek, _lopen, WritePrivateProfileStringA, GetWindowsDirectoryA, CreateDirectoryA, GetFileAttributesA, ExpandEnvironmentStringsA, lstrcpyA, GlobalFree, GlobalUnlock, GlobalLock, GlobalAlloc, IsDBCSLeadByte, GetShortPathNameA, GetPrivateProfileStringA, GetPrivateProfileIntA, lstrcmpiA, RemoveDirectoryA, FindClose, FindNextFileA, DeleteFileA, SetFileAttributesA, lstrcmpA, FindFirstFileA, FreeResource, GetProcAddress, LoadResource, SizeofResource, FindResourceA, lstrcatA, CloseHandle, WriteFile, SetFilePointer, SetFileTime, LocalFileTimeToFileTime, DosDateTimeToFileTime, SetCurrentDirectoryA, GetTempFileNameA, ExitProcess, CreateFileA, LoadLibraryExA, lstrcpynA, GetVolumeInformationA, FormatMessageA, GetCurrentDirectoryA, GetVersionExA, GetExitCodeProcess, WaitForSingleObject, CreateProcessA, GetTempPathA, GetSystemInfo, CreateMutexA, SetEvent, CreateEventA, CreateThread, ResetEvent, TerminateThread, GetDriveTypeA, GetModuleHandleA, GetStartupInfoA, GetCommandLineA, QueryPerformanceCounter, GetTickCount, GetCurrentThreadId, GetCurrentProcessId, GetSystemTimeAsFileTime, TerminateProcess, UnhandledExceptionFilter, SetUnhandledExceptionFilter, ReadFile, LoadLibraryA, GetDiskFreeSpaceA, MulDiv, EnumResourceLanguagesA, FreeLibrary, LockResource",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
@@ -266,6 +280,7 @@
       {
         "auto_collapse": false,
         "body": "GetDeviceCaps",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
@@ -277,6 +292,7 @@
       {
         "auto_collapse": false,
         "body": "ExitWindowsEx, wsprintfA, CharNextA, CharUpperA, CharPrevA, SetWindowLongA, GetWindowLongA, CallWindowProcA, DispatchMessageA, MsgWaitForMultipleObjects, PeekMessageA, SendMessageA, SetWindowPos, ReleaseDC, GetDC, GetWindowRect, SendDlgItemMessageA, GetDlgItem, SetForegroundWindow, SetWindowTextA, MessageBoxA, DialogBoxIndirectParamA, ShowWindow, EnableWindow, GetDlgItemTextA, EndDialog, GetDesktopWindow, MessageBeep, SetDlgItemTextA, LoadStringA, GetSystemMetrics",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
@@ -288,6 +304,7 @@
       {
         "auto_collapse": false,
         "body": "17",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
@@ -299,6 +316,7 @@
       {
         "auto_collapse": false,
         "body": "GetFileVersionInfoA, VerQueryValueA, GetFileVersionInfoSizeA",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
@@ -310,6 +328,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"Languages\", \"NEUTRAL, ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US, DEFAULT\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 0,
@@ -348,7 +367,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"NEUTRAL\", \"Size\": \"0x0\", \"Size (bytes)\": 270376, \"Saved as\": \"icon_0.ico\"}, {\"ID\": 2, \"Lang\": \"NEUTRAL\", \"Size\": \"128x128\", \"Size (bytes)\": 67624, \"Saved as\": \"icon_1.ico\"}, {\"ID\": 3, \"Lang\": \"NEUTRAL\", \"Size\": \"64x64\", \"Size (bytes)\": 16936, \"Saved as\": \"icon_2.ico\"}, {\"ID\": 4, \"Lang\": \"NEUTRAL\", \"Size\": \"48x48\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_3.ico\"}, {\"ID\": 5, \"Lang\": \"NEUTRAL\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_4.ico\"}, {\"ID\": 6, \"Lang\": \"NEUTRAL\", \"Size\": \"16x16\", \"Size (bytes)\": 1128, \"Saved as\": \"icon_5.ico\"}, {\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 270376, \"Saved as\": \"icon_6.ico\"}, {\"ID\": 2, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 67624, \"Saved as\": \"icon_7.ico\"}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"bf37a425ab6a3e25d43170019587b3e7f963ce7de4657fc75a45ba90c95a57e3\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"98b4bb2226fa8240ea29d9e1ec5e08bce63702f17259162e5595decba08acdc5\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_1.ico\", \"sha256\": \"5cb3a2426edc39554e75c2a2abea3b159d9df28f152a9c3dc7ac2dbc80e17740\", \"description\": \"Icon 1 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_1.ico.thumb\", \"sha256\": \"5cb3a2426edc39554e75c2a2abea3b159d9df28f152a9c3dc7ac2dbc80e17740\", \"description\": \"Icon 1 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_2.ico\", \"sha256\": \"7b0e0776336938c63681d419d5371000dd7de1e1162265fd8a51564c7a9282b9\", \"description\": \"Icon 2 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_2.ico.thumb\", \"sha256\": \"7b0e0776336938c63681d419d5371000dd7de1e1162265fd8a51564c7a9282b9\", \"description\": \"Icon 2 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_3.ico\", \"sha256\": \"99a87f1153fe4c1874d42deeeaba3b04b2abd328f783bcfefd347eedae4e1208\", \"description\": \"Icon 3 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_3.ico.thumb\", \"sha256\": \"99a87f1153fe4c1874d42deeeaba3b04b2abd328f783bcfefd347eedae4e1208\", \"description\": \"Icon 3 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_4.ico\", \"sha256\": \"5a185a006bc6d5d45de669ad7261773253f486fa9dc87c4d6d4e0bdef2101f0f\", \"description\": \"Icon 4 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_4.ico.thumb\", \"sha256\": \"5a185a006bc6d5d45de669ad7261773253f486fa9dc87c4d6d4e0bdef2101f0f\", \"description\": \"Icon 4 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_5.ico\", \"sha256\": \"e2f75210a46de1be0dec6f21e54a8c22e5c36b6ae55c4f20a1a4037e0e4d9237\", \"description\": \"Icon 5 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_5.ico.thumb\", \"sha256\": \"e2f75210a46de1be0dec6f21e54a8c22e5c36b6ae55c4f20a1a4037e0e4d9237\", \"description\": \"Icon 5 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_6.ico\", \"sha256\": \"5b5a5b1bbbdfc20c9ded880b99f160b7fa337995f4252e14048744c217c38e0d\", \"description\": \"Icon 6 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_6.ico.thumb\", \"sha256\": \"83fc7d098a52c43ea4dfb6e56e097bd1663f737fa21269a909584f15b6ff8c23\", \"description\": \"Icon 6 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_7.ico\", \"sha256\": \"b4e80c768fdc0cefc10ca51b689c83cc6341f6c7946df3878709cb86d850f0d8\", \"description\": \"Icon 7 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_7.ico.thumb\", \"sha256\": \"b4e80c768fdc0cefc10ca51b689c83cc6341f6c7946df3878709cb86d850f0d8\", \"description\": \"Icon 7 extracted from the PE file (thumbnail)\"}}]]]",
+        "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"NEUTRAL\", \"Size\": \"0x0\", \"Size (bytes)\": 270376, \"Saved as\": \"icon_0.ico\"}, {\"ID\": 2, \"Lang\": \"NEUTRAL\", \"Size\": \"128x128\", \"Size (bytes)\": 67624, \"Saved as\": \"icon_1.ico\"}, {\"ID\": 3, \"Lang\": \"NEUTRAL\", \"Size\": \"64x64\", \"Size (bytes)\": 16936, \"Saved as\": \"icon_2.ico\"}, {\"ID\": 4, \"Lang\": \"NEUTRAL\", \"Size\": \"48x48\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_3.ico\"}, {\"ID\": 5, \"Lang\": \"NEUTRAL\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_4.ico\"}, {\"ID\": 6, \"Lang\": \"NEUTRAL\", \"Size\": \"16x16\", \"Size (bytes)\": 1128, \"Saved as\": \"icon_5.ico\"}, {\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 270376, \"Saved as\": \"icon_6.ico\"}, {\"ID\": 2, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 67624, \"Saved as\": \"icon_7.ico\"}], {\"column_order\": [\"ID\", \"Lang\", \"Size\", \"Size (bytes)\", \"Saved as\"]}], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"bf37a425ab6a3e25d43170019587b3e7f963ce7de4657fc75a45ba90c95a57e3\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"98b4bb2226fa8240ea29d9e1ec5e08bce63702f17259162e5595decba08acdc5\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_1.ico\", \"sha256\": \"5cb3a2426edc39554e75c2a2abea3b159d9df28f152a9c3dc7ac2dbc80e17740\", \"description\": \"Icon 1 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_1.ico.thumb\", \"sha256\": \"5cb3a2426edc39554e75c2a2abea3b159d9df28f152a9c3dc7ac2dbc80e17740\", \"description\": \"Icon 1 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_2.ico\", \"sha256\": \"7b0e0776336938c63681d419d5371000dd7de1e1162265fd8a51564c7a9282b9\", \"description\": \"Icon 2 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_2.ico.thumb\", \"sha256\": \"7b0e0776336938c63681d419d5371000dd7de1e1162265fd8a51564c7a9282b9\", \"description\": \"Icon 2 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_3.ico\", \"sha256\": \"99a87f1153fe4c1874d42deeeaba3b04b2abd328f783bcfefd347eedae4e1208\", \"description\": \"Icon 3 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_3.ico.thumb\", \"sha256\": \"99a87f1153fe4c1874d42deeeaba3b04b2abd328f783bcfefd347eedae4e1208\", \"description\": \"Icon 3 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_4.ico\", \"sha256\": \"5a185a006bc6d5d45de669ad7261773253f486fa9dc87c4d6d4e0bdef2101f0f\", \"description\": \"Icon 4 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_4.ico.thumb\", \"sha256\": \"5a185a006bc6d5d45de669ad7261773253f486fa9dc87c4d6d4e0bdef2101f0f\", \"description\": \"Icon 4 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_5.ico\", \"sha256\": \"e2f75210a46de1be0dec6f21e54a8c22e5c36b6ae55c4f20a1a4037e0e4d9237\", \"description\": \"Icon 5 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_5.ico.thumb\", \"sha256\": \"e2f75210a46de1be0dec6f21e54a8c22e5c36b6ae55c4f20a1a4037e0e4d9237\", \"description\": \"Icon 5 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_6.ico\", \"sha256\": \"5b5a5b1bbbdfc20c9ded880b99f160b7fa337995f4252e14048744c217c38e0d\", \"description\": \"Icon 6 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_6.ico.thumb\", \"sha256\": \"83fc7d098a52c43ea4dfb6e56e097bd1663f737fa21269a909584f15b6ff8c23\", \"description\": \"Icon 6 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_7.ico\", \"sha256\": \"b4e80c768fdc0cefc10ca51b689c83cc6341f6c7946df3878709cb86d850f0d8\", \"description\": \"Icon 7 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_7.ico.thumb\", \"sha256\": \"b4e80c768fdc0cefc10ca51b689c83cc6341f6c7946df3878709cb86d850f0d8\", \"description\": \"Icon 7 extracted from the PE file (thumbnail)\"}}], {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -360,6 +380,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"Type\", 0]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -371,6 +392,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 63], [\"file_os\", \"NT_WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"APP\"], [\"file_version_LS\", 190056580], [\"file_version_MS\", 393216], [\"product_version_LS\", 190056580], [\"product_version_MS\", 393216], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 2,
@@ -382,6 +404,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 2,
@@ -406,6 +429,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"key\", \"040904B0\"], [\"type\", 1], [\"lang\", \"ENGLISH\"], [\"sublang\", \"ENGLISH_US\"], [\"code_page\", \"UTF_16\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 3,
@@ -416,7 +440,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ProductVersion\", \"6.00.2900.2180\"], [\"ProductName\", \"Microsoft\\u00ae Windows\\u00ae Operating System\"], [\"LegalCopyright\", \"\\u00a9 Microsoft Corporation. All rights reserved.\"], [\"OriginalFilename\", \"WEXTRACT.EXE            \"], [\"FileVersion\", \"6.00.2900.2180 (xpsp_sp2_rtm.040803-2158)\"], [\"CompanyName\", \"Microsoft Corporation\"], [\"FileDescription\", \"Win32 Cabinet Self-Extractor                                           \"], [\"InternalName\", \"Wextract                \"]]",
+        "body": "[[\"ProductVersion\", \"6.00.2900.2180\"], [\"ProductName\", \"Microsoft\\u00ae Windows\\u00ae Operating System\"], [\"OriginalFilename\", \"WEXTRACT.EXE            \"], [\"InternalName\", \"Wextract                \"], [\"FileVersion\", \"6.00.2900.2180 (xpsp_sp2_rtm.040803-2158)\"], [\"LegalCopyright\", \"\\u00a9 Microsoft Corporation. All rights reserved.\"], [\"FileDescription\", \"Win32 Cabinet Self-Extractor                                           \"], [\"CompanyName\", \"Microsoft Corporation\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 4,
@@ -428,6 +453,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78644233\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 2,
@@ -439,6 +465,13 @@
       {
         "auto_collapse": false,
         "body": "[{\"SHA256\": \"3bd1d253c90f7e82dc70dc1e4b869cc2e5e154e6b4079be93837e4a6c68044c0\", \"Type\": \"AVI\", \"Entropy\": 3.522408699540844}, {\"SHA256\": \"54c05fd71898627a87bfd7dbef7eec5ef7fc5d001cc5de9833dd4c1bb777a516\", \"Type\": \"ICON\", \"Entropy\": 5.431480676331195}, {\"SHA256\": \"ea5e771d2e590691c5c624a1204015a71d390ccb57781860f9cbc2fed1425f02\", \"Type\": \"ICON\", \"Entropy\": 3.750125448056194}, {\"SHA256\": \"12a82225778b401418796349aa02ecc25cc501dba6dbbee48ab2bcb2521a9499\", \"Type\": \"ICON\", \"Entropy\": 5.690196479087402}, {\"SHA256\": \"155ac1573c5f09ad098c18d0fa1cb6dc21081f0d969d743869938146abd9aa5e\", \"Type\": \"ICON\", \"Entropy\": 3.5379328937292467}, {\"SHA256\": \"b22953c3ce3cd48ad4a2f15e7273a6314953d1e3338d5d121d75c71a23cfd9b0\", \"Type\": \"ICON\", \"Entropy\": 6.09678378069673}, {\"SHA256\": \"92afeefe2846db735f2e150a2806952b70be5961ebe1ed49a3091195d5a1aebf\", \"Type\": \"ICON\", \"Entropy\": 6.276360213349797}, {\"SHA256\": \"7259746cde921c3402356f57cefeb5fbbd74682e011a1196ab2a752453015838\", \"Type\": \"ICON\", \"Entropy\": 6.342440439660312}, {\"SHA256\": \"d042d106c8411e0341b0e6396dce8d10a660bf6eb9b7ac9d752bf28314e55306\", \"Type\": \"ICON\", \"Entropy\": 6.171413973603994}, {\"SHA256\": \"a0ccefebb8b748d0468481e5a82890f499007fa81fda74b3273aa9b4c6461e67\", \"Type\": \"DIALOG\", \"Entropy\": 3.3578489080881084}, {\"SHA256\": \"5723d7bfd7c984e35d5704cdbd8e35361e0d2d63af73397c820fdacc7a1764de\", \"Type\": \"DIALOG\", \"Entropy\": 3.3498642443716045}, {\"SHA256\": \"856fbd66e2ad2243f9d6f077c1107b52a5828e3d596d202baa66b48e4189cf6d\", \"Type\": \"DIALOG\", \"Entropy\": 3.2192212786463577}, {\"SHA256\": \"765756ad9676261a31eaebdc08d1c754401482163e3aa1d47450ab7eedc030ba\", \"Type\": \"DIALOG\", \"Entropy\": 3.3234948613436526}, {\"SHA256\": \"253aea2de827095918561dbd9159889184401da67f3a72d0f1a6f94e6305e690\", \"Type\": \"DIALOG\", \"Entropy\": 3.1951121738883503}, {\"SHA256\": \"0a0e83c7a9c1aeede6b859461de64a0ca90fdb6a82912c19e30ec1dbec16fe33\", \"Type\": \"DIALOG\", \"Entropy\": 3.2601221745335898}, {\"SHA256\": \"29b228ae95784d37b8729fe88e3bf1346c4b1339231dd1e9f702fab0654c5b1f\", \"Type\": \"STRING\", \"Entropy\": 2.4895828566053693}, {\"SHA256\": \"7cc882dbb9f1315968f31bf40b57a535ff468271e253575752e03cb4aaa25f0c\", \"Type\": \"STRING\", \"Entropy\": 3.2673982232905905}, {\"SHA256\": \"3f715c8970d240cb57ba8ae8914ea8385b42728ffd48a3916493422a80cc3ed4\", \"Type\": \"STRING\", \"Entropy\": 3.2997669302931727}, {\"SHA256\": \"39023f15fbabf4be02e0d84a76c363003374b11076406f84cd8f92e49aecd3ba\", \"Type\": \"STRING\", \"Entropy\": 3.271740254540437}, {\"SHA256\": \"c1a5490b8a26165048de894aacdcd25e09cec0c4aebc5ff1d435f2cc4757118b\", \"Type\": \"STRING\", \"Entropy\": 3.29119677901267}, {\"SHA256\": \"59d8ad57a3629edd20c7b298a6e3604eeb95dfc7c507ad7e329ea0bff7a571ff\", \"Type\": \"STRING\", \"Entropy\": 3.135910939897647}, {\"SHA256\": \"eaadcdd05a9a7c7f80d53d758f39e4399749d774b09a8a0165fe7c69ad6d8c3c\", \"Type\": \"RCDATA\", \"Entropy\": 2.8073549220576046}, {\"SHA256\": \"90f75eca68ae1db80ba8f7a7e0e176ed8b20faf3fb5a5c6937c341f2d93fd331\", \"Type\": \"RCDATA\", \"Entropy\": 7.999801589679516}, {\"SHA256\": \"67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450\", \"Type\": \"RCDATA\", \"Entropy\": 0.8112781244591328}, {\"SHA256\": \"1a7c285ad0df857d8436739e3ecdd7f3f44e9c6725245ee58498e2a6f30fc79a\", \"Type\": \"RCDATA\", \"Entropy\": 2.4070077241498584}, {\"SHA256\": \"eaadcdd05a9a7c7f80d53d758f39e4399749d774b09a8a0165fe7c69ad6d8c3c\", \"Type\": \"RCDATA\", \"Entropy\": 2.8073549220576046}, {\"SHA256\": \"eaadcdd05a9a7c7f80d53d758f39e4399749d774b09a8a0165fe7c69ad6d8c3c\", \"Type\": \"RCDATA\", \"Entropy\": 2.8073549220576046}, {\"SHA256\": \"df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119\", \"Type\": \"RCDATA\", \"Entropy\": 0.0}, {\"SHA256\": \"eaadcdd05a9a7c7f80d53d758f39e4399749d774b09a8a0165fe7c69ad6d8c3c\", \"Type\": \"RCDATA\", \"Entropy\": 2.8073549220576046}, {\"SHA256\": \"df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119\", \"Type\": \"RCDATA\", \"Entropy\": 0.0}, {\"SHA256\": \"19f4106623d83cdc22b8607b2f6c5300a642a30163f35a89fecc4b271ad14304\", \"Type\": \"RCDATA\", \"Entropy\": 2.584962500721156}, {\"SHA256\": \"df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119\", \"Type\": \"RCDATA\", \"Entropy\": 0.0}, {\"SHA256\": \"e79e418e48623569d75e2a7b09ae88ed9b77b126a445b9ff9dc6989a08efa079\", \"Type\": \"RCDATA\", \"Entropy\": 1.0}, {\"SHA256\": \"eaadcdd05a9a7c7f80d53d758f39e4399749d774b09a8a0165fe7c69ad6d8c3c\", \"Type\": \"RCDATA\", \"Entropy\": 2.8073549220576046}, {\"SHA256\": \"eaadcdd05a9a7c7f80d53d758f39e4399749d774b09a8a0165fe7c69ad6d8c3c\", \"Type\": \"RCDATA\", \"Entropy\": 2.8073549220576046}, {\"SHA256\": \"48b99bd54b2fd532ef2a2319f0c72506381d8bdb8eb782ced9d668aba31a9817\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.7651068462066237}, {\"SHA256\": \"b10e28a32eddb2ab20a46ceae59d9c0786911eb20f0c8dd2a28421f226ea2b8b\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.3708590772326845}, {\"SHA256\": \"9b5437f7a5b71cd6761c257fd3714172e8411576805d43aa252d594763c011b4\", \"Type\": \"VERSION\", \"Entropy\": 3.4523728784212233}]",
+        "body_config": {
+          "column_order": [
+            "SHA256",
+            "Type",
+            "Entropy"
+          ]
+        },
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 1,
@@ -449,7 +482,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]]]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]], {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 0,
@@ -463,6 +497,10 @@
   "files": {
     "extracted": [],
     "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "3542c2f3c74e0929f1718f4d6958362a8856e46114e51f65e945219d406bbd37"
+      },
       {
         "name": "icon_4.ico",
         "sha256": "5a185a006bc6d5d45de669ad7261773253f486fa9dc87c4d6d4e0bdef2101f0f"
@@ -482,10 +520,6 @@
       {
         "name": "icon_1.ico.thumb",
         "sha256": "5cb3a2426edc39554e75c2a2abea3b159d9df28f152a9c3dc7ac2dbc80e17740"
-      },
-      {
-        "name": "features.json",
-        "sha256": "7639b3d9669c57ff76a30c70065db75d8020b3fa2300c97e773af5706d5f0531"
       },
       {
         "name": "icon_2.ico",

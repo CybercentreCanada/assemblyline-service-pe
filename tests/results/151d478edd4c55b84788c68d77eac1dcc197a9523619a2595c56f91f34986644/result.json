@@ -6,6 +6,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"Timestamp\", \"1462953687 (2016-05-11 08:01:27 +00:00 (UTC))\"], [\"Entrypoint\", \"0x109c9\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"12.0\"], [\"Operating System version\", \"5.10\"], [\"Subsystem version\", \"5.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00552428\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 0,
@@ -27,7 +28,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"4f348ab1398d047ed2b45631a354f60d\"]]], [\"TABLE\", [{\"ID\": \"0x00de520d\", \"Compiler Information\": \"[LNK] VS2013 build 21005\", \"Count\": 1}, {\"ID\": \"0x00db520d\", \"Compiler Information\": \"[RES] VS2013 build 21005\", \"Count\": 1}, {\"ID\": \"0x00e1520d\", \"Compiler Information\": \"[C++] VS2013 build 21005\", \"Count\": 1}, {\"ID\": \"0x00e05146\", \"Compiler Information\": \"Unknown object 0x00e05146\", \"Count\": 139}, {\"ID\": \"0x00e15146\", \"Compiler Information\": \"Unknown object 0x00e15146\", \"Count\": 108}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 137}, {\"ID\": \"0x00937809\", \"Compiler Information\": \"[IMP] VS2008 SP1 build 30729\", \"Count\": 9}, {\"ID\": \"0x00df5146\", \"Compiler Information\": \"Unknown object 0x00df5146\", \"Count\": 27}]]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"4f348ab1398d047ed2b45631a354f60d\"]], {}], [\"TABLE\", [{\"ID\": \"0x00de520d\", \"Compiler Information\": \"[LNK] VS2013 build 21005\", \"Count\": 1}, {\"ID\": \"0x00db520d\", \"Compiler Information\": \"[RES] VS2013 build 21005\", \"Count\": 1}, {\"ID\": \"0x00e1520d\", \"Compiler Information\": \"[C++] VS2013 build 21005\", \"Count\": 1}, {\"ID\": \"0x00e05146\", \"Compiler Information\": \"Unknown object 0x00e05146\", \"Count\": 139}, {\"ID\": \"0x00e15146\", \"Compiler Information\": \"Unknown object 0x00e15146\", \"Count\": 108}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 137}, {\"ID\": \"0x00937809\", \"Compiler Information\": \"[IMP] VS2008 SP1 build 30729\", \"Count\": 9}, {\"ID\": \"0x00df5146\", \"Compiler Information\": \"Unknown object 0x00df5146\", \"Count\": 27}], {\"column_order\": [\"ID\", \"Compiler Information\", \"Count\"]}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -49,6 +51,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"File Size\", 5580288], [\"Virtual Size\", 12222464]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -67,6 +70,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"sha512\", \"115bb231d5350dd722e53a0f8b22c3b7009822ca07703ba027e2f1ee7f2a3a69600398a5af7da2b066270d1b84b1150a45cfc5efe29f6aecdf332a274b536846\"], [\"sha384\", \"2edf46106b05ac48ab7c9fb340dffb65a908b0ea0f2683381639ffda01f8e8416808892d3814461d969809cc496acd0d\"], [\"sha256\", \"4746f5887dc78db4eabea70542dac06048a57dad77ac5c07e8d6cad26c240ea2\"], [\"sha1\", \"d0ade168b3a0992a4dfe1905f137de08e4803379\"], [\"md5\", \"f4fc291f3ead36804500603394daaa9a\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -78,6 +82,7 @@
       {
         "auto_collapse": false,
         "body": null,
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
@@ -88,7 +93,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.324907787806525], [\"Entropy without padding\", 6.331099834262816], [\"Offset\", 1024], [\"Size\", 208384], [\"Virtual Size\", 208057], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"b15a707629c8693f9a0d9ab3ab2d0001\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.81381, 5.56178, 5.78018, 5.63488, 5.40338, 4.06979, 2.39294, 2.30081, 2.33917, 2.47867, 2.34678, 2.39756, 2.85775, 5.73061, 6.28932, 6.49228, 6.34074, 6.46576, 6.33688, 6.5042, 6.52963, 6.58839, 6.50777, 6.46644, 6.54211, 6.56661, 6.62441, 6.43172, 6.44611, 6.4783, 6.55458, 6.61738, 6.47955, 6.49964, 6.56473, 6.58076, 6.49263, 6.50819, 6.4902, 6.23278, 6.47088, 6.45077, 6.56141, 6.64436, 6.50289, 6.54561, 6.4381, 6.23496, 6.63807, 5.73795]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.324907787806525], [\"Entropy without padding\", 6.331099834262816], [\"Offset\", 1024], [\"Size\", 208384], [\"Virtual Size\", 208057], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"b15a707629c8693f9a0d9ab3ab2d0001\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.81381, 5.56178, 5.78018, 5.63488, 5.40338, 4.06979, 2.39294, 2.30081, 2.33917, 2.47867, 2.34678, 2.39756, 2.85775, 5.73061, 6.28932, 6.49228, 6.34074, 6.46576, 6.33688, 6.5042, 6.52963, 6.58839, 6.50777, 6.46644, 6.54211, 6.56661, 6.62441, 6.43172, 6.44611, 6.4783, 6.55458, 6.61738, 6.47955, 6.49964, 6.56473, 6.58076, 6.49263, 6.50819, 6.4902, 6.23278, 6.47088, 6.45077, 6.56141, 6.64436, 6.50289, 6.54561, 6.4381, 6.23496, 6.63807, 5.73795]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -112,7 +118,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.753545319885483], [\"Entropy without padding\", 4.769682831785559], [\"Offset\", 209408], [\"Size\", 45056], [\"Virtual Size\", 44854], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"a0198380e16bab11ae9188b6a80e61dc\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.27256, 4.89566, 4.29495, 3.8918, 4.5707, 4.71056, 5.00223, 3.53496, 3.1726, 3.29813, 4.99479, 3.47164, 4.62696, 4.28506, 4.46087, 4.23771, 3.9576, 3.76694, 2.88522, 3.0277, 2.87904, 2.69828, 2.68915, 4.42334, 4.58278, 3.70692, 2.82497, 7.93972, 5.77116, 7.22533, 3.02894, 2.59657, 2.63653, 2.60229, 2.58134, 2.57834, 2.63077, 2.80297, 2.71532, 2.84548, 2.9161, 2.94537, 2.70318, 2.77259, 2.81345, 2.62253, 4.03749, 5.24471, 5.10194, 4.45548]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.753545319885483], [\"Entropy without padding\", 4.769682831785559], [\"Offset\", 209408], [\"Size\", 45056], [\"Virtual Size\", 44854], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"a0198380e16bab11ae9188b6a80e61dc\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.27256, 4.89566, 4.29495, 3.8918, 4.5707, 4.71056, 5.00223, 3.53496, 3.1726, 3.29813, 4.99479, 3.47164, 4.62696, 4.28506, 4.46087, 4.23771, 3.9576, 3.76694, 2.88522, 3.0277, 2.87904, 2.69828, 2.68915, 4.42334, 4.58278, 3.70692, 2.82497, 7.93972, 5.77116, 7.22533, 3.02894, 2.59657, 2.63653, 2.60229, 2.58134, 2.57834, 2.63077, 2.80297, 2.71532, 2.84548, 2.9161, 2.94537, 2.70318, 2.77259, 2.81345, 2.62253, 4.03749, 5.24471, 5.10194, 4.45548]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -136,7 +143,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 2.5231470942659167], [\"Entropy without padding\", 2.5231470942659167], [\"Offset\", 254464], [\"Size\", 5277696], [\"Virtual Size\", 11913932], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"c965660e9543e88ccd044db636798e5b\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.57028, 2.92556, 2.76192, 2.58107, 2.3817, 2.24117, 2.30478, 2.31414, 2.40413, 2.41168, 2.44723, 2.43897, 2.41491, 2.42393, 2.44529, 2.45431, 2.48762, 2.47882, 2.51411, 2.4783, 2.48985, 2.38643, 2.3934, 2.39013, 2.39552, 2.41662, 2.39475, 2.3906, 2.4041, 2.4201, 2.41167, 2.42341, 2.42384, 2.40044, 2.42053, 2.40414, 2.42193, 2.42876, 2.436, 2.45634, 2.42155, 2.45411, 2.45366, 2.4338, 2.43321, 2.4429, 2.47516, 2.46599, 2.47082, 2.74214]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 2.5231470942659167], [\"Entropy without padding\", 2.5231470942659167], [\"Offset\", 254464], [\"Size\", 5277696], [\"Virtual Size\", 11913932], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"c965660e9543e88ccd044db636798e5b\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.57028, 2.92556, 2.76192, 2.58107, 2.3817, 2.24117, 2.30478, 2.31414, 2.40413, 2.41168, 2.44723, 2.43897, 2.41491, 2.42393, 2.44529, 2.45431, 2.48762, 2.47882, 2.51411, 2.4783, 2.48985, 2.38643, 2.3934, 2.39013, 2.39552, 2.41662, 2.39475, 2.3906, 2.4041, 2.4201, 2.41167, 2.42341, 2.42384, 2.40044, 2.42053, 2.40414, 2.42193, 2.42876, 2.436, 2.45634, 2.42155, 2.45411, 2.45366, 2.4338, 2.43321, 2.4429, 2.47516, 2.46599, 2.47082, 2.74214]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -160,7 +168,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.578740363569975], [\"Entropy without padding\", 4.565534321684671], [\"Offset\", 5532160], [\"Size\", 48128], [\"Virtual Size\", 47996], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"52d10ee819b8a5d2c5bbf2a79f122e58\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.76943, 3.91671, 3.6279, 3.48986, 3.73351, 3.6989, 2.46989, 2.36274, 2.28675, 1.96421, 2.02339, 2.2547, 2.52922, 2.35825, 2.36122, 2.32724, 2.46469, 2.37503, 2.28543, 1.96604, 2.02528, 2.25238, 2.52786, 2.34044, 2.39203, 1.90828, 4.3818, 3.13925, 3.57746, 4.94454, 3.19055, 5.5635, 3.55573, 4.81047, 3.33903, 5.6942, 3.42564, 5.70882, 5.68036, 5.46777, 5.66731, 4.18272, 3.324, 3.61954, 3.56861, 3.37481, 3.1904, 3.2006, 3.48019, 3.67896]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.578740363569975], [\"Entropy without padding\", 4.565534321684671], [\"Offset\", 5532160], [\"Size\", 48128], [\"Virtual Size\", 47996], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"52d10ee819b8a5d2c5bbf2a79f122e58\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.76943, 3.91671, 3.6279, 3.48986, 3.73351, 3.6989, 2.46989, 2.36274, 2.28675, 1.96421, 2.02339, 2.2547, 2.52922, 2.35825, 2.36122, 2.32724, 2.46469, 2.37503, 2.28543, 1.96604, 2.02528, 2.25238, 2.52786, 2.34044, 2.39203, 1.90828, 4.3818, 3.13925, 3.57746, 4.94454, 3.19055, 5.5635, 3.55573, 4.81047, 3.33903, 5.6942, 3.42564, 5.70882, 5.68036, 5.46777, 5.66731, 4.18272, 3.324, 3.61954, 3.56861, 3.37481, 3.1904, 3.2006, 3.48019, 3.67896]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -185,6 +194,7 @@
       {
         "auto_collapse": false,
         "body": null,
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
@@ -215,6 +225,7 @@
       {
         "auto_collapse": false,
         "body": "EnterCriticalSection, LeaveCriticalSection, DeleteCriticalSection, FileTimeToLocalFileTime, ConnectNamedPipe, GetModuleHandleW, GetProcessVersion, OutputDebugStringW, CopyFileW, GetLastError, LCMapStringW, CloseHandle, DuplicateHandle, WaitForSingleObject, GetCurrentProcess, GetCurrentThread, GetCurrentThreadId, GetExitCodeThread, GetSystemTimeAsFileTime, VirtualAllocEx, GlobalUnlock, GlobalAlloc, GetVersionExW, FreeResource, WriteConsoleW, SetStdHandle, GetStringTypeW, LoadLibraryW, SetFilePointerEx, GetConsoleMode, GetConsoleCP, FlushFileBuffers, EncodePointer, DecodePointer, RaiseException, RtlUnwind, GetCommandLineW, IsProcessorFeaturePresent, UnhandledExceptionFilter, SetUnhandledExceptionFilter, SetLastError, InitializeCriticalSectionAndSpinCount, CreateEventW, Sleep, TerminateProcess, TlsAlloc, TlsGetValue, TlsSetValue, TlsFree, GetStartupInfoW, GetTickCount, GetProcAddress, CreateSemaphoreW, CreateThread, ExitThread, LoadLibraryExW, HeapFree, CreateTimerQueue, SetEvent, WaitForSingleObjectEx, SignalObjectAndWait, SwitchToThread, SetThreadPriority, GetThreadPriority, GetLogicalProcessorInformation, CreateTimerQueueTimer, ChangeTimerQueueTimer, DeleteTimerQueueTimer, GetNumaHighestNodeNumber, GetProcessAffinityMask, SetThreadAffinityMask, RegisterWaitForSingleObject, UnregisterWait, HeapAlloc, ExitProcess, GetModuleHandleExW, MultiByteToWideChar, WideCharToMultiByte, GetProcessHeap, GetStdHandle, GetFileType, GetModuleFileNameW, WriteFile, QueryPerformanceCounter, GetCurrentProcessId, GetEnvironmentStringsW, FreeEnvironmentStringsW, HeapSize, IsDebuggerPresent, GetThreadTimes, FreeLibrary, FreeLibraryAndExitThread, GetModuleHandleA, VirtualAlloc, VirtualFree, VirtualProtect, ReleaseSemaphore, InitializeSListHead, InterlockedPopEntrySList, InterlockedPushEntrySList, InterlockedFlushSList, QueryDepthSList, UnregisterWaitEx, HeapReAlloc, IsValidCodePage, GetACP, GetOEMCP, GetCPInfo, CreateFileW",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
@@ -226,6 +237,7 @@
       {
         "auto_collapse": false,
         "body": "RegOpenKeyExW, RegCreateKeyExW, RegCloseKey, RegSetValueExW",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
@@ -237,6 +249,7 @@
       {
         "auto_collapse": false,
         "body": "IsWindowUnicode, ValidateRect, GetCursor, ClientToScreen, DdeUnaccessData, CopyRect",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
@@ -248,6 +261,7 @@
       {
         "auto_collapse": false,
         "body": "InternetQueryOptionW, HttpSendRequestW, HttpQueryInfoW, InternetOpenW",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
@@ -259,6 +273,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"Languages\", \"ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US, DEFAULT\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 0,
@@ -282,7 +297,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"TABLE\", [{\"ID\": 2, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 1128, \"Saved as\": \"icon_0.ico\"}, {\"ID\": 3, \"Lang\": \"ENGLISH\", \"Size\": \"0x0\", \"Size (bytes)\": 744, \"Saved as\": \"icon_1.ico\"}, {\"ID\": 4, \"Lang\": \"ENGLISH\", \"Size\": \"48x48\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_2.ico\"}, {\"ID\": 5, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 1640, \"Saved as\": \"icon_3.ico\"}, {\"ID\": 6, \"Lang\": \"ENGLISH\", \"Size\": \"128x128\", \"Size (bytes)\": 3752, \"Saved as\": \"icon_4.ico\"}, {\"ID\": 7, \"Lang\": \"ENGLISH\", \"Size\": \"64x64\", \"Size (bytes)\": 2216, \"Saved as\": \"icon_5.ico\"}, {\"ID\": 2, \"Lang\": \"???\", \"Size\": \"16x16\", \"Size (bytes)\": 1128, \"Saved as\": \"icon_6.ico\"}, {\"ID\": 3, \"Lang\": \"???\", \"Size\": \"0x0\", \"Size (bytes)\": 744, \"Saved as\": \"icon_7.ico\"}, {\"ID\": 4, \"Lang\": \"???\", \"Size\": \"48x48\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_8.ico\"}, {\"ID\": 5, \"Lang\": \"???\", \"Size\": \"32x32\", \"Size (bytes)\": 1640, \"Saved as\": \"icon_9.ico\"}, {\"ID\": 6, \"Lang\": \"???\", \"Size\": \"128x128\", \"Size (bytes)\": 3752, \"Saved as\": \"icon_10.ico\"}, {\"ID\": 7, \"Lang\": \"???\", \"Size\": \"64x64\", \"Size (bytes)\": 2216, \"Saved as\": \"icon_11.ico\"}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"c4a60e6d66ef1e5f8fa952031f192b45803570b298478fa8992bbe82d4f2ef06\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"c4a60e6d66ef1e5f8fa952031f192b45803570b298478fa8992bbe82d4f2ef06\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_2.ico\", \"sha256\": \"cbee5334ff43686cd98c4f442980ef284f42bd11c22caf247544717d0db97447\", \"description\": \"Icon 2 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_2.ico.thumb\", \"sha256\": \"cbee5334ff43686cd98c4f442980ef284f42bd11c22caf247544717d0db97447\", \"description\": \"Icon 2 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_6.ico\", \"sha256\": \"c4a60e6d66ef1e5f8fa952031f192b45803570b298478fa8992bbe82d4f2ef06\", \"description\": \"Icon 6 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_6.ico.thumb\", \"sha256\": \"c4a60e6d66ef1e5f8fa952031f192b45803570b298478fa8992bbe82d4f2ef06\", \"description\": \"Icon 6 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_8.ico\", \"sha256\": \"cbee5334ff43686cd98c4f442980ef284f42bd11c22caf247544717d0db97447\", \"description\": \"Icon 8 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_8.ico.thumb\", \"sha256\": \"cbee5334ff43686cd98c4f442980ef284f42bd11c22caf247544717d0db97447\", \"description\": \"Icon 8 extracted from the PE file (thumbnail)\"}}]]]",
+        "body": "[[\"TABLE\", [{\"ID\": 2, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 1128, \"Saved as\": \"icon_0.ico\"}, {\"ID\": 3, \"Lang\": \"ENGLISH\", \"Size\": \"0x0\", \"Size (bytes)\": 744, \"Saved as\": \"icon_1.ico\"}, {\"ID\": 4, \"Lang\": \"ENGLISH\", \"Size\": \"48x48\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_2.ico\"}, {\"ID\": 5, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 1640, \"Saved as\": \"icon_3.ico\"}, {\"ID\": 6, \"Lang\": \"ENGLISH\", \"Size\": \"128x128\", \"Size (bytes)\": 3752, \"Saved as\": \"icon_4.ico\"}, {\"ID\": 7, \"Lang\": \"ENGLISH\", \"Size\": \"64x64\", \"Size (bytes)\": 2216, \"Saved as\": \"icon_5.ico\"}, {\"ID\": 2, \"Lang\": \"???\", \"Size\": \"16x16\", \"Size (bytes)\": 1128, \"Saved as\": \"icon_6.ico\"}, {\"ID\": 3, \"Lang\": \"???\", \"Size\": \"0x0\", \"Size (bytes)\": 744, \"Saved as\": \"icon_7.ico\"}, {\"ID\": 4, \"Lang\": \"???\", \"Size\": \"48x48\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_8.ico\"}, {\"ID\": 5, \"Lang\": \"???\", \"Size\": \"32x32\", \"Size (bytes)\": 1640, \"Saved as\": \"icon_9.ico\"}, {\"ID\": 6, \"Lang\": \"???\", \"Size\": \"128x128\", \"Size (bytes)\": 3752, \"Saved as\": \"icon_10.ico\"}, {\"ID\": 7, \"Lang\": \"???\", \"Size\": \"64x64\", \"Size (bytes)\": 2216, \"Saved as\": \"icon_11.ico\"}], {\"column_order\": [\"ID\", \"Lang\", \"Size\", \"Size (bytes)\", \"Saved as\"]}], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"c4a60e6d66ef1e5f8fa952031f192b45803570b298478fa8992bbe82d4f2ef06\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"c4a60e6d66ef1e5f8fa952031f192b45803570b298478fa8992bbe82d4f2ef06\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_2.ico\", \"sha256\": \"cbee5334ff43686cd98c4f442980ef284f42bd11c22caf247544717d0db97447\", \"description\": \"Icon 2 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_2.ico.thumb\", \"sha256\": \"cbee5334ff43686cd98c4f442980ef284f42bd11c22caf247544717d0db97447\", \"description\": \"Icon 2 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_6.ico\", \"sha256\": \"c4a60e6d66ef1e5f8fa952031f192b45803570b298478fa8992bbe82d4f2ef06\", \"description\": \"Icon 6 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_6.ico.thumb\", \"sha256\": \"c4a60e6d66ef1e5f8fa952031f192b45803570b298478fa8992bbe82d4f2ef06\", \"description\": \"Icon 6 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_8.ico\", \"sha256\": \"cbee5334ff43686cd98c4f442980ef284f42bd11c22caf247544717d0db97447\", \"description\": \"Icon 8 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_8.ico.thumb\", \"sha256\": \"cbee5334ff43686cd98c4f442980ef284f42bd11c22caf247544717d0db97447\", \"description\": \"Icon 8 extracted from the PE file (thumbnail)\"}}], {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -294,6 +310,7 @@
       {
         "auto_collapse": false,
         "body": "icon_1.ico\nicon_3.ico\nicon_4.ico\nicon_5.ico\nicon_7.ico\nicon_9.ico\nicon_10.ico\nicon_11.ico",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 2,
@@ -312,6 +329,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"Type\", 0]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -323,6 +341,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 0], [\"file_os\", \"WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"APP\"], [\"file_version_LS\", 0], [\"file_version_MS\", 262145], [\"product_version_LS\", 0], [\"product_version_MS\", 262145], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 2,
@@ -334,6 +353,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 2,
@@ -358,6 +378,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"key\", \"040904E4\"], [\"type\", 1], [\"lang\", \"ENGLISH\"], [\"sublang\", \"ENGLISH_US\"], [\"code_page\", \"WINDOWS_1252\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 3,
@@ -368,7 +389,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"LegalCopyright\", \"Copyright \\u00a9 Alexander Roshal 1993-2011\"], [\"ProductVersion\", \"4.1.0\"], [\"ProductName\", \"WinRAR\"], [\"InternalName\", \"Uninstall WinRAR\"], [\"CompanyName\", \"Alexander Roshal\"], [\"FileDescription\", \"Uninstall WinRAR\"], [\"OriginalFilename\", \"Uninstall.exe\"], [\"FileVersion\", \"4.1.0\"]]",
+        "body": "[[\"OriginalFilename\", \"Uninstall.exe\"], [\"InternalName\", \"Uninstall WinRAR\"], [\"ProductVersion\", \"4.1.0\"], [\"FileVersion\", \"4.1.0\"], [\"LegalCopyright\", \"Copyright \\u00a9 Alexander Roshal 1993-2011\"], [\"FileDescription\", \"Uninstall WinRAR\"], [\"CompanyName\", \"Alexander Roshal\"], [\"ProductName\", \"WinRAR\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 4,
@@ -380,6 +402,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"0\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 2,
@@ -391,6 +414,13 @@
       {
         "auto_collapse": false,
         "body": "[{\"SHA256\": \"f6f813a2429387f2f403f9f3b5641de1d6aec1ab6a365bd9e6c1bf53b73eaa92\", \"Type\": \"ICON\", \"Entropy\": 3.53552755883309}, {\"SHA256\": \"f6f813a2429387f2f403f9f3b5641de1d6aec1ab6a365bd9e6c1bf53b73eaa92\", \"Type\": \"ICON\", \"Entropy\": 3.53552755883309}, {\"SHA256\": \"ea75550b2925eff841dfc3714333e84c10d39f45651938ed7fba2ae1a9c6868f\", \"Type\": \"ICON\", \"Entropy\": 3.56924729845883}, {\"SHA256\": \"ea75550b2925eff841dfc3714333e84c10d39f45651938ed7fba2ae1a9c6868f\", \"Type\": \"ICON\", \"Entropy\": 3.56924729845883}, {\"SHA256\": \"ecf248065729e9ac9423a7ee484ca9ed07da2cebf0c33c871e20824c0e5f9f88\", \"Type\": \"ICON\", \"Entropy\": 3.9425883422688965}, {\"SHA256\": \"ecf248065729e9ac9423a7ee484ca9ed07da2cebf0c33c871e20824c0e5f9f88\", \"Type\": \"ICON\", \"Entropy\": 3.9425883422688965}, {\"SHA256\": \"bfd4046247755a6b93392c99dc39d2e064debd112f7678bd3290fe43d7d32bfe\", \"Type\": \"ICON\", \"Entropy\": 2.6679970855641764}, {\"SHA256\": \"bfd4046247755a6b93392c99dc39d2e064debd112f7678bd3290fe43d7d32bfe\", \"Type\": \"ICON\", \"Entropy\": 2.6679970855641764}, {\"SHA256\": \"c0dc417a8d94c53fcaeb457d6b4f25da2994ce493f0d8d4eb69ca75d0e1b5844\", \"Type\": \"ICON\", \"Entropy\": 3.6627435841886378}, {\"SHA256\": \"c0dc417a8d94c53fcaeb457d6b4f25da2994ce493f0d8d4eb69ca75d0e1b5844\", \"Type\": \"ICON\", \"Entropy\": 3.6627435841886378}, {\"SHA256\": \"c9076dada6f35ded651b2c5a34bb654c1718b21b16b46ac813183ad3a5e88ddf\", \"Type\": \"ICON\", \"Entropy\": 5.207442041766746}, {\"SHA256\": \"c9076dada6f35ded651b2c5a34bb654c1718b21b16b46ac813183ad3a5e88ddf\", \"Type\": \"ICON\", \"Entropy\": 5.207442041766746}, {\"SHA256\": \"2aeab15c82885b2a5f86ff680358b92384b1fa26b174b01e4f8bde57c2f4152a\", \"Type\": \"ICON\", \"Entropy\": 5.819391270693594}, {\"SHA256\": \"2aeab15c82885b2a5f86ff680358b92384b1fa26b174b01e4f8bde57c2f4152a\", \"Type\": \"ICON\", \"Entropy\": 5.819391270693594}, {\"SHA256\": \"66cc5de049d93ab47bf406951b3c3a1ec036d55fa4d1af1623e56edf7dd81d8f\", \"Type\": \"ICON\", \"Entropy\": 3.3884795907263054}, {\"SHA256\": \"832c950905d1dcefff45f4bcc6cf4a5a311d50dd1cb165d1f96a837b10eb6434\", \"Type\": \"DIALOG\", \"Entropy\": 3.631609989115156}, {\"SHA256\": \"832c950905d1dcefff45f4bcc6cf4a5a311d50dd1cb165d1f96a837b10eb6434\", \"Type\": \"DIALOG\", \"Entropy\": 3.631609989115156}, {\"SHA256\": \"321728ef0028be7ccc0febd1de62f572b9703d180c9f2fec1247f63933ca40bb\", \"Type\": \"STRING\", \"Entropy\": 3.209286295409611}, {\"SHA256\": \"321728ef0028be7ccc0febd1de62f572b9703d180c9f2fec1247f63933ca40bb\", \"Type\": \"STRING\", \"Entropy\": 3.209286295409611}, {\"SHA256\": \"34590a3d8e7534ac715b9388e32c083ff0ba570d0010858cc89a4b97fd5309fd\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.849402390429537}, {\"SHA256\": \"34590a3d8e7534ac715b9388e32c083ff0ba570d0010858cc89a4b97fd5309fd\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.849402390429537}, {\"SHA256\": \"3657248dbd07fe655b44068bcad500e037db29746d220ca881f050828595f600\", \"Type\": \"VERSION\", \"Entropy\": 3.283472660699686}, {\"SHA256\": \"3657248dbd07fe655b44068bcad500e037db29746d220ca881f050828595f600\", \"Type\": \"VERSION\", \"Entropy\": 3.283472660699686}]",
+        "body_config": {
+          "column_order": [
+            "SHA256",
+            "Type",
+            "Entropy"
+          ]
+        },
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 1,
@@ -401,7 +431,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]]]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]], {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 0,
@@ -433,7 +464,7 @@
       },
       {
         "name": "features.json",
-        "sha256": "9eb6c962a949eaa07dfa7eb8fa6b37c76169d7e3f7bc92432feb831f7ff86df8"
+        "sha256": "3cb0f837d3428f98d6c2261622d22c74e9bf23fe78ce15bfbce10043bc1f54e0"
       },
       {
         "name": "icon_4.ico",

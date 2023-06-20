@@ -6,6 +6,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"Timestamp\", \"1495741942 (2017-05-25 19:52:22 +00:00 (UTC))\"], [\"Entrypoint\", \"0x63a1\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"0.0\"], [\"Operating System version\", \"5.1\"], [\"Subsystem version\", \"5.1\"], [\"Subsystem\", \"WINDOWS_CUI\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x000c4421\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 0,
@@ -27,7 +28,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"31406394b6a93ee79a85df2ee832c3bb\"]]], [\"TABLE\", [{\"ID\": \"0x01025e92\", \"Compiler Information\": \"[LNK] VS2015 Update 3 [14.0] build 24210 (*)\", \"Count\": 1}, {\"ID\": \"0x00970000\", \"Compiler Information\": \"Unknown object 0x00970000\", \"Count\": 1}, {\"ID\": \"0x00ff5e92\", \"Compiler Information\": \"[RES] VS2015 UPD3 build 24210\", \"Count\": 1}, {\"ID\": \"0x01095e92\", \"Compiler Information\": \"Unknown object 0x01095e92\", \"Count\": 3}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 96}, {\"ID\": \"0x00937809\", \"Compiler Information\": \"[IMP] VS2008 SP1 build 30729\", \"Count\": 5}, {\"ID\": \"0x01045e3b\", \"Compiler Information\": \"Unknown object 0x01045e3b\", \"Count\": 34}, {\"ID\": \"0x01055e3b\", \"Compiler Information\": \"Unknown object 0x01055e3b\", \"Count\": 57}, {\"ID\": \"0x01035e3b\", \"Compiler Information\": \"Unknown object 0x01035e3b\", \"Count\": 22}, {\"ID\": \"0x00f29cb4\", \"Compiler Information\": \"Unknown object 0x00f29cb4\", \"Count\": 29}, {\"ID\": \"0x00f39cb4\", \"Compiler Information\": \"Unknown object 0x00f39cb4\", \"Count\": 143}, {\"ID\": \"0x00f19cb4\", \"Compiler Information\": \"Unknown object 0x00f19cb4\", \"Count\": 13}]]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"31406394b6a93ee79a85df2ee832c3bb\"]], {}], [\"TABLE\", [{\"ID\": \"0x01025e92\", \"Compiler Information\": \"[LNK] VS2015 Update 3 [14.0] build 24210 (*)\", \"Count\": 1}, {\"ID\": \"0x00970000\", \"Compiler Information\": \"Unknown object 0x00970000\", \"Count\": 1}, {\"ID\": \"0x00ff5e92\", \"Compiler Information\": \"[RES] VS2015 UPD3 build 24210\", \"Count\": 1}, {\"ID\": \"0x01095e92\", \"Compiler Information\": \"Unknown object 0x01095e92\", \"Count\": 3}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 96}, {\"ID\": \"0x00937809\", \"Compiler Information\": \"[IMP] VS2008 SP1 build 30729\", \"Count\": 5}, {\"ID\": \"0x01045e3b\", \"Compiler Information\": \"Unknown object 0x01045e3b\", \"Count\": 34}, {\"ID\": \"0x01055e3b\", \"Compiler Information\": \"Unknown object 0x01055e3b\", \"Count\": 57}, {\"ID\": \"0x01035e3b\", \"Compiler Information\": \"Unknown object 0x01035e3b\", \"Count\": 22}, {\"ID\": \"0x00f29cb4\", \"Compiler Information\": \"Unknown object 0x00f29cb4\", \"Count\": 29}, {\"ID\": \"0x00f39cb4\", \"Compiler Information\": \"Unknown object 0x00f39cb4\", \"Count\": 143}, {\"ID\": \"0x00f19cb4\", \"Compiler Information\": \"Unknown object 0x00f19cb4\", \"Count\": 13}], {\"column_order\": [\"ID\", \"Compiler Information\", \"Count\"]}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -49,6 +51,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"sha512\", \"a6a2730b6f249b42a9e64d870436efaf5c09b80b91b537231dc7364651222f804db6bfae91401c8a9153353876ebbbbb37a980a0c6b524d3779750c2b09909da\"], [\"sha384\", \"4578a53ce7eede9584a1e7f6a9e10dd2274a8590e28f02f8319049a0eeee0d90d15f6e0b6909c0535a17f319bd8b42e9\"], [\"sha256\", \"9872c7237de8031c10e59cdd95769cf4e3eb82ac7353c0c44d86ce206ff851e6\"], [\"sha1\", \"0befcef97f7e6855afbcc51113d39b9d02faacfd\"], [\"md5\", \"17ebf20d7315b31333eb8e504de94579\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -60,6 +63,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"Optional header checksum\", \"0x000c4421\"], [\"Computed checksum\", \"0x000b9ef9\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -78,6 +82,7 @@
       {
         "auto_collapse": false,
         "body": null,
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
@@ -88,7 +93,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.628951819271886], [\"Entropy without padding\", 6.633409193379763], [\"Offset\", 1024], [\"Size\", 111616], [\"Virtual Size\", 111463], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"73beda5cac74aadad0f014176a779a46\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.99655, 5.8387, 5.80284, 5.95181, 6.23915, 6.39528, 6.3602, 6.31353, 5.93471, 6.36006, 6.55979, 6.39817, 6.44653, 6.35796, 5.75243, 4.85703, 5.24186, 6.40198, 6.25003, 6.19797, 6.26788, 6.33751, 6.40898, 6.36199, 6.33938, 6.12948, 6.16644, 6.12588, 6.21933, 6.31862, 6.30145, 6.28042, 6.30702, 6.48767, 6.3147, 5.76133, 6.35995, 6.46975, 6.49145, 6.49634, 5.9964, 6.2731, 6.33816, 6.31691, 6.4402, 6.34555, 6.19542, 6.48075, 6.52095, 6.17138]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.628951819271886], [\"Entropy without padding\", 6.633409193379763], [\"Offset\", 1024], [\"Size\", 111616], [\"Virtual Size\", 111463], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"73beda5cac74aadad0f014176a779a46\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.99655, 5.8387, 5.80284, 5.95181, 6.23915, 6.39528, 6.3602, 6.31353, 5.93471, 6.36006, 6.55979, 6.39817, 6.44653, 6.35796, 5.75243, 4.85703, 5.24186, 6.40198, 6.25003, 6.19797, 6.26788, 6.33751, 6.40898, 6.36199, 6.33938, 6.12948, 6.16644, 6.12588, 6.21933, 6.31862, 6.30145, 6.28042, 6.30702, 6.48767, 6.3147, 5.76133, 6.35995, 6.46975, 6.49145, 6.49634, 5.9964, 6.2731, 6.33816, 6.31691, 6.4402, 6.34555, 6.19542, 6.48075, 6.52095, 6.17138]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -112,7 +118,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.541314375578349], [\"Entropy without padding\", 6.541631760662821], [\"Offset\", 112640], [\"Size\", 568320], [\"Virtual Size\", 568282], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"86ac4ab156dfbc03306c62273c88fcc3\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.93174, 7.98373, 7.98655, 7.98327, 7.86516, 7.98082, 7.98395, 7.98498, 7.98388, 7.98149, 7.98598, 7.9841, 7.9849, 7.97748, 7.97544, 7.98201, 7.98279, 7.98301, 7.98132, 7.98366, 7.98147, 7.98147, 7.97865, 7.92507, 7.96999, 7.9677, 7.85519, 7.63847, 7.62148, 7.35843, 7.83952, 7.91116, 6.69692, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.38502, 4.62172, 5.07356, 6.62012, 4.59727]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.541314375578349], [\"Entropy without padding\", 6.541631760662821], [\"Offset\", 112640], [\"Size\", 568320], [\"Virtual Size\", 568282], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"86ac4ab156dfbc03306c62273c88fcc3\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.93174, 7.98373, 7.98655, 7.98327, 7.86516, 7.98082, 7.98395, 7.98498, 7.98388, 7.98149, 7.98598, 7.9841, 7.9849, 7.97748, 7.97544, 7.98201, 7.98279, 7.98301, 7.98132, 7.98366, 7.98147, 7.98147, 7.97865, 7.92507, 7.96999, 7.9677, 7.85519, 7.63847, 7.62148, 7.35843, 7.83952, 7.91116, 6.69692, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.38502, 4.62172, 5.07356, 6.62012, 4.59727]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -136,7 +143,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.4202509647972863], [\"Entropy without padding\", 3.420250964797284], [\"Offset\", 680960], [\"Size\", 3584], [\"Virtual Size\", 7324], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"375eab99c3a6b560df7481e67273c127\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.67709, 3.52736, 1.18276, 0.31592, 0.28814, 2.5485, 2.71105, 1.50345, 0.91418, 1.4584, 1.11749, 0.31592, 2.45019, 1.9728, 1.64883, 2.41876, 0.88798, 1.21591, 0.0, 0.0, 4.03687, 1.14527, 0.0, 0.0, 1.58162, 0.30954, 0.0, 1.451, 3.76751, 0.0, 0.31592, 0.0, 0.0, 1.53049, 3.2218, 4.13403, 4.3362, 4.36786, 4.24303, 4.18153, 3.93361, 4.29269, 4.4534, 4.2116, 3.8956, 4.1961, 4.17516, 3.83847, 3.97475, 3.82486]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.4202509647972863], [\"Entropy without padding\", 3.420250964797284], [\"Offset\", 680960], [\"Size\", 3584], [\"Virtual Size\", 7324], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"375eab99c3a6b560df7481e67273c127\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.67709, 3.52736, 1.18276, 0.31592, 0.28814, 2.5485, 2.71105, 1.50345, 0.91418, 1.4584, 1.11749, 0.31592, 2.45019, 1.9728, 1.64883, 2.41876, 0.88798, 1.21591, 0.0, 0.0, 4.03687, 1.14527, 0.0, 0.0, 1.58162, 0.30954, 0.0, 1.451, 3.76751, 0.0, 0.31592, 0.0, 0.0, 1.53049, 3.2218, 4.13403, 4.3362, 4.36786, 4.24303, 4.18153, 3.93361, 4.29269, 4.4534, 4.2116, 3.8956, 4.1961, 4.17516, 3.83847, 3.97475, 3.82486]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -160,7 +168,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.0796312199229217], [\"Entropy without padding\", 3.7487041694941925], [\"Offset\", 684544], [\"Size\", 1024], [\"Virtual Size\", 792], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"d864fd89f4f518e30a560e0fab7061da\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.39355, 2.55759, 2.8851, 2.74806, 2.9278, 2.90845, 2.80735, 3.07558, 3.2728, 2.71212, 1.93216, 2.02739, 2.48879, 2.07189, 2.25857, 2.16333, 2.42949, 2.07189, 2.19928, 2.02739, 2.25761, 2.07189, 2.02739, 2.02739, 2.25761, 2.07189, 2.19928, 2.19928, 1.62766, 1.75884, 1.79093, 1.75884, 2.00633, 1.3447, 1.24946, 1.3447, 1.50644, 1.37526, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.0796312199229217], [\"Entropy without padding\", 3.7487041694941925], [\"Offset\", 684544], [\"Size\", 1024], [\"Virtual Size\", 792], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"d864fd89f4f518e30a560e0fab7061da\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.39355, 2.55759, 2.8851, 2.74806, 2.9278, 2.90845, 2.80735, 3.07558, 3.2728, 2.71212, 1.93216, 2.02739, 2.48879, 2.07189, 2.25857, 2.16333, 2.42949, 2.07189, 2.19928, 2.02739, 2.25761, 2.07189, 2.02739, 2.02739, 2.25761, 2.07189, 2.19928, 2.19928, 1.62766, 1.75884, 1.79093, 1.75884, 2.00633, 1.3447, 1.24946, 1.3447, 1.50644, 1.37526, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -184,7 +193,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.020393135236084953], [\"Entropy without padding\", 0.5032583347756457], [\"Offset\", 685568], [\"Size\", 512], [\"Virtual Size\", 9], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"1f354d76203061bfdd5a53dae48d5435\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.4395, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.020393135236084953], [\"Entropy without padding\", 0.5032583347756457], [\"Offset\", 685568], [\"Size\", 512], [\"Virtual Size\", 9], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"1f354d76203061bfdd5a53dae48d5435\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.4395, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -208,7 +218,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.121101832086987], [\"Entropy without padding\", 4.138556702131238], [\"Offset\", 686080], [\"Size\", 61952], [\"Virtual Size\", 61584], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"bd10751b89fd9f97bd6b5fac96a35437\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.17981, 0.81599, 0.0, 1.47551, 3.83427, 3.78308, 4.63473, 4.10935, 1.15013, 7.03717, 7.41328, 3.48652, 2.06191, 2.12595, 1.18123, 2.04221, 0.78581, 6.59935, 7.23563, 6.43879, 1.0157, 2.17235, 2.65804, 2.65315, 2.86332, 2.87443, 2.6693, 2.71314, 2.58324, 2.73702, 2.59712, 1.99911, 0.54409, 0.96053, 2.42626, 2.84515, 2.97013, 2.75182, 2.76409, 2.62673, 1.20213, 2.27544, 2.89473, 2.74465, 2.27226, 3.44252, 7.34673, 6.2324, 3.18313, 4.12045]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.121101832086987], [\"Entropy without padding\", 4.138556702131238], [\"Offset\", 686080], [\"Size\", 61952], [\"Virtual Size\", 61584], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"bd10751b89fd9f97bd6b5fac96a35437\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.17981, 0.81599, 0.0, 1.47551, 3.83427, 3.78308, 4.63473, 4.10935, 1.15013, 7.03717, 7.41328, 3.48652, 2.06191, 2.12595, 1.18123, 2.04221, 0.78581, 6.59935, 7.23563, 6.43879, 1.0157, 2.17235, 2.65804, 2.65315, 2.86332, 2.87443, 2.6693, 2.71314, 2.58324, 2.73702, 2.59712, 1.99911, 0.54409, 0.96053, 2.42626, 2.84515, 2.97013, 2.75182, 2.76409, 2.62673, 1.20213, 2.27544, 2.89473, 2.74465, 2.27226, 3.44252, 7.34673, 6.2324, 3.18313, 4.12045]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -232,7 +243,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.5250062745987165], [\"Entropy without padding\", 6.554805123134259], [\"Offset\", 748032], [\"Size\", 8192], [\"Virtual Size\", 8072], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"6971bee41f136001489c5fe1e778ff1a\"]]], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.5651, 5.74517, 5.50517, 5.11427, 4.81002, 5.04451, 5.29798, 5.53832, 5.07287, 5.48286, 5.66682, 5.58582, 5.51268, 5.68796, 5.37048, 5.66769, 5.6836, 5.46417, 5.76161, 5.71179, 5.66838, 5.78522, 5.68408, 5.1843, 4.3784, 4.57808, 4.51987, 4.26787, 4.36186, 4.65842, 4.33359, 4.18832, 4.84299, 4.47612, 4.70844, 4.65142, 5.08758, 4.51295, 4.26787, 4.33812, 4.27024, 4.25522, 4.55958, 4.73096, 4.76118, 4.91114, 4.97177, 4.86178, 5.03515, 1.40671]}}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.5250062745987165], [\"Entropy without padding\", 6.554805123134259], [\"Offset\", 748032], [\"Size\", 8192], [\"Virtual Size\", 8072], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"6971bee41f136001489c5fe1e778ff1a\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.5651, 5.74517, 5.50517, 5.11427, 4.81002, 5.04451, 5.29798, 5.53832, 5.07287, 5.48286, 5.66682, 5.58582, 5.51268, 5.68796, 5.37048, 5.66769, 5.6836, 5.46417, 5.76161, 5.71179, 5.66838, 5.78522, 5.68408, 5.1843, 4.3784, 4.57808, 4.51987, 4.26787, 4.36186, 4.65842, 4.33359, 4.18832, 4.84299, 4.47612, 4.70844, 4.65142, 5.08758, 4.51295, 4.26787, 4.33812, 4.27024, 4.25522, 4.55958, 4.73096, 4.76118, 4.91114, 4.97177, 4.86178, 5.03515, 1.40671]}}, {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -257,6 +269,7 @@
       {
         "auto_collapse": false,
         "body": null,
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
@@ -268,6 +281,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"Timestamp\", \"1495741942 (2017-05-25 19:52:22 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -279,6 +293,7 @@
       {
         "auto_collapse": false,
         "body": "Name: .text$di, Size: 224\nName: .text$mn, Size: 110025\nName: .text$x, Size: 1124\nName: .text$yd, Size: 90\nName: .idata$5, Size: 324\nName: .00cfg, Size: 4\nName: .CRT$XCA, Size: 4\nName: .CRT$XCAA, Size: 4\nName: .CRT$XCC, Size: 28\nName: .CRT$XCL, Size: 8\nName: .CRT$XCU, Size: 4\nName: .CRT$XCZ, Size: 4\nName: .CRT$XIA, Size: 4\nName: .CRT$XIAA, Size: 4\nName: .CRT$XIAC, Size: 4\nName: .CRT$XIC, Size: 24\nName: .CRT$XIZ, Size: 4\nName: .CRT$XLA, Size: 4\nName: .CRT$XLZ, Size: 4\nName: .CRT$XPA, Size: 4\nName: .CRT$XPX, Size: 8\nName: .CRT$XPXA, Size: 4\nName: .CRT$XPZ, Size: 4\nName: .CRT$XTA, Size: 4\nName: .CRT$XTZ, Size: 4\nName: .l3p, Size: 512456\nName: .rdata, Size: 46236\nName: .rdata$T, Size: 24\nName: .rdata$r, Size: 2444\nName: .rdata$sxdata, Size: 136\nName: .rdata$zzzdbg, Size: 976\nName: .rtc$IAA, Size: 4\nName: .rtc$IZZ, Size: 4\nName: .rtc$TAA, Size: 4\nName: .rtc$TZZ, Size: 4\nName: .xdata$x, Size: 3684\nName: .idata$2, Size: 40\nName: .idata$3, Size: 20\nName: .idata$4, Size: 324\nName: .idata$6, Size: 1470\nName: .data, Size: 2480\nName: .data$r, Size: 1096\nName: .bss, Size: 3748\nName: .gfids$x, Size: 192\nName: .gfids$y, Size: 600\nName: .tls, Size: 4\nName: .tls$, Size: 4\nName: .tls$ZZZ, Size: 1\nName: .rsrc$01, Size: 1552\nName: .rsrc$02, Size: 60032",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 2,
@@ -290,6 +305,7 @@
       {
         "auto_collapse": false,
         "body": null,
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
@@ -320,6 +336,7 @@
       {
         "auto_collapse": false,
         "body": "GetModuleHandleW, FreeConsole, VirtualProtect, HeapSize, ReadConsoleW, WideCharToMultiByte, EncodePointer, DecodePointer, EnterCriticalSection, LeaveCriticalSection, DeleteCriticalSection, MultiByteToWideChar, SetLastError, InitializeCriticalSectionAndSpinCount, CreateEventW, TlsAlloc, TlsGetValue, TlsSetValue, TlsFree, GetSystemTimeAsFileTime, GetProcAddress, CompareStringW, LCMapStringW, GetLocaleInfoW, GetStringTypeW, GetCPInfo, CloseHandle, SetEvent, ResetEvent, WaitForSingleObjectEx, UnhandledExceptionFilter, SetUnhandledExceptionFilter, GetCurrentProcess, TerminateProcess, IsProcessorFeaturePresent, IsDebuggerPresent, GetStartupInfoW, QueryPerformanceCounter, GetCurrentProcessId, GetCurrentThreadId, InitializeSListHead, RaiseException, RtlUnwind, GetLastError, FreeLibrary, LoadLibraryExW, HeapAlloc, HeapReAlloc, HeapFree, ExitProcess, GetModuleHandleExW, GetModuleFileNameA, GetStdHandle, WriteFile, GetCommandLineA, GetCommandLineW, GetACP, IsValidLocale, GetUserDefaultLCID, EnumSystemLocalesW, GetFileType, FlushFileBuffers, GetConsoleCP, GetConsoleMode, ReadFile, SetFilePointerEx, GetProcessHeap, FindClose, FindFirstFileExA, FindNextFileA, IsValidCodePage, GetOEMCP, GetEnvironmentStringsW, FreeEnvironmentStringsW, SetEnvironmentVariableA, SetStdHandle, WriteConsoleW, CreateFileW",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
@@ -331,6 +348,7 @@
       {
         "auto_collapse": false,
         "body": "SHGetFolderPathW",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
@@ -342,6 +360,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"Languages\", \"ENGLISH, RUSSIAN\"], [\"Sublanguages\", \"ENGLISH_US, DEFAULT\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 0,
@@ -375,6 +394,7 @@
       {
         "auto_collapse": false,
         "body": "Can't decode title of dialog item from dialog named Dialog",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
@@ -392,7 +412,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"RUSSIAN\", \"Size\": \"48x48\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_0.ico\"}, {\"ID\": 2, \"Lang\": \"RUSSIAN\", \"Size\": \"13x13\", \"Size (bytes)\": 2835, \"Saved as\": \"icon_1.ico\"}, {\"ID\": 3, \"Lang\": \"RUSSIAN\", \"Size\": \"48x48\", \"Size (bytes)\": 3752, \"Saved as\": \"icon_2.ico\"}, {\"ID\": 4, \"Lang\": \"RUSSIAN\", \"Size\": \"32x32\", \"Size (bytes)\": 2216, \"Saved as\": \"icon_3.ico\"}, {\"ID\": 5, \"Lang\": \"RUSSIAN\", \"Size\": \"16x16\", \"Size (bytes)\": 1384, \"Saved as\": \"icon_4.ico\"}, {\"ID\": 6, \"Lang\": \"RUSSIAN\", \"Size\": \"13x13\", \"Size (bytes)\": 3146, \"Saved as\": \"icon_5.ico\"}, {\"ID\": 7, \"Lang\": \"RUSSIAN\", \"Size\": \"64x64\", \"Size (bytes)\": 16936, \"Saved as\": \"icon_6.ico\"}, {\"ID\": 8, \"Lang\": \"RUSSIAN\", \"Size\": \"48x48\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_7.ico\"}, {\"ID\": 9, \"Lang\": \"RUSSIAN\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_8.ico\"}, {\"ID\": 10, \"Lang\": \"RUSSIAN\", \"Size\": \"16x16\", \"Size (bytes)\": 1128, \"Saved as\": \"icon_9.ico\"}]], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"182c6cb1e556e6515b79214d20420f88bfe5e6abd458288c9b00d2d5288c652c\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"182c6cb1e556e6515b79214d20420f88bfe5e6abd458288c9b00d2d5288c652c\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_1.ico\", \"sha256\": \"88729d08526b556723c1c657b38a9cf8d29122376e46153c3f7c072021c20c04\", \"description\": \"Icon 1 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_1.ico.thumb\", \"sha256\": \"eebce6d81b1cba3f9311408b76d966d2a7a8984966ab50a718be5fe8a1a777b1\", \"description\": \"Icon 1 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_2.ico\", \"sha256\": \"aee1fbef04490195cf7a35fc38928f150ac17327ad84785e6f6030ef30ea634c\", \"description\": \"Icon 2 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_2.ico.thumb\", \"sha256\": \"aee1fbef04490195cf7a35fc38928f150ac17327ad84785e6f6030ef30ea634c\", \"description\": \"Icon 2 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_3.ico\", \"sha256\": \"456309d2bee06853f5b45f48ce537dac5c14e8143b6c065c12f6f2e98203aee3\", \"description\": \"Icon 3 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_3.ico.thumb\", \"sha256\": \"456309d2bee06853f5b45f48ce537dac5c14e8143b6c065c12f6f2e98203aee3\", \"description\": \"Icon 3 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_4.ico\", \"sha256\": \"38b39285b11f650b4589010e60e331ddb9587504b77533d0ab7a214689413508\", \"description\": \"Icon 4 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_4.ico.thumb\", \"sha256\": \"38b39285b11f650b4589010e60e331ddb9587504b77533d0ab7a214689413508\", \"description\": \"Icon 4 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_5.ico\", \"sha256\": \"47479397c0dcb3167430f75be2421112e5161a43d67b7f6d1d70a7f12574bf6b\", \"description\": \"Icon 5 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_5.ico.thumb\", \"sha256\": \"5121a58b07e1e91ec706b65dc4f7660d20a3fa668f5b26d7b2dc679be63441cd\", \"description\": \"Icon 5 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_6.ico\", \"sha256\": \"3c3aeb00c7bf46c76492aef93333e499795be47327a95a5c1dc533f6da271093\", \"description\": \"Icon 6 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_6.ico.thumb\", \"sha256\": \"3c3aeb00c7bf46c76492aef93333e499795be47327a95a5c1dc533f6da271093\", \"description\": \"Icon 6 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_7.ico\", \"sha256\": \"04ce68c1ca46170eb2c0d19ec98102e61aedda7c0ec2d8d1be5e175b11bfd8a6\", \"description\": \"Icon 7 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_7.ico.thumb\", \"sha256\": \"04ce68c1ca46170eb2c0d19ec98102e61aedda7c0ec2d8d1be5e175b11bfd8a6\", \"description\": \"Icon 7 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_8.ico\", \"sha256\": \"6e6a50ff643e8cac2c50fcb915f83c2b47c0ca1a7952fdef18d7e39f3bce8e2d\", \"description\": \"Icon 8 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_8.ico.thumb\", \"sha256\": \"6e6a50ff643e8cac2c50fcb915f83c2b47c0ca1a7952fdef18d7e39f3bce8e2d\", \"description\": \"Icon 8 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_9.ico\", \"sha256\": \"9fa039f1409fe24a77e5f65391d733ae4c6bd1a4b3add91a30b6750f5b730f4d\", \"description\": \"Icon 9 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_9.ico.thumb\", \"sha256\": \"9fa039f1409fe24a77e5f65391d733ae4c6bd1a4b3add91a30b6750f5b730f4d\", \"description\": \"Icon 9 extracted from the PE file (thumbnail)\"}}]]]",
+        "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"RUSSIAN\", \"Size\": \"48x48\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_0.ico\"}, {\"ID\": 2, \"Lang\": \"RUSSIAN\", \"Size\": \"13x13\", \"Size (bytes)\": 2835, \"Saved as\": \"icon_1.ico\"}, {\"ID\": 3, \"Lang\": \"RUSSIAN\", \"Size\": \"48x48\", \"Size (bytes)\": 3752, \"Saved as\": \"icon_2.ico\"}, {\"ID\": 4, \"Lang\": \"RUSSIAN\", \"Size\": \"32x32\", \"Size (bytes)\": 2216, \"Saved as\": \"icon_3.ico\"}, {\"ID\": 5, \"Lang\": \"RUSSIAN\", \"Size\": \"16x16\", \"Size (bytes)\": 1384, \"Saved as\": \"icon_4.ico\"}, {\"ID\": 6, \"Lang\": \"RUSSIAN\", \"Size\": \"13x13\", \"Size (bytes)\": 3146, \"Saved as\": \"icon_5.ico\"}, {\"ID\": 7, \"Lang\": \"RUSSIAN\", \"Size\": \"64x64\", \"Size (bytes)\": 16936, \"Saved as\": \"icon_6.ico\"}, {\"ID\": 8, \"Lang\": \"RUSSIAN\", \"Size\": \"48x48\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_7.ico\"}, {\"ID\": 9, \"Lang\": \"RUSSIAN\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_8.ico\"}, {\"ID\": 10, \"Lang\": \"RUSSIAN\", \"Size\": \"16x16\", \"Size (bytes)\": 1128, \"Saved as\": \"icon_9.ico\"}], {\"column_order\": [\"ID\", \"Lang\", \"Size\", \"Size (bytes)\", \"Saved as\"]}], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"182c6cb1e556e6515b79214d20420f88bfe5e6abd458288c9b00d2d5288c652c\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"182c6cb1e556e6515b79214d20420f88bfe5e6abd458288c9b00d2d5288c652c\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_1.ico\", \"sha256\": \"88729d08526b556723c1c657b38a9cf8d29122376e46153c3f7c072021c20c04\", \"description\": \"Icon 1 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_1.ico.thumb\", \"sha256\": \"eebce6d81b1cba3f9311408b76d966d2a7a8984966ab50a718be5fe8a1a777b1\", \"description\": \"Icon 1 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_2.ico\", \"sha256\": \"aee1fbef04490195cf7a35fc38928f150ac17327ad84785e6f6030ef30ea634c\", \"description\": \"Icon 2 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_2.ico.thumb\", \"sha256\": \"aee1fbef04490195cf7a35fc38928f150ac17327ad84785e6f6030ef30ea634c\", \"description\": \"Icon 2 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_3.ico\", \"sha256\": \"456309d2bee06853f5b45f48ce537dac5c14e8143b6c065c12f6f2e98203aee3\", \"description\": \"Icon 3 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_3.ico.thumb\", \"sha256\": \"456309d2bee06853f5b45f48ce537dac5c14e8143b6c065c12f6f2e98203aee3\", \"description\": \"Icon 3 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_4.ico\", \"sha256\": \"38b39285b11f650b4589010e60e331ddb9587504b77533d0ab7a214689413508\", \"description\": \"Icon 4 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_4.ico.thumb\", \"sha256\": \"38b39285b11f650b4589010e60e331ddb9587504b77533d0ab7a214689413508\", \"description\": \"Icon 4 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_5.ico\", \"sha256\": \"47479397c0dcb3167430f75be2421112e5161a43d67b7f6d1d70a7f12574bf6b\", \"description\": \"Icon 5 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_5.ico.thumb\", \"sha256\": \"5121a58b07e1e91ec706b65dc4f7660d20a3fa668f5b26d7b2dc679be63441cd\", \"description\": \"Icon 5 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_6.ico\", \"sha256\": \"3c3aeb00c7bf46c76492aef93333e499795be47327a95a5c1dc533f6da271093\", \"description\": \"Icon 6 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_6.ico.thumb\", \"sha256\": \"3c3aeb00c7bf46c76492aef93333e499795be47327a95a5c1dc533f6da271093\", \"description\": \"Icon 6 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_7.ico\", \"sha256\": \"04ce68c1ca46170eb2c0d19ec98102e61aedda7c0ec2d8d1be5e175b11bfd8a6\", \"description\": \"Icon 7 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_7.ico.thumb\", \"sha256\": \"04ce68c1ca46170eb2c0d19ec98102e61aedda7c0ec2d8d1be5e175b11bfd8a6\", \"description\": \"Icon 7 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_8.ico\", \"sha256\": \"6e6a50ff643e8cac2c50fcb915f83c2b47c0ca1a7952fdef18d7e39f3bce8e2d\", \"description\": \"Icon 8 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_8.ico.thumb\", \"sha256\": \"6e6a50ff643e8cac2c50fcb915f83c2b47c0ca1a7952fdef18d7e39f3bce8e2d\", \"description\": \"Icon 8 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_9.ico\", \"sha256\": \"9fa039f1409fe24a77e5f65391d733ae4c6bd1a4b3add91a30b6750f5b730f4d\", \"description\": \"Icon 9 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_9.ico.thumb\", \"sha256\": \"9fa039f1409fe24a77e5f65391d733ae4c6bd1a4b3add91a30b6750f5b730f4d\", \"description\": \"Icon 9 extracted from the PE file (thumbnail)\"}}], {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
@@ -404,6 +425,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"Type\", 0]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -415,6 +437,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 63], [\"file_os\", \"NT_WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"UNKNOWN\"], [\"file_version_LS\", 1], [\"file_version_MS\", 65536], [\"product_version_LS\", 1], [\"product_version_MS\", 65536], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 2,
@@ -426,6 +449,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 2,
@@ -450,6 +474,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"key\", \"041904b0\"], [\"type\", 1], [\"lang\", \"RUSSIAN\"], [\"sublang\", \"DEFAULT\"], [\"code_page\", \"UTF_16\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 3,
@@ -460,7 +485,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ProductVersion\", \"1.0.0.1\"], [\"ProductName\", \"TODO: <Product name>\"], [\"LegalCopyright\", \"Copyright (C) 2017\"], [\"OriginalFilename\", \"TODO: <Original filename>\"], [\"FileVersion\", \"1.0.0.1\"], [\"CompanyName\", \"TODO: <Company name>\"], [\"FileDescription\", \"TODO: <File description>\"], [\"InternalName\", \"TODO: <Internal name>\"]]",
+        "body": "[[\"ProductVersion\", \"1.0.0.1\"], [\"ProductName\", \"TODO: <Product name>\"], [\"OriginalFilename\", \"TODO: <Original filename>\"], [\"InternalName\", \"TODO: <Internal name>\"], [\"FileVersion\", \"1.0.0.1\"], [\"LegalCopyright\", \"Copyright (C) 2017\"], [\"FileDescription\", \"TODO: <File description>\"], [\"CompanyName\", \"TODO: <Company name>\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 4,
@@ -472,6 +498,7 @@
       {
         "auto_collapse": false,
         "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78644249\"]]",
+        "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 2,
@@ -483,6 +510,13 @@
       {
         "auto_collapse": false,
         "body": "[{\"SHA256\": \"96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7\", \"Type\": \"AFX_DIALOG_LAYOUT\", \"Entropy\": 0.0}, {\"SHA256\": \"96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7\", \"Type\": \"AFX_DIALOG_LAYOUT\", \"Entropy\": 0.0}, {\"SHA256\": \"96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7\", \"Type\": \"AFX_DIALOG_LAYOUT\", \"Entropy\": 0.0}, {\"SHA256\": \"96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7\", \"Type\": \"AFX_DIALOG_LAYOUT\", \"Entropy\": 0.0}, {\"SHA256\": \"96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7\", \"Type\": \"AFX_DIALOG_LAYOUT\", \"Entropy\": 0.0}, {\"SHA256\": \"96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7\", \"Type\": \"AFX_DIALOG_LAYOUT\", \"Entropy\": 0.0}, {\"SHA256\": \"96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7\", \"Type\": \"AFX_DIALOG_LAYOUT\", \"Entropy\": 0.0}, {\"SHA256\": \"fd78ec9bd7fe5ae11234b670e89b7aac20aa278543eec703df9e437d6ddb0c19\", \"Type\": \"ICON\", \"Entropy\": 3.010573941237518}, {\"SHA256\": \"59606f95415218da016b3035d6db01aef99009c32cbb9225295161e9cbde599e\", \"Type\": \"ICON\", \"Entropy\": 7.443239631203201}, {\"SHA256\": \"9282ef76bd7caf21b082ec5372036737a274f4dcde6754b44a14e82f7fc44250\", \"Type\": \"ICON\", \"Entropy\": 2.1434964794339035}, {\"SHA256\": \"0f21d4638acea2a29935821118a405870571395ae6ade17d42acdfd14d926d48\", \"Type\": \"ICON\", \"Entropy\": 1.9495556929676439}, {\"SHA256\": \"3cf96c4d0f81d50f1ecde1534f7945a48ff5b19c8d0b271647385b0dda219919\", \"Type\": \"ICON\", \"Entropy\": 1.2432926244449707}, {\"SHA256\": \"0b47c4dbebef9b67af29ce925d575a67b12c998e8d6790f938b262477fd75a74\", \"Type\": \"ICON\", \"Entropy\": 7.482457045800001}, {\"SHA256\": \"c47e69dfa46836e856531e341cbbe649d011400e16e1af2bc1a854d648937fe1\", \"Type\": \"ICON\", \"Entropy\": 2.582769000913991}, {\"SHA256\": \"e133a3834f112a6b436ca01cf5be9762b09ef5903c3a3b4ee713687dbc77e12c\", \"Type\": \"ICON\", \"Entropy\": 2.6851227312845283}, {\"SHA256\": \"8d33b5052feadd6b5970af4783ee1ec4a9d24942b7732e98ec7e9f8aaf983533\", \"Type\": \"ICON\", \"Entropy\": 2.6971721728902605}, {\"SHA256\": \"1f5e6628a542770910dddfe17bdc51fe41afbe5c00318202f56854f51746f7e8\", \"Type\": \"ICON\", \"Entropy\": 2.8702426832422363}, {\"SHA256\": \"b833d967d2f4da0a2cd9d1b20d63d45f4a76aa471ff3c23a2f4a09d1e719b0c0\", \"Type\": \"DIALOG\", \"Entropy\": 2.7725138485265606}, {\"SHA256\": \"b833d967d2f4da0a2cd9d1b20d63d45f4a76aa471ff3c23a2f4a09d1e719b0c0\", \"Type\": \"DIALOG\", \"Entropy\": 2.7725138485265606}, {\"SHA256\": \"b833d967d2f4da0a2cd9d1b20d63d45f4a76aa471ff3c23a2f4a09d1e719b0c0\", \"Type\": \"DIALOG\", \"Entropy\": 2.7725138485265606}, {\"SHA256\": \"8931cf0dfd9edc578ad4eaf315a33add4af2e937ea1ce4927cefffb76c186872\", \"Type\": \"DIALOG\", \"Entropy\": 7.054104552096785}, {\"SHA256\": \"b833d967d2f4da0a2cd9d1b20d63d45f4a76aa471ff3c23a2f4a09d1e719b0c0\", \"Type\": \"DIALOG\", \"Entropy\": 2.7725138485265606}, {\"SHA256\": \"b833d967d2f4da0a2cd9d1b20d63d45f4a76aa471ff3c23a2f4a09d1e719b0c0\", \"Type\": \"DIALOG\", \"Entropy\": 2.7725138485265606}, {\"SHA256\": \"b833d967d2f4da0a2cd9d1b20d63d45f4a76aa471ff3c23a2f4a09d1e719b0c0\", \"Type\": \"DIALOG\", \"Entropy\": 2.7725138485265606}, {\"SHA256\": \"6eb54801f91b6d8effccbfaefe6b2d7705a274a75940e6226e24e0d4ec58c396\", \"Type\": \"GROUP_ICON\", \"Entropy\": 1.919240704636849}, {\"SHA256\": \"36bf55fddab2557f1aa89bd78e6e36138847fe8f0b71a76c2d48fe1fd022b729\", \"Type\": \"GROUP_ICON\", \"Entropy\": 3.0415432658528103}, {\"SHA256\": \"64a731d6d4c24f00379d43a7e80d009774cc7fba585bdd5cd85570ba723e92af\", \"Type\": \"VERSION\", \"Entropy\": 3.391652080745814}, {\"SHA256\": \"84991d34e717ae7f74c1b9ff5192e7d50a2ef4799df6c9f6575affcf1d033823\", \"Type\": \"MANIFEST\", \"Entropy\": 5.079347202546267}]",
+        "body_config": {
+          "column_order": [
+            "SHA256",
+            "Type",
+            "Entropy"
+          ]
+        },
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 1,
@@ -493,7 +527,8 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]]]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]], {}]]",
+        "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 0,
@@ -522,6 +557,10 @@
       {
         "name": "icon_0.ico.thumb",
         "sha256": "182c6cb1e556e6515b79214d20420f88bfe5e6abd458288c9b00d2d5288c652c"
+      },
+      {
+        "name": "features.json",
+        "sha256": "26ac542af75a03d25944509955290637a04da6815fbd19b7d54bdeae4b998ea6"
       },
       {
         "name": "icon_4.ico",
@@ -554,10 +593,6 @@
       {
         "name": "icon_5.ico.thumb",
         "sha256": "5121a58b07e1e91ec706b65dc4f7660d20a3fa668f5b26d7b2dc679be63441cd"
-      },
-      {
-        "name": "features.json",
-        "sha256": "6d01f198f99cd41a66409fa337cc1de9cb760562e50dceae30ad760f8e820d52"
       },
       {
         "name": "icon_8.ico",
