@@ -1327,7 +1327,7 @@ class PE(ServiceBase):
                             del lancodeitem_dict["code_page"]
 
                         sub_sub_sub_sub_res = ResultOrderedKeyValueSection("items")
-                        for k, v in langcodeitem.items.items():
+                        for k, v in sorted(langcodeitem.items.items()):
                             lancodeitem_dict["items"][k] = v.decode()
                             sub_sub_sub_sub_res.add_item(k, v.decode())
                             if k == "OriginalFilename":
