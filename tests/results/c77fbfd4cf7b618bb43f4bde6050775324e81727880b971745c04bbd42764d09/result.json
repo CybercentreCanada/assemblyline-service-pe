@@ -668,7 +668,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ProductVersion\", \"0, 0, 0, 0\"], [\"ProductName\", \"Mesh Agent Service\"], [\"LegalCopyright\", \"Apache 2.0 License\"], [\"OriginalFilename\", \"MeshAgent.exe\"], [\"FileVersion\", \"0.2.1.3\"], [\"FileDescription\", \"Mesh Agent Service\"], [\"InternalName\", \"MeshAgent\"]]",
+        "body": "[[\"ProductVersion\", \"0, 0, 0, 0\"], [\"ProductName\", \"Mesh Agent Service\"], [\"OriginalFilename\", \"MeshAgent.exe\"], [\"InternalName\", \"MeshAgent\"], [\"FileVersion\", \"0.2.1.3\"], [\"LegalCopyright\", \"Apache 2.0 License\"], [\"FileDescription\", \"Mesh Agent Service\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -807,7 +807,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Time Stamping Signer #2\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Time Stamping CA\"], [\"SHA1\", \"951137101d882f31bd513f949ada4c68ad8c08f5\"], [\"SHA256\", \"708f7b26bcb83d3b708a7def1b35cc3d4fdf2f6640fcf9e68836072b0016f015\"], [\"MD5\", \"1a8ab0e25a467c71913fcb1c947e0568\"], [\"Serial Number\", \"008c77a0008ff4d1b0c63d9f3a48838d6b\"], [\"Valid From\", \"2020-10-23T00:00:00\"], [\"Valid To\", \"2032-01-22T23:59:59\"]]",
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Time Stamping Signer \\\\#2\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Time Stamping CA\"], [\"SHA1\", \"951137101d882f31bd513f949ada4c68ad8c08f5\"], [\"SHA256\", \"708f7b26bcb83d3b708a7def1b35cc3d4fdf2f6640fcf9e68836072b0016f015\"], [\"MD5\", \"1a8ab0e25a467c71913fcb1c947e0568\"], [\"Serial Number\", \"008c77a0008ff4d1b0c63d9f3a48838d6b\"], [\"Valid From\", \"2020-10-23T00:00:00\"], [\"Valid To\", \"2032-01-22T23:59:59\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -859,6 +859,10 @@
     ],
     "supplementary": [
       {
+        "name": "features.json",
+        "sha256": "2b95d9dd869d16cee08133c11d893b4cadad8564edb2cfc474ef67882da35005"
+      },
+      {
         "name": "icon_1.ico",
         "sha256": "322a2ede781d7843335480ff9bd5a3b6848cd9cdc9afeb93114ac6eee7e62cab"
       },
@@ -893,10 +897,6 @@
       {
         "name": "certificate.1.1",
         "sha256": "a20ff65a0c17480a62c6a9244ebe700f6a47da1b3c9c88bfae58806899e49abd"
-      },
-      {
-        "name": "features.json",
-        "sha256": "ae5df8724ef63ac2be1ef20bc3334fd1afcce19c00f8bf397fc2b07a3ade8b62"
       }
     ]
   },

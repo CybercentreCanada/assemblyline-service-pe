@@ -409,7 +409,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ProductVersion\", \"21.10.0802\"], [\"OriginalFilename\", \"d7x.exe\"], [\"FileVersion\", \"21.10.0802\"], [\"InternalName\", \"d7x\"], [\"CompanyName\", \"d7xTech (formerly Foolish IT)\"], [\"FileDescription\", \"d7x (PC Repair Multi-Tool)\"], [\"LegalCopyright\", \"d7xTech (formerly Foolish IT)\"], [\"ProductName\", \"d7x\"]]",
+        "body": "[[\"OriginalFilename\", \"d7x.exe\"], [\"InternalName\", \"d7x\"], [\"ProductVersion\", \"21.10.0802\"], [\"FileVersion\", \"21.10.0802\"], [\"ProductName\", \"d7x\"], [\"LegalCopyright\", \"d7xTech (formerly Foolish IT)\"], [\"FileDescription\", \"d7x (PC Repair Multi-Tool)\"], [\"CompanyName\", \"d7xTech (formerly Foolish IT)\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -506,7 +506,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=North Carolina, L=High Point, O=d7xTech, Inc, serialNumber=1254817, CN=d7xTech, Inc, ??=Private Organization, ??=North Carolina, ??=US\"], [\"Issuer\", \"C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate CA RSA R3\"], [\"Serial Number\", \"1877a57c210dbbd1cce4b4424f5d2f9f\"], [\"Valid From\", \"2021-08-31T02:07:12\"], [\"Valid To\", \"2024-08-30T02:07:12\"]]",
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=North Carolina, L=High Point, O=d7xTech\\\\, Inc, serialNumber=1254817, CN=d7xTech\\\\, Inc, ??=Private Organization, ??=North Carolina, ??=US\"], [\"Issuer\", \"C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate CA RSA R3\"], [\"Serial Number\", \"1877a57c210dbbd1cce4b4424f5d2f9f\"], [\"Valid From\", \"2021-08-31T02:07:12\"], [\"Valid To\", \"2024-08-30T02:07:12\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -521,7 +521,7 @@
               "1877a57c210dbbd1cce4b4424f5d2f9f"
             ],
             "subject": [
-              "C=US, ST=North Carolina, L=High Point, O=d7xTech, Inc, serialNumber=1254817, CN=d7xTech, Inc, ??=Private Organization, ??=North Carolina, ??=US"
+              "C=US, ST=North Carolina, L=High Point, O=d7xTech\\, Inc, serialNumber=1254817, CN=d7xTech\\, Inc, ??=Private Organization, ??=North Carolina, ??=US"
             ],
             "thumbprint": [
               "bcb806e52d4e45c1a99a5101670e3de85f8b3714",
@@ -543,7 +543,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=North Carolina, L=High Point, O=d7xTech, Inc, serialNumber=1254817, CN=d7xTech, Inc, ??=Private Organization, ??=North Carolina, ??=US\"], [\"Issuer\", \"C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate CA RSA R3\"], [\"SHA1\", \"bcb806e52d4e45c1a99a5101670e3de85f8b3714\"], [\"SHA256\", \"4a5c1a94eb0eba8acf8eb54ba4f85bbb530783f0f7f76da73809ceb299de833b\"], [\"MD5\", \"9419b8ccc538ce0edc279cdf90222361\"], [\"Serial Number\", \"1877a57c210dbbd1cce4b4424f5d2f9f\"], [\"Valid From\", \"2021-08-31T02:07:12\"], [\"Valid To\", \"2024-08-30T02:07:12\"]]",
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=North Carolina, L=High Point, O=d7xTech\\\\, Inc, serialNumber=1254817, CN=d7xTech\\\\, Inc, ??=Private Organization, ??=North Carolina, ??=US\"], [\"Issuer\", \"C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate CA RSA R3\"], [\"SHA1\", \"bcb806e52d4e45c1a99a5101670e3de85f8b3714\"], [\"SHA256\", \"4a5c1a94eb0eba8acf8eb54ba4f85bbb530783f0f7f76da73809ceb299de833b\"], [\"MD5\", \"9419b8ccc538ce0edc279cdf90222361\"], [\"Serial Number\", \"1877a57c210dbbd1cce4b4424f5d2f9f\"], [\"Valid From\", \"2021-08-31T02:07:12\"], [\"Valid To\", \"2024-08-30T02:07:12\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -641,10 +641,6 @@
         "sha256": "32ecaabe68dc25afffe2c836258a87a3dc3887adcb27457fa15b911b013aa2d4"
       },
       {
-        "name": "features.json",
-        "sha256": "37894852a16072d290b8b585ab4c7308270c4c36a96af3f8197737327d961f1c"
-      },
-      {
         "name": "certificate.1.1",
         "sha256": "4a5c1a94eb0eba8acf8eb54ba4f85bbb530783f0f7f76da73809ceb299de833b"
       },
@@ -691,6 +687,10 @@
       {
         "name": "icon_7.ico.thumb",
         "sha256": "a8b56566baccacd4c32e65aed76cd676deff3d769fa59d9bc94fd5d4275c2e81"
+      },
+      {
+        "name": "features.json",
+        "sha256": "df99f81e4b30ad3ab0675a52c6fffdd5c6022cbfaa03634d746f98ac83fcba39"
       },
       {
         "name": "icon_4.ico",
@@ -758,7 +758,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "C=US, ST=North Carolina, L=High Point, O=d7xTech, Inc, serialNumber=1254817, CN=d7xTech, Inc, ??=Private Organization, ??=North Carolina, ??=US"
+          "value": "C=US, ST=North Carolina, L=High Point, O=d7xTech\\, Inc, serialNumber=1254817, CN=d7xTech\\, Inc, ??=Private Organization, ??=North Carolina, ??=US"
         }
       ],
       "cert.thumbprint": [

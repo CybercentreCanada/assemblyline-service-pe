@@ -440,7 +440,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ProductVersion\", \"6.00.2900.2180\"], [\"ProductName\", \"Microsoft\\u00ae Windows\\u00ae Operating System\"], [\"LegalCopyright\", \"\\u00a9 Microsoft Corporation. All rights reserved.\"], [\"OriginalFilename\", \"WEXTRACT.EXE            \"], [\"FileVersion\", \"6.00.2900.2180 (xpsp_sp2_rtm.040803-2158)\"], [\"CompanyName\", \"Microsoft Corporation\"], [\"FileDescription\", \"Win32 Cabinet Self-Extractor                                           \"], [\"InternalName\", \"Wextract                \"]]",
+        "body": "[[\"ProductVersion\", \"6.00.2900.2180\"], [\"ProductName\", \"Microsoft\\u00ae Windows\\u00ae Operating System\"], [\"OriginalFilename\", \"WEXTRACT.EXE            \"], [\"InternalName\", \"Wextract                \"], [\"FileVersion\", \"6.00.2900.2180 (xpsp_sp2_rtm.040803-2158)\"], [\"LegalCopyright\", \"\\u00a9 Microsoft Corporation. All rights reserved.\"], [\"FileDescription\", \"Win32 Cabinet Self-Extractor                                           \"], [\"CompanyName\", \"Microsoft Corporation\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -498,6 +498,10 @@
     "extracted": [],
     "supplementary": [
       {
+        "name": "features.json",
+        "sha256": "3542c2f3c74e0929f1718f4d6958362a8856e46114e51f65e945219d406bbd37"
+      },
+      {
         "name": "icon_4.ico",
         "sha256": "5a185a006bc6d5d45de669ad7261773253f486fa9dc87c4d6d4e0bdef2101f0f"
       },
@@ -516,10 +520,6 @@
       {
         "name": "icon_1.ico.thumb",
         "sha256": "5cb3a2426edc39554e75c2a2abea3b159d9df28f152a9c3dc7ac2dbc80e17740"
-      },
-      {
-        "name": "features.json",
-        "sha256": "7639b3d9669c57ff76a30c70065db75d8020b3fa2300c97e773af5706d5f0531"
       },
       {
         "name": "icon_2.ico",

@@ -435,7 +435,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"LegalCopyright\", \"                                                                                                                                                                                                                                                                                                            \"], [\"Comments\", \"This installation was built with InstallAware: http://www.installaware.com\"], [\"CompanyName\", \"Alteryx, Inc.                                                                                                                                                                                                                                                                                               \"], [\"FileDescription\", \"                                                                                                                                                                                                                                                                                                            \"], [\"FileVersion\", \"2020.3.1                                                                                                                                                                                                                                                                                                    \"]]",
+        "body": "[[\"FileVersion\", \"2020.3.1                                                                                                                                                                                                                                                                                                    \"], [\"LegalCopyright\", \"                                                                                                                                                                                                                                                                                                            \"], [\"FileDescription\", \"                                                                                                                                                                                                                                                                                                            \"], [\"CompanyName\", \"Alteryx, Inc.                                                                                                                                                                                                                                                                                               \"], [\"Comments\", \"This installation was built with InstallAware: http://www.installaware.com\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -532,7 +532,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, postalCode=92612, ST=CA, L=Irvine, ??=3345 Michelson Dr #400, O=Alteryx, Inc, OU=Core Development, CN=Alteryx, Inc\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Code Signing CA\"], [\"Serial Number\", \"666ea480a0f0a5ba6bbf2fc42195663a\"], [\"Valid From\", \"2019-02-07T00:00:00\"], [\"Valid To\", \"2022-02-06T23:59:59\"]]",
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, postalCode=92612, ST=CA, L=Irvine, ??=3345 Michelson Dr \\\\#400, O=Alteryx\\\\, Inc, OU=Core Development, CN=Alteryx\\\\, Inc\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Code Signing CA\"], [\"Serial Number\", \"666ea480a0f0a5ba6bbf2fc42195663a\"], [\"Valid From\", \"2019-02-07T00:00:00\"], [\"Valid To\", \"2022-02-06T23:59:59\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -547,7 +547,7 @@
               "666ea480a0f0a5ba6bbf2fc42195663a"
             ],
             "subject": [
-              "C=US, postalCode=92612, ST=CA, L=Irvine, ??=3345 Michelson Dr #400, O=Alteryx, Inc, OU=Core Development, CN=Alteryx, Inc"
+              "C=US, postalCode=92612, ST=CA, L=Irvine, ??=3345 Michelson Dr \\#400, O=Alteryx\\, Inc, OU=Core Development, CN=Alteryx\\, Inc"
             ],
             "thumbprint": [
               "414193f851264426b47a57b095f660ffb64d6124",
@@ -569,7 +569,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, postalCode=92612, ST=CA, L=Irvine, ??=3345 Michelson Dr #400, O=Alteryx, Inc, OU=Core Development, CN=Alteryx, Inc\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Code Signing CA\"], [\"SHA1\", \"414193f851264426b47a57b095f660ffb64d6124\"], [\"SHA256\", \"94c5edac9178c4b3b73d979f9ee722414c4622ba9b81a5faaffe6dea1c1d0a07\"], [\"MD5\", \"9b712f687aaaf5189299a1dbb58cb476\"], [\"Serial Number\", \"666ea480a0f0a5ba6bbf2fc42195663a\"], [\"Valid From\", \"2019-02-07T00:00:00\"], [\"Valid To\", \"2022-02-06T23:59:59\"]]",
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, postalCode=92612, ST=CA, L=Irvine, ??=3345 Michelson Dr \\\\#400, O=Alteryx\\\\, Inc, OU=Core Development, CN=Alteryx\\\\, Inc\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Code Signing CA\"], [\"SHA1\", \"414193f851264426b47a57b095f660ffb64d6124\"], [\"SHA256\", \"94c5edac9178c4b3b73d979f9ee722414c4622ba9b81a5faaffe6dea1c1d0a07\"], [\"MD5\", \"9b712f687aaaf5189299a1dbb58cb476\"], [\"Serial Number\", \"666ea480a0f0a5ba6bbf2fc42195663a\"], [\"Valid From\", \"2019-02-07T00:00:00\"], [\"Valid To\", \"2022-02-06T23:59:59\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -649,10 +649,6 @@
         "sha256": "97d1a1cbcb0bca7555eaffab83528f7345aadd8f0ca5655cd772c399b0433aff"
       },
       {
-        "name": "features.json",
-        "sha256": "a309965ff50cc4dbb7f9962cf033bad1753e6626b65aac031b666c71210702a6"
-      },
-      {
         "name": "icon_3.ico",
         "sha256": "aedaae644004428ea498f0eaf06f62d6398ff01b6a5b5ae36234ea8d43b28801"
       },
@@ -671,6 +667,10 @@
       {
         "name": "icon_1.ico.thumb",
         "sha256": "b108749ed9225ede9ffa214a90b9cc452b654c403e2d0a7c8ed36ebe8fb62eab"
+      },
+      {
+        "name": "features.json",
+        "sha256": "b73cccacb60c9e5bd802b7cc28b4832323b2c7b10253ea44d37e7d4f24558ac3"
       },
       {
         "name": "icon_4.ico",
@@ -714,7 +714,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "C=US, postalCode=92612, ST=CA, L=Irvine, ??=3345 Michelson Dr #400, O=Alteryx, Inc, OU=Core Development, CN=Alteryx, Inc"
+          "value": "C=US, postalCode=92612, ST=CA, L=Irvine, ??=3345 Michelson Dr \\#400, O=Alteryx\\, Inc, OU=Core Development, CN=Alteryx\\, Inc"
         }
       ],
       "cert.thumbprint": [
