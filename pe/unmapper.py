@@ -1,29 +1,41 @@
 import lief
 
 
-def is_mapped(pe: lief.PE.Binary) -> bool:
-    """
-    [To recognize if a file is mapped]
-    We check to see whether the .text section starts at
-        a) Its raw offset
-        b) Its virtual offset
+def is_mapped(pe: lief.PE.Binary, file_size_bytes: int) -> bool:
+    # This isn't an exact because it isn't possible to accurately determine
+    # the address where the PE was loaded in memory before getting dumped.
 
-    This can be done by verifying if from the section_content[raw_address:virtual_address] is all zeros.
-    If it is all zeros, we can conclude that it is mapped.
-    Additionally, we want to account for files that were potentially unmapped before.
-    We can conclude the file is unmapped if the virtual_address == raw_address
-    """
+    # We're just hoping to align the sections to where we could perform a better static analysis.
+    # Additional check added to filter out unmapped files
+    if pe.optional_header.checksum == pe.optional_header.computed_checksum:
+        return False
+
+    # Compute the anticipated static
+    virtual_size = pe.optional_header.sizeof_image
+    header_size = pe.optional_header.sizeof_headers
+    overlay_size = len(pe.overlay)
+    section_size = 0
+    for section in pe.sections:
+        section_size += section.size
+
+    anticipated_size = overlay_size + section_size + header_size
+    static_difference = abs(anticipated_size - file_size_bytes)
+    virtual_difference = abs(virtual_size - file_size_bytes)
+    if static_difference < virtual_difference:
+        return False
+
     text_section = pe.get_section(".text")
     if text_section is None:
         return False
     difference: int = text_section.virtual_address - text_section.offset
     if not difference:
         return False
-    section_content: bytes = text_section.content
+    # Order doesn't matter since are looking for all zeros.
+    numerical_equivalent = int.from_bytes(text_section.content[0:difference], byteorder="little")
 
-    difference_content: bytes = bytes(section_content[0:difference])
-    numerical_equivalent = int.from_bytes(difference_content, byteorder="little")
-    return not numerical_equivalent
+    # Last check performed, hopefully at this point we filtered our the false positives
+    if not numerical_equivalent:
+        return True
 
 
 def unmap(pe: lief.PE.Binary, in_data):
@@ -61,6 +73,7 @@ def unmap(pe: lief.PE.Binary, in_data):
 
 if __name__ == "__main__":
     import argparse
+    import os
     from pathlib import Path
 
     parser = argparse.ArgumentParser(prog="Pe Unmapper", description="Unmaps a PE file")
@@ -68,6 +81,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     in_data = Path(args.mapped_filename).read_bytes()
     pe_file = lief.parse(raw=in_data)
-    if is_mapped(pe_file):
+    if is_mapped(pe_file, os.path.getsize(args.mapped_filename)):
         out_data = unmap(pe_file, in_data)
         Path(f"{args.mapped_filename}_unmapped").write_bytes(out_data)
