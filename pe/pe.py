@@ -1845,21 +1845,24 @@ class PE(ServiceBase):
             return
 
         try:
-            if unmapper.is_mapped(self.binary):
+            if unmapper.is_mapped(self.binary, os.path.getsize(request.file_path)):
                 in_data = pathlib.Path(request.file_path).read_bytes()
                 out_data = unmapper.unmap(self.binary, in_data)
-                file_name = f"{request.sha256}_unmapped"
-                temp_path = os.path.join(self.working_directory, file_name)
-                with open(temp_path, "wb") as f:
-                    f.write(out_data)
-                self.request.add_extracted(
-                    temp_path,
-                    file_name,
-                    f"{file_name} unmapped from binary",
-                    safelist_interface=self.api_interface,
-                )
+                if len(out_data) <= len(in_data) * 2:
+                    file_name = f"{request.sha256}_unmapped"
+                    temp_path = os.path.join(self.working_directory, file_name)
+                    with open(temp_path, "wb") as f:
+                        f.write(out_data)
+                    self.request.add_extracted(
+                        temp_path,
+                        file_name,
+                        f"{file_name} unmapped from binary",
+                        safelist_interface=self.api_interface,
+                    )
         except AttributeError:
-            # TODO: Temporary fix to make sure the rest is shown to the user.
+            # Some PE are so corrupted they cause LIEF to not be able to recreate a new PE out of the modified bytes.
+            # We will ignore those and keep going to make sure the rest is shown to the user.
+            # The raised error is the following:
             # AttributeError: 'NoneType' object has no attribute 'remove_all_relocations'
             pass
 
