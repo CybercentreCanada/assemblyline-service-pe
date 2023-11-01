@@ -11,6 +11,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -34,6 +35,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -56,6 +58,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Authentihash",
         "zeroize_on_tag_safe": false
@@ -68,6 +71,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Sections",
         "zeroize_on_tag_safe": false
@@ -80,6 +84,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -99,12 +104,13 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.483039791325532], [\"Entropy without padding\", 5.492488740352963], [\"Offset\", 38400], [\"Size\", 10240], [\"Virtual Size\", 10212], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"c5aa571eb61c8308fbd46537b5406550\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.42616, 3.2186, 3.2719, 3.26577, 3.26728, 3.33306, 3.23474, 2.87559, 2.728, 3.30187, 3.24925, 3.27352, 3.3307, 3.25726, 3.32615, 3.08595, 4.29762, 4.73779, 4.53772, 4.65743, 4.80403, 4.9476, 4.74348, 4.83773, 4.72484, 4.73421, 4.78619, 4.85137, 4.61253, 4.95944, 4.35927, 4.6642, 4.56167, 4.95435, 4.73345, 4.79252, 4.7269, 4.66399, 4.96095, 4.31651, 4.46452, 4.80005, 4.52766, 4.70306, 4.79133, 4.5219, 4.85673, 4.70251, 4.80587, 4.4154]}}, {}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.483039791325532], [\"Entropy without padding\", 5.492488740352963], [\"Offset\", 38400], [\"Size\", 10240], [\"Virtual Size\", 10212], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"c5aa571eb61c8308fbd46537b5406550\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.5097, 3.38079, 3.44274, 3.37662, 3.47848, 3.30282, 2.61614, 3.44696, 3.36256, 3.41178, 3.38993, 3.48986, 3.27205, 4.52777, 4.70938, 4.68572, 4.86746, 4.90454, 4.64546, 4.85303, 4.77494, 4.98797, 4.68767, 4.96617, 4.42854, 4.7958, 4.92732, 4.81074, 4.88643, 4.75213, 4.86739, 4.44864, 4.54685, 4.78544, 4.78205, 4.92541, 4.54853, 4.99354, 4.9982, 4.53944]}}, {}]]",
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -130,6 +136,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -162,6 +169,7 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {},
         "title_text": "High section entropy",
         "zeroize_on_tag_safe": false
@@ -174,6 +182,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -199,6 +208,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -230,6 +240,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "kernel32.dll",
         "zeroize_on_tag_safe": false
@@ -242,6 +253,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "user32.dll",
         "zeroize_on_tag_safe": false
@@ -254,6 +266,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "gdi32.dll",
         "zeroize_on_tag_safe": false
@@ -266,6 +279,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "SHELL32.DLL",
         "zeroize_on_tag_safe": false
@@ -278,6 +292,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "COMCTL32.DLL",
         "zeroize_on_tag_safe": false
@@ -290,6 +305,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "advapi32.dll",
         "zeroize_on_tag_safe": false
@@ -302,6 +318,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "msvcrt.dll",
         "zeroize_on_tag_safe": false
@@ -314,6 +331,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "OLEAUT32.DLL",
         "zeroize_on_tag_safe": false
@@ -326,6 +344,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -352,6 +371,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Icons",
         "zeroize_on_tag_safe": false
@@ -371,6 +391,7 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {},
         "title_text": "Version",
         "zeroize_on_tag_safe": false
@@ -383,6 +404,7 @@
         "classification": "TLP:C",
         "depth": 2,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "fixed_file_info",
         "zeroize_on_tag_safe": false
@@ -401,6 +423,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Summary",
         "zeroize_on_tag_safe": false
@@ -413,6 +436,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false

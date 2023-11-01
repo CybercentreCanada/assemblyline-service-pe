@@ -11,6 +11,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -34,6 +35,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -56,6 +58,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Authentihash",
         "zeroize_on_tag_safe": false
@@ -75,6 +78,7 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {},
         "title_text": "Invalid optional header checksum",
         "zeroize_on_tag_safe": false
@@ -87,6 +91,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Sections",
         "zeroize_on_tag_safe": false
@@ -99,6 +104,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -124,6 +130,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -143,12 +150,13 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.122246951576611], [\"Entropy without padding\", 4.122246951576611], [\"Offset\", 109056], [\"Size\", 6144], [\"Virtual Size\", 18304], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"383d8d8a2b1146e18a9e3d82380016b2\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.08961, 4.20325, 4.66433, 4.72918, 2.18623, 1.86583, 2.00785, 0.512, 0.24527, 1.73377, 2.95326, 3.31014, 3.4984, 3.38088, 3.38346, 0.69715, 2.07909, 2.50367, 1.14638, 0.53494, 1.80303, 1.67226, 0.62092, 1.03902, 0.13615, 3.26888, 1.77051, 1.89356, 3.2713, 4.28065, 4.36764, 4.19876, 4.28781, 4.10176, 4.46503, 3.21203, 3.12835, 2.7656, 2.06194, 5.13407, 6.48508, 6.26675, 6.19196, 6.61516, 2.11154, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.122246951576611], [\"Entropy without padding\", 4.122246951576611], [\"Offset\", 109056], [\"Size\", 6144], [\"Virtual Size\", 18304], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"383d8d8a2b1146e18a9e3d82380016b2\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.31205, 5.0067, 1.99424, 1.22689, 1.07879, 4.07118, 3.6448, 1.7285, 2.44813, 1.15865, 1.68281, 0.85687, 2.9636, 2.97264, 4.38579, 4.17594, 4.38003, 3.15535, 2.88077, 6.97876, 7.0548, 2.36616, 0.0, 0.0]}}, {}]]",
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -174,6 +182,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -206,18 +215,20 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {},
         "title_text": "High section entropy",
         "zeroize_on_tag_safe": false
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.926923515941562], [\"Entropy without padding\", 5.008268291170842], [\"Offset\", 256000], [\"Size\", 7168], [\"Virtual Size\", 7008], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"f066b7466e3370298c5fa0eb03830189\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.50093, 5.55375, 5.05058, 5.40184, 5.2486, 5.68393, 5.10504, 5.29698, 5.06345, 5.50694, 5.16129, 5.48698, 5.04854, 5.17156, 5.23348, 5.39889, 5.5453, 5.11269, 4.70566, 4.64535, 4.40522, 4.47964, 4.62756, 4.61472, 4.55532, 4.53075, 4.85725, 4.81622, 4.44075, 4.27413, 4.8341, 2.2924, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.926923515941562], [\"Entropy without padding\", 5.008268291170842], [\"Offset\", 256000], [\"Size\", 7168], [\"Virtual Size\", 7008], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"f066b7466e3370298c5fa0eb03830189\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.96973, 5.8751, 5.8978, 5.83545, 5.80963, 5.67815, 5.73387, 5.8603, 5.97558, 5.84352, 5.07714, 4.86922, 4.94387, 5.08239, 5.1756, 5.32405, 4.69832, 4.09149, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -243,6 +254,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -274,6 +286,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "KERNEL32.dll",
         "zeroize_on_tag_safe": false
@@ -286,6 +299,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "USER32.dll",
         "zeroize_on_tag_safe": false
@@ -298,6 +312,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "SHELL32.dll",
         "zeroize_on_tag_safe": false
@@ -310,6 +325,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -347,6 +363,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Version",
         "zeroize_on_tag_safe": false
@@ -359,6 +376,7 @@
         "classification": "TLP:C",
         "depth": 2,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "fixed_file_info",
         "zeroize_on_tag_safe": false
@@ -371,6 +389,7 @@
         "classification": "TLP:C",
         "depth": 2,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "string_file_info",
         "zeroize_on_tag_safe": false
@@ -383,6 +402,7 @@
         "classification": "TLP:C",
         "depth": 2,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "var_file_info",
         "zeroize_on_tag_safe": false
@@ -401,18 +421,20 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Summary",
         "zeroize_on_tag_safe": false
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 9]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 9]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.50326]}}, {}]]",
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false

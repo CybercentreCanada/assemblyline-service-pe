@@ -11,6 +11,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -41,6 +42,7 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {},
         "title_text": "Mismatch file size",
         "zeroize_on_tag_safe": false
@@ -53,6 +55,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Authentihash",
         "zeroize_on_tag_safe": false
@@ -65,18 +68,20 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Sections",
         "zeroize_on_tag_safe": false
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.059422517353408], [\"Entropy without padding\", 5.112963430412026], [\"Offset\", 512], [\"Size\", 6144], [\"Virtual Size\", 6052], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"9b2cc6f7bd18834ea8aa1e515542b583\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.2896, 3.51565, 3.56785, 3.88145, 3.66355, 3.91288, 3.69957, 3.17636, 3.33505, 4.3406, 4.46662, 4.41784, 2.46342, 1.88549, 3.68401, 3.87759, 2.7498, 3.93708, 3.60972, 3.34339, 2.99032, 3.94775, 4.38087, 3.0656, 4.0258, 4.44963, 4.41347, 4.29343, 4.12573, 4.23659, 4.38698, 4.37443, 4.68593, 4.48666, 4.36467, 4.30638, 3.09158, 3.2046, 3.16789, 3.27659, 3.21667, 3.25965, 4.66718, 3.60581, 5.23362, 4.62599, 5.1266, 2.66861, 1.03933, 1.15767]}}, {}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.059422517353408], [\"Entropy without padding\", 5.112963430412026], [\"Offset\", 512], [\"Size\", 6144], [\"Virtual Size\", 6052], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"9b2cc6f7bd18834ea8aa1e515542b583\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.19521, 3.91729, 4.0171, 3.9061, 4.13537, 4.19279, 2.54219, 3.83608, 4.16899, 3.35132, 4.44838, 4.03175, 4.63974, 4.25662, 4.42416, 4.65889, 4.58952, 3.56293, 3.26205, 3.35251, 4.67677, 5.22301, 4.47833, 1.13629]}}, {}]]",
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -96,12 +101,13 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.6100469133148], [\"Entropy without padding\", 4.735895077574975], [\"Offset\", 6656], [\"Size\", 3584], [\"Virtual Size\", 3448], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"fcff8c00a7936ce4c7c853f1559043fd\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.51042, 1.07036, 0.82729, 1.08627, 1.87021, 2.82441, 2.39779, 2.88677, 3.00623, 2.96318, 2.92492, 2.96936, 2.99096, 2.90395, 3.0898, 2.98047, 2.40828, 1.31411, 2.16584, 2.65276, 2.63334, 2.32715, 2.70335, 2.2236, 2.56407, 1.69298, 1.87955, 1.34641, 2.59189, 3.27247, 2.08332, 3.91193, 4.6507, 4.6507, 4.74994, 4.10774, 3.95607, 4.24148, 4.50791, 4.82556, 4.73691, 4.8055, 4.94577, 4.93471, 4.58918, 4.67619, 4.79272, 4.31993, 0.0, 0.0]}}, {}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.6100469133148], [\"Entropy without padding\", 4.735895077574975], [\"Offset\", 6656], [\"Size\", 3584], [\"Virtual Size\", 3448], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"fcff8c00a7936ce4c7c853f1559043fd\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.25139, 2.70711, 3.28407, 3.29494, 2.91717, 2.83041, 2.87292, 2.2669, 3.87454, 4.93461, 4.62749, 5.00105, 5.27651, 3.08431]}}, {}]]",
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -121,12 +127,13 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.08153941234324169], [\"Entropy without padding\", 1.584962500721156], [\"Offset\", 10240], [\"Size\", 512], [\"Virtual Size\", 12], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"4f0592c10a7143d718c4d47d03721f3e\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.67293, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.08153941234324169], [\"Entropy without padding\", 1.584962500721156], [\"Offset\", 10240], [\"Size\", 512], [\"Virtual Size\", 12], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"4f0592c10a7143d718c4d47d03721f3e\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.14737, 0.0]}}, {}]]",
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -152,6 +159,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Debugs",
         "zeroize_on_tag_safe": false
@@ -164,6 +172,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -189,6 +198,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -220,6 +230,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "mscoree.dll",
         "zeroize_on_tag_safe": false
@@ -232,6 +243,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -254,6 +266,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Icons",
         "zeroize_on_tag_safe": false
@@ -266,6 +279,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Version",
         "zeroize_on_tag_safe": false
@@ -278,6 +292,7 @@
         "classification": "TLP:C",
         "depth": 2,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "fixed_file_info",
         "zeroize_on_tag_safe": false
@@ -290,6 +305,7 @@
         "classification": "TLP:C",
         "depth": 2,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -315,6 +331,7 @@
         "classification": "TLP:C",
         "depth": 3,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "langcode_items 1",
         "zeroize_on_tag_safe": false
@@ -327,6 +344,7 @@
         "classification": "TLP:C",
         "depth": 4,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "items",
         "zeroize_on_tag_safe": false
@@ -339,6 +357,7 @@
         "classification": "TLP:C",
         "depth": 2,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "var_file_info",
         "zeroize_on_tag_safe": false
@@ -357,6 +376,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Summary",
         "zeroize_on_tag_safe": false
@@ -369,6 +389,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
@@ -381,6 +402,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Multiple PE stacked",
         "zeroize_on_tag_safe": false
