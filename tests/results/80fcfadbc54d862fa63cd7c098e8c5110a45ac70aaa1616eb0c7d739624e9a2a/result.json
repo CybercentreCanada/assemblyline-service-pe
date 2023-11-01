@@ -11,6 +11,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -34,6 +35,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -56,6 +58,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Authentihash",
         "zeroize_on_tag_safe": false
@@ -68,6 +71,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Sections",
         "zeroize_on_tag_safe": false
@@ -80,6 +84,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -99,12 +104,13 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.723705899534099], [\"Entropy without padding\", 5.157529285705733], [\"Offset\", 61440], [\"Size\", 12288], [\"Virtual Size\", 10860], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"22a388eb05652f7e7385fd96dbf4f498\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.92809, 5.36001, 6.22934, 7.11252, 4.99728, 4.79811, 5.0683, 3.9154, 4.34241, 4.43567, 4.61787, 2.83373, 6.00466, 4.73161, 4.62879, 4.57638, 4.69369, 4.70568, 3.58467, 0.40542, 2.19675, 0.14326, 2.64338, 2.25223, 3.90642, 3.86299, 2.75781, 3.17077, 2.56253, 2.67325, 2.77393, 2.48364, 2.32671, 2.91051, 3.08215, 3.03005, 3.27745, 4.06949, 4.74153, 5.17874, 4.7314, 4.8146, 4.82782, 4.8316, 1.07033, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.723705899534099], [\"Entropy without padding\", 5.157529285705733], [\"Offset\", 61440], [\"Size\", 12288], [\"Virtual Size\", 10860], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"22a388eb05652f7e7385fd96dbf4f498\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.92584, 5.35643, 6.50565, 7.12661, 4.16144, 5.41548, 4.87588, 3.40594, 4.81388, 4.35667, 4.06968, 4.20752, 5.30453, 4.63137, 4.64538, 4.5451, 4.88827, 4.12597, 0.61828, 2.25203, 0.333, 2.52173, 2.25871, 3.84277, 4.00389, 2.7735, 3.02863, 2.59358, 2.75053, 2.72547, 2.40146, 2.51255, 3.14291, 2.97364, 3.3417, 3.53287, 4.80134, 5.00403, 4.76531, 4.87309, 4.74438, 5.00446, 2.20325, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -124,12 +130,13 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.8734741931452772], [\"Entropy without padding\", 1.8734741931452772], [\"Offset\", 73728], [\"Size\", 4096], [\"Virtual Size\", 4960], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"c712915e08027263c728ac732d6170f6\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.46109, 3.76908, 4.13517, 2.29987, 0.42081, 0.22641, 0.0, 2.24189, 1.79011, 1.73365, 1.8481, 1.59225, 1.38792, 0.18982, 0.0, 0.09502, 0.46923, 1.14344, 1.52487, 2.80886, 3.09154, 2.29399, 2.09865, 2.30543, 2.99709, 2.55391, 3.14094, 1.67414, 0.2844, 2.236, 1.9274, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.8734741931452772], [\"Entropy without padding\", 1.8734741931452772], [\"Offset\", 73728], [\"Size\", 4096], [\"Virtual Size\", 4960], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"c712915e08027263c728ac732d6170f6\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.61327, 0.95254, 1.71923, 1.79067, 0.61234, 1.04744, 3.19761, 3.29869, 3.25395, 1.71577, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -149,12 +156,13 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.262646695466118], [\"Entropy without padding\", 3.3918952375055094], [\"Offset\", 77824], [\"Size\", 4096], [\"Virtual Size\", 1208], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"849cfa6632506b9d339fed8b36340133\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.39336, 2.28469, 2.52313, 2.97543, 3.15814, 2.95103, 2.93185, 3.08375, 3.16259, 3.0741, 3.11381, 2.84709, 3.04543, 2.95946, 2.20829, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.262646695466118], [\"Entropy without padding\", 3.3918952375055094], [\"Offset\", 77824], [\"Size\", 4096], [\"Virtual Size\", 1208], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"849cfa6632506b9d339fed8b36340133\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.42147, 3.2591, 3.3518, 3.32824, 2.54844, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -174,12 +182,13 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.5363847191517674], [\"Entropy without padding\", 4.639863572600817], [\"Offset\", 81920], [\"Size\", 8192], [\"Virtual Size\", 5782], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"90ad33f24bca2deecaec93b145f445b5\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.51726, 5.49024, 5.19361, 5.699, 5.18848, 5.50617, 5.5725, 5.29528, 5.31239, 5.21662, 5.53979, 5.6616, 5.349, 5.53965, 5.64642, 5.00971, 5.02123, 4.90494, 4.57486, 4.84581, 0.74469, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.5363847191517674], [\"Entropy without padding\", 4.639863572600817], [\"Offset\", 81920], [\"Size\", 8192], [\"Virtual Size\", 5782], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"90ad33f24bca2deecaec93b145f445b5\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.80092, 5.50737, 5.87348, 5.75111, 5.92555, 5.85135, 5.89885, 6.05357, 5.95989, 5.73763, 5.11848, 5.23154, 4.88667, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -205,6 +214,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -230,6 +240,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Debugs",
         "zeroize_on_tag_safe": false
@@ -242,6 +253,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -267,6 +279,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -289,6 +302,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -312,6 +326,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -343,6 +358,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "VERSION.dll",
         "zeroize_on_tag_safe": false
@@ -355,6 +371,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "KERNEL32.dll",
         "zeroize_on_tag_safe": false
@@ -367,6 +384,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "ADVAPI32.dll",
         "zeroize_on_tag_safe": false
@@ -379,6 +397,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -401,6 +420,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Version",
         "zeroize_on_tag_safe": false
@@ -413,6 +433,7 @@
         "classification": "TLP:C",
         "depth": 2,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "fixed_file_info",
         "zeroize_on_tag_safe": false
@@ -425,6 +446,7 @@
         "classification": "TLP:C",
         "depth": 2,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -450,6 +472,7 @@
         "classification": "TLP:C",
         "depth": 3,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "langcode_items 1",
         "zeroize_on_tag_safe": false
@@ -462,6 +485,7 @@
         "classification": "TLP:C",
         "depth": 4,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "items",
         "zeroize_on_tag_safe": false
@@ -474,6 +498,7 @@
         "classification": "TLP:C",
         "depth": 2,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "var_file_info",
         "zeroize_on_tag_safe": false
@@ -492,6 +517,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Summary",
         "zeroize_on_tag_safe": false
@@ -504,6 +530,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
@@ -515,7 +542,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "42e5eac1b1d955f63c0ea7fcbf2aff0453881ffd453e3d4b29fd8951f4a5741a"
+        "sha256": "d8384d47116a677cf0ee802b590e540d15d012f24592e7085f5527662508c78f"
       }
     ]
   },

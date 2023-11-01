@@ -11,6 +11,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -34,6 +35,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -56,6 +58,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Authentihash",
         "zeroize_on_tag_safe": false
@@ -68,6 +71,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Sections",
         "zeroize_on_tag_safe": false
@@ -80,6 +84,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -99,12 +104,13 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.2709549389208945], [\"Entropy without padding\", 6.242260376823509], [\"Offset\", 1751552], [\"Size\", 4608], [\"Virtual Size\", 4444], [\"Characteristics\", \"CNT_CODE, MEM_LOCKED, MEM_READ, MEM_WRITE\"], [\"MD5\", \"06646d0c5c3bd5eb1138b8aee1385550\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.34024, 1.9876, 3.8403, 5.04675, 5.10839, 4.72132, 4.95785, 5.00901, 4.90145, 4.67544, 4.84641, 4.70509, 5.06011, 4.64367, 4.88415, 4.86374, 5.15425, 5.06823, 5.11124, 4.93922, 4.99275, 5.20537, 5.26177, 4.9096, 5.17575, 5.12462, 5.13274, 5.02524, 5.04672, 5.13274, 5.10312, 4.99035, 5.06011, 4.90957, 4.99559, 4.73998, 4.79001, 4.84426, 4.79923, 4.41241, 4.31015, 4.49469, 4.14183, 3.4089, 3.04321, 2.83506, 0.9331, 1.95282, 2.76218, 2.72138]}}, {}]]",
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.2709549389208945], [\"Entropy without padding\", 6.242260376823509], [\"Offset\", 1751552], [\"Size\", 4608], [\"Virtual Size\", 4444], [\"Characteristics\", \"CNT_CODE, MEM_LOCKED, MEM_READ, MEM_WRITE\"], [\"MD5\", \"06646d0c5c3bd5eb1138b8aee1385550\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.73938, 5.77345, 5.65605, 5.43581, 5.37943, 5.44865, 5.70985, 5.65821, 5.78983, 5.71511, 5.727, 5.80208, 5.64671, 5.52429, 5.29318, 4.48345, 2.93056, 2.94005]}}, {}]]",
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -137,6 +143,7 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {},
         "title_text": "Malicious section name",
         "zeroize_on_tag_safe": false
@@ -149,6 +156,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "pe": {
@@ -171,6 +179,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Icons",
         "zeroize_on_tag_safe": false
@@ -189,6 +198,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Summary",
         "zeroize_on_tag_safe": false
@@ -201,6 +211,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
@@ -211,16 +222,16 @@
     "extracted": [],
     "supplementary": [
       {
-        "name": "features.json",
-        "sha256": "36fe5f75164083acd3a0a5d30aa25ec68ce0ed296562c081a9e067de956bbc42"
-      },
-      {
         "name": "icon_0.ico",
         "sha256": "770ea4ce584f30c47c99f24ed8a2c0bd0322347e870096cd0f9d546286d4922f"
       },
       {
         "name": "icon_0.ico.thumb",
         "sha256": "770ea4ce584f30c47c99f24ed8a2c0bd0322347e870096cd0f9d546286d4922f"
+      },
+      {
+        "name": "features.json",
+        "sha256": "bc7a0480cdd40c09be1013a81dbc341a3e743b24d75c9e4c2763accd4aa950c9"
       }
     ]
   },
