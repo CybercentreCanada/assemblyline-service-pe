@@ -15,6 +15,7 @@ import ordlookup
 import ssdeep
 from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline.odm.models.ontology.filetypes import PE as PE_ODM
+from assemblyline_v4_service.common.task import PARENT_RELATION
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.result import (
@@ -1209,7 +1210,8 @@ class PE(ServiceBase):
                     except (OSError, ValueError):
                         unshowable_icons.append(f"icon_{idx}.ico")
                         self.request.add_supplementary(
-                            temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file"
+                            temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file",
+                            parent_relation=PARENT_RELATION.EXTRACTED
                         )
                     except Image.DecompressionBombError:
                         heur = Heuristic(28)
@@ -1220,6 +1222,7 @@ class PE(ServiceBase):
                         unshowable_icons.append(f"icon_{idx}.ico")
                         self.request.add_supplementary(
                             temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file"
+                            parent_relation=PARENT_RELATION.EXTRACTED
                         )
 
                 self.features["resources_manager"]["icons"] = icons
@@ -1594,7 +1597,10 @@ class PE(ServiceBase):
                 temp_path = os.path.join(self.working_directory, file_name)
                 with open(temp_path, "wb") as myfile:
                     myfile.write(raw_cert)
-                self.request.add_supplementary(temp_path, file_name, f"{file_name} extracted from binary's resources")
+                self.request.add_supplementary(
+                    temp_path, file_name, f"{file_name} extracted from binary's resources"
+                    parent_relation=PARENT_RELATION.EXTRACTED
+                )
                 sub_sub_res.add_item("SHA1", hashlib.sha1(raw_cert).hexdigest())
                 sub_sub_res.add_item("SHA256", hashlib.sha256(raw_cert).hexdigest())
                 sub_sub_res.add_item("MD5", hashlib.md5(raw_cert).hexdigest())
