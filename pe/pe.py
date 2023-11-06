@@ -15,7 +15,6 @@ import ordlookup
 import ssdeep
 from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline.odm.models.ontology.filetypes import PE as PE_ODM
-from assemblyline_v4_service.common.task import PARENT_RELATION
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.result import (
@@ -32,6 +31,7 @@ from assemblyline_v4_service.common.result import (
     TableSectionBody,
     TextSectionBody,
 )
+from assemblyline_v4_service.common.task import PARENT_RELATION
 from PIL import Image
 
 from . import unmapper
