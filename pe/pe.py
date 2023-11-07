@@ -656,6 +656,8 @@ class PE(ServiceBase):
         if len(self.binary.sections) == 0:
             res.add_line("0 sections found in executable")
             res.set_heuristic(19)
+        is_text_section_executable = False
+        are_non_text_sections_executable = False
         for section in self.binary.sections:
             if section.size > len(section.content):
                 full_section_data = bytearray(section.content) + section.padding
@@ -739,7 +741,21 @@ class PE(ServiceBase):
                 heur_section.add_section_part(heur_kv_body)
                 section_section.add_subsection(heur_section)
 
+            if section.name == ".text" and any(
+                "EXECUTE".lower() in characteristic.lower() for characteristic in section_dict["characteristics_list"]
+            ):
+                is_text_section_executable = True
+
+            elif section.name != ".text" and any(
+                "EXECUTE".lower() in characteristic.lower() for characteristic in section_dict["characteristics_list"]
+            ):
+                are_non_text_sections_executable = True
+
             res.add_subsection(section_section)
+
+        if is_text_section_executable and not are_non_text_sections_executable:
+            text_exec_heur = Heuristic(33)
+            _ = ResultSection(text_exec_heur.name, text_exec_heur.description, heuristic=text_exec_heur, parent=res)
 
         empty_names = [section.name for section in self.binary.sections if section.name.strip() == ""]
         if empty_names:

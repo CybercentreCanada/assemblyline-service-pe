@@ -259,6 +259,13 @@ heuristics:
     name: PE file does not import any functions
     score: 0
 
+  - description: >-
+      PE file has an executable .text section and no other executable section
+    filetype: "executable/windows"
+    heur_id: 33
+    name: PE file only has executable .text section
+    score: 0
+
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
   cpu_cores: 1
