@@ -202,6 +202,26 @@
       },
       {
         "auto_collapse": false,
+        "body": "PE file has an executable .text section and no other executable section",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 33,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "PE file only has executable .text section",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
         "body": null,
         "body_config": {},
         "body_format": "TEXT",
@@ -724,6 +744,11 @@
       {
         "attack_ids": [],
         "heur_id": 24,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 33,
         "signatures": []
       }
     ],
