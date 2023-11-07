@@ -228,6 +228,26 @@
       },
       {
         "auto_collapse": false,
+        "body": "Section name: _RDATA",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 34,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "PE file contains sections with non-standard names",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
         "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.082102642648605], [\"Entropy without padding\", 4.62484505380788], [\"Offset\", 34520576], [\"Size\", 142336], [\"Virtual Size\", 6120], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"ba30cb369d6dfb8b58e89051d88bf60e\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.6831, 4.0165, 3.28846, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.75009]}}, {}]]",
         "body_config": {},
         "body_format": "MULTI",
@@ -934,6 +954,11 @@
       {
         "attack_ids": [],
         "heur_id": 33,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 34,
         "signatures": []
       }
     ],

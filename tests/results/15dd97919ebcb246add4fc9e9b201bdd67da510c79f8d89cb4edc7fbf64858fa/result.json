@@ -1,0 +1,1069 @@
+{
+  "extra": {
+    "drop_file": false,
+    "score": 400,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1694788977 (2023-09-15 14:42:57 +00:00 (UTC))\"], [\"Entrypoint\", \"0xb340\"], [\"Machine\", \"AMD64\"], [\"Magic\", \"PE32_PLUS\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"14.36\"], [\"Operating System version\", \"5.2\"], [\"Subsystem version\", \"5.2\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x0070c090\"]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  1694788977,
+                  "2023-09-15 14:42:57 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"4b75a28de5be0cac449d1576354395ca\"]], {}], [\"TABLE\", [{\"ID\": \"0x01027f1a\", \"Compiler Information\": \"Unknown object 0x01027f1a\", \"Count\": 1}, {\"ID\": \"0x01047f1a\", \"Compiler Information\": \"Unknown object 0x01047f1a\", \"Count\": 20}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 139}, {\"ID\": \"0x0101784b\", \"Compiler Information\": \"Unknown object 0x0101784b\", \"Count\": 11}, {\"ID\": \"0x01037ea4\", \"Compiler Information\": \"Unknown object 0x01037ea4\", \"Count\": 9}, {\"ID\": \"0x01047ea4\", \"Compiler Information\": \"Unknown object 0x01047ea4\", \"Count\": 17}, {\"ID\": \"0x01057ea4\", \"Compiler Information\": \"Unknown object 0x01057ea4\", \"Count\": 40}, {\"ID\": \"0x00fd7ea4\", \"Compiler Information\": \"Unknown object 0x00fd7ea4\", \"Count\": 4}, {\"ID\": \"0x0104784b\", \"Compiler Information\": \"Unknown object 0x0104784b\", \"Count\": 10}, {\"ID\": \"0x0105784b\", \"Compiler Information\": \"Unknown object 0x0105784b\", \"Count\": 191}, {\"ID\": \"0x0103784b\", \"Compiler Information\": \"Unknown object 0x0103784b\", \"Count\": 7}], {\"column_order\": [\"ID\", \"Compiler Information\", \"Count\"]}]]",
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "rich_header": {
+                "hash": [
+                  "4b75a28de5be0cac449d1576354395ca"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Rich Headers - Key: 3178397848",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"File Size\", 7380816], [\"Virtual Size\", 360448]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 24,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Mismatch file size",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"sha512\", \"6bca64ab8b23234365ccfd3c74cd0560faca609242084ce7b6c21922beb29f0182578c381af462623368a208f972176934a3cb41ff1941e01a8c31cf45317caf\"], [\"sha384\", \"1d9f8181d0c5ec643dfd83edc2bf5d1bbc66934cb83d4ee4f051634c7c467a85fb04b0e5302afd24e475c92cbd6ea880\"], [\"sha256\", \"5857498dd0e6e244dfba5f2d6a4c99bdd0d57d8ede780e838127e43c7c1369b6\"], [\"sha1\", \"7ca8f16cd62783ce179d2535aebce63968055835\"], [\"md5\", \"681331d8e2c3b6e95ae575de61694592\"]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.481392346963735], [\"Entropy without padding\", 6.490380113200405], [\"Offset\", 1024], [\"Size\", 166400], [\"Virtual Size\", 165936], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"43c493e09cbcb9451c206c945421035d\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.14721, 5.84372, 5.97824, 5.87542, 5.92105, 5.89512, 5.79199, 5.97323, 6.26992, 6.27251, 6.06476, 6.32295, 6.1358, 6.29978, 6.36173, 6.3358, 6.28228, 6.25319, 6.32631, 6.05372, 6.16281, 6.26708, 6.30378, 6.34278, 6.37794, 6.3804, 6.2807, 6.424, 6.251, 6.27762, 6.3841, 6.36927, 6.50495, 6.49793, 6.36091, 6.24783, 6.47107, 6.41357, 6.30037, 6.24113, 6.09916, 6.5008, 6.20257, 6.45177, 6.42883, 6.44435, 6.36063, 6.47365, 6.28192, 5.66189]}}, {}]]",
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "43c493e09cbcb9451c206c945421035d"
+                ],
+                "name": [
+                  ".text"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .text",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.822756630008918], [\"Entropy without padding\", 5.838679827004181], [\"Offset\", 167424], [\"Size\", 76800], [\"Virtual Size\", 76510], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"51ae701fd86f619a1c595e831aba122f\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.12075, 4.32121, 4.7669, 4.5543, 4.65158, 4.89581, 4.59868, 5.19168, 7.72524, 7.82988, 7.93332, 7.89392, 7.90067, 7.94493, 7.20418, 4.01395, 4.7677, 2.54197, 4.34105, 3.42835, 3.2024, 3.6403, 3.5042, 4.50222, 3.60952, 6.51825, 7.76529, 5.46195, 2.94692, 3.02777, 2.43501, 2.5693, 2.76672, 2.73925, 2.54467, 2.31471, 3.88727, 5.4352, 7.3953, 7.30832, 5.15289, 5.0545, 4.95457, 4.99682, 5.09636, 5.07744, 5.11767, 4.0487, 5.09885, 4.65251]}}, {}]]",
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "51ae701fd86f619a1c595e831aba122f"
+                ],
+                "name": [
+                  ".rdata"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rdata",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.8096886543499555], [\"Entropy without padding\", 1.8096886543499555], [\"Offset\", 244224], [\"Size\", 3584], [\"Virtual Size\", 66552], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"afabb66fdcd2825de5909f10c900fca7\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.03628, 0.97845, 1.15984, 1.05949, 1.53262, 1.88604, 0.93126, 1.88604, 1.3804, 3.17318, 0.80568, 1.09366, 2.17264, 0.0]}}, {}]]",
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "afabb66fdcd2825de5909f10c900fca7"
+                ],
+                "name": [
+                  ".data"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .data",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.22608226661588], [\"Entropy without padding\", 5.38202882877266], [\"Offset\", 247808], [\"Size\", 8704], [\"Virtual Size\", 8352], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"f240472d9759abd59c5c8d4453da2010\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.82611, 3.97524, 4.02426, 3.92337, 4.04437, 4.06819, 3.84199, 3.59726, 3.87673, 3.73888, 3.875, 4.00461, 4.43248, 4.5155, 4.43168, 4.50069, 4.44946, 4.60483, 4.24444, 4.19202, 4.3987, 4.57834, 4.32558, 4.51502, 4.56059, 4.44324, 4.39748, 4.47441, 4.52156, 4.49558, 4.29137, 3.95175, 2.81408, 0.0]}}, {}]]",
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "f240472d9759abd59c5c8d4453da2010"
+                ],
+                "name": [
+                  ".pdata"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .pdata",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 2.7340766564339614], [\"Entropy without padding\", 3.670323350810626], [\"Offset\", 256512], [\"Size\", 512], [\"Virtual Size\", 348], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"b6dad7dcd2df1105a67518509f20385f\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.51451, 1.38063]}}, {}]]",
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "b6dad7dcd2df1105a67518509f20385f"
+                ],
+                "name": [
+                  "_RDATA"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - _RDATA",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Section name: _RDATA",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 34,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "PE file contains sections with non-standard names",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 7.709782468717958], [\"Entropy without padding\", 7.709681386376644], [\"Offset\", 257024], [\"Size\", 19456], [\"Virtual Size\", 19276], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"8f99c7b6145ab9b74bddb4afea9f778f\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.58749, 5.26146, 7.44212, 7.12246, 7.37865, 7.2995, 7.39842, 7.35815, 7.28468, 7.31331, 7.45877, 7.47153, 7.36002, 7.25288, 7.36614, 7.40236, 7.38006, 7.30968, 7.31616, 7.28652, 7.39226, 7.4146, 7.3821, 7.44301, 7.4294, 7.34669, 7.27971, 6.62555, 7.41621, 6.95759, 6.99075, 7.24801, 7.32582, 7.36945, 7.40115, 7.39342, 7.3792, 7.36223, 7.35668, 7.33647, 7.27167, 7.35403, 6.38871, 3.348, 3.45836, 4.08929, 4.88435, 5.15866, 5.1897, 4.69326]}}, {}]]",
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "8f99c7b6145ab9b74bddb4afea9f778f"
+                ],
+                "name": [
+                  ".rsrc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rsrc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Section name\", \".rsrc\"], [\"Entropy:\", 7.709782468717958], [\"Entropy without padding\", 7.709681386376644]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.58749, 5.26146, 7.44212, 7.12246, 7.37865, 7.2995, 7.39842, 7.35815, 7.28468, 7.31331, 7.45877, 7.47153, 7.36002, 7.25288, 7.36614, 7.40236, 7.38006, 7.30968, 7.31616, 7.28652, 7.39226, 7.4146, 7.3821, 7.44301, 7.4294, 7.34669, 7.27971, 6.62555, 7.41621, 6.95759, 6.99075, 7.24801, 7.32582, 7.36945, 7.40115, 7.39342, 7.3792, 7.36223, 7.35668, 7.33647, 7.27167, 7.35403, 6.38871, 3.348, 3.45836, 4.08929, 4.88435, 5.15866, 5.1897, 4.69326]}}, {}]]",
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 4,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "High section entropy",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.257664370396846], [\"Entropy without padding\", 5.403018774947754], [\"Offset\", 276480], [\"Size\", 2048], [\"Virtual Size\", 1880], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"11aaafc72361ec8886a740c3e209ceb3\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.71526, 4.63008, 4.76929, 4.65033, 4.63502, 4.62419, 4.71157, 2.3801]}}, {}]]",
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "11aaafc72361ec8886a740c3e209ceb3"
+                ],
+                "name": [
+                  ".reloc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .reloc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "PE file has an executable .text section and no other executable section",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 33,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "PE file only has executable .text section",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Debugs",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Timestamp\", \"1694788977 (2023-09-15 14:42:57 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "POGO",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "imports": {
+                "fuzzy": [
+                  "48:t/gub6EwoQ54rzSv6xvi2PmeV9R+hteS1Xc+pIuCJcgTkOtV0Kq14r:phVueVuhteS1Xc+pIustkiWHS"
+                ],
+                "imphash": [
+                  "0b5552dccd9d0a834cea55c0c8fc05be"
+                ],
+                "sorted_fuzzy": [
+                  "48:PA1LbFDXOtCtw9/w3+n1LZ51h3jOrG94hRX66xvrSvo4zwQu/gi5lEP:mvxXCCtw5Rn1LFhTOrG94hZ/G"
+                ],
+                "sorted_sha1": [
+                  "a166b28857ece0ef53dce3de6e81af774a3a3a53"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Imports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "CreateWindowExW, MessageBoxW, MessageBoxA, SystemParametersInfoW, DestroyIcon, SetWindowLongPtrW, GetWindowLongPtrW, GetClientRect, InvalidateRect, ReleaseDC, GetDC, DrawTextW, GetDialogBaseUnits, EndDialog, DialogBoxIndirectParamW, MoveWindow, SendMessageW",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "USER32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "380",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "COMCTL32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "GetStringTypeW, GetFileAttributesExW, HeapReAlloc, FlushFileBuffers, GetCurrentDirectoryW, IsValidCodePage, GetACP, GetModuleHandleW, MulDiv, GetLastError, SetDllDirectoryW, GetModuleFileNameW, GetProcAddress, GetCommandLineW, GetEnvironmentVariableW, GetOEMCP, ExpandEnvironmentStringsW, CreateDirectoryW, GetTempPathW, WaitForSingleObject, Sleep, GetExitCodeProcess, CreateProcessW, GetStartupInfoW, FreeLibrary, LoadLibraryExW, SetConsoleCtrlHandler, FindClose, FindFirstFileExW, CloseHandle, GetCurrentProcess, LocalFree, FormatMessageW, MultiByteToWideChar, WideCharToMultiByte, GetCPInfo, GetEnvironmentStringsW, FreeEnvironmentStringsW, GetProcessHeap, GetTimeZoneInformation, HeapSize, WriteConsoleW, SetEnvironmentVariableW, RtlUnwindEx, RtlCaptureContext, RtlLookupFunctionEntry, RtlVirtualUnwind, UnhandledExceptionFilter, SetUnhandledExceptionFilter, TerminateProcess, IsProcessorFeaturePresent, QueryPerformanceCounter, GetCurrentProcessId, GetCurrentThreadId, GetSystemTimeAsFileTime, InitializeSListHead, IsDebuggerPresent, SetEndOfFile, SetLastError, EnterCriticalSection, LeaveCriticalSection, DeleteCriticalSection, InitializeCriticalSectionAndSpinCount, TlsAlloc, TlsGetValue, TlsSetValue, TlsFree, EncodePointer, RaiseException, RtlPcToFileHeader, GetCommandLineA, CreateFileW, GetDriveTypeW, GetFileInformationByHandle, GetFileType, PeekNamedPipe, SystemTimeToTzSpecificLocalTime, FileTimeToSystemTime, GetFullPathNameW, RemoveDirectoryW, FindNextFileW, SetStdHandle, DeleteFileW, ReadFile, GetStdHandle, WriteFile, ExitProcess, GetModuleHandleExW, HeapFree, GetConsoleMode, ReadConsoleW, SetFilePointerEx, GetConsoleOutputCP, GetFileSizeEx, HeapAlloc, FlsAlloc, FlsGetValue, FlsSetValue, FlsFree, CompareStringW, LCMapStringW",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "KERNEL32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "OpenProcessToken, GetTokenInformation, ConvertStringSecurityDescriptorToSecurityDescriptorW, ConvertSidToStringSidW",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "ADVAPI32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "SelectObject, DeleteObject, CreateFontIndirectW",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "GDI32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Languages\", \"NEUTRAL\"], [\"Sublanguages\", \"DEFAULT\"]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "NEUTRAL"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"NEUTRAL\", \"Size\": \"16x16\", \"Size (bytes)\": 604, \"Saved as\": \"icon_0.ico\"}, {\"ID\": 2, \"Lang\": \"NEUTRAL\", \"Size\": \"24x24\", \"Size (bytes)\": 884, \"Saved as\": \"icon_1.ico\"}, {\"ID\": 3, \"Lang\": \"NEUTRAL\", \"Size\": \"32x32\", \"Size (bytes)\": 1173, \"Saved as\": \"icon_2.ico\"}, {\"ID\": 4, \"Lang\": \"NEUTRAL\", \"Size\": \"48x48\", \"Size (bytes)\": 1665, \"Saved as\": \"icon_3.ico\"}, {\"ID\": 5, \"Lang\": \"NEUTRAL\", \"Size\": \"64x64\", \"Size (bytes)\": 2039, \"Saved as\": \"icon_4.ico\"}, {\"ID\": 6, \"Lang\": \"NEUTRAL\", \"Size\": \"128x128\", \"Size (bytes)\": 3511, \"Saved as\": \"icon_5.ico\"}, {\"ID\": 7, \"Lang\": \"NEUTRAL\", \"Size\": \"0x0\", \"Size (bytes)\": 6269, \"Saved as\": \"icon_6.ico\"}], {\"column_order\": [\"ID\", \"Lang\", \"Size\", \"Size (bytes)\", \"Saved as\"]}], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"e7bd74dff2ba6fae2a004ffb484f905f891dd7c80d0a1245f1761342ed83b297\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"e7bd74dff2ba6fae2a004ffb484f905f891dd7c80d0a1245f1761342ed83b297\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_1.ico\", \"sha256\": \"a86fe1a32f33212fa8d70d84de84162347f24651058f70746ffdc27e39d645b5\", \"description\": \"Icon 1 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_1.ico.thumb\", \"sha256\": \"a86fe1a32f33212fa8d70d84de84162347f24651058f70746ffdc27e39d645b5\", \"description\": \"Icon 1 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_2.ico\", \"sha256\": \"edaf2fdd197d489dbc27e6b1e97ba1cba2491980a5bcb3adf0e0aaeda92feceb\", \"description\": \"Icon 2 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_2.ico.thumb\", \"sha256\": \"edaf2fdd197d489dbc27e6b1e97ba1cba2491980a5bcb3adf0e0aaeda92feceb\", \"description\": \"Icon 2 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_3.ico\", \"sha256\": \"d63c953705f0628232a0f5ea49955886a23d7fd2cc92fa6ac525923c8478e2e4\", \"description\": \"Icon 3 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_3.ico.thumb\", \"sha256\": \"d63c953705f0628232a0f5ea49955886a23d7fd2cc92fa6ac525923c8478e2e4\", \"description\": \"Icon 3 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_4.ico\", \"sha256\": \"fc67a85c9470a48f65eadcd7e4f92761f81d356eadce6841d10d06934039ce4a\", \"description\": \"Icon 4 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_4.ico.thumb\", \"sha256\": \"fc67a85c9470a48f65eadcd7e4f92761f81d356eadce6841d10d06934039ce4a\", \"description\": \"Icon 4 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_5.ico\", \"sha256\": \"c8811111e4197acce2f3dd70dfb96cd69558e2904c346f495d43da1d853e872b\", \"description\": \"Icon 5 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_5.ico.thumb\", \"sha256\": \"c8811111e4197acce2f3dd70dfb96cd69558e2904c346f495d43da1d853e872b\", \"description\": \"Icon 5 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_6.ico\", \"sha256\": \"68c23a451d06db811a28d2af1394b1eb45b5c8c43d5e355462abae442f30c594\", \"description\": \"Icon 6 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_6.ico.thumb\", \"sha256\": \"12d486ca0573847075f5a187614758749c662ac8cab9df83d78b4b6f78e61fd5\", \"description\": \"Icon 6 extracted from the PE file (thumbnail)\"}}], {}]]",
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Icons",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Type\", 0]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Version",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 63], [\"file_os\", \"NT_WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"APP\"], [\"file_version_LS\", 1247870977], [\"file_version_MS\", 655360], [\"product_version_LS\", 1247870977], [\"product_version_MS\", 655360], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "fixed_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "versions": {
+                "description": [
+                  "Command Line Interface for Microsoft\u00ae Volume Shadow Copy Service "
+                ],
+                "filename": [
+                  "VSSADMIN.EXE"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "string_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"040904B0\"], [\"type\", 1], [\"lang\", \"ENGLISH\"], [\"sublang\", \"ENGLISH_US\"], [\"code_page\", \"UTF_16\"]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 3,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "langcode_items 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"\", \"\"], [\"CompanyName\", \"Microsoft Corporation\"], [\"FileDescription\", \"Command Line Interface for Microsoft\\u00ae Volume Shadow Copy Service \"], [\"FileVersion\", \"10.0.19041.1 (WinBuild.160101.0800)\"], [\"InternalName\", \"VSSADMIN.EXE\"], [\"LegalCopyright\", \"\\u00a9 Microsoft Corporation. All rights reserved.\"], [\"OriginalFilename\", \"VSSADMIN.EXE\"], [\"ProductName\", \"Microsoft\\u00ae Windows\\u00ae Operating System\"], [\"ProductVersion\", \"10.0.19041.1\"]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 4,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "items",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78644233\"]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "var_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[{\"SHA256\": \"dc57187ae3dd67df49d7767ae411fe1afc45c2eccde4ade5f11b2ce66d5c69e9\", \"Type\": \"ICON\", \"Entropy\": 7.580478471285149}, {\"SHA256\": \"f23db9ad0aeee060403b20c259dbdaf1667d7b26866d40ee212349fda214f52b\", \"Type\": \"ICON\", \"Entropy\": 7.677816616595393}, {\"SHA256\": \"f8a5affa643c4432c648cc1647db74dfcc13b86d772fca95721f5b50ad774627\", \"Type\": \"ICON\", \"Entropy\": 7.793984289628107}, {\"SHA256\": \"0de42003dd3cd5497cc6a977fe3438cbe7b6b80825ba553bf7ed40eae63a0a19\", \"Type\": \"ICON\", \"Entropy\": 7.863040138272852}, {\"SHA256\": \"de21e7a46c1b6176562b93fa8f8e2a21900fade0559eb3d54a33933110a74703\", \"Type\": \"ICON\", \"Entropy\": 7.866458304826147}, {\"SHA256\": \"055ba777dfccc9307a90cf2b1afb0dc7760bdc5f7800d8261e40495dd46ad22c\", \"Type\": \"ICON\", \"Entropy\": 7.914342206278951}, {\"SHA256\": \"46fa89e7c14c9265637bb65ee902f5f40bff3f20955026e4cb88bc482d3c9574\", \"Type\": \"ICON\", \"Entropy\": 7.824704591953175}, {\"SHA256\": \"e7bef316b48763f4baac8ab1772aa26a4c5388e55f3a1839858c1152972b9a21\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.6119851867824972}, {\"SHA256\": \"811f83a74089413387dde1a6b349c9be29c1ddbacf8af5ab946600bce6d6a905\", \"Type\": \"VERSION\", \"Entropy\": 3.502963517901321}, {\"SHA256\": \"ee3cbdc16fdad94f28c7944c90bddfb5f154204a51ebdcfe9048eb2d4e397806\", \"Type\": \"MANIFEST\", \"Entropy\": 5.290484753293727}]",
+        "body_config": {
+          "column_order": [
+            "SHA256",
+            "Type",
+            "Entropy"
+          ]
+        },
+        "body_format": "TABLE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Summary",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Signatures",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 1], [\"Algorithm\", \"SHA256\"], [\"Content Info Algorithm\", \"SHA256\"], [\"Content Info Digest\", \"8d57e8d00e903b51c8dbf0db3ecef358338d9e7bca40098af84db781ebaf683d\"], [\"Content Info Content Type\", \"1.3.6.1.4.1.311.2.1.4\"]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Signature - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 1], [\"Digest Algorithm\", \"SHA256\"], [\"Authenticated Attributes\", \"SPC_SP_OPUS_INFO, CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST\"], [\"Unauthenticated Attributes\", \"GENERIC_TYPE\"]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Signer - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"serialNumber=407950, ??=IE, ??=Private Organization, C=IE, ST=Donegal, O=Akeo Consulting, CN=Akeo Consulting\"], [\"Issuer\", \"C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36\"], [\"Serial Number\", \"00bfb15001bbf592d4962a7797ea736fa3\"], [\"Valid From\", \"2021-09-29T00:00:00\"], [\"Valid To\", \"2024-09-28T23:59:59\"]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 3,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "cert": {
+            "issuer": [
+              "C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36"
+            ],
+            "serial_no": [
+              "00bfb15001bbf592d4962a7797ea736fa3"
+            ],
+            "subject": [
+              "serialNumber=407950, ??=IE, ??=Private Organization, C=IE, ST=Donegal, O=Akeo Consulting, CN=Akeo Consulting"
+            ],
+            "thumbprint": [
+              "3dbc3a2a0e9ce8803b422cfdbc60acd33164965d",
+              "60e992275cc7503a3eba5d391db8aeaaab001402d49aea3f7f5da3706df97327",
+              "5c82b2d08efe6ee0794b52d4309c5f37"
+            ],
+            "valid": {
+              "end": [
+                "2024-09-28T23:59:59"
+              ],
+              "start": [
+                "2021-09-29T00:00:00"
+              ]
+            }
+          }
+        },
+        "title_text": "Signer Certificate",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing Root R46\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=Comodo CA Limited, CN=AAA Certificate Services\"], [\"SHA1\", \"329b78a5c9ebc2043242de90ce1b7c6b1ba6c692\"], [\"SHA256\", \"7db9f7402a523dd338663b33d55aad0dd08cb67e687df0d4d98e7c5fca27efd1\"], [\"MD5\", \"2aa320982e00193fad3bd0ea5406e4cd\"], [\"Serial Number\", \"48fc93b46055948d36a7c98a89d69416\"], [\"Valid From\", \"2021-05-25T00:00:00\"], [\"Valid To\", \"2028-12-31T23:59:59\"]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Certificate - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36\"], [\"Issuer\", \"C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing Root R46\"], [\"SHA1\", \"0185ff9961ff0aa2e431817948c28e83d3f3ec70\"], [\"SHA256\", \"384e9f98355a133565eb03083b79e71a46f00c21352ed7c06990d841228cbe88\"], [\"MD5\", \"d386d4056a495dd632c4c9c8be857406\"], [\"Serial Number\", \"33d708a891405319e2a5bbd339b9ad6e\"], [\"Valid From\", \"2021-03-22T00:00:00\"], [\"Valid To\", \"2036-03-21T23:59:59\"]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Certificate - 2",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"Version\", 3], [\"Subject\", \"serialNumber=407950, ??=IE, ??=Private Organization, C=IE, ST=Donegal, O=Akeo Consulting, CN=Akeo Consulting\"], [\"Issuer\", \"C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36\"], [\"SHA1\", \"3dbc3a2a0e9ce8803b422cfdbc60acd33164965d\"], [\"SHA256\", \"60e992275cc7503a3eba5d391db8aeaaab001402d49aea3f7f5da3706df97327\"], [\"MD5\", \"5c82b2d08efe6ee0794b52d4309c5f37\"], [\"Serial Number\", \"00bfb15001bbf592d4962a7797ea736fa3\"], [\"Valid From\", \"2021-09-29T00:00:00\"], [\"Valid To\", \"2024-09-28T23:59:59\"]]",
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Certificate - 3",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"TEXT\", \"The signature does not match the authentihash data found for sha256\", {}], [\"ORDERED_KEY_VALUE\", [[\"Signature\", \"8d57e8d00e903b51c8dbf0db3ecef358338d9e7bca40098af84db781ebaf683d\"], [\"Authentihash data\", \"5857498dd0e6e244dfba5f2d6a4c99bdd0d57d8ede780e838127e43c7c1369b6\"]], {}]]",
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 300,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Signature hash not found in authentihash data",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 7102288]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.99833, 7.99864, 7.9982, 7.99835, 7.9986, 7.99868, 7.99856, 7.99858, 7.99877, 7.99877, 7.99858, 7.99656, 7.99827, 7.99848, 7.99858, 7.99881, 7.99873, 7.99862, 7.99873, 7.99869, 7.99868, 7.99878, 7.99866, 7.99855, 7.99837, 7.99713, 7.99392, 7.99843, 7.99874, 7.99863, 7.99887, 7.99862, 7.9987, 7.99847, 7.99459, 7.99769, 7.99779, 7.99828, 7.9986, 7.99777, 7.99807, 7.99792, 7.99782, 7.99831, 7.99788, 7.9977, 7.9976, 7.99791, 7.99777, 7.97614]}}, {}]]",
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [
+      {
+        "name": "overlay",
+        "sha256": "6f5418d6900365896f62f5da8afab4cd63d4ea0cf4ed2184ee1cf1c8f7552a70"
+      }
+    ],
+    "supplementary": [
+      {
+        "name": "icon_6.ico.thumb",
+        "sha256": "12d486ca0573847075f5a187614758749c662ac8cab9df83d78b4b6f78e61fd5"
+      },
+      {
+        "name": "certificate.1.2",
+        "sha256": "384e9f98355a133565eb03083b79e71a46f00c21352ed7c06990d841228cbe88"
+      },
+      {
+        "name": "features.json",
+        "sha256": "3aff835a78c7d8415b3ca004f3e43c55a9a69e80a3263b81ffbb5a5f612ce8d7"
+      },
+      {
+        "name": "certificate.1.3",
+        "sha256": "60e992275cc7503a3eba5d391db8aeaaab001402d49aea3f7f5da3706df97327"
+      },
+      {
+        "name": "icon_6.ico",
+        "sha256": "68c23a451d06db811a28d2af1394b1eb45b5c8c43d5e355462abae442f30c594"
+      },
+      {
+        "name": "certificate.1.1",
+        "sha256": "7db9f7402a523dd338663b33d55aad0dd08cb67e687df0d4d98e7c5fca27efd1"
+      },
+      {
+        "name": "icon_1.ico",
+        "sha256": "a86fe1a32f33212fa8d70d84de84162347f24651058f70746ffdc27e39d645b5"
+      },
+      {
+        "name": "icon_1.ico.thumb",
+        "sha256": "a86fe1a32f33212fa8d70d84de84162347f24651058f70746ffdc27e39d645b5"
+      },
+      {
+        "name": "icon_5.ico",
+        "sha256": "c8811111e4197acce2f3dd70dfb96cd69558e2904c346f495d43da1d853e872b"
+      },
+      {
+        "name": "icon_5.ico.thumb",
+        "sha256": "c8811111e4197acce2f3dd70dfb96cd69558e2904c346f495d43da1d853e872b"
+      },
+      {
+        "name": "icon_3.ico",
+        "sha256": "d63c953705f0628232a0f5ea49955886a23d7fd2cc92fa6ac525923c8478e2e4"
+      },
+      {
+        "name": "icon_3.ico.thumb",
+        "sha256": "d63c953705f0628232a0f5ea49955886a23d7fd2cc92fa6ac525923c8478e2e4"
+      },
+      {
+        "name": "icon_0.ico",
+        "sha256": "e7bd74dff2ba6fae2a004ffb484f905f891dd7c80d0a1245f1761342ed83b297"
+      },
+      {
+        "name": "icon_0.ico.thumb",
+        "sha256": "e7bd74dff2ba6fae2a004ffb484f905f891dd7c80d0a1245f1761342ed83b297"
+      },
+      {
+        "name": "icon_2.ico",
+        "sha256": "edaf2fdd197d489dbc27e6b1e97ba1cba2491980a5bcb3adf0e0aaeda92feceb"
+      },
+      {
+        "name": "icon_2.ico.thumb",
+        "sha256": "edaf2fdd197d489dbc27e6b1e97ba1cba2491980a5bcb3adf0e0aaeda92feceb"
+      },
+      {
+        "name": "icon_4.ico",
+        "sha256": "fc67a85c9470a48f65eadcd7e4f92761f81d356eadce6841d10d06934039ce4a"
+      },
+      {
+        "name": "icon_4.ico.thumb",
+        "sha256": "fc67a85c9470a48f65eadcd7e4f92761f81d356eadce6841d10d06934039ce4a"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 4,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 24,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 33,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 34,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "cert.issuer": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36"
+        }
+      ],
+      "cert.serial_no": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "00bfb15001bbf592d4962a7797ea736fa3"
+        }
+      ],
+      "cert.subject": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "serialNumber=407950, ??=IE, ??=Private Organization, C=IE, ST=Donegal, O=Akeo Consulting, CN=Akeo Consulting"
+        }
+      ],
+      "cert.thumbprint": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "3dbc3a2a0e9ce8803b422cfdbc60acd33164965d"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "5c82b2d08efe6ee0794b52d4309c5f37"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "60e992275cc7503a3eba5d391db8aeaaab001402d49aea3f7f5da3706df97327"
+        }
+      ],
+      "cert.valid.end": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2024-09-28T23:59:59"
+        }
+      ],
+      "cert.valid.start": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2021-09-29T00:00:00"
+        }
+      ],
+      "file.pe.imports.fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "48:t/gub6EwoQ54rzSv6xvi2PmeV9R+hteS1Xc+pIuCJcgTkOtV0Kq14r:phVueVuhteS1Xc+pIustkiWHS"
+        }
+      ],
+      "file.pe.imports.imphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "0b5552dccd9d0a834cea55c0c8fc05be"
+        }
+      ],
+      "file.pe.imports.sorted_fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "48:PA1LbFDXOtCtw9/w3+n1LZ51h3jOrG94hRX66xvrSvo4zwQu/gi5lEP:mvxXCCtw5Rn1LFhTOrG94hZ/G"
+        }
+      ],
+      "file.pe.imports.sorted_sha1": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "a166b28857ece0ef53dce3de6e81af774a3a3a53"
+        }
+      ],
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 1694788977
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2023-09-15 14:42:57 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
+        }
+      ],
+      "file.pe.rich_header.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "4b75a28de5be0cac449d1576354395ca"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "11aaafc72361ec8886a740c3e209ceb3"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "43c493e09cbcb9451c206c945421035d"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "51ae701fd86f619a1c595e831aba122f"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "8f99c7b6145ab9b74bddb4afea9f778f"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "afabb66fdcd2825de5909f10c900fca7"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "b6dad7dcd2df1105a67518509f20385f"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "f240472d9759abd59c5c8d4453da2010"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".data"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".pdata"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rdata"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".reloc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rsrc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".text"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "_RDATA"
+        }
+      ],
+      "file.pe.versions.description": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Command Line Interface for Microsoft\u00ae Volume Shadow Copy Service "
+        }
+      ],
+      "file.pe.versions.filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "VSSADMIN.EXE"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
+}

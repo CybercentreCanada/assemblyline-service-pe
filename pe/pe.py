@@ -63,6 +63,7 @@ accelerator_flags_entries = {entry.__int__(): entry for entry, txt in lief.PE.AC
 PACKED_SECTION_NAMES = ["UPX", "UPX0", "UPX1", "ASPack", "vmp0", "themida"]
 PACKED_SECTION_NAMES += [f".{x}" for x in PACKED_SECTION_NAMES]
 MALICIOUS_SECTION_NAMES = [(".bak", None), (".lol", None), (".rsrc", 3221487648)]
+NON_STANDARD_SECTION_NAMES = ["_RDATA"]
 
 
 def search_list_in_list(what, into):
@@ -689,6 +690,11 @@ class PE(ServiceBase):
             section_section = ResultMultiSection(f"Section - {section.name}")
             if section.name in PACKED_SECTION_NAMES:
                 heur = Heuristic(20)
+                heur_section = ResultSection(heur.name, heuristic=heur)
+                heur_section.add_line(f"Section name: {section.name}")
+                section_section.add_subsection(heur_section)
+            elif section.name in NON_STANDARD_SECTION_NAMES:
+                heur = Heuristic(34)
                 heur_section = ResultSection(heur.name, heuristic=heur)
                 heur_section.add_line(f"Section name: {section.name}")
                 section_section.add_subsection(heur_section)

@@ -266,6 +266,13 @@ heuristics:
     name: PE file only has executable .text section
     score: 0
 
+  - description: >-
+      PE file contains sections with non-standard names
+    filetype: "executable/windows"
+    heur_id: 34
+    name: PE file contains sections with non-standard names
+    score: 0
+
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
   cpu_cores: 1
