@@ -883,6 +883,8 @@ class PE(ServiceBase):
 
     def add_imports(self):
         if not self.binary.has_imports:
+            no_imports_heur = Heuristic(32)
+            _ = ResultSection(no_imports_heur.name, heuristic=no_imports_heur, parent=self.file_res)
             return
 
         self.features["imports"] = defaultdict(list)

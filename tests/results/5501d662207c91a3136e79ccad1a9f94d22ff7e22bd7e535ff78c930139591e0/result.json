@@ -193,6 +193,26 @@
       },
       {
         "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 32,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "PE file does not import any functions",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
         "body": "[[\"Languages\", \"\"], [\"Sublanguages\", \"\"]]",
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
@@ -265,6 +285,11 @@
       {
         "attack_ids": [],
         "heur_id": 26,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 32,
         "signatures": []
       }
     ],

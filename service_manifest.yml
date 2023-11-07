@@ -252,6 +252,13 @@ heuristics:
     name: NodeJS compiled executable
     score: 0
 
+  - description: >-
+      No import functions for PE file found
+    filetype: "executable/windows"
+    heur_id: 32
+    name: PE file does not import any functions
+    score: 0
+
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
   cpu_cores: 1
