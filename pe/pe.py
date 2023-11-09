@@ -63,7 +63,7 @@ accelerator_flags_entries = {entry.__int__(): entry for entry, txt in lief.PE.AC
 PACKED_SECTION_NAMES = ["UPX", "UPX0", "UPX1", "ASPack", "vmp0", "themida"]
 PACKED_SECTION_NAMES += [f".{x}" for x in PACKED_SECTION_NAMES]
 MALICIOUS_SECTION_NAMES = [(".bak", None), (".lol", None), (".rsrc", 3221487648)]
-NON_STANDARD_SECTION_NAMES = ["_rdata", ".rr"]
+NON_STANDARD_SECTION_NAMES = ["_rdata", ".rr", ".didat"]
 
 
 def search_list_in_list(what, into):
