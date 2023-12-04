@@ -1687,6 +1687,7 @@ class PE(ServiceBase):
                 heur_section.add_section_part(heur_kv_body)
                 sub_res.add_subsection(heur_section)
 
+            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L898
             if len(signature.certificates) < 2:
                 heur = Heuristic(8)
                 heur_section = ResultSection(heur.name, heuristic=heur)

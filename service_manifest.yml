@@ -84,6 +84,7 @@ heuristics:
     name: Invalid PE look-alike
     score: 100
 
+  # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L898
   - description: This file has less than two certificate. This is probably an error...
     filetype: "executable/windows"
     heur_id: 8
