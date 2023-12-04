@@ -25,7 +25,56 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"0 (1970-01-01 00:00:00 +00:00 (UTC))\"], [\"Entrypoint\", \"0x1000\"], [\"Machine\", \"AMD64\"], [\"Magic\", \"PE32_PLUS\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"2.29\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"5.2\"], [\"Subsystem\", \"WINDOWS_CUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x000086e3\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "0 (1970-01-01 00:00:00 +00:00 (UTC))"
+          ],
+          [
+            "Entrypoint",
+            "0x1000"
+          ],
+          [
+            "Machine",
+            "AMD64"
+          ],
+          [
+            "Magic",
+            "PE32_PLUS"
+          ],
+          [
+            "Image version",
+            "0.0"
+          ],
+          [
+            "Linker version",
+            "2.29"
+          ],
+          [
+            "Operating System version",
+            "4.0"
+          ],
+          [
+            "Subsystem version",
+            "5.2"
+          ],
+          [
+            "Subsystem",
+            "WINDOWS_CUI"
+          ],
+          [
+            "NX",
+            false
+          ],
+          [
+            "Position Independent",
+            false
+          ],
+          [
+            "Checksum",
+            "0x000086e3"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -49,7 +98,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"File Size\", 13348], [\"Virtual Size\", 1654784]]",
+        "body": [
+          [
+            "File Size",
+            13348
+          ],
+          [
+            "Virtual Size",
+            1654784
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -69,7 +127,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"sha512\", \"a32f4a7a3bb43f7092328050ec53cd2ef1c17f9f4891817b8696089a0176cc400cfa58ef68e7f8502138efcc757f30a4874681e60f2fcef0a43f73ccd5cc1057\"], [\"sha384\", \"6f8006134142ffff4b5b0fb6b521eb7bfc35e054af39407cb5811e903bfcc1df55aa5f2a5ff8ce7bc34b920fdc11b6aa\"], [\"sha256\", \"b73657999ddf4a94f0bb7de717020aa84e1f2ae928013174f357f1feab5e3216\"], [\"sha1\", \"41ef6731217bbadfd241d4f2e24728bc9da43ecb\"], [\"md5\", \"d8eea530ab79d0e0b06bb141267ffdcb\"]]",
+        "body": [
+          [
+            "sha512",
+            "a32f4a7a3bb43f7092328050ec53cd2ef1c17f9f4891817b8696089a0176cc400cfa58ef68e7f8502138efcc757f30a4874681e60f2fcef0a43f73ccd5cc1057"
+          ],
+          [
+            "sha384",
+            "6f8006134142ffff4b5b0fb6b521eb7bfc35e054af39407cb5811e903bfcc1df55aa5f2a5ff8ce7bc34b920fdc11b6aa"
+          ],
+          [
+            "sha256",
+            "b73657999ddf4a94f0bb7de717020aa84e1f2ae928013174f357f1feab5e3216"
+          ],
+          [
+            "sha1",
+            "41ef6731217bbadfd241d4f2e24728bc9da43ecb"
+          ],
+          [
+            "md5",
+            "d8eea530ab79d0e0b06bb141267ffdcb"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -82,7 +161,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Optional header checksum\", \"0x000086e3\"], [\"Computed checksum\", \"0x0000a299\"]]",
+        "body": [
+          [
+            "Optional header checksum",
+            "0x000086e3"
+          ],
+          [
+            "Computed checksum",
+            "0x0000a299"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -115,7 +203,79 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.630429255422935], [\"Entropy without padding\", 5.869324269824714], [\"Offset\", 1024], [\"Size\", 5632], [\"Virtual Size\", 5240], [\"Characteristics\", \"CNT_CODE, ALIGN_1BYTES, CNT_INITIALIZED_DATA, ALIGN_4BYTES, ALIGN_8BYTES, ALIGN_16BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_1024BYTES, ALIGN_2048BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"36c1bb292382c420d43ed7c09089c48c\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.04851, 5.33056, 4.27079, 2.49475, 4.02818, 4.61448, 4.73602, 4.65761, 4.97824, 3.77656, 5.38555, 5.70778, 5.54379, 5.62901, 4.66411, 5.87383, 5.12205, 4.49237, 5.4775, 4.52153, 2.22302, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                5.630429255422935
+              ],
+              [
+                "Entropy without padding",
+                5.869324269824714
+              ],
+              [
+                "Offset",
+                1024
+              ],
+              [
+                "Size",
+                5632
+              ],
+              [
+                "Virtual Size",
+                5240
+              ],
+              [
+                "Characteristics",
+                "CNT_CODE, ALIGN_1BYTES, CNT_INITIALIZED_DATA, ALIGN_4BYTES, ALIGN_8BYTES, ALIGN_16BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_1024BYTES, ALIGN_2048BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_EXECUTE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "36c1bb292382c420d43ed7c09089c48c"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  5.04851,
+                  5.33056,
+                  4.27079,
+                  2.49475,
+                  4.02818,
+                  4.61448,
+                  4.73602,
+                  4.65761,
+                  4.97824,
+                  3.77656,
+                  5.38555,
+                  5.70778,
+                  5.54379,
+                  5.62901,
+                  4.66411,
+                  5.87383,
+                  5.12205,
+                  4.49237,
+                  5.4775,
+                  4.52153,
+                  2.22302,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -141,7 +301,59 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", -0.0], [\"Offset\", 6656], [\"Size\", 512], [\"Virtual Size\", 96], [\"Characteristics\", \"CNT_INITIALIZED_DATA, ALIGN_2BYTES, ALIGN_16BYTES, ALIGN_4BYTES, ALIGN_8BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_2048BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ, MEM_WRITE\"], [\"MD5\", \"bf619eac0cdf3f68d496ea9344137e8b\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.0, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                0.0
+              ],
+              [
+                "Entropy without padding",
+                -0.0
+              ],
+              [
+                "Offset",
+                6656
+              ],
+              [
+                "Size",
+                512
+              ],
+              [
+                "Virtual Size",
+                96
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, ALIGN_2BYTES, ALIGN_16BYTES, ALIGN_4BYTES, ALIGN_8BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_2048BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "bf619eac0cdf3f68d496ea9344137e8b"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -167,7 +379,65 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.491416065836111], [\"Entropy without padding\", 4.970679217390695], [\"Offset\", 7168], [\"Size\", 2048], [\"Virtual Size\", 1712], [\"Characteristics\", \"CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_4BYTES, ALIGN_8BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_1024BYTES, ALIGN_2048BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ\"], [\"MD5\", \"1096be1590b609d70963a31232789a08\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.76663, 4.60897, 4.86666, 4.5474, 4.25589, 4.25589, 2.99204, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                4.491416065836111
+              ],
+              [
+                "Entropy without padding",
+                4.970679217390695
+              ],
+              [
+                "Offset",
+                7168
+              ],
+              [
+                "Size",
+                2048
+              ],
+              [
+                "Virtual Size",
+                1712
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_4BYTES, ALIGN_8BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_1024BYTES, ALIGN_2048BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ"
+              ],
+              [
+                "MD5",
+                "1096be1590b609d70963a31232789a08"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  4.76663,
+                  4.60897,
+                  4.86666,
+                  4.5474,
+                  4.25589,
+                  4.25589,
+                  2.99204,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -193,7 +463,59 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.5354536289388845], [\"Entropy without padding\", 3.2945936588305216], [\"Offset\", 9216], [\"Size\", 512], [\"Virtual Size\", 53], [\"Characteristics\", \"CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ\"], [\"MD5\", \"28f5b67d0c54192e722b402520491f63\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.9612, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                0.5354536289388845
+              ],
+              [
+                "Entropy without padding",
+                3.2945936588305216
+              ],
+              [
+                "Offset",
+                9216
+              ],
+              [
+                "Size",
+                512
+              ],
+              [
+                "Virtual Size",
+                53
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ"
+              ],
+              [
+                "MD5",
+                "28f5b67d0c54192e722b402520491f63"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  0.9612,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -219,7 +541,59 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 2.107123167898032], [\"Entropy without padding\", 3.3646655081471804], [\"Offset\", 9728], [\"Size\", 512], [\"Virtual Size\", 276], [\"Characteristics\", \"CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ\"], [\"MD5\", \"81f06973e8a8aa00f89d2d41136d5ac1\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.30342, 0.34135]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                2.107123167898032
+              ],
+              [
+                "Entropy without padding",
+                3.3646655081471804
+              ],
+              [
+                "Offset",
+                9728
+              ],
+              [
+                "Size",
+                512
+              ],
+              [
+                "Virtual Size",
+                276
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ"
+              ],
+              [
+                "MD5",
+                "81f06973e8a8aa00f89d2d41136d5ac1"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  3.30342,
+                  0.34135
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -245,7 +619,59 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.7126615848590707], [\"Entropy without padding\", 3.4675573668767994], [\"Offset\", 10240], [\"Size\", 512], [\"Virtual Size\", 176], [\"Characteristics\", \"CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ\"], [\"MD5\", \"ed543a55c102ceaa8c5774b5f44d555c\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.80277, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                1.7126615848590707
+              ],
+              [
+                "Entropy without padding",
+                3.4675573668767994
+              ],
+              [
+                "Offset",
+                10240
+              ],
+              [
+                "Size",
+                512
+              ],
+              [
+                "Virtual Size",
+                176
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ"
+              ],
+              [
+                "MD5",
+                "ed543a55c102ceaa8c5774b5f44d555c"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  2.80277,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -271,7 +697,58 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0], [\"Entropy without padding\", 0.0], [\"Offset\", 0], [\"Size\", 0], [\"Virtual Size\", 1606496], [\"Characteristics\", \"CNT_UNINITIALIZED_DATA, ALIGN_2BYTES, ALIGN_16BYTES, ALIGN_4BYTES, ALIGN_8BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_2048BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                0
+              ],
+              [
+                "Entropy without padding",
+                0.0
+              ],
+              [
+                "Offset",
+                0
+              ],
+              [
+                "Size",
+                0
+              ],
+              [
+                "Virtual Size",
+                1606496
+              ],
+              [
+                "Characteristics",
+                "CNT_UNINITIALIZED_DATA, ALIGN_2BYTES, ALIGN_16BYTES, ALIGN_4BYTES, ALIGN_8BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_2048BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "d41d8cd98f00b204e9800998ecf8427e"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -297,7 +774,63 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.047169570548708], [\"Entropy without padding\", 3.772051706833411], [\"Offset\", 10752], [\"Size\", 1536], [\"Virtual Size\", 1152], [\"Characteristics\", \"CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ, MEM_WRITE\"], [\"MD5\", \"512139c5b723e0fcc68be63a816a5201\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.27678, 2.16585, 3.90498, 4.48224, 1.70074, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                3.047169570548708
+              ],
+              [
+                "Entropy without padding",
+                3.772051706833411
+              ],
+              [
+                "Offset",
+                10752
+              ],
+              [
+                "Size",
+                1536
+              ],
+              [
+                "Virtual Size",
+                1152
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "512139c5b723e0fcc68be63a816a5201"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  2.27678,
+                  2.16585,
+                  3.90498,
+                  4.48224,
+                  1.70074,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -323,7 +856,62 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.2172940428983], [\"Entropy without padding\", 5.2172940428983], [\"Offset\", 12288], [\"Size\", 1536], [\"Virtual Size\", 1256], [\"Characteristics\", \"CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ, MEM_WRITE\"], [\"MD5\", \"95e27cb1d412c37ce879e7ae25ab8fea\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.23105, 4.59524, 4.90134, 4.89506, 4.98263]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                5.2172940428983
+              ],
+              [
+                "Entropy without padding",
+                5.2172940428983
+              ],
+              [
+                "Offset",
+                12288
+              ],
+              [
+                "Size",
+                1536
+              ],
+              [
+                "Virtual Size",
+                1256
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "95e27cb1d412c37ce879e7ae25ab8fea"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  4.23105,
+                  4.59524,
+                  4.90134,
+                  4.89506,
+                  4.98263
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -349,7 +937,58 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0], [\"Entropy without padding\", 0.0], [\"Offset\", 13824], [\"Size\", 512], [\"Virtual Size\", 28], [\"Characteristics\", \"CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"d41d8cd98f00b204e9800998ecf8427e\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                0
+              ],
+              [
+                "Entropy without padding",
+                0.0
+              ],
+              [
+                "Offset",
+                13824
+              ],
+              [
+                "Size",
+                512
+              ],
+              [
+                "Virtual Size",
+                28
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, ALIGN_1BYTES, ALIGN_16BYTES, ALIGN_2BYTES, ALIGN_4BYTES, ALIGN_32BYTES, ALIGN_64BYTES, ALIGN_256BYTES, ALIGN_512BYTES, ALIGN_1024BYTES, ALIGN_4096BYTES, ALIGN_8192BYTES, MEM_DISCARDABLE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "d41d8cd98f00b204e9800998ecf8427e"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -408,7 +1047,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"0 (1970-01-01 00:00:00 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"\"], [\"GUID\", \"ed39a8cf-33c2-e067-7f3b-e7b551f8753\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "0 (1970-01-01 00:00:00 +00:00 (UTC))"
+          ],
+          [
+            "Version",
+            "0.0"
+          ],
+          [
+            "CV_Signature",
+            "PDB_70"
+          ],
+          [
+            "Filename",
+            ""
+          ],
+          [
+            "GUID",
+            "ed39a8cf-33c2-e067-7f3b-e7b551f8753"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -489,7 +1149,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Languages\", \"\"], [\"Sublanguages\", \"\"]]",
+        "body": [
+          [
+            "Languages",
+            ""
+          ],
+          [
+            "Sublanguages",
+            ""
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -515,7 +1184,18 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]], {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Size",
+                0
+              ]
+            ],
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",

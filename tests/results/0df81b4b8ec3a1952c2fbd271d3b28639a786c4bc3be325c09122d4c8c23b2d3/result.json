@@ -5,7 +5,56 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"1160092538 (2006-10-05 23:55:38 +00:00 (UTC))\"], [\"Entrypoint\", \"0x7f56\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"6.0\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "1160092538 (2006-10-05 23:55:38 +00:00 (UTC))"
+          ],
+          [
+            "Entrypoint",
+            "0x7f56"
+          ],
+          [
+            "Machine",
+            "I386"
+          ],
+          [
+            "Magic",
+            "PE32"
+          ],
+          [
+            "Image version",
+            "0.0"
+          ],
+          [
+            "Linker version",
+            "6.0"
+          ],
+          [
+            "Operating System version",
+            "4.0"
+          ],
+          [
+            "Subsystem version",
+            "4.0"
+          ],
+          [
+            "Subsystem",
+            "WINDOWS_GUI"
+          ],
+          [
+            "NX",
+            false
+          ],
+          [
+            "Position Independent",
+            false
+          ],
+          [
+            "Checksum",
+            "0x00000000"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -29,7 +78,80 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"5a9da3b45c94fe748113796b76477e99\"]], {}], [\"TABLE\", [{\"ID\": \"0x000606c7\", \"Compiler Information\": \"[RES] VS98 (6.0) SP6 cvtres build 1736\", \"Count\": 1}, {\"ID\": \"0x00312354\", \"Compiler Information\": \"Unknown object 0x00312354\", \"Count\": 4}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 196}, {\"ID\": \"0x00131f62\", \"Compiler Information\": \"Unknown object 0x00131f62\", \"Count\": 13}, {\"ID\": \"0x001923fa\", \"Compiler Information\": \"Unknown object 0x001923fa\", \"Count\": 2}, {\"ID\": \"0x001c23da\", \"Compiler Information\": \"Unknown object 0x001c23da\", \"Count\": 1}, {\"ID\": \"0x00000000\", \"Compiler Information\": \"[---] Unmarked objects (old)\", \"Count\": 7}, {\"ID\": \"0x00041f6f\", \"Compiler Information\": \"Unknown object 0x00041f6f\", \"Count\": 2}, {\"ID\": \"0x000a1f6f\", \"Compiler Information\": \"Unknown object 0x000a1f6f\", \"Count\": 11}, {\"ID\": \"0x000e1c83\", \"Compiler Information\": \"Unknown object 0x000e1c83\", \"Count\": 2}], {\"column_order\": [\"ID\", \"Compiler Information\", \"Count\"]}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Hash",
+                "5a9da3b45c94fe748113796b76477e99"
+              ]
+            ],
+            {}
+          ],
+          [
+            "TABLE",
+            [
+              {
+                "Compiler Information": "[RES] VS98 (6.0) SP6 cvtres build 1736",
+                "Count": 1,
+                "ID": "0x000606c7"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00312354",
+                "Count": 4,
+                "ID": "0x00312354"
+              },
+              {
+                "Compiler Information": "[---] Unmarked objects",
+                "Count": 196,
+                "ID": "0x00010000"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00131f62",
+                "Count": 13,
+                "ID": "0x00131f62"
+              },
+              {
+                "Compiler Information": "Unknown object 0x001923fa",
+                "Count": 2,
+                "ID": "0x001923fa"
+              },
+              {
+                "Compiler Information": "Unknown object 0x001c23da",
+                "Count": 1,
+                "ID": "0x001c23da"
+              },
+              {
+                "Compiler Information": "[---] Unmarked objects (old)",
+                "Count": 7,
+                "ID": "0x00000000"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00041f6f",
+                "Count": 2,
+                "ID": "0x00041f6f"
+              },
+              {
+                "Compiler Information": "Unknown object 0x000a1f6f",
+                "Count": 11,
+                "ID": "0x000a1f6f"
+              },
+              {
+                "Compiler Information": "Unknown object 0x000e1c83",
+                "Count": 2,
+                "ID": "0x000e1c83"
+              }
+            ],
+            {
+              "column_order": [
+                "ID",
+                "Compiler Information",
+                "Count"
+              ]
+            }
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -52,7 +174,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"File Size\", 524288], [\"Virtual Size\", 356352]]",
+        "body": [
+          [
+            "File Size",
+            524288
+          ],
+          [
+            "Virtual Size",
+            356352
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -72,7 +203,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"sha512\", \"37ff04a31040b5ce0f48711f0fc8f4a64b5d7e57b789d25bbc6b2084c5752e6d206d5df43383ac2f33fbedaf00096c9ad488db76961900f7e70ed5a195cfd6a1\"], [\"sha384\", \"6c8e3de44195a04a25aeb35ff17e6afc70bffb3981ab918d5805bdca0ed04950f3c530e30976958d94fc91fa54aaa3fd\"], [\"sha256\", \"9a469e5c874129a0f33dfa7a8c12f81630a5608404edf1333d8a4b5f2c52f8d1\"], [\"sha1\", \"aa5c84f9ada35ae6960cc9d9bee0469e21a96b0f\"], [\"md5\", \"4a68ab60c082c79845be83f4fed2ac8b\"]]",
+        "body": [
+          [
+            "sha512",
+            "37ff04a31040b5ce0f48711f0fc8f4a64b5d7e57b789d25bbc6b2084c5752e6d206d5df43383ac2f33fbedaf00096c9ad488db76961900f7e70ed5a195cfd6a1"
+          ],
+          [
+            "sha384",
+            "6c8e3de44195a04a25aeb35ff17e6afc70bffb3981ab918d5805bdca0ed04950f3c530e30976958d94fc91fa54aaa3fd"
+          ],
+          [
+            "sha256",
+            "9a469e5c874129a0f33dfa7a8c12f81630a5608404edf1333d8a4b5f2c52f8d1"
+          ],
+          [
+            "sha1",
+            "aa5c84f9ada35ae6960cc9d9bee0469e21a96b0f"
+          ],
+          [
+            "md5",
+            "4a68ab60c082c79845be83f4fed2ac8b"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -98,7 +250,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.759725371730042], [\"Entropy without padding\", 6.201780977248346], [\"Offset\", 4096], [\"Size\", 32768], [\"Virtual Size\", 28965], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"354c49a6161b7fb82a08db6a9eeb2d62\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.54166, 5.19976, 5.6502, 5.64626, 5.88837, 6.09353, 6.23446, 5.96003, 5.76461, 5.67275, 5.66112, 5.78854, 5.5372, 4.71776, 5.85147, 5.6645, 5.77668, 5.75857, 5.88375, 5.97443, 5.60601, 5.65262, 5.8355, 5.28219, 5.62708, 5.8062, 5.86718, 5.75174, 5.6305, 5.71405, 6.02513, 5.8086, 5.58978, 5.58927, 5.81501, 5.62057, 5.72961, 5.673, 5.48903, 5.70468, 5.83821, 6.014, 5.71956, 5.86715, 1.10116, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                5.759725371730042
+              ],
+              [
+                "Entropy without padding",
+                6.201780977248346
+              ],
+              [
+                "Offset",
+                4096
+              ],
+              [
+                "Size",
+                32768
+              ],
+              [
+                "Virtual Size",
+                28965
+              ],
+              [
+                "Characteristics",
+                "CNT_CODE, MEM_EXECUTE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "354c49a6161b7fb82a08db6a9eeb2d62"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  5.54166,
+                  5.19976,
+                  5.6502,
+                  5.64626,
+                  5.88837,
+                  6.09353,
+                  6.23446,
+                  5.96003,
+                  5.76461,
+                  5.67275,
+                  5.66112,
+                  5.78854,
+                  5.5372,
+                  4.71776,
+                  5.85147,
+                  5.6645,
+                  5.77668,
+                  5.75857,
+                  5.88375,
+                  5.97443,
+                  5.60601,
+                  5.65262,
+                  5.8355,
+                  5.28219,
+                  5.62708,
+                  5.8062,
+                  5.86718,
+                  5.75174,
+                  5.6305,
+                  5.71405,
+                  6.02513,
+                  5.8086,
+                  5.58978,
+                  5.58927,
+                  5.81501,
+                  5.62057,
+                  5.72961,
+                  5.673,
+                  5.48903,
+                  5.70468,
+                  5.83821,
+                  6.014,
+                  5.71956,
+                  5.86715,
+                  1.10116,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -124,7 +376,89 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.099691072771993], [\"Entropy without padding\", 5.3306855800912185], [\"Offset\", 36864], [\"Size\", 8192], [\"Virtual Size\", 5652], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"a953056930475b3fcbf24c816c60f57e\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.47304, 3.45066, 3.36311, 2.80297, 2.636, 3.48403, 3.39112, 3.73172, 4.66812, 4.79587, 4.86953, 5.00898, 4.84329, 5.09308, 4.84611, 4.57099, 4.84907, 4.72979, 4.51601, 4.98205, 4.82202, 4.64831, 0.60523, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                4.099691072771993
+              ],
+              [
+                "Entropy without padding",
+                5.3306855800912185
+              ],
+              [
+                "Offset",
+                36864
+              ],
+              [
+                "Size",
+                8192
+              ],
+              [
+                "Virtual Size",
+                5652
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "a953056930475b3fcbf24c816c60f57e"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  3.47304,
+                  3.45066,
+                  3.36311,
+                  2.80297,
+                  2.636,
+                  3.48403,
+                  3.39112,
+                  3.73172,
+                  4.66812,
+                  4.79587,
+                  4.86953,
+                  5.00898,
+                  4.84329,
+                  5.09308,
+                  4.84611,
+                  4.57099,
+                  4.84907,
+                  4.72979,
+                  4.51601,
+                  4.98205,
+                  4.82202,
+                  4.64831,
+                  0.60523,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -150,7 +484,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.751920080799498], [\"Entropy without padding\", 5.0222722249100915], [\"Offset\", 45056], [\"Size\", 16384], [\"Virtual Size\", 14780], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"066a4cf2b1f9cd631453b9fa577a2301\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.47655, 4.78477, 4.67702, 4.56446, 4.44255, 4.31056, 4.50077, 4.79126, 4.67243, 4.95954, 4.66361, 4.96955, 4.88848, 4.31527, 4.63596, 4.28125, 4.62597, 4.59691, 4.43158, 4.66869, 4.90499, 4.58268, 4.30917, 4.31223, 4.34096, 4.71148, 4.91365, 4.84142, 4.84541, 4.954, 5.09942, 5.06239, 4.6579, 4.96547, 4.94444, 4.83719, 4.8252, 4.77203, 4.95994, 5.02133, 5.86772, 0.02987, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                4.751920080799498
+              ],
+              [
+                "Entropy without padding",
+                5.0222722249100915
+              ],
+              [
+                "Offset",
+                45056
+              ],
+              [
+                "Size",
+                16384
+              ],
+              [
+                "Virtual Size",
+                14780
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "066a4cf2b1f9cd631453b9fa577a2301"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  5.47655,
+                  4.78477,
+                  4.67702,
+                  4.56446,
+                  4.44255,
+                  4.31056,
+                  4.50077,
+                  4.79126,
+                  4.67243,
+                  4.95954,
+                  4.66361,
+                  4.96955,
+                  4.88848,
+                  4.31527,
+                  4.63596,
+                  4.28125,
+                  4.62597,
+                  4.59691,
+                  4.43158,
+                  4.66869,
+                  4.90499,
+                  4.58268,
+                  4.30917,
+                  4.31223,
+                  4.34096,
+                  4.71148,
+                  4.91365,
+                  4.84142,
+                  4.84541,
+                  4.954,
+                  5.09942,
+                  5.06239,
+                  4.6579,
+                  4.96547,
+                  4.94444,
+                  4.83719,
+                  4.8252,
+                  4.77203,
+                  4.95994,
+                  5.02133,
+                  5.86772,
+                  0.02987,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -176,7 +610,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.278523281826534], [\"Entropy without padding\", 4.30202693472686], [\"Offset\", 61440], [\"Size\", 294912], [\"Virtual Size\", 292680], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"af94a849d13149c2a4ac2b501ab4c215\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.70384, 0.0, 0.0, 0.0, 0.0, 0.0, 0.10253, 0.0, 0.0, 0.0, 0.0, 0.1076, 0.0, 0.0, 0.0, 0.0, 0.0, 4.23004, 4.6653, 4.31867, 3.39276, 3.48899, 3.83349, 4.30949, 4.45492, 4.63264, 4.68232, 4.84412, 4.9298, 5.06943, 4.70899, 4.47696, 4.20726, 3.74143, 3.02308, 2.45997, 1.7877, 3.2365, 4.1925, 5.88093, 4.24868, 3.47159, 4.09332, 3.27368, 3.24588, 3.23508, 3.21829, 3.155, 4.48371, 3.34628]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                4.278523281826534
+              ],
+              [
+                "Entropy without padding",
+                4.30202693472686
+              ],
+              [
+                "Offset",
+                61440
+              ],
+              [
+                "Size",
+                294912
+              ],
+              [
+                "Virtual Size",
+                292680
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "af94a849d13149c2a4ac2b501ab4c215"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  2.70384,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.10253,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.1076,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  4.23004,
+                  4.6653,
+                  4.31867,
+                  3.39276,
+                  3.48899,
+                  3.83349,
+                  4.30949,
+                  4.45492,
+                  4.63264,
+                  4.68232,
+                  4.84412,
+                  4.9298,
+                  5.06943,
+                  4.70899,
+                  4.47696,
+                  4.20726,
+                  3.74143,
+                  3.02308,
+                  2.45997,
+                  1.7877,
+                  3.2365,
+                  4.1925,
+                  5.88093,
+                  4.24868,
+                  3.47159,
+                  4.09332,
+                  3.27368,
+                  3.24588,
+                  3.23508,
+                  3.21829,
+                  3.155,
+                  4.48371,
+                  3.34628
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -345,7 +879,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "17",
+        "body": 17,
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -384,7 +918,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Languages\", \"ARABIC, CHINESE, CZECH, DANISH, GERMAN, GREEK, ENGLISH, SPANISH, FINNISH, FRENCH, HEBREW, HUNGARIAN, ITALIAN, JAPANESE, KOREAN, DUTCH, NORWEGIAN, POLISH, PORTUGUESE, RUSSIAN, SLOVAK, SWEDISH, THAI, TURKISH, SLOVENIAN\"], [\"Sublanguages\", \"ENGLISH_US, SWEDISH, CHINESE_SIMPLIFIED, ITALIAN, NORWEGIAN_BOKMAL, PORTUGUESE_BRAZILIAN, PORTUGUESE, FRENCH, DEFAULT, ARABIC_SAUDI_ARABIA, SPANISH_MEXICAN, GERMAN, SPANISH_MODERN\"]]",
+        "body": [
+          [
+            "Languages",
+            "ARABIC, CHINESE, CZECH, DANISH, GERMAN, GREEK, ENGLISH, SPANISH, FINNISH, FRENCH, HEBREW, HUNGARIAN, ITALIAN, JAPANESE, KOREAN, DUTCH, NORWEGIAN, POLISH, PORTUGUESE, RUSSIAN, SLOVAK, SWEDISH, THAI, TURKISH, SLOVENIAN"
+          ],
+          [
+            "Sublanguages",
+            "ENGLISH_US, SWEDISH, CHINESE_SIMPLIFIED, ITALIAN, NORWEGIAN_BOKMAL, PORTUGUESE_BRAZILIAN, PORTUGUESE, FRENCH, DEFAULT, ARABIC_SAUDI_ARABIA, SPANISH_MEXICAN, GERMAN, SPANISH_MODERN"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -471,7 +1014,18 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"TABLE\", [], {}], [\"IMAGE\", [], {}]]",
+        "body": [
+          [
+            "TABLE",
+            [],
+            {}
+          ],
+          [
+            "IMAGE",
+            [],
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -484,7 +1038,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Type\", 0]]",
+        "body": [
+          [
+            "Type",
+            0
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -497,7 +1056,60 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 63], [\"file_os\", \"NT_WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"UNKNOWN\"], [\"file_version_LS\", 65592], [\"file_version_MS\", 65536], [\"product_version_LS\", 65592], [\"product_version_MS\", 65536], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+        "body": [
+          [
+            "file_date_LS",
+            0
+          ],
+          [
+            "file_date_MS",
+            0
+          ],
+          [
+            "file_flags",
+            0
+          ],
+          [
+            "file_flags_mask",
+            63
+          ],
+          [
+            "file_os",
+            "NT_WINDOWS32"
+          ],
+          [
+            "file_subtype",
+            "UNKNOWN"
+          ],
+          [
+            "file_type",
+            "UNKNOWN"
+          ],
+          [
+            "file_version_LS",
+            65592
+          ],
+          [
+            "file_version_MS",
+            65536
+          ],
+          [
+            "product_version_LS",
+            65592
+          ],
+          [
+            "product_version_MS",
+            65536
+          ],
+          [
+            "signature",
+            4277077181
+          ],
+          [
+            "struct_version",
+            65536
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -510,7 +1122,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
+        "body": [
+          [
+            "key",
+            "StringFileInfo"
+          ],
+          [
+            "type",
+            1
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -533,7 +1154,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"040904e2\"], [\"type\", 1], [\"lang\", \"ENGLISH\"], [\"sublang\", \"ENGLISH_US\"], [\"code_page\", \"WINDOWS_1250\"]]",
+        "body": [
+          [
+            "key",
+            "040904e2"
+          ],
+          [
+            "type",
+            1
+          ],
+          [
+            "lang",
+            "ENGLISH"
+          ],
+          [
+            "sublang",
+            "ENGLISH_US"
+          ],
+          [
+            "code_page",
+            "WINDOWS_1250"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -546,7 +1188,36 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"CompanyName\", \"NVIDIA Corporation\"], [\"FileDescription\", \"NVIDIA Uninstaller Utility\"], [\"FileVersion\", \"1 , 0 , 1 , 56 \"], [\"InternalName\", \"NVUnistall\"], [\"LegalCopyright\", \"(C) NVIDIA Corporation. All rights reserved.\"], [\"ProductName\", \"NVIDIA Corporation\"], [\"ProductVersion\", \"1 , 0 , 1 , 56 \"]]",
+        "body": [
+          [
+            "CompanyName",
+            "NVIDIA Corporation"
+          ],
+          [
+            "FileDescription",
+            "NVIDIA Uninstaller Utility"
+          ],
+          [
+            "FileVersion",
+            "1 , 0 , 1 , 56 "
+          ],
+          [
+            "InternalName",
+            "NVUnistall"
+          ],
+          [
+            "LegalCopyright",
+            "(C) NVIDIA Corporation. All rights reserved."
+          ],
+          [
+            "ProductName",
+            "NVIDIA Corporation"
+          ],
+          [
+            "ProductVersion",
+            "1 , 0 , 1 , 56 "
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -559,7 +1230,20 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"81921033\"]]",
+        "body": [
+          [
+            "key",
+            "VarFileInfo"
+          ],
+          [
+            "type",
+            1
+          ],
+          [
+            "translations",
+            "81921033"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -572,7 +1256,498 @@
       },
       {
         "auto_collapse": false,
-        "body": "[{\"SHA256\": \"b68f224308099aeba9ca61e3ca8a6648a91c3e22b8a86e374cdb5b2791915eed\", \"Type\": \"BITMAP\", \"Entropy\": 4.492112200785426}, {\"SHA256\": \"b8883734e15688eb76e149e782b649a1cb93e3d651423484cc2b2a3594154aa8\", \"Type\": \"ICON\", \"Entropy\": 0.0}, {\"SHA256\": \"1b66520d471367f736d50c070a2e2bba8ad88ac58743394a764b888e9cb6f6be\", \"Type\": \"ICON\", \"Entropy\": 0.0}, {\"SHA256\": \"250f52cb2d6f1966a29f6ac771fa1cd185b8f8531396c8a4026c0fe635617e0c\", \"Type\": \"ICON\", \"Entropy\": 0.0}, {\"SHA256\": \"ee0352f75df1009fa6f5eaf323a1ed55c127cc679ac6b9de70b1b3f8dc9ece76\", \"Type\": \"ICON\", \"Entropy\": 0.0}, {\"SHA256\": \"4e7a8c59942ff527ff680aa88cc66bb8c8e7b6c02a018bc85ba36794e278670f\", \"Type\": \"ICON\", \"Entropy\": 0.0}, {\"SHA256\": \"e253c6a87bdd62e771c0ef1b9850dbc9523c51408ca282f994d3530dbbad9b11\", \"Type\": \"ICON\", \"Entropy\": 0.0}, {\"SHA256\": \"559eb05d39a8e243be3e4b051e94f6572a487cc6f90c4847f333d61fe887b28d\", \"Type\": \"ICON\", \"Entropy\": 0.0}, {\"SHA256\": \"30d23eb2bb1a08b9a1a263b5539dd76372b9251a4ec4c19739017fe14091d3df\", \"Type\": \"ICON\", \"Entropy\": 0.13688493092105009}, {\"SHA256\": \"3731b0a75ab19d96b774da62d37eccacd517c6593af20aa66525dc0b951cdba9\", \"Type\": \"ICON\", \"Entropy\": 0.0}, {\"SHA256\": \"3b74f6b67f6d4ea98829ad8d288b161eb06bca1d63b00388eaa400fff66592d7\", \"Type\": \"DIALOG\", \"Entropy\": 3.9339605602465073}, {\"SHA256\": \"91be3e043e5d72c901e47f8245d27e23f94c426e6c091b391887dd54f039e818\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"fcefeed6eb97cee99cf0781cb3882d0cf2c2d1d82da1e7d0ea686ad2a28d6d7c\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"33e15ec51f02d31aedb153489237b7938676d30e5a211a4498ae4910930e1a86\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"712a6bc373d8c9b9db9976df6e8396c30c92006938d88c05eabcad9cd0b44f7b\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"3f8a7354e0d343c4102e67e81bd8c1290edc405a96206d461d771c599d3a6e1a\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"45089870d9f0c98bfc764c9b52c1414d263daf1c09f722c3b62dc009c49d945d\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"e900b76b5ebd777afdbfc5f0704e24507f32df1b69020c8da66ba64704813ff4\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"3ac00a957c0415a430db2289a1743fa1563d3958d3e0dd4e4bcea048fa22acee\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"f845fcd3b7f00f321f1a0123a4a92691e6bd5b6553b3c47c608415e52f36fe6b\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"a7ac5f62fe799763f054b46bea539d7c254ae67515e44febc45899faff6e8130\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"e9288289beec2fe3b6ac24c1311451c8d079786a09515b95cbf2eda7f87f0b22\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"32915cadfa1cc9df16be5d67d61064429eed6ca5e5439b2705bb5573e7cc35fe\", \"Type\": \"DIALOG\", \"Entropy\": 2.1233404395688225}, {\"SHA256\": \"f4bd841308415de6ed2727462cd66a7333ac8155b4e8e95de0220355189c785c\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"b11b6030254693115731ddeff36358cbd134449d79aca4ef5c8b99ff78a045c8\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"875fd088c3e4fc6a48ec6d7f9b897956a5ab6a83b9710de550857731c1311fef\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"7de592043d3613deb65a36d48372038b1b0a910e79f60b360988df59a391e970\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"be0b1f2bcf1812a1b42727bb64413764b2b9e904fcbc64ce0d4b8dc49719ff04\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"ab9ac8d62fd064748c921e6bd4c123f5cc8910a384d1804bec33ffe27da27c4c\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"d54f02b97ed5bc2a642756268b41d4b8f7a077e73224e1580d22436834a14db5\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"b7fbec450a4da215d0f778737445d0d3ad164d12e33b31e982eb75b64b4585e0\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"8d4a9eff7e92a3dbd32200218c7ae318e3184e8caa8d634b7c72cf7b9e3e6128\", \"Type\": \"DIALOG\", \"Entropy\": 4.057695341441213}, {\"SHA256\": \"bee1a8fdab37696dabb8121c29f219e4f9bfbb9bdf1df07b0390ba4b0a9c54a0\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"9600fa91f88abf02543f1141589d72b35f3dab28ddadda98b5101b53e123b622\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"c7606d438ecce7eaef403d65064ab7cf28f5eeb137d59e6e4bd5f88f41a126bb\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"0b104dfa306965639069d83c2a39f7dbbe28d9fc93421fd4df618e1bae471d67\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"202115097d1bee389d4d4d81db00117252be97d5691af316941f3843ef7a05f5\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"a038ee252f6057f767a2e97566457a8ade06fc1203c8e9be326a5c29181df5ba\", \"Type\": \"DIALOG\", \"Entropy\": 0.0}, {\"SHA256\": \"48bdf70b0a970baa7ccba6c8856728ca755fbee84d17af95e44d2fcbb39383c5\", \"Type\": \"STRING\", \"Entropy\": 3.6299195107547426}, {\"SHA256\": \"787c0ce8933d9741f4d763e450512e3194e25621a828a7eded2651cf7faf3278\", \"Type\": \"STRING\", \"Entropy\": 6.515329910200218}, {\"SHA256\": \"1b8a7257c4ce178b45d0ff7844328acd5f43cf683a8dabff1aef8c39afec353c\", \"Type\": \"STRING\", \"Entropy\": 3.4903467218972484}, {\"SHA256\": \"5b0b27058ca580d56c3a276a4e20b6cb8bbf5e841a705ebabc64175741587fcd\", \"Type\": \"STRING\", \"Entropy\": 3.227407370534656}, {\"SHA256\": \"cd789c757dff898cb611466420212ddce773afe7ba731978b8d4a3aa7de4e50e\", \"Type\": \"STRING\", \"Entropy\": 3.2815841233050773}, {\"SHA256\": \"5f24475b702098fcda7b93ee7f4fd5cad2d456a5e43ceb3dc4b411b02235ab57\", \"Type\": \"STRING\", \"Entropy\": 3.6741944818245194}, {\"SHA256\": \"05868e5025c30cbb636d8f5d48d1474b1e23df49ac8b5c3bfeb6fbeb70b6d284\", \"Type\": \"STRING\", \"Entropy\": 3.1874267181424036}, {\"SHA256\": \"10ef1fdd906626d8d542f5fbf1dbf19ca1f58cd573742b34626f789cb924b90c\", \"Type\": \"STRING\", \"Entropy\": 3.1918039378899574}, {\"SHA256\": \"484a84f6522042f25536dbf47529c68384e2ec8fbe496ce31539ff11431d0b63\", \"Type\": \"STRING\", \"Entropy\": 3.2184161624478143}, {\"SHA256\": \"6c110afadcc732ad2bb0ce5540ff0baac761d453b7edaf32e67815231355112b\", \"Type\": \"STRING\", \"Entropy\": 3.6203063172297685}, {\"SHA256\": \"24a06d1b0f8db6ab2d9eece0b6a71b8c546c36ce841e88ed457531c513e3742c\", \"Type\": \"STRING\", \"Entropy\": 3.423048434614852}, {\"SHA256\": \"c4120a9cd3806c053e2394e3e190bcb5c91d02cf6f3bb706208dcf01bd7f3d56\", \"Type\": \"STRING\", \"Entropy\": 3.132164051193592}, {\"SHA256\": \"5363bea196743fddc84695b1722c734dab314d86987934b21472f2dbb97521cc\", \"Type\": \"STRING\", \"Entropy\": 5.099739809538337}, {\"SHA256\": \"11cf46ba0c6a2454ae713ec1a7b812e1fddf394606f4d09b3224e54d80a0e1e2\", \"Type\": \"STRING\", \"Entropy\": 5.441654354247077}, {\"SHA256\": \"f856753e0c780030f20b68543ce6d7f4a0be9028020ec4bd1e0b0774a7e805e4\", \"Type\": \"STRING\", \"Entropy\": 3.2042299687062283}, {\"SHA256\": \"6bada12f4631c15c3419bcf5205582516182df2708823c46d8d7b841ac30f8d9\", \"Type\": \"STRING\", \"Entropy\": 3.215133964392757}, {\"SHA256\": \"7e8d759f3197af99e8982768b9946b983a43ebe7c2b2c5e9bece28ebc9d7481d\", \"Type\": \"STRING\", \"Entropy\": 3.4765379019797757}, {\"SHA256\": \"507042555a0e42bd3a6834f1f8ae090e32b8990c4ccfcb9ffffb4016b725be51\", \"Type\": \"STRING\", \"Entropy\": 3.163852935442071}, {\"SHA256\": \"ab23a90fef36e388f7de423cf3c4113d14c1e6799a0a9f668c8c47e31a2bbb15\", \"Type\": \"STRING\", \"Entropy\": 3.6610941880556997}, {\"SHA256\": \"7b963051f1f963372ccd5b7a948b8be81438c538e1e089c49dd596379050a264\", \"Type\": \"STRING\", \"Entropy\": 3.4887059319718383}, {\"SHA256\": \"3f1b7a2c7c4411b52229478eeea0c67e41f078216012d336c2851c4aa123b69c\", \"Type\": \"STRING\", \"Entropy\": 3.2375591191033286}, {\"SHA256\": \"86582b12c37dcd35839cb81b507fa63d4c058e2af2f7742273afaae91739e1e4\", \"Type\": \"STRING\", \"Entropy\": 3.779827070608359}, {\"SHA256\": \"5f3a435c7471610a4a157e58d4589dccc777f4d320a3546cb0e438af0f86c070\", \"Type\": \"STRING\", \"Entropy\": 3.4976060038059584}, {\"SHA256\": \"b16a0d0193bbde51b96b30351dec58db34a57de994a3d342e96f13b8b5e06bba\", \"Type\": \"STRING\", \"Entropy\": 3.2868031777944826}, {\"SHA256\": \"e4172f77f1ff3094212d17e79e5ddb4a9772e5f597ed6d97978d1e1b86d66baf\", \"Type\": \"STRING\", \"Entropy\": 6.444550165964161}, {\"SHA256\": \"d1f9e9ba358e0ebbb98353daa4cae0ead21060897352e1969ebd094d41091cd1\", \"Type\": \"STRING\", \"Entropy\": 3.123776918654007}, {\"SHA256\": \"e2299a5ff919475cb92fb2f15bff9a675b862cba18ccfa21c2a61f6cabf8d713\", \"Type\": \"STRING\", \"Entropy\": 3.182204051860108}, {\"SHA256\": \"e8f93dc2e4a452847b8f84941cb274a693c72e80d3c951944855a60fbcc045ef\", \"Type\": \"STRING\", \"Entropy\": 3.1166376944477374}, {\"SHA256\": \"2acaf1ebd1a1a0bf56fb052207eef2257cc07b67b98c0f14898eaf3502436901\", \"Type\": \"STRING\", \"Entropy\": 2.9290214178345897}, {\"SHA256\": \"a9182d088972c204d95f5eddbb6e0602de9804935614c85d29f878a8ae66e5bc\", \"Type\": \"STRING\", \"Entropy\": 2.8459057729396684}, {\"SHA256\": \"9b3bf655d5c6dee18bea2272e4bfa99b1718cbd14368c5fdbd0ae0ef6c7e8683\", \"Type\": \"STRING\", \"Entropy\": 2.6496078522699573}, {\"SHA256\": \"70161ae627315f486fbe0aac0612b26114631036a7ba060e4c07f541d49c2066\", \"Type\": \"STRING\", \"Entropy\": 2.2110124429031206}, {\"SHA256\": \"1f1a1c6c35472a1252d84dfe1d8c37fa9a92b21b5e1c4d42f2219a84a7763fcb\", \"Type\": \"STRING\", \"Entropy\": 2.2323170908397314}, {\"SHA256\": \"8b9363206b0717e579843a39b8a6307844584274617b0a4619c83e65224d390b\", \"Type\": \"STRING\", \"Entropy\": 3.286856245435312}, {\"SHA256\": \"05ddd2aeb83799b85662ae09556ada592870fe862de82a0fad056afc0a3b3864\", \"Type\": \"STRING\", \"Entropy\": 2.2258352107345076}, {\"SHA256\": \"3fa3a8abbcb851f656f4865dc2d5f962903ce61362788649d87b612ca0a2d088\", \"Type\": \"STRING\", \"Entropy\": 2.3139450800171977}, {\"SHA256\": \"4d15b121ae9a4fe839bcd31a92065fbc3821d43c0a6469da7044590af39f6587\", \"Type\": \"STRING\", \"Entropy\": 2.3666704862413246}, {\"SHA256\": \"7a091e1a800ea70abbe3df83e41e90cc578e776e156dd3d3b0cc231af138cad0\", \"Type\": \"STRING\", \"Entropy\": 2.6251857859729935}, {\"SHA256\": \"b9d4d7afc4fac763b95d60fc64b9a24b005c7d87e8c86883690d3153309e7c6c\", \"Type\": \"STRING\", \"Entropy\": 2.7290680044064874}, {\"SHA256\": \"41870a26c9bf18be16cb9189f109307f1e1c8b1e323a8e85081c2ed53f60e2b0\", \"Type\": \"STRING\", \"Entropy\": 2.2394368955359654}, {\"SHA256\": \"01cdb0a35cc0d15a8224711b3fe68cfd2d2b2dea32eada09407c50b8356ed914\", \"Type\": \"STRING\", \"Entropy\": 2.951559964121441}, {\"SHA256\": \"02a8829856b265134319f07f3e41afb1111000b10d40edd53b9ae7523585ea7f\", \"Type\": \"STRING\", \"Entropy\": 2.8179685180315905}, {\"SHA256\": \"7a5d6b7ca80f328f3d5d66b6ca10d0b593d95d3ceaff401d88c39dcdc8597c96\", \"Type\": \"STRING\", \"Entropy\": 2.5434576529345563}, {\"SHA256\": \"70161ae627315f486fbe0aac0612b26114631036a7ba060e4c07f541d49c2066\", \"Type\": \"STRING\", \"Entropy\": 2.2110124429031206}, {\"SHA256\": \"c6a3c9f7eb0c7924196d921e4a212c9616d7030f89a5aba05ad5fe4003db30c2\", \"Type\": \"STRING\", \"Entropy\": 2.471052597331313}, {\"SHA256\": \"1b96943d4749559d6d7aa727fa9e0470db8efa02910dacb9a89164dfc0709209\", \"Type\": \"STRING\", \"Entropy\": 2.2470152282063443}, {\"SHA256\": \"bb334fb1413eba7183977833a0a433211ec2175b90f59f32bd3995081256b38f\", \"Type\": \"STRING\", \"Entropy\": 2.8659309684142307}, {\"SHA256\": \"5fffc799928d6d259d2dc01e6e22929269eb9d0c2cc49f7be77ba04be3c2c5e3\", \"Type\": \"STRING\", \"Entropy\": 2.5778989773565577}, {\"SHA256\": \"23b786a8ae4471ece721cdbe5b9cffaa729a69eddef4af4e876deeaf5de25a7a\", \"Type\": \"STRING\", \"Entropy\": 2.441768236284594}, {\"SHA256\": \"219b42608aba136cab4b3e44f5646ff13b18000d83c8e4c1a14f4ac296174b46\", \"Type\": \"STRING\", \"Entropy\": 3.062543264070255}, {\"SHA256\": \"a6339cae0edc5746f49057df46b8623f12aec5e24eab0a5669c152124cc933a5\", \"Type\": \"STRING\", \"Entropy\": 2.4770914836386697}, {\"SHA256\": \"73f3514ef3b322dc31032adf957ce99b66c047dca6b6e01af03c7a253a68a6ca\", \"Type\": \"STRING\", \"Entropy\": 2.370957172384986}, {\"SHA256\": \"d7a68c679b838890ee0a95ba075c4a4f5aa91ad5b5dddc1fd19ef7cd72dde6d1\", \"Type\": \"STRING\", \"Entropy\": 2.7741156464392045}, {\"SHA256\": \"91ae692288e82ffa677166efbe8a1fe47231f02158cbc76584aae7da7d4af82d\", \"Type\": \"STRING\", \"Entropy\": 2.464439895310732}, {\"SHA256\": \"67ab91827060037b0f57cd92c176833589dcb71fbb26cfe6a3b442ce9257993e\", \"Type\": \"STRING\", \"Entropy\": 2.4424051453810534}, {\"SHA256\": \"f05bcf4b4343a68b7912b6a46774425ce86c1fe6c2903c142b120f6b2dbd2afb\", \"Type\": \"STRING\", \"Entropy\": 2.4623232984418046}, {\"SHA256\": \"af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc\", \"Type\": \"ACCELERATOR\", \"Entropy\": 0.0}, {\"SHA256\": \"115bad14f1c9f2c027a84de21b107015722cb76be8d0abf3760ad8e00d6c24a5\", \"Type\": \"GROUP_ICON\", \"Entropy\": 0.0}, {\"SHA256\": \"b23a2b8e5c1654e565e88755f6a622481a68e0410aec8cd59358ac71f43dcd33\", \"Type\": \"VERSION\", \"Entropy\": 3.365251942927886}, {\"SHA256\": \"eed8dd47d83f07f5f5c744159df723672a6d5413a474a48da390102132829527\", \"Type\": \"MANIFEST\", \"Entropy\": 0.0}]",
+        "body": [
+          {
+            "Entropy": 4.492112200785426,
+            "SHA256": "b68f224308099aeba9ca61e3ca8a6648a91c3e22b8a86e374cdb5b2791915eed",
+            "Type": "BITMAP"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "b8883734e15688eb76e149e782b649a1cb93e3d651423484cc2b2a3594154aa8",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "1b66520d471367f736d50c070a2e2bba8ad88ac58743394a764b888e9cb6f6be",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "250f52cb2d6f1966a29f6ac771fa1cd185b8f8531396c8a4026c0fe635617e0c",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "ee0352f75df1009fa6f5eaf323a1ed55c127cc679ac6b9de70b1b3f8dc9ece76",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "4e7a8c59942ff527ff680aa88cc66bb8c8e7b6c02a018bc85ba36794e278670f",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "e253c6a87bdd62e771c0ef1b9850dbc9523c51408ca282f994d3530dbbad9b11",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "559eb05d39a8e243be3e4b051e94f6572a487cc6f90c4847f333d61fe887b28d",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 0.13688493092105009,
+            "SHA256": "30d23eb2bb1a08b9a1a263b5539dd76372b9251a4ec4c19739017fe14091d3df",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "3731b0a75ab19d96b774da62d37eccacd517c6593af20aa66525dc0b951cdba9",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 3.9339605602465073,
+            "SHA256": "3b74f6b67f6d4ea98829ad8d288b161eb06bca1d63b00388eaa400fff66592d7",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "91be3e043e5d72c901e47f8245d27e23f94c426e6c091b391887dd54f039e818",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "fcefeed6eb97cee99cf0781cb3882d0cf2c2d1d82da1e7d0ea686ad2a28d6d7c",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "33e15ec51f02d31aedb153489237b7938676d30e5a211a4498ae4910930e1a86",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "712a6bc373d8c9b9db9976df6e8396c30c92006938d88c05eabcad9cd0b44f7b",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "3f8a7354e0d343c4102e67e81bd8c1290edc405a96206d461d771c599d3a6e1a",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "45089870d9f0c98bfc764c9b52c1414d263daf1c09f722c3b62dc009c49d945d",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "e900b76b5ebd777afdbfc5f0704e24507f32df1b69020c8da66ba64704813ff4",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "3ac00a957c0415a430db2289a1743fa1563d3958d3e0dd4e4bcea048fa22acee",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "f845fcd3b7f00f321f1a0123a4a92691e6bd5b6553b3c47c608415e52f36fe6b",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "a7ac5f62fe799763f054b46bea539d7c254ae67515e44febc45899faff6e8130",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "e9288289beec2fe3b6ac24c1311451c8d079786a09515b95cbf2eda7f87f0b22",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 2.1233404395688225,
+            "SHA256": "32915cadfa1cc9df16be5d67d61064429eed6ca5e5439b2705bb5573e7cc35fe",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "f4bd841308415de6ed2727462cd66a7333ac8155b4e8e95de0220355189c785c",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "b11b6030254693115731ddeff36358cbd134449d79aca4ef5c8b99ff78a045c8",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "875fd088c3e4fc6a48ec6d7f9b897956a5ab6a83b9710de550857731c1311fef",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "7de592043d3613deb65a36d48372038b1b0a910e79f60b360988df59a391e970",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "be0b1f2bcf1812a1b42727bb64413764b2b9e904fcbc64ce0d4b8dc49719ff04",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "ab9ac8d62fd064748c921e6bd4c123f5cc8910a384d1804bec33ffe27da27c4c",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "d54f02b97ed5bc2a642756268b41d4b8f7a077e73224e1580d22436834a14db5",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "b7fbec450a4da215d0f778737445d0d3ad164d12e33b31e982eb75b64b4585e0",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 4.057695341441213,
+            "SHA256": "8d4a9eff7e92a3dbd32200218c7ae318e3184e8caa8d634b7c72cf7b9e3e6128",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "bee1a8fdab37696dabb8121c29f219e4f9bfbb9bdf1df07b0390ba4b0a9c54a0",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "9600fa91f88abf02543f1141589d72b35f3dab28ddadda98b5101b53e123b622",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "c7606d438ecce7eaef403d65064ab7cf28f5eeb137d59e6e4bd5f88f41a126bb",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "0b104dfa306965639069d83c2a39f7dbbe28d9fc93421fd4df618e1bae471d67",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "202115097d1bee389d4d4d81db00117252be97d5691af316941f3843ef7a05f5",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "a038ee252f6057f767a2e97566457a8ade06fc1203c8e9be326a5c29181df5ba",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 3.6299195107547426,
+            "SHA256": "48bdf70b0a970baa7ccba6c8856728ca755fbee84d17af95e44d2fcbb39383c5",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 6.515329910200218,
+            "SHA256": "787c0ce8933d9741f4d763e450512e3194e25621a828a7eded2651cf7faf3278",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.4903467218972484,
+            "SHA256": "1b8a7257c4ce178b45d0ff7844328acd5f43cf683a8dabff1aef8c39afec353c",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.227407370534656,
+            "SHA256": "5b0b27058ca580d56c3a276a4e20b6cb8bbf5e841a705ebabc64175741587fcd",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.2815841233050773,
+            "SHA256": "cd789c757dff898cb611466420212ddce773afe7ba731978b8d4a3aa7de4e50e",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.6741944818245194,
+            "SHA256": "5f24475b702098fcda7b93ee7f4fd5cad2d456a5e43ceb3dc4b411b02235ab57",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.1874267181424036,
+            "SHA256": "05868e5025c30cbb636d8f5d48d1474b1e23df49ac8b5c3bfeb6fbeb70b6d284",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.1918039378899574,
+            "SHA256": "10ef1fdd906626d8d542f5fbf1dbf19ca1f58cd573742b34626f789cb924b90c",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.2184161624478143,
+            "SHA256": "484a84f6522042f25536dbf47529c68384e2ec8fbe496ce31539ff11431d0b63",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.6203063172297685,
+            "SHA256": "6c110afadcc732ad2bb0ce5540ff0baac761d453b7edaf32e67815231355112b",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.423048434614852,
+            "SHA256": "24a06d1b0f8db6ab2d9eece0b6a71b8c546c36ce841e88ed457531c513e3742c",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.132164051193592,
+            "SHA256": "c4120a9cd3806c053e2394e3e190bcb5c91d02cf6f3bb706208dcf01bd7f3d56",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 5.099739809538337,
+            "SHA256": "5363bea196743fddc84695b1722c734dab314d86987934b21472f2dbb97521cc",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 5.441654354247077,
+            "SHA256": "11cf46ba0c6a2454ae713ec1a7b812e1fddf394606f4d09b3224e54d80a0e1e2",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.2042299687062283,
+            "SHA256": "f856753e0c780030f20b68543ce6d7f4a0be9028020ec4bd1e0b0774a7e805e4",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.215133964392757,
+            "SHA256": "6bada12f4631c15c3419bcf5205582516182df2708823c46d8d7b841ac30f8d9",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.4765379019797757,
+            "SHA256": "7e8d759f3197af99e8982768b9946b983a43ebe7c2b2c5e9bece28ebc9d7481d",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.163852935442071,
+            "SHA256": "507042555a0e42bd3a6834f1f8ae090e32b8990c4ccfcb9ffffb4016b725be51",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.6610941880556997,
+            "SHA256": "ab23a90fef36e388f7de423cf3c4113d14c1e6799a0a9f668c8c47e31a2bbb15",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.4887059319718383,
+            "SHA256": "7b963051f1f963372ccd5b7a948b8be81438c538e1e089c49dd596379050a264",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.2375591191033286,
+            "SHA256": "3f1b7a2c7c4411b52229478eeea0c67e41f078216012d336c2851c4aa123b69c",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.779827070608359,
+            "SHA256": "86582b12c37dcd35839cb81b507fa63d4c058e2af2f7742273afaae91739e1e4",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.4976060038059584,
+            "SHA256": "5f3a435c7471610a4a157e58d4589dccc777f4d320a3546cb0e438af0f86c070",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.2868031777944826,
+            "SHA256": "b16a0d0193bbde51b96b30351dec58db34a57de994a3d342e96f13b8b5e06bba",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 6.444550165964161,
+            "SHA256": "e4172f77f1ff3094212d17e79e5ddb4a9772e5f597ed6d97978d1e1b86d66baf",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.123776918654007,
+            "SHA256": "d1f9e9ba358e0ebbb98353daa4cae0ead21060897352e1969ebd094d41091cd1",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.182204051860108,
+            "SHA256": "e2299a5ff919475cb92fb2f15bff9a675b862cba18ccfa21c2a61f6cabf8d713",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.1166376944477374,
+            "SHA256": "e8f93dc2e4a452847b8f84941cb274a693c72e80d3c951944855a60fbcc045ef",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.9290214178345897,
+            "SHA256": "2acaf1ebd1a1a0bf56fb052207eef2257cc07b67b98c0f14898eaf3502436901",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.8459057729396684,
+            "SHA256": "a9182d088972c204d95f5eddbb6e0602de9804935614c85d29f878a8ae66e5bc",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.6496078522699573,
+            "SHA256": "9b3bf655d5c6dee18bea2272e4bfa99b1718cbd14368c5fdbd0ae0ef6c7e8683",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.2110124429031206,
+            "SHA256": "70161ae627315f486fbe0aac0612b26114631036a7ba060e4c07f541d49c2066",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.2323170908397314,
+            "SHA256": "1f1a1c6c35472a1252d84dfe1d8c37fa9a92b21b5e1c4d42f2219a84a7763fcb",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.286856245435312,
+            "SHA256": "8b9363206b0717e579843a39b8a6307844584274617b0a4619c83e65224d390b",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.2258352107345076,
+            "SHA256": "05ddd2aeb83799b85662ae09556ada592870fe862de82a0fad056afc0a3b3864",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.3139450800171977,
+            "SHA256": "3fa3a8abbcb851f656f4865dc2d5f962903ce61362788649d87b612ca0a2d088",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.3666704862413246,
+            "SHA256": "4d15b121ae9a4fe839bcd31a92065fbc3821d43c0a6469da7044590af39f6587",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.6251857859729935,
+            "SHA256": "7a091e1a800ea70abbe3df83e41e90cc578e776e156dd3d3b0cc231af138cad0",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.7290680044064874,
+            "SHA256": "b9d4d7afc4fac763b95d60fc64b9a24b005c7d87e8c86883690d3153309e7c6c",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.2394368955359654,
+            "SHA256": "41870a26c9bf18be16cb9189f109307f1e1c8b1e323a8e85081c2ed53f60e2b0",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.951559964121441,
+            "SHA256": "01cdb0a35cc0d15a8224711b3fe68cfd2d2b2dea32eada09407c50b8356ed914",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.8179685180315905,
+            "SHA256": "02a8829856b265134319f07f3e41afb1111000b10d40edd53b9ae7523585ea7f",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.5434576529345563,
+            "SHA256": "7a5d6b7ca80f328f3d5d66b6ca10d0b593d95d3ceaff401d88c39dcdc8597c96",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.2110124429031206,
+            "SHA256": "70161ae627315f486fbe0aac0612b26114631036a7ba060e4c07f541d49c2066",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.471052597331313,
+            "SHA256": "c6a3c9f7eb0c7924196d921e4a212c9616d7030f89a5aba05ad5fe4003db30c2",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.2470152282063443,
+            "SHA256": "1b96943d4749559d6d7aa727fa9e0470db8efa02910dacb9a89164dfc0709209",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.8659309684142307,
+            "SHA256": "bb334fb1413eba7183977833a0a433211ec2175b90f59f32bd3995081256b38f",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.5778989773565577,
+            "SHA256": "5fffc799928d6d259d2dc01e6e22929269eb9d0c2cc49f7be77ba04be3c2c5e3",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.441768236284594,
+            "SHA256": "23b786a8ae4471ece721cdbe5b9cffaa729a69eddef4af4e876deeaf5de25a7a",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 3.062543264070255,
+            "SHA256": "219b42608aba136cab4b3e44f5646ff13b18000d83c8e4c1a14f4ac296174b46",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.4770914836386697,
+            "SHA256": "a6339cae0edc5746f49057df46b8623f12aec5e24eab0a5669c152124cc933a5",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.370957172384986,
+            "SHA256": "73f3514ef3b322dc31032adf957ce99b66c047dca6b6e01af03c7a253a68a6ca",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.7741156464392045,
+            "SHA256": "d7a68c679b838890ee0a95ba075c4a4f5aa91ad5b5dddc1fd19ef7cd72dde6d1",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.464439895310732,
+            "SHA256": "91ae692288e82ffa677166efbe8a1fe47231f02158cbc76584aae7da7d4af82d",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.4424051453810534,
+            "SHA256": "67ab91827060037b0f57cd92c176833589dcb71fbb26cfe6a3b442ce9257993e",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 2.4623232984418046,
+            "SHA256": "f05bcf4b4343a68b7912b6a46774425ce86c1fe6c2903c142b120f6b2dbd2afb",
+            "Type": "STRING"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
+            "Type": "ACCELERATOR"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "115bad14f1c9f2c027a84de21b107015722cb76be8d0abf3760ad8e00d6c24a5",
+            "Type": "GROUP_ICON"
+          },
+          {
+            "Entropy": 3.365251942927886,
+            "SHA256": "b23a2b8e5c1654e565e88755f6a622481a68e0410aec8cd59358ac71f43dcd33",
+            "Type": "VERSION"
+          },
+          {
+            "Entropy": 0.0,
+            "SHA256": "eed8dd47d83f07f5f5c744159df723672a6d5413a474a48da390102132829527",
+            "Type": "MANIFEST"
+          }
+        ],
         "body_config": {
           "column_order": [
             "SHA256",
@@ -591,7 +1766,83 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 167936]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.88553, 4.98069, 6.21708, 5.9896, 6.09093, 5.99948, 6.06472, 5.95963, 5.10898, 1.19329, 5.25689, 2.37787, 4.3109, 4.82086, 5.08761, 3.30617, 4.03668, 4.27082, 3.81143, 4.05897, 4.46519, 5.40653, 5.13494, 5.21197, 5.06547, 2.53226, 5.59775, 4.26825, 3.46266, 3.4382, 4.18576, 4.67363, 6.49498, 4.29921, 3.53119, 3.44932, 4.19033, 3.2868, 3.27431, 3.33352, 3.24376, 3.18492, 3.25574, 3.18845, 3.23297, 3.15729, 4.07008, 4.27456, 4.51135, 1.3599]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Size",
+                167936
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  0.88553,
+                  4.98069,
+                  6.21708,
+                  5.9896,
+                  6.09093,
+                  5.99948,
+                  6.06472,
+                  5.95963,
+                  5.10898,
+                  1.19329,
+                  5.25689,
+                  2.37787,
+                  4.3109,
+                  4.82086,
+                  5.08761,
+                  3.30617,
+                  4.03668,
+                  4.27082,
+                  3.81143,
+                  4.05897,
+                  4.46519,
+                  5.40653,
+                  5.13494,
+                  5.21197,
+                  5.06547,
+                  2.53226,
+                  5.59775,
+                  4.26825,
+                  3.46266,
+                  3.4382,
+                  4.18576,
+                  4.67363,
+                  6.49498,
+                  4.29921,
+                  3.53119,
+                  3.44932,
+                  4.19033,
+                  3.2868,
+                  3.27431,
+                  3.33352,
+                  3.24376,
+                  3.18492,
+                  3.25574,
+                  3.18845,
+                  3.23297,
+                  3.15729,
+                  4.07008,
+                  4.27456,
+                  4.51135,
+                  1.3599
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
