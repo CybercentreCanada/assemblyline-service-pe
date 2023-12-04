@@ -722,6 +722,7 @@ class PE(ServiceBase):
             section_text_section.add_item("Entropy", entropy_data[0])
             section_graph_section = GraphSectionBody()
             section_graph_section.set_colormap(cmap_min=0, cmap_max=8, values=[round(x, 5) for x in entropy_data[1]])
+            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L1097
             if entropy_data[0] > self.config.get("heur4_max_section_entropy", 7.5):
                 heur = Heuristic(4)
                 heur_section = ResultMultiSection(heur.name, heuristic=heur)
