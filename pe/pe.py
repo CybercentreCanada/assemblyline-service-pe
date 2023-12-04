@@ -1073,6 +1073,9 @@ class PE(ServiceBase):
 
     def add_resources(self):
         if not self.binary.has_resources:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L690
+            heur = Heuristic(36)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
             return
 
         self.features["resources_manager"] = {

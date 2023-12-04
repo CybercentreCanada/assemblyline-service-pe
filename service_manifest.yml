@@ -281,6 +281,13 @@ heuristics:
     name: PE file contains a suspiciously low number of functions
     score: 0
 
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L690
+  - description: No resources found.
+    filetype: "executable/windows"
+    heur_id: 36
+    name: PE file does not contain any resources
+    score: 0    
+
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
   cpu_cores: 1
