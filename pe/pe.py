@@ -404,6 +404,14 @@ class PE(ServiceBase):
             res.add_lines(dataless_resources)
             self.file_res.add_section(res)
 
+    # Inspired by https://github.com/CYB3RMX/Qu1cksc0pe/blob/086db196d2de289f0784ae4d8ee03f34bf10354b/Modules/winAnalyzer.py#L446
+    def check_number_of_functions(self):
+        if len(self.binary.imported_functions) + len(self.binary.exported_functions) < 20:
+            res = ResultSection("PE file contains a suspiciously low number of functions", heuristic=Heuristic(35))
+            res.add_line(f"There are {len(self.binary.imported_functions)} import and "
+                         f"{len(self.binary.exported_functions)} export functions.")
+            self.file_res.add_section(res)
+
     def add_headers(self):
         self.features["name"] = os.path.basename(self.binary.name)
         self.features["format"] = self.binary.format.name
@@ -1899,6 +1907,7 @@ class PE(ServiceBase):
         self.check_timestamps()
         self.check_exe_resources()
         self.check_dataless_resources()
+        self.check_number_of_functions()
 
         self.features = {}
         self.add_headers()

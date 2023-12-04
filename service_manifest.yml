@@ -273,6 +273,14 @@ heuristics:
     name: PE file contains sections with non-standard names
     score: 0
 
+  # Inspired by https://github.com/CYB3RMX/Qu1cksc0pe/blob/086db196d2de289f0784ae4d8ee03f34bf10354b/Modules/winAnalyzer.py#L446
+  - description: >-
+      This may be indicative of an encrypted/obfuscated PE file.
+    filetype: "executable/windows"
+    heur_id: 35
+    name: PE file contains a suspiciously low number of functions
+    score: 0
+
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
   cpu_cores: 1
