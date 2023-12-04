@@ -54,6 +54,7 @@ heuristics:
     name: Same issuer for all certificates
     score: 500
 
+  # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L1097
   - description: >-
       This PE contains at least one section with high entropy, which
       may indicate packed or encrypted code.
