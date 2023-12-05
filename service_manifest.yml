@@ -55,6 +55,7 @@ heuristics:
     score: 500
 
   # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L1097
+  # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L363
   - description: >-
       This PE contains at least one section with high entropy, which
       may indicate packed or encrypted code.
@@ -288,7 +289,35 @@ heuristics:
     filetype: "executable/windows"
     heur_id: 36
     name: PE file does not contain any resources
-    score: 0    
+    score: 0
+
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L314
+  - description: Lief could not determine the file type
+    filetype: "executable/windows"
+    heur_id: 37
+    name: No file type found
+    score: 0
+
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L334
+  - description: Lief could not determine the entrypoint
+    filetype: "executable/windows"
+    heur_id: 37
+    name: No entrypoint found
+    score: 0
+
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L351
+  - description: Lief could not determine the architecture
+    filetype: "executable/windows"
+    heur_id: 38
+    name: No architecture found
+    score: 0
+
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L401
+  - description: Lief could not find a dynamic library
+    filetype: "executable/windows"
+    heur_id: 39
+    name: No dynamic library found
+    score: 0
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
