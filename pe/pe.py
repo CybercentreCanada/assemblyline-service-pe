@@ -414,6 +414,13 @@ class PE(ServiceBase):
             )
             self.file_res.add_section(res)
 
+    # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L376
+    def check_dynamic_libraries(self):
+        # https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L401
+        if not self.binary.libraries:
+            heur = Heuristic(39)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
+
     def add_headers(self):
         self.features["name"] = os.path.basename(self.binary.name)
         self.features["format"] = self.binary.format.name
@@ -534,7 +541,19 @@ class PE(ServiceBase):
         res.add_tag("file.pe.linker.timestamp", hr_timestamp)
         # Somehow, that is different from binary.entrypoint
         res.add_item("Entrypoint", hex(self.binary.optional_header.addressof_entrypoint))
+
+        if not self.binary.entrypoint:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L334
+            heur = Heuristic(37)
+            ResultSection(heur.name, heuristic=heur, parent=res)
+
         res.add_item("Machine", self.binary.header.machine.name)
+
+        if not self.binary.header.machine:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L351
+            heur = Heuristic(38)
+            ResultSection(heur.name, heuristic=heur, parent=res)
+
         res.add_item("Magic", self.binary.optional_header.magic.name)
         if self.binary.optional_header.magic.name == "???":
             heur = Heuristic(18)
@@ -660,6 +679,12 @@ class PE(ServiceBase):
                 )
                 res.add_subsection(heur_section)
 
+        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L314
+        binary_type = lief.PE.get_type(self.request.file_path)
+        if not binary_type:
+            heur = Heuristic(37)
+            ResultSection(heur.name, heuristic=heur, parent=res)
+
         self.file_res.add_section(res)
 
     def add_sections(self):
@@ -725,6 +750,7 @@ class PE(ServiceBase):
             section_graph_section = GraphSectionBody()
             section_graph_section.set_colormap(cmap_min=0, cmap_max=8, values=[round(x, 5) for x in entropy_data[1]])
             # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L1097
+            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L363
             if entropy_data[0] > self.config.get("heur4_max_section_entropy", 7.5):
                 heur = Heuristic(4)
                 heur_section = ResultMultiSection(heur.name, heuristic=heur)
@@ -1921,6 +1947,7 @@ class PE(ServiceBase):
         self.check_exe_resources()
         self.check_dataless_resources()
         self.check_number_of_functions()
+        self.check_dynamic_libraries()
 
         self.features = {}
         self.add_headers()
