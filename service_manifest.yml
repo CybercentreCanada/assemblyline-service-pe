@@ -334,6 +334,40 @@ heuristics:
     name: No exported function found
     score: 0
 
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L798
+  - description: Lief could not find an imported function
+    filetype: "executable/windows"
+    heur_id: 42
+    name: No imported function found
+    score: 0
+
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L963
+  - description: Lief could not find a data directory
+    filetype: "executable/windows"
+    heur_id: 43
+    name: No data directory found
+    score: 0
+
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1012
+  - description: Lief could not find debug information
+    filetype: "executable/windows"
+    heur_id: 44
+    name: No debug information found
+    score: 0
+
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1041
+  - description: Lief could not find load configuration
+    filetype: "executable/windows"
+    heur_id: 45
+    name: No load configuration found
+    score: 0
+
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1098
+  - description: Lief could not find relocations
+    filetype: "executable/windows"
+    heur_id: 45
+    name: No relocations found
+    score: 0
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
