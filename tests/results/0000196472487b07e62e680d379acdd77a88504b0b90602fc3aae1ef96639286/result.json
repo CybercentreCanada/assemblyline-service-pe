@@ -53,6 +53,26 @@
         "heuristic": {
           "attack_ids": [],
           "frequency": 1,
+          "heur_id": 42,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No imported function found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
           "heur_id": 39,
           "score": 0,
           "score_map": {},
@@ -484,6 +504,26 @@
         "heuristic": {
           "attack_ids": [],
           "frequency": 1,
+          "heur_id": 44,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No debug information found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
           "heur_id": 32,
           "score": 0,
           "score_map": {},
@@ -492,6 +532,26 @@
         "promote_to": null,
         "tags": {},
         "title_text": "PE file does not import any functions",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 45,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No relocations found",
         "zeroize_on_tag_safe": false
       },
       {
@@ -677,6 +737,21 @@
       {
         "attack_ids": [],
         "heur_id": 41,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 42,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 44,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 45,
         "signatures": []
       }
     ],

@@ -822,6 +822,26 @@
       },
       {
         "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 44,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No debug information found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
         "body": "Name: SI32E.SFX\nVersion: 0.0\nTimestamp: 979049345 (2001-01-09 14:09:05 +00:00 (UTC))",
         "body_config": {},
         "body_format": "TEXT",
@@ -925,6 +945,26 @@
         "promote_to": null,
         "tags": {},
         "title_text": "GDI32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 45,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No relocations found",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1553,6 +1593,16 @@
       {
         "attack_ids": [],
         "heur_id": 33,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 44,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 45,
         "signatures": []
       }
     ],

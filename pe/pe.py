@@ -419,11 +419,30 @@ class PE(ServiceBase):
                 heur = Heuristic(41)
                 ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L798
+            if len(self.binary.imported_functions) == 0:
+                heur = Heuristic(42)
+                ResultSection(heur.name, heuristic=heur, parent=self.file_res)
+
     # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L376
     def check_dynamic_libraries(self):
         # https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L401
         if not self.binary.libraries:
             heur = Heuristic(39)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
+
+    # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L945
+    def check_data_directories(self):
+        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L963
+        if not self.binary.data_directories:
+            heur = Heuristic(43)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
+
+    # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1075
+    def check_relocations(self):
+        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1098
+        if not self.binary.relocations:
+            heur = Heuristic(45)
             ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
     def add_headers(self):
@@ -820,6 +839,9 @@ class PE(ServiceBase):
 
     def add_debug(self):
         if not self.binary.has_debug:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1012
+            heur = Heuristic(44)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
             return
         self.features["debugs"] = []
         res = ResultSection("Debugs")
@@ -991,6 +1013,9 @@ class PE(ServiceBase):
 
     def add_configuration(self):
         if not self.binary.has_configuration:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1041
+            heur = Heuristic(45)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
             return
 
         load_configuration = self.binary.load_configuration
@@ -1954,6 +1979,7 @@ class PE(ServiceBase):
         self.check_dataless_resources()
         self.check_number_of_functions()
         self.check_dynamic_libraries()
+        self.check_data_directories()
 
         self.features = {}
         self.add_headers()
