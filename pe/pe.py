@@ -414,6 +414,11 @@ class PE(ServiceBase):
             )
             self.file_res.add_section(res)
 
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L760
+            if len(self.binary.exported_functions) == 0:
+                heur = Heuristic(41)
+                ResultSection(heur.name, heuristic=heur, parent=self.file_res)
+
     # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L376
     def check_dynamic_libraries(self):
         # https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L401
@@ -943,6 +948,7 @@ class PE(ServiceBase):
 
     def add_imports(self):
         if not self.binary.has_imports:
+            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L454
             no_imports_heur = Heuristic(32)
             _ = ResultSection(no_imports_heur.name, heuristic=no_imports_heur, parent=self.file_res)
             return
