@@ -255,6 +255,7 @@ heuristics:
     name: NodeJS compiled executable
     score: 0
 
+  # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L454
   - description: >-
       No import functions for PE file found
     filetype: "executable/windows"
@@ -318,6 +319,21 @@ heuristics:
     heur_id: 39
     name: No dynamic library found
     score: 0
+
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L426
+  - description: Lief could not find a symbol
+    filetype: "executable/windows"
+    heur_id: 40
+    name: No symbol found
+    score: 0
+
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L760
+  - description: Lief could not find an exported function
+    filetype: "executable/windows"
+    heur_id: 41
+    name: No exported function found
+    score: 0
+
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
