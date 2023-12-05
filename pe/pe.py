@@ -408,8 +408,10 @@ class PE(ServiceBase):
     def check_number_of_functions(self):
         if len(self.binary.imported_functions) + len(self.binary.exported_functions) < 20:
             res = ResultSection("PE file contains a suspiciously low number of functions", heuristic=Heuristic(35))
-            res.add_line(f"There are {len(self.binary.imported_functions)} import and "
-                         f"{len(self.binary.exported_functions)} export functions.")
+            res.add_line(
+                f"There are {len(self.binary.imported_functions)} import and "
+                f"{len(self.binary.exported_functions)} export functions."
+            )
             self.file_res.add_section(res)
 
     def add_headers(self):
@@ -1246,8 +1248,10 @@ class PE(ServiceBase):
                     except (OSError, ValueError):
                         unshowable_icons.append(f"icon_{idx}.ico")
                         self.request.add_supplementary(
-                            temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file",
-                            parent_relation=PARENT_RELATION.EXTRACTED
+                            temp_path,
+                            f"icon_{idx}.ico",
+                            f"Icon {idx} extracted from the PE file",
+                            parent_relation=PARENT_RELATION.EXTRACTED,
                         )
                     except Image.DecompressionBombError:
                         heur = Heuristic(28)
@@ -1257,8 +1261,10 @@ class PE(ServiceBase):
 
                         unshowable_icons.append(f"icon_{idx}.ico")
                         self.request.add_supplementary(
-                            temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file",
-                            parent_relation=PARENT_RELATION.EXTRACTED
+                            temp_path,
+                            f"icon_{idx}.ico",
+                            f"Icon {idx} extracted from the PE file",
+                            parent_relation=PARENT_RELATION.EXTRACTED,
                         )
 
                 self.features["resources_manager"]["icons"] = icons
@@ -1634,8 +1640,10 @@ class PE(ServiceBase):
                 with open(temp_path, "wb") as myfile:
                     myfile.write(raw_cert)
                 self.request.add_supplementary(
-                    temp_path, file_name, f"{file_name} extracted from binary's resources",
-                    parent_relation=PARENT_RELATION.EXTRACTED
+                    temp_path,
+                    file_name,
+                    f"{file_name} extracted from binary's resources",
+                    parent_relation=PARENT_RELATION.EXTRACTED,
                 )
                 sub_sub_res.add_item("SHA1", hashlib.sha1(raw_cert).hexdigest())
                 sub_sub_res.add_item("SHA256", hashlib.sha256(raw_cert).hexdigest())
