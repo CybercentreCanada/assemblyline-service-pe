@@ -547,6 +547,10 @@ class PE(ServiceBase):
             elif self.binary.tls.has_data_directory:
                 if self.binary.tls.directory.has_section:
                     self.features["tls"] = {"section": self.binary.tls.directory.section.name}
+        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1150
+        else:
+            heur = Heuristic(46)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
         # print(self.binary.imagebase) # Doesn't work as documented?
         self.features["position_independent"] = self.binary.is_pie
@@ -658,6 +662,10 @@ class PE(ServiceBase):
             self.features["rich_header"]["hash"] = rich_header_hash
             rich_header_section.add_section_part(table_body)
             res.add_subsection(rich_header_section)
+        else:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1170
+            heur = Heuristic(47)
+            ResultSection(heur.name, heuristic=heur, parent=res)
 
         if abs(self.features["size"] - self.features["virtual_size"]) > max(
             self.features["size"], self.features["virtual_size"]
@@ -1134,6 +1142,7 @@ class PE(ServiceBase):
     def add_resources(self):
         if not self.binary.has_resources:
             # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L690
+            # and https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1120
             heur = Heuristic(36)
             ResultSection(heur.name, heuristic=heur, parent=self.file_res)
             return
@@ -1241,6 +1250,10 @@ class PE(ServiceBase):
                 heur_section = ResultSection(heur.name, heuristic=heur)
                 heur_section.add_line("Can't read dialog object")
                 res.add_subsection(heur_section)
+        else:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1343
+            heur = Heuristic(53)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
         if self.binary.resources_manager.has_html:
             try:
@@ -1339,12 +1352,20 @@ class PE(ServiceBase):
                 heur_section = ResultSection(heur.name, heuristic=heur)
                 heur_section.add_line("Found corrupted icons")
                 res.add_subsection(heur_section)
+        else:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1263
+            heur = Heuristic(52)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
         if self.binary.resources_manager.has_manifest:
             try:
                 self.features["resources_manager"]["manifest"] = self.binary.resources_manager.manifest
             except lief.not_found:
                 pass
+        else:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1217
+            heur = Heuristic(49)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
         if self.binary.resources_manager.has_string_table:
             self.features["resources_manager"]["string_table"] = []
@@ -1461,6 +1482,16 @@ class PE(ServiceBase):
                 sub_res.set_heuristic(13)
             res.add_subsection(sub_res)
 
+        if self.binary.resources_manager.has_type:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1229
+            heur = Heuristic(50)
+            ResultSection(heur.name, heuristic=heur, parent=res)
+
+        if self.binary.resources_manager.langs_available:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1243
+            heur = Heuristic(51)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
+
         sub_res = ResultTableSection("Summary")
         current_resource_type = ""
 
@@ -1527,6 +1558,9 @@ class PE(ServiceBase):
         self.features["verify_signature"] = self.binary.verify_signature().name()
 
         if not self.binary.has_signatures:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1206
+            heur = Heuristic(48)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
             return
 
         all_certs = [
