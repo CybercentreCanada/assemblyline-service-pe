@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 0,
+    "score": 100,
     "sections": [
       {
         "auto_collapse": false,
@@ -74,26 +74,6 @@
           }
         },
         "title_text": "Headers",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 1,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 47,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No rich header found",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1520,28 +1500,8 @@
         "heuristic": {
           "attack_ids": [],
           "frequency": 1,
-          "heur_id": 53,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No dialog found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 51,
-          "score": 0,
+          "heur_id": 36,
+          "score": 100,
           "score_map": {},
           "signatures": {}
         },
@@ -2193,26 +2153,6 @@
         "promote_to": null,
         "tags": {},
         "title_text": "var_file_info",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 1,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 50,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No resources type found",
         "zeroize_on_tag_safe": false
       },
       {
@@ -3045,22 +2985,7 @@
       },
       {
         "attack_ids": [],
-        "heur_id": 47,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 50,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 51,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 53,
+        "heur_id": 36,
         "signatures": []
       }
     ],

@@ -277,63 +277,20 @@ heuristics:
     name: PE file contains sections with non-standard names
     score: 0
 
-  # Inspired by https://github.com/CYB3RMX/Qu1cksc0pe/blob/086db196d2de289f0784ae4d8ee03f34bf10354b/Modules/winAnalyzer.py#L446
-  - description: >-
-      This may be indicative of an encrypted/obfuscated PE file.
-    filetype: "executable/windows"
-    heur_id: 35
-    name: PE file contains a suspiciously low number of functions
-    score: 0
-
   # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L690
   # and https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1120
   - description: No resources found.
     filetype: "executable/windows"
-    heur_id: 36
+    heur_id: 35
     name: PE file does not contain any resources
-    score: 0
+    score: 100
 
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L314
-  - description: Lief could not determine the file type
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1243
+  - description: Lief could not find lang
     filetype: "executable/windows"
-    heur_id: 37
-    name: No file type found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L760
-  - description: Lief could not find an exported function
-    filetype: "executable/windows"
-    heur_id: 38
-    name: No exported function found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L798
-  - description: Lief could not find an imported function
-    filetype: "executable/windows"
-    heur_id: 39
-    name: No imported function found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L963
-  - description: Lief could not find a data directory
-    filetype: "executable/windows"
-    heur_id: 40
-    name: No data directory found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1098
-  - description: Lief could not find relocations
-    filetype: "executable/windows"
-    heur_id: 41
-    name: No relocations found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1229
-  - description: Lief could not find resources type
-    filetype: "executable/windows"
-    heur_id: 42
-    name: No resources type found
-    score: 0
+    heur_id: 36
+    name: No lang found
+    score: 100
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG

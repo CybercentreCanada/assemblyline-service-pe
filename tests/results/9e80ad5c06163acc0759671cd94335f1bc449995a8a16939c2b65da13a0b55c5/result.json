@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 0,
+    "score": 100,
     "sections": [
       {
         "auto_collapse": false,
@@ -10,14 +10,7 @@
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 35,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
+        "heuristic": null,
         "promote_to": null,
         "tags": {},
         "title_text": "PE file contains a suspiciously low number of functions",
@@ -30,14 +23,7 @@
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 41,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
+        "heuristic": null,
         "promote_to": null,
         "tags": {},
         "title_text": "No exported function found",
@@ -50,37 +36,10 @@
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 42,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
+        "heuristic": null,
         "promote_to": null,
         "tags": {},
         "title_text": "No imported function found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 39,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No dynamic library found",
         "zeroize_on_tag_safe": false
       },
       {
@@ -154,26 +113,6 @@
           }
         },
         "title_text": "Headers",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 1,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 47,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No rich header found",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1100,26 +1039,6 @@
         "heuristic": {
           "attack_ids": [],
           "frequency": 1,
-          "heur_id": 44,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No debug information found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
           "heur_id": 32,
           "score": 0,
           "score_map": {},
@@ -1140,48 +1059,8 @@
         "heuristic": {
           "attack_ids": [],
           "frequency": 1,
-          "heur_id": 45,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No relocations found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 53,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No dialog found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 51,
-          "score": 0,
+          "heur_id": 36,
+          "score": 100,
           "score_map": {},
           "signatures": {}
         },
@@ -1731,26 +1610,6 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 1,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 50,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No resources type found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
         "body": [
           {
             "Entropy": 3.069899093779683,
@@ -1921,26 +1780,6 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 48,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No signature found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
         "body": [
           [
             "ORDERED_KEY_VALUE",
@@ -2092,57 +1931,7 @@
       },
       {
         "attack_ids": [],
-        "heur_id": 35,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 39,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 41,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 42,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 44,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 45,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 47,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 48,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 50,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 51,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 53,
+        "heur_id": 36,
         "signatures": []
       }
     ],

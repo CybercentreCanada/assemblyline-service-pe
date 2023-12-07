@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 200,
+    "score": 300,
     "sections": [
       {
         "auto_collapse": false,
@@ -1128,8 +1128,8 @@
         "heuristic": {
           "attack_ids": [],
           "frequency": 1,
-          "heur_id": 51,
-          "score": 0,
+          "heur_id": 36,
+          "score": 100,
           "score_map": {},
           "signatures": {}
         },
@@ -1653,26 +1653,6 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 1,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 50,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No resources type found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
         "body": [
           {
             "Entropy": 0.0,
@@ -1833,26 +1813,6 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 48,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No signature found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
         "body": [
           [
             "ORDERED_KEY_VALUE",
@@ -1985,17 +1945,7 @@
       },
       {
         "attack_ids": [],
-        "heur_id": 48,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 50,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 51,
+        "heur_id": 36,
         "signatures": []
       }
     ],

@@ -407,7 +407,7 @@ class PE(ServiceBase):
     # Inspired by https://github.com/CYB3RMX/Qu1cksc0pe/blob/086db196d2de289f0784ae4d8ee03f34bf10354b/Modules/winAnalyzer.py#L446
     def check_number_of_functions(self):
         if len(self.binary.imported_functions) + len(self.binary.exported_functions) < 20:
-            res = ResultSection("PE file contains a suspiciously low number of functions", heuristic=Heuristic(35))
+            res = ResultSection("PE file contains a suspiciously low number of functions")
             res.add_line(
                 f"There are {len(self.binary.imported_functions)} import and "
                 f"{len(self.binary.exported_functions)} export functions."
@@ -416,27 +416,23 @@ class PE(ServiceBase):
 
             # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L760
             if len(self.binary.exported_functions) == 0:
-                heur = Heuristic(38)
-                ResultSection(heur.name, heuristic=heur, parent=self.file_res)
+                ResultSection("No exported function found", parent=self.file_res)
 
             # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L798
             if len(self.binary.imported_functions) == 0:
-                heur = Heuristic(39)
-                ResultSection(heur.name, heuristic=heur, parent=self.file_res)
+                ResultSection("No imported function found", parent=self.file_res)
 
     # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L945
     def check_data_directories(self):
         # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L963
         if not self.binary.data_directories:
-            heur = Heuristic(40)
-            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
+            ResultSection("No data directory found", parent=self.file_res)
 
     # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1075
     def check_relocations(self):
         # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1098
         if not self.binary.relocations:
-            heur = Heuristic(41)
-            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
+            ResultSection("No relocations found", parent=self.file_res)
 
     def add_headers(self):
         self.features["name"] = os.path.basename(self.binary.name)
@@ -687,8 +683,7 @@ class PE(ServiceBase):
         # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L314
         binary_type = lief.PE.get_type(self.request.file_path)
         if not binary_type:
-            heur = Heuristic(37)
-            ResultSection(heur.name, heuristic=heur, parent=res)
+            ResultSection("No file type found", parent=res)
 
         self.file_res.add_section(res)
 
@@ -1110,7 +1105,7 @@ class PE(ServiceBase):
         if not self.binary.has_resources:
             # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L690
             # and https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1120
-            heur = Heuristic(36)
+            heur = Heuristic(35)
             ResultSection(heur.name, heuristic=heur, parent=self.file_res)
             return
 
@@ -1217,10 +1212,6 @@ class PE(ServiceBase):
                 heur_section = ResultSection(heur.name, heuristic=heur)
                 heur_section.add_line("Can't read dialog object")
                 res.add_subsection(heur_section)
-        else:
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1343
-            heur = Heuristic(55)
-            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
         if self.binary.resources_manager.has_html:
             try:
@@ -1319,10 +1310,6 @@ class PE(ServiceBase):
                 heur_section = ResultSection(heur.name, heuristic=heur)
                 heur_section.add_line("Found corrupted icons")
                 res.add_subsection(heur_section)
-        else:
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1263
-            heur = Heuristic(54)
-            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
         if self.binary.resources_manager.has_manifest:
             try:
@@ -1445,14 +1432,9 @@ class PE(ServiceBase):
                 sub_res.set_heuristic(13)
             res.add_subsection(sub_res)
 
-        if self.binary.resources_manager.has_type:
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1229
-            heur = Heuristic(42)
-            ResultSection(heur.name, heuristic=heur, parent=res)
-
         if self.binary.resources_manager.langs_available:
             # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1243
-            heur = Heuristic(53)
+            heur = Heuristic(36)
             ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
         sub_res = ResultTableSection("Summary")

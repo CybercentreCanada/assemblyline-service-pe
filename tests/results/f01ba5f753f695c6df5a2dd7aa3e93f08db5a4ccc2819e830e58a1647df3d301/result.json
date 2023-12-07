@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 0,
+    "score": 100,
     "sections": [
       {
         "auto_collapse": false,
@@ -74,26 +74,6 @@
           }
         },
         "title_text": "Headers",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 1,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 47,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No rich header found",
         "zeroize_on_tag_safe": false
       },
       {
@@ -929,26 +909,6 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 44,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No debug information found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
         "body": "Name: main_temp.dll\nVersion: 0.0\nTimestamp: 1628104226 (2021-08-04 19:10:26 +00:00 (UTC))",
         "body_config": {},
         "body_format": "TEXT",
@@ -1061,54 +1021,14 @@
         "heuristic": {
           "attack_ids": [],
           "frequency": 1,
-          "heur_id": 45,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No relocations found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 36,
-          "score": 0,
+          "heur_id": 35,
+          "score": 100,
           "score_map": {},
           "signatures": {}
         },
         "promote_to": null,
         "tags": {},
         "title_text": "PE file does not contain any resources",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 48,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No signature found",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1160,27 +1080,7 @@
       },
       {
         "attack_ids": [],
-        "heur_id": 36,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 44,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 45,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 47,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 48,
+        "heur_id": 35,
         "signatures": []
       }
     ],
