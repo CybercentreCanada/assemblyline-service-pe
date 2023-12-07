@@ -424,13 +424,6 @@ class PE(ServiceBase):
                 heur = Heuristic(43)
                 ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
-    # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L376
-    def check_dynamic_libraries(self):
-        # https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L401
-        if not self.binary.libraries:
-            heur = Heuristic(40)
-            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
-
     # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L945
     def check_data_directories(self):
         # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L963
@@ -547,10 +540,6 @@ class PE(ServiceBase):
             elif self.binary.tls.has_data_directory:
                 if self.binary.tls.directory.has_section:
                     self.features["tls"] = {"section": self.binary.tls.directory.section.name}
-        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1150
-        else:
-            heur = Heuristic(48)
-            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
         # print(self.binary.imagebase) # Doesn't work as documented?
         self.features["position_independent"] = self.binary.is_pie
@@ -569,19 +558,7 @@ class PE(ServiceBase):
         res.add_tag("file.pe.linker.timestamp", hr_timestamp)
         # Somehow, that is different from binary.entrypoint
         res.add_item("Entrypoint", hex(self.binary.optional_header.addressof_entrypoint))
-
-        if not self.binary.entrypoint:
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L334
-            heur = Heuristic(38)
-            ResultSection(heur.name, heuristic=heur, parent=res)
-
         res.add_item("Machine", self.binary.header.machine.name)
-
-        if not self.binary.header.machine:
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L351
-            heur = Heuristic(39)
-            ResultSection(heur.name, heuristic=heur, parent=res)
-
         res.add_item("Magic", self.binary.optional_header.magic.name)
         if self.binary.optional_header.magic.name == "???":
             heur = Heuristic(18)
@@ -662,10 +639,6 @@ class PE(ServiceBase):
             self.features["rich_header"]["hash"] = rich_header_hash
             rich_header_section.add_section_part(table_body)
             res.add_subsection(rich_header_section)
-        else:
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1170
-            heur = Heuristic(49)
-            ResultSection(heur.name, heuristic=heur, parent=res)
 
         if abs(self.features["size"] - self.features["virtual_size"]) > max(
             self.features["size"], self.features["virtual_size"]
@@ -847,9 +820,6 @@ class PE(ServiceBase):
 
     def add_debug(self):
         if not self.binary.has_debug:
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1012
-            heur = Heuristic(45)
-            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
             return
         self.features["debugs"] = []
         res = ResultSection("Debugs")
@@ -1021,9 +991,6 @@ class PE(ServiceBase):
 
     def add_configuration(self):
         if not self.binary.has_configuration:
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1041
-            heur = Heuristic(46)
-            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
             return
 
         load_configuration = self.binary.load_configuration
@@ -1362,10 +1329,6 @@ class PE(ServiceBase):
                 self.features["resources_manager"]["manifest"] = self.binary.resources_manager.manifest
             except lief.not_found:
                 pass
-        else:
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1217
-            heur = Heuristic(51)
-            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
         if self.binary.resources_manager.has_string_table:
             self.features["resources_manager"]["string_table"] = []
@@ -1558,9 +1521,6 @@ class PE(ServiceBase):
         self.features["verify_signature"] = self.binary.verify_signature().name()
 
         if not self.binary.has_signatures:
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1206
-            heur = Heuristic(50)
-            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
             return
 
         all_certs = [
@@ -2012,7 +1972,6 @@ class PE(ServiceBase):
         self.check_exe_resources()
         self.check_dataless_resources()
         self.check_number_of_functions()
-        self.check_dynamic_libraries()
         self.check_data_directories()
 
         self.features = {}
