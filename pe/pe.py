@@ -762,9 +762,12 @@ class PE(ServiceBase):
 
             res.add_subsection(section_section)
 
-        if is_text_section_executable and not are_non_text_sections_executable:
+        # As per https://learn.microsoft.com/en-ca/windows/win32/debug/pe-format?redirectedfrom=MSDN, the main
+        # executable code section is .text, with the IMAGE_SCN_MEM_EXECUTE flag. So this is expected. What is not
+        # expected, however, is if .text is executable, AS WELL AS another section
+        if is_text_section_executable and are_non_text_sections_executable:
             text_exec_heur = Heuristic(33)
-            _ = ResultSection(text_exec_heur.name, text_exec_heur.description, heuristic=text_exec_heur, parent=res)
+            _ = ResultSection(text_exec_heur.name, heuristic=text_exec_heur, parent=res)
 
         empty_names = [section.name for section in self.binary.sections if section.name.strip() == ""]
         if empty_names:
