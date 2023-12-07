@@ -25,7 +25,56 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"1632515389 (2021-09-24 20:29:49 +00:00 (UTC))\"], [\"Entrypoint\", \"0xd29cc\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"21.9\"], [\"Linker version\", \"6.0\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00f57a69\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "1632515389 (2021-09-24 20:29:49 +00:00 (UTC))"
+          ],
+          [
+            "Entrypoint",
+            "0xd29cc"
+          ],
+          [
+            "Machine",
+            "I386"
+          ],
+          [
+            "Magic",
+            "PE32"
+          ],
+          [
+            "Image version",
+            "21.9"
+          ],
+          [
+            "Linker version",
+            "6.0"
+          ],
+          [
+            "Operating System version",
+            "4.0"
+          ],
+          [
+            "Subsystem version",
+            "4.0"
+          ],
+          [
+            "Subsystem",
+            "WINDOWS_GUI"
+          ],
+          [
+            "NX",
+            false
+          ],
+          [
+            "Position Independent",
+            false
+          ],
+          [
+            "Checksum",
+            "0x00f57a69"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -49,7 +98,45 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"7fa8b41d178a092fa1f7c0813b509b99\"]], {}], [\"TABLE\", [{\"ID\": \"0x000d2636\", \"Compiler Information\": \"Unknown object 0x000d2636\", \"Count\": 1}, {\"ID\": \"0x0009224f\", \"Compiler Information\": \"Unknown object 0x0009224f\", \"Count\": 328}, {\"ID\": \"0x000e1c83\", \"Compiler Information\": \"Unknown object 0x000e1c83\", \"Count\": 1}], {\"column_order\": [\"ID\", \"Compiler Information\", \"Count\"]}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Hash",
+                "7fa8b41d178a092fa1f7c0813b509b99"
+              ]
+            ],
+            {}
+          ],
+          [
+            "TABLE",
+            [
+              {
+                "Compiler Information": "Unknown object 0x000d2636",
+                "Count": 1,
+                "ID": "0x000d2636"
+              },
+              {
+                "Compiler Information": "Unknown object 0x0009224f",
+                "Count": 328,
+                "ID": "0x0009224f"
+              },
+              {
+                "Compiler Information": "Unknown object 0x000e1c83",
+                "Count": 1,
+                "ID": "0x000e1c83"
+              }
+            ],
+            {
+              "column_order": [
+                "ID",
+                "Compiler Information",
+                "Count"
+              ]
+            }
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -72,7 +159,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"sha512\", \"de52cc88d5efe95af64c714e7adfa92d9a9c7217c752c129334b189cf0c23544915864905ff4bcd1ccdcec98d26cde5a16b618c7eafaf6acf2309f09cb429c50\"], [\"sha384\", \"67a5f15bc33020a821a3b3c7476c0be03096f6ce976e256010ca5ee2081de3eed1098b02f84d97fb7617550e2864d1a8\"], [\"sha256\", \"21bfcbb8e42cdacf7dae42fca0899927b80c93f4f7b836803fc2cbae4f546ddb\"], [\"sha1\", \"576089a3090397e08879db423f174b5fe4f1ea5d\"], [\"md5\", \"88845fcb955f7f6d2fe569e34deb26f9\"]]",
+        "body": [
+          [
+            "sha512",
+            "de52cc88d5efe95af64c714e7adfa92d9a9c7217c752c129334b189cf0c23544915864905ff4bcd1ccdcec98d26cde5a16b618c7eafaf6acf2309f09cb429c50"
+          ],
+          [
+            "sha384",
+            "67a5f15bc33020a821a3b3c7476c0be03096f6ce976e256010ca5ee2081de3eed1098b02f84d97fb7617550e2864d1a8"
+          ],
+          [
+            "sha256",
+            "21bfcbb8e42cdacf7dae42fca0899927b80c93f4f7b836803fc2cbae4f546ddb"
+          ],
+          [
+            "sha1",
+            "576089a3090397e08879db423f174b5fe4f1ea5d"
+          ],
+          [
+            "md5",
+            "88845fcb955f7f6d2fe569e34deb26f9"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -98,7 +206,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.788508567691495], [\"Entropy without padding\", 5.7886122441387515], [\"Offset\", 4096], [\"Size\", 13873152], [\"Virtual Size\", 13872748], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"9645b671f55878aa4be492b6f04fa2ea\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.90284, 5.97394, 6.133, 4.32502, 4.17256, 4.03752, 3.69523, 3.53098, 3.59665, 4.15468, 4.89108, 4.74205, 5.29746, 5.48591, 5.58132, 5.6347, 5.64565, 5.57813, 5.66121, 5.71399, 5.72712, 5.67142, 5.64427, 5.63789, 5.57534, 5.70641, 5.66341, 5.60525, 5.62357, 5.44316, 5.68105, 5.63587, 5.60179, 5.71012, 5.69513, 5.93865, 5.83986, 5.69077, 5.60675, 5.84126, 5.64276, 5.66338, 5.63517, 5.66733, 5.65195, 5.60653, 5.63937, 5.65056, 5.62771, 5.61931]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                5.788508567691495
+              ],
+              [
+                "Entropy without padding",
+                5.7886122441387515
+              ],
+              [
+                "Offset",
+                4096
+              ],
+              [
+                "Size",
+                13873152
+              ],
+              [
+                "Virtual Size",
+                13872748
+              ],
+              [
+                "Characteristics",
+                "CNT_CODE, MEM_EXECUTE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "9645b671f55878aa4be492b6f04fa2ea"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  5.90284,
+                  5.97394,
+                  6.133,
+                  4.32502,
+                  4.17256,
+                  4.03752,
+                  3.69523,
+                  3.53098,
+                  3.59665,
+                  4.15468,
+                  4.89108,
+                  4.74205,
+                  5.29746,
+                  5.48591,
+                  5.58132,
+                  5.6347,
+                  5.64565,
+                  5.57813,
+                  5.66121,
+                  5.71399,
+                  5.72712,
+                  5.67142,
+                  5.64427,
+                  5.63789,
+                  5.57534,
+                  5.70641,
+                  5.66341,
+                  5.60525,
+                  5.62357,
+                  5.44316,
+                  5.68105,
+                  5.63587,
+                  5.60179,
+                  5.71012,
+                  5.69513,
+                  5.93865,
+                  5.83986,
+                  5.69077,
+                  5.60675,
+                  5.84126,
+                  5.64276,
+                  5.66338,
+                  5.63517,
+                  5.66733,
+                  5.65195,
+                  5.60653,
+                  5.63937,
+                  5.65056,
+                  5.62771,
+                  5.61931
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -124,7 +332,73 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.0], [\"Entropy without padding\", -0.0], [\"Offset\", 13877248], [\"Size\", 4096], [\"Virtual Size\", 248232], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"620f0b67a91f7f74151bc5be745b7110\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                0.0
+              ],
+              [
+                "Entropy without padding",
+                -0.0
+              ],
+              [
+                "Offset",
+                13877248
+              ],
+              [
+                "Size",
+                4096
+              ],
+              [
+                "Virtual Size",
+                248232
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "620f0b67a91f7f74151bc5be745b7110"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -150,7 +424,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 7.494395621847098], [\"Entropy without padding\", 7.496648078225991], [\"Offset\", 13881344], [\"Size\", 2134016], [\"Virtual Size\", 2132420], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"e46c7c8565fa0d7eccdbe6cecee62305\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.72618, 7.87769, 7.99279, 7.97565, 5.9677, 7.99143, 7.98924, 7.97793, 7.98371, 7.98475, 7.99174, 7.76847, 6.43537, 6.59524, 6.66254, 6.63495, 5.83803, 7.9513, 7.95691, 7.95348, 7.95096, 7.94722, 7.94245, 7.94519, 7.96051, 7.95523, 7.96013, 7.9692, 7.96188, 7.9578, 6.72454, 5.3965, 2.12199, 1.55812, 2.44801, 2.2838, 2.22357, 2.36763, 2.1476, 2.62331, 3.19999, 3.21817, 3.55021, 4.48312, 5.37115, 2.66947, 3.37178, 6.31076, 7.05801, 5.48634]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                7.494395621847098
+              ],
+              [
+                "Entropy without padding",
+                7.496648078225991
+              ],
+              [
+                "Offset",
+                13881344
+              ],
+              [
+                "Size",
+                2134016
+              ],
+              [
+                "Virtual Size",
+                2132420
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "e46c7c8565fa0d7eccdbe6cecee62305"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  7.72618,
+                  7.87769,
+                  7.99279,
+                  7.97565,
+                  5.9677,
+                  7.99143,
+                  7.98924,
+                  7.97793,
+                  7.98371,
+                  7.98475,
+                  7.99174,
+                  7.76847,
+                  6.43537,
+                  6.59524,
+                  6.66254,
+                  6.63495,
+                  5.83803,
+                  7.9513,
+                  7.95691,
+                  7.95348,
+                  7.95096,
+                  7.94722,
+                  7.94245,
+                  7.94519,
+                  7.96051,
+                  7.95523,
+                  7.96013,
+                  7.9692,
+                  7.96188,
+                  7.9578,
+                  6.72454,
+                  5.3965,
+                  2.12199,
+                  1.55812,
+                  2.44801,
+                  2.2838,
+                  2.22357,
+                  2.36763,
+                  2.1476,
+                  2.62331,
+                  3.19999,
+                  3.21817,
+                  3.55021,
+                  4.48312,
+                  5.37115,
+                  2.66947,
+                  3.37178,
+                  6.31076,
+                  7.05801,
+                  5.48634
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -319,7 +693,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Languages\", \"NEUTRAL, ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US, DEFAULT\"]]",
+        "body": [
+          [
+            "Languages",
+            "NEUTRAL, ENGLISH"
+          ],
+          [
+            "Sublanguages",
+            "ENGLISH_US, DEFAULT"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -373,7 +756,218 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 1384, \"Saved as\": \"icon_0.ico\"}, {\"ID\": 2, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 1128, \"Saved as\": \"icon_1.ico\"}, {\"ID\": 3, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 2216, \"Saved as\": \"icon_2.ico\"}, {\"ID\": 4, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_3.ico\"}, {\"ID\": 5, \"Lang\": \"ENGLISH\", \"Size\": \"48x48\", \"Size (bytes)\": 3752, \"Saved as\": \"icon_4.ico\"}, {\"ID\": 6, \"Lang\": \"ENGLISH\", \"Size\": \"48x48\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_5.ico\"}, {\"ID\": 7, \"Lang\": \"ENGLISH\", \"Size\": \"0x0\", \"Size (bytes)\": 25172, \"Saved as\": \"icon_6.ico\"}, {\"ID\": 30001, \"Lang\": \"NEUTRAL\", \"Size\": \"32x32\", \"Size (bytes)\": 304, \"Saved as\": \"icon_7.ico\"}, {\"ID\": 30002, \"Lang\": \"NEUTRAL\", \"Size\": \"32x32\", \"Size (bytes)\": 744, \"Saved as\": \"icon_8.ico\"}, {\"ID\": 30003, \"Lang\": \"NEUTRAL\", \"Size\": \"16x16\", \"Size (bytes)\": 296, \"Saved as\": \"icon_9.ico\"}], {\"column_order\": [\"ID\", \"Lang\", \"Size\", \"Size (bytes)\", \"Saved as\"]}], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"6adb2591db3583358efc61fe67ac7270cc9893f5a35a8ffc664a30fbecd1d6ad\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"6adb2591db3583358efc61fe67ac7270cc9893f5a35a8ffc664a30fbecd1d6ad\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_1.ico\", \"sha256\": \"699b969f0466f1378ce9d47e9d65340fd6518613663592a139d76d3c372115f0\", \"description\": \"Icon 1 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_1.ico.thumb\", \"sha256\": \"699b969f0466f1378ce9d47e9d65340fd6518613663592a139d76d3c372115f0\", \"description\": \"Icon 1 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_2.ico\", \"sha256\": \"269cab8647145a2c7572796f99c802c95a32810d33a58718925c541243f1e0de\", \"description\": \"Icon 2 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_2.ico.thumb\", \"sha256\": \"269cab8647145a2c7572796f99c802c95a32810d33a58718925c541243f1e0de\", \"description\": \"Icon 2 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_3.ico\", \"sha256\": \"f6700606756d702a2fd0dec6da7a32dd52cd493b1ad2a7605d987033a2c378fa\", \"description\": \"Icon 3 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_3.ico.thumb\", \"sha256\": \"f6700606756d702a2fd0dec6da7a32dd52cd493b1ad2a7605d987033a2c378fa\", \"description\": \"Icon 3 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_4.ico\", \"sha256\": \"e193689ad68ca7962c6ace334039c41f6cfd03a18f3fe653e55982a5e4dfa2ce\", \"description\": \"Icon 4 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_4.ico.thumb\", \"sha256\": \"e193689ad68ca7962c6ace334039c41f6cfd03a18f3fe653e55982a5e4dfa2ce\", \"description\": \"Icon 4 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_5.ico\", \"sha256\": \"a850f8c2ebb46a31cbc923afda39a8dcc791bb4144dbbee0e1ef4d78569f72c5\", \"description\": \"Icon 5 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_5.ico.thumb\", \"sha256\": \"a850f8c2ebb46a31cbc923afda39a8dcc791bb4144dbbee0e1ef4d78569f72c5\", \"description\": \"Icon 5 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_6.ico\", \"sha256\": \"90d2f334338e8931e0006a6a69390c20400506e73b1c64208c2f83954ea6a70e\", \"description\": \"Icon 6 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_6.ico.thumb\", \"sha256\": \"2297cf89732dd051510996ea2b2e49151b87efc1fa76f5138050871089329cfb\", \"description\": \"Icon 6 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_7.ico\", \"sha256\": \"a8b56566baccacd4c32e65aed76cd676deff3d769fa59d9bc94fd5d4275c2e81\", \"description\": \"Icon 7 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_7.ico.thumb\", \"sha256\": \"a8b56566baccacd4c32e65aed76cd676deff3d769fa59d9bc94fd5d4275c2e81\", \"description\": \"Icon 7 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_8.ico\", \"sha256\": \"79eeb42aedb1e64f6269d6af52e736761b434691a0e14617c805c93070234ac8\", \"description\": \"Icon 8 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_8.ico.thumb\", \"sha256\": \"79eeb42aedb1e64f6269d6af52e736761b434691a0e14617c805c93070234ac8\", \"description\": \"Icon 8 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_9.ico\", \"sha256\": \"32ecaabe68dc25afffe2c836258a87a3dc3887adcb27457fa15b911b013aa2d4\", \"description\": \"Icon 9 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_9.ico.thumb\", \"sha256\": \"32ecaabe68dc25afffe2c836258a87a3dc3887adcb27457fa15b911b013aa2d4\", \"description\": \"Icon 9 extracted from the PE file (thumbnail)\"}}], {}]]",
+        "body": [
+          [
+            "TABLE",
+            [
+              {
+                "ID": 1,
+                "Lang": "ENGLISH",
+                "Saved as": "icon_0.ico",
+                "Size": "16x16",
+                "Size (bytes)": 1384
+              },
+              {
+                "ID": 2,
+                "Lang": "ENGLISH",
+                "Saved as": "icon_1.ico",
+                "Size": "16x16",
+                "Size (bytes)": 1128
+              },
+              {
+                "ID": 3,
+                "Lang": "ENGLISH",
+                "Saved as": "icon_2.ico",
+                "Size": "32x32",
+                "Size (bytes)": 2216
+              },
+              {
+                "ID": 4,
+                "Lang": "ENGLISH",
+                "Saved as": "icon_3.ico",
+                "Size": "32x32",
+                "Size (bytes)": 4264
+              },
+              {
+                "ID": 5,
+                "Lang": "ENGLISH",
+                "Saved as": "icon_4.ico",
+                "Size": "48x48",
+                "Size (bytes)": 3752
+              },
+              {
+                "ID": 6,
+                "Lang": "ENGLISH",
+                "Saved as": "icon_5.ico",
+                "Size": "48x48",
+                "Size (bytes)": 9640
+              },
+              {
+                "ID": 7,
+                "Lang": "ENGLISH",
+                "Saved as": "icon_6.ico",
+                "Size": "0x0",
+                "Size (bytes)": 25172
+              },
+              {
+                "ID": 30001,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_7.ico",
+                "Size": "32x32",
+                "Size (bytes)": 304
+              },
+              {
+                "ID": 30002,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_8.ico",
+                "Size": "32x32",
+                "Size (bytes)": 744
+              },
+              {
+                "ID": 30003,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_9.ico",
+                "Size": "16x16",
+                "Size (bytes)": 296
+              }
+            ],
+            {
+              "column_order": [
+                "ID",
+                "Lang",
+                "Size",
+                "Size (bytes)",
+                "Saved as"
+              ]
+            }
+          ],
+          [
+            "IMAGE",
+            [
+              {
+                "img": {
+                  "description": "Icon 0 extracted from the PE file",
+                  "name": "icon_0.ico",
+                  "sha256": "6adb2591db3583358efc61fe67ac7270cc9893f5a35a8ffc664a30fbecd1d6ad"
+                },
+                "thumb": {
+                  "description": "Icon 0 extracted from the PE file (thumbnail)",
+                  "name": "icon_0.ico.thumb",
+                  "sha256": "6adb2591db3583358efc61fe67ac7270cc9893f5a35a8ffc664a30fbecd1d6ad"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 1 extracted from the PE file",
+                  "name": "icon_1.ico",
+                  "sha256": "699b969f0466f1378ce9d47e9d65340fd6518613663592a139d76d3c372115f0"
+                },
+                "thumb": {
+                  "description": "Icon 1 extracted from the PE file (thumbnail)",
+                  "name": "icon_1.ico.thumb",
+                  "sha256": "699b969f0466f1378ce9d47e9d65340fd6518613663592a139d76d3c372115f0"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 2 extracted from the PE file",
+                  "name": "icon_2.ico",
+                  "sha256": "269cab8647145a2c7572796f99c802c95a32810d33a58718925c541243f1e0de"
+                },
+                "thumb": {
+                  "description": "Icon 2 extracted from the PE file (thumbnail)",
+                  "name": "icon_2.ico.thumb",
+                  "sha256": "269cab8647145a2c7572796f99c802c95a32810d33a58718925c541243f1e0de"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 3 extracted from the PE file",
+                  "name": "icon_3.ico",
+                  "sha256": "f6700606756d702a2fd0dec6da7a32dd52cd493b1ad2a7605d987033a2c378fa"
+                },
+                "thumb": {
+                  "description": "Icon 3 extracted from the PE file (thumbnail)",
+                  "name": "icon_3.ico.thumb",
+                  "sha256": "f6700606756d702a2fd0dec6da7a32dd52cd493b1ad2a7605d987033a2c378fa"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 4 extracted from the PE file",
+                  "name": "icon_4.ico",
+                  "sha256": "e193689ad68ca7962c6ace334039c41f6cfd03a18f3fe653e55982a5e4dfa2ce"
+                },
+                "thumb": {
+                  "description": "Icon 4 extracted from the PE file (thumbnail)",
+                  "name": "icon_4.ico.thumb",
+                  "sha256": "e193689ad68ca7962c6ace334039c41f6cfd03a18f3fe653e55982a5e4dfa2ce"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 5 extracted from the PE file",
+                  "name": "icon_5.ico",
+                  "sha256": "a850f8c2ebb46a31cbc923afda39a8dcc791bb4144dbbee0e1ef4d78569f72c5"
+                },
+                "thumb": {
+                  "description": "Icon 5 extracted from the PE file (thumbnail)",
+                  "name": "icon_5.ico.thumb",
+                  "sha256": "a850f8c2ebb46a31cbc923afda39a8dcc791bb4144dbbee0e1ef4d78569f72c5"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 6 extracted from the PE file",
+                  "name": "icon_6.ico",
+                  "sha256": "90d2f334338e8931e0006a6a69390c20400506e73b1c64208c2f83954ea6a70e"
+                },
+                "thumb": {
+                  "description": "Icon 6 extracted from the PE file (thumbnail)",
+                  "name": "icon_6.ico.thumb",
+                  "sha256": "2297cf89732dd051510996ea2b2e49151b87efc1fa76f5138050871089329cfb"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 7 extracted from the PE file",
+                  "name": "icon_7.ico",
+                  "sha256": "a8b56566baccacd4c32e65aed76cd676deff3d769fa59d9bc94fd5d4275c2e81"
+                },
+                "thumb": {
+                  "description": "Icon 7 extracted from the PE file (thumbnail)",
+                  "name": "icon_7.ico.thumb",
+                  "sha256": "a8b56566baccacd4c32e65aed76cd676deff3d769fa59d9bc94fd5d4275c2e81"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 8 extracted from the PE file",
+                  "name": "icon_8.ico",
+                  "sha256": "79eeb42aedb1e64f6269d6af52e736761b434691a0e14617c805c93070234ac8"
+                },
+                "thumb": {
+                  "description": "Icon 8 extracted from the PE file (thumbnail)",
+                  "name": "icon_8.ico.thumb",
+                  "sha256": "79eeb42aedb1e64f6269d6af52e736761b434691a0e14617c805c93070234ac8"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 9 extracted from the PE file",
+                  "name": "icon_9.ico",
+                  "sha256": "32ecaabe68dc25afffe2c836258a87a3dc3887adcb27457fa15b911b013aa2d4"
+                },
+                "thumb": {
+                  "description": "Icon 9 extracted from the PE file (thumbnail)",
+                  "name": "icon_9.ico.thumb",
+                  "sha256": "32ecaabe68dc25afffe2c836258a87a3dc3887adcb27457fa15b911b013aa2d4"
+                }
+              }
+            ],
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -386,7 +980,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Type\", 0]]",
+        "body": [
+          [
+            "Type",
+            0
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -399,7 +998,60 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 63], [\"file_os\", \"WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"APP\"], [\"file_version_LS\", 1572866], [\"file_version_MS\", 1376265], [\"product_version_LS\", 1572866], [\"product_version_MS\", 1376265], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+        "body": [
+          [
+            "file_date_LS",
+            0
+          ],
+          [
+            "file_date_MS",
+            0
+          ],
+          [
+            "file_flags",
+            0
+          ],
+          [
+            "file_flags_mask",
+            63
+          ],
+          [
+            "file_os",
+            "WINDOWS32"
+          ],
+          [
+            "file_subtype",
+            "UNKNOWN"
+          ],
+          [
+            "file_type",
+            "APP"
+          ],
+          [
+            "file_version_LS",
+            1572866
+          ],
+          [
+            "file_version_MS",
+            1376265
+          ],
+          [
+            "product_version_LS",
+            1572866
+          ],
+          [
+            "product_version_MS",
+            1376265
+          ],
+          [
+            "signature",
+            4277077181
+          ],
+          [
+            "struct_version",
+            65536
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -412,7 +1064,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 0]]",
+        "body": [
+          [
+            "key",
+            "StringFileInfo"
+          ],
+          [
+            "type",
+            0
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -438,7 +1099,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"040904B0\"], [\"type\", 0], [\"lang\", \"ENGLISH\"], [\"sublang\", \"ENGLISH_US\"], [\"code_page\", \"UTF_16\"]]",
+        "body": [
+          [
+            "key",
+            "040904B0"
+          ],
+          [
+            "type",
+            0
+          ],
+          [
+            "lang",
+            "ENGLISH"
+          ],
+          [
+            "sublang",
+            "ENGLISH_US"
+          ],
+          [
+            "code_page",
+            "UTF_16"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -451,7 +1133,40 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"CompanyName\", \"d7xTech (formerly Foolish IT)\"], [\"FileDescription\", \"d7x (PC Repair Multi-Tool)\"], [\"FileVersion\", \"21.09.2402\"], [\"InternalName\", \"d7x\"], [\"LegalCopyright\", \"d7xTech (formerly Foolish IT)\"], [\"OriginalFilename\", \"d7x.exe\"], [\"ProductName\", \"d7x\"], [\"ProductVersion\", \"21.09.2402\"]]",
+        "body": [
+          [
+            "CompanyName",
+            "d7xTech (formerly Foolish IT)"
+          ],
+          [
+            "FileDescription",
+            "d7x (PC Repair Multi-Tool)"
+          ],
+          [
+            "FileVersion",
+            "21.09.2402"
+          ],
+          [
+            "InternalName",
+            "d7x"
+          ],
+          [
+            "LegalCopyright",
+            "d7xTech (formerly Foolish IT)"
+          ],
+          [
+            "OriginalFilename",
+            "d7x.exe"
+          ],
+          [
+            "ProductName",
+            "d7x"
+          ],
+          [
+            "ProductVersion",
+            "21.09.2402"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -464,7 +1179,20 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 0], [\"translations\", \"78644233\"]]",
+        "body": [
+          [
+            "key",
+            "VarFileInfo"
+          ],
+          [
+            "type",
+            0
+          ],
+          [
+            "translations",
+            "78644233"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -477,7 +1205,208 @@
       },
       {
         "auto_collapse": false,
-        "body": "[{\"SHA256\": \"8cd73d1a6010ec97b23c050679cf560af7af19e6bec12a31a3f80442c2a704b7\", \"Type\": \"CUSTOM\", \"Entropy\": 3.168909968278187}, {\"SHA256\": \"c490f50e5821753a80cccdeaadb8d71907a517e9e9d5d7c3cbfb990cf88c3c89\", \"Type\": \"CUSTOM\", \"Entropy\": 5.222753838138211}, {\"SHA256\": \"d6b301869f81e7bd8ace326263a621d8a81cd95cd6dac64262d544cd840a5d92\", \"Type\": \"CUSTOM\", \"Entropy\": 4.854287545633118}, {\"SHA256\": \"b35725d2db239bbfb2611304fefcbc6724c47101160076316f82457b299b8ae1\", \"Type\": \"CUSTOM\", \"Entropy\": 7.776854263535741}, {\"SHA256\": \"bda97fdd9feafb7cd521c36eef00b9aeaf76db12eefafde5ad9ac496fa42f429\", \"Type\": \"CUSTOM\", \"Entropy\": 7.991318908450803}, {\"SHA256\": \"637dd90bb886a64ff4394ced67baf77245a8969b9bc95fe38394cc93fe2b1104\", \"Type\": \"CUSTOM\", \"Entropy\": 7.945015102419883}, {\"SHA256\": \"34d36e2ca699b87c359a3256b3c6bbb7bb3a91faad6af931bea5ddcf178c267e\", \"Type\": \"CUSTOM\", \"Entropy\": 1.31551620272987}, {\"SHA256\": \"949f5d37ff9a777b5b9268b917afc4310d117608cf6c41afe946bf6f0ba689eb\", \"Type\": \"CUSTOM\", \"Entropy\": 5.167816173508945}, {\"SHA256\": \"483c374a6f20dee37b22bf0de5fb0568a601508bbbdd00df9880a825e00e49c7\", \"Type\": \"CUSTOM\", \"Entropy\": 7.992510003569505}, {\"SHA256\": \"ae5c6a370bdc9d3b1f927f213c63d5b1047a017ea1ec4baef7ec8339d4be11f9\", \"Type\": \"CUSTOM\", \"Entropy\": 7.780407177369257}, {\"SHA256\": \"08daf0c75039bc2a390c5da68ab7ce366659e9b5e8c7c7dce1ccdae8739352dc\", \"Type\": \"CUSTOM\", \"Entropy\": 7.974315818897839}, {\"SHA256\": \"6e5cad32e90025b6631e4defdc69d54ff475787d038956dc87ca900268c03a7e\", \"Type\": \"CUSTOM\", \"Entropy\": 7.9685722025488985}, {\"SHA256\": \"50a3aaecdbf8943959f9339ecc68d3b35ce8215ac2b1dc0e771fcf6d5021cb3d\", \"Type\": \"CUSTOM\", \"Entropy\": 7.965930605433123}, {\"SHA256\": \"13edbeb82d6129b1f55926f9177fef0066c4d3e886310d9be2886d91b7d1795c\", \"Type\": \"CUSTOM\", \"Entropy\": 7.598439735637087}, {\"SHA256\": \"85b436733130700eb68cb77f4fa0528172e5d7a725d83a9244b9950f15a90e07\", \"Type\": \"CUSTOM\", \"Entropy\": 7.950476515021263}, {\"SHA256\": \"baeb1b0ccd2c7917fee9b5d27fc75f5ec5779ede000a510320d35b5347e31653\", \"Type\": \"CUSTOM\", \"Entropy\": 7.994902654133294}, {\"SHA256\": \"619fc198afbc1597047db9450e3449d7c890346d59b6aa9d960e9251f1ea5a7c\", \"Type\": \"CUSTOM\", \"Entropy\": 7.957009831772946}, {\"SHA256\": \"f25725816e80800261c612301013e3756dd90beafeb08d42562eb86294e72268\", \"Type\": \"CUSTOM\", \"Entropy\": 6.599356318726686}, {\"SHA256\": \"7db0bbceed81c71660a59ec5e9583af09a65f6435e614b8a5554b1af594b3d25\", \"Type\": \"CUSTOM\", \"Entropy\": 7.922506846759948}, {\"SHA256\": \"2e0e226be773bd2a323ed0f5661052b2ad3a69b05e359c6b7d4d88e0c5ff2fe2\", \"Type\": \"BITMAP\", \"Entropy\": 6.188968401031906}, {\"SHA256\": \"36696242ab6a1bd793eb5356b8c7faef92d3d3c3290e9a2b54b965ea22537600\", \"Type\": \"BITMAP\", \"Entropy\": 0.44246024558731695}, {\"SHA256\": \"60db5592b25c54c640bcac737089423b3b7d3f2d1d8e559b7679c370a81acbae\", \"Type\": \"BITMAP\", \"Entropy\": 4.600994438088497}, {\"SHA256\": \"8d1f4d40f3ce9170a86fb53f8a5ff671b8334bf41c1811c7cf19b3d45ff7cfe7\", \"Type\": \"BITMAP\", \"Entropy\": 3.72423644176377}, {\"SHA256\": \"8737d1c46df71b5a478e7c027502224884167ab97b1ce632968bbe64dde890f2\", \"Type\": \"BITMAP\", \"Entropy\": 4.869022763920649}, {\"SHA256\": \"09b3ef0df53773c1a929866c337e89ae413d3427b516d300e3e304034fe70212\", \"Type\": \"BITMAP\", \"Entropy\": 4.383505068816617}, {\"SHA256\": \"190b378ec713386310bb4b6db01674af987ed885a5e133fc88194294dd520243\", \"Type\": \"BITMAP\", \"Entropy\": 4.684166943172841}, {\"SHA256\": \"c6e9cd1042a6abf4c51ab753f9645cc14bfc487c72475d9e45247390e897f389\", \"Type\": \"ICON\", \"Entropy\": 2.9525565098914046}, {\"SHA256\": \"acbec05542409313e4c42fd5023100ca39e9aa98e82826225ed8f97ff705c9f5\", \"Type\": \"ICON\", \"Entropy\": 5.312950439300189}, {\"SHA256\": \"73641d47e17edcfeb653914bd25b0c5f5491debd818eb4539f9ded9226aec2ac\", \"Type\": \"ICON\", \"Entropy\": 4.542499979538228}, {\"SHA256\": \"3456a54d1e42cfc98e3cb3649118054eac917c826a4a42251d50d23bee87af4f\", \"Type\": \"ICON\", \"Entropy\": 4.83463850855871}, {\"SHA256\": \"674c9b49d821b50934c6b63cf75d0e37c504e4b8e505123f9bee4a360da9530b\", \"Type\": \"ICON\", \"Entropy\": 4.633974738774322}, {\"SHA256\": \"a88b55dd9598618202e74ba7f736dff86cb9035ef7db364b58dae484f37759ea\", \"Type\": \"ICON\", \"Entropy\": 4.583068213829126}, {\"SHA256\": \"54d39d3aea0628c3cfd35dbd46c276e9f177c64db1dac531f3a98dfac267c10d\", \"Type\": \"ICON\", \"Entropy\": 7.940257411432759}, {\"SHA256\": \"2d3915cdc82e909357d44c4de1b8890bd753605c28df11b10299e3fd09d930b9\", \"Type\": \"ICON\", \"Entropy\": 2.579650254482112}, {\"SHA256\": \"a32e750bc1b0315530097434a7e1d324b843e1f5ffd95238b49d3a8aa8e6fe09\", \"Type\": \"ICON\", \"Entropy\": 1.7698669865031669}, {\"SHA256\": \"46dc088910439dad6a0d69da5e64227d04a640845fd1c31e90a7d4340c539fe0\", \"Type\": \"ICON\", \"Entropy\": 2.0717668856758804}, {\"SHA256\": \"f7068b96f66e9388b0a38efd9a4b005fb7c1e1a13ea93944c0e2886ff1760fce\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.718576739955766}, {\"SHA256\": \"cbdcb84268fcf2a25b844c1dca787de835c0376e82c1a2e62814a3c940a26cfb\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.978358444221264}, {\"SHA256\": \"4ae444195e91d98ea1507f878aa86469e98b6ed72dc8140162f98a80568c6eb9\", \"Type\": \"VERSION\", \"Entropy\": 3.4470540717896476}, {\"SHA256\": \"d57390902965b3001fa2fd9a036a45fafda991fedad6e8c29653b7707ac26307\", \"Type\": \"MANIFEST\", \"Entropy\": 5.458615546406305}]",
+        "body": [
+          {
+            "Entropy": 3.168909968278187,
+            "SHA256": "8cd73d1a6010ec97b23c050679cf560af7af19e6bec12a31a3f80442c2a704b7",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 5.222753838138211,
+            "SHA256": "c490f50e5821753a80cccdeaadb8d71907a517e9e9d5d7c3cbfb990cf88c3c89",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 4.854287545633118,
+            "SHA256": "d6b301869f81e7bd8ace326263a621d8a81cd95cd6dac64262d544cd840a5d92",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 7.776854263535741,
+            "SHA256": "b35725d2db239bbfb2611304fefcbc6724c47101160076316f82457b299b8ae1",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 7.991318908450803,
+            "SHA256": "bda97fdd9feafb7cd521c36eef00b9aeaf76db12eefafde5ad9ac496fa42f429",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 7.945015102419883,
+            "SHA256": "637dd90bb886a64ff4394ced67baf77245a8969b9bc95fe38394cc93fe2b1104",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 1.31551620272987,
+            "SHA256": "34d36e2ca699b87c359a3256b3c6bbb7bb3a91faad6af931bea5ddcf178c267e",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 5.167816173508945,
+            "SHA256": "949f5d37ff9a777b5b9268b917afc4310d117608cf6c41afe946bf6f0ba689eb",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 7.992510003569505,
+            "SHA256": "483c374a6f20dee37b22bf0de5fb0568a601508bbbdd00df9880a825e00e49c7",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 7.780407177369257,
+            "SHA256": "ae5c6a370bdc9d3b1f927f213c63d5b1047a017ea1ec4baef7ec8339d4be11f9",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 7.974315818897839,
+            "SHA256": "08daf0c75039bc2a390c5da68ab7ce366659e9b5e8c7c7dce1ccdae8739352dc",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 7.9685722025488985,
+            "SHA256": "6e5cad32e90025b6631e4defdc69d54ff475787d038956dc87ca900268c03a7e",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 7.965930605433123,
+            "SHA256": "50a3aaecdbf8943959f9339ecc68d3b35ce8215ac2b1dc0e771fcf6d5021cb3d",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 7.598439735637087,
+            "SHA256": "13edbeb82d6129b1f55926f9177fef0066c4d3e886310d9be2886d91b7d1795c",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 7.950476515021263,
+            "SHA256": "85b436733130700eb68cb77f4fa0528172e5d7a725d83a9244b9950f15a90e07",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 7.994902654133294,
+            "SHA256": "baeb1b0ccd2c7917fee9b5d27fc75f5ec5779ede000a510320d35b5347e31653",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 7.957009831772946,
+            "SHA256": "619fc198afbc1597047db9450e3449d7c890346d59b6aa9d960e9251f1ea5a7c",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 6.599356318726686,
+            "SHA256": "f25725816e80800261c612301013e3756dd90beafeb08d42562eb86294e72268",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 7.922506846759948,
+            "SHA256": "7db0bbceed81c71660a59ec5e9583af09a65f6435e614b8a5554b1af594b3d25",
+            "Type": "CUSTOM"
+          },
+          {
+            "Entropy": 6.188968401031906,
+            "SHA256": "2e0e226be773bd2a323ed0f5661052b2ad3a69b05e359c6b7d4d88e0c5ff2fe2",
+            "Type": "BITMAP"
+          },
+          {
+            "Entropy": 0.44246024558731695,
+            "SHA256": "36696242ab6a1bd793eb5356b8c7faef92d3d3c3290e9a2b54b965ea22537600",
+            "Type": "BITMAP"
+          },
+          {
+            "Entropy": 4.600994438088497,
+            "SHA256": "60db5592b25c54c640bcac737089423b3b7d3f2d1d8e559b7679c370a81acbae",
+            "Type": "BITMAP"
+          },
+          {
+            "Entropy": 3.72423644176377,
+            "SHA256": "8d1f4d40f3ce9170a86fb53f8a5ff671b8334bf41c1811c7cf19b3d45ff7cfe7",
+            "Type": "BITMAP"
+          },
+          {
+            "Entropy": 4.869022763920649,
+            "SHA256": "8737d1c46df71b5a478e7c027502224884167ab97b1ce632968bbe64dde890f2",
+            "Type": "BITMAP"
+          },
+          {
+            "Entropy": 4.383505068816617,
+            "SHA256": "09b3ef0df53773c1a929866c337e89ae413d3427b516d300e3e304034fe70212",
+            "Type": "BITMAP"
+          },
+          {
+            "Entropy": 4.684166943172841,
+            "SHA256": "190b378ec713386310bb4b6db01674af987ed885a5e133fc88194294dd520243",
+            "Type": "BITMAP"
+          },
+          {
+            "Entropy": 2.9525565098914046,
+            "SHA256": "c6e9cd1042a6abf4c51ab753f9645cc14bfc487c72475d9e45247390e897f389",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 5.312950439300189,
+            "SHA256": "acbec05542409313e4c42fd5023100ca39e9aa98e82826225ed8f97ff705c9f5",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 4.542499979538228,
+            "SHA256": "73641d47e17edcfeb653914bd25b0c5f5491debd818eb4539f9ded9226aec2ac",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 4.83463850855871,
+            "SHA256": "3456a54d1e42cfc98e3cb3649118054eac917c826a4a42251d50d23bee87af4f",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 4.633974738774322,
+            "SHA256": "674c9b49d821b50934c6b63cf75d0e37c504e4b8e505123f9bee4a360da9530b",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 4.583068213829126,
+            "SHA256": "a88b55dd9598618202e74ba7f736dff86cb9035ef7db364b58dae484f37759ea",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 7.940257411432759,
+            "SHA256": "54d39d3aea0628c3cfd35dbd46c276e9f177c64db1dac531f3a98dfac267c10d",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 2.579650254482112,
+            "SHA256": "2d3915cdc82e909357d44c4de1b8890bd753605c28df11b10299e3fd09d930b9",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 1.7698669865031669,
+            "SHA256": "a32e750bc1b0315530097434a7e1d324b843e1f5ffd95238b49d3a8aa8e6fe09",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 2.0717668856758804,
+            "SHA256": "46dc088910439dad6a0d69da5e64227d04a640845fd1c31e90a7d4340c539fe0",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 2.718576739955766,
+            "SHA256": "f7068b96f66e9388b0a38efd9a4b005fb7c1e1a13ea93944c0e2886ff1760fce",
+            "Type": "GROUP_ICON"
+          },
+          {
+            "Entropy": 2.978358444221264,
+            "SHA256": "cbdcb84268fcf2a25b844c1dca787de835c0376e82c1a2e62814a3c940a26cfb",
+            "Type": "GROUP_ICON"
+          },
+          {
+            "Entropy": 3.4470540717896476,
+            "SHA256": "4ae444195e91d98ea1507f878aa86469e98b6ed72dc8140162f98a80568c6eb9",
+            "Type": "VERSION"
+          },
+          {
+            "Entropy": 5.458615546406305,
+            "SHA256": "d57390902965b3001fa2fd9a036a45fafda991fedad6e8c29653b7707ac26307",
+            "Type": "MANIFEST"
+          }
+        ],
         "body_config": {
           "column_order": [
             "SHA256",
@@ -529,7 +1458,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 1], [\"Algorithm\", \"SHA256\"], [\"Content Info Algorithm\", \"SHA256\"], [\"Content Info Digest\", \"21bfcbb8e42cdacf7dae42fca0899927b80c93f4f7b836803fc2cbae4f546ddb\"], [\"Content Info Content Type\", \"1.3.6.1.4.1.311.2.1.4\"]]",
+        "body": [
+          [
+            "Version",
+            1
+          ],
+          [
+            "Algorithm",
+            "SHA256"
+          ],
+          [
+            "Content Info Algorithm",
+            "SHA256"
+          ],
+          [
+            "Content Info Digest",
+            "21bfcbb8e42cdacf7dae42fca0899927b80c93f4f7b836803fc2cbae4f546ddb"
+          ],
+          [
+            "Content Info Content Type",
+            "1.3.6.1.4.1.311.2.1.4"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -542,7 +1492,24 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 1], [\"Digest Algorithm\", \"SHA256\"], [\"Authenticated Attributes\", \"SPC_SP_OPUS_INFO, CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST\"], [\"Unauthenticated Attributes\", \"GENERIC_TYPE\"]]",
+        "body": [
+          [
+            "Version",
+            1
+          ],
+          [
+            "Digest Algorithm",
+            "SHA256"
+          ],
+          [
+            "Authenticated Attributes",
+            "SPC_SP_OPUS_INFO, CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST"
+          ],
+          [
+            "Unauthenticated Attributes",
+            "GENERIC_TYPE"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -555,7 +1522,32 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=North Carolina, L=High Point, O=d7xTech\\\\, Inc, serialNumber=1254817, CN=d7xTech\\\\, Inc, ??=Private Organization, ??=North Carolina, ??=US\"], [\"Issuer\", \"C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate CA RSA R3\"], [\"Serial Number\", \"1877a57c210dbbd1cce4b4424f5d2f9f\"], [\"Valid From\", \"2021-08-31T02:07:12\"], [\"Valid To\", \"2024-08-30T02:07:12\"]]",
+        "body": [
+          [
+            "Version",
+            3
+          ],
+          [
+            "Subject",
+            "C=US, ST=North Carolina, L=High Point, O=d7xTech\\, Inc, serialNumber=1254817, CN=d7xTech\\, Inc, ??=Private Organization, ??=North Carolina, ??=US"
+          ],
+          [
+            "Issuer",
+            "C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate CA RSA R3"
+          ],
+          [
+            "Serial Number",
+            "1877a57c210dbbd1cce4b4424f5d2f9f"
+          ],
+          [
+            "Valid From",
+            "2021-08-31T02:07:12"
+          ],
+          [
+            "Valid To",
+            "2024-08-30T02:07:12"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -593,7 +1585,44 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=North Carolina, L=High Point, O=d7xTech\\\\, Inc, serialNumber=1254817, CN=d7xTech\\\\, Inc, ??=Private Organization, ??=North Carolina, ??=US\"], [\"Issuer\", \"C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate CA RSA R3\"], [\"SHA1\", \"bcb806e52d4e45c1a99a5101670e3de85f8b3714\"], [\"SHA256\", \"4a5c1a94eb0eba8acf8eb54ba4f85bbb530783f0f7f76da73809ceb299de833b\"], [\"MD5\", \"9419b8ccc538ce0edc279cdf90222361\"], [\"Serial Number\", \"1877a57c210dbbd1cce4b4424f5d2f9f\"], [\"Valid From\", \"2021-08-31T02:07:12\"], [\"Valid To\", \"2024-08-30T02:07:12\"]]",
+        "body": [
+          [
+            "Version",
+            3
+          ],
+          [
+            "Subject",
+            "C=US, ST=North Carolina, L=High Point, O=d7xTech\\, Inc, serialNumber=1254817, CN=d7xTech\\, Inc, ??=Private Organization, ??=North Carolina, ??=US"
+          ],
+          [
+            "Issuer",
+            "C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate CA RSA R3"
+          ],
+          [
+            "SHA1",
+            "bcb806e52d4e45c1a99a5101670e3de85f8b3714"
+          ],
+          [
+            "SHA256",
+            "4a5c1a94eb0eba8acf8eb54ba4f85bbb530783f0f7f76da73809ceb299de833b"
+          ],
+          [
+            "MD5",
+            "9419b8ccc538ce0edc279cdf90222361"
+          ],
+          [
+            "Serial Number",
+            "1877a57c210dbbd1cce4b4424f5d2f9f"
+          ],
+          [
+            "Valid From",
+            "2021-08-31T02:07:12"
+          ],
+          [
+            "Valid To",
+            "2024-08-30T02:07:12"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -606,7 +1635,44 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate CA RSA R3\"], [\"Issuer\", \"C=US, ST=Texas, L=Houston, O=SSL Corporation, CN=SSL.com EV Root Certification Authority RSA R2\"], [\"SHA1\", \"d2953dba95086feb5805befc41283ca64c397df5\"], [\"SHA256\", \"e98ddcc0d158876836cd4b6ad826c44bf0a59a363896ce266c9f0e6cedc040bc\"], [\"MD5\", \"9baef0eff50d7be63bbd81302add9745\"], [\"Serial Number\", \"424b6a53cec766141c2a63b1a51c4104\"], [\"Valid From\", \"2019-03-26T17:44:23\"], [\"Valid To\", \"2034-03-22T17:44:23\"]]",
+        "body": [
+          [
+            "Version",
+            3
+          ],
+          [
+            "Subject",
+            "C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV Code Signing Intermediate CA RSA R3"
+          ],
+          [
+            "Issuer",
+            "C=US, ST=Texas, L=Houston, O=SSL Corporation, CN=SSL.com EV Root Certification Authority RSA R2"
+          ],
+          [
+            "SHA1",
+            "d2953dba95086feb5805befc41283ca64c397df5"
+          ],
+          [
+            "SHA256",
+            "e98ddcc0d158876836cd4b6ad826c44bf0a59a363896ce266c9f0e6cedc040bc"
+          ],
+          [
+            "MD5",
+            "9baef0eff50d7be63bbd81302add9745"
+          ],
+          [
+            "Serial Number",
+            "424b6a53cec766141c2a63b1a51c4104"
+          ],
+          [
+            "Valid From",
+            "2019-03-26T17:44:23"
+          ],
+          [
+            "Valid To",
+            "2034-03-22T17:44:23"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -619,7 +1685,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Offending algorithms\", \"EC\"]]",
+        "body": [
+          [
+            "Offending algorithms",
+            "EC"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -645,7 +1716,71 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 9608]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.79796, 5.56718, 6.61021, 5.61102, 6.92658, 7.1967, 6.69337, 5.93881, 7.21693, 7.18531, 5.67247, 6.93722, 7.18217, 6.64758, 6.39802, 5.95118, 5.55564, 6.92642, 7.1883, 6.48549, 6.13171, 7.10465, 5.50902, 7.16606, 5.88737, 6.60438, 7.13241, 7.04545, 5.41159, 7.06967, 7.14071, 6.04521, 6.282, 7.20693, 6.94682, 5.76985, 6.37612, 7.17378]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Size",
+                9608
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  5.79796,
+                  5.56718,
+                  6.61021,
+                  5.61102,
+                  6.92658,
+                  7.1967,
+                  6.69337,
+                  5.93881,
+                  7.21693,
+                  7.18531,
+                  5.67247,
+                  6.93722,
+                  7.18217,
+                  6.64758,
+                  6.39802,
+                  5.95118,
+                  5.55564,
+                  6.92642,
+                  7.1883,
+                  6.48549,
+                  6.13171,
+                  7.10465,
+                  5.50902,
+                  7.16606,
+                  5.88737,
+                  6.60438,
+                  7.13241,
+                  7.04545,
+                  5.41159,
+                  7.06967,
+                  7.14071,
+                  6.04521,
+                  6.282,
+                  7.20693,
+                  6.94682,
+                  5.76985,
+                  6.37612,
+                  7.17378
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
