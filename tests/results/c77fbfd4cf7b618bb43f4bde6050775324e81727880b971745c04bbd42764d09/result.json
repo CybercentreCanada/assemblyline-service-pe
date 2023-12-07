@@ -5,7 +5,56 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"1630356811 (2021-08-30 20:53:31 +00:00 (UTC))\"], [\"Entrypoint\", \"0x1c7cac\"], [\"Machine\", \"AMD64\"], [\"Magic\", \"PE32_PLUS\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"14.0\"], [\"Operating System version\", \"6.0\"], [\"Subsystem version\", \"6.0\"], [\"Subsystem\", \"WINDOWS_CUI\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x002e9dcf\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "1630356811 (2021-08-30 20:53:31 +00:00 (UTC))"
+          ],
+          [
+            "Entrypoint",
+            "0x1c7cac"
+          ],
+          [
+            "Machine",
+            "AMD64"
+          ],
+          [
+            "Magic",
+            "PE32_PLUS"
+          ],
+          [
+            "Image version",
+            "0.0"
+          ],
+          [
+            "Linker version",
+            "14.0"
+          ],
+          [
+            "Operating System version",
+            "6.0"
+          ],
+          [
+            "Subsystem version",
+            "6.0"
+          ],
+          [
+            "Subsystem",
+            "WINDOWS_CUI"
+          ],
+          [
+            "NX",
+            true
+          ],
+          [
+            "Position Independent",
+            true
+          ],
+          [
+            "Checksum",
+            "0x002e9dcf"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -29,7 +78,110 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"42ef6087e82634928ea4574666f2ecda\"]], {}], [\"TABLE\", [{\"ID\": \"0x01025e97\", \"Compiler Information\": \"[LNK] VS2015 UPD3.1 build 24215\", \"Count\": 1}, {\"ID\": \"0x00970000\", \"Compiler Information\": \"Unknown object 0x00970000\", \"Count\": 1}, {\"ID\": \"0x00ff5e92\", \"Compiler Information\": \"[RES] VS2015 UPD3 build 24210\", \"Count\": 1}, {\"ID\": \"0x01085e97\", \"Compiler Information\": \"Unknown object 0x01085e97\", \"Count\": 53}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 386}, {\"ID\": \"0x00cbffdd\", \"Compiler Information\": \"Unknown object 0x00cbffdd\", \"Count\": 29}, {\"ID\": \"0x00d0ffdd\", \"Compiler Information\": \"Unknown object 0x00d0ffdd\", \"Count\": 1}, {\"ID\": \"0x00d1ffdd\", \"Compiler Information\": \"Unknown object 0x00d1ffdd\", \"Count\": 1}, {\"ID\": \"0x01045e97\", \"Compiler Information\": \"[ C ] VS2015 UPD3.1 build 24215\", \"Count\": 496}, {\"ID\": \"0x01045e3b\", \"Compiler Information\": \"Unknown object 0x01045e3b\", \"Count\": 25}, {\"ID\": \"0x01055e3b\", \"Compiler Information\": \"Unknown object 0x01055e3b\", \"Count\": 33}, {\"ID\": \"0x01035e3b\", \"Compiler Information\": \"Unknown object 0x01035e3b\", \"Count\": 10}, {\"ID\": \"0x00c7a09e\", \"Compiler Information\": \"Unknown object 0x00c7a09e\", \"Count\": 1}, {\"ID\": \"0x00f29cb4\", \"Compiler Information\": \"Unknown object 0x00f29cb4\", \"Count\": 38}, {\"ID\": \"0x00f39cb4\", \"Compiler Information\": \"Unknown object 0x00f39cb4\", \"Count\": 176}, {\"ID\": \"0x00f19cb4\", \"Compiler Information\": \"Unknown object 0x00f19cb4\", \"Count\": 20}], {\"column_order\": [\"ID\", \"Compiler Information\", \"Count\"]}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Hash",
+                "42ef6087e82634928ea4574666f2ecda"
+              ]
+            ],
+            {}
+          ],
+          [
+            "TABLE",
+            [
+              {
+                "Compiler Information": "[LNK] VS2015 UPD3.1 build 24215",
+                "Count": 1,
+                "ID": "0x01025e97"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00970000",
+                "Count": 1,
+                "ID": "0x00970000"
+              },
+              {
+                "Compiler Information": "[RES] VS2015 UPD3 build 24210",
+                "Count": 1,
+                "ID": "0x00ff5e92"
+              },
+              {
+                "Compiler Information": "Unknown object 0x01085e97",
+                "Count": 53,
+                "ID": "0x01085e97"
+              },
+              {
+                "Compiler Information": "[---] Unmarked objects",
+                "Count": 386,
+                "ID": "0x00010000"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00cbffdd",
+                "Count": 29,
+                "ID": "0x00cbffdd"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00d0ffdd",
+                "Count": 1,
+                "ID": "0x00d0ffdd"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00d1ffdd",
+                "Count": 1,
+                "ID": "0x00d1ffdd"
+              },
+              {
+                "Compiler Information": "[ C ] VS2015 UPD3.1 build 24215",
+                "Count": 496,
+                "ID": "0x01045e97"
+              },
+              {
+                "Compiler Information": "Unknown object 0x01045e3b",
+                "Count": 25,
+                "ID": "0x01045e3b"
+              },
+              {
+                "Compiler Information": "Unknown object 0x01055e3b",
+                "Count": 33,
+                "ID": "0x01055e3b"
+              },
+              {
+                "Compiler Information": "Unknown object 0x01035e3b",
+                "Count": 10,
+                "ID": "0x01035e3b"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00c7a09e",
+                "Count": 1,
+                "ID": "0x00c7a09e"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00f29cb4",
+                "Count": 38,
+                "ID": "0x00f29cb4"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00f39cb4",
+                "Count": 176,
+                "ID": "0x00f39cb4"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00f19cb4",
+                "Count": 20,
+                "ID": "0x00f19cb4"
+              }
+            ],
+            {
+              "column_order": [
+                "ID",
+                "Compiler Information",
+                "Count"
+              ]
+            }
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -52,7 +204,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"sha512\", \"38944c0a6ee03353bde63b47063996d8114d47cffad45cdf05520e9cad680d5f2df94a318aea22f4e8e8660a554737c3a8063a67258568ed9c5a4c9c1e71acb8\"], [\"sha384\", \"3aa4b4a3497a0ce005295e0d7751cea8589bcb1427b70f7af0589bf12655729d23d4f54c9c562804e3050110b6170a62\"], [\"sha256\", \"4facd1f14175be06b42252848d9f8d640fe2ee5667ea0c64bf30b5ec1fbc431c\"], [\"sha1\", \"ab720be437524d65e5d1ed5e92d6158618fc9eab\"], [\"md5\", \"9bc161b1b7db9a503682ca757816f516\"]]",
+        "body": [
+          [
+            "sha512",
+            "38944c0a6ee03353bde63b47063996d8114d47cffad45cdf05520e9cad680d5f2df94a318aea22f4e8e8660a554737c3a8063a67258568ed9c5a4c9c1e71acb8"
+          ],
+          [
+            "sha384",
+            "3aa4b4a3497a0ce005295e0d7751cea8589bcb1427b70f7af0589bf12655729d23d4f54c9c562804e3050110b6170a62"
+          ],
+          [
+            "sha256",
+            "4facd1f14175be06b42252848d9f8d640fe2ee5667ea0c64bf30b5ec1fbc431c"
+          ],
+          [
+            "sha1",
+            "ab720be437524d65e5d1ed5e92d6158618fc9eab"
+          ],
+          [
+            "md5",
+            "9bc161b1b7db9a503682ca757816f516"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -65,7 +238,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Optional header checksum\", \"0x002e9dcf\"], [\"Computed checksum\", \"0x002e7fd1\"]]",
+        "body": [
+          [
+            "Optional header checksum",
+            "0x002e9dcf"
+          ],
+          [
+            "Computed checksum",
+            "0x002e7fd1"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -98,7 +280,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.457891692162196], [\"Entropy without padding\", 6.458665877643938], [\"Offset\", 1024], [\"Size\", 2048512], [\"Virtual Size\", 2048010], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"ca0bfe9866c8f59a3ceeb09d3a17a20d\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.29632, 6.45757, 6.47829, 6.4573, 6.29206, 6.45173, 6.41405, 6.42031, 6.2103, 6.24654, 6.18304, 6.25715, 6.26707, 6.29545, 6.32038, 6.28716, 6.32935, 6.3504, 6.35243, 6.31522, 6.35444, 6.25835, 6.26832, 6.32516, 6.25261, 6.2828, 6.40522, 6.32442, 6.30166, 6.22492, 6.32675, 6.30571, 6.37983, 6.34457, 6.28623, 6.35005, 6.35571, 6.06358, 6.42256, 6.20355, 6.27531, 6.19436, 6.14934, 6.14891, 6.18082, 6.38711, 6.47036, 6.52162, 6.50697, 6.53947]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                6.457891692162196
+              ],
+              [
+                "Entropy without padding",
+                6.458665877643938
+              ],
+              [
+                "Offset",
+                1024
+              ],
+              [
+                "Size",
+                2048512
+              ],
+              [
+                "Virtual Size",
+                2048010
+              ],
+              [
+                "Characteristics",
+                "CNT_CODE, MEM_EXECUTE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "ca0bfe9866c8f59a3ceeb09d3a17a20d"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  6.29632,
+                  6.45757,
+                  6.47829,
+                  6.4573,
+                  6.29206,
+                  6.45173,
+                  6.41405,
+                  6.42031,
+                  6.2103,
+                  6.24654,
+                  6.18304,
+                  6.25715,
+                  6.26707,
+                  6.29545,
+                  6.32038,
+                  6.28716,
+                  6.32935,
+                  6.3504,
+                  6.35243,
+                  6.31522,
+                  6.35444,
+                  6.25835,
+                  6.26832,
+                  6.32516,
+                  6.25261,
+                  6.2828,
+                  6.40522,
+                  6.32442,
+                  6.30166,
+                  6.22492,
+                  6.32675,
+                  6.30571,
+                  6.37983,
+                  6.34457,
+                  6.28623,
+                  6.35005,
+                  6.35571,
+                  6.06358,
+                  6.42256,
+                  6.20355,
+                  6.27531,
+                  6.19436,
+                  6.14934,
+                  6.14891,
+                  6.18082,
+                  6.38711,
+                  6.47036,
+                  6.52162,
+                  6.50697,
+                  6.53947
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -124,7 +406,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.334896527229254], [\"Entropy without padding\", 6.3355916417824725], [\"Offset\", 2049536], [\"Size\", 820224], [\"Virtual Size\", 820090], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"5429493550c2cc1594a3dce348bcfe01\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.24978, 4.92435, 3.29798, 3.26403, 3.64492, 5.03497, 4.81066, 4.03677, 6.59132, 5.91799, 6.43697, 3.58924, 3.2622, 3.44185, 6.86955, 7.18721, 5.83026, 7.40047, 7.76975, 3.59331, 4.60775, 5.54982, 3.62683, 6.83591, 5.89968, 7.19149, 4.99855, 5.03314, 6.09448, 6.05692, 6.03821, 6.0292, 6.02062, 6.00036, 6.00662, 6.03159, 6.0258, 6.02836, 6.00067, 6.03558, 6.13887, 5.23641, 5.19532, 5.89596, 5.76398, 5.64641, 5.65284, 5.68575, 5.66655, 5.58143]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                6.334896527229254
+              ],
+              [
+                "Entropy without padding",
+                6.3355916417824725
+              ],
+              [
+                "Offset",
+                2049536
+              ],
+              [
+                "Size",
+                820224
+              ],
+              [
+                "Virtual Size",
+                820090
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "5429493550c2cc1594a3dce348bcfe01"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  4.24978,
+                  4.92435,
+                  3.29798,
+                  3.26403,
+                  3.64492,
+                  5.03497,
+                  4.81066,
+                  4.03677,
+                  6.59132,
+                  5.91799,
+                  6.43697,
+                  3.58924,
+                  3.2622,
+                  3.44185,
+                  6.86955,
+                  7.18721,
+                  5.83026,
+                  7.40047,
+                  7.76975,
+                  3.59331,
+                  4.60775,
+                  5.54982,
+                  3.62683,
+                  6.83591,
+                  5.89968,
+                  7.19149,
+                  4.99855,
+                  5.03314,
+                  6.09448,
+                  6.05692,
+                  6.03821,
+                  6.0292,
+                  6.02062,
+                  6.00036,
+                  6.00662,
+                  6.03159,
+                  6.0258,
+                  6.02836,
+                  6.00067,
+                  6.03558,
+                  6.13887,
+                  5.23641,
+                  5.19532,
+                  5.89596,
+                  5.76398,
+                  5.64641,
+                  5.65284,
+                  5.68575,
+                  5.66655,
+                  5.58143
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -150,7 +532,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 2.831418707567862], [\"Entropy without padding\", 2.8314187075678614], [\"Offset\", 2869760], [\"Size\", 19968], [\"Virtual Size\", 183384], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d85809062be017207de434db01a909d9\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.28088, 2.28667, 3.20708, 3.09418, 3.47221, 2.89934, 2.43715, 2.06337, 3.23763, 2.61524, 2.62197, 2.2135, 1.94862, 2.26993, 2.30021, 2.38795, 2.3984, 2.48477, 2.4772, 2.45373, 2.50408, 2.4934, 2.50542, 2.37125, 2.50668, 2.50703, 2.27497, 2.37591, 2.44618, 2.33361, 2.20426, 2.43999, 2.37676, 2.40561, 2.42701, 2.11613, 2.53178, 2.51757, 2.52713, 1.42243, 1.24308, 1.11144, 1.17295, 1.32467, 2.20226, 1.78463, 2.56098, 2.61228, 3.40805, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                2.831418707567862
+              ],
+              [
+                "Entropy without padding",
+                2.8314187075678614
+              ],
+              [
+                "Offset",
+                2869760
+              ],
+              [
+                "Size",
+                19968
+              ],
+              [
+                "Virtual Size",
+                183384
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "d85809062be017207de434db01a909d9"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  2.28088,
+                  2.28667,
+                  3.20708,
+                  3.09418,
+                  3.47221,
+                  2.89934,
+                  2.43715,
+                  2.06337,
+                  3.23763,
+                  2.61524,
+                  2.62197,
+                  2.2135,
+                  1.94862,
+                  2.26993,
+                  2.30021,
+                  2.38795,
+                  2.3984,
+                  2.48477,
+                  2.4772,
+                  2.45373,
+                  2.50408,
+                  2.4934,
+                  2.50542,
+                  2.37125,
+                  2.50668,
+                  2.50703,
+                  2.27497,
+                  2.37591,
+                  2.44618,
+                  2.33361,
+                  2.20426,
+                  2.43999,
+                  2.37676,
+                  2.40561,
+                  2.42701,
+                  2.11613,
+                  2.53178,
+                  2.51757,
+                  2.52713,
+                  1.42243,
+                  1.24308,
+                  1.11144,
+                  1.17295,
+                  1.32467,
+                  2.20226,
+                  1.78463,
+                  2.56098,
+                  2.61228,
+                  3.40805,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -176,7 +658,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.229378357778432], [\"Entropy without padding\", 6.243406275025769], [\"Offset\", 2889728], [\"Size\", 102912], [\"Virtual Size\", 102576], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"20d7418e11e4ea1c9a23a0d9c33d21ff\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.96103, 5.07795, 5.33414, 5.34427, 5.35531, 5.3917, 5.32055, 5.38363, 5.31075, 5.16925, 5.24475, 5.42777, 5.53203, 5.40331, 5.30318, 5.27655, 5.24572, 5.25898, 5.32341, 5.23853, 5.28741, 5.38337, 5.28987, 5.44635, 5.27387, 5.21556, 5.32176, 5.27044, 5.25235, 5.24405, 5.36973, 5.18156, 5.40116, 5.22878, 5.38451, 5.28535, 5.25767, 5.53777, 5.2708, 5.38015, 5.27373, 5.4674, 5.33194, 5.3039, 5.41428, 5.3471, 5.53652, 5.37648, 5.35254, 4.73732]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                6.229378357778432
+              ],
+              [
+                "Entropy without padding",
+                6.243406275025769
+              ],
+              [
+                "Offset",
+                2889728
+              ],
+              [
+                "Size",
+                102912
+              ],
+              [
+                "Virtual Size",
+                102576
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "20d7418e11e4ea1c9a23a0d9c33d21ff"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  4.96103,
+                  5.07795,
+                  5.33414,
+                  5.34427,
+                  5.35531,
+                  5.3917,
+                  5.32055,
+                  5.38363,
+                  5.31075,
+                  5.16925,
+                  5.24475,
+                  5.42777,
+                  5.53203,
+                  5.40331,
+                  5.30318,
+                  5.27655,
+                  5.24572,
+                  5.25898,
+                  5.32341,
+                  5.23853,
+                  5.28741,
+                  5.38337,
+                  5.28987,
+                  5.44635,
+                  5.27387,
+                  5.21556,
+                  5.32176,
+                  5.27044,
+                  5.25235,
+                  5.24405,
+                  5.36973,
+                  5.18156,
+                  5.40116,
+                  5.22878,
+                  5.38451,
+                  5.28535,
+                  5.25767,
+                  5.53777,
+                  5.2708,
+                  5.38015,
+                  5.27373,
+                  5.4674,
+                  5.33194,
+                  5.3039,
+                  5.41428,
+                  5.3471,
+                  5.53652,
+                  5.37648,
+                  5.35254,
+                  4.73732
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -202,7 +784,59 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.9774967093335682], [\"Entropy without padding\", 4.064850707068115], [\"Offset\", 2992640], [\"Size\", 512], [\"Virtual Size\", 196], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"3dc764aff47f288eeeb27896354653b9\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.37507, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                1.9774967093335682
+              ],
+              [
+                "Entropy without padding",
+                4.064850707068115
+              ],
+              [
+                "Offset",
+                2992640
+              ],
+              [
+                "Size",
+                512
+              ],
+              [
+                "Virtual Size",
+                196
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "3dc764aff47f288eeeb27896354653b9"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  3.37507,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -228,7 +862,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.034843659114737], [\"Entropy without padding\", 5.1330112824369225], [\"Offset\", 2993152], [\"Size\", 18944], [\"Virtual Size\", 18464], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"fc095022751871d2f8a961aa6ff34d13\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.63741, 1.63981, 2.25907, 4.25692, 5.01073, 5.15251, 4.67837, 5.79519, 4.10999, 5.04805, 5.12555, 5.18068, 4.97239, 4.63277, 4.63139, 5.06568, 5.09428, 5.19571, 5.04528, 4.98926, 4.93949, 4.62192, 4.47235, 5.04576, 1.5746, 0.12764, 2.21681, 2.80491, 5.6679, 5.4848, 4.85754, 5.40412, 4.9212, 5.45025, 5.30506, 5.37874, 4.76856, 4.09734, 3.74888, 4.38656, 4.0434, 3.29528, 3.26729, 3.26129, 3.23949, 3.04948, 2.97031, 4.97789, 4.41169, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                5.034843659114737
+              ],
+              [
+                "Entropy without padding",
+                5.1330112824369225
+              ],
+              [
+                "Offset",
+                2993152
+              ],
+              [
+                "Size",
+                18944
+              ],
+              [
+                "Virtual Size",
+                18464
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "fc095022751871d2f8a961aa6ff34d13"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  1.63741,
+                  1.63981,
+                  2.25907,
+                  4.25692,
+                  5.01073,
+                  5.15251,
+                  4.67837,
+                  5.79519,
+                  4.10999,
+                  5.04805,
+                  5.12555,
+                  5.18068,
+                  4.97239,
+                  4.63277,
+                  4.63139,
+                  5.06568,
+                  5.09428,
+                  5.19571,
+                  5.04528,
+                  4.98926,
+                  4.93949,
+                  4.62192,
+                  4.47235,
+                  5.04576,
+                  1.5746,
+                  0.12764,
+                  2.21681,
+                  2.80491,
+                  5.6679,
+                  5.4848,
+                  4.85754,
+                  5.40412,
+                  4.9212,
+                  5.45025,
+                  5.30506,
+                  5.37874,
+                  4.76856,
+                  4.09734,
+                  3.74888,
+                  4.38656,
+                  4.0434,
+                  3.29528,
+                  3.26729,
+                  3.26129,
+                  3.23949,
+                  3.04948,
+                  2.97031,
+                  4.97789,
+                  4.41169,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -254,7 +988,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.453802510472711], [\"Entropy without padding\", 5.460654148537753], [\"Offset\", 3012096], [\"Size\", 19456], [\"Virtual Size\", 19288], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"36e9516a4decb1833f9c3fdcf66103e7\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.3182, 5.22479, 5.20159, 5.16743, 5.14763, 5.13985, 5.15176, 5.13041, 5.15933, 5.19297, 5.14016, 5.15056, 5.15658, 5.1749, 5.11714, 5.2031, 5.19447, 5.25173, 5.19424, 5.14514, 5.22194, 5.38875, 5.23122, 5.06753, 5.0292, 5.1968, 5.29231, 5.22776, 5.27518, 5.27683, 5.32037, 5.31642, 5.17954, 5.08298, 4.87268, 4.8663, 4.8718, 5.21855, 5.18398, 5.25562, 4.89561, 5.03452, 4.98959, 4.91073, 4.83498, 5.03032, 5.05167, 5.30503, 5.41572, 3.38942]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                5.453802510472711
+              ],
+              [
+                "Entropy without padding",
+                5.460654148537753
+              ],
+              [
+                "Offset",
+                3012096
+              ],
+              [
+                "Size",
+                19456
+              ],
+              [
+                "Virtual Size",
+                19288
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "36e9516a4decb1833f9c3fdcf66103e7"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  5.3182,
+                  5.22479,
+                  5.20159,
+                  5.16743,
+                  5.14763,
+                  5.13985,
+                  5.15176,
+                  5.13041,
+                  5.15933,
+                  5.19297,
+                  5.14016,
+                  5.15056,
+                  5.15658,
+                  5.1749,
+                  5.11714,
+                  5.2031,
+                  5.19447,
+                  5.25173,
+                  5.19424,
+                  5.14514,
+                  5.22194,
+                  5.38875,
+                  5.23122,
+                  5.06753,
+                  5.0292,
+                  5.1968,
+                  5.29231,
+                  5.22776,
+                  5.27518,
+                  5.27683,
+                  5.32037,
+                  5.31642,
+                  5.17954,
+                  5.08298,
+                  4.87268,
+                  4.8663,
+                  4.8718,
+                  5.21855,
+                  5.18398,
+                  5.25562,
+                  4.89561,
+                  5.03452,
+                  4.98959,
+                  4.91073,
+                  4.83498,
+                  5.03032,
+                  5.05167,
+                  5.30503,
+                  5.41572,
+                  3.38942
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -313,7 +1147,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"1630356811 (2021-08-30 20:53:31 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"C:\\\\MeshAgent\\\\MeshAgent\\\\Release\\\\MeshService64.pdb\"], [\"GUID\", \"ce13904-f257-4c78-b319-7cb14d39c369\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "1630356811 (2021-08-30 20:53:31 +00:00 (UTC))"
+          ],
+          [
+            "Version",
+            "0.0"
+          ],
+          [
+            "CV_Signature",
+            "PDB_70"
+          ],
+          [
+            "Filename",
+            "C:\\MeshAgent\\MeshAgent\\Release\\MeshService64.pdb"
+          ],
+          [
+            "GUID",
+            "ce13904-f257-4c78-b319-7cb14d39c369"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -339,7 +1194,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"1630356811 (2021-08-30 20:53:31 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "1630356811 (2021-08-30 20:53:31 +00:00 (UTC))"
+          ],
+          [
+            "Version",
+            "0.0"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -352,7 +1216,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"1630356811 (2021-08-30 20:53:31 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "1630356811 (2021-08-30 20:53:31 +00:00 (UTC))"
+          ],
+          [
+            "Version",
+            "0.0"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -378,7 +1251,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"1630356811 (2021-08-30 20:53:31 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "1630356811 (2021-08-30 20:53:31 +00:00 (UTC))"
+          ],
+          [
+            "Version",
+            "0.0"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -605,7 +1487,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Languages\", \"ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US\"]]",
+        "body": [
+          [
+            "Languages",
+            "ENGLISH"
+          ],
+          [
+            "Sublanguages",
+            "ENGLISH_US"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -649,7 +1540,85 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"48x48\", \"Size (bytes)\": 9640, \"Saved as\": \"icon_0.ico\"}, {\"ID\": 2, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_1.ico\"}, {\"ID\": 3, \"Lang\": \"ENGLISH\", \"Size\": \"16x16\", \"Size (bytes)\": 1128, \"Saved as\": \"icon_2.ico\"}], {\"column_order\": [\"ID\", \"Lang\", \"Size\", \"Size (bytes)\", \"Saved as\"]}], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"726517ac933221fe08d8859810e5801b5df0c8e3313105668b42e6b6922c26cb\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"726517ac933221fe08d8859810e5801b5df0c8e3313105668b42e6b6922c26cb\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_1.ico\", \"sha256\": \"322a2ede781d7843335480ff9bd5a3b6848cd9cdc9afeb93114ac6eee7e62cab\", \"description\": \"Icon 1 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_1.ico.thumb\", \"sha256\": \"322a2ede781d7843335480ff9bd5a3b6848cd9cdc9afeb93114ac6eee7e62cab\", \"description\": \"Icon 1 extracted from the PE file (thumbnail)\"}}, {\"img\": {\"name\": \"icon_2.ico\", \"sha256\": \"55c9a3d59898753a639d9a5941744713dc0c1f727098735cfc06f64ff40a56a1\", \"description\": \"Icon 2 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_2.ico.thumb\", \"sha256\": \"55c9a3d59898753a639d9a5941744713dc0c1f727098735cfc06f64ff40a56a1\", \"description\": \"Icon 2 extracted from the PE file (thumbnail)\"}}], {}]]",
+        "body": [
+          [
+            "TABLE",
+            [
+              {
+                "ID": 1,
+                "Lang": "ENGLISH",
+                "Saved as": "icon_0.ico",
+                "Size": "48x48",
+                "Size (bytes)": 9640
+              },
+              {
+                "ID": 2,
+                "Lang": "ENGLISH",
+                "Saved as": "icon_1.ico",
+                "Size": "32x32",
+                "Size (bytes)": 4264
+              },
+              {
+                "ID": 3,
+                "Lang": "ENGLISH",
+                "Saved as": "icon_2.ico",
+                "Size": "16x16",
+                "Size (bytes)": 1128
+              }
+            ],
+            {
+              "column_order": [
+                "ID",
+                "Lang",
+                "Size",
+                "Size (bytes)",
+                "Saved as"
+              ]
+            }
+          ],
+          [
+            "IMAGE",
+            [
+              {
+                "img": {
+                  "description": "Icon 0 extracted from the PE file",
+                  "name": "icon_0.ico",
+                  "sha256": "726517ac933221fe08d8859810e5801b5df0c8e3313105668b42e6b6922c26cb"
+                },
+                "thumb": {
+                  "description": "Icon 0 extracted from the PE file (thumbnail)",
+                  "name": "icon_0.ico.thumb",
+                  "sha256": "726517ac933221fe08d8859810e5801b5df0c8e3313105668b42e6b6922c26cb"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 1 extracted from the PE file",
+                  "name": "icon_1.ico",
+                  "sha256": "322a2ede781d7843335480ff9bd5a3b6848cd9cdc9afeb93114ac6eee7e62cab"
+                },
+                "thumb": {
+                  "description": "Icon 1 extracted from the PE file (thumbnail)",
+                  "name": "icon_1.ico.thumb",
+                  "sha256": "322a2ede781d7843335480ff9bd5a3b6848cd9cdc9afeb93114ac6eee7e62cab"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 2 extracted from the PE file",
+                  "name": "icon_2.ico",
+                  "sha256": "55c9a3d59898753a639d9a5941744713dc0c1f727098735cfc06f64ff40a56a1"
+                },
+                "thumb": {
+                  "description": "Icon 2 extracted from the PE file (thumbnail)",
+                  "name": "icon_2.ico.thumb",
+                  "sha256": "55c9a3d59898753a639d9a5941744713dc0c1f727098735cfc06f64ff40a56a1"
+                }
+              }
+            ],
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -662,7 +1631,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Type\", 0]]",
+        "body": [
+          [
+            "Type",
+            0
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -675,7 +1649,60 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 23], [\"file_os\", \"WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"APP\"], [\"file_version_LS\", 65539], [\"file_version_MS\", 2], [\"product_version_LS\", 0], [\"product_version_MS\", 0], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+        "body": [
+          [
+            "file_date_LS",
+            0
+          ],
+          [
+            "file_date_MS",
+            0
+          ],
+          [
+            "file_flags",
+            0
+          ],
+          [
+            "file_flags_mask",
+            23
+          ],
+          [
+            "file_os",
+            "WINDOWS32"
+          ],
+          [
+            "file_subtype",
+            "UNKNOWN"
+          ],
+          [
+            "file_type",
+            "APP"
+          ],
+          [
+            "file_version_LS",
+            65539
+          ],
+          [
+            "file_version_MS",
+            2
+          ],
+          [
+            "product_version_LS",
+            0
+          ],
+          [
+            "product_version_MS",
+            0
+          ],
+          [
+            "signature",
+            4277077181
+          ],
+          [
+            "struct_version",
+            65536
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -688,7 +1715,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
+        "body": [
+          [
+            "key",
+            "StringFileInfo"
+          ],
+          [
+            "type",
+            1
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -714,7 +1750,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"040904b0\"], [\"type\", 1], [\"lang\", \"ENGLISH\"], [\"sublang\", \"ENGLISH_US\"], [\"code_page\", \"UTF_16\"]]",
+        "body": [
+          [
+            "key",
+            "040904b0"
+          ],
+          [
+            "type",
+            1
+          ],
+          [
+            "lang",
+            "ENGLISH"
+          ],
+          [
+            "sublang",
+            "ENGLISH_US"
+          ],
+          [
+            "code_page",
+            "UTF_16"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -727,7 +1784,36 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"FileDescription\", \"Mesh Agent Service\"], [\"FileVersion\", \"0.2.1.3\"], [\"InternalName\", \"MeshAgent\"], [\"LegalCopyright\", \"Apache 2.0 License\"], [\"OriginalFilename\", \"MeshAgent.exe\"], [\"ProductName\", \"Mesh Agent Service\"], [\"ProductVersion\", \"0, 0, 0, 0\"]]",
+        "body": [
+          [
+            "FileDescription",
+            "Mesh Agent Service"
+          ],
+          [
+            "FileVersion",
+            "0.2.1.3"
+          ],
+          [
+            "InternalName",
+            "MeshAgent"
+          ],
+          [
+            "LegalCopyright",
+            "Apache 2.0 License"
+          ],
+          [
+            "OriginalFilename",
+            "MeshAgent.exe"
+          ],
+          [
+            "ProductName",
+            "Mesh Agent Service"
+          ],
+          [
+            "ProductVersion",
+            "0, 0, 0, 0"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -740,7 +1826,20 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78644233\"]]",
+        "body": [
+          [
+            "key",
+            "VarFileInfo"
+          ],
+          [
+            "type",
+            1
+          ],
+          [
+            "translations",
+            "78644233"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -753,7 +1852,48 @@
       },
       {
         "auto_collapse": false,
-        "body": "[{\"SHA256\": \"96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7\", \"Type\": \"AFX_DIALOG_LAYOUT\", \"Entropy\": 0.0}, {\"SHA256\": \"79910f03fd95b85e967ab66e19f32236e48de2bf575973836cc5e77522f3c80e\", \"Type\": \"ICON\", \"Entropy\": 5.007120654020092}, {\"SHA256\": \"f4a66649f464900adb21c521cceeb12a1407ad9a98d6a43ca9b34e3a5951fd90\", \"Type\": \"ICON\", \"Entropy\": 5.494551693242068}, {\"SHA256\": \"544ff916efbd39d8fc9df1012940eeb4bf9dd60130da3b722c6c6da85e37a196\", \"Type\": \"ICON\", \"Entropy\": 4.331959129729646}, {\"SHA256\": \"c3e490453ec7acbad92714c9e0e3aae106fa175bcda0b98e49d02445d042c838\", \"Type\": \"DIALOG\", \"Entropy\": 3.322570616044177}, {\"SHA256\": \"77a1efb6136f52dd2372987b13bf486aa75baeacb93bad009aa3e284c57b8694\", \"Type\": \"GROUP_ICON\", \"Entropy\": 2.458492225816881}, {\"SHA256\": \"a092738cd41368ec3be931149122cb465258cadff07ef023ae7c85c6864a240e\", \"Type\": \"VERSION\", \"Entropy\": 3.311795736751042}, {\"SHA256\": \"729f23c88f5ddfe459351fa8f5fdc775da2e89b48dd84cbd93845474c73cdc3d\", \"Type\": \"MANIFEST\", \"Entropy\": 5.055283258826469}]",
+        "body": [
+          {
+            "Entropy": 0.0,
+            "SHA256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+            "Type": "AFX_DIALOG_LAYOUT"
+          },
+          {
+            "Entropy": 5.007120654020092,
+            "SHA256": "79910f03fd95b85e967ab66e19f32236e48de2bf575973836cc5e77522f3c80e",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 5.494551693242068,
+            "SHA256": "f4a66649f464900adb21c521cceeb12a1407ad9a98d6a43ca9b34e3a5951fd90",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 4.331959129729646,
+            "SHA256": "544ff916efbd39d8fc9df1012940eeb4bf9dd60130da3b722c6c6da85e37a196",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 3.322570616044177,
+            "SHA256": "c3e490453ec7acbad92714c9e0e3aae106fa175bcda0b98e49d02445d042c838",
+            "Type": "DIALOG"
+          },
+          {
+            "Entropy": 2.458492225816881,
+            "SHA256": "77a1efb6136f52dd2372987b13bf486aa75baeacb93bad009aa3e284c57b8694",
+            "Type": "GROUP_ICON"
+          },
+          {
+            "Entropy": 3.311795736751042,
+            "SHA256": "a092738cd41368ec3be931149122cb465258cadff07ef023ae7c85c6864a240e",
+            "Type": "VERSION"
+          },
+          {
+            "Entropy": 5.055283258826469,
+            "SHA256": "729f23c88f5ddfe459351fa8f5fdc775da2e89b48dd84cbd93845474c73cdc3d",
+            "Type": "MANIFEST"
+          }
+        ],
         "body_config": {
           "column_order": [
             "SHA256",
@@ -785,7 +1925,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 1], [\"Algorithm\", \"SHA384\"], [\"Content Info Algorithm\", \"SHA384\"], [\"Content Info Digest\", \"3aa4b4a3497a0ce005295e0d7751cea8589bcb1427b70f7af0589bf12655729d23d4f54c9c562804e3050110b6170a62\"], [\"Content Info Content Type\", \"1.3.6.1.4.1.311.2.1.4\"]]",
+        "body": [
+          [
+            "Version",
+            1
+          ],
+          [
+            "Algorithm",
+            "SHA384"
+          ],
+          [
+            "Content Info Algorithm",
+            "SHA384"
+          ],
+          [
+            "Content Info Digest",
+            "3aa4b4a3497a0ce005295e0d7751cea8589bcb1427b70f7af0589bf12655729d23d4f54c9c562804e3050110b6170a62"
+          ],
+          [
+            "Content Info Content Type",
+            "1.3.6.1.4.1.311.2.1.4"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -798,7 +1959,24 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 1], [\"Digest Algorithm\", \"SHA384\"], [\"Authenticated Attributes\", \"CONTENT_TYPE, PKCS9_MESSAGE_DIGEST, SPC_SP_OPUS_INFO\"], [\"Unauthenticated Attributes\", \"PKCS9_COUNTER_SIGNATURE\"]]",
+        "body": [
+          [
+            "Version",
+            1
+          ],
+          [
+            "Digest Algorithm",
+            "SHA384"
+          ],
+          [
+            "Authenticated Attributes",
+            "CONTENT_TYPE, PKCS9_MESSAGE_DIGEST, SPC_SP_OPUS_INFO"
+          ],
+          [
+            "Unauthenticated Attributes",
+            "PKCS9_COUNTER_SIGNATURE"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -811,7 +1989,32 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 1], [\"Subject\", \"C=US, O=Open Source, CN=meshcentral.com\"], [\"Issuer\", \"C=US, O=Open Source, CN=meshcentral.com\"], [\"Serial Number\", \"0082869f0ff7ac1cc1\"], [\"Valid From\", \"2021-08-20T19:38:43\"], [\"Valid To\", \"2041-08-15T19:38:43\"]]",
+        "body": [
+          [
+            "Version",
+            1
+          ],
+          [
+            "Subject",
+            "C=US, O=Open Source, CN=meshcentral.com"
+          ],
+          [
+            "Issuer",
+            "C=US, O=Open Source, CN=meshcentral.com"
+          ],
+          [
+            "Serial Number",
+            "0082869f0ff7ac1cc1"
+          ],
+          [
+            "Valid From",
+            "2021-08-20T19:38:43"
+          ],
+          [
+            "Valid To",
+            "2041-08-15T19:38:43"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -849,7 +2052,44 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 1], [\"Subject\", \"C=US, O=Open Source, CN=meshcentral.com\"], [\"Issuer\", \"C=US, O=Open Source, CN=meshcentral.com\"], [\"SHA1\", \"3132a0666a942b44c28957ed7c0100f09f13862f\"], [\"SHA256\", \"a20ff65a0c17480a62c6a9244ebe700f6a47da1b3c9c88bfae58806899e49abd\"], [\"MD5\", \"d1b9d75efc78b832b19a4d998e4f16ba\"], [\"Serial Number\", \"0082869f0ff7ac1cc1\"], [\"Valid From\", \"2021-08-20T19:38:43\"], [\"Valid To\", \"2041-08-15T19:38:43\"]]",
+        "body": [
+          [
+            "Version",
+            1
+          ],
+          [
+            "Subject",
+            "C=US, O=Open Source, CN=meshcentral.com"
+          ],
+          [
+            "Issuer",
+            "C=US, O=Open Source, CN=meshcentral.com"
+          ],
+          [
+            "SHA1",
+            "3132a0666a942b44c28957ed7c0100f09f13862f"
+          ],
+          [
+            "SHA256",
+            "a20ff65a0c17480a62c6a9244ebe700f6a47da1b3c9c88bfae58806899e49abd"
+          ],
+          [
+            "MD5",
+            "d1b9d75efc78b832b19a4d998e4f16ba"
+          ],
+          [
+            "Serial Number",
+            "0082869f0ff7ac1cc1"
+          ],
+          [
+            "Valid From",
+            "2021-08-20T19:38:43"
+          ],
+          [
+            "Valid To",
+            "2041-08-15T19:38:43"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -862,7 +2102,44 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Time Stamping CA\"], [\"Issuer\", \"C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust RSA Certification Authority\"], [\"SHA1\", \"02d65b95e28370c1570095fa88f923dd937fad8f\"], [\"SHA256\", \"56d8f6e145b291f5fba29eb9898cf522bde7b14ab38929d0a4c4d1dddaba2a69\"], [\"MD5\", \"840da06d00ef1dbe65b938825373b2d5\"], [\"Serial Number\", \"300f6facdd6698747ca94636a7782db9\"], [\"Valid From\", \"2019-05-02T00:00:00\"], [\"Valid To\", \"2038-01-18T23:59:59\"]]",
+        "body": [
+          [
+            "Version",
+            3
+          ],
+          [
+            "Subject",
+            "C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Time Stamping CA"
+          ],
+          [
+            "Issuer",
+            "C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust RSA Certification Authority"
+          ],
+          [
+            "SHA1",
+            "02d65b95e28370c1570095fa88f923dd937fad8f"
+          ],
+          [
+            "SHA256",
+            "56d8f6e145b291f5fba29eb9898cf522bde7b14ab38929d0a4c4d1dddaba2a69"
+          ],
+          [
+            "MD5",
+            "840da06d00ef1dbe65b938825373b2d5"
+          ],
+          [
+            "Serial Number",
+            "300f6facdd6698747ca94636a7782db9"
+          ],
+          [
+            "Valid From",
+            "2019-05-02T00:00:00"
+          ],
+          [
+            "Valid To",
+            "2038-01-18T23:59:59"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -875,7 +2152,44 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Version\", 3], [\"Subject\", \"C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Time Stamping Signer \\\\#2\"], [\"Issuer\", \"C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Time Stamping CA\"], [\"SHA1\", \"951137101d882f31bd513f949ada4c68ad8c08f5\"], [\"SHA256\", \"708f7b26bcb83d3b708a7def1b35cc3d4fdf2f6640fcf9e68836072b0016f015\"], [\"MD5\", \"1a8ab0e25a467c71913fcb1c947e0568\"], [\"Serial Number\", \"008c77a0008ff4d1b0c63d9f3a48838d6b\"], [\"Valid From\", \"2020-10-23T00:00:00\"], [\"Valid To\", \"2032-01-22T23:59:59\"]]",
+        "body": [
+          [
+            "Version",
+            3
+          ],
+          [
+            "Subject",
+            "C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Time Stamping Signer \\#2"
+          ],
+          [
+            "Issuer",
+            "C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Time Stamping CA"
+          ],
+          [
+            "SHA1",
+            "951137101d882f31bd513f949ada4c68ad8c08f5"
+          ],
+          [
+            "SHA256",
+            "708f7b26bcb83d3b708a7def1b35cc3d4fdf2f6640fcf9e68836072b0016f015"
+          ],
+          [
+            "MD5",
+            "1a8ab0e25a467c71913fcb1c947e0568"
+          ],
+          [
+            "Serial Number",
+            "008c77a0008ff4d1b0c63d9f3a48838d6b"
+          ],
+          [
+            "Valid From",
+            "2020-10-23T00:00:00"
+          ],
+          [
+            "Valid To",
+            "2032-01-22T23:59:59"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -888,7 +2202,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Subject/Issuer\", \"C=US, O=Open Source, CN=meshcentral.com\"]]",
+        "body": [
+          [
+            "Subject/Issuer",
+            "C=US, O=Open Source, CN=meshcentral.com"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -908,7 +2227,57 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 6064]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.81962, 6.63167, 7.21443, 6.99383, 5.52191, 7.12874, 7.205, 6.22873, 6.24098, 7.22389, 7.06395, 5.41778, 7.05001, 7.16741, 6.20281, 5.90425, 7.26839, 7.01124, 5.76534, 7.15313, 6.23198, 6.70475, 7.14032, 6.86688]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Size",
+                6064
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  5.81962,
+                  6.63167,
+                  7.21443,
+                  6.99383,
+                  5.52191,
+                  7.12874,
+                  7.205,
+                  6.22873,
+                  6.24098,
+                  7.22389,
+                  7.06395,
+                  5.41778,
+                  7.05001,
+                  7.16741,
+                  6.20281,
+                  5.90425,
+                  7.26839,
+                  7.01124,
+                  5.76534,
+                  7.15313,
+                  6.23198,
+                  6.70475,
+                  7.14032,
+                  6.86688
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",

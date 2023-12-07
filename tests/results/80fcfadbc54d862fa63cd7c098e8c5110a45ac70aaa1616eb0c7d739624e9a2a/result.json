@@ -5,7 +5,56 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"1259829217 (2009-12-03 08:33:37 +00:00 (UTC))\"], [\"Entrypoint\", \"0x8c27\"], [\"Machine\", \"I386\"], [\"Magic\", \"PE32\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"7.10\"], [\"Operating System version\", \"4.0\"], [\"Subsystem version\", \"4.0\"], [\"Subsystem\", \"WINDOWS_GUI\"], [\"NX\", false], [\"Position Independent\", false], [\"Checksum\", \"0x00000000\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "1259829217 (2009-12-03 08:33:37 +00:00 (UTC))"
+          ],
+          [
+            "Entrypoint",
+            "0x8c27"
+          ],
+          [
+            "Machine",
+            "I386"
+          ],
+          [
+            "Magic",
+            "PE32"
+          ],
+          [
+            "Image version",
+            "0.0"
+          ],
+          [
+            "Linker version",
+            "7.10"
+          ],
+          [
+            "Operating System version",
+            "4.0"
+          ],
+          [
+            "Subsystem version",
+            "4.0"
+          ],
+          [
+            "Subsystem",
+            "WINDOWS_GUI"
+          ],
+          [
+            "NX",
+            false
+          ],
+          [
+            "Position Independent",
+            false
+          ],
+          [
+            "Checksum",
+            "0x00000000"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -29,7 +78,75 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"7295dac656339843fa8a8424a1f3dbbc\"]], {}], [\"TABLE\", [{\"ID\": \"0x005a178e\", \"Compiler Information\": \"[LNK] VS2003 (.NET) SP1 build 6030\", \"Count\": 1}, {\"ID\": \"0x005e0bec\", \"Compiler Information\": \"[RES] VS2003 (.NET) build 3052\", \"Count\": 1}, {\"ID\": \"0x005c178e\", \"Compiler Information\": \"[EXP] VS2003 (.NET) SP1 build 6030\", \"Count\": 1}, {\"ID\": \"0x0060178e\", \"Compiler Information\": \"[C++] VS2003 (.NET) SP1 build 6030\", \"Count\": 14}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 90}, {\"ID\": \"0x005d0883\", \"Compiler Information\": \"Unknown object 0x005d0883\", \"Count\": 7}, {\"ID\": \"0x005f178e\", \"Compiler Information\": \"[ C ] VS2003 (.NET) SP1 build 6030\", \"Count\": 72}, {\"ID\": \"0x000f178e\", \"Compiler Information\": \"[ASM] VS2003 (.NET) SP1 build 6030\", \"Count\": 23}, {\"ID\": \"0x00690813\", \"Compiler Information\": \"Unknown object 0x00690813\", \"Count\": 1}], {\"column_order\": [\"ID\", \"Compiler Information\", \"Count\"]}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Hash",
+                "7295dac656339843fa8a8424a1f3dbbc"
+              ]
+            ],
+            {}
+          ],
+          [
+            "TABLE",
+            [
+              {
+                "Compiler Information": "[LNK] VS2003 (.NET) SP1 build 6030",
+                "Count": 1,
+                "ID": "0x005a178e"
+              },
+              {
+                "Compiler Information": "[RES] VS2003 (.NET) build 3052",
+                "Count": 1,
+                "ID": "0x005e0bec"
+              },
+              {
+                "Compiler Information": "[EXP] VS2003 (.NET) SP1 build 6030",
+                "Count": 1,
+                "ID": "0x005c178e"
+              },
+              {
+                "Compiler Information": "[C++] VS2003 (.NET) SP1 build 6030",
+                "Count": 14,
+                "ID": "0x0060178e"
+              },
+              {
+                "Compiler Information": "[---] Unmarked objects",
+                "Count": 90,
+                "ID": "0x00010000"
+              },
+              {
+                "Compiler Information": "Unknown object 0x005d0883",
+                "Count": 7,
+                "ID": "0x005d0883"
+              },
+              {
+                "Compiler Information": "[ C ] VS2003 (.NET) SP1 build 6030",
+                "Count": 72,
+                "ID": "0x005f178e"
+              },
+              {
+                "Compiler Information": "[ASM] VS2003 (.NET) SP1 build 6030",
+                "Count": 23,
+                "ID": "0x000f178e"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00690813",
+                "Count": 1,
+                "ID": "0x00690813"
+              }
+            ],
+            {
+              "column_order": [
+                "ID",
+                "Compiler Information",
+                "Count"
+              ]
+            }
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -52,7 +169,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"sha512\", \"af3038dd4d81535640272aaa1a39472d42af9015d6ac763cc83da2030ae480268c1e9c40361a70b5b4fa075515becbeca2aba09e57d5c4294c010e04715b285e\"], [\"sha384\", \"aabb29eb53ef8f3b407af3f1a882bb1ec6d8efede74330df45af76126ba8c5ab596d776b19da4e6fb53421609b02a708\"], [\"sha256\", \"3f6293f361e4e107d6d2de09faff34166ac3e19e770de3fca4476f70666a1208\"], [\"sha1\", \"2c5098c30af4bdf0f36f2b4f9561c6f88033506d\"], [\"md5\", \"fa6427ce53d91a1e1fc0a2931eedcd77\"]]",
+        "body": [
+          [
+            "sha512",
+            "af3038dd4d81535640272aaa1a39472d42af9015d6ac763cc83da2030ae480268c1e9c40361a70b5b4fa075515becbeca2aba09e57d5c4294c010e04715b285e"
+          ],
+          [
+            "sha384",
+            "aabb29eb53ef8f3b407af3f1a882bb1ec6d8efede74330df45af76126ba8c5ab596d776b19da4e6fb53421609b02a708"
+          ],
+          [
+            "sha256",
+            "3f6293f361e4e107d6d2de09faff34166ac3e19e770de3fca4476f70666a1208"
+          ],
+          [
+            "sha1",
+            "2c5098c30af4bdf0f36f2b4f9561c6f88033506d"
+          ],
+          [
+            "md5",
+            "fa6427ce53d91a1e1fc0a2931eedcd77"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -78,7 +216,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.347413464778387], [\"Entropy without padding\", 6.516666885004611], [\"Offset\", 4096], [\"Size\", 57344], [\"Virtual Size\", 54638], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"bf6edbaf088e770ea2d56b3dec129774\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.70253, 6.10513, 5.85246, 5.85103, 6.03476, 6.0525, 4.9633, 5.68137, 6.00196, 5.6111, 5.74195, 6.25135, 6.16111, 6.21029, 6.00719, 5.98786, 5.91292, 5.75597, 5.86404, 5.83883, 5.58477, 5.54163, 5.3934, 5.12388, 6.11559, 5.90174, 6.23453, 6.31437, 6.11934, 6.30772, 6.22784, 6.28917, 6.20223, 6.08081, 6.14027, 6.23246, 6.17493, 6.42771, 6.44423, 6.20392, 6.46789, 6.31544, 6.06164, 6.05995, 6.40352, 6.51499, 5.17516, 3.79308, 0.0, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                6.347413464778387
+              ],
+              [
+                "Entropy without padding",
+                6.516666885004611
+              ],
+              [
+                "Offset",
+                4096
+              ],
+              [
+                "Size",
+                57344
+              ],
+              [
+                "Virtual Size",
+                54638
+              ],
+              [
+                "Characteristics",
+                "CNT_CODE, MEM_EXECUTE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "bf6edbaf088e770ea2d56b3dec129774"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  5.70253,
+                  6.10513,
+                  5.85246,
+                  5.85103,
+                  6.03476,
+                  6.0525,
+                  4.9633,
+                  5.68137,
+                  6.00196,
+                  5.6111,
+                  5.74195,
+                  6.25135,
+                  6.16111,
+                  6.21029,
+                  6.00719,
+                  5.98786,
+                  5.91292,
+                  5.75597,
+                  5.86404,
+                  5.83883,
+                  5.58477,
+                  5.54163,
+                  5.3934,
+                  5.12388,
+                  6.11559,
+                  5.90174,
+                  6.23453,
+                  6.31437,
+                  6.11934,
+                  6.30772,
+                  6.22784,
+                  6.28917,
+                  6.20223,
+                  6.08081,
+                  6.14027,
+                  6.23246,
+                  6.17493,
+                  6.42771,
+                  6.44423,
+                  6.20392,
+                  6.46789,
+                  6.31544,
+                  6.06164,
+                  6.05995,
+                  6.40352,
+                  6.51499,
+                  5.17516,
+                  3.79308,
+                  0.0,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -104,7 +342,105 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 4.723705899534099], [\"Entropy without padding\", 5.157529285705733], [\"Offset\", 61440], [\"Size\", 12288], [\"Virtual Size\", 10860], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"22a388eb05652f7e7385fd96dbf4f498\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.92584, 5.35643, 6.50565, 7.12661, 4.16144, 5.41548, 4.87588, 3.40594, 4.81388, 4.35667, 4.06968, 4.20752, 5.30453, 4.63137, 4.64538, 4.5451, 4.88827, 4.12597, 0.61828, 2.25203, 0.333, 2.52173, 2.25871, 3.84277, 4.00389, 2.7735, 3.02863, 2.59358, 2.75053, 2.72547, 2.40146, 2.51255, 3.14291, 2.97364, 3.3417, 3.53287, 4.80134, 5.00403, 4.76531, 4.87309, 4.74438, 5.00446, 2.20325, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                4.723705899534099
+              ],
+              [
+                "Entropy without padding",
+                5.157529285705733
+              ],
+              [
+                "Offset",
+                61440
+              ],
+              [
+                "Size",
+                12288
+              ],
+              [
+                "Virtual Size",
+                10860
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "22a388eb05652f7e7385fd96dbf4f498"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  3.92584,
+                  5.35643,
+                  6.50565,
+                  7.12661,
+                  4.16144,
+                  5.41548,
+                  4.87588,
+                  3.40594,
+                  4.81388,
+                  4.35667,
+                  4.06968,
+                  4.20752,
+                  5.30453,
+                  4.63137,
+                  4.64538,
+                  4.5451,
+                  4.88827,
+                  4.12597,
+                  0.61828,
+                  2.25203,
+                  0.333,
+                  2.52173,
+                  2.25871,
+                  3.84277,
+                  4.00389,
+                  2.7735,
+                  3.02863,
+                  2.59358,
+                  2.75053,
+                  2.72547,
+                  2.40146,
+                  2.51255,
+                  3.14291,
+                  2.97364,
+                  3.3417,
+                  3.53287,
+                  4.80134,
+                  5.00403,
+                  4.76531,
+                  4.87309,
+                  4.74438,
+                  5.00446,
+                  2.20325,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -130,7 +466,73 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.8734741931452772], [\"Entropy without padding\", 1.8734741931452772], [\"Offset\", 73728], [\"Size\", 4096], [\"Virtual Size\", 4960], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"c712915e08027263c728ac732d6170f6\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.61327, 0.95254, 1.71923, 1.79067, 0.61234, 1.04744, 3.19761, 3.29869, 3.25395, 1.71577, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                1.8734741931452772
+              ],
+              [
+                "Entropy without padding",
+                1.8734741931452772
+              ],
+              [
+                "Offset",
+                73728
+              ],
+              [
+                "Size",
+                4096
+              ],
+              [
+                "Virtual Size",
+                4960
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "c712915e08027263c728ac732d6170f6"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  3.61327,
+                  0.95254,
+                  1.71923,
+                  1.79067,
+                  0.61234,
+                  1.04744,
+                  3.19761,
+                  3.29869,
+                  3.25395,
+                  1.71577,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -156,7 +558,73 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 1.262646695466118], [\"Entropy without padding\", 3.3918952375055094], [\"Offset\", 77824], [\"Size\", 4096], [\"Virtual Size\", 1208], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"849cfa6632506b9d339fed8b36340133\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.42147, 3.2591, 3.3518, 3.32824, 2.54844, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                1.262646695466118
+              ],
+              [
+                "Entropy without padding",
+                3.3918952375055094
+              ],
+              [
+                "Offset",
+                77824
+              ],
+              [
+                "Size",
+                4096
+              ],
+              [
+                "Virtual Size",
+                1208
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "849cfa6632506b9d339fed8b36340133"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  2.42147,
+                  3.2591,
+                  3.3518,
+                  3.32824,
+                  2.54844,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -182,7 +650,89 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.5363847191517674], [\"Entropy without padding\", 4.639863572600817], [\"Offset\", 81920], [\"Size\", 8192], [\"Virtual Size\", 5782], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"90ad33f24bca2deecaec93b145f445b5\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.80092, 5.50737, 5.87348, 5.75111, 5.92555, 5.85135, 5.89885, 6.05357, 5.95989, 5.73763, 5.11848, 5.23154, 4.88667, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                3.5363847191517674
+              ],
+              [
+                "Entropy without padding",
+                4.639863572600817
+              ],
+              [
+                "Offset",
+                81920
+              ],
+              [
+                "Size",
+                8192
+              ],
+              [
+                "Virtual Size",
+                5782
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "90ad33f24bca2deecaec93b145f445b5"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  5.80092,
+                  5.50737,
+                  5.87348,
+                  5.75111,
+                  5.92555,
+                  5.85135,
+                  5.89885,
+                  6.05357,
+                  5.95989,
+                  5.73763,
+                  5.11848,
+                  5.23154,
+                  4.88667,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -208,7 +758,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 0.5584145358774627], [\"Entropy without padding\", 0.5584145358774627], [\"Offset\", 90112], [\"Size\", 61440], [\"Virtual Size\", 61440], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ, MEM_WRITE\"], [\"MD5\", \"43e224228de2ef17ab55a0a788d46e97\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.37459, 7.40295, 7.05555, 0.0, 0.0, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                0.5584145358774627
+              ],
+              [
+                "Entropy without padding",
+                0.5584145358774627
+              ],
+              [
+                "Offset",
+                90112
+              ],
+              [
+                "Size",
+                61440
+              ],
+              [
+                "Virtual Size",
+                61440
+              ],
+              [
+                "Characteristics",
+                "CNT_CODE, MEM_EXECUTE, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "43e224228de2ef17ab55a0a788d46e97"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.37459,
+                  7.40295,
+                  7.05555,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -247,7 +897,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"1259829217 (2009-12-03 08:33:37 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"C:\\\\DistributedAutoLink\\\\Temp\\\\CompileOutputDir\\\\rsscan.pdb\"], [\"GUID\", \"cdfa33c3-e0d7-4175-946f-4eef8dee1989\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "1259829217 (2009-12-03 08:33:37 +00:00 (UTC))"
+          ],
+          [
+            "Version",
+            "0.0"
+          ],
+          [
+            "CV_Signature",
+            "PDB_70"
+          ],
+          [
+            "Filename",
+            "C:\\DistributedAutoLink\\Temp\\CompileOutputDir\\rsscan.pdb"
+          ],
+          [
+            "GUID",
+            "cdfa33c3-e0d7-4175-946f-4eef8dee1989"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -391,7 +1062,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Languages\", \"CHINESE\"], [\"Sublanguages\", \"CHINESE_SIMPLIFIED\"]]",
+        "body": [
+          [
+            "Languages",
+            "CHINESE"
+          ],
+          [
+            "Sublanguages",
+            "CHINESE_SIMPLIFIED"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -414,7 +1094,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Type\", 0]]",
+        "body": [
+          [
+            "Type",
+            0
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -427,7 +1112,60 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 23], [\"file_os\", \"WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"DLL\"], [\"file_version_LS\", 3], [\"file_version_MS\", 1376256], [\"product_version_LS\", 0], [\"product_version_MS\", 1376256], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+        "body": [
+          [
+            "file_date_LS",
+            0
+          ],
+          [
+            "file_date_MS",
+            0
+          ],
+          [
+            "file_flags",
+            0
+          ],
+          [
+            "file_flags_mask",
+            23
+          ],
+          [
+            "file_os",
+            "WINDOWS32"
+          ],
+          [
+            "file_subtype",
+            "UNKNOWN"
+          ],
+          [
+            "file_type",
+            "DLL"
+          ],
+          [
+            "file_version_LS",
+            3
+          ],
+          [
+            "file_version_MS",
+            1376256
+          ],
+          [
+            "product_version_LS",
+            0
+          ],
+          [
+            "product_version_MS",
+            1376256
+          ],
+          [
+            "signature",
+            4277077181
+          ],
+          [
+            "struct_version",
+            65536
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -440,7 +1178,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
+        "body": [
+          [
+            "key",
+            "StringFileInfo"
+          ],
+          [
+            "type",
+            1
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -466,7 +1213,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"080404b0\"], [\"type\", 1], [\"lang\", \"CHINESE\"], [\"sublang\", \"CHINESE_SIMPLIFIED\"], [\"code_page\", \"UTF_16\"]]",
+        "body": [
+          [
+            "key",
+            "080404b0"
+          ],
+          [
+            "type",
+            1
+          ],
+          [
+            "lang",
+            "CHINESE"
+          ],
+          [
+            "sublang",
+            "CHINESE_SIMPLIFIED"
+          ],
+          [
+            "code_page",
+            "UTF_16"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -479,7 +1247,44 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"CompanyName\", \"Beijing Rising Information Technology Co., Ltd.\"], [\"FileDescription\", \"Plugin Dynamic Link Library\"], [\"FileVersion\", \"21, 0, 0, 3\"], [\"InternalName\", \"Beijing Rising Information Technology Co., Ltd.\"], [\"LegalCopyright\", \"Copyright(C) 2009-2010 Beijing Rising Information Technology Co., Ltd. All Rights Reserved.\"], [\"OriginalFilename\", \"rsscan.dll\"], [\"ProductName\", \"Rising AntiVirus 2009\"], [\"ProductVersion\", \"21, 0, 0, 0\"], [\"SpecialBuild\", \"954548001562500\"]]",
+        "body": [
+          [
+            "CompanyName",
+            "Beijing Rising Information Technology Co., Ltd."
+          ],
+          [
+            "FileDescription",
+            "Plugin Dynamic Link Library"
+          ],
+          [
+            "FileVersion",
+            "21, 0, 0, 3"
+          ],
+          [
+            "InternalName",
+            "Beijing Rising Information Technology Co., Ltd."
+          ],
+          [
+            "LegalCopyright",
+            "Copyright(C) 2009-2010 Beijing Rising Information Technology Co., Ltd. All Rights Reserved."
+          ],
+          [
+            "OriginalFilename",
+            "rsscan.dll"
+          ],
+          [
+            "ProductName",
+            "Rising AntiVirus 2009"
+          ],
+          [
+            "ProductVersion",
+            "21, 0, 0, 0"
+          ],
+          [
+            "SpecialBuild",
+            "954548001562500"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -492,7 +1297,20 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78645252\"]]",
+        "body": [
+          [
+            "key",
+            "VarFileInfo"
+          ],
+          [
+            "type",
+            1
+          ],
+          [
+            "translations",
+            "78645252"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -505,7 +1323,13 @@
       },
       {
         "auto_collapse": false,
-        "body": "[{\"SHA256\": \"c341fa6d5790a6357af322eadf92a8b187df789c53a626444340a4b5c8d0e037\", \"Type\": \"VERSION\", \"Entropy\": 3.49783356161407}]",
+        "body": [
+          {
+            "Entropy": 3.49783356161407,
+            "SHA256": "c341fa6d5790a6357af322eadf92a8b187df789c53a626444340a4b5c8d0e037",
+            "Type": "VERSION"
+          }
+        ],
         "body_config": {
           "column_order": [
             "SHA256",
@@ -524,7 +1348,18 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Size\", 0]], {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Size",
+                0
+              ]
+            ],
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",

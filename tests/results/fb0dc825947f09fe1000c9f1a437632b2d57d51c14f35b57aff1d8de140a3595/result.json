@@ -5,7 +5,56 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"1657322818 (2022-07-08 23:26:58 +00:00 (UTC))\"], [\"Entrypoint\", \"0x10ac2f8\"], [\"Machine\", \"AMD64\"], [\"Magic\", \"PE32_PLUS\"], [\"Image version\", \"0.0\"], [\"Linker version\", \"14.29\"], [\"Operating System version\", \"6.0\"], [\"Subsystem version\", \"6.0\"], [\"Subsystem\", \"WINDOWS_CUI\"], [\"NX\", true], [\"Position Independent\", true], [\"Checksum\", \"0x00000000\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "1657322818 (2022-07-08 23:26:58 +00:00 (UTC))"
+          ],
+          [
+            "Entrypoint",
+            "0x10ac2f8"
+          ],
+          [
+            "Machine",
+            "AMD64"
+          ],
+          [
+            "Magic",
+            "PE32_PLUS"
+          ],
+          [
+            "Image version",
+            "0.0"
+          ],
+          [
+            "Linker version",
+            "14.29"
+          ],
+          [
+            "Operating System version",
+            "6.0"
+          ],
+          [
+            "Subsystem version",
+            "6.0"
+          ],
+          [
+            "Subsystem",
+            "WINDOWS_CUI"
+          ],
+          [
+            "NX",
+            true
+          ],
+          [
+            "Position Independent",
+            true
+          ],
+          [
+            "Checksum",
+            "0x00000000"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -29,7 +78,120 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Hash\", \"8dd10ade1b5012e53689a711e5864d63\"]], {}], [\"TABLE\", [{\"ID\": \"0x010275c1\", \"Compiler Information\": \"[LNK] VS2019 v16.11.15 build 30145\", \"Count\": 1}, {\"ID\": \"0x00970000\", \"Compiler Information\": \"Unknown object 0x00970000\", \"Count\": 1}, {\"ID\": \"0x00ff75c1\", \"Compiler Information\": \"[RES] VS2019 v16.11.15 build 30145\", \"Count\": 1}, {\"ID\": \"0x010075c1\", \"Compiler Information\": \"[EXP] VS2019 v16.11.15 build 30145\", \"Count\": 1}, {\"ID\": \"0x010975c1\", \"Compiler Information\": \"Unknown object 0x010975c1\", \"Count\": 4}, {\"ID\": \"0x00010000\", \"Compiler Information\": \"[---] Unmarked objects\", \"Count\": 405}, {\"ID\": \"0x010172d3\", \"Compiler Information\": \"Unknown object 0x010172d3\", \"Count\": 23}, {\"ID\": \"0x010475c1\", \"Compiler Information\": \"[ C ] VS2019 v16.11.15 build 30145\", \"Count\": 849}, {\"ID\": \"0x010575c1\", \"Compiler Information\": \"[C++] VS2019 v16.11.15 build 30145\", \"Count\": 1378}, {\"ID\": \"0x010375c1\", \"Compiler Information\": \"[ASM] VS2019 v16.11.15 build 30145\", \"Count\": 2}, {\"ID\": \"0x00000000\", \"Compiler Information\": \"[---] Unmarked objects (old)\", \"Count\": 30}, {\"ID\": \"0x00fd6f66\", \"Compiler Information\": \"Unknown object 0x00fd6f66\", \"Count\": 12}, {\"ID\": \"0x01057552\", \"Compiler Information\": \"Unknown object 0x01057552\", \"Count\": 97}, {\"ID\": \"0x01037552\", \"Compiler Information\": \"Unknown object 0x01037552\", \"Count\": 10}, {\"ID\": \"0x01047552\", \"Compiler Information\": \"Unknown object 0x01047552\", \"Count\": 19}, {\"ID\": \"0x010472d3\", \"Compiler Information\": \"Unknown object 0x010472d3\", \"Count\": 46}, {\"ID\": \"0x010572d3\", \"Compiler Information\": \"Unknown object 0x010572d3\", \"Count\": 208}, {\"ID\": \"0x010372d3\", \"Compiler Information\": \"Unknown object 0x010372d3\", \"Count\": 24}], {\"column_order\": [\"ID\", \"Compiler Information\", \"Count\"]}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Hash",
+                "8dd10ade1b5012e53689a711e5864d63"
+              ]
+            ],
+            {}
+          ],
+          [
+            "TABLE",
+            [
+              {
+                "Compiler Information": "[LNK] VS2019 v16.11.15 build 30145",
+                "Count": 1,
+                "ID": "0x010275c1"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00970000",
+                "Count": 1,
+                "ID": "0x00970000"
+              },
+              {
+                "Compiler Information": "[RES] VS2019 v16.11.15 build 30145",
+                "Count": 1,
+                "ID": "0x00ff75c1"
+              },
+              {
+                "Compiler Information": "[EXP] VS2019 v16.11.15 build 30145",
+                "Count": 1,
+                "ID": "0x010075c1"
+              },
+              {
+                "Compiler Information": "Unknown object 0x010975c1",
+                "Count": 4,
+                "ID": "0x010975c1"
+              },
+              {
+                "Compiler Information": "[---] Unmarked objects",
+                "Count": 405,
+                "ID": "0x00010000"
+              },
+              {
+                "Compiler Information": "Unknown object 0x010172d3",
+                "Count": 23,
+                "ID": "0x010172d3"
+              },
+              {
+                "Compiler Information": "[ C ] VS2019 v16.11.15 build 30145",
+                "Count": 849,
+                "ID": "0x010475c1"
+              },
+              {
+                "Compiler Information": "[C++] VS2019 v16.11.15 build 30145",
+                "Count": 1378,
+                "ID": "0x010575c1"
+              },
+              {
+                "Compiler Information": "[ASM] VS2019 v16.11.15 build 30145",
+                "Count": 2,
+                "ID": "0x010375c1"
+              },
+              {
+                "Compiler Information": "[---] Unmarked objects (old)",
+                "Count": 30,
+                "ID": "0x00000000"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00fd6f66",
+                "Count": 12,
+                "ID": "0x00fd6f66"
+              },
+              {
+                "Compiler Information": "Unknown object 0x01057552",
+                "Count": 97,
+                "ID": "0x01057552"
+              },
+              {
+                "Compiler Information": "Unknown object 0x01037552",
+                "Count": 10,
+                "ID": "0x01037552"
+              },
+              {
+                "Compiler Information": "Unknown object 0x01047552",
+                "Count": 19,
+                "ID": "0x01047552"
+              },
+              {
+                "Compiler Information": "Unknown object 0x010472d3",
+                "Count": 46,
+                "ID": "0x010472d3"
+              },
+              {
+                "Compiler Information": "Unknown object 0x010572d3",
+                "Count": 208,
+                "ID": "0x010572d3"
+              },
+              {
+                "Compiler Information": "Unknown object 0x010372d3",
+                "Count": 24,
+                "ID": "0x010372d3"
+              }
+            ],
+            {
+              "column_order": [
+                "ID",
+                "Compiler Information",
+                "Count"
+              ]
+            }
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -52,7 +214,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"File Size\", 78414778], [\"Virtual Size\", 37457920]]",
+        "body": [
+          [
+            "File Size",
+            78414778
+          ],
+          [
+            "Virtual Size",
+            37457920
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -72,7 +243,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"sha512\", \"bd7eeb1afc5647db3fee36707c0fcbd64e01dcdb302b1f174943dcf8aea1e0de7c18b7f9c071f74f4d3354ed9bc7d2bd9d4649e5c92b774b1cc1f6ca4c101047\"], [\"sha384\", \"6d7c5923b42b9afa119c81eb77684693a9858cb537f90475b983bca28e89957a1b80e7f4ef8d973cce8cc674f2b93717\"], [\"sha256\", \"031a3e86c2a21a5630cfda63f748396a7e7ccb8106ea0f1f0965059ca7a736db\"], [\"sha1\", \"66f7b67713d0f90a78dddd99732f09ed7a34b8b2\"], [\"md5\", \"920af36b1c603b02efa1343af2e6adf3\"]]",
+        "body": [
+          [
+            "sha512",
+            "bd7eeb1afc5647db3fee36707c0fcbd64e01dcdb302b1f174943dcf8aea1e0de7c18b7f9c071f74f4d3354ed9bc7d2bd9d4649e5c92b774b1cc1f6ca4c101047"
+          ],
+          [
+            "sha384",
+            "6d7c5923b42b9afa119c81eb77684693a9858cb537f90475b983bca28e89957a1b80e7f4ef8d973cce8cc674f2b93717"
+          ],
+          [
+            "sha256",
+            "031a3e86c2a21a5630cfda63f748396a7e7ccb8106ea0f1f0965059ca7a736db"
+          ],
+          [
+            "sha1",
+            "66f7b67713d0f90a78dddd99732f09ed7a34b8b2"
+          ],
+          [
+            "md5",
+            "920af36b1c603b02efa1343af2e6adf3"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -98,7 +290,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.462355472267666], [\"Entropy without padding\", 6.462435736062323], [\"Offset\", 1024], [\"Size\", 17792512], [\"Virtual Size\", 17792064], [\"Characteristics\", \"CNT_CODE, MEM_EXECUTE, MEM_READ\"], [\"MD5\", \"7ff811e53e91692c74554cb15f627f2e\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [7.60931, 6.6281, 6.32469, 6.29136, 6.34786, 6.30272, 6.275, 6.42694, 6.38959, 6.38033, 6.45348, 6.33009, 6.31266, 6.13451, 6.19918, 6.31748, 6.4124, 6.46226, 6.34292, 6.35891, 6.30729, 6.4191, 6.3505, 6.32909, 6.33368, 6.34605, 6.29119, 6.26631, 6.33886, 6.31014, 6.38879, 6.23245, 6.33131, 6.42405, 6.3323, 6.34816, 6.35819, 6.39615, 6.45269, 6.4729, 6.48633, 6.51175, 6.49694, 6.17432, 6.18952, 6.30919, 6.27263, 6.28624, 6.39484, 6.56429]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                6.462355472267666
+              ],
+              [
+                "Entropy without padding",
+                6.462435736062323
+              ],
+              [
+                "Offset",
+                1024
+              ],
+              [
+                "Size",
+                17792512
+              ],
+              [
+                "Virtual Size",
+                17792064
+              ],
+              [
+                "Characteristics",
+                "CNT_CODE, MEM_EXECUTE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "7ff811e53e91692c74554cb15f627f2e"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  7.60931,
+                  6.6281,
+                  6.32469,
+                  6.29136,
+                  6.34786,
+                  6.30272,
+                  6.275,
+                  6.42694,
+                  6.38959,
+                  6.38033,
+                  6.45348,
+                  6.33009,
+                  6.31266,
+                  6.13451,
+                  6.19918,
+                  6.31748,
+                  6.4124,
+                  6.46226,
+                  6.34292,
+                  6.35891,
+                  6.30729,
+                  6.4191,
+                  6.3505,
+                  6.32909,
+                  6.33368,
+                  6.34605,
+                  6.29119,
+                  6.26631,
+                  6.33886,
+                  6.31014,
+                  6.38879,
+                  6.23245,
+                  6.33131,
+                  6.42405,
+                  6.3323,
+                  6.34816,
+                  6.35819,
+                  6.39615,
+                  6.45269,
+                  6.4729,
+                  6.48633,
+                  6.51175,
+                  6.49694,
+                  6.17432,
+                  6.18952,
+                  6.30919,
+                  6.27263,
+                  6.28624,
+                  6.39484,
+                  6.56429
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -124,7 +416,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.206484120630267], [\"Entropy without padding\", 6.206498952331115], [\"Offset\", 17793536], [\"Size\", 15697408], [\"Virtual Size\", 15697348], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"a4f957558421d7ffc97c520a03736201\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.0953, 4.95826, 5.08082, 5.11853, 5.05313, 4.98049, 5.07749, 4.87352, 4.97321, 3.50908, 4.45545, 3.62683, 3.31316, 5.5067, 6.40111, 5.74746, 5.09291, 6.01706, 5.16623, 5.27262, 5.24375, 5.8228, 5.18083, 5.18885, 6.02583, 6.11357, 5.20543, 5.70946, 4.75372, 5.75299, 4.50649, 6.10693, 5.16315, 6.09922, 5.78686, 5.5966, 5.80839, 5.97395, 7.99898, 7.35151, 6.44205, 6.05084, 6.1899, 7.08099, 5.12845, 5.11834, 5.12278, 5.09106, 5.04675, 5.31889]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                6.206484120630267
+              ],
+              [
+                "Entropy without padding",
+                6.206498952331115
+              ],
+              [
+                "Offset",
+                17793536
+              ],
+              [
+                "Size",
+                15697408
+              ],
+              [
+                "Virtual Size",
+                15697348
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "a4f957558421d7ffc97c520a03736201"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  5.0953,
+                  4.95826,
+                  5.08082,
+                  5.11853,
+                  5.05313,
+                  4.98049,
+                  5.07749,
+                  4.87352,
+                  4.97321,
+                  3.50908,
+                  4.45545,
+                  3.62683,
+                  3.31316,
+                  5.5067,
+                  6.40111,
+                  5.74746,
+                  5.09291,
+                  6.01706,
+                  5.16623,
+                  5.27262,
+                  5.24375,
+                  5.8228,
+                  5.18083,
+                  5.18885,
+                  6.02583,
+                  6.11357,
+                  5.20543,
+                  5.70946,
+                  4.75372,
+                  5.75299,
+                  4.50649,
+                  6.10693,
+                  5.16315,
+                  6.09922,
+                  5.78686,
+                  5.5966,
+                  5.80839,
+                  5.97395,
+                  7.99898,
+                  7.35151,
+                  6.44205,
+                  6.05084,
+                  6.1899,
+                  7.08099,
+                  5.12845,
+                  5.11834,
+                  5.12278,
+                  5.09106,
+                  5.04675,
+                  5.31889
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -150,7 +542,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.5014335271393655], [\"Entropy without padding\", 3.501433527139364], [\"Offset\", 33490944], [\"Size\", 186880], [\"Virtual Size\", 2984236], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE\"], [\"MD5\", \"d2d86d1a7fd7661de7074d191730e9be\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.47244, 3.01379, 3.12628, 3.25776, 2.71303, 2.61948, 2.66323, 3.0372, 2.80417, 3.69228, 3.47355, 2.62746, 2.65086, 2.63588, 2.66702, 2.66384, 2.66042, 2.66576, 2.76335, 0.90227, 0.88018, 0.88279, 0.87952, 1.18272, 0.98451, 1.1621, 2.20706, 2.43411, 2.30425, 2.40096, 2.10547, 2.00645, 1.99533, 2.42124, 2.53979, 2.50822, 2.57586, 2.16833, 1.43949, 2.46672, 4.82629, 4.68418, 4.79647, 4.74332, 4.66318, 4.57123, 4.52876, 4.59185, 4.48281, 4.31165]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                3.5014335271393655
+              ],
+              [
+                "Entropy without padding",
+                3.501433527139364
+              ],
+              [
+                "Offset",
+                33490944
+              ],
+              [
+                "Size",
+                186880
+              ],
+              [
+                "Virtual Size",
+                2984236
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "d2d86d1a7fd7661de7074d191730e9be"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  2.47244,
+                  3.01379,
+                  3.12628,
+                  3.25776,
+                  2.71303,
+                  2.61948,
+                  2.66323,
+                  3.0372,
+                  2.80417,
+                  3.69228,
+                  3.47355,
+                  2.62746,
+                  2.65086,
+                  2.63588,
+                  2.66702,
+                  2.66384,
+                  2.66042,
+                  2.66576,
+                  2.76335,
+                  0.90227,
+                  0.88018,
+                  0.88279,
+                  0.87952,
+                  1.18272,
+                  0.98451,
+                  1.1621,
+                  2.20706,
+                  2.43411,
+                  2.30425,
+                  2.40096,
+                  2.10547,
+                  2.00645,
+                  1.99533,
+                  2.42124,
+                  2.53979,
+                  2.50822,
+                  2.57586,
+                  2.16833,
+                  1.43949,
+                  2.46672,
+                  4.82629,
+                  4.68418,
+                  4.79647,
+                  4.74332,
+                  4.66318,
+                  4.57123,
+                  4.52876,
+                  4.59185,
+                  4.48281,
+                  4.31165
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -176,7 +668,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 6.780767036445384], [\"Entropy without padding\", 6.782471986717514], [\"Offset\", 33677824], [\"Size\", 842240], [\"Virtual Size\", 841896], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"7c7dd899fc914d0919cf1eb2bef4e7fb\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [6.13964, 6.09461, 6.16458, 6.15876, 6.21203, 6.16753, 6.23749, 6.15594, 6.10649, 6.04685, 6.22149, 6.13171, 6.13432, 6.02811, 5.89137, 6.07794, 6.15264, 6.19765, 6.18812, 6.236, 6.15771, 6.19285, 6.19272, 6.19718, 6.22751, 6.23663, 6.29776, 6.18615, 6.2293, 6.1665, 6.20941, 6.14112, 6.18511, 6.15617, 6.18511, 6.16107, 5.62956, 5.98379, 6.13145, 6.2058, 6.21486, 6.18896, 6.04199, 6.01475, 6.13184, 6.08409, 6.28245, 6.0711, 6.04046, 5.95034]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                6.780767036445384
+              ],
+              [
+                "Entropy without padding",
+                6.782471986717514
+              ],
+              [
+                "Offset",
+                33677824
+              ],
+              [
+                "Size",
+                842240
+              ],
+              [
+                "Virtual Size",
+                841896
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "7c7dd899fc914d0919cf1eb2bef4e7fb"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  6.13964,
+                  6.09461,
+                  6.16458,
+                  6.15876,
+                  6.21203,
+                  6.16753,
+                  6.23749,
+                  6.15594,
+                  6.10649,
+                  6.04685,
+                  6.22149,
+                  6.13171,
+                  6.13432,
+                  6.02811,
+                  5.89137,
+                  6.07794,
+                  6.15264,
+                  6.19765,
+                  6.18812,
+                  6.236,
+                  6.15771,
+                  6.19285,
+                  6.19272,
+                  6.19718,
+                  6.22751,
+                  6.23663,
+                  6.29776,
+                  6.18615,
+                  6.2293,
+                  6.1665,
+                  6.20941,
+                  6.14112,
+                  6.18511,
+                  6.15617,
+                  6.18511,
+                  6.16107,
+                  5.62956,
+                  5.98379,
+                  6.13145,
+                  6.2058,
+                  6.21486,
+                  6.18896,
+                  6.04199,
+                  6.01475,
+                  6.13184,
+                  6.08409,
+                  6.28245,
+                  6.0711,
+                  6.04046,
+                  5.95034
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -202,7 +794,59 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 2.8750917380890164], [\"Entropy without padding\", 4.108597934400731], [\"Offset\", 34520064], [\"Size\", 512], [\"Virtual Size\", 244], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"27931c106c58fbe03bb12872283529b7\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.12441, 0.0]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                2.8750917380890164
+              ],
+              [
+                "Entropy without padding",
+                4.108597934400731
+              ],
+              [
+                "Offset",
+                34520064
+              ],
+              [
+                "Size",
+                512
+              ],
+              [
+                "Virtual Size",
+                244
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "27931c106c58fbe03bb12872283529b7"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  4.12441,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -248,7 +892,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 3.082102642648605], [\"Entropy without padding\", 4.62484505380788], [\"Offset\", 34520576], [\"Size\", 142336], [\"Virtual Size\", 6120], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_READ\"], [\"MD5\", \"ba30cb369d6dfb8b58e89051d88bf60e\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.6831, 4.0165, 3.28846, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.74991, 2.75026, 2.75026, 2.74991, 2.74991, 2.74991, 2.75009]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                3.082102642648605
+              ],
+              [
+                "Entropy without padding",
+                4.62484505380788
+              ],
+              [
+                "Offset",
+                34520576
+              ],
+              [
+                "Size",
+                142336
+              ],
+              [
+                "Virtual Size",
+                6120
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "ba30cb369d6dfb8b58e89051d88bf60e"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  4.6831,
+                  4.0165,
+                  3.28846,
+                  2.74991,
+                  2.75026,
+                  2.75026,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.75026,
+                  2.75026,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.75026,
+                  2.75026,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.75026,
+                  2.75026,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.75026,
+                  2.75026,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.75026,
+                  2.75026,
+                  2.74991,
+                  2.74991,
+                  2.74991,
+                  2.75009
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -274,7 +1018,107 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"ORDERED_KEY_VALUE\", [[\"Entropy\", 5.488361285409071], [\"Entropy without padding\", 5.489361335525942], [\"Offset\", 34662912], [\"Size\", 115712], [\"Virtual Size\", 115492], [\"Characteristics\", \"CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ\"], [\"MD5\", \"81be29a4ac9aa11476a8fae36ba3ee7a\"]], {}], [\"GRAPH_DATA\", {\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.45358, 5.42068, 5.42735, 5.42079, 5.43835, 5.39527, 5.43667, 5.446, 5.45097, 5.44555, 5.42456, 5.32986, 5.44385, 5.44492, 5.44796, 5.4356, 5.35656, 5.36741, 5.31934, 5.29982, 5.449, 5.44731, 5.31209, 5.38435, 5.22481, 5.39755, 5.41641, 5.4243, 5.33682, 5.44173, 5.41323, 5.45062, 5.40291, 5.36058, 5.41982, 5.38555, 5.42896, 5.4213, 5.39399, 5.4043, 5.43066, 5.38988, 5.4185, 5.43588, 5.39693, 5.43717, 5.44435, 5.43353, 5.44755, 5.20795]}}, {}]]",
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                5.488361285409071
+              ],
+              [
+                "Entropy without padding",
+                5.489361335525942
+              ],
+              [
+                "Offset",
+                34662912
+              ],
+              [
+                "Size",
+                115712
+              ],
+              [
+                "Virtual Size",
+                115492
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "81be29a4ac9aa11476a8fae36ba3ee7a"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  5.45358,
+                  5.42068,
+                  5.42735,
+                  5.42079,
+                  5.43835,
+                  5.39527,
+                  5.43667,
+                  5.446,
+                  5.45097,
+                  5.44555,
+                  5.42456,
+                  5.32986,
+                  5.44385,
+                  5.44492,
+                  5.44796,
+                  5.4356,
+                  5.35656,
+                  5.36741,
+                  5.31934,
+                  5.29982,
+                  5.449,
+                  5.44731,
+                  5.31209,
+                  5.38435,
+                  5.22481,
+                  5.39755,
+                  5.41641,
+                  5.4243,
+                  5.33682,
+                  5.44173,
+                  5.41323,
+                  5.45062,
+                  5.40291,
+                  5.36058,
+                  5.41982,
+                  5.38555,
+                  5.42896,
+                  5.4213,
+                  5.39399,
+                  5.4043,
+                  5.43066,
+                  5.38988,
+                  5.4185,
+                  5.43588,
+                  5.39693,
+                  5.43717,
+                  5.44435,
+                  5.43353,
+                  5.44755,
+                  5.20795
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -333,7 +1177,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"1657322818 (2022-07-08 23:26:58 +00:00 (UTC))\"], [\"Version\", \"0.0\"], [\"CV_Signature\", \"PDB_70\"], [\"Filename\", \"C:\\\\Users\\\\runneradmin\\\\AppData\\\\Local\\\\Temp\\\\pkg.d7c6a10fb0263a69b4596321\\\\node\\\\out\\\\Release\\\\node.pdb\"], [\"GUID\", \"f7fd18cf-693c-4e31-a646-97c63ad0b6e3\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "1657322818 (2022-07-08 23:26:58 +00:00 (UTC))"
+          ],
+          [
+            "Version",
+            "0.0"
+          ],
+          [
+            "CV_Signature",
+            "PDB_70"
+          ],
+          [
+            "Filename",
+            "C:\\Users\\runneradmin\\AppData\\Local\\Temp\\pkg.d7c6a10fb0263a69b4596321\\node\\out\\Release\\node.pdb"
+          ],
+          [
+            "GUID",
+            "f7fd18cf-693c-4e31-a646-97c63ad0b6e3"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -359,7 +1224,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"1657322818 (2022-07-08 23:26:58 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "1657322818 (2022-07-08 23:26:58 +00:00 (UTC))"
+          ],
+          [
+            "Version",
+            "0.0"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -372,7 +1246,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"1657322818 (2022-07-08 23:26:58 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "1657322818 (2022-07-08 23:26:58 +00:00 (UTC))"
+          ],
+          [
+            "Version",
+            "0.0"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -398,7 +1281,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Timestamp\", \"1657322818 (2022-07-08 23:26:58 +00:00 (UTC))\"], [\"Version\", \"0.0\"]]",
+        "body": [
+          [
+            "Timestamp",
+            "1657322818 (2022-07-08 23:26:58 +00:00 (UTC))"
+          ],
+          [
+            "Version",
+            "0.0"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -771,7 +1663,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Languages\", \"ENGLISH\"], [\"Sublanguages\", \"ENGLISH_US\"]]",
+        "body": [
+          [
+            "Languages",
+            "ENGLISH"
+          ],
+          [
+            "Sublanguages",
+            "ENGLISH_US"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -794,7 +1695,47 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"TABLE\", [{\"ID\": 1, \"Lang\": \"ENGLISH\", \"Size\": \"32x32\", \"Size (bytes)\": 4264, \"Saved as\": \"icon_0.ico\"}], {\"column_order\": [\"ID\", \"Lang\", \"Size\", \"Size (bytes)\", \"Saved as\"]}], [\"IMAGE\", [{\"img\": {\"name\": \"icon_0.ico\", \"sha256\": \"241b8140a8ff414cbd3f8311b27728923ba30a98c076063fd1846934fdef0373\", \"description\": \"Icon 0 extracted from the PE file\"}, \"thumb\": {\"name\": \"icon_0.ico.thumb\", \"sha256\": \"241b8140a8ff414cbd3f8311b27728923ba30a98c076063fd1846934fdef0373\", \"description\": \"Icon 0 extracted from the PE file (thumbnail)\"}}], {}]]",
+        "body": [
+          [
+            "TABLE",
+            [
+              {
+                "ID": 1,
+                "Lang": "ENGLISH",
+                "Saved as": "icon_0.ico",
+                "Size": "32x32",
+                "Size (bytes)": 4264
+              }
+            ],
+            {
+              "column_order": [
+                "ID",
+                "Lang",
+                "Size",
+                "Size (bytes)",
+                "Saved as"
+              ]
+            }
+          ],
+          [
+            "IMAGE",
+            [
+              {
+                "img": {
+                  "description": "Icon 0 extracted from the PE file",
+                  "name": "icon_0.ico",
+                  "sha256": "241b8140a8ff414cbd3f8311b27728923ba30a98c076063fd1846934fdef0373"
+                },
+                "thumb": {
+                  "description": "Icon 0 extracted from the PE file (thumbnail)",
+                  "name": "icon_0.ico.thumb",
+                  "sha256": "241b8140a8ff414cbd3f8311b27728923ba30a98c076063fd1846934fdef0373"
+                }
+              }
+            ],
+            {}
+          ]
+        ],
         "body_config": {},
         "body_format": "MULTI",
         "classification": "TLP:C",
@@ -807,7 +1748,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"Type\", 0]]",
+        "body": [
+          [
+            "Type",
+            0
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -820,7 +1766,60 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"file_date_LS\", 0], [\"file_date_MS\", 0], [\"file_flags\", 0], [\"file_flags_mask\", 63], [\"file_os\", \"NT_WINDOWS32\"], [\"file_subtype\", \"UNKNOWN\"], [\"file_type\", \"APP\"], [\"file_version_LS\", 0], [\"file_version_MS\", 131077], [\"product_version_LS\", 0], [\"product_version_MS\", 131077], [\"signature\", 4277077181], [\"struct_version\", 65536]]",
+        "body": [
+          [
+            "file_date_LS",
+            0
+          ],
+          [
+            "file_date_MS",
+            0
+          ],
+          [
+            "file_flags",
+            0
+          ],
+          [
+            "file_flags_mask",
+            63
+          ],
+          [
+            "file_os",
+            "NT_WINDOWS32"
+          ],
+          [
+            "file_subtype",
+            "UNKNOWN"
+          ],
+          [
+            "file_type",
+            "APP"
+          ],
+          [
+            "file_version_LS",
+            0
+          ],
+          [
+            "file_version_MS",
+            131077
+          ],
+          [
+            "product_version_LS",
+            0
+          ],
+          [
+            "product_version_MS",
+            131077
+          ],
+          [
+            "signature",
+            4277077181
+          ],
+          [
+            "struct_version",
+            65536
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -833,7 +1832,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"StringFileInfo\"], [\"type\", 1]]",
+        "body": [
+          [
+            "key",
+            "StringFileInfo"
+          ],
+          [
+            "type",
+            1
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -859,7 +1867,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"040904b0\"], [\"type\", 1], [\"lang\", \"ENGLISH\"], [\"sublang\", \"ENGLISH_US\"], [\"code_page\", \"UTF_16\"]]",
+        "body": [
+          [
+            "key",
+            "040904b0"
+          ],
+          [
+            "type",
+            1
+          ],
+          [
+            "lang",
+            "ENGLISH"
+          ],
+          [
+            "sublang",
+            "ENGLISH_US"
+          ],
+          [
+            "code_page",
+            "UTF_16"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -872,7 +1901,40 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"CompanyName\", \"Node.js\"], [\"FileDescription\", \"Install\"], [\"FileVersion\", \"2.5.5\"], [\"InternalName\", \"node\"], [\"LegalCopyright\", \"Copyright Node.js contributors. MIT license.\"], [\"OriginalFilename\", \"node.exe\"], [\"ProductName\", \"GameSetup\"], [\"ProductVersion\", \"2.5.0.0\"]]",
+        "body": [
+          [
+            "CompanyName",
+            "Node.js"
+          ],
+          [
+            "FileDescription",
+            "Install"
+          ],
+          [
+            "FileVersion",
+            "2.5.5"
+          ],
+          [
+            "InternalName",
+            "node"
+          ],
+          [
+            "LegalCopyright",
+            "Copyright Node.js contributors. MIT license."
+          ],
+          [
+            "OriginalFilename",
+            "node.exe"
+          ],
+          [
+            "ProductName",
+            "GameSetup"
+          ],
+          [
+            "ProductVersion",
+            "2.5.0.0"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -885,7 +1947,20 @@
       },
       {
         "auto_collapse": false,
-        "body": "[[\"key\", \"VarFileInfo\"], [\"type\", 1], [\"translations\", \"78644233\"]]",
+        "body": [
+          [
+            "key",
+            "VarFileInfo"
+          ],
+          [
+            "type",
+            1
+          ],
+          [
+            "translations",
+            "78644233"
+          ]
+        ],
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
@@ -898,7 +1973,28 @@
       },
       {
         "auto_collapse": false,
-        "body": "[{\"SHA256\": \"48361ab81c8731d6b8aa924ec4f4b90b305df01664c1b0408687dd6fb84ba3a0\", \"Type\": \"ICON\", \"Entropy\": 3.638159912676701}, {\"SHA256\": \"a14e70ed824f3f17d3a51136aa08839954d6d3ccadaa067415c7bfc08e6636b0\", \"Type\": \"GROUP_ICON\", \"Entropy\": 1.7814963295286754}, {\"SHA256\": \"72b7c1bb9ceef17ff7165da96c0c97942bf180a941221dce0d920d18dcc48527\", \"Type\": \"VERSION\", \"Entropy\": 3.3387259516344057}, {\"SHA256\": \"3e9fb184c1a5da021cf6d4c78a440a2600aa656e27a99ee50aac85884fc862e9\", \"Type\": \"MANIFEST\", \"Entropy\": 5.329804710312299}]",
+        "body": [
+          {
+            "Entropy": 3.638159912676701,
+            "SHA256": "48361ab81c8731d6b8aa924ec4f4b90b305df01664c1b0408687dd6fb84ba3a0",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 1.7814963295286754,
+            "SHA256": "a14e70ed824f3f17d3a51136aa08839954d6d3ccadaa067415c7bfc08e6636b0",
+            "Type": "GROUP_ICON"
+          },
+          {
+            "Entropy": 3.3387259516344057,
+            "SHA256": "72b7c1bb9ceef17ff7165da96c0c97942bf180a941221dce0d920d18dcc48527",
+            "Type": "VERSION"
+          },
+          {
+            "Entropy": 5.329804710312299,
+            "SHA256": "3e9fb184c1a5da021cf6d4c78a440a2600aa656e27a99ee50aac85884fc862e9",
+            "Type": "MANIFEST"
+          }
+        ],
         "body_config": {
           "column_order": [
             "SHA256",
