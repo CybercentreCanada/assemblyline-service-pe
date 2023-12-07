@@ -416,26 +416,26 @@ class PE(ServiceBase):
 
             # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L760
             if len(self.binary.exported_functions) == 0:
-                heur = Heuristic(42)
+                heur = Heuristic(38)
                 ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
             # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L798
             if len(self.binary.imported_functions) == 0:
-                heur = Heuristic(43)
+                heur = Heuristic(39)
                 ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
     # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L945
     def check_data_directories(self):
         # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L963
         if not self.binary.data_directories:
-            heur = Heuristic(44)
+            heur = Heuristic(40)
             ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
     # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1075
     def check_relocations(self):
         # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1098
         if not self.binary.relocations:
-            heur = Heuristic(47)
+            heur = Heuristic(41)
             ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
     def add_headers(self):
@@ -1447,7 +1447,7 @@ class PE(ServiceBase):
 
         if self.binary.resources_manager.has_type:
             # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1229
-            heur = Heuristic(52)
+            heur = Heuristic(42)
             ResultSection(heur.name, heuristic=heur, parent=res)
 
         if self.binary.resources_manager.langs_available:

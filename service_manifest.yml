@@ -303,35 +303,35 @@ heuristics:
   # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L760
   - description: Lief could not find an exported function
     filetype: "executable/windows"
-    heur_id: 42
+    heur_id: 38
     name: No exported function found
     score: 0
 
   # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L798
   - description: Lief could not find an imported function
     filetype: "executable/windows"
-    heur_id: 43
+    heur_id: 39
     name: No imported function found
     score: 0
 
   # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L963
   - description: Lief could not find a data directory
     filetype: "executable/windows"
-    heur_id: 44
+    heur_id: 40
     name: No data directory found
     score: 0
 
   # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1098
   - description: Lief could not find relocations
     filetype: "executable/windows"
-    heur_id: 47
+    heur_id: 41
     name: No relocations found
     score: 0
 
   # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1229
   - description: Lief could not find resources type
     filetype: "executable/windows"
-    heur_id: 52
+    heur_id: 42
     name: No resources type found
     score: 0
 
