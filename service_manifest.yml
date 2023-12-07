@@ -300,130 +300,39 @@ heuristics:
     name: No file type found
     score: 0
 
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L334
-  - description: Lief could not determine the entrypoint
-    filetype: "executable/windows"
-    heur_id: 37
-    name: No entrypoint found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L351
-  - description: Lief could not determine the architecture
-    filetype: "executable/windows"
-    heur_id: 38
-    name: No architecture found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L401
-  - description: Lief could not find a dynamic library
-    filetype: "executable/windows"
-    heur_id: 39
-    name: No dynamic library found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L426
-  - description: Lief could not find a symbol
-    filetype: "executable/windows"
-    heur_id: 40
-    name: No symbol found
-    score: 0
-
   # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L760
   - description: Lief could not find an exported function
     filetype: "executable/windows"
-    heur_id: 41
+    heur_id: 38
     name: No exported function found
     score: 0
 
   # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L798
   - description: Lief could not find an imported function
     filetype: "executable/windows"
-    heur_id: 42
+    heur_id: 39
     name: No imported function found
     score: 0
 
   # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L963
   - description: Lief could not find a data directory
     filetype: "executable/windows"
-    heur_id: 43
+    heur_id: 40
     name: No data directory found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1012
-  - description: Lief could not find debug information
-    filetype: "executable/windows"
-    heur_id: 44
-    name: No debug information found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1041
-  - description: Lief could not find load configuration
-    filetype: "executable/windows"
-    heur_id: 45
-    name: No load configuration found
     score: 0
 
   # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1098
   - description: Lief could not find relocations
     filetype: "executable/windows"
-    heur_id: 45
+    heur_id: 41
     name: No relocations found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1150
-  - description: Lief could not find tls
-    filetype: "executable/windows"
-    heur_id: 46
-    name: No tls found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1170
-  - description: Lief could not find rich header
-    filetype: "executable/windows"
-    heur_id: 47
-    name: No rich header found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1206
-  - description: Lief could not find signature
-    filetype: "executable/windows"
-    heur_id: 48
-    name: No signature found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1217
-  - description: Lief could not find manifest
-    filetype: "executable/windows"
-    heur_id: 49
-    name: No manifest found
     score: 0
 
   # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1229
   - description: Lief could not find resources type
     filetype: "executable/windows"
-    heur_id: 50
+    heur_id: 42
     name: No resources type found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1243
-  - description: Lief could not find lang
-    filetype: "executable/windows"
-    heur_id: 51
-    name: No lang found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1263
-  - description: Lief could not find icon
-    filetype: "executable/windows"
-    heur_id: 52
-    name: No icon found
-    score: 0
-
-  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1343
-  - description: Lief could not find dialog
-    filetype: "executable/windows"
-    heur_id: 53
-    name: No dialog found
     score: 0
 
 docker_config:
