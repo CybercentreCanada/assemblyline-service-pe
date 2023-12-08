@@ -1112,6 +1112,11 @@ class PE(ServiceBase):
             res.add_tag("file.pe.resources.language", lang)
         res.add_item("Sublanguages", ", ".join(self.features["resources_manager"]["sublangs_available"]))
 
+        if not self.features["resources_manager"]["langs_available"]:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1243
+            heur = Heuristic(36)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
+
         if self.binary.resources_manager.has_accelerator:
             self.features["resources_manager"]["accelerators"] = []
             for accelerator in self.binary.resources_manager.accelerator:
@@ -1424,11 +1429,6 @@ class PE(ServiceBase):
             except ValueError:
                 sub_res.set_heuristic(13)
             res.add_subsection(sub_res)
-
-        if self.binary.resources_manager.langs_available:
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1243
-            heur = Heuristic(36)
-            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
         sub_res = ResultTableSection("Summary")
         current_resource_type = ""
