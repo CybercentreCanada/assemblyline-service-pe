@@ -404,11 +404,6 @@ class PE(ServiceBase):
             res.add_lines(dataless_resources)
             self.file_res.add_section(res)
 
-    def check_data_directories(self):
-        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L963
-        if not self.binary.data_directories:
-            ResultSection("No data directory found", parent=self.file_res)
-
     def add_headers(self):
         self.features["name"] = os.path.basename(self.binary.name)
         self.features["format"] = self.binary.format.name
@@ -528,6 +523,10 @@ class PE(ServiceBase):
             elif self.binary.tls.has_data_directory:
                 if self.binary.tls.directory.has_section:
                     self.features["tls"] = {"section": self.binary.tls.directory.section.name}
+
+        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L963
+        if not self.binary.data_directories:
+            ResultSection("No data directory found", parent=self.file_res)
 
         # print(self.binary.imagebase) # Doesn't work as documented?
         self.features["position_independent"] = self.binary.is_pie
@@ -1948,7 +1947,6 @@ class PE(ServiceBase):
         self.check_timestamps()
         self.check_exe_resources()
         self.check_dataless_resources()
-        self.check_data_directories()
 
         self.features = {}
         self.add_headers()
