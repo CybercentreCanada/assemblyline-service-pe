@@ -404,7 +404,6 @@ class PE(ServiceBase):
             res.add_lines(dataless_resources)
             self.file_res.add_section(res)
 
-    # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L945
     def check_data_directories(self):
         # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L963
         if not self.binary.data_directories:
