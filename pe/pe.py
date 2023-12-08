@@ -428,12 +428,6 @@ class PE(ServiceBase):
         if not self.binary.data_directories:
             ResultSection("No data directory found", parent=self.file_res)
 
-    # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1075
-    def check_relocations(self):
-        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1098
-        if not self.binary.relocations:
-            ResultSection("No relocations found", parent=self.file_res)
-
     def add_headers(self):
         self.features["name"] = os.path.basename(self.binary.name)
         self.features["format"] = self.binary.format.name
@@ -1885,7 +1879,10 @@ class PE(ServiceBase):
                         safelist_interface=self.api_interface,
                     )
 
-    def add_optional(self):
+    def add_relocations(self):
+        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1098
+        if not self.binary.has_relocations:
+            ResultSection("No relocations found", parent=self.file_res)
         if self.request.deep_scan and self.binary.has_relocations:
             self.features["relocations"] = [
                 {
@@ -1966,7 +1963,7 @@ class PE(ServiceBase):
         self.add_resources()
         self.add_signatures()
         self.add_overlay()
-        self.add_optional()
+        self.add_relocations()
 
         temp_path = os.path.join(self.working_directory, "features.json")
         with open(temp_path, "w") as f:
