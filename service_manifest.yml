@@ -286,10 +286,10 @@ heuristics:
     score: 100
 
   # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1243
-  - description: Lief could not find lang
+  - description: Lief could not find languages
     filetype: "executable/windows"
     heur_id: 36
-    name: No lang found
+    name: No languages found
     score: 100
 
 docker_config:
