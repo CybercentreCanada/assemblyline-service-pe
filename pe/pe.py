@@ -404,24 +404,6 @@ class PE(ServiceBase):
             res.add_lines(dataless_resources)
             self.file_res.add_section(res)
 
-    # Inspired by https://github.com/CYB3RMX/Qu1cksc0pe/blob/086db196d2de289f0784ae4d8ee03f34bf10354b/Modules/winAnalyzer.py#L446
-    def check_number_of_functions(self):
-        if len(self.binary.imported_functions) + len(self.binary.exported_functions) < 20:
-            res = ResultSection("PE file contains a suspiciously low number of functions")
-            res.add_line(
-                f"There are {len(self.binary.imported_functions)} import and "
-                f"{len(self.binary.exported_functions)} export functions."
-            )
-            self.file_res.add_section(res)
-
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L760
-            if len(self.binary.exported_functions) == 0:
-                ResultSection("No exported function found", parent=self.file_res)
-
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L798
-            if len(self.binary.imported_functions) == 0:
-                ResultSection("No imported function found", parent=self.file_res)
-
     # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L945
     def check_data_directories(self):
         # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L963
@@ -519,6 +501,23 @@ class PE(ServiceBase):
         # print(self.binary.functions)
         # print(self.binary.imported_functions)
         # print(self.binary.exported_functions)
+
+        # Inspired by https://github.com/CYB3RMX/Qu1cksc0pe/blob/086db196d2de289f0784ae4d8ee03f34bf10354b/Modules/winAnalyzer.py#L446
+        if len(self.binary.imported_functions) + len(self.binary.exported_functions) < 20:
+            res = ResultSection("PE file contains a suspiciously low number of functions")
+            res.add_line(
+                f"There are {len(self.binary.imported_functions)} import and "
+                f"{len(self.binary.exported_functions)} export functions."
+            )
+            self.file_res.add_section(res)
+
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L760
+            if len(self.binary.exported_functions) == 0:
+                ResultSection("No exported function found", parent=self.file_res)
+
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L798
+            if len(self.binary.imported_functions) == 0:
+                ResultSection("No imported function found", parent=self.file_res)
 
         self.features["nx"] = self.binary.has_nx
 
@@ -1950,7 +1949,6 @@ class PE(ServiceBase):
         self.check_timestamps()
         self.check_exe_resources()
         self.check_dataless_resources()
-        self.check_number_of_functions()
         self.check_data_directories()
 
         self.features = {}
