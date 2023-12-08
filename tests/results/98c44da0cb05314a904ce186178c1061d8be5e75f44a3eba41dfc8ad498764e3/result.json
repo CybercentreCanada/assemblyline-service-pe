@@ -1,8 +1,34 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 200,
+    "score": 300,
     "sections": [
+      {
+        "auto_collapse": false,
+        "body": "There are 9 import and 0 export functions.",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "PE file contains a suspiciously low number of functions",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No exported function found",
+        "zeroize_on_tag_safe": false
+      },
       {
         "auto_collapse": false,
         "body": [
@@ -1011,6 +1037,26 @@
       },
       {
         "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 35,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "PE file does not contain any resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
         "body": [
           [
             "ORDERED_KEY_VALUE",
@@ -1081,6 +1127,11 @@
       {
         "attack_ids": [],
         "heur_id": 24,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 35,
         "signatures": []
       }
     ],

@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 500,
+    "score": 600,
     "sections": [
       {
         "auto_collapse": false,
@@ -21,6 +21,45 @@
         "promote_to": null,
         "tags": {},
         "title_text": "Resource directories that does not contain a leaf data node",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "There are 0 import and 0 export functions.",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "PE file contains a suspiciously low number of functions",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No exported function found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No imported function found",
         "zeroize_on_tag_safe": false
       },
       {
@@ -771,6 +810,26 @@
       },
       {
         "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 36,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No languages found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
         "body": [
           [
             "Languages",
@@ -912,6 +971,19 @@
         "tags": {},
         "title_text": "Big overlay with very low entropy",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No relocations found",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -958,6 +1030,11 @@
       {
         "attack_ids": [],
         "heur_id": 33,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 36,
         "signatures": []
       }
     ],
