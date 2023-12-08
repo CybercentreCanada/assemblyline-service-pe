@@ -496,6 +496,23 @@ class PE(ServiceBase):
         # print(self.binary.imported_functions)
         # print(self.binary.exported_functions)
 
+        # Inspired by https://github.com/CYB3RMX/Qu1cksc0pe/blob/086db196d2de289f0784ae4d8ee03f34bf10354b/Modules/winAnalyzer.py#L446
+        if len(self.binary.imported_functions) + len(self.binary.exported_functions) < 20:
+            res = ResultSection("PE file contains a suspiciously low number of functions")
+            res.add_line(
+                f"There are {len(self.binary.imported_functions)} import and "
+                f"{len(self.binary.exported_functions)} export functions."
+            )
+            self.file_res.add_section(res)
+
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L760
+            if len(self.binary.exported_functions) == 0:
+                ResultSection("No exported function found", parent=self.file_res)
+
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L798
+            if len(self.binary.imported_functions) == 0:
+                ResultSection("No imported function found", parent=self.file_res)
+
         self.features["nx"] = self.binary.has_nx
 
         self.features["authentihash"] = {}
@@ -506,6 +523,10 @@ class PE(ServiceBase):
             elif self.binary.tls.has_data_directory:
                 if self.binary.tls.directory.has_section:
                     self.features["tls"] = {"section": self.binary.tls.directory.section.name}
+
+        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L963
+        if not self.binary.data_directories:
+            ResultSection("No data directory found", parent=self.file_res)
 
         # print(self.binary.imagebase) # Doesn't work as documented?
         self.features["position_independent"] = self.binary.is_pie
@@ -650,6 +671,11 @@ class PE(ServiceBase):
                 )
                 res.add_subsection(heur_section)
 
+        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L314
+        binary_type = lief.PE.get_type(self.request.file_path)
+        if not binary_type:
+            ResultSection("No file type found", parent=res)
+
         self.file_res.add_section(res)
 
     def add_sections(self):
@@ -714,6 +740,8 @@ class PE(ServiceBase):
             section_text_section.add_item("Entropy", entropy_data[0])
             section_graph_section = GraphSectionBody()
             section_graph_section.set_colormap(cmap_min=0, cmap_max=8, values=[round(x, 5) for x in entropy_data[1]])
+            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L1097
+            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L363
             if entropy_data[0] > self.config.get("heur4_max_section_entropy", 7.5):
                 heur = Heuristic(4)
                 heur_section = ResultMultiSection(heur.name, heuristic=heur)
@@ -906,6 +934,7 @@ class PE(ServiceBase):
 
     def add_imports(self):
         if not self.binary.has_imports:
+            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L454
             no_imports_heur = Heuristic(32)
             _ = ResultSection(no_imports_heur.name, heuristic=no_imports_heur, parent=self.file_res)
             return
@@ -1065,6 +1094,10 @@ class PE(ServiceBase):
 
     def add_resources(self):
         if not self.binary.has_resources:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L690
+            # and https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1120
+            heur = Heuristic(35)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
             return
 
         self.features["resources_manager"] = {
@@ -1076,6 +1109,11 @@ class PE(ServiceBase):
         for lang in self.features["resources_manager"]["langs_available"]:
             res.add_tag("file.pe.resources.language", lang)
         res.add_item("Sublanguages", ", ".join(self.features["resources_manager"]["sublangs_available"]))
+
+        if not self.features["resources_manager"]["langs_available"]:
+            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1243
+            heur = Heuristic(36)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
         if self.binary.resources_manager.has_accelerator:
             self.features["resources_manager"]["accelerators"] = []
@@ -1234,8 +1272,10 @@ class PE(ServiceBase):
                     except (OSError, ValueError):
                         unshowable_icons.append(f"icon_{idx}.ico")
                         self.request.add_supplementary(
-                            temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file",
-                            parent_relation=PARENT_RELATION.EXTRACTED
+                            temp_path,
+                            f"icon_{idx}.ico",
+                            f"Icon {idx} extracted from the PE file",
+                            parent_relation=PARENT_RELATION.EXTRACTED,
                         )
                     except Image.DecompressionBombError:
                         heur = Heuristic(28)
@@ -1245,8 +1285,10 @@ class PE(ServiceBase):
 
                         unshowable_icons.append(f"icon_{idx}.ico")
                         self.request.add_supplementary(
-                            temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file",
-                            parent_relation=PARENT_RELATION.EXTRACTED
+                            temp_path,
+                            f"icon_{idx}.ico",
+                            f"Icon {idx} extracted from the PE file",
+                            parent_relation=PARENT_RELATION.EXTRACTED,
                         )
 
                 self.features["resources_manager"]["icons"] = icons
@@ -1622,8 +1664,10 @@ class PE(ServiceBase):
                 with open(temp_path, "wb") as myfile:
                     myfile.write(raw_cert)
                 self.request.add_supplementary(
-                    temp_path, file_name, f"{file_name} extracted from binary's resources",
-                    parent_relation=PARENT_RELATION.EXTRACTED
+                    temp_path,
+                    file_name,
+                    f"{file_name} extracted from binary's resources",
+                    parent_relation=PARENT_RELATION.EXTRACTED,
                 )
                 sub_sub_res.add_item("SHA1", hashlib.sha1(raw_cert).hexdigest())
                 sub_sub_res.add_item("SHA256", hashlib.sha256(raw_cert).hexdigest())
@@ -1676,6 +1720,7 @@ class PE(ServiceBase):
                 heur_section.add_section_part(heur_kv_body)
                 sub_res.add_subsection(heur_section)
 
+            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L898
             if len(signature.certificates) < 2:
                 heur = Heuristic(8)
                 heur_section = ResultSection(heur.name, heuristic=heur)
@@ -1831,7 +1876,10 @@ class PE(ServiceBase):
                         safelist_interface=self.api_interface,
                     )
 
-    def add_optional(self):
+    def add_relocations(self):
+        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1098
+        if not self.binary.has_relocations:
+            ResultSection("No relocations found", parent=self.file_res)
         if self.request.deep_scan and self.binary.has_relocations:
             self.features["relocations"] = [
                 {
@@ -1910,7 +1958,7 @@ class PE(ServiceBase):
         self.add_resources()
         self.add_signatures()
         self.add_overlay()
-        self.add_optional()
+        self.add_relocations()
 
         temp_path = os.path.join(self.working_directory, "features.json")
         with open(temp_path, "w") as f:

@@ -54,6 +54,8 @@ heuristics:
     name: Same issuer for all certificates
     score: 500
 
+  # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L1097
+  # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L363
   - description: >-
       This PE contains at least one section with high entropy, which
       may indicate packed or encrypted code.
@@ -84,6 +86,7 @@ heuristics:
     name: Invalid PE look-alike
     score: 100
 
+  # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L898
   - description: This file has less than two certificate. This is probably an error...
     filetype: "executable/windows"
     heur_id: 8
@@ -252,6 +255,7 @@ heuristics:
     name: NodeJS compiled executable
     score: 0
 
+  # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L454
   - description: >-
       No import functions for PE file found
     filetype: "executable/windows"
@@ -272,6 +276,21 @@ heuristics:
     heur_id: 34
     name: PE file contains sections with non-standard names
     score: 0
+
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L690
+  # and https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1120
+  - description: No resources found.
+    filetype: "executable/windows"
+    heur_id: 35
+    name: PE file does not contain any resources
+    score: 100
+
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1243
+  - description: Lief could not find languages
+    filetype: "executable/windows"
+    heur_id: 36
+    name: No languages found
+    score: 100
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
