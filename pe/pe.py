@@ -496,23 +496,6 @@ class PE(ServiceBase):
         # print(self.binary.imported_functions)
         # print(self.binary.exported_functions)
 
-        # Inspired by https://github.com/CYB3RMX/Qu1cksc0pe/blob/086db196d2de289f0784ae4d8ee03f34bf10354b/Modules/winAnalyzer.py#L446
-        if len(self.binary.imported_functions) + len(self.binary.exported_functions) < 20:
-            res = ResultSection("PE file contains a suspiciously low number of functions")
-            res.add_line(
-                f"There are {len(self.binary.imported_functions)} import and "
-                f"{len(self.binary.exported_functions)} export functions."
-            )
-            self.file_res.add_section(res)
-
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L760
-            if len(self.binary.exported_functions) == 0:
-                ResultSection("No exported function found", parent=self.file_res)
-
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L798
-            if len(self.binary.imported_functions) == 0:
-                ResultSection("No imported function found", parent=self.file_res)
-
         self.features["nx"] = self.binary.has_nx
 
         self.features["authentihash"] = {}
@@ -523,10 +506,6 @@ class PE(ServiceBase):
             elif self.binary.tls.has_data_directory:
                 if self.binary.tls.directory.has_section:
                     self.features["tls"] = {"section": self.binary.tls.directory.section.name}
-
-        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L963
-        if not self.binary.data_directories:
-            ResultSection("No data directory found", parent=self.file_res)
 
         # print(self.binary.imagebase) # Doesn't work as documented?
         self.features["position_independent"] = self.binary.is_pie
@@ -670,11 +649,6 @@ class PE(ServiceBase):
                     "Computed checksum", f"{self.features['optional_header']['computed_checksum']:#0{10}x}"
                 )
                 res.add_subsection(heur_section)
-
-        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L314
-        binary_type = lief.PE.get_type(self.request.file_path)
-        if not binary_type:
-            ResultSection("No file type found", parent=res)
 
         self.file_res.add_section(res)
 
