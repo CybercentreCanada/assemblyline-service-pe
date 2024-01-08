@@ -1068,8 +1068,6 @@ class PE(ServiceBase):
 
     def add_resources(self):
         if not self.binary.has_resources:
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L690
-            # and https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1120
             heur = Heuristic(35)
             ResultSection(heur.name, heuristic=heur, parent=self.file_res)
             return
@@ -1085,7 +1083,6 @@ class PE(ServiceBase):
         res.add_item("Sublanguages", ", ".join(self.features["resources_manager"]["sublangs_available"]))
 
         if not self.features["resources_manager"]["langs_available"]:
-            # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1243
             heur = Heuristic(36)
             ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
@@ -1851,7 +1848,6 @@ class PE(ServiceBase):
                     )
 
     def add_relocations(self):
-        # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1098
         if not self.binary.has_relocations:
             heur = Heuristic(37)
             ResultSection(heur.name, heur.description, heuristic=heur, parent=self.file_res)
