@@ -1853,7 +1853,8 @@ class PE(ServiceBase):
     def add_relocations(self):
         # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1098
         if not self.binary.has_relocations:
-            ResultSection("No relocations found", parent=self.file_res)
+            heur = Heuristic(37)
+            ResultSection(heur.name, heur.description, heuristic=heur, parent=self.file_res)
         if self.request.deep_scan and self.binary.has_relocations:
             self.features["relocations"] = [
                 {

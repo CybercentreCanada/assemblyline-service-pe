@@ -292,6 +292,13 @@ heuristics:
     name: No languages found
     score: 100
 
+  # Inspired by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L1098
+  - description: Lief could not find relocations
+    filetype: "executable/windows"
+    heur_id: 37
+    name: No relocations found
+    score: 50
+
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG
   cpu_cores: 1
