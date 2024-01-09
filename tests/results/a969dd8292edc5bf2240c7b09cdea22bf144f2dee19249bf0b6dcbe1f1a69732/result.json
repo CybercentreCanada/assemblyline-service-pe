@@ -1,34 +1,8 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 500,
+    "score": 550,
     "sections": [
-      {
-        "auto_collapse": false,
-        "body": "There are 13 import and 0 export functions.",
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": null,
-        "promote_to": null,
-        "tags": {},
-        "title_text": "PE file contains a suspiciously low number of functions",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": null,
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No exported function found",
-        "zeroize_on_tag_safe": false
-      },
       {
         "auto_collapse": false,
         "body": [
@@ -1856,12 +1830,19 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": "Lief could not find relocations",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 37,
+          "score": 50,
+          "score_map": {},
+          "signatures": {}
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "No relocations found",
@@ -1975,6 +1956,11 @@
       {
         "attack_ids": [],
         "heur_id": 20,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 37,
         "signatures": []
       }
     ],

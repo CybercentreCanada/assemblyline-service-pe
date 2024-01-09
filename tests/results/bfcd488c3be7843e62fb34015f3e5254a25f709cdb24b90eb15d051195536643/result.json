@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 100,
+    "score": 150,
     "sections": [
       {
         "auto_collapse": false,
@@ -1228,12 +1228,19 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": "Lief could not find relocations",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 37,
+          "score": 50,
+          "score_map": {},
+          "signatures": {}
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "No relocations found",
@@ -1275,6 +1282,11 @@
       {
         "attack_ids": [],
         "heur_id": 36,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 37,
         "signatures": []
       }
     ],
