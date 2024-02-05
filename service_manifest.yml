@@ -263,11 +263,10 @@ heuristics:
     name: PE file does not import any functions
     score: 0
 
-  - description: >-
-      PE file has an executable .text section and no other executable section
+  - description: PE file has non-.text section that is executable
     filetype: "executable/windows"
     heur_id: 33
-    name: PE file only has executable .text section
+    name: PE file has non-.text section that is executable
     score: 0
 
   - description: >-
