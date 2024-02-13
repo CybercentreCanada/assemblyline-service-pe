@@ -1,18 +1,18 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 400,
+    "score": 200,
     "sections": [
       {
         "auto_collapse": false,
         "body": [
           [
             "Timestamp",
-            "0 (1970-01-01 00:00:00 +00:00 (UTC))"
+            "1664740082 (2022-10-02 19:48:02 +00:00 (UTC))"
           ],
           [
             "Entrypoint",
-            "0x646a0"
+            "0x276d27"
           ],
           [
             "Machine",
@@ -24,23 +24,23 @@
           ],
           [
             "Image version",
-            "1.0"
+            "10.0"
           ],
           [
             "Linker version",
-            "3.0"
+            "14.29"
           ],
           [
             "Operating System version",
-            "6.1"
+            "10.0"
           ],
           [
             "Subsystem version",
-            "6.1"
+            "10.0"
           ],
           [
             "Subsystem",
-            "WINDOWS_GUI"
+            "NATIVE"
           ],
           [
             "NX",
@@ -52,7 +52,7 @@
           ],
           [
             "Checksum",
-            "0x00000000"
+            "0x0029abb7"
           ]
         ],
         "body_config": {},
@@ -66,8 +66,8 @@
             "pe": {
               "linker": {
                 "timestamp": [
-                  0,
-                  "1970-01-01 00:00:00 +00:00 (UTC)"
+                  1664740082,
+                  "2022-10-02 19:48:02 +00:00 (UTC)"
                 ]
               }
             }
@@ -80,24 +80,53 @@
         "auto_collapse": false,
         "body": [
           [
+            "File Size",
+            2726960
+          ],
+          [
+            "Virtual Size",
+            4128768
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 24,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Mismatch file size",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
             "sha512",
-            "81ee8c9a06f484107c442aae11aa5db3d391008056cb760ca3bb50868f96ae7b918fbacdf3ccef2df1826e1dac7eafc5502749f542f73f79c3e294481570fb14"
+            "1beff05d5e6a8ef8bfb77fb9ed81f76ce7a5fa9e339c6f94823988083a187a812e29af60504cbbf7415d2ea80495210c7e02a846452a16a7ac718c9c231040f5"
           ],
           [
             "sha384",
-            "42bb84378df5d9ee73b2d584b5bc4824d66b8541054e73533d5b803f6f641d05522edd505dd11bc463bd7608f22fc5b7"
+            "3f18eac3659e70174d9cc6f6ac14a0c06e05ce5beb65c7fc9ef62da3cb9d202f337da1e2f8f74f7a0beeea1385ecc880"
           ],
           [
             "sha256",
-            "dbcfa85e6f6acb3580a04357108995754429d64070e5b72e8fc220431a643ba4"
+            "675329ef7a63a7c58d3daa6cb5c6e299143decec7a149c36a6bfe204bbf0407e"
           ],
           [
             "sha1",
-            "a899945d7abeb924ee510ce5a867ee4fc65185dc"
+            "46a9d9e9904ba5f4c011ad69d0795969c721c662"
           ],
           [
             "md5",
-            "16db090049d419cc79279afc78a45ba5"
+            "b663d79a688800d84065ccc2809874b7"
           ]
         ],
         "body_config": {},
@@ -131,31 +160,31 @@
             [
               [
                 "Entropy",
-                6.171746648679192
+                0
               ],
               [
                 "Entropy without padding",
-                6.17183357561405
+                0.0
               ],
               [
                 "Offset",
-                1536
+                0
               ],
               [
                 "Size",
-                2066432
+                0
               ],
               [
                 "Virtual Size",
-                2066376
+                9838
               ],
               [
                 "Characteristics",
-                "CNT_CODE, MEM_EXECUTE, MEM_READ"
+                "CNT_CODE, MEM_NOT_PAGED, MEM_EXECUTE, MEM_READ"
               ],
               [
                 "MD5",
-                "c08106bcbaafd29a40ad4b3e96a5627a"
+                "d41d8cd98f00b204e9800998ecf8427e"
               ]
             ],
             {}
@@ -169,56 +198,7 @@
                   8
                 ],
                 "values": [
-                  6.08777,
-                  6.2395,
-                  6.17697,
-                  6.15786,
-                  6.03272,
-                  6.11473,
-                  6.10815,
-                  6.07326,
-                  6.03606,
-                  5.89478,
-                  6.03804,
-                  6.30826,
-                  6.05392,
-                  6.02766,
-                  5.9971,
-                  6.04814,
-                  6.12148,
-                  6.02925,
-                  6.16357,
-                  6.18996,
-                  6.06135,
-                  5.69345,
-                  5.85866,
-                  5.68357,
-                  6.17747,
-                  6.01246,
-                  5.9899,
-                  6.47559,
-                  6.52358,
-                  6.58749,
-                  6.10547,
-                  5.90665,
-                  6.12259,
-                  5.8142,
-                  6.05453,
-                  5.89782,
-                  5.78828,
-                  6.01313,
-                  6.0425,
-                  6.01696,
-                  6.07631,
-                  6.05829,
-                  6.08239,
-                  5.98318,
-                  5.9852,
-                  5.93783,
-                  5.90439,
-                  5.89899,
-                  5.92657,
-                  5.91511
+                  0
                 ]
               },
               "type": "colormap"
@@ -237,7 +217,7 @@
             "pe": {
               "sections": {
                 "hash": [
-                  "c08106bcbaafd29a40ad4b3e96a5627a"
+                  "d41d8cd98f00b204e9800998ecf8427e"
                 ],
                 "name": [
                   ".text"
@@ -257,31 +237,31 @@
             [
               [
                 "Entropy",
-                5.208799971138144
+                0
               ],
               [
                 "Entropy without padding",
-                5.209523216916722
+                0.0
               ],
               [
                 "Offset",
-                2067968
+                0
               ],
               [
                 "Size",
-                2008064
+                0
               ],
               [
                 "Virtual Size",
-                2007680
+                1676
               ],
               [
                 "Characteristics",
-                "CNT_INITIALIZED_DATA, MEM_READ"
+                "CNT_INITIALIZED_DATA, MEM_NOT_PAGED, MEM_READ"
               ],
               [
                 "MD5",
-                "beeb3d314c52f6b238ed0414983da573"
+                "d41d8cd98f00b204e9800998ecf8427e"
               ]
             ],
             {}
@@ -295,56 +275,7 @@
                   8
                 ],
                 "values": [
-                  5.43049,
-                  5.04321,
-                  2.78578,
-                  3.38738,
-                  3.46298,
-                  3.17846,
-                  3.16513,
-                  3.36616,
-                  3.67206,
-                  5.38399,
-                  4.84152,
-                  6.29338,
-                  3.51954,
-                  3.40503,
-                  3.45931,
-                  3.55859,
-                  3.56706,
-                  3.44315,
-                  3.20199,
-                  3.00042,
-                  5.29456,
-                  4.94903,
-                  5.09042,
-                  4.90334,
-                  5.67367,
-                  5.92803,
-                  5.85108,
-                  5.92467,
-                  5.33154,
-                  6.02594,
-                  5.78291,
-                  5.60011,
-                  5.63382,
-                  5.92823,
-                  5.94737,
-                  6.04446,
-                  6.03656,
-                  6.02224,
-                  3.43021,
-                  3.25034,
-                  3.17687,
-                  3.37183,
-                  3.22073,
-                  3.40456,
-                  3.30323,
-                  3.37945,
-                  3.36399,
-                  3.53686,
-                  3.56544,
-                  3.43506
+                  0
                 ]
               },
               "type": "colormap"
@@ -363,7 +294,7 @@
             "pe": {
               "sections": {
                 "hash": [
-                  "beeb3d314c52f6b238ed0414983da573"
+                  "d41d8cd98f00b204e9800998ecf8427e"
                 ],
                 "name": [
                   ".rdata"
@@ -383,31 +314,31 @@
             [
               [
                 "Entropy",
-                6.302761121525251
+                0
               ],
               [
                 "Entropy without padding",
-                6.30276112152525
+                0.0
               ],
               [
                 "Offset",
-                4076032
+                0
               ],
               [
                 "Size",
-                328192
+                0
               ],
               [
                 "Virtual Size",
-                718752
+                120
               ],
               [
                 "Characteristics",
-                "CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+                "CNT_INITIALIZED_DATA, MEM_NOT_PAGED, MEM_READ, MEM_WRITE"
               ],
               [
                 "MD5",
-                "972579fbc5433531a72824f2f41e9a20"
+                "d41d8cd98f00b204e9800998ecf8427e"
               ]
             ],
             {}
@@ -421,56 +352,7 @@
                   8
                 ],
                 "values": [
-                  3.62592,
-                  2.86031,
-                  2.7549,
-                  4.01594,
-                  5.95171,
-                  4.91152,
-                  6.17811,
-                  5.42156,
-                  7.03813,
-                  7.52657,
-                  4.13406,
-                  4.66951,
-                  4.58945,
-                  4.50858,
-                  4.33614,
-                  7.45156,
-                  5.53259,
-                  4.34342,
-                  5.25869,
-                  7.74653,
-                  7.44065,
-                  6.5866,
-                  5.03402,
-                  1.71823,
-                  2.0874,
-                  3.83105,
-                  6.22504,
-                  6.62648,
-                  6.16955,
-                  5.79665,
-                  7.58865,
-                  7.97218,
-                  7.97325,
-                  7.96857,
-                  7.97334,
-                  7.96827,
-                  7.9731,
-                  7.97336,
-                  7.97013,
-                  7.97054,
-                  7.97088,
-                  7.9707,
-                  7.97606,
-                  7.44328,
-                  1.89336,
-                  1.11383,
-                  1.14605,
-                  1.74589,
-                  2.18528,
-                  0.42751
+                  0
                 ]
               },
               "type": "colormap"
@@ -489,7 +371,7 @@
             "pe": {
               "sections": {
                 "hash": [
-                  "972579fbc5433531a72824f2f41e9a20"
+                  "d41d8cd98f00b204e9800998ecf8427e"
                 ],
                 "name": [
                   ".data"
@@ -509,31 +391,31 @@
             [
               [
                 "Entropy",
-                3.569913682555425
+                0
               ],
               [
                 "Entropy without padding",
-                4.305439331096066
+                0.0
               ],
               [
                 "Offset",
-                4404224
+                0
               ],
               [
                 "Size",
-                1536
+                0
               ],
               [
                 "Virtual Size",
-                1164
+                396
               ],
               [
                 "Characteristics",
-                "CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+                "CNT_INITIALIZED_DATA, MEM_NOT_PAGED, MEM_READ"
               ],
               [
                 "MD5",
-                "d5ce09736386aba25dc4e15466abe8b6"
+                "d41d8cd98f00b204e9800998ecf8427e"
               ]
             ],
             {}
@@ -547,11 +429,240 @@
                   8
                 ],
                 "values": [
-                  4.21695,
-                  4.32823,
-                  4.37572,
-                  3.32991,
-                  1.30677,
+                  0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "d41d8cd98f00b204e9800998ecf8427e"
+                ],
+                "name": [
+                  ".pdata"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .pdata",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                0
+              ],
+              [
+                "Entropy without padding",
+                0.0
+              ],
+              [
+                "Offset",
+                0
+              ],
+              [
+                "Size",
+                0
+              ],
+              [
+                "Virtual Size",
+                1360
+              ],
+              [
+                "Characteristics",
+                "CNT_CODE, MEM_EXECUTE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "d41d8cd98f00b204e9800998ecf8427e"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "d41d8cd98f00b204e9800998ecf8427e"
+                ],
+                "name": [
+                  "INIT"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - INIT",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                0
+              ],
+              [
+                "Entropy without padding",
+                0.0
+              ],
+              [
+                "Offset",
+                0
+              ],
+              [
+                "Size",
+                0
+              ],
+              [
+                "Virtual Size",
+                1368794
+              ],
+              [
+                "Characteristics",
+                "CNT_CODE, MEM_EXECUTE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "d41d8cd98f00b204e9800998ecf8427e"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "d41d8cd98f00b204e9800998ecf8427e"
+                ],
+                "name": [
+                  ".\"!b"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .\"!b",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                0.5439053804451319
+              ],
+              [
+                "Entropy without padding",
+                0.814419001546262
+              ],
+              [
+                "Offset",
+                1024
+              ],
+              [
+                "Size",
+                1024
+              ],
+              [
+                "Virtual Size",
+                640
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "96c4e135ccb6e027d8c7e578cabc0761"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  1.54724,
+                  0.0,
+                  0.22091,
                   0.0
                 ]
               },
@@ -571,16 +682,16 @@
             "pe": {
               "sections": {
                 "hash": [
-                  "d5ce09736386aba25dc4e15466abe8b6"
+                  "96c4e135ccb6e027d8c7e578cabc0761"
                 ],
                 "name": [
-                  ".idata"
+                  ".t{f"
                 ]
               }
             }
           }
         },
-        "title_text": "Section - .idata",
+        "title_text": "Section - .t{f",
         "zeroize_on_tag_safe": false
       },
       {
@@ -591,31 +702,31 @@
             [
               [
                 "Entropy",
-                5.458372430828139
+                7.704075028625471
               ],
               [
                 "Entropy without padding",
-                5.460617508202926
+                7.704385920634162
               ],
               [
                 "Offset",
-                4405760
+                2048
               ],
               [
                 "Size",
-                84480
+                2714112
               ],
               [
                 "Virtual Size",
-                84094
+                2713792
               ],
               [
                 "Characteristics",
-                "CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ"
+                "CNT_CODE, MEM_NOT_PAGED, CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ"
               ],
               [
                 "MD5",
-                "6be6e24d172cfcc193f5e83f1245a056"
+                "8aef3d21a506cd3499bc216d904c3438"
               ]
             ],
             {}
@@ -629,56 +740,56 @@
                   8
                 ],
                 "values": [
-                  5.05098,
-                  5.15031,
-                  5.31881,
-                  5.38079,
-                  5.19246,
-                  5.288,
-                  5.36897,
-                  5.36588,
-                  5.38816,
-                  5.35303,
-                  5.42685,
-                  5.4109,
-                  5.36364,
-                  5.40976,
-                  5.43816,
-                  5.3576,
-                  5.35203,
-                  5.40934,
-                  5.30315,
-                  5.11145,
-                  4.96424,
-                  4.96412,
-                  4.96155,
-                  4.96378,
-                  5.40341,
-                  5.44048,
-                  5.43307,
-                  5.42615,
-                  5.44411,
-                  5.44922,
-                  5.42656,
-                  5.44142,
-                  5.44875,
-                  5.44214,
-                  5.43524,
-                  5.45955,
-                  5.44957,
-                  5.44832,
-                  5.45328,
-                  5.44509,
-                  5.42603,
-                  5.45373,
-                  5.45126,
-                  5.43671,
-                  5.43009,
-                  5.43303,
-                  5.46042,
-                  5.43525,
-                  5.17525,
-                  4.76328
+                  7.98755,
+                  7.99683,
+                  7.99646,
+                  7.99667,
+                  7.99679,
+                  7.99707,
+                  7.99669,
+                  7.99691,
+                  7.99631,
+                  7.99668,
+                  7.99696,
+                  7.9965,
+                  7.99667,
+                  7.99619,
+                  7.99645,
+                  7.99672,
+                  7.99682,
+                  7.99684,
+                  7.98571,
+                  7.98419,
+                  7.97855,
+                  7.98727,
+                  7.96694,
+                  7.98776,
+                  7.98371,
+                  7.45513,
+                  6.89478,
+                  6.93252,
+                  6.88592,
+                  6.96873,
+                  7.00791,
+                  7.01176,
+                  6.97347,
+                  6.8543,
+                  7.08207,
+                  6.89267,
+                  6.99872,
+                  7.00756,
+                  7.01637,
+                  6.89356,
+                  6.96492,
+                  7.05219,
+                  7.00923,
+                  6.98219,
+                  6.8929,
+                  7.19203,
+                  6.9757,
+                  6.91728,
+                  6.97828,
+                  7.18565
                 ]
               },
               "type": "colormap"
@@ -697,7 +808,189 @@
             "pe": {
               "sections": {
                 "hash": [
-                  "6be6e24d172cfcc193f5e83f1245a056"
+                  "8aef3d21a506cd3499bc216d904c3438"
+                ],
+                "name": [
+                  ".Kl$"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .Kl$",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Section name",
+                ".Kl$"
+              ],
+              [
+                "Entropy:",
+                7.704075028625471
+              ],
+              [
+                "Entropy without padding",
+                7.704385920634162
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  7.98755,
+                  7.99683,
+                  7.99646,
+                  7.99667,
+                  7.99679,
+                  7.99707,
+                  7.99669,
+                  7.99691,
+                  7.99631,
+                  7.99668,
+                  7.99696,
+                  7.9965,
+                  7.99667,
+                  7.99619,
+                  7.99645,
+                  7.99672,
+                  7.99682,
+                  7.99684,
+                  7.98571,
+                  7.98419,
+                  7.97855,
+                  7.98727,
+                  7.96694,
+                  7.98776,
+                  7.98371,
+                  7.45513,
+                  6.89478,
+                  6.93252,
+                  6.88592,
+                  6.96873,
+                  7.00791,
+                  7.01176,
+                  6.97347,
+                  6.8543,
+                  7.08207,
+                  6.89267,
+                  6.99872,
+                  7.00756,
+                  7.01637,
+                  6.89356,
+                  6.96492,
+                  7.05219,
+                  7.00923,
+                  6.98219,
+                  6.8929,
+                  7.19203,
+                  6.9757,
+                  6.91728,
+                  6.97828,
+                  7.18565
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 4,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "High section entropy",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                1.7913703293571146
+              ],
+              [
+                "Entropy without padding",
+                3.785660179171178
+              ],
+              [
+                "Offset",
+                2716160
+              ],
+              [
+                "Size",
+                512
+              ],
+              [
+                "Virtual Size",
+                196
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "8d5ad5817155efb32589a70882af03c7"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  3.10651,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "8d5ad5817155efb32589a70882af03c7"
                 ],
                 "name": [
                   ".reloc"
@@ -711,80 +1004,22 @@
       },
       {
         "auto_collapse": false,
-        "body": [
-          [
-            "ORDERED_KEY_VALUE",
-            [
-              [
-                "Entropy",
-                0.020393135236084953
-              ],
-              [
-                "Entropy without padding",
-                0.8112781244591329
-              ],
-              [
-                "Offset",
-                4490240
-              ],
-              [
-                "Size",
-                512
-              ],
-              [
-                "Virtual Size",
-                4
-              ],
-              [
-                "Characteristics",
-                "MEM_DISCARDABLE, MEM_READ"
-              ],
-              [
-                "MD5",
-                "07b5472d347d42780469fb2654b7fc54"
-              ]
-            ],
-            {}
-          ],
-          [
-            "GRAPH_DATA",
-            {
-              "data": {
-                "domain": [
-                  0,
-                  8
-                ],
-                "values": [
-                  0.03687,
-                  0.0
-                ]
-              },
-              "type": "colormap"
-            },
-            {}
-          ]
-        ],
+        "body": null,
         "body_config": {},
-        "body_format": "MULTI",
+        "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
-        "heuristic": null,
-        "promote_to": null,
-        "tags": {
-          "file": {
-            "pe": {
-              "sections": {
-                "hash": [
-                  "07b5472d347d42780469fb2654b7fc54"
-                ],
-                "name": [
-                  ".symtab"
-                ]
-              }
-            }
-          }
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 33,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
         },
-        "title_text": "Section - .symtab",
+        "promote_to": null,
+        "tags": {},
+        "title_text": "PE file has non-.text section that is executable",
         "zeroize_on_tag_safe": false
       },
       {
@@ -801,19 +1036,16 @@
             "pe": {
               "imports": {
                 "fuzzy": [
-                  "24:UbVjhN5O+VuT2oLtXOr6kwmDruMztxdEr6tP:K5O+VAXOmGx0oP"
-                ],
-                "gimphash": [
-                  "50f5783c2188897815d9b34a77aa4df70ac96a71542ddc79b94fef8ce7ba2120"
+                  "12:QNyNRRmN3EpRmNBCF+NrG6QNUhNReCNEzNvNUDUNXNDeNjGvUEhR:wmi5BuqGULQ2ER1UD89msUEH"
                 ],
                 "imphash": [
-                  "c7269d59926fa4252270f407e4dab043"
+                  "ce10082e1aa4c1c2bd953b4a7208e56a"
                 ],
                 "sorted_fuzzy": [
-                  "24:nJ614douuMBRDNQkaVOLb3TydX8JOmQzbVjP:nJbunrpdX8JOm4"
+                  "12:E9UEhoNjIXNRRmNBCF+NrG6QNvNyNUDUNDeNXNReCNUhNEzN3EL:E9UEWk9iBuqG1mUD8m9Q2ULERy"
                 ],
                 "sorted_sha1": [
-                  "6d0481e38767cbe2767ab6c191cc5141992530e5"
+                  "9e606452e3c53d8f79be5fedc72334e34310c130"
                 ]
               }
             }
@@ -824,7 +1056,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "WriteFile, WriteConsoleW, WaitForMultipleObjects, WaitForSingleObject, VirtualQuery, VirtualFree, VirtualAlloc, SwitchToThread, SuspendThread, Sleep, SetWaitableTimer, SetUnhandledExceptionFilter, SetProcessPriorityBoost, SetEvent, SetErrorMode, SetConsoleCtrlHandler, ResumeThread, PostQueuedCompletionStatus, LoadLibraryA, LoadLibraryW, SetThreadContext, GetThreadContext, GetSystemInfo, GetSystemDirectoryA, GetStdHandle, GetQueuedCompletionStatusEx, GetProcessAffinityMask, GetProcAddress, GetEnvironmentStringsW, GetConsoleMode, FreeEnvironmentStringsW, ExitProcess, DuplicateHandle, CreateWaitableTimerExW, CreateThread, CreateIoCompletionPort, CreateFileA, CreateEventA, CloseHandle, AddVectoredExceptionHandler",
+        "body": "KeInitializeEvent, ExAllocatePool, NtQuerySystemInformation, ExFreePoolWithTag, IoAllocateMdl, MmProbeAndLockPages, MmMapLockedPagesSpecifyCache, MmUnlockPages, IoFreeMdl, KeQueryActiveProcessors, KeSetSystemAffinityThread, KeRevertToUserAffinityThread, DbgPrint",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -832,7 +1064,20 @@
         "heuristic": null,
         "promote_to": null,
         "tags": {},
-        "title_text": "kernel32.dll",
+        "title_text": "ntoskrnl.exe",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "HalReturnToFirmware, KeQueryPerformanceCounter",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "HAL.dll",
         "zeroize_on_tag_safe": false
       },
       {
@@ -870,6 +1115,26 @@
       },
       {
         "auto_collapse": false,
+        "body": "OK found while verifying signature : OK",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 2,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Signed EXE",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
         "body": [
           [
             "Version",
@@ -885,7 +1150,7 @@
           ],
           [
             "Content Info Digest",
-            "37ea281d9c10933f24285c844adbc7d4a23ed1e935bf1cb4a657fe27bff7a813"
+            "675329ef7a63a7c58d3daa6cb5c6e299143decec7a149c36a6bfe204bbf0407e"
           ],
           [
             "Content Info Content Type",
@@ -915,7 +1180,7 @@
           ],
           [
             "Authenticated Attributes",
-            "CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST, GENERIC_TYPE, SPC_SP_OPUS_INFO"
+            "CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST, SPC_SP_OPUS_INFO"
           ],
           [
             "Unauthenticated Attributes",
@@ -937,7 +1202,7 @@
         "body": [
           [
             "Program Name",
-            "Microsoft Windows"
+            "Luck Bigger Technology Co., Ltd"
           ]
         ],
         "body_config": {},
@@ -952,7 +1217,7 @@
               "authenticode": {
                 "spc_sp_opus_info": {
                   "program_name": [
-                    "Microsoft Windows"
+                    "Luck Bigger Technology Co., Ltd"
                   ]
                 }
               }
@@ -971,23 +1236,23 @@
           ],
           [
             "Subject",
-            "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation"
+            "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Hardware Compatibility Publisher"
           ],
           [
             "Issuer",
-            "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010"
+            "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2014"
           ],
           [
             "Serial Number",
-            "33000003dffb6ae3f427ecb6a30000000003df"
+            "3300000057ee4d659a923e7c10000000000057"
           ],
           [
             "Valid From",
-            "2020-12-15T21:24:20"
+            "2022-06-07T18:08:06"
           ],
           [
             "Valid To",
-            "2021-12-02T21:24:20"
+            "2023-06-01T18:08:06"
           ]
         ],
         "body_config": {},
@@ -999,30 +1264,43 @@
         "tags": {
           "cert": {
             "issuer": [
-              "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010"
+              "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2014"
             ],
             "serial_no": [
-              "33000003dffb6ae3f427ecb6a30000000003df"
+              "3300000057ee4d659a923e7c10000000000057"
             ],
             "subject": [
-              "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation"
+              "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Hardware Compatibility Publisher"
             ],
             "thumbprint": [
-              "914a09c2e02c696af394048bcb8d95449bcd5b9e",
-              "4a838904e732a380e2856a9d6fee926e5c57eb59336292ac5d9e47c9b2c1ed13",
-              "4068b1b0494efa79f5a751dcca8111cd"
+              "451b7f8a4c0e669189e9382a09e423c2b875ad42",
+              "8598d7b29edf3311d0859221d303daccca6379973faf9a92d78672a38f9247d4",
+              "55bc5abe7911db5ac1f1122ffa840031"
             ],
             "valid": {
               "end": [
-                "2021-12-02T21:24:20"
+                "2023-06-01T18:08:06"
               ],
               "start": [
-                "2020-12-15T21:24:20"
+                "2022-06-07T18:08:06"
               ]
             }
           }
         },
         "title_text": "Signer Certificate",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Common subject for Windows Hardware Compatibility driver signing, may be used by Attestation Signed Malware.",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 4,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Signer Subject",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1034,35 +1312,35 @@
           ],
           [
             "Subject",
-            "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation"
+            "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Hardware Compatibility Publisher"
           ],
           [
             "Issuer",
-            "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010"
+            "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2014"
           ],
           [
             "SHA1",
-            "914a09c2e02c696af394048bcb8d95449bcd5b9e"
+            "451b7f8a4c0e669189e9382a09e423c2b875ad42"
           ],
           [
             "SHA256",
-            "4a838904e732a380e2856a9d6fee926e5c57eb59336292ac5d9e47c9b2c1ed13"
+            "8598d7b29edf3311d0859221d303daccca6379973faf9a92d78672a38f9247d4"
           ],
           [
             "MD5",
-            "4068b1b0494efa79f5a751dcca8111cd"
+            "55bc5abe7911db5ac1f1122ffa840031"
           ],
           [
             "Serial Number",
-            "33000003dffb6ae3f427ecb6a30000000003df"
+            "3300000057ee4d659a923e7c10000000000057"
           ],
           [
             "Valid From",
-            "2020-12-15T21:24:20"
+            "2022-06-07T18:08:06"
           ],
           [
             "Valid To",
-            "2021-12-02T21:24:20"
+            "2023-06-01T18:08:06"
           ]
         ],
         "body_config": {},
@@ -1084,7 +1362,7 @@
           ],
           [
             "Subject",
-            "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010"
+            "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2014"
           ],
           [
             "Issuer",
@@ -1092,27 +1370,27 @@
           ],
           [
             "SHA1",
-            "8bfe3107712b3c886b1c96aaec89984914dc9b6b"
+            "1906dcf62629b563252c826fdd874efceb6856c6"
           ],
           [
             "SHA256",
-            "9aad6c1a83a1b974ba574a995af35b8ca772da919270db1605a8b81e1bbc896f"
+            "a0f259a07039908eeb943e223fdf996e5e1e131d9aa6a602ff4672f7b9298aee"
           ],
           [
             "MD5",
-            "b7a7b4605e33389f48b33d17cae73006"
+            "dcfa56508dff120d936dd627f38ca2f9"
           ],
           [
             "Serial Number",
-            "610c524c000000000003"
+            "330000000d690d5d7893d076df00000000000d"
           ],
           [
             "Valid From",
-            "2010-07-06T20:40:17"
+            "2014-10-15T20:31:27"
           ],
           [
             "Valid To",
-            "2025-07-06T20:50:17"
+            "2029-10-15T20:41:27"
           ]
         ],
         "body_config": {},
@@ -1129,51 +1407,11 @@
         "auto_collapse": false,
         "body": [
           [
-            "TEXT",
-            "The signature does not match the authentihash data found for sha256",
-            {}
-          ],
-          [
-            "ORDERED_KEY_VALUE",
-            [
-              [
-                "Signature",
-                "37ea281d9c10933f24285c844adbc7d4a23ed1e935bf1cb4a657fe27bff7a813"
-              ],
-              [
-                "Authentihash data",
-                "dbcfa85e6f6acb3580a04357108995754429d64070e5b72e8fc220431a643ba4"
-              ]
-            ],
-            {}
-          ]
-        ],
-        "body_config": {},
-        "body_format": "MULTI",
-        "classification": "TLP:C",
-        "depth": 2,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 1,
-          "score": 300,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "Signature hash not found in authentihash data",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": [
-          [
             "ORDERED_KEY_VALUE",
             [
               [
                 "Size",
-                8656
+                10288
               ]
             ],
             {}
@@ -1187,40 +1425,47 @@
                   8
                 ],
                 "values": [
-                  5.79328,
-                  5.36857,
-                  7.27751,
-                  6.13795,
-                  6.52853,
-                  6.84164,
-                  5.33716,
-                  7.17748,
-                  6.18037,
-                  5.49312,
-                  7.15997,
-                  7.14107,
-                  5.94761,
-                  6.18993,
-                  7.09889,
-                  6.04166,
-                  5.86762,
-                  5.47559,
-                  7.11533,
-                  6.70639,
-                  6.6783,
-                  6.85412,
-                  5.60258,
-                  7.22207,
-                  6.05682,
-                  5.55852,
-                  7.20485,
-                  7.17989,
-                  5.8641,
-                  5.8501,
-                  6.50556,
-                  6.18773,
-                  6.43166,
-                  7.07642
+                  5.72564,
+                  5.29683,
+                  7.13027,
+                  6.4081,
+                  5.28478,
+                  7.01265,
+                  7.18434,
+                  6.16424,
+                  6.16276,
+                  7.10125,
+                  7.08376,
+                  6.09918,
+                  6.32718,
+                  7.11353,
+                  6.89395,
+                  5.97529,
+                  6.4718,
+                  6.39377,
+                  6.08218,
+                  5.74742,
+                  5.88547,
+                  7.14827,
+                  7.15743,
+                  5.88131,
+                  6.9502,
+                  7.22328,
+                  6.49403,
+                  5.96028,
+                  7.20093,
+                  7.05444,
+                  5.81023,
+                  6.01126,
+                  7.1641,
+                  7.13368,
+                  5.90199,
+                  5.69783,
+                  6.48369,
+                  6.07207,
+                  6.47509,
+                  7.16856,
+                  7.04112
                 ]
               },
               "type": "colormap"
@@ -1244,21 +1489,21 @@
     "extracted": [
       {
         "name": "overlay",
-        "sha256": "80fb951d64dba9994176b9cbd1d6179ffcb0023e27f16f1a8f858036fcbae34e"
+        "sha256": "693fa1c8e2e8c3d5b547605fad22ac33235ccf2d29f9764e74c4c4cfac88f616"
       }
     ],
     "supplementary": [
       {
-        "name": "certificate.1.1",
-        "sha256": "4a838904e732a380e2856a9d6fee926e5c57eb59336292ac5d9e47c9b2c1ed13"
+        "name": "features.json",
+        "sha256": "28e43543a4dee8fe1d331ac672579096aaa4801d936c602f54d10e9ec2016b6b"
       },
       {
-        "name": "features.json",
-        "sha256": "90c8a644557ca949e36af8098c7e9384b92b74f602c503b5c0a7aee1bc357a76"
+        "name": "certificate.1.1",
+        "sha256": "8598d7b29edf3311d0859221d303daccca6379973faf9a92d78672a38f9247d4"
       },
       {
         "name": "certificate.1.2",
-        "sha256": "9aad6c1a83a1b974ba574a995af35b8ca772da919270db1605a8b81e1bbc896f"
+        "sha256": "a0f259a07039908eeb943e223fdf996e5e1e131d9aa6a602ff4672f7b9298aee"
       }
     ]
   },
@@ -1266,7 +1511,22 @@
     "heuristics": [
       {
         "attack_ids": [],
-        "heur_id": 1,
+        "heur_id": 2,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 4,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 24,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 33,
         "signatures": []
       },
       {
@@ -1280,141 +1540,159 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010"
+          "value": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Third Party Component CA 2014"
         }
       ],
       "cert.serial_no": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "33000003dffb6ae3f427ecb6a30000000003df"
+          "value": "3300000057ee4d659a923e7c10000000000057"
         }
       ],
       "cert.subject": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation"
+          "value": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Hardware Compatibility Publisher"
         }
       ],
       "cert.thumbprint": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "4068b1b0494efa79f5a751dcca8111cd"
+          "value": "451b7f8a4c0e669189e9382a09e423c2b875ad42"
         },
         {
           "heur_id": null,
           "signatures": [],
-          "value": "4a838904e732a380e2856a9d6fee926e5c57eb59336292ac5d9e47c9b2c1ed13"
+          "value": "55bc5abe7911db5ac1f1122ffa840031"
         },
         {
           "heur_id": null,
           "signatures": [],
-          "value": "914a09c2e02c696af394048bcb8d95449bcd5b9e"
+          "value": "8598d7b29edf3311d0859221d303daccca6379973faf9a92d78672a38f9247d4"
         }
       ],
       "cert.valid.end": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "2021-12-02T21:24:20"
+          "value": "2023-06-01T18:08:06"
         }
       ],
       "cert.valid.start": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "2020-12-15T21:24:20"
+          "value": "2022-06-07T18:08:06"
         }
       ],
       "file.pe.authenticode.spc_sp_opus_info.program_name": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "Microsoft Windows"
+          "value": "Luck Bigger Technology Co., Ltd"
         }
       ],
       "file.pe.imports.fuzzy": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "24:UbVjhN5O+VuT2oLtXOr6kwmDruMztxdEr6tP:K5O+VAXOmGx0oP"
-        }
-      ],
-      "file.pe.imports.gimphash": [
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "50f5783c2188897815d9b34a77aa4df70ac96a71542ddc79b94fef8ce7ba2120"
+          "value": "12:QNyNRRmN3EpRmNBCF+NrG6QNUhNReCNEzNvNUDUNXNDeNjGvUEhR:wmi5BuqGULQ2ER1UD89msUEH"
         }
       ],
       "file.pe.imports.imphash": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "c7269d59926fa4252270f407e4dab043"
+          "value": "ce10082e1aa4c1c2bd953b4a7208e56a"
         }
       ],
       "file.pe.imports.sorted_fuzzy": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "24:nJ614douuMBRDNQkaVOLb3TydX8JOmQzbVjP:nJbunrpdX8JOm4"
+          "value": "12:E9UEhoNjIXNRRmNBCF+NrG6QNvNyNUDUNDeNXNReCNUhNEzN3EL:E9UEWk9iBuqG1mUD8m9Q2ULERy"
         }
       ],
       "file.pe.imports.sorted_sha1": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "6d0481e38767cbe2767ab6c191cc5141992530e5"
+          "value": "9e606452e3c53d8f79be5fedc72334e34310c130"
         }
       ],
       "file.pe.linker.timestamp": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": 0
+          "value": 1664740082
         },
         {
           "heur_id": null,
           "signatures": [],
-          "value": "1970-01-01 00:00:00 +00:00 (UTC)"
+          "value": "2022-10-02 19:48:02 +00:00 (UTC)"
         }
       ],
       "file.pe.sections.hash": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "07b5472d347d42780469fb2654b7fc54"
+          "value": "8aef3d21a506cd3499bc216d904c3438"
         },
         {
           "heur_id": null,
           "signatures": [],
-          "value": "6be6e24d172cfcc193f5e83f1245a056"
+          "value": "8d5ad5817155efb32589a70882af03c7"
         },
         {
           "heur_id": null,
           "signatures": [],
-          "value": "972579fbc5433531a72824f2f41e9a20"
+          "value": "96c4e135ccb6e027d8c7e578cabc0761"
         },
         {
           "heur_id": null,
           "signatures": [],
-          "value": "beeb3d314c52f6b238ed0414983da573"
+          "value": "d41d8cd98f00b204e9800998ecf8427e"
         },
         {
           "heur_id": null,
           "signatures": [],
-          "value": "c08106bcbaafd29a40ad4b3e96a5627a"
+          "value": "d41d8cd98f00b204e9800998ecf8427e"
         },
         {
           "heur_id": null,
           "signatures": [],
-          "value": "d5ce09736386aba25dc4e15466abe8b6"
+          "value": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "d41d8cd98f00b204e9800998ecf8427e"
         }
       ],
       "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".\"!b"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".Kl$"
+        },
         {
           "heur_id": null,
           "signatures": [],
@@ -1423,7 +1701,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": ".idata"
+          "value": ".pdata"
         },
         {
           "heur_id": null,
@@ -1438,12 +1716,17 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": ".symtab"
+          "value": ".text"
         },
         {
           "heur_id": null,
           "signatures": [],
-          "value": ".text"
+          "value": ".t{f"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "INIT"
         }
       ]
     },

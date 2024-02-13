@@ -1250,6 +1250,36 @@
       },
       {
         "auto_collapse": false,
+        "body": [
+          [
+            "Program Name",
+            "dwtrig20.exe"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 3,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "authenticode": {
+                "spc_sp_opus_info": {
+                  "program_name": [
+                    "dwtrig20.exe"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "title_text": "SPC_SP_OPUS_INFO attribute",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
         "body": "Signer certificate or signer certificate's issuer is non-existant",
         "body_config": {},
         "body_format": "TEXT",
@@ -1865,6 +1895,13 @@
       }
     ],
     "tags": {
+      "file.pe.authenticode.spc_sp_opus_info.program_name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "dwtrig20.exe"
+        }
+      ],
       "file.pe.debug.guid": [
         {
           "heur_id": null,
