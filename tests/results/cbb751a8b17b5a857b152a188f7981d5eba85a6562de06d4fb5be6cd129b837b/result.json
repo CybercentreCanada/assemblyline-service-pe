@@ -1790,6 +1790,36 @@
         "auto_collapse": false,
         "body": [
           [
+            "Program Name",
+            "Microsoft Search"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 3,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "authenticode": {
+                "spc_sp_opus_info": {
+                  "program_name": [
+                    "Microsoft Search"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "title_text": "SPC_SP_OPUS_INFO attribute",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
             "Version",
             3
           ],
@@ -2266,6 +2296,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "2006-04-04T19:43:46"
+        }
+      ],
+      "file.pe.authenticode.spc_sp_opus_info.program_name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Microsoft Search"
         }
       ],
       "file.pe.debug.guid": [

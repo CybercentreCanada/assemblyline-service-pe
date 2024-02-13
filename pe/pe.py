@@ -714,8 +714,8 @@ class PE(ServiceBase):
             section_text_section.add_item("Entropy", entropy_data[0])
             section_graph_section = GraphSectionBody()
             section_graph_section.set_colormap(cmap_min=0, cmap_max=8, values=[round(x, 5) for x in entropy_data[1]])
-            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L1097
-            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L363
+            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e38/pe.py#L1097
+            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e3/lief.py#L363
             if entropy_data[0] > self.config.get("heur4_max_section_entropy", 7.5):
                 heur = Heuristic(4)
                 heur_section = ResultMultiSection(heur.name, heuristic=heur)
@@ -911,7 +911,7 @@ class PE(ServiceBase):
 
     def add_imports(self):
         if not self.binary.has_imports:
-            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/lief.py#L454
+            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e3/lief.py#L454
             no_imports_heur = Heuristic(32)
             _ = ResultSection(no_imports_heur.name, heuristic=no_imports_heur, parent=self.file_res)
             return
@@ -986,12 +986,12 @@ class PE(ServiceBase):
         def set_config_v1():
             set_config_v0()
 
-            load_configuration_dict[
-                "guard_cf_check_function_pointer"
-            ] = load_configuration.guard_cf_check_function_pointer
-            load_configuration_dict[
-                "guard_cf_dispatch_function_pointer"
-            ] = load_configuration.guard_cf_dispatch_function_pointer
+            load_configuration_dict["guard_cf_check_function_pointer"] = (
+                load_configuration.guard_cf_check_function_pointer
+            )
+            load_configuration_dict["guard_cf_dispatch_function_pointer"] = (
+                load_configuration.guard_cf_dispatch_function_pointer
+            )
             load_configuration_dict["guard_cf_flags_list"] = [
                 guard_flag.name for guard_flag in load_configuration.guard_cf_flags_list
             ]
@@ -1010,12 +1010,12 @@ class PE(ServiceBase):
 
         def set_config_v3():
             set_config_v2()
-            load_configuration_dict[
-                "guard_address_taken_iat_entry_count"
-            ] = load_configuration.guard_address_taken_iat_entry_count
-            load_configuration_dict[
-                "guard_address_taken_iat_entry_table"
-            ] = load_configuration.guard_address_taken_iat_entry_table
+            load_configuration_dict["guard_address_taken_iat_entry_count"] = (
+                load_configuration.guard_address_taken_iat_entry_count
+            )
+            load_configuration_dict["guard_address_taken_iat_entry_table"] = (
+                load_configuration.guard_address_taken_iat_entry_table
+            )
             load_configuration_dict["guard_long_jump_target_count"] = load_configuration.guard_long_jump_target_count
             load_configuration_dict["guard_long_jump_target_table"] = load_configuration.guard_long_jump_target_table
 
@@ -1026,23 +1026,23 @@ class PE(ServiceBase):
 
         def set_config_v5():
             set_config_v4()
-            load_configuration_dict[
-                "dynamic_value_reloctable_offset"
-            ] = load_configuration.dynamic_value_reloctable_offset
-            load_configuration_dict[
-                "dynamic_value_reloctable_section"
-            ] = load_configuration.dynamic_value_reloctable_section
+            load_configuration_dict["dynamic_value_reloctable_offset"] = (
+                load_configuration.dynamic_value_reloctable_offset
+            )
+            load_configuration_dict["dynamic_value_reloctable_section"] = (
+                load_configuration.dynamic_value_reloctable_section
+            )
             load_configuration_dict["guard_rf_failure_routine"] = load_configuration.guard_rf_failure_routine
-            load_configuration_dict[
-                "guard_rf_failure_routine_function_pointer"
-            ] = load_configuration.guard_rf_failure_routine_function_pointer
+            load_configuration_dict["guard_rf_failure_routine_function_pointer"] = (
+                load_configuration.guard_rf_failure_routine_function_pointer
+            )
             load_configuration_dict["reserved2"] = load_configuration.reserved2
 
         def set_config_v6():
             set_config_v5()
-            load_configuration_dict[
-                "guard_rf_verify_stackpointer_function_pointer"
-            ] = load_configuration.guard_rf_verify_stackpointer_function_pointer
+            load_configuration_dict["guard_rf_verify_stackpointer_function_pointer"] = (
+                load_configuration.guard_rf_verify_stackpointer_function_pointer
+            )
             load_configuration_dict["hotpatch_table_offset"] = load_configuration.hotpatch_table_offset
 
         def set_config_v7():
@@ -1551,6 +1551,15 @@ class PE(ServiceBase):
                 sub_sub_res.add_item("Digest Algorithm", signer.digest_algorithm.name.replace("_", ""))
                 sub_sub_res.add_item("Authenticated Attributes", ", ".join(signer_dict["authenticated_attributes"]))
                 sub_sub_res.add_item("Unauthenticated Attributes", ", ".join(signer_dict["unauthenticated_attributes"]))
+                opus_info = [
+                    x for x in signer.authenticated_attributes if x.type == lief.PE.SIG_ATTRIBUTE_TYPES.SPC_SP_OPUS_INFO
+                ]
+                if opus_info and opus_info[0].program_name:
+                    opus_info_res = ResultOrderedKeyValueSection("SPC_SP_OPUS_INFO attribute", parent=sub_sub_res)
+                    opus_info_res.add_item("Program Name", opus_info[0].program_name)
+                    opus_info_res.add_tag(
+                        "file.pe.authenticode.spc_sp_opus_info.program_name", opus_info[0].program_name
+                    )
 
                 if signer.cert is not None and signer.cert.issuer is not None:
                     recurse_cert(signer.cert.issuer)
@@ -1561,6 +1570,17 @@ class PE(ServiceBase):
                     sub_sub_sub_res.add_item("Version", extracted_cert_info["version"])
                     sub_sub_sub_res.add_item("Subject", extracted_cert_info["subject"])
                     sub_sub_sub_res.add_tag("cert.subject", extracted_cert_info["subject"])
+                    if extracted_cert_info["subject"] == (
+                        "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, "
+                        "CN=Microsoft Windows Hardware Compatibility Publisher"
+                    ):
+                        subject_WHQL = ResultSection("Signer Subject", parent=sub_sub_sub_res)
+                        subject_WHQL.add_line(
+                            (
+                                "Common subject for Windows Hardware Compatibility driver signing, may be "
+                                "used by Attestation Signed Malware."
+                            )
+                        )
                     sub_sub_sub_res.add_item("Issuer", extracted_cert_info["issuer"])
                     sub_sub_sub_res.add_tag("cert.issuer", extracted_cert_info["issuer"])
                     sub_sub_sub_res.add_item("Serial Number", extracted_cert_info["serial_number"])
@@ -1694,7 +1714,7 @@ class PE(ServiceBase):
                 heur_section.add_section_part(heur_kv_body)
                 sub_res.add_subsection(heur_section)
 
-            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383e48bc23a2555/pe.py#L898
+            # Supported by https://github.com/viper-framework/viper-modules/blob/00ee6cd2b2ad4ed278279ca9e383/pe.py#L898
             if len(signature.certificates) < 2:
                 heur = Heuristic(8)
                 heur_section = ResultSection(heur.name, heuristic=heur)

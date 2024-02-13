@@ -1971,6 +1971,36 @@
         "auto_collapse": false,
         "body": [
           [
+            "Program Name",
+            "MeshCentral Remote Management Agent."
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 3,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "authenticode": {
+                "spc_sp_opus_info": {
+                  "program_name": [
+                    "MeshCentral Remote Management Agent."
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "title_text": "SPC_SP_OPUS_INFO attribute",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
             "Version",
             1
           ],
@@ -2384,6 +2414,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "2021-08-20T19:38:43"
+        }
+      ],
+      "file.pe.authenticode.spc_sp_opus_info.program_name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "MeshCentral Remote Management Agent."
         }
       ],
       "file.pe.debug.guid": [
