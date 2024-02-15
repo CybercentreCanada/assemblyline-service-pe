@@ -1,0 +1,1223 @@
+{
+  "extra": {
+    "drop_file": false,
+    "score": 1,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "3739361701 (2088-06-29 15:35:01 +00:00 (UTC))",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 26,
+          "score": 1,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Future timestamp found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Timestamp",
+            "3739361701 (2088-06-29 15:35:01 +00:00 (UTC))"
+          ],
+          [
+            "Entrypoint",
+            "0x4ecca"
+          ],
+          [
+            "Machine",
+            "I386"
+          ],
+          [
+            "Magic",
+            "PE32"
+          ],
+          [
+            "Image version",
+            "0.0"
+          ],
+          [
+            "Linker version",
+            "48.0"
+          ],
+          [
+            "Operating System version",
+            "4.0"
+          ],
+          [
+            "Subsystem version",
+            "6.0"
+          ],
+          [
+            "Subsystem",
+            "WINDOWS_GUI"
+          ],
+          [
+            "NX",
+            true
+          ],
+          [
+            "Position Independent",
+            true
+          ],
+          [
+            "Checksum",
+            "0x00000000"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  3739361701,
+                  "2088-06-29 15:35:01 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "sha512",
+            "61d7e3459cbede2ecace93c39c29b9d283ac3a5348fa4f60f5d1d8f5c127e25cb38f1dc976ba4319225c0ed88e44a5170fcee05fb0b330f47076410a8611f9b4"
+          ],
+          [
+            "sha384",
+            "96442c58ca2d44f733b59ccf5ed80601376024e26256d0f36c02052b663dd9991ebcb7f22ab400ecb7a4192412afae54"
+          ],
+          [
+            "sha256",
+            "b99ae190fe2fb215a77105ac4e9a35707f19e3fc7ddc01fbcfc686402d64da09"
+          ],
+          [
+            "sha1",
+            "60a2388a11ca8db052b1c3ecd1f507d9a2676a81"
+          ],
+          [
+            "md5",
+            "2d7550bebe14b911e866a949d8458434"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                5.769447341682011
+              ],
+              [
+                "Entropy without padding",
+                5.773105654016509
+              ],
+              [
+                "Offset",
+                512
+              ],
+              [
+                "Size",
+                314880
+              ],
+              [
+                "Virtual Size",
+                314576
+              ],
+              [
+                "Characteristics",
+                "CNT_CODE, MEM_EXECUTE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "acd25b5273f5ec3946d50dbb409d9e09"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  4.79291,
+                  4.37362,
+                  4.44584,
+                  5.38342,
+                  5.79476,
+                  4.93043,
+                  5.48848,
+                  7.83783,
+                  4.71711,
+                  2.74314,
+                  2.96671,
+                  1.69079,
+                  1.77294,
+                  2.14394,
+                  2.15645,
+                  1.82971,
+                  1.41134,
+                  2.16356,
+                  2.11521,
+                  1.36998,
+                  1.11254,
+                  3.09947,
+                  2.39597,
+                  3.05577,
+                  5.32169,
+                  5.25289,
+                  5.30264,
+                  5.21121,
+                  5.5565,
+                  5.49073,
+                  4.52462,
+                  5.36969,
+                  2.39709,
+                  2.05607,
+                  5.99829,
+                  6.0288,
+                  5.36769,
+                  5.23377,
+                  5.92928,
+                  5.9897,
+                  4.94417,
+                  5.1403,
+                  6.02184,
+                  3.25153,
+                  4.79067,
+                  7.11336,
+                  7.88457,
+                  7.70311,
+                  7.85443,
+                  7.61811
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "acd25b5273f5ec3946d50dbb409d9e09"
+                ],
+                "name": [
+                  ".text"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .text",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                2.9216599238261853
+              ],
+              [
+                "Entropy without padding",
+                2.9265398344258426
+              ],
+              [
+                "Offset",
+                315392
+              ],
+              [
+                "Size",
+                109568
+              ],
+              [
+                "Virtual Size",
+                109328
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "69cf3a7a8a98262e72d10b8fff576d36"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  3.53061,
+                  7.84541,
+                  7.87685,
+                  7.78435,
+                  6.10928,
+                  2.54329,
+                  2.3945,
+                  2.81024,
+                  2.49029,
+                  3.11049,
+                  2.75281,
+                  2.45775,
+                  2.76699,
+                  1.46544,
+                  1.28844,
+                  1.32568,
+                  1.764,
+                  1.93986,
+                  2.15693,
+                  2.22949,
+                  1.97057,
+                  2.15984,
+                  2.21233,
+                  1.90175,
+                  1.91792,
+                  1.87469,
+                  1.43675,
+                  0.96128,
+                  0.85666,
+                  2.64469,
+                  2.33074,
+                  1.60526,
+                  1.97897,
+                  2.17019,
+                  2.09678,
+                  1.64306,
+                  1.58688,
+                  1.17073,
+                  0.36145,
+                  0.44572,
+                  1.41829,
+                  3.53678,
+                  2.25365,
+                  2.63315,
+                  2.58461,
+                  1.99751,
+                  2.33888,
+                  2.46018,
+                  1.16478,
+                  3.34141
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "69cf3a7a8a98262e72d10b8fff576d36"
+                ],
+                "name": [
+                  ".rsrc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rsrc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                0.10191042566270775
+              ],
+              [
+                "Entropy without padding",
+                1.9473387961875537
+              ],
+              [
+                "Offset",
+                424960
+              ],
+              [
+                "Size",
+                512
+              ],
+              [
+                "Virtual Size",
+                12
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "2de4bfcdfb216cabf3a008eb459ea270"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  0.18415,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "2de4bfcdfb216cabf3a008eb459ea270"
+                ],
+                "name": [
+                  ".reloc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .reloc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Debugs",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Timestamp",
+            "0 (1970-01-01 00:00:00 +00:00 (UTC))"
+          ],
+          [
+            "Version",
+            "0.0"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "REPRO",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "imports": {
+                "fuzzy": [
+                  "3:rGsLdAIEK:tf"
+                ],
+                "imphash": [
+                  "f34d5f2d4577ed6d9ceec516c1f5a744"
+                ],
+                "sorted_fuzzy": [
+                  "3:rGsLdAIEK:tf"
+                ],
+                "sorted_sha1": [
+                  "b520d94a992a90264f86563103d3f841d2503d34"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Imports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "_CorExeMain",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "mscoree.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Languages",
+            "NEUTRAL"
+          ],
+          [
+            "Sublanguages",
+            "DEFAULT"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "NEUTRAL"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "TABLE",
+            [
+              {
+                "ID": 1,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_0.ico",
+                "Size": "16x16",
+                "Size (bytes)": 1128
+              },
+              {
+                "ID": 2,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_1.ico",
+                "Size": "0x0",
+                "Size (bytes)": 8339
+              },
+              {
+                "ID": 3,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_2.ico",
+                "Size": "48x48",
+                "Size (bytes)": 9640
+              },
+              {
+                "ID": 4,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_3.ico",
+                "Size": "32x32",
+                "Size (bytes)": 4264
+              },
+              {
+                "ID": 5,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_4.ico",
+                "Size": "128x128",
+                "Size (bytes)": 67624
+              },
+              {
+                "ID": 6,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_5.ico",
+                "Size": "64x64",
+                "Size (bytes)": 16936
+              }
+            ],
+            {
+              "column_order": [
+                "ID",
+                "Lang",
+                "Size",
+                "Size (bytes)",
+                "Saved as"
+              ]
+            }
+          ],
+          [
+            "IMAGE",
+            [
+              {
+                "img": {
+                  "description": "Icon 0 extracted from the PE file",
+                  "name": "icon_0.ico",
+                  "sha256": "9c0627c7076d82529cf9bc368cdbbc9c00d051c25a748f1914db910eb097fbda"
+                },
+                "thumb": {
+                  "description": "Icon 0 extracted from the PE file (thumbnail)",
+                  "name": "icon_0.ico.thumb",
+                  "sha256": "9c0627c7076d82529cf9bc368cdbbc9c00d051c25a748f1914db910eb097fbda"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 1 extracted from the PE file",
+                  "name": "icon_1.ico",
+                  "sha256": "04003a8e6a0ea39440dceb1d579017d0e9be1feedba3d5a1a59be70307c955dc"
+                },
+                "thumb": {
+                  "description": "Icon 1 extracted from the PE file (thumbnail)",
+                  "name": "icon_1.ico.thumb",
+                  "sha256": "b24f385d883b651b15695cc885db4446597c87addf9248652c39230df38d818b"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 2 extracted from the PE file",
+                  "name": "icon_2.ico",
+                  "sha256": "2769611bf9465afbbc88c06d0c72351722c9a9efb993985b80adebf0aeb0da8e"
+                },
+                "thumb": {
+                  "description": "Icon 2 extracted from the PE file (thumbnail)",
+                  "name": "icon_2.ico.thumb",
+                  "sha256": "2769611bf9465afbbc88c06d0c72351722c9a9efb993985b80adebf0aeb0da8e"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 3 extracted from the PE file",
+                  "name": "icon_3.ico",
+                  "sha256": "a5faf25ce0b995b9e67fb3a23312693f274054f2dde86c4a7cee98f733bbc2cb"
+                },
+                "thumb": {
+                  "description": "Icon 3 extracted from the PE file (thumbnail)",
+                  "name": "icon_3.ico.thumb",
+                  "sha256": "a5faf25ce0b995b9e67fb3a23312693f274054f2dde86c4a7cee98f733bbc2cb"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 4 extracted from the PE file",
+                  "name": "icon_4.ico",
+                  "sha256": "9bcd706272aa5dfbaa0e12ee3a5f0e2f1946e8a63e7bba949e27b6ec414084c2"
+                },
+                "thumb": {
+                  "description": "Icon 4 extracted from the PE file (thumbnail)",
+                  "name": "icon_4.ico.thumb",
+                  "sha256": "9bcd706272aa5dfbaa0e12ee3a5f0e2f1946e8a63e7bba949e27b6ec414084c2"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 5 extracted from the PE file",
+                  "name": "icon_5.ico",
+                  "sha256": "3c5588b6dfc5114490e7533b05a16d093968828aa4b51c49dd577d2577dccd6a"
+                },
+                "thumb": {
+                  "description": "Icon 5 extracted from the PE file (thumbnail)",
+                  "name": "icon_5.ico.thumb",
+                  "sha256": "3c5588b6dfc5114490e7533b05a16d093968828aa4b51c49dd577d2577dccd6a"
+                }
+              }
+            ],
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Icons",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Type",
+            0
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Version",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "file_date_LS",
+            0
+          ],
+          [
+            "file_date_MS",
+            0
+          ],
+          [
+            "file_flags",
+            0
+          ],
+          [
+            "file_flags_mask",
+            63
+          ],
+          [
+            "file_os",
+            "WINDOWS32"
+          ],
+          [
+            "file_subtype",
+            "UNKNOWN"
+          ],
+          [
+            "file_type",
+            "APP"
+          ],
+          [
+            "file_version_LS",
+            0
+          ],
+          [
+            "file_version_MS",
+            0
+          ],
+          [
+            "product_version_LS",
+            0
+          ],
+          [
+            "product_version_MS",
+            0
+          ],
+          [
+            "signature",
+            4277077181
+          ],
+          [
+            "struct_version",
+            65536
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "fixed_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "key",
+            "StringFileInfo"
+          ],
+          [
+            "type",
+            1
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "versions": {
+                "description": [
+                  "SteamMachine"
+                ],
+                "filename": [
+                  "SteamMachine.exe"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "string_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "key",
+            "000004b0"
+          ],
+          [
+            "type",
+            1
+          ],
+          [
+            "lang",
+            "NEUTRAL"
+          ],
+          [
+            "sublang",
+            "DEFAULT"
+          ],
+          [
+            "code_page",
+            "UTF_16"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 3,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "langcode_items 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Assembly Version",
+            "0.0.0.0"
+          ],
+          [
+            "Comments",
+            ""
+          ],
+          [
+            "CompanyName",
+            ""
+          ],
+          [
+            "FileDescription",
+            "SteamMachine"
+          ],
+          [
+            "FileVersion",
+            "0.0.0.0"
+          ],
+          [
+            "InternalName",
+            "SteamMachine.exe"
+          ],
+          [
+            "LegalCopyright",
+            "Copyright \u00a9 2019"
+          ],
+          [
+            "LegalTrademarks",
+            ""
+          ],
+          [
+            "OriginalFilename",
+            "SteamMachine.exe"
+          ],
+          [
+            "ProductName",
+            "SteamMachine"
+          ],
+          [
+            "ProductVersion",
+            "0.0.0.0"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 4,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "items",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "key",
+            "VarFileInfo"
+          ],
+          [
+            "type",
+            1
+          ],
+          [
+            "translations",
+            "78643200"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "var_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          {
+            "Entropy": 3.608054462421026,
+            "SHA256": "5f7e527a74e0cf0970e5647f3d6b7568c7d79ceb86972281f14f42ffe4341e59",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 7.79640193592157,
+            "SHA256": "f2adde34aeddaa6fefd54def7807b23bf717791cc36fc52ad7d5e28e5298bab6",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 2.7198905671228655,
+            "SHA256": "f8bed71b4d849ff158751121fc1c82f6ca12159fdfb8aa748f7b34c27b34d32b",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 3.218205915113267,
+            "SHA256": "ac42db0dac0b345c45a66638df79d07674701cc2fa1a0f57d968302e5ad4b7ed",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 2.0030590073757937,
+            "SHA256": "5652573f21c382f448a6fbe980a4d0c4dcaf232178912f39502f348df332f653",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 2.4661353830528636,
+            "SHA256": "1e8e9ea7d5bc5cb64289082b232128b8fdbd9cd744d950ee7764c45da6808392",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 2.7487507234744077,
+            "SHA256": "4e45bdfde672333b7309fe0d97c4ec4b2f1209415fc7ba1a3b67f0e7226b8878",
+            "Type": "GROUP_ICON"
+          },
+          {
+            "Entropy": 3.2178796707145008,
+            "SHA256": "0b9fb2040f55149742a7cb4189e5ad49951563a23ee31768d2db1540dafee8b3",
+            "Type": "VERSION"
+          }
+        ],
+        "body_config": {
+          "column_order": [
+            "SHA256",
+            "Type",
+            "Entropy"
+          ]
+        },
+        "body_format": "TABLE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Summary",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Size",
+                0
+              ]
+            ],
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": [
+      {
+        "name": "icon_1.ico",
+        "sha256": "04003a8e6a0ea39440dceb1d579017d0e9be1feedba3d5a1a59be70307c955dc"
+      },
+      {
+        "name": "icon_2.ico",
+        "sha256": "2769611bf9465afbbc88c06d0c72351722c9a9efb993985b80adebf0aeb0da8e"
+      },
+      {
+        "name": "icon_2.ico.thumb",
+        "sha256": "2769611bf9465afbbc88c06d0c72351722c9a9efb993985b80adebf0aeb0da8e"
+      },
+      {
+        "name": "icon_5.ico",
+        "sha256": "3c5588b6dfc5114490e7533b05a16d093968828aa4b51c49dd577d2577dccd6a"
+      },
+      {
+        "name": "icon_5.ico.thumb",
+        "sha256": "3c5588b6dfc5114490e7533b05a16d093968828aa4b51c49dd577d2577dccd6a"
+      },
+      {
+        "name": "features.json",
+        "sha256": "50c0d0ea894f083cc6b44ac57dbad3b7ee37f2352e8c37c32c359f6421b30d4f"
+      },
+      {
+        "name": "icon_4.ico",
+        "sha256": "9bcd706272aa5dfbaa0e12ee3a5f0e2f1946e8a63e7bba949e27b6ec414084c2"
+      },
+      {
+        "name": "icon_4.ico.thumb",
+        "sha256": "9bcd706272aa5dfbaa0e12ee3a5f0e2f1946e8a63e7bba949e27b6ec414084c2"
+      },
+      {
+        "name": "icon_0.ico",
+        "sha256": "9c0627c7076d82529cf9bc368cdbbc9c00d051c25a748f1914db910eb097fbda"
+      },
+      {
+        "name": "icon_0.ico.thumb",
+        "sha256": "9c0627c7076d82529cf9bc368cdbbc9c00d051c25a748f1914db910eb097fbda"
+      },
+      {
+        "name": "icon_3.ico",
+        "sha256": "a5faf25ce0b995b9e67fb3a23312693f274054f2dde86c4a7cee98f733bbc2cb"
+      },
+      {
+        "name": "icon_3.ico.thumb",
+        "sha256": "a5faf25ce0b995b9e67fb3a23312693f274054f2dde86c4a7cee98f733bbc2cb"
+      },
+      {
+        "name": "icon_1.ico.thumb",
+        "sha256": "b24f385d883b651b15695cc885db4446597c87addf9248652c39230df38d818b"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 26,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.pe.imports.fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "3:rGsLdAIEK:tf"
+        }
+      ],
+      "file.pe.imports.imphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "f34d5f2d4577ed6d9ceec516c1f5a744"
+        }
+      ],
+      "file.pe.imports.sorted_fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "3:rGsLdAIEK:tf"
+        }
+      ],
+      "file.pe.imports.sorted_sha1": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "b520d94a992a90264f86563103d3f841d2503d34"
+        }
+      ],
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 3739361701
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2088-06-29 15:35:01 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2de4bfcdfb216cabf3a008eb459ea270"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "69cf3a7a8a98262e72d10b8fff576d36"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "acd25b5273f5ec3946d50dbb409d9e09"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".reloc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rsrc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".text"
+        }
+      ],
+      "file.pe.versions.description": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "SteamMachine"
+        }
+      ],
+      "file.pe.versions.filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "SteamMachine.exe"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
+}
