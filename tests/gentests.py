@@ -12,7 +12,7 @@ os.environ["SERVICE_MANIFEST_PATH"] = os.path.join(cwd, "service_manifest.yml")
 RESULTS_FOLDER = os.path.join(cwd, "tests", "results")
 
 # Find which module we're working on
-for line in open('Dockerfile', 'r').readlines():
+for line in open("Dockerfile", "r").readlines():
     if line.startswith("ENV SERVICE_PATH"):
         module = line[17:].strip()
         break

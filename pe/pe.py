@@ -1109,79 +1109,81 @@ class PE(ServiceBase):
                 self.features["resources_manager"]["accelerators"].append(accelerator_dict)
         if self.binary.resources_manager.has_dialogs:
             corrupted_dialog_section = None
-            try:
-                dialogs_list = []
-                for dialog in self.binary.resources_manager.dialogs:
-                    dialog_dict = {
-                        "charset": dialog.charset,
-                        "cx": dialog.cx,
-                        "cy": dialog.cy,
-                        "dialogbox_style_list": [
-                            dialogbox_style.name for dialogbox_style in dialog.dialogbox_style_list
-                        ],
-                        "extended_style": str(dialog.extended_style),  # .name
-                        "extended_style_list": [extended_style.name for extended_style in dialog.extended_style_list],
-                        "help_id": dialog.help_id,
-                        "items": [],
-                        "lang": dialog.lang.name,
-                        "point_size": dialog.point_size,
-                        "signature": dialog.signature,
-                        "style": str(dialog.style),  # .name
-                        "style_list": [style.name for style in dialog.style_list],
-                        "sub_lang": dialog.sub_lang.name,
+            dialogs_list = []
+            for dialog in self.binary.resources_manager.dialogs:
+                dialog_dict = {
+                    "charset": dialog.charset,
+                    "cx": dialog.cx,
+                    "cy": dialog.cy,
+                    "dialogbox_style_list": [dialogbox_style.name for dialogbox_style in dialog.dialogbox_style_list],
+                    "extended_style": str(dialog.extended_style),  # .name
+                    "extended_style_list": [extended_style.name for extended_style in dialog.extended_style_list],
+                    "help_id": dialog.help_id,
+                    "items": [],
+                    "lang": dialog.lang.name,
+                    "point_size": dialog.point_size,
+                    "signature": dialog.signature,
+                    "style": str(dialog.style),  # .name
+                    "style_list": [style.name for style in dialog.style_list],
+                    "sub_lang": dialog.sub_lang.name,
+                    "title": "",
+                    "typeface": "",
+                    "version": dialog.version,
+                    "weight": dialog.weight,
+                    "x": dialog.x,
+                    "y": dialog.y,
+                }
+                try:
+                    dialog_dict["title"] = dialog.title
+                    if dialog.title != "":
+                        res.add_tag("file.string.extracted", dialog.title)
+                except UnicodeDecodeError:
+                    del dialog_dict["title"]
+                    if corrupted_dialog_section is None:
+                        heur = Heuristic(13)
+                        corrupted_dialog_section = ResultSection(heur.name, heuristic=heur, parent=res)
+                    corrupted_dialog_section.add_line("Can't decode main title of dialog")
+
+                try:
+                    dialog_dict["typeface"] = dialog.typeface
+                except UnicodeDecodeError:
+                    del dialog_dict["typeface"]
+                    if corrupted_dialog_section is None:
+                        heur = Heuristic(13)
+                        corrupted_dialog_section = ResultSection(heur.name, heuristic=heur, parent=res)
+                    corrupted_dialog_section.add_line("Can't decode typeface of dialog")
+
+                for item in dialog.items:
+                    item_dict = {
+                        "cx": item.cx,
+                        "cy": item.cy,
+                        "extended_style": item.extended_style,
+                        "help_id": item.help_id,
+                        "item_id": item.id,
+                        "is_extended": item.is_extended,
+                        "style": str(item.style),  # .name
                         "title": "",
-                        "typeface": dialog.typeface,
-                        "version": dialog.version,
-                        "weight": dialog.weight,
-                        "x": dialog.x,
-                        "y": dialog.y,
+                        "x": item.x,
+                        "y": item.y,
                     }
                     try:
-                        dialog_dict["title"] = dialog.title
-                        if dialog.title != "":
-                            res.add_tag("file.string.extracted", dialog.title)
+                        item_dict["title"] = item.title
+                        if item.title != "":
+                            res.add_tag("file.string.extracted", item.title)
                     except UnicodeDecodeError:
-                        del dialog_dict["title"]
                         if corrupted_dialog_section is None:
                             heur = Heuristic(13)
                             corrupted_dialog_section = ResultSection(heur.name, heuristic=heur, parent=res)
-                        corrupted_dialog_section.add_line("Can't decode main title of dialog")
-                    for item in dialog.items:
-                        item_dict = {
-                            "cx": item.cx,
-                            "cy": item.cy,
-                            "extended_style": item.extended_style,
-                            "help_id": item.help_id,
-                            "item_id": item.id,
-                            "is_extended": item.is_extended,
-                            "style": str(item.style),  # .name
-                            "title": "",
-                            "x": item.x,
-                            "y": item.y,
-                        }
-                        try:
-                            item_dict["title"] = item.title
-                            if item.title != "":
-                                res.add_tag("file.string.extracted", item.title)
-                        except UnicodeDecodeError:
-                            if corrupted_dialog_section is None:
-                                heur = Heuristic(13)
-                                corrupted_dialog_section = ResultSection(heur.name, heuristic=heur, parent=res)
-                            if "title" in dialog_dict and dialog_dict["title"]:
-                                corrupted_dialog_section.add_line(
-                                    f"Can't decode title of dialog item from dialog named {dialog.title}"
-                                )
-                            else:
-                                corrupted_dialog_section.add_line("Can't decode title of dialog item")
-                        dialog_dict["items"].append(item_dict)
-                    dialogs_list.append(dialog_dict)
+                        if "title" in dialog_dict and dialog_dict["title"]:
+                            corrupted_dialog_section.add_line(
+                                f"Can't decode title of dialog item from dialog named {dialog.title}"
+                            )
+                        else:
+                            corrupted_dialog_section.add_line("Can't decode title of dialog item")
+                    dialog_dict["items"].append(item_dict)
+                dialogs_list.append(dialog_dict)
 
-                self.features["resources_manager"]["dialogs"] = dialogs_list
-            except lief.read_out_of_bound:
-                heur = Heuristic(13)
-                heur_section = ResultSection(heur.name, heuristic=heur)
-                heur_section.add_line("Can't read dialog object")
-                res.add_subsection(heur_section)
+            self.features["resources_manager"]["dialogs"] = dialogs_list
 
         if self.binary.resources_manager.has_html:
             try:
