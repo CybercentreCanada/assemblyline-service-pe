@@ -10,6 +10,7 @@ os.environ["SERVICE_MANIFEST_PATH"] = os.path.join(cwd, "service_manifest.yml")
 
 # Setup folder locations
 RESULTS_FOLDER = os.path.join(cwd, "tests", "results")
+SAMPLES_FOLDER = os.path.join(cwd, "tests", "samples")
 
 # Find which module we're working on
 for line in open("Dockerfile", "r").readlines():
@@ -19,6 +20,9 @@ for line in open("Dockerfile", "r").readlines():
 
 # Initialize test helper
 service_class = load_module_by_path(module, cwd)
-th = TestHelper(service_class, RESULTS_FOLDER)
+if os.path.exists(SAMPLES_FOLDER):
+    th = TestHelper(service_class, RESULTS_FOLDER, SAMPLES_FOLDER)
+else:
+    th = TestHelper(service_class, RESULTS_FOLDER)
 
 th.regenerate_results(save_files=["features.json"])
