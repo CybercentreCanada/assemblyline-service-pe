@@ -7,12 +7,14 @@ import os
 import pathlib
 import struct
 import subprocess
+import tempfile
 from collections import defaultdict
 from io import BytesIO
 
 import lief
 import ordlookup
 import ssdeep
+from assemblyline.common import forge
 from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline.odm.models.ontology.filetypes import PE as PE_ODM
 from assemblyline_v4_service.common.base import ServiceBase
@@ -253,6 +255,8 @@ class PE(ServiceBase):
                 # row[-1] = "Reason"
                 self.cscb["serial_number"][row[1]] = row
                 self.cscb[row[3]][row[2]] = row
+
+        self.identify = forge.get_identify(use_cache=os.environ.get("PRIVILEGED", "false").lower() == "true")
 
     def check_timestamps(self):
         """
@@ -1107,6 +1111,7 @@ class PE(ServiceBase):
                 except KeyError:
                     pass
                 self.features["resources_manager"]["accelerators"].append(accelerator_dict)
+
         if self.binary.resources_manager.has_dialogs:
             corrupted_dialog_section = None
             dialogs_list = []
@@ -1403,6 +1408,39 @@ class PE(ServiceBase):
             except ValueError:
                 sub_res.set_heuristic(13)
             res.add_subsection(sub_res)
+
+        if self.binary.resources_manager.has_type(lief.PE.RESOURCE_TYPES.RCDATA):
+            # Assume it's a directory
+            for rcdata_dir in self.binary.resources_manager.get_node_type(lief.PE.RESOURCE_TYPES.RCDATA).childs:
+                rc_data_name = ""
+                if rcdata_dir.has_name:
+                    rc_data_name = rcdata_dir.name
+                # Assume it's a directory
+                for rc_data in rcdata_dir.childs:
+                    # Assume it's the data
+                    content = rc_data.content.tobytes()
+                    if len(content) <= 100:
+                        continue
+                    with tempfile.NamedTemporaryFile(dir=self.working_directory, delete=False) as fh:
+                        rc_data_file = fh.name
+                        fh.write(rc_data.content.tobytes())
+                    rc_data_type = self.identify.fileinfo(rc_data_file, generate_hashes=False)["type"]
+                    if rc_data_type == "unknown":
+                        continue
+                    if rc_data.has_name:
+                        rc_data_name = rc_data.name
+                    if not any(rc_data_type.startswith(x) for x in ["text/", "resource/"]):
+                        self.request.add_extracted(
+                            rc_data_file,
+                            rc_data_name or f"rc_data_{rc_data.offset}",
+                            "Extracted from binary's RT_RCDATA resources",
+                        )
+                    else:
+                        self.request.add_supplementary(
+                            rc_data_file,
+                            rc_data_name or f"rc_data_{rc_data.offset}",
+                            "Extracted from binary's RT_RCDATA resources",
+                        )
 
         sub_res = ResultTableSection("Summary")
         current_resource_type = ""
