@@ -1,0 +1,1082 @@
+{
+  "extra": {
+    "drop_file": false,
+    "score": 100,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "0 -> 10 -> 2147483704 -> 0",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 15,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Resource directories that does not contain a leaf data node",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Timestamp",
+            "0 (1970-01-01 00:00:00 +00:00 (UTC))"
+          ],
+          [
+            "Entrypoint",
+            "0x17000"
+          ],
+          [
+            "Machine",
+            "I386"
+          ],
+          [
+            "Magic",
+            "PE32"
+          ],
+          [
+            "Image version",
+            "0.0"
+          ],
+          [
+            "Linker version",
+            "5.12"
+          ],
+          [
+            "Operating System version",
+            "4.0"
+          ],
+          [
+            "Subsystem version",
+            "4.0"
+          ],
+          [
+            "Subsystem",
+            "WINDOWS_GUI"
+          ],
+          [
+            "NX",
+            false
+          ],
+          [
+            "Position Independent",
+            false
+          ],
+          [
+            "Checksum",
+            "0x0027c76f"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  0,
+                  "1970-01-01 00:00:00 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "File Size",
+            2594112
+          ],
+          [
+            "Virtual Size",
+            200704
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 24,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Mismatch file size",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "sha512",
+            "19d2805bdd5426d090193eb0c20ea05a8585a35f7c860b845136f73a389ddbda93bce434ecf4aa41b306dbe40e9d759d3eddb042b98aae50de12f3b444e30b47"
+          ],
+          [
+            "sha384",
+            "af2c73737530c8f34d49b690f946db33bfc0bde636f549cded0d01f4cfee340121430dec571255af6c46de5cafd4fea4"
+          ],
+          [
+            "sha256",
+            "2b37c470eb5a13fb2265634ddd253d554917c7ed08e116a2ac6f193b6f5a7d3f"
+          ],
+          [
+            "sha1",
+            "3b3344159bcdadfe3bf0f77fd83bc111cc726211"
+          ],
+          [
+            "md5",
+            "c4920ce21231615cb1f3f2956cf7a3cc"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                0
+              ],
+              [
+                "Entropy without padding",
+                0.0
+              ],
+              [
+                "Offset",
+                1024
+              ],
+              [
+                "Size",
+                0
+              ],
+              [
+                "Virtual Size",
+                77824
+              ],
+              [
+                "Characteristics",
+                "MEM_EXECUTE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "d41d8cd98f00b204e9800998ecf8427e"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "d41d8cd98f00b204e9800998ecf8427e"
+                ],
+                "name": [
+                  ".bss"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .bss",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                2.103999185373751
+              ],
+              [
+                "Entropy without padding",
+                2.103999185373751
+              ],
+              [
+                "Offset",
+                1024
+              ],
+              [
+                "Size",
+                512
+              ],
+              [
+                "Virtual Size",
+                4096
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "2e00afe44ebd470bad98438f040d67d2"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  3.44108,
+                  0.14737
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "2e00afe44ebd470bad98438f040d67d2"
+                ],
+                "name": [
+                  ".itext"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .itext",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                6.1982222766406965
+              ],
+              [
+                "Entropy without padding",
+                6.198222276640696
+              ],
+              [
+                "Offset",
+                1536
+              ],
+              [
+                "Size",
+                424
+              ],
+              [
+                "Virtual Size",
+                424
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "e0422f79418bcc86f1a0854b1df07024"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  3.83395,
+                  7.13927
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "e0422f79418bcc86f1a0854b1df07024"
+                ],
+                "name": [
+                  ".rsrc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rsrc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                0.3281187745953951
+              ],
+              [
+                "Entropy without padding",
+                0.3281187745953951
+              ],
+              [
+                "Offset",
+                2048
+              ],
+              [
+                "Size",
+                512
+              ],
+              [
+                "Virtual Size",
+                4096
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "10a04e186d468698c829ce2edadd4a52"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  0.58408,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "10a04e186d468698c829ce2edadd4a52"
+                ],
+                "name": [
+                  ".CRT"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .CRT",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                7.9970180321904225
+              ],
+              [
+                "Entropy without padding",
+                7.9970180321904225
+              ],
+              [
+                "Offset",
+                2560
+              ],
+              [
+                "Size",
+                104381
+              ],
+              [
+                "Virtual Size",
+                106496
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "9bbec5fefdb109ba0e7389076de21cb3"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  7.11985,
+                  7.91112,
+                  7.89833,
+                  7.90905,
+                  7.92052,
+                  7.91431,
+                  7.90907,
+                  7.91455,
+                  7.91167,
+                  7.90554,
+                  7.91715,
+                  7.91761,
+                  7.91224,
+                  7.90464,
+                  7.90964,
+                  7.90825,
+                  7.90775,
+                  7.91546,
+                  7.89997,
+                  7.90571,
+                  7.92524,
+                  7.90756,
+                  7.90688,
+                  7.89028,
+                  7.91105,
+                  7.90728,
+                  7.91561,
+                  7.91325,
+                  7.90852,
+                  7.90549,
+                  7.92289,
+                  7.90184,
+                  7.91165,
+                  7.91346,
+                  7.91658,
+                  7.91985,
+                  7.91055,
+                  7.89192,
+                  7.91132,
+                  7.89441,
+                  7.90368,
+                  7.91096,
+                  7.91163,
+                  7.92195,
+                  7.90997,
+                  7.90833,
+                  7.9159,
+                  7.90971,
+                  7.91395,
+                  7.91856
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "9bbec5fefdb109ba0e7389076de21cb3"
+                ],
+                "name": [
+                  ".bss"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .bss",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Section name",
+                ".bss"
+              ],
+              [
+                "Entropy:",
+                7.9970180321904225
+              ],
+              [
+                "Entropy without padding",
+                7.9970180321904225
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  7.11985,
+                  7.91112,
+                  7.89833,
+                  7.90905,
+                  7.92052,
+                  7.91431,
+                  7.90907,
+                  7.91455,
+                  7.91167,
+                  7.90554,
+                  7.91715,
+                  7.91761,
+                  7.91224,
+                  7.90464,
+                  7.90964,
+                  7.90825,
+                  7.90775,
+                  7.91546,
+                  7.89997,
+                  7.90571,
+                  7.92524,
+                  7.90756,
+                  7.90688,
+                  7.89028,
+                  7.91105,
+                  7.90728,
+                  7.91561,
+                  7.91325,
+                  7.90852,
+                  7.90549,
+                  7.92289,
+                  7.90184,
+                  7.91165,
+                  7.91346,
+                  7.91658,
+                  7.91985,
+                  7.91055,
+                  7.89192,
+                  7.91132,
+                  7.89441,
+                  7.90368,
+                  7.91096,
+                  7.91163,
+                  7.92195,
+                  7.90997,
+                  7.90833,
+                  7.9159,
+                  7.90971,
+                  7.91395,
+                  7.91856
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 4,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "High section entropy",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "imports": {
+                "fuzzy": [
+                  "3:sUx2AEJtlJAR9CRO5:nEJtgmRE"
+                ],
+                "imphash": [
+                  "7ff860454f7614ed9673c3d3c730f101"
+                ],
+                "sorted_fuzzy": [
+                  "3:oTEKCROXvbsSx2AEJtlJB:omRgnEJth"
+                ],
+                "sorted_sha1": [
+                  "d965ad5f262e08baf6b8704a4c1fb5d7735a68c5"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Imports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "GetModuleHandleA",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "kernel32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "CharLowerW",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "user32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "RegCloseKey",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "advapi32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Languages",
+            "NEUTRAL"
+          ],
+          [
+            "Sublanguages",
+            "DEFAULT"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "NEUTRAL"
+                ],
+                "name": [
+                  "DVCLAL"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          {
+            "Entropy": 7.253114759064564,
+            "SHA256": "58b91b225cfc260168fdd9f0736622a19464e18e41d00de81f8d52357e59fe31",
+            "Type": "RCDATA"
+          }
+        ],
+        "body_config": {
+          "column_order": [
+            "SHA256",
+            "Type",
+            "Entropy"
+          ]
+        },
+        "body_format": "TABLE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Summary",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Size",
+                2487171
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  7.99548,
+                  7.99635,
+                  7.99692,
+                  7.99586,
+                  7.99612,
+                  7.99656,
+                  7.99665,
+                  7.99642,
+                  7.99637,
+                  7.99654,
+                  7.9957,
+                  7.99679,
+                  7.99653,
+                  7.99632,
+                  7.9961,
+                  7.99639,
+                  7.9962,
+                  7.99615,
+                  7.9966,
+                  7.99624,
+                  7.99643,
+                  7.9957,
+                  7.99618,
+                  7.99637,
+                  7.99674,
+                  7.99668,
+                  7.99589,
+                  7.99688,
+                  7.99598,
+                  7.9961,
+                  7.99665,
+                  7.99626,
+                  7.99648,
+                  7.99661,
+                  7.99578,
+                  7.99647,
+                  7.99687,
+                  7.99646,
+                  7.99591,
+                  7.99578,
+                  7.9969,
+                  7.99621,
+                  7.99637,
+                  7.99659,
+                  7.99607,
+                  7.99621,
+                  7.99632,
+                  7.99621,
+                  7.99656,
+                  7.99612
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [
+      {
+        "name": "overlay",
+        "sha256": "53f32b008f6f0c3ce1cdbaa8a3957b263c272625a6cd48f2ab0a36cdde1ab41f"
+      }
+    ],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "4eeaba315295ff0029a3898373b835438cc2fa6c949cd8fd4b6067ba0d7e07f6"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 4,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 15,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 24,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.pe.imports.fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "3:sUx2AEJtlJAR9CRO5:nEJtgmRE"
+        }
+      ],
+      "file.pe.imports.imphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "7ff860454f7614ed9673c3d3c730f101"
+        }
+      ],
+      "file.pe.imports.sorted_fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "3:oTEKCROXvbsSx2AEJtlJB:omRgnEJth"
+        }
+      ],
+      "file.pe.imports.sorted_sha1": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "d965ad5f262e08baf6b8704a4c1fb5d7735a68c5"
+        }
+      ],
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 0
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "1970-01-01 00:00:00 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
+        }
+      ],
+      "file.pe.resources.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "DVCLAL"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "10a04e186d468698c829ce2edadd4a52"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2e00afe44ebd470bad98438f040d67d2"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "9bbec5fefdb109ba0e7389076de21cb3"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "e0422f79418bcc86f1a0854b1df07024"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".CRT"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".bss"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".bss"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".itext"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rsrc"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
+}

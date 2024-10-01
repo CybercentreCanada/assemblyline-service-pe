@@ -1410,37 +1410,38 @@ class PE(ServiceBase):
             res.add_subsection(sub_res)
 
         if self.binary.resources_manager.has_type(lief.PE.RESOURCE_TYPES.RCDATA):
-            # Assume it's a directory
-            for rcdata_dir in self.binary.resources_manager.get_node_type(lief.PE.RESOURCE_TYPES.RCDATA).childs:
-                rc_data_name = ""
-                if rcdata_dir.has_name:
-                    rc_data_name = rcdata_dir.name
-                # Assume it's a directory
-                for rc_data in rcdata_dir.childs:
-                    # Assume it's the data
-                    content = rc_data.content.tobytes()
+
+            def recurse_rc_data(node, name):
+                if node.has_name:
+                    name = node.name
+                if node.is_directory:
+                    for sub_node in node.childs:
+                        recurse_rc_data(sub_node, name)
+                else:
+                    content = node.content.tobytes()
                     if len(content) <= 100:
-                        continue
+                        return
                     with tempfile.NamedTemporaryFile(dir=self.working_directory, delete=False) as fh:
                         rc_data_file = fh.name
-                        fh.write(rc_data.content.tobytes())
+                        fh.write(content)
+
                     rc_data_type = self.identify.fileinfo(rc_data_file, generate_hashes=False)["type"]
                     if rc_data_type == "unknown":
-                        continue
-                    if rc_data.has_name:
-                        rc_data_name = rc_data.name
+                        return
                     if not any(rc_data_type.startswith(x) for x in ["text/", "resource/"]):
                         self.request.add_extracted(
                             rc_data_file,
-                            rc_data_name or f"rc_data_{rc_data.offset}",
+                            name or f"rc_data_{node.offset}",
                             "Extracted from binary's RT_RCDATA resources",
                         )
                     else:
                         self.request.add_supplementary(
                             rc_data_file,
-                            rc_data_name or f"rc_data_{rc_data.offset}",
+                            name or f"rc_data_{node.offset}",
                             "Extracted from binary's RT_RCDATA resources",
                         )
+
+            recurse_rc_data(self.binary.resources_manager.get_node_type(lief.PE.RESOURCE_TYPES.RCDATA), "")
 
         sub_res = ResultTableSection("Summary")
         current_resource_type = ""
