@@ -1,0 +1,36 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "RunServiceOnce PE",
+            "type": "python",
+            "request": "launch",
+            "module": "assemblyline_v4_service.dev.run_service_once",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "-d",
+                "pe.pe.PE",
+                "${file}"
+            ],
+            "justMyCode": false,
+        },
+        {
+            "name": "[Service] PE - Privileged",
+            "type": "python",
+            "request": "launch",
+            "module": "assemblyline_v4_service.run_privileged_service",
+            "env": {
+                "SERVICE_MANIFEST_PATH": "service_manifest.yml",
+                "PRIVILEGED": "true",
+                "SERVICE_PATH": "pe.pe.PE",
+                "TASKING_DIR": "/tmp/PE"
+            },
+            "console": "internalConsole",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": false,
+        }
+    ]
+}

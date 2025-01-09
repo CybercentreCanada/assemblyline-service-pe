@@ -13,10 +13,12 @@ RESULTS_FOLDER = os.path.join(cwd, "tests", "results")
 SAMPLES_FOLDER = os.path.join(cwd, "tests", "samples")
 
 # Find which module we're working on
-for line in open("Dockerfile", "r").readlines():
-    if line.startswith("ENV SERVICE_PATH"):
-        module = line[17:].strip()
-        break
+module = os.environ.get("SERVICE_PATH")
+if not module:
+    for line in open("Dockerfile", "r").readlines():
+        if line.startswith("ENV SERVICE_PATH"):
+            module = line[17:].strip()
+            break
 
 # Initialize test helper
 service_class = load_module_by_path(module, cwd)
