@@ -874,6 +874,7 @@ class PE(ServiceBase):
         res.add_line(f"Timestamp: {export.timestamp} ({hr_timestamp})")
 
         sub_res = ResultSection("Entries", parent=res)
+        unparsed_forward_information = []
         for entry in export.entries:
             entry_dict = {
                 "address": entry.address,
@@ -896,10 +897,14 @@ class PE(ServiceBase):
                 }
             except UnicodeDecodeError:
                 del entry_dict["forward_information"]
-                heur = Heuristic(13)
-                heur_section = ResultSection(heur.name, heuristic=heur, parent=sub_res)
-                heur_section.add_line(f"Couldn't parse the forward information of {entry.name} ({entry.ordinal})")
+                unparsed_forward_information.append((entry.name, entry.ordinal))
             self.features["export"]["entries"].append(entry_dict)
+
+        if unparsed_forward_information:
+            heur = Heuristic(13)
+            heur_section = ResultSection(heur.name, heuristic=heur, parent=sub_res)
+            for entry_name, entry_ordinal in unparsed_forward_information:
+                heur_section.add_line(f"Couldn't parse the forward information of {entry_name} ({entry_ordinal})")
 
         if len(self.features["export"]["entries"]) > 100:
             heur = Heuristic(30)
