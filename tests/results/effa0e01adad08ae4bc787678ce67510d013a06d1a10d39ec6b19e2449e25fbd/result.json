@@ -1673,11 +1673,11 @@
         "body": [
           [
             "Languages",
-            "NEUTRAL, ENGLISH"
+            "ENGLISH"
           ],
           [
             "Sublanguages",
-            "ENGLISH_US, DEFAULT"
+            ""
           ]
         ],
         "body_config": {},
@@ -1691,7 +1691,6 @@
             "pe": {
               "resources": {
                 "language": [
-                  "NEUTRAL",
                   "ENGLISH"
                 ],
                 "name": [
@@ -1974,7 +1973,7 @@
           ],
           [
             "sublang",
-            "ENGLISH_US"
+            ""
           ],
           [
             "code_page",
@@ -2371,6 +2370,10 @@
     ],
     "supplementary": [
       {
+        "name": "features.json",
+        "sha256": "5ecc4e2b2129965acfe6ca5e7dae11786eab9d2f1ae49c1caab41fdbbb505f59"
+      },
+      {
         "name": "icon_4.ico",
         "sha256": "6d3012afea2d42ecb12b5a234f351beb3840d8a1de8154b11435cad637718237"
       },
@@ -2405,10 +2408,6 @@
       {
         "name": "icon_2.ico.thumb",
         "sha256": "e6bb4161d5a9ad5c3a34432681aa95a7a8b7da5a6ab9f3247c449d801a7a2e31"
-      },
-      {
-        "name": "features.json",
-        "sha256": "e99dcd01a59365daba088d1165b4f0a93ffead181fc497f59ed1bedefb4c4223"
       },
       {
         "name": "icon_4.ico.thumb",
@@ -2509,11 +2508,6 @@
           "heur_id": null,
           "signatures": [],
           "value": "ENGLISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "NEUTRAL"
         }
       ],
       "file.pe.resources.name": [

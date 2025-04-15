@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 500,
+    "score": 550,
     "sections": [
       {
         "auto_collapse": false,
@@ -1166,7 +1166,7 @@
           ],
           [
             "Sublanguages",
-            "ENGLISH_US"
+            ""
           ]
         ],
         "body_config": {},
@@ -1460,7 +1460,7 @@
           ],
           [
             "sublang",
-            "ENGLISH_US"
+            ""
           ],
           [
             "code_page",
@@ -2395,6 +2395,26 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Lief could not find relocations",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 37,
+          "score": 50,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No relocations found",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -2427,10 +2447,6 @@
         "sha256": "3d9bdd9214c4e06b35caa4409e10d306af0f1c1672c65d03ce57321e1ad1252b"
       },
       {
-        "name": "features.json",
-        "sha256": "57d1ed8ebf44fdc95209e83283390eb6430fadf8ec2f1e12bb54df907ede466d"
-      },
-      {
         "name": "certificate.1.1",
         "sha256": "7431e5f4c3c1ce4690774f0b61e05440883ba9a01ed00ba6abd7806ed3b118cf"
       },
@@ -2445,6 +2461,10 @@
       {
         "name": "certificate.1.5",
         "sha256": "9da69015c349c6c1897845ba3582ad70c88fa4293bdb6abe9c2bd2539279e63b"
+      },
+      {
+        "name": "features.json",
+        "sha256": "a9985cc08900a41745211ebdd9d44dc13d6f123e00ebe31ec9582f166c232866"
       },
       {
         "name": "certificate.1.2",
@@ -2482,6 +2502,11 @@
       {
         "attack_ids": [],
         "heur_id": 29,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 37,
         "signatures": []
       }
     ],

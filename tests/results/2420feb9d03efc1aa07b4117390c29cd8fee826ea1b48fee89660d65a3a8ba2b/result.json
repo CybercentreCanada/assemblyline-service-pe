@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 400,
+    "score": 500,
     "sections": [
       {
         "auto_collapse": false,
@@ -762,14 +762,34 @@
       },
       {
         "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 36,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No languages found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
         "body": [
           [
             "Languages",
-            "NEUTRAL"
+            ""
           ],
           [
             "Sublanguages",
-            "DEFAULT"
+            ""
           ]
         ],
         "body_config": {},
@@ -778,17 +798,7 @@
         "depth": 0,
         "heuristic": null,
         "promote_to": null,
-        "tags": {
-          "file": {
-            "pe": {
-              "resources": {
-                "language": [
-                  "NEUTRAL"
-                ]
-              }
-            }
-          }
-        },
+        "tags": {},
         "title_text": "Resources",
         "zeroize_on_tag_safe": false
       },
@@ -883,7 +893,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "cdd5cf6d0079342ef9fd78d5d125a65f14c06bdbf8aa6dcc6372193e578d893a"
+        "sha256": "8044613e1344b728361fbd0929b27f73ca2dab0e1bf031b2c9f07d275d2747a7"
       }
     ]
   },
@@ -897,6 +907,11 @@
       {
         "attack_ids": [],
         "heur_id": 11,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 36,
         "signatures": []
       },
       {
@@ -958,13 +973,6 @@
           "heur_id": null,
           "signatures": [],
           "value": "2012-09-05 15:05:50 +00:00 (UTC)"
-        }
-      ],
-      "file.pe.resources.language": [
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "NEUTRAL"
         }
       ],
       "file.pe.sections.hash": [

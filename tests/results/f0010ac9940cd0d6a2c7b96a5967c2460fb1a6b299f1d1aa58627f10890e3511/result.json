@@ -1022,11 +1022,11 @@
         "body": [
           [
             "Languages",
-            "NEUTRAL, ENGLISH, GERMAN"
+            "ENGLISH, GERMAN"
           ],
           [
             "Sublanguages",
-            "ENGLISH_UK, GERMAN, DEFAULT"
+            ""
           ]
         ],
         "body_config": {},
@@ -1040,7 +1040,6 @@
             "pe": {
               "resources": {
                 "language": [
-                  "NEUTRAL",
                   "ENGLISH",
                   "GERMAN"
                 ],
@@ -1245,7 +1244,7 @@
           ],
           [
             "sublang",
-            "GERMAN"
+            ""
           ],
           [
             "code_page",
@@ -1805,12 +1804,12 @@
         "sha256": "4693b3205cf0d3b792b999ba66134b36bc97d51cafd08924d9903af0254135d2"
       },
       {
-        "name": "features.json",
-        "sha256": "4b576772f2e2918d39fa3171ff5f12118f8d4e9f833ba3ad33a9f45d15b47997"
-      },
-      {
         "name": "certificate.1.2",
         "sha256": "5e6d2f88f617dc8b809aee712445a41b3cde26af874a221a9dc98ea1dc68e3d5"
+      },
+      {
+        "name": "features.json",
+        "sha256": "67d0f0918f7d00850854ff473208e4a4467193b121df0456b70b109c8acb7439"
       }
     ]
   },
@@ -1950,11 +1949,6 @@
           "heur_id": null,
           "signatures": [],
           "value": "GERMAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "NEUTRAL"
         }
       ],
       "file.pe.resources.name": [

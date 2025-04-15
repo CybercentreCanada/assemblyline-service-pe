@@ -1475,11 +1475,11 @@
         "body": [
           [
             "Languages",
-            "ENGLISH"
+            "ENGLISH, NEUTRAL"
           ],
           [
             "Sublanguages",
-            "ENGLISH_US"
+            ""
           ]
         ],
         "body_config": {},
@@ -1493,7 +1493,8 @@
             "pe": {
               "resources": {
                 "language": [
-                  "ENGLISH"
+                  "ENGLISH",
+                  "NEUTRAL"
                 ]
               }
             }
@@ -2014,7 +2015,7 @@
           ],
           [
             "sublang",
-            "DEFAULT"
+            ""
           ],
           [
             "code_page",
@@ -2814,6 +2815,10 @@
         "sha256": "51044706bd237b91b89b781337e6d62656c69f0fcffbe8e43741367948127862"
       },
       {
+        "name": "features.json",
+        "sha256": "5e4569650df9d80ced67f1e17a91eff8ff9392e226cf81b211abba05686a5d59"
+      },
+      {
         "name": "certificate.1.3",
         "sha256": "854b470dd8c92c875fe4a726ad1619507fc0bdcee9e936b5963daf0eb26426a3"
       },
@@ -2840,10 +2845,6 @@
       {
         "name": "icon_17.ico",
         "sha256": "d288acbc81da295b92f410ede5ab460901ab937afcce012a734c5e5ece86cd5c"
-      },
-      {
-        "name": "features.json",
-        "sha256": "d2e807fd3cb895de8a52a0acad6f9970160a59448d25c3c78b13914d765012da"
       },
       {
         "name": "icon_10.ico",
@@ -3535,6 +3536,11 @@
           "heur_id": null,
           "signatures": [],
           "value": "ENGLISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
         }
       ],
       "file.pe.sections.hash": [

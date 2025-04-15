@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 1,
+    "score": 101,
     "sections": [
       {
         "auto_collapse": false,
@@ -1028,14 +1028,34 @@
       },
       {
         "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 36,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No languages found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
         "body": [
           [
             "Languages",
-            "NEUTRAL"
+            ""
           ],
           [
             "Sublanguages",
-            "DEFAULT"
+            ""
           ]
         ],
         "body_config": {},
@@ -1048,9 +1068,6 @@
           "file": {
             "pe": {
               "resources": {
-                "language": [
-                  "NEUTRAL"
-                ],
                 "name": [
                   "DVCLAL",
                   "PACKAGEINFO"
@@ -1118,7 +1135,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "e32005ba7e5b24ef91ef4e68e324ef2525f3da20328c66b1452417b114b64796"
+        "sha256": "0bc5becdab6ac762b58ba265da714f346c073b79137ae2f15cdea1df8d320d5c"
       }
     ]
   },
@@ -1132,6 +1149,11 @@
       {
         "attack_ids": [],
         "heur_id": 26,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 36,
         "signatures": []
       }
     ],
@@ -1174,13 +1196,6 @@
           "heur_id": null,
           "signatures": [],
           "value": "1992-06-19 22:22:17 +00:00 (UTC)"
-        }
-      ],
-      "file.pe.resources.language": [
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "NEUTRAL"
         }
       ],
       "file.pe.resources.name": [

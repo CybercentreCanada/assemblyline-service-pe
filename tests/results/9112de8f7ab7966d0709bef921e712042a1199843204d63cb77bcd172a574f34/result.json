@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 600,
+    "score": 700,
     "sections": [
       {
         "auto_collapse": false,
@@ -777,14 +777,34 @@
       },
       {
         "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 36,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No languages found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
         "body": [
           [
             "Languages",
-            "CHINESE, NORWEGIAN"
+            ""
           ],
           [
             "Sublanguages",
-            "CHINESE_SIMPLIFIED, NORWEGIAN_NYNORSK"
+            ""
           ]
         ],
         "body_config": {},
@@ -797,17 +817,13 @@
           "file": {
             "pe": {
               "resources": {
-                "language": [
-                  "CHINESE",
-                  "NORWEGIAN"
-                ],
                 "name": [
                   "QQ)9",
-                  "H\\xe0\\xa1\\x8cOO",
-                  "HLSS\u0016IEFILE\u0001C\\xe0\\xa0\\x81D\"DY\u0000GL\\xc2\\x82\\xe1\\x81\\x94B\\xe2\\x82\\x82VL\u0007IT\\xc3\\x93\\xe4\\x81\\x86\\xe8\\x81\\x8bLE\\xc2\\x83ITS\\xd0\\x87SY[F\\xe1\\x81\\x89LD\u0003SY\\xe4\\x81\\x93\u0006DVCLAL\u000bPACKAGEIN",
-                  "\u0004\u0000\u0000\\xc4\\x80\u0000\u0000\u0000\u0000",
+                  "H\u084cOO",
+                  "HLSS\u0016IEFILE\u0001C\u0801D\"DY\u0000GL\u0082\u1054B\u2082VL\u0007IT\u00d3\u4046\u804bLE\u0083ITS\u0407SY[F\u1049LD\u0003SY\u4053\u0006DVCLAL\u000bPACKAGEIN",
+                  "\u0004\u0000\u0000\u0100\u0000\u0000\u0000\u0000",
                   "C",
-                  "IT\\xc3\\x93\\xe4\\x81\\x86\\xe8\\x81\\x8bLE"
+                  "IT\u00d3\u4046\u804bLE"
                 ]
               }
             }
@@ -822,7 +838,7 @@
           {
             "Entropy": 7.543070041988922,
             "SHA256": "ef0b6c39ebb7f580988638e0070113263c431f9a0219a5d6527ed11935f1c1fd",
-            "Type": "\u0004\u0000\u0000\\xc4\\x80\u0000\u0000\u0000\u0000"
+            "Type": "\u0004\u0000\u0000\u0100\u0000\u0000\u0000\u0000"
           },
           {
             "Entropy": 4.347158763041331,
@@ -943,7 +959,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "5f1906a9f217bd5744f7ad06f25ae11e686d402c7326d2f552828334dc8d22d9"
+        "sha256": "a65ed7555bf0e081b970ebc0e8df007f572d17f846e7674ba4db91fc1cefd244"
       }
     ]
   },
@@ -977,6 +993,11 @@
       {
         "attack_ids": [],
         "heur_id": 24,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 36,
         "signatures": []
       },
       {
@@ -1026,23 +1047,11 @@
           "value": "1992-06-19 22:22:17 +00:00 (UTC)"
         }
       ],
-      "file.pe.resources.language": [
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "CHINESE"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "NORWEGIAN"
-        }
-      ],
       "file.pe.resources.name": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "\u0004\u0000\u0000\\xc4\\x80\u0000\u0000\u0000\u0000"
+          "value": "\u0004\u0000\u0000\u0100\u0000\u0000\u0000\u0000"
         },
         {
           "heur_id": null,
@@ -1052,17 +1061,17 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "HLSS\u0016IEFILE\u0001C\\xe0\\xa0\\x81D\"DY\u0000GL\\xc2\\x82\\xe1\\x81\\x94B\\xe2\\x82\\x82VL\u0007IT\\xc3\\x93\\xe4\\x81\\x86\\xe8\\x81\\x8bLE\\xc2\\x83ITS\\xd0\\x87SY[F\\xe1\\x81\\x89LD\u0003SY\\xe4\\x81\\x93\u0006DVCLAL\u000bPACKAGEIN"
+          "value": "HLSS\u0016IEFILE\u0001C\u0801D\"DY\u0000GL\u0082\u1054B\u2082VL\u0007IT\u00d3\u4046\u804bLE\u0083ITS\u0407SY[F\u1049LD\u0003SY\u4053\u0006DVCLAL\u000bPACKAGEIN"
         },
         {
           "heur_id": null,
           "signatures": [],
-          "value": "H\\xe0\\xa1\\x8cOO"
+          "value": "H\u084cOO"
         },
         {
           "heur_id": null,
           "signatures": [],
-          "value": "IT\\xc3\\x93\\xe4\\x81\\x86\\xe8\\x81\\x8bLE"
+          "value": "IT\u00d3\u4046\u804bLE"
         },
         {
           "heur_id": null,

@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 400,
+    "score": 0,
     "sections": [
       {
         "auto_collapse": false,
@@ -903,6 +903,10 @@
             "PDB_70"
           ],
           [
+            "Filename",
+            "^\u046a<Z\u0010\\xa8\u001b\\x85\\xc6X+x\u053b\\xe6Zl\\xca\\xe3\\x8f\\xe7J\\xb4\u015e-\\xd8t\\x97\\xef\u0017Hk`\\xae\\xd5\u0434N\\x96\\xa3\u0016\\x8fhqtF\\xc59\\xc2\\xe0\u0082\\xb1"
+          ],
+          [
             "GUID",
             "e4e733fc-e77c-4ac2-9694-82417ca3d4"
           ]
@@ -920,31 +924,14 @@
                 "guid": [
                   "e4e733fc-e77c-4ac2-9694-82417ca3d4"
                 ]
-              }
+              },
+              "pdb_filename": [
+                "^\u046a<Z\u0010\\xa8\u001b\\x85\\xc6X+x\u053b\\xe6Zl\\xca\\xe3\\x8f\\xe7J\\xb4\u015e-\\xd8t\\x97\\xef\u0017Hk`\\xae\\xd5\u0434N\\x96\\xa3\u0016\\x8fhqtF\\xc59\\xc2\\xe0\u0082\\xb1"
+              ]
             }
           }
         },
         "title_text": "CODEVIEW",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 2,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 16,
-          "score": 400,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "Corrupted PDB filename",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1132,11 +1119,11 @@
         "body": [
           [
             "Languages",
-            "ENGLISH"
+            "ENGLISH, NEUTRAL"
           ],
           [
             "Sublanguages",
-            "ENGLISH_US"
+            ""
           ]
         ],
         "body_config": {},
@@ -1150,7 +1137,8 @@
             "pe": {
               "resources": {
                 "language": [
-                  "ENGLISH"
+                  "ENGLISH",
+                  "NEUTRAL"
                 ],
                 "name": [
                   "IDI_ICON1"
@@ -1446,7 +1434,7 @@
           ],
           [
             "sublang",
-            "DEFAULT"
+            ""
           ],
           [
             "code_page",
@@ -1686,7 +1674,7 @@
       },
       {
         "name": "features.json",
-        "sha256": "93408928d50d53a5712e98b8ce2a8cac14f5a9b7ba5265a92b47a0d949b65d9f"
+        "sha256": "792249298575d2624300d55bdfb4a685eb0a9f0b84d0d167f987be4aac84c413"
       },
       {
         "name": "icon_4.ico",
@@ -1707,13 +1695,7 @@
     ]
   },
   "results": {
-    "heuristics": [
-      {
-        "attack_ids": [],
-        "heur_id": 16,
-        "signatures": []
-      }
-    ],
+    "heuristics": [],
     "tags": {
       "file.pe.debug.guid": [
         {
@@ -1762,11 +1744,23 @@
           "value": "2018-12-10 09:40:45 +00:00 (UTC)"
         }
       ],
+      "file.pe.pdb_filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "^\u046a<Z\u0010\\xa8\u001b\\x85\\xc6X+x\u053b\\xe6Zl\\xca\\xe3\\x8f\\xe7J\\xb4\u015e-\\xd8t\\x97\\xef\u0017Hk`\\xae\\xd5\u0434N\\x96\\xa3\u0016\\x8fhqtF\\xc59\\xc2\\xe0\u0082\\xb1"
+        }
+      ],
       "file.pe.resources.language": [
         {
           "heur_id": null,
           "signatures": [],
           "value": "ENGLISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
         }
       ],
       "file.pe.resources.name": [

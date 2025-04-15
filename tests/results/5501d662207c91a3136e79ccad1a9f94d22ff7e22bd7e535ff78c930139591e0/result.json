@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 351,
+    "score": 401,
     "sections": [
       {
         "auto_collapse": false,
@@ -141,23 +141,23 @@
         "body": [
           [
             "sha512",
-            "deee8af806593dbdcfb015b9161a5b4d6376d15fb34b4278edb5ff660e7f81045c121bdb35661b7cd7ffda9f594287ba2a1301e29ab79ad75efeb98d161645d8"
+            "40ab19fd9aa70274786055a0ccd1bcca650c48ee3a416474fdb120adfefa3644b366c255bfe70d901217641f74fb8f8a1834323cf16cefe9d4c50c53ba336b7a"
           ],
           [
             "sha384",
-            "efd14b7002c230ac6b3ec5affdb881861321d956f7d9148843bfebd44a8f20a8a09c1d6e40d5c66ee647787185f8a68b"
+            "a46eefc304ef01c13edefcbc3d5637bcd8e8d0ea45678c9a7eacfe6b2b922a5dd308689dcbc2212e04e1bcb240eeb9dc"
           ],
           [
             "sha256",
-            "638f3314bd6395a8c4e10446a574d0ceddd606dd4c1eeb8d33f36cc7889563a4"
+            "6e34bacc8b3d15be7c659181754a7942fa2a77101cd25dbf12cc292661486f55"
           ],
           [
             "sha1",
-            "832f496dc4eafd17402a5afe0cacfadf369ec0b0"
+            "c488b63367e94ad4fcd13870bd9a6053f45490eb"
           ],
           [
             "md5",
-            "20bedf916fdf0200757202014ed88c1e"
+            "5c0b62b0b5f73d440df4697e0979adde"
           ]
         ],
         "body_config": {},
@@ -199,11 +199,11 @@
               ],
               [
                 "Offset",
-                8192
+                512
               ],
               [
                 "Size",
-                172032
+                168448
               ],
               [
                 "Virtual Size",
@@ -325,11 +325,11 @@
               ],
               [
                 "Offset",
-                180224
+                168960
               ],
               [
                 "Size",
-                8192
+                1536
               ],
               [
                 "Virtual Size",
@@ -407,11 +407,11 @@
               ],
               [
                 "Offset",
-                188416
+                170496
               ],
               [
                 "Size",
-                8192
+                512
               ],
               [
                 "Virtual Size",
@@ -632,6 +632,26 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Lief could not find relocations",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 37,
+          "score": 50,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No relocations found",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -640,16 +660,12 @@
       {
         "name": "overlay",
         "sha256": "1a1076705b8b311811866e60fb0a81e1ee59906001ffb8d2f66c8b7a8b7f7995"
-      },
-      {
-        "name": "5501d662207c91a3136e79ccad1a9f94d22ff7e22bd7e535ff78c930139591e0_unmapped",
-        "sha256": "73d0d0e7d63f1dee2e92f5db7ea2e3f6daac762afff12a3286774c6be296311e"
       }
     ],
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "4a1f576340dbf1bb97036ab60a2ac4e2206133aa57b94a53e441bb4aba00e035"
+        "sha256": "7fa491892c44c7995a822ba5647f27a9aff9d87daed8f9f4d010c81822852185"
       }
     ]
   },
@@ -678,6 +694,11 @@
       {
         "attack_ids": [],
         "heur_id": 36,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 37,
         "signatures": []
       }
     ],

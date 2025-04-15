@@ -1,0 +1,919 @@
+{
+  "extra": {
+    "drop_file": false,
+    "score": 100,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Timestamp",
+            "1231007558 (2009-01-03 18:32:38 +00:00 (UTC))"
+          ],
+          [
+            "Entrypoint",
+            "0x16ef"
+          ],
+          [
+            "Machine",
+            "0x14d"
+          ],
+          [
+            "Magic",
+            "PE32"
+          ],
+          [
+            "Image version",
+            "0.0"
+          ],
+          [
+            "Linker version",
+            "8.0"
+          ],
+          [
+            "Operating System version",
+            "4.0"
+          ],
+          [
+            "Subsystem version",
+            "4.0"
+          ],
+          [
+            "Subsystem",
+            "WINDOWS_GUI"
+          ],
+          [
+            "NX",
+            false
+          ],
+          [
+            "Position Independent",
+            false
+          ],
+          [
+            "Checksum",
+            "0x12345678"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  1231007558,
+                  "2009-01-03 18:32:38 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Hash",
+                "0cdba8dc18e6f7e62c380f8b0ced6e5d"
+              ]
+            ],
+            {}
+          ],
+          [
+            "TABLE",
+            [
+              {
+                "Compiler Information": "[LNK] VS2005 build 50727",
+                "Count": 1,
+                "ID": "0x0078c627"
+              },
+              {
+                "Compiler Information": "[ASM] VS2005 build 50727",
+                "Count": 5,
+                "ID": "0x007dc627"
+              },
+              {
+                "Compiler Information": "Unknown object 0x001220fc",
+                "Count": 1,
+                "ID": "0x001220fc"
+              },
+              {
+                "Compiler Information": "[IMP] Windows Server 2003 SP1 DDK build 4035 (*)",
+                "Count": 13,
+                "ID": "0x005d0fc3"
+              },
+              {
+                "Compiler Information": "[---] Unmarked objects",
+                "Count": 79,
+                "ID": "0x00010000"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00132359",
+                "Count": 2,
+                "ID": "0x00132359"
+              }
+            ],
+            {
+              "column_order": [
+                "ID",
+                "Compiler Information",
+                "Count"
+              ]
+            }
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "rich_header": {
+                "hash": [
+                  "0cdba8dc18e6f7e62c380f8b0ced6e5d"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Rich Headers - Key: 3143808182",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "sha512",
+            "0520d3046433a735f0f60ed2e26344ca0933e3b2250307d8a19fc2e88fdb603a24c580b38489ac835ee1c59adcc6075cd60132b55a5363917f14ce2fd6d08ba0"
+          ],
+          [
+            "sha384",
+            "f70697fe4d846b5575726843b39066050f63dfac75e2ced46a4f9f92bb350ba5c63ffc8fabb39fb95f3bfa7e30f5fce6"
+          ],
+          [
+            "sha256",
+            "06043831c33ee219f2eabc73fe7edb2ecd491eec76374a626d5282e90e2b7c71"
+          ],
+          [
+            "sha1",
+            "ab18547cc1cdfa9acc55cda341624be5773bb2c1"
+          ],
+          [
+            "md5",
+            "c25bc1e4982507220df8ea54a282ea59"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Optional header checksum",
+            "0x12345678"
+          ],
+          [
+            "Computed checksum",
+            "0x0000a13e"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 23,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Invalid optional header checksum",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                6.146354385173477
+              ],
+              [
+                "Entropy without padding",
+                6.239762178401074
+              ],
+              [
+                "Offset",
+                4096
+              ],
+              [
+                "Size",
+                20480
+              ],
+              [
+                "Virtual Size",
+                19932
+              ],
+              [
+                "Characteristics",
+                "CNT_CODE, MEM_EXECUTE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "42b4baf01973bc1af15af9f3e8db8b36"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  5.72397,
+                  5.21846,
+                  5.29475,
+                  4.94721,
+                  5.23644,
+                  4.95078,
+                  5.15753,
+                  5.39212,
+                  4.97824,
+                  5.08028,
+                  5.18686,
+                  4.8498,
+                  4.53942,
+                  6.03838,
+                  5.20915,
+                  5.12668,
+                  5.73375,
+                  5.41558,
+                  5.27137,
+                  5.42544,
+                  5.36201,
+                  4.73359,
+                  4.70489,
+                  5.21281,
+                  4.27054,
+                  4.64233,
+                  4.98057,
+                  4.75593,
+                  4.55596,
+                  4.55114,
+                  4.75586,
+                  4.93997,
+                  5.56289,
+                  4.75593,
+                  4.99708,
+                  5.32506,
+                  5.82534,
+                  5.11165,
+                  4.73499,
+                  5.378,
+                  5.74622,
+                  5.92136,
+                  4.75944,
+                  4.97183,
+                  4.85862,
+                  4.56242,
+                  4.87922,
+                  5.33065,
+                  2.7141,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "42b4baf01973bc1af15af9f3e8db8b36"
+                ],
+                "name": [
+                  ".text"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .text",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                3.109321492911656
+              ],
+              [
+                "Entropy without padding",
+                4.984797795321658
+              ],
+              [
+                "Offset",
+                24576
+              ],
+              [
+                "Size",
+                4096
+              ],
+              [
+                "Virtual Size",
+                2144
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "1cfa64099ea8eaefd8558062ed09032d"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  3.33938,
+                  2.912,
+                  3.16838,
+                  4.54241,
+                  4.70495,
+                  4.81513,
+                  5.12436,
+                  5.03692,
+                  2.59661,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "1cfa64099ea8eaefd8558062ed09032d"
+                ],
+                "name": [
+                  ".rdata"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rdata",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                2.3282948611848897
+              ],
+              [
+                "Entropy without padding",
+                2.535678070116013
+              ],
+              [
+                "Offset",
+                28672
+              ],
+              [
+                "Size",
+                4096
+              ],
+              [
+                "Virtual Size",
+                3696
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "37dd3d8f05c41dbf5c700d7899b2a17b"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  5.19837,
+                  1.39477,
+                  0.0,
+                  2.17851,
+                  0.0,
+                  0.61599,
+                  0.0,
+                  0.58729,
+                  0.0,
+                  0.76179,
+                  0.0,
+                  4.12887,
+                  3.4839,
+                  4.58087,
+                  0.0,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "37dd3d8f05c41dbf5c700d7899b2a17b"
+                ],
+                "name": [
+                  ".data"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .data",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                1.993112671045716
+              ],
+              [
+                "Entropy without padding",
+                6.344675822671724
+              ],
+              [
+                "Offset",
+                32768
+              ],
+              [
+                "Size",
+                4096
+              ],
+              [
+                "Virtual Size",
+                880
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "ad6c87c882cc3e7c7cbcca8488cba516"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  6.03267,
+                  5.60946,
+                  5.576,
+                  1.93663,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "ad6c87c882cc3e7c7cbcca8488cba516"
+                ],
+                "name": [
+                  ".reloc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .reloc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "imports": {
+                "fuzzy": [
+                  "48:7A1+Ciq0f6Rc9POQKQyX0lvrAbgIjECTSG3/:7A0CiTf6Rc9PqO66Gv"
+                ],
+                "imphash": [
+                  "bc693336eb032f28d1a96d7e1c5b895c"
+                ],
+                "sorted_fuzzy": [
+                  "48:vmjZMXOeEVwo2gIu1ZAg/vECjI0lXyTrAbf:v0ZMXT8wo2gIuvbhj"
+                ],
+                "sorted_sha1": [
+                  "0947ea95543fd08845d7e343d8a2349921a293cc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Imports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "3, 57",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "WS2_32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "strlen, memcpy, memcmp, strstr, RtlZeroMemory, RtlUnwind",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "ntdll.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "InternetReadFile, InternetOpenA, InternetCloseHandle",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "WININET.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "MapViewOfFile, UnmapViewOfFile, GetExitCodeThread, IsBadReadPtr, CreateFileMappingA, GetCommandLineA, lstrcpynA, WriteFile, WideCharToMultiByte, VirtualProtectEx, CloseHandle, CreateThread, DeleteCriticalSection, EnterCriticalSection, GetCurrentProcessId, GetModuleFileNameA, GetModuleHandleA, GetProcAddress, GlobalAlloc, GlobalFree, InitializeCriticalSection, LeaveCriticalSection, LoadLibraryA, Sleep, TerminateThread, WaitForSingleObject, lstrcatA, lstrcmpA, lstrcmpiA, lstrcpyA, lstrlenA, CreateFileA, CreateProcessA, DeleteFileA, VirtualFree, GetFileSize, GetStartupInfoA, GetSystemDirectoryA, GetTempFileNameA, GetTempPathA, MoveFileExA, ReadFile, VirtualAlloc",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "KERNEL32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "wsprintfA, SetTimer, SendMessageA, RegisterWindowMessageA, FindWindowA, UnhookWindowsHookEx, CallNextHookEx, KillTimer, GetWindowThreadProcessId, GetWindowTextA, SetWindowsHookExA, EnumWindows",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "USER32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "RegSetValueExA, RegCreateKeyExA, RegDeleteKeyA, RegDeleteValueA, RegOpenKeyExA, RegCloseKey, RegQueryValueExA",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "ADVAPI32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "StringFromGUID2",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "ole32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 35,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "PE file does not contain any resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Size",
+                0
+              ]
+            ],
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "361e5be69e3aa7f0032c58f5d616d7504a1510bf76cb335ae38328404f482495"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 23,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 35,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.pe.imports.fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "48:7A1+Ciq0f6Rc9POQKQyX0lvrAbgIjECTSG3/:7A0CiTf6Rc9PqO66Gv"
+        }
+      ],
+      "file.pe.imports.imphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "bc693336eb032f28d1a96d7e1c5b895c"
+        }
+      ],
+      "file.pe.imports.sorted_fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "48:vmjZMXOeEVwo2gIu1ZAg/vECjI0lXyTrAbf:v0ZMXT8wo2gIuvbhj"
+        }
+      ],
+      "file.pe.imports.sorted_sha1": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "0947ea95543fd08845d7e343d8a2349921a293cc"
+        }
+      ],
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 1231007558
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2009-01-03 18:32:38 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.rich_header.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "0cdba8dc18e6f7e62c380f8b0ced6e5d"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "1cfa64099ea8eaefd8558062ed09032d"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "37dd3d8f05c41dbf5c700d7899b2a17b"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "42b4baf01973bc1af15af9f3e8db8b36"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ad6c87c882cc3e7c7cbcca8488cba516"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".data"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rdata"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".reloc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".text"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
+}

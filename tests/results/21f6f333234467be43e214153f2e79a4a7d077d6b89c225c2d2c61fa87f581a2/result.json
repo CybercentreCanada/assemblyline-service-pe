@@ -913,11 +913,11 @@
         "body": [
           [
             "Languages",
-            "ENGLISH, CHINESE"
+            "CHINESE, ENGLISH"
           ],
           [
             "Sublanguages",
-            "ENGLISH_US, CHINESE_SIMPLIFIED"
+            ""
           ]
         ],
         "body_config": {},
@@ -931,8 +931,8 @@
             "pe": {
               "resources": {
                 "language": [
-                  "ENGLISH",
-                  "CHINESE"
+                  "CHINESE",
+                  "ENGLISH"
                 ]
               }
             }
@@ -1263,7 +1263,7 @@
           ],
           [
             "sublang",
-            "CHINESE_SIMPLIFIED"
+            ""
           ],
           [
             "code_page",
@@ -1565,6 +1565,56 @@
         "auto_collapse": false,
         "body": [
           [
+            "Version",
+            3
+          ],
+          [
+            "Subject",
+            "C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO SHA-1 Time Stamping Signer"
+          ],
+          [
+            "Issuer",
+            "C=US, ST=UT, L=Salt Lake City, O=The USERTRUST Network, OU=http://www.usertrust.com, CN=UTN-USERFirst-Object"
+          ],
+          [
+            "SHA1",
+            "03a5b14663eb12023091b84a6d6a68bc871de66b"
+          ],
+          [
+            "SHA256",
+            "df5aa7fac68d7b0abf52c404cb0587be2670d4bd8a289691043f5be17fc65373"
+          ],
+          [
+            "MD5",
+            "8fc601b2f501263060ac8d529d37a294"
+          ],
+          [
+            "Serial Number",
+            "1688f039255e638e69143907e6330b"
+          ],
+          [
+            "Valid From",
+            "2015-12-31T00:00:00"
+          ],
+          [
+            "Valid To",
+            "2019-07-09T18:40:36"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Certificate - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
             "TEXT",
             "The signature does not match the authentihash data found for sha1",
             {}
@@ -1603,7 +1653,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "This is probably an error. Less than two certificates were found : 0",
+        "body": "This is probably an error. Less than two certificates were found : 1",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1773,6 +1823,10 @@
         "sha256": "94c3a40f65be2cd0ec2a74f44f3054eb711e700505c5614e060e233004d064dd"
       },
       {
+        "name": "features.json",
+        "sha256": "aa66ce1e885ab66572b13cc2d2c87181cfc983219a025fa6c73df29b6f14a6b0"
+      },
+      {
         "name": "icon_4.ico",
         "sha256": "dc383766219116a1b76a018feeae1a0fcc52f4f9bdaf590f51ac9df3002a0b42"
       },
@@ -1789,6 +1843,10 @@
         "sha256": "dc383766219116a1b76a018feeae1a0fcc52f4f9bdaf590f51ac9df3002a0b42"
       },
       {
+        "name": "certificate.1.1",
+        "sha256": "df5aa7fac68d7b0abf52c404cb0587be2670d4bd8a289691043f5be17fc65373"
+      },
+      {
         "name": "icon_5.ico",
         "sha256": "dfd2bc79f8b643ded5c32d49e1f2dc93e4c50455068e07790c977464b0bf0b24"
       },
@@ -1803,10 +1861,6 @@
       {
         "name": "icon_2.ico.thumb",
         "sha256": "e16c7d5bb15b1683238660769d46613abb551a82cc8b8f820178b25485545194"
-      },
-      {
-        "name": "features.json",
-        "sha256": "f59951fd737c6f0a12170fb5eebac444194d2797e0d79c4b9df153d65f79809c"
       }
     ]
   },

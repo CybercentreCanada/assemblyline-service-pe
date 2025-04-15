@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 100,
+    "score": 200,
     "sections": [
       {
         "auto_collapse": false,
@@ -786,14 +786,34 @@
       },
       {
         "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 36,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No languages found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
         "body": [
           [
             "Languages",
-            "NEUTRAL"
+            ""
           ],
           [
             "Sublanguages",
-            "DEFAULT"
+            ""
           ]
         ],
         "body_config": {},
@@ -806,9 +826,6 @@
           "file": {
             "pe": {
               "resources": {
-                "language": [
-                  "NEUTRAL"
-                ],
                 "name": [
                   "DVCLAL"
                 ]
@@ -945,7 +962,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "4eeaba315295ff0029a3898373b835438cc2fa6c949cd8fd4b6067ba0d7e07f6"
+        "sha256": "33eefd7a08f0888ef5899c064b1a7123e13325d1e4063b51dd3c3bc10f51788a"
       }
     ]
   },
@@ -964,6 +981,11 @@
       {
         "attack_ids": [],
         "heur_id": 24,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 36,
         "signatures": []
       }
     ],
@@ -1006,13 +1028,6 @@
           "heur_id": null,
           "signatures": [],
           "value": "1970-01-01 00:00:00 +00:00 (UTC)"
-        }
-      ],
-      "file.pe.resources.language": [
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "NEUTRAL"
         }
       ],
       "file.pe.resources.name": [
