@@ -1038,7 +1038,7 @@
           ],
           [
             "Sublanguages",
-            "ENGLISH_US"
+            ""
           ]
         ],
         "body_config": {},
@@ -1585,7 +1585,7 @@
           ],
           [
             "Unauthenticated Attributes",
-            "GENERIC_TYPE"
+            "MS_COUNTER_SIGN"
           ]
         ],
         "body_config": {},
@@ -1944,6 +1944,19 @@
         "tags": {},
         "title_text": "No relocations found",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\n",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -1962,6 +1975,10 @@
       {
         "name": "icon_5.ico.thumb",
         "sha256": "02c7d8eee32ab3e8c50ad2b63a761e0c5682b6ab54225a13bd4434d21839d398"
+      },
+      {
+        "name": "features.json",
+        "sha256": "044848e361c2840dbee284c485b4dd98c38849bd2a9bbb84a4e17943998b76f1"
       },
       {
         "name": "icon_6.ico",
@@ -2042,10 +2059,6 @@
       {
         "name": "icon_12.ico",
         "sha256": "dffefc9ee15cfe9c336a4ed184fa7c10db31ae99f0524f406bfb0c7cc1ddfad7"
-      },
-      {
-        "name": "features.json",
-        "sha256": "e897cf71c0f1d977511fc0740a0a3e624e045ed57624ecf6359b1822fd970dca"
       },
       {
         "name": "certificate.1.3",

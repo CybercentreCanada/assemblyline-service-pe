@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 0,
+    "score": 250,
     "sections": [
       {
         "auto_collapse": false,
@@ -1650,7 +1650,7 @@
           ],
           [
             "Sublanguages",
-            "ENGLISH_US"
+            ""
           ]
         ],
         "body_config": {},
@@ -1862,7 +1862,7 @@
           ],
           [
             "sublang",
-            "ENGLISH_US"
+            ""
           ],
           [
             "code_page",
@@ -1990,6 +1990,59 @@
         "tags": {},
         "title_text": "Summary",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Lief could not find relocations",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 37,
+          "score": 50,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No relocations found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Relocation corrupted: BlockSize is out of bound the binary's virtual size",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Relocation corrupted: BlockSize is out of bound the binary's virtual size",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 13,
+          "score": 200,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Corrupted resources",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -2006,12 +2059,17 @@
       },
       {
         "name": "features.json",
-        "sha256": "c81e10e2bd88649969cea107adb149bfadb0bb6018beb365b98ddf4bee157d7f"
+        "sha256": "88bd5596348f14368e5e48a1e2f05c96d9bda7d5b68555993187badf5c8af6ac"
       }
     ]
   },
   "results": {
     "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 13,
+        "signatures": []
+      },
       {
         "attack_ids": [],
         "heur_id": 24,
@@ -2030,6 +2088,11 @@
       {
         "attack_ids": [],
         "heur_id": 34,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 37,
         "signatures": []
       }
     ],

@@ -57,11 +57,9 @@ ACCEPTED_ALGORITHMS = [
     "SHA_384_ECDSA",
     "SHA_512_ECDSA",
 ]
-cert_verification_entries = {
-    entry.__int__(): entry for entry, txt in lief.PE.x509.VERIFICATION_FLAGS.__entries.values()
-}
+cert_verification_entries = {entry.value: entry for entry in lief.PE.x509.VERIFICATION_FLAGS}
 
-accelerator_flags_entries = {entry.__int__(): entry for entry, txt in lief.PE.ACCELERATOR_FLAGS.__entries.values()}
+accelerator_flags_entries = {entry.value: entry for entry in lief.PE.ACCELERATOR_FLAGS}
 
 PACKED_SECTION_NAMES = ["UPX", "UPX0", "UPX1", "ASPack", "vmp0", "themida"]
 PACKED_SECTION_NAMES += [f".{x}" for x in PACKED_SECTION_NAMES]
@@ -82,10 +80,8 @@ def search_list_in_list(what, into):
 
 
 def from_msdos(msdos_t):
-    """
-    taken from https://0xc0decafe.com/malware-analyst-guide-to-pe-timestamps/ which was
-    taken from https://github.com/digitalsleuth/time_decode
-    """
+    # Taken from https://0xc0decafe.com/malware-analyst-guide-to-pe-timestamps/ which was
+    # taken from https://github.com/digitalsleuth/time_decode
     msdos = hex(msdos_t)[2:]
     binary = "{0:032b}".format(int(msdos, 16))
     stamp = [binary[:7], binary[7:11], binary[11:16], binary[16:21], binary[21:27], binary[27:32]]
@@ -228,10 +224,23 @@ def generate_checksum(filename, checksum_offset):
     return checksum + len(data)
 
 
-class PE(ServiceBase):
-    def __init__(self, config=None):
-        super().__init__(config)
+# handle PE machine type parsing in all cases - parse hex of type if it isn't identified by LIEF machinetype enum
+# https://github.com/lief-project/LIEF/issues/1170
+def parse_machine_type(header):
+    try:
+        return header.machine.name
+    except AttributeError:
+        return hex(header.machine)
 
+
+def get_lief_enum_name(enum):
+    try:
+        return enum.name
+    except (AttributeError, ValueError):
+        return enum
+
+
+class PE(ServiceBase):
     def start(self):
         self.log.debug("Starting PE")
         # Loading Rich header resolutions
@@ -302,8 +311,8 @@ class PE(ServiceBase):
                 if debug.timestamp != 0 and debug.timestamp != 0xFFFFFFFF:
                     timestamps.add(debug.timestamp)
                 # Will never trigger, but taken from https://0xc0decafe.com/malware-analyst-guide-to-pe-timestamps/
-                if debug.has_code_view and debug.code_view.cv_signature.name == "01BN":
-                    timestamps.add(debug.code_view.signature)
+                if isinstance(debug, lief.PE.CodeViewPDB) and debug.cv_signature.name == "01BN":
+                    timestamps.add(debug.signature)
 
         def recurse_resources(node):
             if isinstance(node, lief.PE.ResourceDirectory):
@@ -408,27 +417,17 @@ class PE(ServiceBase):
             res.add_lines(dataless_resources)
             self.file_res.add_section(res)
 
-
-    # handle PE machine type parsing in all cases - parse hex of type if it isn't identified by LIEF machinetype enum
-    # https://github.com/lief-project/LIEF/issues/1170
-    def parse_machine_type(self):
-        try:
-            return self.binary.header.machine.name
-        except ValueError as v:
-            # LIEF python returns actual value of unlisted machine type in the exception message str
-            return hex(int(str(v).split(' ')[0]))
-    
     def add_headers(self):
         # compute PE machine header feature. Called twice
-        pe_machine = self.parse_machine_type()
-        
-        self.features["name"] = os.path.basename(self.binary.name)
+        pe_machine = parse_machine_type(self.binary.header)
+
+        self.features["name"] = os.path.basename(self.file_path)  # Removed in 0.14.0
         self.features["format"] = self.binary.format.name
         self.features["imphash"] = lief.PE.get_imphash(self.binary, mode=lief.PE.IMPHASH_MODE.PEFILE)
         # Somehow, that is different from binary.entrypoint
         self.features["entrypoint"] = self.binary.optional_header.addressof_entrypoint
         self.features["header"] = {
-            "characteristics_hash": self.binary.header.characteristics.__int__(),
+            "characteristics_hash": self.binary.header.characteristics,
             "characteristics_list": [char.name for char in self.binary.header.characteristics_list],
             "machine": pe_machine,
             "numberof_sections": self.binary.header.numberof_sections,
@@ -487,7 +486,7 @@ class PE(ServiceBase):
             "oem_id": self.binary.dos_header.oem_id,
             "oem_info": self.binary.dos_header.oem_info,
             "overlay_number": self.binary.dos_header.overlay_number,
-            "used_bytes_in_the_last_page": self.binary.dos_header.used_bytes_in_the_last_page,
+            "used_bytes_in_the_last_page": self.binary.dos_header.used_bytes_in_last_page,
         }
 
         if self.binary.has_rich_header:
@@ -519,10 +518,18 @@ class PE(ServiceBase):
 
         if self.binary.has_tls:
             if self.binary.tls.has_section:
-                self.features["tls"] = {"section": self.binary.tls.section.name}
+                if isinstance(self.binary.tls.section.name, str):
+                    section_name = self.binary.tls.section.name
+                else:
+                    section_name = self.binary.tls.section.name.decode("utf-8", "backslashreplace")
+                self.features["tls"] = {"section": section_name}
             elif self.binary.tls.has_data_directory:
                 if self.binary.tls.directory.has_section:
-                    self.features["tls"] = {"section": self.binary.tls.directory.section.name}
+                    if isinstance(self.binary.tls.directory.section.name, str):
+                        section_name = self.binary.tls.directory.section.name
+                    else:
+                        section_name = self.binary.tls.directory.section.name.decode("utf-8", "backslashreplace")
+                    self.features["tls"] = {"section": section_name}
 
         # print(self.binary.imagebase) # Doesn't work as documented?
         self.features["position_independent"] = self.binary.is_pie
@@ -542,12 +549,16 @@ class PE(ServiceBase):
         # Somehow, that is different from binary.entrypoint
         res.add_item("Entrypoint", hex(self.binary.optional_header.addressof_entrypoint))
         res.add_item("Machine", pe_machine)
-        res.add_item("Magic", self.binary.optional_header.magic.name)
-        if self.binary.optional_header.magic.name == "???":
+        try:
+            magic_name = self.binary.optional_header.magic.name
+        except ValueError:
+            magic_name = "???"
+        res.add_item("Magic", magic_name)
+        if magic_name == "???":
             heur = Heuristic(18)
             heur_section = ResultOrderedKeyValueSection(heur.name, heuristic=heur)
-            heur_section.add_item("Magic Name", self.binary.optional_header.magic.name)
-            heur_section.add_item("Magic Value", self.binary.optional_header.magic.__int__())
+            heur_section.add_item("Magic Name", magic_name)
+            heur_section.add_item("Magic Value", self.binary.optional_header.magic.value)
             res.add_subsection(heur_section)
         res.add_item(
             "Image version",
@@ -684,8 +695,13 @@ class PE(ServiceBase):
                 full_section_data = bytearray(section.content)
 
             entropy_data = calculate_partition_entropy(BytesIO(full_section_data))
+            if isinstance(section.name, str):
+                section_name = section.name
+            else:
+                section_name = section.name.decode("utf-8", "backslashreplace")
+
             section_dict = {
-                "name": section.name,
+                "name": section_name,
                 "characteristics_hash": section.characteristics,
                 "characteristics_list": [char.name for char in section.characteristics_lists],
                 "entropy": entropy_data[0],
@@ -699,34 +715,34 @@ class PE(ServiceBase):
             }
             try:
                 if hasattr(section, "fullname"):
-                    section_dict["fullname"] = section.fullname
+                    section_dict["fullname"] = section.fullname.decode("utf-8", "backslashreplace")
             except UnicodeDecodeError:
                 pass
 
             self.features["sections"].append(section_dict)
 
-            section_section = ResultMultiSection(f"Section - {section.name}")
-            if section.name in PACKED_SECTION_NAMES:
+            section_section = ResultMultiSection(f"Section - {section_name}")
+            if section_name in PACKED_SECTION_NAMES:
                 heur = Heuristic(20)
                 heur_section = ResultSection(heur.name, heuristic=heur)
-                heur_section.add_line(f"Section name: {section.name}")
+                heur_section.add_line(f"Section name: {section_name}")
                 section_section.add_subsection(heur_section)
-            elif section.name.lower() in NON_STANDARD_SECTION_NAMES:
+            elif section_name.lower() in NON_STANDARD_SECTION_NAMES:
                 heur = Heuristic(34)
                 heur_section = ResultSection(heur.name, heuristic=heur)
-                heur_section.add_line(f"Section name: {section.name}")
+                heur_section.add_line(f"Section name: {section_name}")
                 section_section.add_subsection(heur_section)
             for malicious_section in MALICIOUS_SECTION_NAMES:
-                if section.name == malicious_section[0] and (
+                if section_name == malicious_section[0] and (
                     malicious_section[1] is None or section.characteristics == malicious_section[1]
                 ):
                     heur = Heuristic(21)
                     heur_section = ResultSection(heur.name, heuristic=heur)
-                    heur_section.add_line(f"Section name: {section.name}")
+                    heur_section.add_line(f"Section name: {section_name}")
                     if malicious_section[1] is not None:
                         heur_section.add_line(f"Characteristics: {', '.join(section_dict['characteristics_list'])}")
                     section_section.add_subsection(heur_section)
-            section_section.add_tag("file.pe.sections.name", section.name)
+            section_section.add_tag("file.pe.sections.name", section_name)
             section_text_section = OrderedKVSectionBody()
             section_text_section.add_item("Entropy", entropy_data[0])
             section_graph_section = GraphSectionBody()
@@ -737,7 +753,7 @@ class PE(ServiceBase):
                 heur = Heuristic(4)
                 heur_section = ResultMultiSection(heur.name, heuristic=heur)
                 heur_text_section = OrderedKVSectionBody()
-                heur_text_section.add_item("Section name", section.name)
+                heur_text_section.add_item("Section name", section_name)
                 heur_text_section.add_item("Entropy:", entropy_data[0])
                 heur_text_section.add_item("Entropy without padding", section.entropy)
                 heur_section.add_section_part(heur_text_section)
@@ -763,16 +779,16 @@ class PE(ServiceBase):
                 heur_text_body.add_line("Section could not be retrieved using the section's name.")
                 heur_section.add_section_part(heur_text_body)
                 heur_kv_body = OrderedKVSectionBody()
-                heur_kv_body.add_item("Section name", section.name)
+                heur_kv_body.add_item("Section name", section_name)
                 heur_section.add_section_part(heur_kv_body)
                 section_section.add_subsection(heur_section)
 
-            if section.name == ".text" and any(
+            if section_name == ".text" and any(
                 "EXECUTE".lower() in characteristic.lower() for characteristic in section_dict["characteristics_list"]
             ):
                 is_text_section_executable = True
 
-            elif section.name != ".text" and any(
+            elif section_name != ".text" and any(
                 "EXECUTE".lower() in characteristic.lower() for characteristic in section_dict["characteristics_list"]
             ):
                 are_non_text_sections_executable = True
@@ -820,23 +836,27 @@ class PE(ServiceBase):
             )
             sub_res.add_item("Timestamp", f"{debug.timestamp} ({hr_timestamp})")
             sub_res.add_item("Version", f"{debug.major_version}.{debug.minor_version}")
-            if debug.has_code_view:
+            if isinstance(debug, lief.PE.CodeViewPDB):
                 cv_dict = {
-                    "age": debug.code_view.age,
-                    "cv_signature": debug.code_view.cv_signature.name,
+                    "age": debug.age,
+                    "cv_signature": debug.cv_signature.name,
                     "guid": (
-                        f"{''.join([hex(x)[2:] for x in debug.code_view.signature[:4][::-1]])}-"
-                        f"{''.join([hex(x)[2:] for x in debug.code_view.signature[4:6][::-1]])}-"
-                        f"{''.join([hex(x)[2:] for x in debug.code_view.signature[6:8][::-1]])}-"
-                        f"{''.join([hex(x)[2:] for x in debug.code_view.signature[8:10]])}-"
-                        f"{''.join([hex(x)[2:] for x in debug.code_view.signature[10:]])}"
+                        f"{''.join([hex(x)[2:] for x in debug.signature[:4][::-1]])}-"
+                        f"{''.join([hex(x)[2:] for x in debug.signature[4:6][::-1]])}-"
+                        f"{''.join([hex(x)[2:] for x in debug.signature[6:8][::-1]])}-"
+                        f"{''.join([hex(x)[2:] for x in debug.signature[8:10]])}-"
+                        f"{''.join([hex(x)[2:] for x in debug.signature[10:]])}"
                     ),
                 }
-                sub_res.add_item("CV_Signature", debug.code_view.cv_signature.name)
+                sub_res.add_item("CV_Signature", debug.cv_signature.name)
                 try:
-                    cv_dict["filename"] = debug.code_view.filename
-                    sub_res.add_item("Filename", debug.code_view.filename)
-                    sub_res.add_tag("file.pe.pdb_filename", debug.code_view.filename)
+                    if isinstance(debug.filename, str):
+                        debug_filename = debug.filename
+                    else:
+                        debug_filename = debug.filename.decode("utf-8", "backslashreplace")
+                    cv_dict["filename"] = debug_filename
+                    sub_res.add_item("Filename", debug_filename)
+                    sub_res.add_tag("file.pe.pdb_filename", debug_filename)
                 except UnicodeDecodeError:
                     heur = Heuristic(16)
                     heur_section = ResultSection(heur.name, heuristic=heur)
@@ -844,13 +864,13 @@ class PE(ServiceBase):
                 sub_res.add_item("GUID", cv_dict["guid"])
                 sub_res.add_tag("file.pe.debug.guid", cv_dict["guid"])
                 debug_dict["code_view"] = cv_dict
-            if debug.has_pogo:
+            if isinstance(debug, lief.PE.Pogo):
                 debug_dict["pogo"] = {
                     "entries": [],
-                    "signature": debug.pogo.signature.name,
+                    "signature": debug.signature.name,
                 }
-                sub_sub_res = ResultSection(f"POGO - {debug.pogo.signature.name}")
-                for entry in debug.pogo.entries:
+                sub_sub_res = ResultSection(f"POGO - {debug.signature.name}")
+                for entry in debug.entries:
                     debug_dict["pogo"]["entries"].append(
                         {
                             "name": entry.name,
@@ -1019,7 +1039,7 @@ class PE(ServiceBase):
             ]
             load_configuration_dict["guard_cf_function_count"] = load_configuration.guard_cf_function_count
             load_configuration_dict["guard_cf_function_table"] = load_configuration.guard_cf_function_table
-            load_configuration_dict["guard_flags"] = load_configuration.guard_flags.name
+            load_configuration_dict["guard_flags"] = get_lief_enum_name(load_configuration.guard_flags)
 
         def set_config_v2():
             set_config_v1()
@@ -1097,19 +1117,12 @@ class PE(ServiceBase):
             ResultSection(heur.name, heuristic=heur, parent=self.file_res)
             return
 
+        # TODO: Find all the langs/sublangs
         self.features["resources_manager"] = {
-            "langs_available": [lang.name for lang in self.binary.resources_manager.langs_available],
-            "sublangs_available": [lang.name for lang in self.binary.resources_manager.sublangs_available],
+            "langs_available": [],
+            "sublangs_available": [],
         }
         res = ResultOrderedKeyValueSection("Resources")
-        res.add_item("Languages", ", ".join(self.features["resources_manager"]["langs_available"]))
-        for lang in self.features["resources_manager"]["langs_available"]:
-            res.add_tag("file.pe.resources.language", lang)
-        res.add_item("Sublanguages", ", ".join(self.features["resources_manager"]["sublangs_available"]))
-
-        if not self.features["resources_manager"]["langs_available"]:
-            heur = Heuristic(36)
-            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
 
         if self.binary.resources_manager.has_accelerator:
             self.features["resources_manager"]["accelerators"] = []
@@ -1120,6 +1133,8 @@ class PE(ServiceBase):
                 }
                 try:
                     accelerator_dict["ansi"] = lief.PE.ACCELERATOR_VK_CODES(accelerator.ansi).name
+                except ValueError:
+                    accelerator_dict["ansi"] = "???"
                 except TypeError:
                     pass
                 try:
@@ -1134,21 +1149,33 @@ class PE(ServiceBase):
             corrupted_dialog_section = None
             dialogs_list = []
             for dialog in self.binary.resources_manager.dialogs:
+                try:
+                    dialog_lang = lief.PE.RESOURCE_LANGS(dialog.lang).name
+                    if dialog_lang not in self.features["resources_manager"]["langs_available"]:
+                        self.features["resources_manager"]["langs_available"] = sorted(
+                            self.features["resources_manager"]["langs_available"] + [dialog_lang]
+                        )
+                except ValueError:
+                    dialog_lang = "???"
                 dialog_dict = {
                     "charset": dialog.charset,
                     "cx": dialog.cx,
                     "cy": dialog.cy,
-                    "dialogbox_style_list": [dialogbox_style.name for dialogbox_style in dialog.dialogbox_style_list],
+                    "dialogbox_style_list": sorted(
+                        [dialogbox_style.name for dialogbox_style in dialog.dialogbox_style_list]
+                    ),
                     "extended_style": str(dialog.extended_style),  # .name
-                    "extended_style_list": [extended_style.name for extended_style in dialog.extended_style_list],
+                    "extended_style_list": sorted(
+                        [extended_style.name for extended_style in dialog.extended_style_list]
+                    ),
                     "help_id": dialog.help_id,
                     "items": [],
-                    "lang": dialog.lang.name,
+                    "lang": dialog_lang,
                     "point_size": dialog.point_size,
                     "signature": dialog.signature,
                     "style": str(dialog.style),  # .name
-                    "style_list": [style.name for style in dialog.style_list],
-                    "sub_lang": dialog.sub_lang.name,
+                    "style_list": sorted([style.name for style in dialog.style_list]),
+                    "sub_lang": "",  # dialog.sub_lang.name,
                     "title": "",
                     "typeface": "",
                     "version": dialog.version,
@@ -1240,6 +1267,14 @@ class PE(ServiceBase):
                 icons = []
                 unshowable_icons = []
                 for idx, icon in enumerate(self.binary.resources_manager.icons):
+                    try:
+                        icon_lang = lief.PE.RESOURCE_LANGS(icon.lang).name
+                        if icon_lang not in self.features["resources_manager"]["langs_available"]:
+                            self.features["resources_manager"]["langs_available"] = sorted(
+                                self.features["resources_manager"]["langs_available"] + [icon_lang]
+                            )
+                    except ValueError:
+                        icon_lang = "???"
                     icons.append(
                         {
                             "icon_id": icon.id,
@@ -1247,8 +1282,8 @@ class PE(ServiceBase):
                             "planes": icon.planes,
                             "height": icon.height,
                             "width": icon.width,
-                            "lang": icon.lang.name,
-                            "sublang": icon.sublang.name,
+                            "lang": icon_lang,
+                            "sublang": "",  # icon.sublang.name,
                             # TODO: Add hash as a structure with values similar to the authentihash
                             # "hash": {"sha256": hashlib.sha256(bytearray(icon.pixels)).hexdigest()},
                         }
@@ -1257,7 +1292,7 @@ class PE(ServiceBase):
                         TableRow(
                             **{
                                 "ID": icon.id,
-                                "Lang": icon.lang.name,
+                                "Lang": icon_lang,
                                 "Size": f"{icon.height}x{icon.width}",
                                 "Size (bytes)": len(icon.pixels),
                                 "Saved as": f"icon_{idx}.ico",
@@ -1334,9 +1369,9 @@ class PE(ServiceBase):
                         "file_date_ms": version.fixed_file_info.file_date_MS,
                         "file_flags": version.fixed_file_info.file_flags,
                         "file_flags_mask": version.fixed_file_info.file_flags_mask,
-                        "file_os": version.fixed_file_info.file_os.name,
-                        "file_subtype": version.fixed_file_info.file_subtype.name,
-                        "file_type": version.fixed_file_info.file_type.name,
+                        "file_os": get_lief_enum_name(version.fixed_file_info.file_os),
+                        "file_subtype": get_lief_enum_name(version.fixed_file_info.file_subtype),
+                        "file_type": get_lief_enum_name(version.fixed_file_info.file_type),
                         "file_version_ls": version.fixed_file_info.file_version_LS,
                         "file_version_ms": version.fixed_file_info.file_version_MS,
                         "product_version_ls": version.fixed_file_info.product_version_LS,
@@ -1349,9 +1384,15 @@ class PE(ServiceBase):
                     sub_sub_res.add_item("file_date_MS", version.fixed_file_info.file_date_MS)
                     sub_sub_res.add_item("file_flags", version.fixed_file_info.file_flags)
                     sub_sub_res.add_item("file_flags_mask", version.fixed_file_info.file_flags_mask)
-                    sub_sub_res.add_item("file_os", version.fixed_file_info.file_os.name)
-                    sub_sub_res.add_item("file_subtype", version.fixed_file_info.file_subtype.name)
-                    sub_sub_res.add_item("file_type", version.fixed_file_info.file_type.name)
+                    sub_sub_res.add_item(
+                        "file_os", self.features["resources_manager"]["version"]["fixed_file_info"]["file_os"]
+                    )
+                    sub_sub_res.add_item(
+                        "file_subtype", self.features["resources_manager"]["version"]["fixed_file_info"]["file_subtype"]
+                    )
+                    sub_sub_res.add_item(
+                        "file_type", self.features["resources_manager"]["version"]["fixed_file_info"]["file_type"]
+                    )
                     sub_sub_res.add_item("file_version_LS", version.fixed_file_info.file_version_LS)
                     sub_sub_res.add_item("file_version_MS", version.fixed_file_info.file_version_MS)
                     sub_sub_res.add_item("product_version_LS", version.fixed_file_info.product_version_LS)
@@ -1381,10 +1422,16 @@ class PE(ServiceBase):
                             "items": {},
                         }
                         try:
-                            lancodeitem_dict["lang"] = langcodeitem.lang.name
-                            sub_sub_sub_res.add_item("lang", langcodeitem.lang.name)
-                            lancodeitem_dict["sublang"] = langcodeitem.sublang.name
-                            sub_sub_sub_res.add_item("sublang", langcodeitem.sublang.name)
+                            lang = lief.PE.RESOURCE_LANGS(langcodeitem.lang).name
+                            sublang = ""  # langcodeitem.sublang.name
+                            lancodeitem_dict["lang"] = lang
+                            sub_sub_sub_res.add_item("lang", lang)
+                            if lang not in self.features["resources_manager"]["langs_available"]:
+                                self.features["resources_manager"]["langs_available"] = sorted(
+                                    self.features["resources_manager"]["langs_available"] + [lang]
+                                )
+                            lancodeitem_dict["sublang"] = sublang
+                            sub_sub_sub_res.add_item("sublang", sublang)
                             lancodeitem_dict["code_page"] = langcodeitem.code_page.name
                             sub_sub_sub_res.add_item("code_page", langcodeitem.code_page.name)
                         except Exception:
@@ -1427,7 +1474,7 @@ class PE(ServiceBase):
                 sub_res.set_heuristic(13)
             res.add_subsection(sub_res)
 
-        if self.binary.resources_manager.has_type(lief.PE.RESOURCE_TYPES.RCDATA):
+        if self.binary.resources_manager.has_type(self.binary.resources_manager.TYPE.RCDATA):
 
             def recurse_rc_data(node, name):
                 if node.has_name:
@@ -1459,7 +1506,7 @@ class PE(ServiceBase):
                             "Extracted from binary's RT_RCDATA resources",
                         )
 
-            recurse_rc_data(self.binary.resources_manager.get_node_type(lief.PE.RESOURCE_TYPES.RCDATA), "")
+            recurse_rc_data(self.binary.resources_manager.get_node_type(self.binary.resources_manager.TYPE.RCDATA), "")
 
         sub_res = ResultTableSection("Summary")
         current_resource_type = ""
@@ -1475,7 +1522,10 @@ class PE(ServiceBase):
                     res.add_tag("file.pe.resources.name", node.name)
                 data["resource_id"] = node.id
                 if node.depth == 1:
-                    data["resource_type"] = lief.PE.RESOURCE_TYPES(node.id).name
+                    try:
+                        data["resource_type"] = self.binary.resources_manager.TYPE(node.id).name
+                    except ValueError:
+                        data["resource_type"] = "???"
                     nonlocal current_resource_type
                     current_resource_type = data["resource_type"]
                     if current_resource_type == "???" and node.has_name:
@@ -1521,10 +1571,19 @@ class PE(ServiceBase):
         self.features["resources"] = get_node_data(self.binary.resources)
         res.add_subsection(sub_res)
 
+        res.add_item("Languages", ", ".join(self.features["resources_manager"]["langs_available"]))
+        for lang in self.features["resources_manager"]["langs_available"]:
+            res.add_tag("file.pe.resources.language", lang)
+        res.add_item("Sublanguages", ", ".join(self.features["resources_manager"]["sublangs_available"]))
+
+        if not self.features["resources_manager"]["langs_available"]:
+            heur = Heuristic(36)
+            ResultSection(heur.name, heuristic=heur, parent=self.file_res)
+
         self.file_res.add_section(res)
 
     def add_signatures(self):
-        self.features["verify_signature"] = self.binary.verify_signature().name()
+        self.features["verify_signature"] = self.binary.verify_signature().name
 
         if not self.binary.has_signatures:
             return
@@ -1576,7 +1635,7 @@ class PE(ServiceBase):
                     "digest": signature.content_info.digest.hex(),
                     "content_type": signature.content_info.content_type,
                 },
-                "check": signature.check().name(),
+                "check": signature.check().name,
             }
 
             sub_res = ResultOrderedKeyValueSection(f"Signature - {signature_index + 1}")
@@ -1610,9 +1669,7 @@ class PE(ServiceBase):
                 sub_sub_res.add_item("Digest Algorithm", signer.digest_algorithm.name.replace("_", ""))
                 sub_sub_res.add_item("Authenticated Attributes", ", ".join(signer_dict["authenticated_attributes"]))
                 sub_sub_res.add_item("Unauthenticated Attributes", ", ".join(signer_dict["unauthenticated_attributes"]))
-                opus_info = [
-                    x for x in signer.authenticated_attributes if x.type == lief.PE.SIG_ATTRIBUTE_TYPES.SPC_SP_OPUS_INFO
-                ]
+                opus_info = [x for x in signer.authenticated_attributes if x.type == x.TYPE.SPC_SP_OPUS_INFO]
                 if opus_info and opus_info[0].program_name:
                     opus_info_res = ResultOrderedKeyValueSection("SPC_SP_OPUS_INFO attribute", parent=sub_sub_res)
                     opus_info_res.add_item("Program Name", opus_info[0].program_name)
@@ -1964,6 +2021,8 @@ class PE(ServiceBase):
         self.request = request
         self.file_path = request.file_path
 
+        lief_output_file = os.path.join(self.working_directory, "lief_output")
+        lief.logging.set_path(lief_output_file)
         try:
             self.binary = lief.parse(self.file_path)
         except Exception:  # (lief.bad_format, lief.read_out_of_bound):
@@ -2012,6 +2071,23 @@ class PE(ServiceBase):
         self.add_signatures()
         self.add_overlay()
         self.add_relocations()
+
+        if os.path.exists(lief_output_file):
+            lief_output = []
+            with open(lief_output_file, "r") as f:
+                lief_output = f.readlines()
+            if lief_output:
+                res = ResultSection("LIEF logging information.", parent=request.result)
+                for line in lief_output:
+                    line = line.rstrip()
+                    if line.endswith(" (0x-2700)"):
+                        line = line[:-10]
+                    line = line.rstrip("\x00")
+                    res.add_line(line)
+                    if "corrupted" in line and "directory of the node" not in line:
+                        heur = Heuristic(13)
+                        heur_section = ResultSection(heur.name, heuristic=heur, parent=res)
+                        heur_section.add_line(line)
 
         temp_path = os.path.join(self.working_directory, "features.json")
         with open(temp_path, "w") as f:

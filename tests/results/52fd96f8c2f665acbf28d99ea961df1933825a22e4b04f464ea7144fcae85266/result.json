@@ -641,11 +641,11 @@
         "body": [
           [
             "Languages",
-            "NEUTRAL, ENGLISH"
+            "NEUTRAL"
           ],
           [
             "Sublanguages",
-            "ENGLISH_US, DEFAULT"
+            ""
           ]
         ],
         "body_config": {},
@@ -659,8 +659,7 @@
             "pe": {
               "resources": {
                 "language": [
-                  "NEUTRAL",
-                  "ENGLISH"
+                  "NEUTRAL"
                 ],
                 "name": [
                   "CEUX",
@@ -1126,6 +1125,19 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -1158,12 +1170,12 @@
         "sha256": "5efacdecb516b18aae19799a5e99e2064d077c93db5db9e321d83918254a916a"
       },
       {
-        "name": "features.json",
-        "sha256": "661cebd6235e426467ea659c0061df040710be35a5d342181491745fe96403c1"
-      },
-      {
         "name": "certificate.1.2",
         "sha256": "aa2fb386ae0809d4ca16eefdf52bcf1beb37ac68e04f21625d316d09d82be735"
+      },
+      {
+        "name": "features.json",
+        "sha256": "c7f0247d20c829591d4273717727821d751c10998981e6cbe1cf52985e9723b4"
       }
     ]
   },
@@ -1293,11 +1305,6 @@
         }
       ],
       "file.pe.resources.language": [
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "ENGLISH"
-        },
         {
           "heur_id": null,
           "signatures": [],

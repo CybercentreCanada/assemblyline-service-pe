@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 900,
+    "score": 950,
     "sections": [
       {
         "auto_collapse": false,
@@ -180,7 +180,7 @@
               ],
               [
                 "Characteristics",
-                "CNT_CODE, MEM_EXECUTE, CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+                "CNT_CODE, CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE"
               ],
               [
                 "MD5",
@@ -410,7 +410,7 @@
               ],
               [
                 "Characteristics",
-                "CNT_CODE, MEM_EXECUTE, CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+                "CNT_CODE, CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE"
               ],
               [
                 "MD5",
@@ -1180,7 +1180,7 @@
               ],
               [
                 "Characteristics",
-                "CNT_INITIALIZED_DATA, MEM_READ, CNT_UNINITIALIZED_DATA, MEM_WRITE"
+                "CNT_INITIALIZED_DATA, CNT_UNINITIALIZED_DATA, MEM_READ, MEM_WRITE"
               ],
               [
                 "MD5",
@@ -1257,7 +1257,7 @@
               ],
               [
                 "Characteristics",
-                "CNT_CODE, MEM_EXECUTE, CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+                "CNT_CODE, CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE"
               ],
               [
                 "MD5",
@@ -1788,11 +1788,11 @@
         "body": [
           [
             "Languages",
-            "ENGLISH"
+            "ENGLISH, NEUTRAL"
           ],
           [
             "Sublanguages",
-            "ENGLISH_US"
+            ""
           ]
         ],
         "body_config": {},
@@ -1806,7 +1806,8 @@
             "pe": {
               "resources": {
                 "language": [
-                  "ENGLISH"
+                  "ENGLISH",
+                  "NEUTRAL"
                 ]
               }
             }
@@ -2058,7 +2059,7 @@
           ],
           [
             "sublang",
-            "DEFAULT"
+            ""
           ],
           [
             "code_page",
@@ -2557,6 +2558,39 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Lief could not find relocations",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 37,
+          "score": 50,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No relocations found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -2568,10 +2602,6 @@
       }
     ],
     "supplementary": [
-      {
-        "name": "features.json",
-        "sha256": "06d50f88afcf924d8b551a5247f2d44ff3d4c9b8bfcedd1328d55eac52afce3e"
-      },
       {
         "name": "icon_0.ico",
         "sha256": "4796a6d7a7a7bd8ba9af70ee95042c315b4e0abbd2c7e16fc271064b8758835c"
@@ -2587,6 +2617,10 @@
       {
         "name": "icon_3.ico.thumb",
         "sha256": "6859c4a3b34e0e00543cdf79798135f1f89db6771a1b7e38f5041b3085e63be5"
+      },
+      {
+        "name": "features.json",
+        "sha256": "98de45062b0855b238fa2671d7599e1458c4abbd4522fadd9f57ea139382a8d9"
       },
       {
         "name": "icon_1.ico",
@@ -2654,6 +2688,11 @@
       {
         "attack_ids": [],
         "heur_id": 33,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 37,
         "signatures": []
       }
     ],
@@ -2762,6 +2801,11 @@
           "heur_id": null,
           "signatures": [],
           "value": "ENGLISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
         }
       ],
       "file.pe.sections.hash": [

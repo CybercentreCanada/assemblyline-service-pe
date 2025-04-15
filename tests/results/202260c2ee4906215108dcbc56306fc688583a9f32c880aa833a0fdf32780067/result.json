@@ -1000,11 +1000,11 @@
         "body": [
           [
             "Languages",
-            "NEUTRAL, ENGLISH, DANISH"
+            "ENGLISH"
           ],
           [
             "Sublanguages",
-            "ENGLISH_UK, DEFAULT"
+            ""
           ]
         ],
         "body_config": {},
@@ -1018,9 +1018,7 @@
             "pe": {
               "resources": {
                 "language": [
-                  "NEUTRAL",
-                  "ENGLISH",
-                  "DANISH"
+                  "ENGLISH"
                 ],
                 "name": [
                   "KAFUSUCO",
@@ -1081,7 +1079,7 @@
           ],
           [
             "file_os",
-            "???"
+            5802129
           ],
           [
             "file_subtype",
@@ -1298,6 +1296,19 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "StringTable.szKey should be 8-wchars length\nFailed to parse StringFileInfo",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -1311,7 +1322,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "a04f5a58aa022b48bf1a9ae71aa9f6e5e9262ee0d1cc6f0384034faa60d8af92"
+        "sha256": "825225b2268e4d52f9463d92fe2b3f0f87c0ee0bc995465deccdb62675055ba0"
       }
     ]
   },
@@ -1373,17 +1384,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "DANISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
           "value": "ENGLISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "NEUTRAL"
         }
       ],
       "file.pe.resources.name": [

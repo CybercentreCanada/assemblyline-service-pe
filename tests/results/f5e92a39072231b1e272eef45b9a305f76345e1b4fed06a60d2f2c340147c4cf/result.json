@@ -534,7 +534,7 @@
           ],
           [
             "Sublanguages",
-            "DEFAULT"
+            ""
           ]
         ],
         "body_config": {},
@@ -765,7 +765,7 @@
           ],
           [
             "sublang",
-            "DEFAULT"
+            ""
           ],
           [
             "code_page",
@@ -987,30 +987,21 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": "bd5f8cce89b4a424c35d5cb56863cddb29d83ab7e0ab6801fa7101746415b948 was seen 97 times",
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 1,
-        "heuristic": null,
-        "promote_to": null,
-        "tags": {},
-        "title_text": "Multiple PE stacked",
-        "zeroize_on_tag_safe": false
       }
     ]
   },
   "files": {
     "extracted": [
       {
-        "name": "bd5f8cce89b4a424c35d5cb56863cddb29d83ab7e0ab6801fa7101746415b948_overlay",
-        "sha256": "0736382432a7479e4f8614229ba1358ac18ad12f05800271ccd485bb7e85a687"
+        "name": "overlay",
+        "sha256": "2b59dbf259ad7cf397d6ef10a18383a0a536eb6e74b3179f02803be4db781407"
       }
     ],
     "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "2217e2f0495128de1f8c40a9b88b7b9d631a92ce5b712b492120878a363e6b67"
+      },
       {
         "name": "icon_0.ico",
         "sha256": "3aa9456a642728af9a30c59922fd521f9eddb723514ebdfdefa3d5e49fab94bf"
@@ -1026,10 +1017,6 @@
       {
         "name": "icon_1.ico.thumb",
         "sha256": "93f74a7cecb07e73aff24090b91c9ce67080cc65f2ee634b260390bb755dafd4"
-      },
-      {
-        "name": "features.json",
-        "sha256": "a19253400b07bd3150177e650bb048a1e4fda8b35436ab5fd8f0780d6dda71cf"
       }
     ]
   },

@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 350,
+    "score": 650,
     "sections": [
       {
         "auto_collapse": false,
@@ -840,14 +840,34 @@
       },
       {
         "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 36,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No languages found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
         "body": [
           [
             "Languages",
-            "ENGLISH, KOREAN"
+            ""
           ],
           [
             "Sublanguages",
-            "ENGLISH_US, DEFAULT"
+            ""
           ]
         ],
         "body_config": {},
@@ -860,10 +880,6 @@
           "file": {
             "pe": {
               "resources": {
-                "language": [
-                  "ENGLISH",
-                  "KOREAN"
-                ],
                 "name": [
                   "IDR_BINARY"
                 ]
@@ -1133,6 +1149,39 @@
         "tags": {},
         "title_text": "No relocations found",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Accelerator resources might be corrupted\nGroup icon type should be equal to 1 (vs 53133)",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Accelerator resources might be corrupted",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 13,
+          "score": 200,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Corrupted resources",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -1146,7 +1195,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "fd2958489b5766a4bfb1f20e38a3e9818fd6ba5ca7809138359740d5cdf4ce52"
+        "sha256": "6c16c59a06fa06ef5862667ddc6ea393f61353f364ff89e4d85c39cea66e8a1c"
       }
     ]
   },
@@ -1155,6 +1204,11 @@
       {
         "attack_ids": [],
         "heur_id": 4,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 13,
         "signatures": []
       },
       {
@@ -1170,6 +1224,11 @@
       {
         "attack_ids": [],
         "heur_id": 24,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 36,
         "signatures": []
       },
       {
@@ -1217,18 +1276,6 @@
           "heur_id": null,
           "signatures": [],
           "value": "2013-10-14 12:10:28 +00:00 (UTC)"
-        }
-      ],
-      "file.pe.resources.language": [
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "ENGLISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "KOREAN"
         }
       ],
       "file.pe.resources.name": [

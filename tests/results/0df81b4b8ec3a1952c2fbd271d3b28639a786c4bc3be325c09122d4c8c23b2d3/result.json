@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 250,
+    "score": 450,
     "sections": [
       {
         "auto_collapse": false,
@@ -901,11 +901,11 @@
         "body": [
           [
             "Languages",
-            "ARABIC, CHINESE, CZECH, DANISH, GERMAN, GREEK, ENGLISH, SPANISH, FINNISH, FRENCH, HEBREW, HUNGARIAN, ITALIAN, JAPANESE, KOREAN, DUTCH, NORWEGIAN, POLISH, PORTUGUESE, RUSSIAN, SLOVAK, SWEDISH, THAI, TURKISH, SLOVENIAN"
+            "ARABIC, ENGLISH, JAPANESE, THAI"
           ],
           [
             "Sublanguages",
-            "ENGLISH_US, SWEDISH, CHINESE_SIMPLIFIED, ITALIAN, NORWEGIAN_BOKMAL, PORTUGUESE_BRAZILIAN, PORTUGUESE, FRENCH, DEFAULT, ARABIC_SAUDI_ARABIA, SPANISH_MEXICAN, GERMAN, SPANISH_MODERN"
+            ""
           ]
         ],
         "body_config": {},
@@ -920,30 +920,9 @@
               "resources": {
                 "language": [
                   "ARABIC",
-                  "CHINESE",
-                  "CZECH",
-                  "DANISH",
-                  "GERMAN",
-                  "GREEK",
                   "ENGLISH",
-                  "SPANISH",
-                  "FINNISH",
-                  "FRENCH",
-                  "HEBREW",
-                  "HUNGARIAN",
-                  "ITALIAN",
                   "JAPANESE",
-                  "KOREAN",
-                  "DUTCH",
-                  "NORWEGIAN",
-                  "POLISH",
-                  "PORTUGUESE",
-                  "RUSSIAN",
-                  "SLOVAK",
-                  "SWEDISH",
-                  "THAI",
-                  "TURKISH",
-                  "SLOVENIAN"
+                  "THAI"
                 ]
               }
             },
@@ -1149,7 +1128,7 @@
           ],
           [
             "sublang",
-            "ENGLISH_US"
+            ""
           ],
           [
             "code_page",
@@ -1852,6 +1831,39 @@
         "tags": {},
         "title_text": "No relocations found",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Accelerator resources might be corrupted\nGroup icon type should be equal to 1 (vs 0)",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Accelerator resources might be corrupted",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 13,
+          "score": 200,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Corrupted resources",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -1865,12 +1877,17 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "6d371fe0c97c3071a54424a2ea182c46be5095cb232b7f0205ef56ee80b4a565"
+        "sha256": "a8b202a9eb73fd442e190292b38207147e01f3c62a875ff0f595e81c760fd1a1"
       }
     ]
   },
   "results": {
     "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 13,
+        "signatures": []
+      },
       {
         "attack_ids": [],
         "heur_id": 13,
@@ -1937,62 +1954,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "CHINESE"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "CZECH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "DANISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "DUTCH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
           "value": "ENGLISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "FINNISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "FRENCH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "GERMAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "GREEK"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "HEBREW"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "HUNGARIAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "ITALIAN"
         },
         {
           "heur_id": null,
@@ -2002,57 +1964,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "KOREAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "NORWEGIAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "POLISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "PORTUGUESE"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "RUSSIAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "SLOVAK"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "SLOVENIAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "SPANISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "SWEDISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
           "value": "THAI"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "TURKISH"
         }
       ],
       "file.pe.rich_header.hash": [

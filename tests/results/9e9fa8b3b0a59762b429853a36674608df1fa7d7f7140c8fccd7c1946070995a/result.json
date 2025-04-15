@@ -915,11 +915,11 @@
           ],
           [
             "Authenticated Attributes",
-            "CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST, GENERIC_TYPE, SPC_SP_OPUS_INFO"
+            "CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST, MS_PLATFORM_MANIFEST_BINARY_ID, SPC_SP_OPUS_INFO"
           ],
           [
             "Unauthenticated Attributes",
-            "GENERIC_TYPE"
+            "MS_COUNTER_SIGN"
           ]
         ],
         "body_config": {},
@@ -1237,6 +1237,19 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -1249,12 +1262,12 @@
     ],
     "supplementary": [
       {
-        "name": "certificate.1.1",
-        "sha256": "4a838904e732a380e2856a9d6fee926e5c57eb59336292ac5d9e47c9b2c1ed13"
+        "name": "features.json",
+        "sha256": "1919a958a6ccf8ed526e484f3b5790484319750562eeb575ef87e064c431b994"
       },
       {
-        "name": "features.json",
-        "sha256": "90c8a644557ca949e36af8098c7e9384b92b74f602c503b5c0a7aee1bc357a76"
+        "name": "certificate.1.1",
+        "sha256": "4a838904e732a380e2856a9d6fee926e5c57eb59336292ac5d9e47c9b2c1ed13"
       },
       {
         "name": "certificate.1.2",

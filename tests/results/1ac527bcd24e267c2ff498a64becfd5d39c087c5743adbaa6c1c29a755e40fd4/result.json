@@ -839,11 +839,11 @@
         "body": [
           [
             "Languages",
-            "NEUTRAL, ARABIC, CATALAN, CHINESE, CZECH, DANISH, GERMAN, GREEK, ENGLISH, SPANISH, FINNISH, FRENCH, HEBREW, HUNGARIAN, ITALIAN, JAPANESE, KOREAN, DUTCH, NORWEGIAN, POLISH, PORTUGUESE, ROMANIAN, RUSSIAN, CROATIAN, SLOVAK, SWEDISH, THAI, TURKISH, SLOVENIAN, ESTONIAN, LATVIAN, LITHUANIAN, VIETNAMESE, BASQUE"
+            "ENGLISH, NEUTRAL"
           ],
           [
             "Sublanguages",
-            "ENGLISH_US, SWEDISH, CHINESE_SIMPLIFIED, ITALIAN, NORWEGIAN_BOKMAL, CROATIAN_CROATIA, PORTUGUESE_BRAZILIAN, PORTUGUESE, FRENCH, DEFAULT, ARABIC_SAUDI_ARABIA, GERMAN, SPANISH_MODERN"
+            ""
           ]
         ],
         "body_config": {},
@@ -857,40 +857,8 @@
             "pe": {
               "resources": {
                 "language": [
-                  "NEUTRAL",
-                  "ARABIC",
-                  "CATALAN",
-                  "CHINESE",
-                  "CZECH",
-                  "DANISH",
-                  "GERMAN",
-                  "GREEK",
                   "ENGLISH",
-                  "SPANISH",
-                  "FINNISH",
-                  "FRENCH",
-                  "HEBREW",
-                  "HUNGARIAN",
-                  "ITALIAN",
-                  "JAPANESE",
-                  "KOREAN",
-                  "DUTCH",
-                  "NORWEGIAN",
-                  "POLISH",
-                  "PORTUGUESE",
-                  "ROMANIAN",
-                  "RUSSIAN",
-                  "CROATIAN",
-                  "SLOVAK",
-                  "SWEDISH",
-                  "THAI",
-                  "TURKISH",
-                  "SLOVENIAN",
-                  "ESTONIAN",
-                  "LATVIAN",
-                  "LITHUANIAN",
-                  "VIETNAMESE",
-                  "BASQUE"
+                  "NEUTRAL"
                 ],
                 "name": [
                   "IDI_ICON3"
@@ -1251,7 +1219,7 @@
           ],
           [
             "sublang",
-            "ENGLISH_US"
+            ""
           ],
           [
             "code_page",
@@ -2027,7 +1995,7 @@
           ],
           [
             "Unauthenticated Attributes",
-            "GENERIC_TYPE"
+            "MS_COUNTER_SIGN"
           ]
         ],
         "body_config": {},
@@ -2222,12 +2190,29 @@
         "tags": {},
         "title_text": "No relocations found",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\n",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
   "files": {
     "extracted": [],
     "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "34aa5c1720f3570699b41da7bbab037e2cc1465471dda611cd3b622232bff9cf"
+      },
       {
         "name": "certificate.1.2",
         "sha256": "5051bd69e19d6cd036147949ac5bbcf99834561f119f60dc7938248d61c77bbd"
@@ -2299,10 +2284,6 @@
       {
         "name": "icon_1.ico.thumb",
         "sha256": "b108749ed9225ede9ffa214a90b9cc452b654c403e2d0a7c8ed36ebe8fb62eab"
-      },
-      {
-        "name": "features.json",
-        "sha256": "ee6ff8e08b7aa036b7aa2d704e1554a2d71f4d9428f72fa947885d21b8b77a50"
       },
       {
         "name": "icon_4.ico",
@@ -2429,172 +2410,12 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "ARABIC"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "BASQUE"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "CATALAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "CHINESE"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "CROATIAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "CZECH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "DANISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "DUTCH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
           "value": "ENGLISH"
         },
         {
           "heur_id": null,
           "signatures": [],
-          "value": "ESTONIAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "FINNISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "FRENCH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "GERMAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "GREEK"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "HEBREW"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "HUNGARIAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "ITALIAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "JAPANESE"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "KOREAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "LATVIAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "LITHUANIAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
           "value": "NEUTRAL"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "NORWEGIAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "POLISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "PORTUGUESE"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "ROMANIAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "RUSSIAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "SLOVAK"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "SLOVENIAN"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "SPANISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "SWEDISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "THAI"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "TURKISH"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "VIETNAMESE"
         }
       ],
       "file.pe.resources.name": [

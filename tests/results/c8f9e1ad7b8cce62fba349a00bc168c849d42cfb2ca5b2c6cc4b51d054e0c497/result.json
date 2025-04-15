@@ -722,7 +722,7 @@
               ],
               [
                 "Characteristics",
-                "CNT_CODE, MEM_NOT_PAGED, CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ"
+                "CNT_CODE, CNT_INITIALIZED_DATA, MEM_NOT_PAGED, MEM_EXECUTE, MEM_READ"
               ],
               [
                 "MD5",
@@ -1184,7 +1184,7 @@
           ],
           [
             "Unauthenticated Attributes",
-            "GENERIC_TYPE"
+            "MS_COUNTER_SIGN"
           ]
         ],
         "body_config": {},
@@ -1482,6 +1482,19 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -1494,12 +1507,12 @@
     ],
     "supplementary": [
       {
-        "name": "features.json",
-        "sha256": "28e43543a4dee8fe1d331ac672579096aaa4801d936c602f54d10e9ec2016b6b"
-      },
-      {
         "name": "certificate.1.1",
         "sha256": "8598d7b29edf3311d0859221d303daccca6379973faf9a92d78672a38f9247d4"
+      },
+      {
+        "name": "features.json",
+        "sha256": "9bf7df87924dd3c594f7846b6eb0ac2f6f646c97f222ac3461422c065dbf99d5"
       },
       {
         "name": "certificate.1.2",

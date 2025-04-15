@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 650,
+    "score": 700,
     "sections": [
       {
         "auto_collapse": false,
@@ -903,7 +903,7 @@
         "heuristic": null,
         "promote_to": null,
         "tags": {},
-        "title_text": "???",
+        "title_text": "RESERVED",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1060,11 +1060,11 @@
         "body": [
           [
             "Languages",
-            "ENGLISH"
+            "NEUTRAL"
           ],
           [
             "Sublanguages",
-            "ENGLISH_US"
+            ""
           ]
         ],
         "body_config": {},
@@ -1078,7 +1078,7 @@
             "pe": {
               "resources": {
                 "language": [
-                  "ENGLISH"
+                  "NEUTRAL"
                 ]
               }
             }
@@ -1220,7 +1220,7 @@
           ],
           [
             "sublang",
-            "DEFAULT"
+            ""
           ],
           [
             "code_page",
@@ -1366,7 +1366,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "INVALID_SIGNER found while verifying signature : VERIFICATION_FLAGS.INVALID_SIGNER | VERIFICATION_FLAGS.BAD_DIGEST | VERIFICATION_FLAGS.BAD_SIGNATURE",
+        "body": "INVALID_SIGNER found while verifying signature : INVALID_SIGNER|BAD_DIGEST|BAD_SIGNATURE",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1422,6 +1422,156 @@
         "auto_collapse": false,
         "body": [
           [
+            "Version",
+            3
+          ],
+          [
+            "Subject",
+            "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root CA"
+          ],
+          [
+            "Issuer",
+            "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root CA"
+          ],
+          [
+            "SHA1",
+            "0563b8630d62d75abbc8ab1e4bdfb5a899b24d43"
+          ],
+          [
+            "SHA256",
+            "3e9099b5015e8f486c00bcea9d111ee721faba355a89bcf1df69561e3dc6325c"
+          ],
+          [
+            "MD5",
+            "87ce0b7b2a0e4900e158719b37a89372"
+          ],
+          [
+            "Serial Number",
+            "0ce7e0e517d846fe8fe560fc1bf03039"
+          ],
+          [
+            "Valid From",
+            "2006-11-10T00:00:00"
+          ],
+          [
+            "Valid To",
+            "2031-11-10T00:00:00"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Certificate - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Version",
+            3
+          ],
+          [
+            "Subject",
+            "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code Signing CA-1"
+          ],
+          [
+            "Issuer",
+            "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root CA"
+          ],
+          [
+            "SHA1",
+            "409aa4a74a0cda7c0fee6bd0bb8823d16b5f1875"
+          ],
+          [
+            "SHA256",
+            "3c8b0d5c2adf2f7090a9b8ff452a4141833deaa05b5f44e9513db94bfdf1d6bd"
+          ],
+          [
+            "MD5",
+            "a1d6f2dd695847cf6b8dd001c7d76e72"
+          ],
+          [
+            "Serial Number",
+            "0fa8490615d700a0be2176fdc5ec6dbd"
+          ],
+          [
+            "Valid From",
+            "2011-02-11T12:00:00"
+          ],
+          [
+            "Valid To",
+            "2026-02-10T12:00:00"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Certificate - 2",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Version",
+            3
+          ],
+          [
+            "Subject",
+            "C=US, ST=CA, L=Mountain View, O=Mozilla Corporation, CN=Mozilla Corporation"
+          ],
+          [
+            "Issuer",
+            "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code Signing CA-1"
+          ],
+          [
+            "SHA1",
+            "9153980cc186df478f35229e11c9a7310449a1aa"
+          ],
+          [
+            "SHA256",
+            "553528d179f74cae83602194b20058353d65d44d3db3de9f1573b21b0a633417"
+          ],
+          [
+            "MD5",
+            "a4c05d5746223d8ff4533a15c484e84e"
+          ],
+          [
+            "Serial Number",
+            "0511eaf8579e2662be622de5ae0cd408"
+          ],
+          [
+            "Valid From",
+            "2013-09-17T00:00:00"
+          ],
+          [
+            "Valid To",
+            "2016-09-21T12:00:00"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Certificate - 3",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
             "TEXT",
             "The signature does not match the authentihash data found for sha1",
             {}
@@ -1460,7 +1610,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "This is probably an error. Less than two certificates were found : 0",
+        "body": "Possibly self signed.\nCould not identify a chain of trust back to a known root CA, but certificates presented were issued by different issuers",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1468,14 +1618,14 @@
         "heuristic": {
           "attack_ids": [],
           "frequency": 1,
-          "heur_id": 8,
-          "score": 50,
+          "heur_id": 5,
+          "score": 100,
           "score_map": {},
           "signatures": {}
         },
         "promote_to": null,
         "tags": {},
-        "title_text": "Less than two certificates found",
+        "title_text": "Unknown Root CA",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1566,6 +1716,19 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "No signer associated with the signature\nNo signer associated with the signature\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\n",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -1578,8 +1741,20 @@
     ],
     "supplementary": [
       {
+        "name": "certificate.1.2",
+        "sha256": "3c8b0d5c2adf2f7090a9b8ff452a4141833deaa05b5f44e9513db94bfdf1d6bd"
+      },
+      {
+        "name": "certificate.1.1",
+        "sha256": "3e9099b5015e8f486c00bcea9d111ee721faba355a89bcf1df69561e3dc6325c"
+      },
+      {
+        "name": "certificate.1.3",
+        "sha256": "553528d179f74cae83602194b20058353d65d44d3db3de9f1573b21b0a633417"
+      },
+      {
         "name": "features.json",
-        "sha256": "dea57a66c5c169f3d7382edda95eb510315ace016e9c49900d88bf61f03aedc8"
+        "sha256": "db2a86d6515017d418240bbaa52680c97ac4b487b6a169ce84f9a2faf2712ff8"
       }
     ]
   },
@@ -1592,7 +1767,7 @@
       },
       {
         "attack_ids": [],
-        "heur_id": 8,
+        "heur_id": 5,
         "signatures": []
       },
       {
@@ -1670,7 +1845,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "ENGLISH"
+          "value": "NEUTRAL"
         }
       ],
       "file.pe.rich_header.hash": [

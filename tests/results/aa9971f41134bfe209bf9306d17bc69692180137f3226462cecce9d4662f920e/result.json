@@ -608,7 +608,7 @@
               ],
               [
                 "Characteristics",
-                "CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_WRITE, MEM_EXECUTE, MEM_READ"
+                "CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_EXECUTE, MEM_READ, MEM_WRITE"
               ],
               [
                 "MD5",
@@ -805,7 +805,7 @@
         "heuristic": null,
         "promote_to": null,
         "tags": {},
-        "title_text": "???",
+        "title_text": "RESERVED",
         "zeroize_on_tag_safe": false
       },
       {
@@ -884,11 +884,11 @@
         "body": [
           [
             "Languages",
-            "ENGLISH"
+            "ENGLISH, NEUTRAL"
           ],
           [
             "Sublanguages",
-            "ENGLISH_US"
+            ""
           ]
         ],
         "body_config": {},
@@ -902,7 +902,8 @@
             "pe": {
               "resources": {
                 "language": [
-                  "ENGLISH"
+                  "ENGLISH",
+                  "NEUTRAL"
                 ]
               }
             }
@@ -1309,7 +1310,7 @@
           ],
           [
             "sublang",
-            "DEFAULT"
+            ""
           ],
           [
             "code_page",
@@ -1989,6 +1990,19 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -2018,6 +2032,10 @@
       {
         "name": "certificate.1.5",
         "sha256": "31a6d7325c3861ba092bc5d3d25a7d4fef62ebf9a3490f65897b87623ecc1295"
+      },
+      {
+        "name": "features.json",
+        "sha256": "40cd45706f5acb2cbdc6056c9a420568428273845c4b5583719f477d23a894be"
       },
       {
         "name": "icon_1.ico",
@@ -2090,10 +2108,6 @@
       {
         "name": "icon_7.ico.thumb",
         "sha256": "d701b0f3eca50b5130905149c96e7b9e19340a028011d2595793d6dc18d4c074"
-      },
-      {
-        "name": "features.json",
-        "sha256": "ecf63187d9ce38f3600444ef23671f9571f73b1f6ed497a95a60be2f5f047332"
       },
       {
         "name": "certificate.1.3",
@@ -2254,6 +2268,11 @@
           "heur_id": null,
           "signatures": [],
           "value": "ENGLISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
         }
       ],
       "file.pe.rich_header.hash": [

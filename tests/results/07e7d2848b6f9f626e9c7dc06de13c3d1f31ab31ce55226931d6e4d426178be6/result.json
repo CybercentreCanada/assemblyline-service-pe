@@ -728,7 +728,7 @@
           ],
           [
             "Sublanguages",
-            "CHINESE_SIMPLIFIED"
+            ""
           ]
         ],
         "body_config": {},
@@ -887,7 +887,7 @@
           ],
           [
             "sublang",
-            "CHINESE_SIMPLIFIED"
+            ""
           ],
           [
             "code_page",
@@ -1104,7 +1104,7 @@
         "body": [
           [
             "Program Name",
-            "\\xe4\\xba\\x9a\\xe6\\xb4\\xb2\\xe8\\xaf\\x9a\\xe4\\xbf\\xa1"
+            "\u4e9a\u6d32\u8bda\u4fe1"
           ]
         ],
         "body_config": {},
@@ -1119,7 +1119,7 @@
               "authenticode": {
                 "spc_sp_opus_info": {
                   "program_name": [
-                    "\\xe4\\xba\\x9a\\xe6\\xb4\\xb2\\xe8\\xaf\\x9a\\xe4\\xbf\\xa1"
+                    "\u4e9a\u6d32\u8bda\u4fe1"
                   ]
                 }
               }
@@ -1480,6 +1480,19 @@
         "tags": {},
         "title_text": "No relocations found",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -1501,7 +1514,7 @@
       },
       {
         "name": "features.json",
-        "sha256": "14c82262082c09714d8b93a50621ca3bddae59c1d110633b5a5e65d132adf926"
+        "sha256": "e4b16f110222a5f3115cdda775052910fa76324b8e837fea488c55070d9f485c"
       },
       {
         "name": "certificate.1.1",
@@ -1589,7 +1602,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "\\xe4\\xba\\x9a\\xe6\\xb4\\xb2\\xe8\\xaf\\x9a\\xe4\\xbf\\xa1"
+          "value": "\u4e9a\u6d32\u8bda\u4fe1"
         }
       ],
       "file.pe.imports.fuzzy": [

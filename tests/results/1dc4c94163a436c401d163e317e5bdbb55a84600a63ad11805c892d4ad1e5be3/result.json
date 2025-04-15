@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 0,
+    "score": 50,
     "sections": [
       {
         "auto_collapse": false,
@@ -731,11 +731,11 @@
         "body": [
           [
             "Languages",
-            "NEUTRAL, CHINESE"
+            "CHINESE"
           ],
           [
             "Sublanguages",
-            "CHINESE_SIMPLIFIED, DEFAULT"
+            ""
           ]
         ],
         "body_config": {},
@@ -749,7 +749,6 @@
             "pe": {
               "resources": {
                 "language": [
-                  "NEUTRAL",
                   "CHINESE"
                 ]
               }
@@ -916,7 +915,7 @@
           ],
           [
             "sublang",
-            "CHINESE_SIMPLIFIED"
+            ""
           ],
           [
             "code_page",
@@ -1120,6 +1119,39 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Lief could not find relocations",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 37,
+          "score": 50,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No relocations found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Group icon type should be equal to 1 (vs 0)\nString.wLength should not be null.",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -1133,7 +1165,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "b29775feeb9e96d549795b90b2ed53c0dd58a0ebdedd1d46757a8ec78e7129bf"
+        "sha256": "854953cfd4354f11a283befac56492ca806fb7623f7cf604b7af8a051562b3e6"
       }
     ]
   },
@@ -1142,6 +1174,11 @@
       {
         "attack_ids": [],
         "heur_id": 24,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 37,
         "signatures": []
       }
     ],
@@ -1191,11 +1228,6 @@
           "heur_id": null,
           "signatures": [],
           "value": "CHINESE"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "NEUTRAL"
         }
       ],
       "file.pe.rich_header.hash": [

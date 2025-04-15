@@ -1474,7 +1474,7 @@
           ],
           [
             "Sublanguages",
-            "ENGLISH_US"
+            ""
           ]
         ],
         "body_config": {},
@@ -1745,7 +1745,7 @@
           ],
           [
             "sublang",
-            "ENGLISH_US"
+            ""
           ],
           [
             "code_page",
@@ -1901,6 +1901,26 @@
         "promote_to": null,
         "tags": {},
         "title_text": "Signatures",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "OK found while verifying signature : OK",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 2,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Signed EXE",
         "zeroize_on_tag_safe": false
       },
       {
@@ -2297,6 +2317,19 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -2315,6 +2348,10 @@
       {
         "name": "icon_1.ico.thumb",
         "sha256": "322a2ede781d7843335480ff9bd5a3b6848cd9cdc9afeb93114ac6eee7e62cab"
+      },
+      {
+        "name": "features.json",
+        "sha256": "3ad047ec36fb3cd9af075b6367dedc84d0a1a97fae25dfee66ddd56f5c7d6b6a"
       },
       {
         "name": "icon_2.ico",
@@ -2341,10 +2378,6 @@
         "sha256": "726517ac933221fe08d8859810e5801b5df0c8e3313105668b42e6b6922c26cb"
       },
       {
-        "name": "features.json",
-        "sha256": "78079c57086d90248b12e13556accc9c6f1e518f7910fbb685880fcd9ce32628"
-      },
-      {
         "name": "certificate.1.1",
         "sha256": "a20ff65a0c17480a62c6a9244ebe700f6a47da1b3c9c88bfae58806899e49abd"
       }
@@ -2352,6 +2385,11 @@
   },
   "results": {
     "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 2,
+        "signatures": []
+      },
       {
         "attack_ids": [],
         "heur_id": 6,

@@ -325,7 +325,7 @@
               ],
               [
                 "Characteristics",
-                "CNT_CODE, MEM_SHARED, CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE"
+                "CNT_CODE, CNT_INITIALIZED_DATA, MEM_SHARED, MEM_EXECUTE, MEM_READ, MEM_WRITE"
               ],
               [
                 "MD5",
@@ -402,7 +402,7 @@
               ],
               [
                 "Characteristics",
-                "CNT_CODE, MEM_EXECUTE, CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+                "CNT_CODE, CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE"
               ],
               [
                 "MD5",
@@ -632,7 +632,7 @@
               ],
               [
                 "Characteristics",
-                "CNT_CODE, MEM_EXECUTE, CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+                "CNT_CODE, CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE"
               ],
               [
                 "MD5",
@@ -735,7 +735,7 @@
           ],
           [
             "Sublanguages",
-            "DEFAULT"
+            ""
           ]
         ],
         "body_config": {},
@@ -1011,12 +1011,29 @@
         "tags": {},
         "title_text": "No relocations found",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Can't read the padding content of section '.nsp1'",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
   "files": {
     "extracted": [],
     "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "061e6338b78b1419f0ad21767dccc546f14cdce25372c1472f9f3aee1bb14969"
+      },
       {
         "name": "icon_2.ico",
         "sha256": "0b4a7debd710a4a302464f4fca21da8e97ed383e3d99e4be2d2615b728db0bee"
@@ -1028,10 +1045,6 @@
       {
         "name": "icon_3.ico.thumb",
         "sha256": "0b4c9dfb58fb3eee818bedb56ca088c16c080d124f124c2c87c247f9bfcfa97d"
-      },
-      {
-        "name": "features.json",
-        "sha256": "a81e4e02e9939d67825b5192be7ece0e1e82547dd5d8d4ec423b1de2452a604d"
       },
       {
         "name": "icon_1.ico",

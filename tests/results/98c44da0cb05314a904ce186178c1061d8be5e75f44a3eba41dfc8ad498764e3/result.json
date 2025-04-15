@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 300,
+    "score": 350,
     "sections": [
       {
         "auto_collapse": false,
@@ -261,7 +261,7 @@
               ],
               [
                 "Characteristics",
-                "CNT_CODE, MEM_EXECUTE, CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+                "CNT_CODE, CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE"
               ],
               [
                 "MD5",
@@ -743,7 +743,7 @@
               ],
               [
                 "Characteristics",
-                "CNT_CODE, MEM_EXECUTE, CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+                "CNT_CODE, CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE"
               ],
               [
                 "MD5",
@@ -1089,6 +1089,26 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Lief could not find relocations",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 37,
+          "score": 50,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "No relocations found",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -1102,7 +1122,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "40deef84e5f8fea761d81126d6530cc9c0e90c2e658f8d209d64c25dee73b849"
+        "sha256": "8edeaf17c8ad8cde80a64a410866a52c4ead5ffe37423126a142b61ed6d6482f"
       }
     ]
   },
@@ -1131,6 +1151,11 @@
       {
         "attack_ids": [],
         "heur_id": 35,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 37,
         "signatures": []
       }
     ],
