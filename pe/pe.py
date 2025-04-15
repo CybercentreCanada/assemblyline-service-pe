@@ -80,10 +80,8 @@ def search_list_in_list(what, into):
 
 
 def from_msdos(msdos_t):
-    """
-    taken from https://0xc0decafe.com/malware-analyst-guide-to-pe-timestamps/ which was
-    taken from https://github.com/digitalsleuth/time_decode
-    """
+    # Taken from https://0xc0decafe.com/malware-analyst-guide-to-pe-timestamps/ which was
+    # taken from https://github.com/digitalsleuth/time_decode
     msdos = hex(msdos_t)[2:]
     binary = "{0:032b}".format(int(msdos, 16))
     stamp = [binary[:7], binary[7:11], binary[11:16], binary[16:21], binary[21:27], binary[27:32]]
@@ -243,9 +241,6 @@ def get_lief_enum_name(enum):
 
 
 class PE(ServiceBase):
-    def __init__(self, config=None):
-        super().__init__(config)
-
     def start(self):
         self.log.debug("Starting PE")
         # Loading Rich header resolutions
@@ -2026,6 +2021,8 @@ class PE(ServiceBase):
         self.request = request
         self.file_path = request.file_path
 
+        lief_output_file = os.path.join(self.working_directory, "lief_output")
+        lief.logging.set_path(lief_output_file)
         try:
             self.binary = lief.parse(self.file_path)
         except Exception:  # (lief.bad_format, lief.read_out_of_bound):
@@ -2074,6 +2071,23 @@ class PE(ServiceBase):
         self.add_signatures()
         self.add_overlay()
         self.add_relocations()
+
+        if os.path.exists(lief_output_file):
+            lief_output = []
+            with open(lief_output_file, "r") as f:
+                lief_output = f.readlines()
+            if lief_output:
+                res = ResultSection("LIEF logging information.", parent=request.result)
+                for line in lief_output:
+                    line = line.rstrip()
+                    if line.endswith(" (0x-2700)"):
+                        line = line[:-10]
+                    line = line.rstrip("\x00")
+                    res.add_line(line)
+                    if "corrupted" in line and "directory of the node" not in line:
+                        heur = Heuristic(13)
+                        heur_section = ResultSection(heur.name, heuristic=heur, parent=res)
+                        heur_section.add_line(line)
 
         temp_path = os.path.join(self.working_directory, "features.json")
         with open(temp_path, "w") as f:
