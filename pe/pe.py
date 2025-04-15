@@ -1166,16 +1166,20 @@ class PE(ServiceBase):
                     "charset": dialog.charset,
                     "cx": dialog.cx,
                     "cy": dialog.cy,
-                    "dialogbox_style_list": [dialogbox_style.name for dialogbox_style in dialog.dialogbox_style_list],
+                    "dialogbox_style_list": sorted(
+                        [dialogbox_style.name for dialogbox_style in dialog.dialogbox_style_list]
+                    ),
                     "extended_style": str(dialog.extended_style),  # .name
-                    "extended_style_list": [extended_style.name for extended_style in dialog.extended_style_list],
+                    "extended_style_list": sorted(
+                        [extended_style.name for extended_style in dialog.extended_style_list]
+                    ),
                     "help_id": dialog.help_id,
                     "items": [],
                     "lang": dialog_lang,
                     "point_size": dialog.point_size,
                     "signature": dialog.signature,
                     "style": str(dialog.style),  # .name
-                    "style_list": [style.name for style in dialog.style_list],
+                    "style_list": sorted([style.name for style in dialog.style_list]),
                     "sub_lang": "",  # dialog.sub_lang.name,
                     "title": "",
                     "typeface": "",
