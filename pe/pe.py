@@ -1413,7 +1413,7 @@ class PE(ServiceBase):
                         sub_sub_sub_res = ResultOrderedKeyValueSection(f"langcode_items {item_index + 1}")
                         sub_sub_sub_res.add_item("key", langcodeitem.key)
                         sub_sub_sub_res.add_item("type", langcodeitem.type)
-                        lancodeitem_dict = {
+                        langcodeitem_dict = {
                             "key": langcodeitem.key,
                             "type": langcodeitem.type,
                             "lang": None,
@@ -1424,33 +1424,33 @@ class PE(ServiceBase):
                         try:
                             lang = lief.PE.RESOURCE_LANGS(langcodeitem.lang).name
                             sublang = ""  # langcodeitem.sublang.name
-                            lancodeitem_dict["lang"] = lang
+                            langcodeitem_dict["lang"] = lang
                             sub_sub_sub_res.add_item("lang", lang)
                             if lang not in self.features["resources_manager"]["langs_available"]:
                                 self.features["resources_manager"]["langs_available"] = sorted(
                                     self.features["resources_manager"]["langs_available"] + [lang]
                                 )
-                            lancodeitem_dict["sublang"] = sublang
+                            langcodeitem_dict["sublang"] = sublang
                             sub_sub_sub_res.add_item("sublang", sublang)
-                            lancodeitem_dict["code_page"] = langcodeitem.code_page.name
-                            sub_sub_sub_res.add_item("code_page", langcodeitem.code_page.name)
+                            langcodeitem_dict["code_page"] = get_lief_enum_name(langcodeitem.code_page)
+                            sub_sub_sub_res.add_item("code_page", langcodeitem_dict["code_page"])
                         except Exception:
                             raise
                             sub_sub_sub_res.set_heuristic(13)
-                            del lancodeitem_dict["lang"]
-                            del lancodeitem_dict["sublang"]
-                            del lancodeitem_dict["code_page"]
+                            del langcodeitem_dict["lang"]
+                            del langcodeitem_dict["sublang"]
+                            del langcodeitem_dict["code_page"]
 
                         sub_sub_sub_sub_res = ResultOrderedKeyValueSection("items")
                         for k, v in sorted(langcodeitem.items.items()):
-                            lancodeitem_dict["items"][k] = v.decode()
+                            langcodeitem_dict["items"][k] = v.decode()
                             sub_sub_sub_sub_res.add_item(k, v.decode())
                             if k == "OriginalFilename":
                                 sub_sub_res.add_tag("file.pe.versions.filename", v.decode())
                             elif k == "FileDescription":
                                 sub_sub_res.add_tag("file.pe.versions.description", v.decode())
                         self.features["resources_manager"]["version"]["string_file_info"]["langcode_items"].append(
-                            lancodeitem_dict
+                            langcodeitem_dict
                         )
                         sub_sub_sub_res.add_subsection(sub_sub_sub_sub_res)
                         sub_sub_res.add_subsection(sub_sub_sub_res)
@@ -1627,7 +1627,7 @@ class PE(ServiceBase):
 
             signature_dict = {
                 "version": signature.version,
-                "algorithm": signature.digest_algorithm.name,
+                "algorithm": get_lief_enum_name(signature.digest_algorithm),
                 "signers": [],
                 "certificates": [],
                 "content_info": {
@@ -1650,18 +1650,18 @@ class PE(ServiceBase):
                     "version": signer.version,
                     "issuer": signer.issuer,
                     "serial_number": signer.serial_number.hex(),
-                    "encryption_algorithm": signer.encryption_algorithm.name,
-                    "digest_algorithm": signer.digest_algorithm.name,
+                    "encryption_algorithm": get_lief_enum_name(signer.encryption_algorithm),
+                    "digest_algorithm": get_lief_enum_name(signer.digest_algorithm),
                     "encrypted_digest": signer.encrypted_digest.hex(),
                     "cert": None,
                     "authenticated_attributes": [
                         # We could keep parsing each type of attribute
-                        attribute.type.name
+                        get_lief_enum_name(attribute.type)
                         for attribute in signer.authenticated_attributes
                     ],
                     "unauthenticated_attributes": [
                         # We could keep parsing each type of attribute
-                        attribute.type.name
+                        get_lief_enum_name(attribute.type)
                         for attribute in signer.unauthenticated_attributes
                     ],
                 }
