@@ -867,9 +867,9 @@ class PE(ServiceBase):
             if isinstance(debug, lief.PE.Pogo):
                 debug_dict["pogo"] = {
                     "entries": [],
-                    "signature": debug.signature.name,
+                    "signature": get_lief_enum_name(debug.signature),
                 }
-                sub_sub_res = ResultSection(f"POGO - {debug.signature.name}")
+                sub_sub_res = ResultSection(f"POGO - {debug_dict['pogo']['signature']}")
                 for entry in debug.entries:
                     debug_dict["pogo"]["entries"].append(
                         {
