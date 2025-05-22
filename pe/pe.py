@@ -828,9 +828,9 @@ class PE(ServiceBase):
                 "pointerto_rawdata": debug.pointerto_rawdata,
                 "sizeof_data": debug.sizeof_data,
                 "timestamp": debug.timestamp,
-                "type": debug.type.name,
+                "type": get_lief_enum_name(debug.type),
             }
-            sub_res = ResultOrderedKeyValueSection(f"{debug.type.name}")
+            sub_res = ResultOrderedKeyValueSection(f"{debug_dict['type']}")
             hr_timestamp = datetime.datetime.utcfromtimestamp(debug.timestamp).strftime(
                 "%Y-%m-%d %H:%M:%S +00:00 (UTC)"
             )
