@@ -871,14 +871,17 @@ class PE(ServiceBase):
                 }
                 sub_sub_res = ResultSection(f"POGO - {debug_dict['pogo']['signature']}")
                 for entry in debug.entries:
+                    entry_name = (
+                        entry.name if isinstance(entry.name, str) else entry.name.decode("utf-8", "backslashreplace")
+                    )
                     debug_dict["pogo"]["entries"].append(
                         {
-                            "name": entry.name,
+                            "name": entry_name,
                             "size": entry.size,
                             "start_rva": entry.start_rva,
                         }
                     )
-                    sub_sub_res.add_line(f"Name: {entry.name}, Size: {entry.size}")
+                    sub_sub_res.add_line(f"Name: {entry_name}, Size: {entry.size}")
                 sub_res.add_subsection(sub_sub_res)
             self.features["debugs"].append(debug_dict)
             res.add_subsection(sub_res)
