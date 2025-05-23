@@ -1346,7 +1346,11 @@ class PE(ServiceBase):
 
         if self.binary.resources_manager.has_manifest:
             try:
-                self.features["resources_manager"]["manifest"] = self.binary.resources_manager.manifest
+                self.features["resources_manager"]["manifest"] = (
+                    self.binary.resources_manager.manifest
+                    if isinstance(self.binary.resources_manager.manifest, str)
+                    else self.binary.resources_manager.manifest.decode("utf-8", "backslashreplace")
+                )
             except lief.not_found:
                 pass
 
