@@ -912,19 +912,22 @@ class PE(ServiceBase):
         sub_res = ResultSection("Entries", parent=res)
         unparsed_forward_information = []
         for entry in export.entries:
+            entry_name = entry.name
+            if isinstance(entry_name, bytes):
+                entry_name = entry_name.decode("utf-8", "backslashreplace")
             entry_dict = {
                 "address": entry.address,
                 "forward_information": None,
                 "function_rva": entry.function_rva,
                 "is_extern": entry.is_extern,
-                "name": entry.name,
+                "name": entry_name,
                 "ordinal": entry.ordinal,
                 # "size": entry.size, #In the docs, but not in the dir()
                 # "value": entry.value, #In the docs, but not in the dir()
             }
             if len(self.features["export"]["entries"]) < 100:
-                sub_res.add_line(f"Name: {entry.name}, ordinal: {entry.ordinal}")
-                sub_res.add_tag("file.pe.exports.function_name", entry.name)
+                sub_res.add_line(f"Name: {entry_name}, ordinal: {entry.ordinal}")
+                sub_res.add_tag("file.pe.exports.function_name", entry_name)
 
             try:
                 entry_dict["forward_information"] = {
@@ -933,7 +936,7 @@ class PE(ServiceBase):
                 }
             except UnicodeDecodeError:
                 del entry_dict["forward_information"]
-                unparsed_forward_information.append((entry.name, entry.ordinal))
+                unparsed_forward_information.append((entry_name, entry.ordinal))
             self.features["export"]["entries"].append(entry_dict)
 
         if unparsed_forward_information:

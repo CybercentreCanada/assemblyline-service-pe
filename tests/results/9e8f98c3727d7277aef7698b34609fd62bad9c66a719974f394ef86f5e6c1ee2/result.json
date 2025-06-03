@@ -1,0 +1,1033 @@
+{
+  "extra": {
+    "drop_file": false,
+    "score": 400,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Timestamp",
+            "1506601680 (2017-09-28 12:28:00 +00:00 (UTC))"
+          ],
+          [
+            "Entrypoint",
+            "0x2d460"
+          ],
+          [
+            "Machine",
+            "I386"
+          ],
+          [
+            "Magic",
+            "PE32"
+          ],
+          [
+            "Image version",
+            "0.0"
+          ],
+          [
+            "Linker version",
+            "6.0"
+          ],
+          [
+            "Operating System version",
+            "4.0"
+          ],
+          [
+            "Subsystem version",
+            "4.0"
+          ],
+          [
+            "Subsystem",
+            "WINDOWS_GUI"
+          ],
+          [
+            "NX",
+            false
+          ],
+          [
+            "Position Independent",
+            false
+          ],
+          [
+            "Checksum",
+            "0x00000000"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  1506601680,
+                  "2017-09-28 12:28:00 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Hash",
+                "09888c1120133710e6753f584d760d0d"
+              ]
+            ],
+            {}
+          ],
+          [
+            "TABLE",
+            [
+              {
+                "Compiler Information": "[LNK] VS98 (6.0) imp/exp build 8168",
+                "Count": 1,
+                "ID": "0x00041fe8"
+              },
+              {
+                "Compiler Information": "[C++] VS98 (6.0) build 8168",
+                "Count": 3,
+                "ID": "0x000b1fe8"
+              },
+              {
+                "Compiler Information": "[---] Unmarked objects (old)",
+                "Count": 1,
+                "ID": "0x00000000"
+              },
+              {
+                "Compiler Information": "[C++] VS98 (6.0) SP6 build 8804",
+                "Count": 56,
+                "ID": "0x000b2636"
+              },
+              {
+                "Compiler Information": "[---] Unmarked objects",
+                "Count": 100,
+                "ID": "0x00010000"
+              },
+              {
+                "Compiler Information": "[IMP] Windows Server 2003 SP1 DDK build 4035 (*)",
+                "Count": 17,
+                "ID": "0x005d0fc3"
+              },
+              {
+                "Compiler Information": "[ C ] VS98 (6.0) SP6 build 8804",
+                "Count": 15,
+                "ID": "0x000a2636"
+              },
+              {
+                "Compiler Information": "Unknown object 0x00041f6f",
+                "Count": 2,
+                "ID": "0x00041f6f"
+              },
+              {
+                "Compiler Information": "Unknown object 0x000e1c83",
+                "Count": 2,
+                "ID": "0x000e1c83"
+              },
+              {
+                "Compiler Information": "[ C ] Windows Server 2003 SP1 DDK build 4035 (*)",
+                "Count": 2,
+                "ID": "0x005f0fc3"
+              },
+              {
+                "Compiler Information": "Unknown object 0x000c1c7b",
+                "Count": 2,
+                "ID": "0x000c1c7b"
+              }
+            ],
+            {
+              "column_order": [
+                "ID",
+                "Compiler Information",
+                "Count"
+              ]
+            }
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "rich_header": {
+                "hash": [
+                  "09888c1120133710e6753f584d760d0d"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Rich Headers - Key: 4082573270",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "File Size",
+            35328
+          ],
+          [
+            "Virtual Size",
+            196608
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 24,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Mismatch file size",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "sha512",
+            "dd5accbab9bcf66a6944fc6a18df738d9eaea4d04a54d0057b88cf52fe7834ee6675a96deca2f10288ba3d7fde226e6e78b549f7111a5714ac82218b54147259"
+          ],
+          [
+            "sha384",
+            "ab270cab5262f2e0d04812c9f14134f5ef8eb12ea4e41d5c2cd0c75877a32591c8c5ff90b1cb52b52a16f2a453a0810f"
+          ],
+          [
+            "sha256",
+            "59699f81b81876ce61413e2610ce00736eb2fa972b3c3b33056483d81ff01b06"
+          ],
+          [
+            "sha1",
+            "aece4f1ae7fb5b65393165323967c4712c7f7558"
+          ],
+          [
+            "md5",
+            "2e846a95138bcdc7247535594819700a"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                0
+              ],
+              [
+                "Entropy without padding",
+                0.0
+              ],
+              [
+                "Offset",
+                1024
+              ],
+              [
+                "Size",
+                0
+              ],
+              [
+                "Virtual Size",
+                151552
+              ],
+              [
+                "Characteristics",
+                "CNT_UNINITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "d41d8cd98f00b204e9800998ecf8427e"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "d41d8cd98f00b204e9800998ecf8427e"
+                ],
+                "name": [
+                  "UPX0"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - UPX0",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Section name: UPX0",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 20,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Common packed section name",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                7.931727472742773
+              ],
+              [
+                "Entropy without padding",
+                7.9317274727427725
+              ],
+              [
+                "Offset",
+                1024
+              ],
+              [
+                "Size",
+                33280
+              ],
+              [
+                "Virtual Size",
+                36864
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_EXECUTE, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "7a8d565155b1e2c8b46d2f202882c1b7"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  7.69842,
+                  7.66168,
+                  7.6898,
+                  7.71932,
+                  7.69925,
+                  7.69507,
+                  7.6344,
+                  7.64903,
+                  7.6997,
+                  7.68365,
+                  7.70764,
+                  7.77161,
+                  7.65983,
+                  7.71779,
+                  7.6825,
+                  7.73396,
+                  7.69611,
+                  7.65027,
+                  7.66132,
+                  7.68785,
+                  7.66983,
+                  7.68038,
+                  7.65338,
+                  7.72077,
+                  7.72884,
+                  7.7303,
+                  7.6781,
+                  7.66521,
+                  7.70766,
+                  7.69164,
+                  7.66032,
+                  7.67629,
+                  7.67566,
+                  7.71037,
+                  7.68276,
+                  7.66325,
+                  7.75692,
+                  7.68852,
+                  7.74227,
+                  7.68484,
+                  7.71747,
+                  7.70646,
+                  7.69485,
+                  7.67383,
+                  7.42144,
+                  5.69332,
+                  5.72153,
+                  5.69744,
+                  6.03243,
+                  2.46997
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "7a8d565155b1e2c8b46d2f202882c1b7"
+                ],
+                "name": [
+                  "UPX1"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - UPX1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Section name: UPX1",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 20,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Common packed section name",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Section name",
+                "UPX1"
+              ],
+              [
+                "Entropy:",
+                7.931727472742773
+              ],
+              [
+                "Entropy without padding",
+                7.9317274727427725
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  7.69842,
+                  7.66168,
+                  7.6898,
+                  7.71932,
+                  7.69925,
+                  7.69507,
+                  7.6344,
+                  7.64903,
+                  7.6997,
+                  7.68365,
+                  7.70764,
+                  7.77161,
+                  7.65983,
+                  7.71779,
+                  7.6825,
+                  7.73396,
+                  7.69611,
+                  7.65027,
+                  7.66132,
+                  7.68785,
+                  7.66983,
+                  7.68038,
+                  7.65338,
+                  7.72077,
+                  7.72884,
+                  7.7303,
+                  7.6781,
+                  7.66521,
+                  7.70766,
+                  7.69164,
+                  7.66032,
+                  7.67629,
+                  7.67566,
+                  7.71037,
+                  7.68276,
+                  7.66325,
+                  7.75692,
+                  7.68852,
+                  7.74227,
+                  7.68484,
+                  7.71747,
+                  7.70646,
+                  7.69485,
+                  7.67383,
+                  7.42144,
+                  5.69332,
+                  5.72153,
+                  5.69744,
+                  6.03243,
+                  2.46997
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 4,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "High section entropy",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                2.754032709549633
+              ],
+              [
+                "Entropy without padding",
+                2.754032709549633
+              ],
+              [
+                "Offset",
+                34304
+              ],
+              [
+                "Size",
+                1024
+              ],
+              [
+                "Virtual Size",
+                4096
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ, MEM_WRITE"
+              ],
+              [
+                "MD5",
+                "087a198b95417370047b1c9c2ec94446"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  3.05088,
+                  4.87558,
+                  0.75912,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "087a198b95417370047b1c9c2ec94446"
+                ],
+                "name": [
+                  "UPX2"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - UPX2",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Name: 1045.dll\nVersion: 0.0\nTimestamp: 1506601680 (2017-09-28 12:28:00 +00:00 (UTC))",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "exports": {
+                "module_name": [
+                  "1045.dll"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Export",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Name: aaa, ordinal: 1\nName: \\xce\u013c\\xfe_\u0221\\xc0\\xa9\u0579\\xc3\\xfb, ordinal: 2\nName: \\xce\u013c\\xfe_\u0221\\xce\u013c\\xfe\\xc3\\xfb, ordinal: 3",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "exports": {
+                "function_name": [
+                  "aaa",
+                  "\\xce\u013c\\xfe_\u0221\\xc0\\xa9\u0579\\xc3\\xfb",
+                  "\\xce\u013c\\xfe_\u0221\\xce\u013c\\xfe\\xc3\\xfb"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Entries",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "imports": {
+                "fuzzy": [
+                  "6:dBJAEHGDzyRlbRmVjJtYbNU9OwYGbK146d:VA/DzqYjJtWiNYm7C"
+                ],
+                "imphash": [
+                  "0f4c3bac800647b8613c44f3dba81900"
+                ],
+                "sorted_fuzzy": [
+                  "3:sU9KTXzhAXwWBJAEPwEBJJ67EGV2EQaxRGUdJbJYbW6Llh8KS9JAw98tGRbKKARh:HGDYBJAEtmVCyRjJtYbNU9OwYGbK146d"
+                ],
+                "sorted_sha1": [
+                  "da2941b08ac2ba5cee31edb8f9581002a18255f7"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Imports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "LoadLibraryA, GetProcAddress, VirtualProtect, VirtualAlloc, VirtualFree",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "KERNEL32.DLL",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "atoi",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "MSVCRT.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "ShellExecuteA",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "SHELL32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "PathFindFileNameA",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "SHLWAPI.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "wsprintfA",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "USER32.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "InternetOpenA",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "WININET.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 35,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "PE file does not contain any resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Size",
+                0
+              ]
+            ],
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "3ad2b6c74539e62594a8c0ca27581f81b513c6759c2c53206ac6a86ad38dac12"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 4,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 20,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 20,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 24,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 35,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.pe.exports.function_name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "\\xce\u013c\\xfe_\u0221\\xc0\\xa9\u0579\\xc3\\xfb"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "\\xce\u013c\\xfe_\u0221\\xce\u013c\\xfe\\xc3\\xfb"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "aaa"
+        }
+      ],
+      "file.pe.exports.module_name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "1045.dll"
+        }
+      ],
+      "file.pe.imports.fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "6:dBJAEHGDzyRlbRmVjJtYbNU9OwYGbK146d:VA/DzqYjJtWiNYm7C"
+        }
+      ],
+      "file.pe.imports.imphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "0f4c3bac800647b8613c44f3dba81900"
+        }
+      ],
+      "file.pe.imports.sorted_fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "3:sU9KTXzhAXwWBJAEPwEBJJ67EGV2EQaxRGUdJbJYbW6Llh8KS9JAw98tGRbKKARh:HGDYBJAEtmVCyRjJtYbNU9OwYGbK146d"
+        }
+      ],
+      "file.pe.imports.sorted_sha1": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "da2941b08ac2ba5cee31edb8f9581002a18255f7"
+        }
+      ],
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 1506601680
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2017-09-28 12:28:00 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.rich_header.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "09888c1120133710e6753f584d760d0d"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "087a198b95417370047b1c9c2ec94446"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "7a8d565155b1e2c8b46d2f202882c1b7"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "UPX0"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "UPX1"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "UPX2"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
+}
