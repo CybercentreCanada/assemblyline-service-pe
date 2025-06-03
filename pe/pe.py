@@ -2081,11 +2081,13 @@ class PE(ServiceBase):
 
         if os.path.exists(lief_output_file):
             lief_output = []
-            with open(lief_output_file, "r") as f:
+            with open(lief_output_file, "rb") as f:
                 lief_output = f.readlines()
             if lief_output:
                 res = ResultSection("LIEF logging information.", parent=request.result)
                 for line in lief_output:
+                    if isinstance(line, bytes):
+                        line = line.decode("utf-8", "backslashreplace")
                     line = line.rstrip()
                     if line.endswith(" (0x-2700)"):
                         line = line[:-10]
