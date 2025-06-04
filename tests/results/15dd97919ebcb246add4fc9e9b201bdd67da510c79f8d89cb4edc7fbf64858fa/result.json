@@ -1783,7 +1783,13 @@
         "depth": 1,
         "heuristic": null,
         "promote_to": null,
-        "tags": {},
+        "tags": {
+          "file": {
+            "behavior": [
+              "PE with Expired Signer"
+            ]
+          }
+        },
         "title_text": "Expired signer found",
         "zeroize_on_tag_safe": false
       },
@@ -2364,6 +2370,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "2021-09-29T00:00:00"
+        }
+      ],
+      "file.behavior": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "PE with Expired Signer"
         }
       ],
       "file.pe.imports.fuzzy": [

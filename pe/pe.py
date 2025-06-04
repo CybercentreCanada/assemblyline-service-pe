@@ -1923,6 +1923,7 @@ class PE(ServiceBase):
 
         if expired_signers:
             expired_section = ResultSection(f"Expired signer{'s' if len(expired_signers) > 1 else ''} found")
+            expired_section.add_tag("file.behavior", "PE with Expired Signer")
             for signer_index, signer_serial in expired_signers:
                 expired_section.add_line(f"Signer {signer_index} ({signer_serial}) is expired.")
             res.add_subsection(expired_section)

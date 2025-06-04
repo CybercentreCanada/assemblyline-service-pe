@@ -1541,7 +1541,13 @@
         "depth": 1,
         "heuristic": null,
         "promote_to": null,
-        "tags": {},
+        "tags": {
+          "file": {
+            "behavior": [
+              "PE with Expired Signer"
+            ]
+          }
+        },
         "title_text": "Expired signer found",
         "zeroize_on_tag_safe": false
       },
@@ -2054,6 +2060,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "2018-01-31T15:40:37"
+        }
+      ],
+      "file.behavior": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "PE with Expired Signer"
         }
       ],
       "file.pe.authenticode.spc_sp_opus_info.program_name": [
