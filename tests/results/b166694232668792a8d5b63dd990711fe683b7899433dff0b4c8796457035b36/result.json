@@ -1534,22 +1534,15 @@
       },
       {
         "auto_collapse": false,
-        "body": "OK found while verifying signature : OK",
+        "body": "Signer 1 (100d34f8908adfca54bdcc60139a7da8) is expired.",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 2,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
+        "heuristic": null,
         "promote_to": null,
         "tags": {},
-        "title_text": "Signed EXE",
+        "title_text": "Expired signer found",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1989,11 +1982,6 @@
   },
   "results": {
     "heuristics": [
-      {
-        "attack_ids": [],
-        "heur_id": 2,
-        "signatures": []
-      },
       {
         "attack_ids": [],
         "heur_id": 11,

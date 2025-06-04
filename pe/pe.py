@@ -1607,21 +1607,9 @@ class PE(ServiceBase):
 
         res = ResultSection("Signatures")
 
-        if "INVALID_SIGNER" in self.features["verify_signature"]:
-            heur = Heuristic(10)
-            heur_section = ResultSection(heur.name, heuristic=heur)
-            heur_section.add_line(
-                f"INVALID_SIGNER found while verifying signature : {self.features['verify_signature']}"
-            )
-            res.add_subsection(heur_section)
-
-        if self.features["verify_signature"] == "OK":
-            heur = Heuristic(2)
-            heur_section = ResultSection(heur.name, heuristic=heur)
-            heur_section.add_line(f"OK found while verifying signature : {self.features['verify_signature']}")
-            res.add_subsection(heur_section)
-
         self.features["signatures"] = []
+        signature_res = []
+        expired_signers = []
         for signature_index, signature in enumerate(self.binary.signatures):
             extra_certs = []
 
@@ -1691,6 +1679,8 @@ class PE(ServiceBase):
                     recurse_cert(signer.cert.issuer)
                     extracted_cert_info = extract_cert_info(signer.cert, trusted_certs + extra_certs)
                     signer_dict["cert"] = extracted_cert_info
+                    if "BADCERT_EXPIRED" in extracted_cert_info["is_trusted"]:
+                        expired_signers.append((signer_index + 1, signer.serial_number.hex()))
 
                     sub_sub_sub_res = ResultOrderedKeyValueSection("Signer Certificate")
                     sub_sub_sub_res.add_item("Version", extracted_cert_info["version"])
@@ -1848,7 +1838,7 @@ class PE(ServiceBase):
                     f"This is probably an error. Less than two certificates were found : {len(signature.certificates)}"
                 )
                 sub_res.add_subsection(heur_section)
-                res.add_subsection(sub_res)
+                signature_res.append(sub_res)
                 continue
 
             denied_algorithm = []
@@ -1880,7 +1870,7 @@ class PE(ServiceBase):
                 sub_res.add_subsection(heur_section)
 
             if denied_algorithm or self_signed_signer:
-                res.add_subsection(sub_res)
+                signature_res.append(sub_res)
                 continue
 
             first_issuer = signature.certificates[0].issuer
@@ -1899,7 +1889,7 @@ class PE(ServiceBase):
                 heur_kv_body.add_item("Issuer", first_issuer)
                 heur_section.add_section_part(heur_kv_body)
                 sub_res.add_subsection(heur_section)
-                res.add_subsection(sub_res)
+                signature_res.append(sub_res)
                 continue
 
             if signature_dict["check"] != "OK":
@@ -1915,7 +1905,31 @@ class PE(ServiceBase):
                     ]
                 )
                 sub_res.add_subsection(heur_section)
-            res.add_subsection(sub_res)
+            signature_res.append(sub_res)
+
+        if "INVALID_SIGNER" in self.features["verify_signature"]:
+            heur = Heuristic(10)
+            heur_section = ResultSection(heur.name, heuristic=heur)
+            heur_section.add_line(
+                f"INVALID_SIGNER found while verifying signature : {self.features['verify_signature']}"
+            )
+            res.add_subsection(heur_section)
+
+        if not expired_signers and self.features["verify_signature"] == "OK":
+            heur = Heuristic(2)
+            heur_section = ResultSection(heur.name, heuristic=heur)
+            heur_section.add_line(f"OK found while verifying signature : {self.features['verify_signature']}")
+            res.add_subsection(heur_section)
+
+        if expired_signers:
+            expired_section = ResultSection(f"Expired signer{'s' if len(expired_signers) > 1 else ''} found")
+            for signer_index, signer_serial in expired_signers:
+                expired_section.add_line(f"Signer {signer_index} ({signer_serial}) is expired.")
+            res.add_subsection(expired_section)
+
+        for sig_res in signature_res:
+            res.add_subsection(sig_res)
+
         self.file_res.add_section(res)
 
     def add_overlay(self):
