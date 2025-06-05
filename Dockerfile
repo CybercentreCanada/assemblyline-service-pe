@@ -1,4 +1,6 @@
 ARG branch=latest
+FROM alpine:3 AS fetcher
+RUN wget --post-data "" -O /tmp/certcentral.csv https://certcentral.org/api/download_database
 FROM cccs/assemblyline-v4-service-base:$branch
 
 # Python path to the service class from your service directory
@@ -31,11 +33,11 @@ ARG version=1.0.0.dev1
 USER root
 
 # Always get the latest version of those files
-ADD https://raw.githubusercontent.com/dishather/richprint/master/comp_id.txt /opt/al_service/pe/comp_id.txt
-RUN chmod 664 /opt/al_service/pe/comp_id.txt
+ADD --chmod=644 https://raw.githubusercontent.com/dishather/richprint/master/comp_id.txt /opt/al_service/pe/comp_id.txt
 
-ADD https://bazaar.abuse.ch/export/csv/cscb/ /opt/al_service/pe/cscb.csv
-RUN chmod 664 /opt/al_service/pe/cscb.csv
+ADD --chmod=644 https://bazaar.abuse.ch/export/csv/cscb/ /opt/al_service/pe/cscb.csv
+
+COPY --chmod=644 --from=fetcher /tmp/certcentral.csv /opt/al_service/pe/certcentral.csv
 
 RUN sed -i -e "s/\$SERVICE_TAG/$version/g" service_manifest.yml
 

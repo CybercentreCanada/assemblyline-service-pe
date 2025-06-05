@@ -265,6 +265,21 @@ class PE(ServiceBase):
                 self.cscb["serial_number"][row[1]] = row
                 self.cscb[row[3]][row[2]] = row
 
+        # Loading Revocation list from CertCentral
+        self.certcentral = defaultdict(dict)
+        with open(os.path.join(pathlib.Path(__file__).parent.resolve(), "certcentral.csv"), "r") as csvfile:
+            certcentralreader = csv.reader(csvfile)
+            headers = next(certcentralreader)
+            serial_index = headers.index("Serial")
+            # It looks to only have MD5 thumbprints
+            md5_index = headers.index("Thumbprint")
+            self.certcentral_reason_index = headers.index("Malware")
+            for row in certcentralreader:
+                if row[0].startswith("#"):
+                    continue
+                self.cscb["serial_number"][row[serial_index]] = row
+                self.cscb["MD5"][row[md5_index]] = row
+
         self.identify = forge.get_identify(use_cache=os.environ.get("PRIVILEGED", "false").lower() == "true")
 
     def check_timestamps(self):
@@ -1749,6 +1764,40 @@ class PE(ServiceBase):
                             )
                             heur_section.add_tag("attribution.family", element[2])
                         sub_sub_sub_res.add_subsection(heur_section)
+
+                    certcentral = []
+                    if "MD5" in self.certcentral:
+                        # CertCentral is storing hashes in uppercase
+                        if md5_hex.upper() in self.certcentral["MD5"]:
+                            certcentral.append(
+                                (
+                                    "MD5",
+                                    md5_hex,
+                                    self.certcentral["MD5"][md5_hex.upper()][self.certcentral_reason_index],
+                                )
+                            )
+                    if "serial_number" in self.certcentral:
+                        # CertCentral is storing hashes in uppercase
+                        if extracted_cert_info["serial_number"].upper() in self.certcentral["serial_number"]:
+                            certcentral.append(
+                                (
+                                    "serial_number",
+                                    extracted_cert_info["serial_number"],
+                                    self.certcentral["serial_number"][extracted_cert_info["serial_number"].upper()][
+                                        self.certcentral_reason_index
+                                    ],
+                                )
+                            )
+                    if certcentral:
+                        heur = Heuristic(29)
+                        heur_section = ResultTableSection(heur.name, heuristic=heur)
+                        for element in cscb:
+                            heur_section.add_row(
+                                TableRow({"Type": element[0], "Value": element[1], "Family": element[2]})
+                            )
+                            heur_section.add_tag("attribution.family", element[2])
+                        sub_sub_sub_res.add_subsection(heur_section)
+
                     sub_sub_res.add_subsection(sub_sub_sub_res)
                 else:
                     heur = Heuristic(13)

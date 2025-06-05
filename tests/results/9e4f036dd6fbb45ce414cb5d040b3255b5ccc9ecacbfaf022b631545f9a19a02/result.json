@@ -1,0 +1,1769 @@
+{
+  "extra": {
+    "drop_file": false,
+    "score": 751,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "2363646602 (2044-11-25 00:30:02 +00:00 (UTC))\n3923062860 (2094-04-25 19:41:00 +00:00 (UTC))",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 11,
+          "score": 250,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Multiple different non-zero timestamps",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "2363646602 (2044-11-25 00:30:02 +00:00 (UTC))\n3923062860 (2094-04-25 19:41:00 +00:00 (UTC))",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 26,
+          "score": 1,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Future timestamp found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Timestamp",
+            "2363646602 (2044-11-25 00:30:02 +00:00 (UTC))"
+          ],
+          [
+            "Entrypoint",
+            "0x26cfa"
+          ],
+          [
+            "Machine",
+            "I386"
+          ],
+          [
+            "Magic",
+            "PE32"
+          ],
+          [
+            "Image version",
+            "0.0"
+          ],
+          [
+            "Linker version",
+            "48.0"
+          ],
+          [
+            "Operating System version",
+            "4.0"
+          ],
+          [
+            "Subsystem version",
+            "6.0"
+          ],
+          [
+            "Subsystem",
+            "WINDOWS_GUI"
+          ],
+          [
+            "NX",
+            true
+          ],
+          [
+            "Position Independent",
+            true
+          ],
+          [
+            "Checksum",
+            "0x00047b06"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "linker": {
+                "timestamp": [
+                  2363646602,
+                  "2044-11-25 00:30:02 +00:00 (UTC)"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Headers",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "sha512",
+            "ba54fcff7b34b359c8dbf179d080efe70953292aceeb01eb3f98aaa61dbcbc9b737f2c7dab329da782a0e1ea2ab5a5d28051aeb17f342cb4f44fa251663fc411"
+          ],
+          [
+            "sha384",
+            "5a55fa8dd6b4593346812a81772cb7dabda9d1f5354505128b76ac2d1bf9026944d2c3ba36e68cb0bde5a619b5687be3"
+          ],
+          [
+            "sha256",
+            "3f4276e99ede44790171090b3e574d80c403c587df148af4c6d7c67d13c2530d"
+          ],
+          [
+            "sha1",
+            "c16465c5700c21d541e23130e13ca870722af07a"
+          ],
+          [
+            "md5",
+            "a55e6ac74d84e6f7676603b8da11d527"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Authentihash",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Sections",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                5.910523944300646
+              ],
+              [
+                "Entropy without padding",
+                5.917436763622415
+              ],
+              [
+                "Offset",
+                512
+              ],
+              [
+                "Size",
+                151040
+              ],
+              [
+                "Virtual Size",
+                150784
+              ],
+              [
+                "Characteristics",
+                "CNT_CODE, MEM_EXECUTE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "b7e91f7f5fba5c73c9fa3553c78ff014"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  4.29413,
+                  5.24016,
+                  5.68833,
+                  4.90217,
+                  6.95435,
+                  7.92496,
+                  7.9177,
+                  7.90459,
+                  7.91235,
+                  7.89162,
+                  7.90593,
+                  5.92978,
+                  0.44285,
+                  2.15102,
+                  2.77512,
+                  3.24113,
+                  3.80172,
+                  3.88429,
+                  4.05596,
+                  3.77461,
+                  3.58764,
+                  4.10529,
+                  3.90587,
+                  3.89764,
+                  3.7844,
+                  3.82117,
+                  4.0341,
+                  3.85207,
+                  3.77882,
+                  3.44267,
+                  2.60135,
+                  1.96883,
+                  0.40881,
+                  1.1472,
+                  2.40734,
+                  4.85875,
+                  4.7626,
+                  4.82949,
+                  3.7902,
+                  1.68726,
+                  4.97762,
+                  5.21417,
+                  2.91632,
+                  5.53974,
+                  5.82612,
+                  7.90431,
+                  7.9225,
+                  7.91925,
+                  7.92597,
+                  7.46175
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "b7e91f7f5fba5c73c9fa3553c78ff014"
+                ],
+                "name": [
+                  ".text"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .text",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                5.38530344382091
+              ],
+              [
+                "Entropy without padding",
+                5.390672422985708
+              ],
+              [
+                "Offset",
+                151552
+              ],
+              [
+                "Size",
+                122880
+              ],
+              [
+                "Virtual Size",
+                122704
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_READ"
+              ],
+              [
+                "MD5",
+                "db3efc795b1196fa8ddb072e4d311c1e"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  7.29152,
+                  7.90677,
+                  7.9067,
+                  7.89221,
+                  7.90629,
+                  7.87619,
+                  7.8638,
+                  7.90173,
+                  6.69758,
+                  0.18772,
+                  1.11596,
+                  2.90124,
+                  2.53453,
+                  3.14671,
+                  3.96371,
+                  3.8523,
+                  3.74138,
+                  4.04707,
+                  3.60917,
+                  3.45227,
+                  3.90097,
+                  3.9959,
+                  3.83508,
+                  3.84446,
+                  3.64389,
+                  3.69432,
+                  3.86715,
+                  3.85134,
+                  3.66082,
+                  3.86531,
+                  3.4696,
+                  2.96577,
+                  1.93751,
+                  1.82372,
+                  0.33876,
+                  0.94305,
+                  1.70218,
+                  3.98913,
+                  4.66705,
+                  4.79023,
+                  4.65054,
+                  4.47705,
+                  1.76386,
+                  3.06428,
+                  5.17953,
+                  5.13846,
+                  3.20678,
+                  4.67925,
+                  4.6382,
+                  4.89229
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "db3efc795b1196fa8ddb072e4d311c1e"
+                ],
+                "name": [
+                  ".rsrc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .rsrc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Entropy",
+                0.10191042566270775
+              ],
+              [
+                "Entropy without padding",
+                1.9473387961875537
+              ],
+              [
+                "Offset",
+                274432
+              ],
+              [
+                "Size",
+                512
+              ],
+              [
+                "Virtual Size",
+                12
+              ],
+              [
+                "Characteristics",
+                "CNT_INITIALIZED_DATA, MEM_DISCARDABLE, MEM_READ"
+              ],
+              [
+                "MD5",
+                "6b52c467ee740ef05e82ec8fa718880d"
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  0.18415,
+                  0.0
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "sections": {
+                "hash": [
+                  "6b52c467ee740ef05e82ec8fa718880d"
+                ],
+                "name": [
+                  ".reloc"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Section - .reloc",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Debugs",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Timestamp",
+            "3923062860 (2094-04-25 19:41:00 +00:00 (UTC))"
+          ],
+          [
+            "Version",
+            "0.0"
+          ],
+          [
+            "CV_Signature",
+            "PDB_70"
+          ],
+          [
+            "Filename",
+            "C:\\Users\\Work\\source\\repos\\Whatsapp-GUI\\Whatsapp-GUI\\obj\\Debug\\Whatsapp-GUI.pdb"
+          ],
+          [
+            "GUID",
+            "e57edd4a-fa16-48ff-9473-8121e65d3e8d"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "debug": {
+                "guid": [
+                  "e57edd4a-fa16-48ff-9473-8121e65d3e8d"
+                ]
+              },
+              "pdb_filename": [
+                "C:\\Users\\Work\\source\\repos\\Whatsapp-GUI\\Whatsapp-GUI\\obj\\Debug\\Whatsapp-GUI.pdb"
+              ]
+            }
+          }
+        },
+        "title_text": "CODEVIEW",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Timestamp",
+            "0 (1970-01-01 00:00:00 +00:00 (UTC))"
+          ],
+          [
+            "Version",
+            "0.0"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "REPRO",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "imports": {
+                "fuzzy": [
+                  "3:rGsLdAIEK:tf"
+                ],
+                "imphash": [
+                  "f34d5f2d4577ed6d9ceec516c1f5a744"
+                ],
+                "sorted_fuzzy": [
+                  "3:rGsLdAIEK:tf"
+                ],
+                "sorted_sha1": [
+                  "b520d94a992a90264f86563103d3f841d2503d34"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Imports",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "_CorExeMain",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "mscoree.dll",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Languages",
+            "NEUTRAL"
+          ],
+          [
+            "Sublanguages",
+            ""
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "NEUTRAL"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Resources",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "TABLE",
+            [
+              {
+                "ID": 1,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_0.ico",
+                "Size": "0x0",
+                "Size (bytes)": 21095
+              },
+              {
+                "ID": 2,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_1.ico",
+                "Size": "128x128",
+                "Size (bytes)": 67624
+              },
+              {
+                "ID": 3,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_2.ico",
+                "Size": "64x64",
+                "Size (bytes)": 16936
+              },
+              {
+                "ID": 4,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_3.ico",
+                "Size": "48x48",
+                "Size (bytes)": 9640
+              },
+              {
+                "ID": 5,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_4.ico",
+                "Size": "32x32",
+                "Size (bytes)": 4264
+              },
+              {
+                "ID": 6,
+                "Lang": "NEUTRAL",
+                "Saved as": "icon_5.ico",
+                "Size": "16x16",
+                "Size (bytes)": 1128
+              }
+            ],
+            {
+              "column_order": [
+                "ID",
+                "Lang",
+                "Size",
+                "Size (bytes)",
+                "Saved as"
+              ]
+            }
+          ],
+          [
+            "IMAGE",
+            [
+              {
+                "img": {
+                  "description": "Icon 0 extracted from the PE file",
+                  "name": "icon_0.ico",
+                  "sha256": "bff36a5779fb032a506036b71a15f0ba7eefe749389661f4e91230791e1f7790"
+                },
+                "thumb": {
+                  "description": "Icon 0 extracted from the PE file (thumbnail)",
+                  "name": "icon_0.ico.thumb",
+                  "sha256": "9fecd0cc0472a254d3d55c30dd6b18eed2eea633f7af5bbbc059313b5653bb98"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 1 extracted from the PE file",
+                  "name": "icon_1.ico",
+                  "sha256": "f229d06aaaf70e1d6362aec0d020d3d2d9c8777ae334d3062971da00728e7582"
+                },
+                "thumb": {
+                  "description": "Icon 1 extracted from the PE file (thumbnail)",
+                  "name": "icon_1.ico.thumb",
+                  "sha256": "f229d06aaaf70e1d6362aec0d020d3d2d9c8777ae334d3062971da00728e7582"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 2 extracted from the PE file",
+                  "name": "icon_2.ico",
+                  "sha256": "12b2ea0b0f90aa67dcf8ee6bbe79bdafcf52df8f347c03dd26b99f1c55164a7d"
+                },
+                "thumb": {
+                  "description": "Icon 2 extracted from the PE file (thumbnail)",
+                  "name": "icon_2.ico.thumb",
+                  "sha256": "12b2ea0b0f90aa67dcf8ee6bbe79bdafcf52df8f347c03dd26b99f1c55164a7d"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 3 extracted from the PE file",
+                  "name": "icon_3.ico",
+                  "sha256": "583076ec3428f53482e78a79dfa029fa8b7ed4d3fb368f712cf8d3ce1d706dea"
+                },
+                "thumb": {
+                  "description": "Icon 3 extracted from the PE file (thumbnail)",
+                  "name": "icon_3.ico.thumb",
+                  "sha256": "583076ec3428f53482e78a79dfa029fa8b7ed4d3fb368f712cf8d3ce1d706dea"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 4 extracted from the PE file",
+                  "name": "icon_4.ico",
+                  "sha256": "8da58e9018dbbd8b56bd06982791538191a754bc8a818ddae8ecfd4c04353239"
+                },
+                "thumb": {
+                  "description": "Icon 4 extracted from the PE file (thumbnail)",
+                  "name": "icon_4.ico.thumb",
+                  "sha256": "8da58e9018dbbd8b56bd06982791538191a754bc8a818ddae8ecfd4c04353239"
+                }
+              },
+              {
+                "img": {
+                  "description": "Icon 5 extracted from the PE file",
+                  "name": "icon_5.ico",
+                  "sha256": "aa5c01a86eea62d0767de6fad553735b4092b6a761ede1264de2099607342044"
+                },
+                "thumb": {
+                  "description": "Icon 5 extracted from the PE file (thumbnail)",
+                  "name": "icon_5.ico.thumb",
+                  "sha256": "aa5c01a86eea62d0767de6fad553735b4092b6a761ede1264de2099607342044"
+                }
+              }
+            ],
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Icons",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Type",
+            0
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Version",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "file_date_LS",
+            0
+          ],
+          [
+            "file_date_MS",
+            0
+          ],
+          [
+            "file_flags",
+            0
+          ],
+          [
+            "file_flags_mask",
+            63
+          ],
+          [
+            "file_os",
+            "WINDOWS32"
+          ],
+          [
+            "file_subtype",
+            "UNKNOWN"
+          ],
+          [
+            "file_type",
+            "APP"
+          ],
+          [
+            "file_version_LS",
+            327688
+          ],
+          [
+            "file_version_MS",
+            65538
+          ],
+          [
+            "product_version_LS",
+            327688
+          ],
+          [
+            "product_version_MS",
+            65538
+          ],
+          [
+            "signature",
+            4277077181
+          ],
+          [
+            "struct_version",
+            65536
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "fixed_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "key",
+            "StringFileInfo"
+          ],
+          [
+            "type",
+            1
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "versions": {
+                "description": [
+                  "Whatsapp Plugin"
+                ],
+                "filename": [
+                  "Whatsapp-GUI.exe"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "string_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "key",
+            "000004b0"
+          ],
+          [
+            "type",
+            1
+          ],
+          [
+            "lang",
+            "NEUTRAL"
+          ],
+          [
+            "sublang",
+            ""
+          ],
+          [
+            "code_page",
+            "UTF_16"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 3,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "langcode_items 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Assembly Version",
+            "1.8.6.5"
+          ],
+          [
+            "Comments",
+            "Whatsapp"
+          ],
+          [
+            "CompanyName",
+            "WhatsappLTD"
+          ],
+          [
+            "FileDescription",
+            "Whatsapp Plugin"
+          ],
+          [
+            "FileVersion",
+            "1.2.5.8"
+          ],
+          [
+            "InternalName",
+            "Whatsapp-GUI.exe"
+          ],
+          [
+            "LegalCopyright",
+            "Copyright \u00a9 Whatsapp 2024"
+          ],
+          [
+            "LegalTrademarks",
+            ""
+          ],
+          [
+            "OriginalFilename",
+            "Whatsapp-GUI.exe"
+          ],
+          [
+            "ProductName",
+            "Whatsapp-GUI"
+          ],
+          [
+            "ProductVersion",
+            "1.2.5.8"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 4,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "items",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "key",
+            "VarFileInfo"
+          ],
+          [
+            "type",
+            1
+          ],
+          [
+            "translations",
+            "78643200"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "var_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          {
+            "Entropy": 7.970004435247796,
+            "SHA256": "710acc50dc613b60d87dd7c12be49bd7e93755bee77a1eeffe2a3a9afb1ad39a",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 4.374889754809417,
+            "SHA256": "ffb3af579bdfd6a976487c3c8939be1f53d88ba6eb532b06b8af2fa4dfd8c59e",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 4.588003128093524,
+            "SHA256": "8b93be3d0da19fbb152ba296499e443532c93631199f06e36690fa1bc47e9133",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 4.7335511657304865,
+            "SHA256": "3b8016c20e2dfbc47453ca7b62f01710db8b88a08667124220f93d5f54bf4787",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 4.884037984995108,
+            "SHA256": "88cbb2d30b9cbc866909142f58d7e38a7908c577ad9a3ea94cd80c9733a29163",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 5.16719923969708,
+            "SHA256": "27a203f012fb92e3a6a30429fb224170600351b3f32f551579f1cbf64eda6bc8",
+            "Type": "ICON"
+          },
+          {
+            "Entropy": 2.799076556951972,
+            "SHA256": "e1d78d2eaee422e1597826647dace21de847e88b59b1df48f348ea7891877076",
+            "Type": "GROUP_ICON"
+          },
+          {
+            "Entropy": 3.428112046327244,
+            "SHA256": "91c8488ef1abf0352ffae5147890a270266834576653a872fc08f4c103b88afa",
+            "Type": "VERSION"
+          },
+          {
+            "Entropy": 5.0011168136751865,
+            "SHA256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
+            "Type": "MANIFEST"
+          }
+        ],
+        "body_config": {
+          "column_order": [
+            "SHA256",
+            "Type",
+            "Entropy"
+          ]
+        },
+        "body_format": "TABLE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Summary",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Signatures",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "OK found while verifying signature : OK",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 2,
+          "score": 0,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Signed EXE",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Version",
+            1
+          ],
+          [
+            "Algorithm",
+            "SHA256"
+          ],
+          [
+            "Content Info Algorithm",
+            "SHA256"
+          ],
+          [
+            "Content Info Digest",
+            "3f4276e99ede44790171090b3e574d80c403c587df148af4c6d7c67d13c2530d"
+          ],
+          [
+            "Content Info Content Type",
+            "1.3.6.1.4.1.311.2.1.4"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Signature - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Version",
+            1
+          ],
+          [
+            "Digest Algorithm",
+            "SHA256"
+          ],
+          [
+            "Authenticated Attributes",
+            "SPC_SP_OPUS_INFO, CONTENT_TYPE, MS_SPC_STATEMENT_TYPE, PKCS9_MESSAGE_DIGEST"
+          ],
+          [
+            "Unauthenticated Attributes",
+            "MS_COUNTER_SIGN"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Signer - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Version",
+            3
+          ],
+          [
+            "Subject",
+            "??=Private Organization, serialNumber=0700576529, ??=VN, ??=Ha Nam, C=VN, ST=Ha Nam, L=Ha Nam, ??=Thon Bong Lang\\, Xa Thanh Nghi\\, Huyen Thanh Liem, O=XUAN THANH CEMENT JOINT STOCK COMPANY, CN=XUAN THANH CEMENT JOINT STOCK COMPANY, emailAddress=phandinhtrinh1981@gmail.com"
+          ],
+          [
+            "Issuer",
+            "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020"
+          ],
+          [
+            "Serial Number",
+            "34f3e42f122c45100811225d"
+          ],
+          [
+            "Valid From",
+            "2024-11-15T02:33:14"
+          ],
+          [
+            "Valid To",
+            "2025-11-16T02:33:14"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 3,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "cert": {
+            "issuer": [
+              "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020"
+            ],
+            "serial_no": [
+              "34f3e42f122c45100811225d"
+            ],
+            "subject": [
+              "??=Private Organization, serialNumber=0700576529, ??=VN, ??=Ha Nam, C=VN, ST=Ha Nam, L=Ha Nam, ??=Thon Bong Lang\\, Xa Thanh Nghi\\, Huyen Thanh Liem, O=XUAN THANH CEMENT JOINT STOCK COMPANY, CN=XUAN THANH CEMENT JOINT STOCK COMPANY, emailAddress=phandinhtrinh1981@gmail.com"
+            ],
+            "thumbprint": [
+              "d2ba1f548eb15270386a9d203fca3a0379a09913",
+              "710f4af0801ad3eaef2b61d2968a7a3cf88529b5809c196e53ea4d3f859aee5f",
+              "74b2851393952520c30cf0295244cf71"
+            ],
+            "valid": {
+              "end": [
+                "2025-11-16T02:33:14"
+              ],
+              "start": [
+                "2024-11-15T02:33:14"
+              ]
+            }
+          }
+        },
+        "title_text": "Signer Certificate",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          {
+            "Family": "DarkGate",
+            "Type": "SHA256",
+            "Value": "710f4af0801ad3eaef2b61d2968a7a3cf88529b5809c196e53ea4d3f859aee5f"
+          },
+          {
+            "Family": "DarkGate",
+            "Type": "serial_number",
+            "Value": "34f3e42f122c45100811225d"
+          }
+        ],
+        "body_config": {
+          "column_order": [
+            "Type",
+            "Value",
+            "Family"
+          ]
+        },
+        "body_format": "TABLE",
+        "classification": "TLP:C",
+        "depth": 4,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 29,
+          "score": 500,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {
+          "attribution": {
+            "family": [
+              "DarkGate"
+            ]
+          }
+        },
+        "title_text": "Blacklisted certificate",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Version",
+            3
+          ],
+          [
+            "Subject",
+            "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020"
+          ],
+          [
+            "Issuer",
+            "C=BE, O=GlobalSign nv-sa, CN=GlobalSign Code Signing Root R45"
+          ],
+          [
+            "SHA1",
+            "c10bb76ad4ee815242406a1e3e1117ffec743d4f"
+          ],
+          [
+            "SHA256",
+            "cd0e144dd10bac221fe2fb901058d16450a0578b3c47c770908f2e9ada28ef12"
+          ],
+          [
+            "MD5",
+            "e6eb41ad6404317af8a18b64f98c2bcf"
+          ],
+          [
+            "Serial Number",
+            "77bd0e05b7590bb61d4761531e3f75ed"
+          ],
+          [
+            "Valid From",
+            "2020-07-28T00:00:00"
+          ],
+          [
+            "Valid To",
+            "2030-07-28T00:00:00"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Certificate - 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "Version",
+            3
+          ],
+          [
+            "Subject",
+            "??=Private Organization, serialNumber=0700576529, ??=VN, ??=Ha Nam, C=VN, ST=Ha Nam, L=Ha Nam, ??=Thon Bong Lang\\, Xa Thanh Nghi\\, Huyen Thanh Liem, O=XUAN THANH CEMENT JOINT STOCK COMPANY, CN=XUAN THANH CEMENT JOINT STOCK COMPANY, emailAddress=phandinhtrinh1981@gmail.com"
+          ],
+          [
+            "Issuer",
+            "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020"
+          ],
+          [
+            "SHA1",
+            "d2ba1f548eb15270386a9d203fca3a0379a09913"
+          ],
+          [
+            "SHA256",
+            "710f4af0801ad3eaef2b61d2968a7a3cf88529b5809c196e53ea4d3f859aee5f"
+          ],
+          [
+            "MD5",
+            "74b2851393952520c30cf0295244cf71"
+          ],
+          [
+            "Serial Number",
+            "34f3e42f122c45100811225d"
+          ],
+          [
+            "Valid From",
+            "2024-11-15T02:33:14"
+          ],
+          [
+            "Valid To",
+            "2025-11-16T02:33:14"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Certificate - 2",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "ORDERED_KEY_VALUE",
+            [
+              [
+                "Size",
+                10640
+              ]
+            ],
+            {}
+          ],
+          [
+            "GRAPH_DATA",
+            {
+              "data": {
+                "domain": [
+                  0,
+                  8
+                ],
+                "values": [
+                  5.79175,
+                  6.07432,
+                  7.1931,
+                  6.89648,
+                  5.86948,
+                  6.59956,
+                  7.1834,
+                  6.84649,
+                  5.51733,
+                  6.27022,
+                  7.15592,
+                  7.05825,
+                  5.34638,
+                  6.67412,
+                  7.20162,
+                  7.01242,
+                  6.13713,
+                  7.20588,
+                  7.02086,
+                  6.10599,
+                  5.67558,
+                  7.15118,
+                  6.87708,
+                  5.62994,
+                  6.72914,
+                  7.14393,
+                  6.86615,
+                  6.357,
+                  7.10698,
+                  6.86925,
+                  5.82557,
+                  7.17928,
+                  7.00988,
+                  5.35348,
+                  7.08104,
+                  7.24332,
+                  6.68509,
+                  7.19905,
+                  6.82822,
+                  6.02596,
+                  7.12812,
+                  6.96315
+                ]
+              },
+              "type": "colormap"
+            },
+            {}
+          ]
+        ],
+        "body_config": {},
+        "body_format": "MULTI",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Overlay",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [
+      {
+        "name": "overlay",
+        "sha256": "a6d0e9bcc77c11347ca8722578f7c151c74b7a613ba8b09300dbed6aa8c1212f"
+      }
+    ],
+    "supplementary": [
+      {
+        "name": "icon_2.ico",
+        "sha256": "12b2ea0b0f90aa67dcf8ee6bbe79bdafcf52df8f347c03dd26b99f1c55164a7d"
+      },
+      {
+        "name": "icon_2.ico.thumb",
+        "sha256": "12b2ea0b0f90aa67dcf8ee6bbe79bdafcf52df8f347c03dd26b99f1c55164a7d"
+      },
+      {
+        "name": "icon_3.ico",
+        "sha256": "583076ec3428f53482e78a79dfa029fa8b7ed4d3fb368f712cf8d3ce1d706dea"
+      },
+      {
+        "name": "icon_3.ico.thumb",
+        "sha256": "583076ec3428f53482e78a79dfa029fa8b7ed4d3fb368f712cf8d3ce1d706dea"
+      },
+      {
+        "name": "features.json",
+        "sha256": "699cf5d9e1cc8f4478da30a332e6d7dea9588a740a9e8502962166a9f290faf9"
+      },
+      {
+        "name": "certificate.1.2",
+        "sha256": "710f4af0801ad3eaef2b61d2968a7a3cf88529b5809c196e53ea4d3f859aee5f"
+      },
+      {
+        "name": "icon_4.ico",
+        "sha256": "8da58e9018dbbd8b56bd06982791538191a754bc8a818ddae8ecfd4c04353239"
+      },
+      {
+        "name": "icon_4.ico.thumb",
+        "sha256": "8da58e9018dbbd8b56bd06982791538191a754bc8a818ddae8ecfd4c04353239"
+      },
+      {
+        "name": "icon_0.ico.thumb",
+        "sha256": "9fecd0cc0472a254d3d55c30dd6b18eed2eea633f7af5bbbc059313b5653bb98"
+      },
+      {
+        "name": "icon_5.ico",
+        "sha256": "aa5c01a86eea62d0767de6fad553735b4092b6a761ede1264de2099607342044"
+      },
+      {
+        "name": "icon_5.ico.thumb",
+        "sha256": "aa5c01a86eea62d0767de6fad553735b4092b6a761ede1264de2099607342044"
+      },
+      {
+        "name": "icon_0.ico",
+        "sha256": "bff36a5779fb032a506036b71a15f0ba7eefe749389661f4e91230791e1f7790"
+      },
+      {
+        "name": "certificate.1.1",
+        "sha256": "cd0e144dd10bac221fe2fb901058d16450a0578b3c47c770908f2e9ada28ef12"
+      },
+      {
+        "name": "icon_1.ico",
+        "sha256": "f229d06aaaf70e1d6362aec0d020d3d2d9c8777ae334d3062971da00728e7582"
+      },
+      {
+        "name": "icon_1.ico.thumb",
+        "sha256": "f229d06aaaf70e1d6362aec0d020d3d2d9c8777ae334d3062971da00728e7582"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 2,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 11,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 26,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 29,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "attribution.family": [
+        {
+          "heur_id": 29,
+          "signatures": [],
+          "value": "DarkGate"
+        }
+      ],
+      "cert.issuer": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020"
+        }
+      ],
+      "cert.serial_no": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "34f3e42f122c45100811225d"
+        }
+      ],
+      "cert.subject": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "??=Private Organization, serialNumber=0700576529, ??=VN, ??=Ha Nam, C=VN, ST=Ha Nam, L=Ha Nam, ??=Thon Bong Lang\\, Xa Thanh Nghi\\, Huyen Thanh Liem, O=XUAN THANH CEMENT JOINT STOCK COMPANY, CN=XUAN THANH CEMENT JOINT STOCK COMPANY, emailAddress=phandinhtrinh1981@gmail.com"
+        }
+      ],
+      "cert.thumbprint": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "710f4af0801ad3eaef2b61d2968a7a3cf88529b5809c196e53ea4d3f859aee5f"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "74b2851393952520c30cf0295244cf71"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "d2ba1f548eb15270386a9d203fca3a0379a09913"
+        }
+      ],
+      "cert.valid.end": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2025-11-16T02:33:14"
+        }
+      ],
+      "cert.valid.start": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2024-11-15T02:33:14"
+        }
+      ],
+      "file.pe.debug.guid": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "e57edd4a-fa16-48ff-9473-8121e65d3e8d"
+        }
+      ],
+      "file.pe.imports.fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "3:rGsLdAIEK:tf"
+        }
+      ],
+      "file.pe.imports.imphash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "f34d5f2d4577ed6d9ceec516c1f5a744"
+        }
+      ],
+      "file.pe.imports.sorted_fuzzy": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "3:rGsLdAIEK:tf"
+        }
+      ],
+      "file.pe.imports.sorted_sha1": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "b520d94a992a90264f86563103d3f841d2503d34"
+        }
+      ],
+      "file.pe.linker.timestamp": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": 2363646602
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2044-11-25 00:30:02 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.pdb_filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C:\\Users\\Work\\source\\repos\\Whatsapp-GUI\\Whatsapp-GUI\\obj\\Debug\\Whatsapp-GUI.pdb"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
+        }
+      ],
+      "file.pe.sections.hash": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "6b52c467ee740ef05e82ec8fa718880d"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "b7e91f7f5fba5c73c9fa3553c78ff014"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "db3efc795b1196fa8ddb072e4d311c1e"
+        }
+      ],
+      "file.pe.sections.name": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".reloc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".rsrc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".text"
+        }
+      ],
+      "file.pe.versions.description": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Whatsapp Plugin"
+        }
+      ],
+      "file.pe.versions.filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Whatsapp-GUI.exe"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
+}
