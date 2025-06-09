@@ -240,6 +240,23 @@ def get_lief_enum_name(enum):
         return enum
 
 
+def lookup_signer_family(database, family_index=-1, sha1=None, sha256=None, md5=None, serial=None):
+    results = []
+    if sha1 is not None and "SHA1" in database:
+        if sha1 in database["SHA1"]:
+            results.append(("SHA1", sha1, database["SHA1"][sha1][family_index]))
+    if sha256 is not None and "SHA256" in database:
+        if sha256 in database["SHA256"]:
+            results.append(("SHA256", sha256, database["SHA256"][sha256][family_index]))
+    if md5 is not None and "MD5" in database:
+        if md5 in database["MD5"]:
+            results.append(("MD5", md5, database["MD5"][md5][family_index]))
+    if serial is not None and "serial_number" in database:
+        if serial in database["serial_number"]:
+            results.append(("serial_number", serial, database["serial_number"][serial][family_index]))
+    return results
+
+
 class PE(ServiceBase):
     def start(self):
         self.log.debug("Starting PE")
@@ -272,13 +289,21 @@ class PE(ServiceBase):
             headers = next(certcentralreader)
             serial_index = headers.index("Serial")
             # It looks to only have MD5 thumbprints
-            md5_index = headers.index("Thumbprint")
+            thumbprint_index = headers.index("Thumbprint")
             self.certcentral_reason_index = headers.index("Malware")
             for row in certcentralreader:
                 if row[0].startswith("#"):
                     continue
-                self.cscb["serial_number"][row[serial_index]] = row
-                self.cscb["MD5"][row[md5_index]] = row
+                self.certcentral["serial_number"][row[serial_index].lower()] = row
+                lthumb = len(row[thumbprint_index])
+                if lthumb == 32:
+                    self.certcentral["MD5"][row[thumbprint_index].lower()] = row
+                elif lthumb == 40:
+                    self.certcentral["SHA1"][row[thumbprint_index].lower()] = row
+                elif lthumb == 64:
+                    self.certcentral["SHA256"][row[thumbprint_index].lower()] = row
+                elif lthumb != 0:
+                    self.log.warning(f"Could not figure out thumbprint hash type for {row[thumbprint_index]}")
 
         self.identify = forge.get_identify(use_cache=os.environ.get("PRIVILEGED", "false").lower() == "true")
 
@@ -1736,64 +1761,38 @@ class PE(ServiceBase):
                     sub_sub_sub_res.add_tag("cert.thumbprint", sha1_hex)
                     sub_sub_sub_res.add_tag("cert.thumbprint", sha256_hex)
                     sub_sub_sub_res.add_tag("cert.thumbprint", md5_hex)
-                    cscb = []
-                    if "SHA1" in self.cscb:
-                        if sha1_hex in self.cscb["SHA1"]:
-                            cscb.append(("SHA1", sha1_hex, self.cscb["SHA1"][sha1_hex][-1]))
-                    if "SHA256" in self.cscb:
-                        if sha256_hex in self.cscb["SHA256"]:
-                            cscb.append(("SHA256", sha256_hex, self.cscb["SHA256"][sha256_hex][-1]))
-                    if "MD5" in self.cscb:
-                        if md5_hex in self.cscb["MD5"]:
-                            cscb.append(("MD5", md5_hex, self.cscb["MD5"][md5_hex][-1]))
-                    if "serial_number" in self.cscb:
-                        if extracted_cert_info["serial_number"] in self.cscb["serial_number"]:
-                            cscb.append(
-                                (
-                                    "serial_number",
-                                    extracted_cert_info["serial_number"],
-                                    self.cscb["serial_number"][extracted_cert_info["serial_number"]][-1],
-                                )
-                            )
-                    if cscb:
+
+                    cscb_results = lookup_signer_family(
+                        self.cscb, -1, sha1_hex, sha256_hex, md5_hex, extracted_cert_info["serial_number"]
+                    )
+                    certcentral_results = lookup_signer_family(
+                        self.certcentral,
+                        self.certcentral_reason_index,
+                        sha1_hex,
+                        sha256_hex,
+                        md5_hex,
+                        extracted_cert_info["serial_number"],
+                    )
+                    if cscb_results or certcentral_results:
                         heur = Heuristic(29)
                         heur_section = ResultTableSection(heur.name, heuristic=heur)
-                        for element in cscb:
+                        for element in cscb_results:
                             heur_section.add_row(
-                                TableRow({"Type": element[0], "Value": element[1], "Family": element[2]})
+                                TableRow(
+                                    {"Type": element[0], "Value": element[1], "Family": element[2], "Source": "CSCB"}
+                                )
                             )
                             heur_section.add_tag("attribution.family", element[2])
-                        sub_sub_sub_res.add_subsection(heur_section)
-
-                    certcentral = []
-                    if "MD5" in self.certcentral:
-                        # CertCentral is storing hashes in uppercase
-                        if md5_hex.upper() in self.certcentral["MD5"]:
-                            certcentral.append(
-                                (
-                                    "MD5",
-                                    md5_hex,
-                                    self.certcentral["MD5"][md5_hex.upper()][self.certcentral_reason_index],
-                                )
-                            )
-                    if "serial_number" in self.certcentral:
-                        # CertCentral is storing hashes in uppercase
-                        if extracted_cert_info["serial_number"].upper() in self.certcentral["serial_number"]:
-                            certcentral.append(
-                                (
-                                    "serial_number",
-                                    extracted_cert_info["serial_number"],
-                                    self.certcentral["serial_number"][extracted_cert_info["serial_number"].upper()][
-                                        self.certcentral_reason_index
-                                    ],
-                                )
-                            )
-                    if certcentral:
-                        heur = Heuristic(29)
-                        heur_section = ResultTableSection(heur.name, heuristic=heur)
-                        for element in cscb:
+                        for element in certcentral_results:
                             heur_section.add_row(
-                                TableRow({"Type": element[0], "Value": element[1], "Family": element[2]})
+                                TableRow(
+                                    {
+                                        "Type": element[0],
+                                        "Value": element[1],
+                                        "Family": element[2],
+                                        "Source": "CertCentral",
+                                    }
+                                )
                             )
                             heur_section.add_tag("attribution.family", element[2])
                         sub_sub_sub_res.add_subsection(heur_section)

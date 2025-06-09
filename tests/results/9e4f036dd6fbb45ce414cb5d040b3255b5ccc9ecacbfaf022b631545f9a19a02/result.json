@@ -1267,11 +1267,25 @@
         "body": [
           {
             "Family": "DarkGate",
+            "Source": "CSCB",
             "Type": "SHA256",
             "Value": "710f4af0801ad3eaef2b61d2968a7a3cf88529b5809c196e53ea4d3f859aee5f"
           },
           {
             "Family": "DarkGate",
+            "Source": "CSCB",
+            "Type": "serial_number",
+            "Value": "34f3e42f122c45100811225d"
+          },
+          {
+            "Family": "DarkGate",
+            "Source": "CertCentral",
+            "Type": "SHA1",
+            "Value": "d2ba1f548eb15270386a9d203fca3a0379a09913"
+          },
+          {
+            "Family": "DarkGate",
+            "Source": "CertCentral",
             "Type": "serial_number",
             "Value": "34f3e42f122c45100811225d"
           }
@@ -1280,7 +1294,8 @@
           "column_order": [
             "Type",
             "Value",
-            "Family"
+            "Family",
+            "Source"
           ]
         },
         "body_format": "TABLE",
