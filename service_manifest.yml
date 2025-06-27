@@ -33,6 +33,32 @@ config:
   heur24_allowed_mismatch_file_size: 0.25
   heur25_min_overlay_size: 31457280
   heur25_min_overlay_entropy: 0.5
+  pdb_keywords:
+    [
+      # anti,
+      attack,
+      backdoor,
+      # bind,
+      bypass,
+      downloader,
+      dropper,
+      exploit,
+      fuck,
+      hack,
+      hide,
+      implant,
+      inject,
+      # install,
+      keylog,
+      loader,
+      laoder, # typo seen in the wild
+      payload,
+      purpleteam,
+      shell,
+      # sleep,
+      # spy,
+      trojan,
+    ]
 
 heuristics:
   - description: >-
@@ -301,6 +327,12 @@ heuristics:
     heur_id: 37
     name: No relocations found
     score: 50
+
+  - description: Suspicious keyword found in PDB Filename
+    filetype: "executable/windows"
+    heur_id: 38
+    name: Suspicious keyword found in PDB Filename
+    score: 200
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-pe:$SERVICE_TAG

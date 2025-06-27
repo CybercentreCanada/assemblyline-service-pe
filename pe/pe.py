@@ -897,6 +897,14 @@ class PE(ServiceBase):
                     cv_dict["filename"] = debug_filename
                     sub_res.add_item("Filename", debug_filename)
                     sub_res.add_tag("file.pe.pdb_filename", debug_filename)
+                    heur = Heuristic(38)
+                    heur_section = ResultSection(heur.name, heuristic=heur)
+                    lower_debug_filename = debug_filename.lower()
+                    for kw in self.config.get("pdb_keywords", []):
+                        if kw in lower_debug_filename:
+                            heur_section.add_line(kw)
+                    if heur_section.body:
+                        sub_res.add_subsection(heur_section)
                 except UnicodeDecodeError:
                     heur = Heuristic(16)
                     heur_section = ResultSection(heur.name, heuristic=heur)
