@@ -2081,7 +2081,7 @@ class PE(ServiceBase):
                             "data": entrie.data,
                             "position": entrie.position,
                             "size": entrie.size,
-                            "type": entrie.type.name,
+                            "type": entrie.type.name if hasattr(entrie.type, "name") else str(entrie.type),
                         }
                         for entrie in relocation.entries
                     ],
