@@ -2194,22 +2194,21 @@
       },
       {
         "auto_collapse": false,
-        "body": "OK found while verifying signature : OK",
+        "body": "Signer 1 (8ac1a3101349c28a4d33947cfcd07662) is untrusted.",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 2,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
+        "heuristic": null,
         "promote_to": null,
-        "tags": {},
-        "title_text": "Signed EXE",
+        "tags": {
+          "file": {
+            "behavior": [
+              "PE with Untrusted Signer"
+            ]
+          }
+        },
+        "title_text": "Untrusted signer found",
         "zeroize_on_tag_safe": false
       },
       {
@@ -2332,6 +2331,10 @@
           [
             "Valid To",
             "2039-12-31T23:59:59"
+          ],
+          [
+            "Verification",
+            "BADCERT_NOT_TRUSTED"
           ]
         ],
         "body_config": {},
@@ -2652,11 +2655,6 @@
     "heuristics": [
       {
         "attack_ids": [],
-        "heur_id": 2,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
         "heur_id": 4,
         "signatures": []
       },
@@ -2747,6 +2745,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "2016-11-02T18:47:06"
+        }
+      ],
+      "file.behavior": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "PE with Untrusted Signer"
         }
       ],
       "file.pe.authenticode.spc_sp_opus_info.program_name": [

@@ -1658,6 +1658,7 @@ class PE(ServiceBase):
         self.features["signatures"] = []
         signature_res = []
         expired_signers = []
+        untrusted_signers = []
         for signature_index, signature in enumerate(self.binary.signatures):
             extra_certs = []
 
@@ -1729,6 +1730,8 @@ class PE(ServiceBase):
                     signer_dict["cert"] = extracted_cert_info
                     if "BADCERT_EXPIRED" in extracted_cert_info["is_trusted"]:
                         expired_signers.append((signer_index + 1, signer.serial_number.hex()))
+                    elif extracted_cert_info["is_trusted"] != "OK":
+                        untrusted_signers.append((signer_index + 1, signer.serial_number.hex()))
 
                     sub_sub_sub_res = ResultOrderedKeyValueSection("Signer Certificate")
                     sub_sub_sub_res.add_item("Version", extracted_cert_info["version"])
@@ -1769,6 +1772,9 @@ class PE(ServiceBase):
                     sub_sub_sub_res.add_tag("cert.thumbprint", sha1_hex)
                     sub_sub_sub_res.add_tag("cert.thumbprint", sha256_hex)
                     sub_sub_sub_res.add_tag("cert.thumbprint", md5_hex)
+
+                    if extracted_cert_info["is_trusted"] != "OK":
+                        sub_sub_sub_res.add_item("Verification", extracted_cert_info["is_trusted"])
 
                     cscb_results = lookup_signer_family(
                         self.cscb, -1, sha1_hex, sha256_hex, md5_hex, extracted_cert_info["serial_number"]
@@ -1971,11 +1977,18 @@ class PE(ServiceBase):
             )
             res.add_subsection(heur_section)
 
-        if not expired_signers and self.features["verify_signature"] == "OK":
+        if not expired_signers and not untrusted_signers and self.features["verify_signature"] == "OK":
             heur = Heuristic(2)
             heur_section = ResultSection(heur.name, heuristic=heur)
             heur_section.add_line(f"OK found while verifying signature : {self.features['verify_signature']}")
             res.add_subsection(heur_section)
+
+        if untrusted_signers:
+            untrusted_section = ResultSection(f"Untrusted signer{'s' if len(untrusted_signers) > 1 else ''} found")
+            untrusted_section.add_tag("file.behavior", "PE with Untrusted Signer")
+            for signer_index, signer_serial in untrusted_signers:
+                untrusted_section.add_line(f"Signer {signer_index} ({signer_serial}) is untrusted.")
+            res.add_subsection(untrusted_section)
 
         if expired_signers:
             expired_section = ResultSection(f"Expired signer{'s' if len(expired_signers) > 1 else ''} found")

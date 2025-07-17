@@ -1905,22 +1905,21 @@
       },
       {
         "auto_collapse": false,
-        "body": "OK found while verifying signature : OK",
+        "body": "Signer 1 (0082869f0ff7ac1cc1) is untrusted.",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 2,
-          "score": 0,
-          "score_map": {},
-          "signatures": {}
-        },
+        "heuristic": null,
         "promote_to": null,
-        "tags": {},
-        "title_text": "Signed EXE",
+        "tags": {
+          "file": {
+            "behavior": [
+              "PE with Untrusted Signer"
+            ]
+          }
+        },
+        "title_text": "Untrusted signer found",
         "zeroize_on_tag_safe": false
       },
       {
@@ -2043,6 +2042,10 @@
           [
             "Valid To",
             "2041-08-15T19:38:43"
+          ],
+          [
+            "Verification",
+            "BADCERT_NOT_TRUSTED"
           ]
         ],
         "body_config": {},
@@ -2387,11 +2390,6 @@
     "heuristics": [
       {
         "attack_ids": [],
-        "heur_id": 2,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
         "heur_id": 6,
         "signatures": []
       },
@@ -2452,6 +2450,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "2021-08-20T19:38:43"
+        }
+      ],
+      "file.behavior": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "PE with Untrusted Signer"
         }
       ],
       "file.pe.authenticode.spc_sp_opus_info.program_name": [

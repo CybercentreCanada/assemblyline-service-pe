@@ -1007,6 +1007,10 @@
           [
             "Valid To",
             "2021-12-02T21:24:20"
+          ],
+          [
+            "Verification",
+            "BADCERT_EXPIRED | BADCERT_NOT_TRUSTED"
           ]
         ],
         "body_config": {},
@@ -1259,7 +1263,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n",
+        "body": "X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n\nX509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\nThe certificate validity has expired\nThe certificate is not correctly signed by the trusted CA\n",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1281,12 +1285,12 @@
     ],
     "supplementary": [
       {
-        "name": "features.json",
-        "sha256": "1919a958a6ccf8ed526e484f3b5790484319750562eeb575ef87e064c431b994"
-      },
-      {
         "name": "certificate.1.1",
         "sha256": "4a838904e732a380e2856a9d6fee926e5c57eb59336292ac5d9e47c9b2c1ed13"
+      },
+      {
+        "name": "features.json",
+        "sha256": "90fdb4d4f42e7318f83f75f109924323a15a21a6d5d55b9bb38dfe06c3972ebc"
       },
       {
         "name": "certificate.1.2",

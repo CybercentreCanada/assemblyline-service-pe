@@ -1037,6 +1037,25 @@
       },
       {
         "auto_collapse": false,
+        "body": "Signer 1 (b40603326f73dbb2440144488a8c7eab) is untrusted.",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "behavior": [
+              "PE with Untrusted Signer"
+            ]
+          }
+        },
+        "title_text": "Untrusted signer found",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
         "body": [
           [
             "Version",
@@ -1155,6 +1174,10 @@
           [
             "Valid To",
             "2039-12-31T23:59:59"
+          ],
+          [
+            "Verification",
+            "BADCERT_NOT_TRUSTED"
           ]
         ],
         "body_config": {},
@@ -1596,6 +1619,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "2013-11-19T08:45:40"
+        }
+      ],
+      "file.behavior": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "PE with Untrusted Signer"
         }
       ],
       "file.pe.authenticode.spc_sp_opus_info.program_name": [
