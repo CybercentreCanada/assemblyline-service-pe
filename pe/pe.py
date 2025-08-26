@@ -258,6 +258,18 @@ def lookup_signer_family(database, family_index=-1, sha1=None, sha256=None, md5=
     return results
 
 
+def readable_size(value: int) -> str:
+    """Return bytes in human readable format."""
+    if value <= 1024:
+        return "%s bytes" % value
+    elif value < 1024 * 1024:
+        return "%.1f KB" % (float(value) / 1024.0)
+    elif value < 1024 * 1024 * 1024:
+        return "%.1f MB" % (float(value) / 1024.0 / 1024.0)
+    else:
+        return "%.1f GB" % (float(value) / 1024.0 / 1024.0 / 1024.0)
+
+
 class PE(ServiceBase):
     def start(self):
         self.log.debug("Starting PE")
@@ -680,8 +692,10 @@ class PE(ServiceBase):
         ) * self.config.get("heur24_allowed_mismatch_file_size", 0.25):
             heur = Heuristic(24)
             heur_section = ResultOrderedKeyValueSection(heur.name, heuristic=heur)
-            heur_section.add_item("File Size", self.features["size"])
-            heur_section.add_item("Virtual Size", self.features["virtual_size"])
+            heur_section.add_item("File Size", f"{self.features['size']} ({readable_size(self.features['size'])})")
+            heur_section.add_item(
+                "Virtual Size", f"{self.features['virtual_size']} ({readable_size(self.features['virtual_size'])})"
+            )
             res.add_subsection(heur_section)
 
         sub_res = ResultOrderedKeyValueSection("Authentihash")
