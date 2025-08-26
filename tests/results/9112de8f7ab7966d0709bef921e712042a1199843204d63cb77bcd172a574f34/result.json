@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 700,
+    "score": 900,
     "sections": [
       {
         "auto_collapse": false,
@@ -949,7 +949,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "The directory of the node id 2147484970 is corrupted\nThe directory of the node id 2214593814 is corrupted\nThe directory of the node id 8388618 is corrupted",
+        "body": "(3x) The directory of the node id is corrupted",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -958,6 +958,26 @@
         "promote_to": null,
         "tags": {},
         "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "(3x) The directory of the node id is corrupted\n2147484970, 2214593814, 8388618",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 13,
+          "score": 200,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Corrupted resources",
         "zeroize_on_tag_safe": false
       }
     ]
@@ -986,6 +1006,11 @@
       {
         "attack_ids": [],
         "heur_id": 11,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 13,
         "signatures": []
       },
       {

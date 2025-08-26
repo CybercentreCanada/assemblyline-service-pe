@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 import pathlib
+import re
 import struct
 import subprocess
 import tempfile
@@ -2170,20 +2171,44 @@ class PE(ServiceBase):
             lief_output = []
             with open(lief_output_file, "rb") as f:
                 lief_output = f.readlines()
-            if lief_output:
+
+            lief_logging = {}
+            lief_logging_stripped = defaultdict(list)
+            for line in lief_output:
+                if isinstance(line, bytes):
+                    line = line.decode("utf-8", "backslashreplace")
+                line = line.rstrip()
+                if line.endswith(" (0x-2700)"):
+                    line = line[:-10]
+                line = line.rstrip("\x00")
+                if not line:
+                    continue
+                if m := re.search("node id(:? \\d+)", line):
+                    strip = m.group(1)
+                    if strip.startswith(":"):
+                        strip = strip[1:]
+                    strip = strip.strip()
+                    line = f"{line[: m.start(1)]}{line[m.end(1) :]}"
+                    lief_logging_stripped[line].append(strip)
+                if line in lief_logging:
+                    lief_logging[line] += 1
+                else:
+                    lief_logging[line] = 1
+
+            if lief_logging:
                 res = ResultSection("LIEF logging information.", parent=request.result)
-                for line in lief_output:
-                    if isinstance(line, bytes):
-                        line = line.decode("utf-8", "backslashreplace")
-                    line = line.rstrip()
-                    if line.endswith(" (0x-2700)"):
-                        line = line[:-10]
-                    line = line.rstrip("\x00")
-                    res.add_line(line)
-                    if "corrupted" in line and "directory of the node" not in line:
+                for line, count in lief_logging.items():
+                    if count > 1:
+                        output_line = f"({count}x) {line}"
+                    else:
+                        output_line = line
+                    res.add_line(output_line)
+                    if "corrupted" in line:
                         heur = Heuristic(13)
                         heur_section = ResultSection(heur.name, heuristic=heur, parent=res)
-                        heur_section.add_line(line)
+                        heur_section.add_line(output_line)
+                        if line in lief_logging_stripped:
+                            heur_section.add_line(", ".join(lief_logging_stripped[line]))
 
         temp_path = os.path.join(self.working_directory, "features.json")
         with open(temp_path, "w") as f:
