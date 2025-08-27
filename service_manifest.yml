@@ -55,8 +55,10 @@ config:
       payload,
       purpleteam,
       shell,
+      shit,
       # sleep,
       # spy,
+      stupid,
       trojan,
     ]
 
@@ -127,7 +129,7 @@ heuristics:
     filetype: "executable/windows"
     heur_id: 9
     name: Invalid encryption algorithm used for signature
-    score: 1000
+    score: 500
 
   - description: >-
        The signature has an invalid signature due to being unable to parse the signer information.
