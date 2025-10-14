@@ -497,7 +497,7 @@ class PE(ServiceBase):
             "file_alignment": self.binary.optional_header.file_alignment,
             "imagebase": self.binary.optional_header.imagebase,
             "loader_flags": self.binary.optional_header.loader_flags,
-            "magic": self.binary.optional_header.magic.name,
+            "magic": get_lief_enum_name(self.binary.optional_header.magic),
             "major_image_version": self.binary.optional_header.major_image_version,
             "major_linker_version": self.binary.optional_header.major_linker_version,
             "major_operating_system_version": self.binary.optional_header.major_operating_system_version,
@@ -517,7 +517,7 @@ class PE(ServiceBase):
             "sizeof_stack_commit": self.binary.optional_header.sizeof_stack_commit,
             "sizeof_stack_reserve": self.binary.optional_header.sizeof_stack_reserve,
             "sizeof_uninitialized_data": self.binary.optional_header.sizeof_uninitialized_data,
-            "subsystem": self.binary.optional_header.subsystem.name,
+            "subsystem": get_lief_enum_name(self.binary.optional_header.subsystem),
             "win32_version_value": self.binary.optional_header.win32_version_value,
         }
         if self.binary.optional_header.magic == lief.PE.PE_TYPE.PE32:
@@ -2109,7 +2109,7 @@ class PE(ServiceBase):
                             "data": entrie.data,
                             "position": entrie.position,
                             "size": entrie.size,
-                            "type": entrie.type.name,
+                            "type": get_lief_enum_name(entrie.type),
                         }
                         for entrie in relocation.entries
                     ],
