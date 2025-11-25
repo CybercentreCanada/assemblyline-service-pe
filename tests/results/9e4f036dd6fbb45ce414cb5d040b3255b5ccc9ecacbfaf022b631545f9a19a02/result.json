@@ -1117,7 +1117,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Signer 1 (34f3e42f122c45100811225d) is untrusted.",
+        "body": "Signer 1 (34f3e42f122c45100811225d) is expired.",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1127,11 +1127,11 @@
         "tags": {
           "file": {
             "behavior": [
-              "PE with Untrusted Signer"
+              "PE with Expired Signer"
             ]
           }
         },
-        "title_text": "Untrusted signer found",
+        "title_text": "Expired signer found",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1227,7 +1227,7 @@
           ],
           [
             "Verification",
-            "BADCERT_NOT_TRUSTED"
+            "BADCERT_EXPIRED | BADCERT_NOT_TRUSTED"
           ]
         ],
         "body_config": {},
@@ -1506,7 +1506,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "(8x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(8x) The certificate is not correctly signed by the trusted CA",
+        "body": "(8x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(8x) The certificate is not correctly signed by the trusted CA\n(4x) The certificate validity has expired",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1542,10 +1542,6 @@
       {
         "name": "icon_3.ico.thumb",
         "sha256": "583076ec3428f53482e78a79dfa029fa8b7ed4d3fb368f712cf8d3ce1d706dea"
-      },
-      {
-        "name": "features.json",
-        "sha256": "699cf5d9e1cc8f4478da30a332e6d7dea9588a740a9e8502962166a9f290faf9"
       },
       {
         "name": "certificate.1.2",
@@ -1586,6 +1582,10 @@
       {
         "name": "icon_1.ico.thumb",
         "sha256": "f229d06aaaf70e1d6362aec0d020d3d2d9c8777ae334d3062971da00728e7582"
+      },
+      {
+        "name": "features.json",
+        "sha256": "ffe53f3ec8b903e029919fb9bc072aaad2302a70e5a2496afc750cfd093f11d1"
       }
     ]
   },
@@ -1671,7 +1671,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "PE with Untrusted Signer"
+          "value": "PE with Expired Signer"
         }
       ],
       "file.pe.debug.guid": [
