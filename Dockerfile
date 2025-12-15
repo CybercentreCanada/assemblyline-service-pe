@@ -35,7 +35,7 @@ ADD --chmod=644 https://raw.githubusercontent.com/dishather/richprint/master/com
 
 ADD --chmod=644 https://bazaar.abuse.ch/export/csv/cscb/ /opt/al_service/pe/cscb.csv
 
-ADD --chmod=644 https://certcentral.org/api/download_csv /opt/al_service/pe/certcentral.csv
+ADD --chmod=644 https://certgraveyard.org/api/download_csv /opt/al_service/pe/certcentral.csv
 
 RUN sed -i -e "s/\$SERVICE_TAG/$version/g" service_manifest.yml
 
