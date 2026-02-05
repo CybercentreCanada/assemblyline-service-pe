@@ -1,5 +1,7 @@
 from __future__ import absolute_import
+
 import sys
+
 from . import oleaut32, ws2_32
 
 """
@@ -33,10 +35,7 @@ else:
 
 
 def ordLookup(libname, ord_val, make_name=False):
-    """
-    Lookup a name for the given ordinal if it's in our
-    database.
-    """
+    """Returns a name for the given ordinal if it's in our database."""
     names = ords.get(libname.lower())
     if names is None:
         if make_name is True:

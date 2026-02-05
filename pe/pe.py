@@ -321,8 +321,9 @@ class PE(ServiceBase):
         self.identify = forge.get_identify(use_cache=os.environ.get("PRIVILEGED", "false").lower() == "true")
 
     def check_timestamps(self):
-        """
-        Compares timestamps that could be found in the binary.
+        """Compares timestamps that could be found in the binary.
+
+        Timestamp used:
             header timestamp
             load configuration timestamp
             export timestamp
@@ -635,7 +636,7 @@ class PE(ServiceBase):
                 f"{self.binary.optional_header.minor_subsystem_version}"
             ),
         )
-        res.add_item("Subsystem", self.binary.optional_header.subsystem.name)
+        res.add_item("Subsystem", get_lief_enum_name(self.binary.optional_header.subsystem))
         res.add_item("NX", self.binary.has_nx)
         if self.binary.has_rich_header:
             rich_header_section = ResultMultiSection(f"Rich Headers - Key: {self.binary.rich_header.key}")
@@ -675,7 +676,7 @@ class PE(ServiceBase):
                         )
                     )
 
-            clear_data = bytes.fromhex(f"44616e53{'0'*24}{clear_data}")  # DanS
+            clear_data = bytes.fromhex(f"44616e53{'0' * 24}{clear_data}")  # DanS
             m = hashlib.md5()
             m.update(clear_data)
             rich_header_hash = m.hexdigest()
@@ -1012,7 +1013,7 @@ class PE(ServiceBase):
             heur = Heuristic(30)
             heur_section = ResultSection(heur.name, heuristic=heur, parent=res)
             heur_section.add_line(
-                f'A total of {len(self.features["export"]["entries"])} exports found, but only the first 100 are shown.'
+                f"A total of {len(self.features['export']['entries'])} exports found, but only the first 100 are shown."
             )
             if export.name == "node.exe":
                 heur = Heuristic(31)

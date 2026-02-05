@@ -39,11 +39,11 @@ def is_mapped(pe: lief.PE.Binary, file_size_bytes: int) -> bool:
 
 
 def unmap(pe: lief.PE.Binary, in_data):
-    """
+    """Returns an unmapped version of the pe.
+
     It is currently performing better when we don't try modifying the base image
     However, it will break when samples have absolute jump instructions in their code.
     """
-
     # Fix alignment
     pe.optional_header.file_alignment = pe.optional_header.section_alignment
 
