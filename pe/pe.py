@@ -14,10 +14,10 @@ from io import BytesIO
 
 import lief
 import ordlookup
-import ssdeep
 from assemblyline.common import forge
 from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline.odm.models.ontology.filetypes import PE as PE_ODM
+from assemblyline_toolbox import SsdeepHasher
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.result import (
@@ -190,7 +190,7 @@ def calc_impfuzzy(imports, sort=False):
         impstrs.sort()
 
     apilist = ",".join(impstrs)
-    return ssdeep.hash(apilist)
+    return SsdeepHasher.hash(apilist)
 
 
 def generate_checksum(filename, checksum_offset):
