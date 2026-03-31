@@ -1719,7 +1719,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "(2x) No signer associated with the signature\n(2x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(2x) The certificate validity has expired\nThe certificate is not correctly signed by the trusted CA",
+        "body": "(2x) No signer associated with the signature\n(5x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(5x) The certificate validity has expired\n(2x) The certificate is not correctly signed by the trusted CA",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1749,12 +1749,12 @@
         "sha256": "3e9099b5015e8f486c00bcea9d111ee721faba355a89bcf1df69561e3dc6325c"
       },
       {
-        "name": "certificate.1.3",
-        "sha256": "553528d179f74cae83602194b20058353d65d44d3db3de9f1573b21b0a633417"
+        "name": "features.json",
+        "sha256": "438971557df121f1d6b0f4d34b34d1012576aa25c1f6d591a46a67da13f0995e"
       },
       {
-        "name": "features.json",
-        "sha256": "db2a86d6515017d418240bbaa52680c97ac4b487b6a169ce84f9a2faf2712ff8"
+        "name": "certificate.1.3",
+        "sha256": "553528d179f74cae83602194b20058353d65d44d3db3de9f1573b21b0a633417"
       }
     ]
   },
