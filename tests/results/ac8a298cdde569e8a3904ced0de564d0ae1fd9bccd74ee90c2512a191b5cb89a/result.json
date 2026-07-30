@@ -903,7 +903,7 @@
         "heuristic": null,
         "promote_to": null,
         "tags": {},
-        "title_text": "RESERVED",
+        "title_text": "RESERVED10",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1060,7 +1060,7 @@
         "body": [
           [
             "Languages",
-            "NEUTRAL"
+            "ENGLISH, NEUTRAL"
           ],
           [
             "Sublanguages",
@@ -1078,6 +1078,7 @@
             "pe": {
               "resources": {
                 "language": [
+                  "ENGLISH",
                   "NEUTRAL"
                 ]
               }
@@ -1212,7 +1213,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -1719,7 +1720,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "(2x) No signer associated with the signature\n(5x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(5x) The certificate validity has expired\n(2x) The certificate is not correctly signed by the trusted CA",
+        "body": "Failed to parse X509 cert pkcs7-signed-data.certificates (pos: 4616, idx: 3)\n(2x) No signer associated with the signature\n(5x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(5x) The certificate validity has expired\n(2x) The certificate is not correctly signed by the trusted CA",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1741,6 +1742,10 @@
     ],
     "supplementary": [
       {
+        "name": "features.json",
+        "sha256": "1ba44ed1d49604cfc59b44b933db0885b67ece7a4ea41237ef564eadc2ffffe3"
+      },
+      {
         "name": "certificate.1.2",
         "sha256": "3c8b0d5c2adf2f7090a9b8ff452a4141833deaa05b5f44e9513db94bfdf1d6bd"
       },
@@ -1751,10 +1756,6 @@
       {
         "name": "certificate.1.3",
         "sha256": "553528d179f74cae83602194b20058353d65d44d3db3de9f1573b21b0a633417"
-      },
-      {
-        "name": "features.json",
-        "sha256": "5d20396281275e1624ddee22c68f629800158638816ab0425a98f61df403f62f"
       }
     ]
   },
@@ -1842,6 +1843,11 @@
         }
       ],
       "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ENGLISH"
+        },
         {
           "heur_id": null,
           "signatures": [],

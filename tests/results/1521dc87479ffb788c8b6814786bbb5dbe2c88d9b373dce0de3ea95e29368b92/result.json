@@ -1059,6 +1059,18 @@
                   "ADMIN_MANIFEST"
                 ]
               }
+            },
+            "string": {
+              "extracted": [
+                "120",
+                "&Setup",
+                "Cancel",
+                "&About",
+                "None",
+                "WinZip Self-Extractor - Password",
+                "This self-extracting Zip file is password protected.\n\nPlease type the &password:",
+                "OK"
+              ]
             }
           }
         },
@@ -1606,7 +1618,7 @@
           ],
           [
             "Subject",
-            "C=US, ST=California, L=Menlo Park, O=FinePrint Software\\, LLC, serialNumber=199911710082, CN=FinePrint Software\\, LLC, ??=Private Organization, ??=California, ??=US"
+            "C=US, ST=California, L=Menlo Park, O=FinePrint Software\\, LLC, serialNumber=199911710082, CN=FinePrint Software\\, LLC, BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_SP=California, JURISDICTION_OF_INCORPORATION_C=US"
           ],
           [
             "Issuer",
@@ -1644,7 +1656,7 @@
               "3275b3e4a21220d196ecff75edecaf97"
             ],
             "subject": [
-              "C=US, ST=California, L=Menlo Park, O=FinePrint Software\\, LLC, serialNumber=199911710082, CN=FinePrint Software\\, LLC, ??=Private Organization, ??=California, ??=US"
+              "C=US, ST=California, L=Menlo Park, O=FinePrint Software\\, LLC, serialNumber=199911710082, CN=FinePrint Software\\, LLC, BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_SP=California, JURISDICTION_OF_INCORPORATION_C=US"
             ],
             "thumbprint": [
               "0d27aaba35a9e3cd0865643881cb30632c90f186",
@@ -1673,7 +1685,7 @@
           ],
           [
             "Subject",
-            "C=US, ST=California, L=Menlo Park, O=FinePrint Software\\, LLC, serialNumber=199911710082, CN=FinePrint Software\\, LLC, ??=Private Organization, ??=California, ??=US"
+            "C=US, ST=California, L=Menlo Park, O=FinePrint Software\\, LLC, serialNumber=199911710082, CN=FinePrint Software\\, LLC, BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_SP=California, JURISDICTION_OF_INCORPORATION_C=US"
           ],
           [
             "Issuer",
@@ -2057,7 +2069,7 @@
       },
       {
         "name": "features.json",
-        "sha256": "a972709fc5a6ed350ac510cc7637015196133b0eba7d6672f94b7172320532db"
+        "sha256": "bc8a4aa29abbb40d9496c9edcc64c6ae2ec94841f7c3f687aaac441195763ed8"
       },
       {
         "name": "icon_12.ico",
@@ -2137,7 +2149,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "C=US, ST=California, L=Menlo Park, O=FinePrint Software\\, LLC, serialNumber=199911710082, CN=FinePrint Software\\, LLC, ??=Private Organization, ??=California, ??=US"
+          "value": "C=US, ST=California, L=Menlo Park, O=FinePrint Software\\, LLC, serialNumber=199911710082, CN=FinePrint Software\\, LLC, BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_SP=California, JURISDICTION_OF_INCORPORATION_C=US"
         }
       ],
       "cert.thumbprint": [
@@ -2303,6 +2315,48 @@
           "heur_id": null,
           "signatures": [],
           "value": "_winzip_"
+        }
+      ],
+      "file.string.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&About"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Setup"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "120"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Cancel"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "None"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "OK"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "This self-extracting Zip file is password protected.\n\nPlease type the &password:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "WinZip Self-Extractor - Password"
         }
       ]
     },

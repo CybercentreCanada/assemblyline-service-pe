@@ -1590,7 +1590,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -1618,10 +1618,6 @@
       {
         "auto_collapse": false,
         "body": [
-          [
-            "",
-            ""
-          ],
           [
             "CompanyName",
             "Microsoft Corporation"
@@ -1866,7 +1862,7 @@
           ],
           [
             "Subject",
-            "serialNumber=407950, ??=IE, ??=Private Organization, C=IE, ST=Donegal, O=Akeo Consulting, CN=Akeo Consulting"
+            "serialNumber=407950, JURISDICTION_OF_INCORPORATION_C=IE, BUSINESS_CATEGORY=Private Organization, C=IE, ST=Donegal, O=Akeo Consulting, CN=Akeo Consulting"
           ],
           [
             "Issuer",
@@ -1904,7 +1900,7 @@
               "00bfb15001bbf592d4962a7797ea736fa3"
             ],
             "subject": [
-              "serialNumber=407950, ??=IE, ??=Private Organization, C=IE, ST=Donegal, O=Akeo Consulting, CN=Akeo Consulting"
+              "serialNumber=407950, JURISDICTION_OF_INCORPORATION_C=IE, BUSINESS_CATEGORY=Private Organization, C=IE, ST=Donegal, O=Akeo Consulting, CN=Akeo Consulting"
             ],
             "thumbprint": [
               "3dbc3a2a0e9ce8803b422cfdbc60acd33164965d",
@@ -2033,7 +2029,7 @@
           ],
           [
             "Subject",
-            "serialNumber=407950, ??=IE, ??=Private Organization, C=IE, ST=Donegal, O=Akeo Consulting, CN=Akeo Consulting"
+            "serialNumber=407950, JURISDICTION_OF_INCORPORATION_C=IE, BUSINESS_CATEGORY=Private Organization, C=IE, ST=Donegal, O=Akeo Consulting, CN=Akeo Consulting"
           ],
           [
             "Issuer",
@@ -2205,7 +2201,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Can't read String.wLength\nCan't read String.wValueLength\nCan't read String.wType\n(4x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(4x) The certificate validity has expired",
+        "body": "(4x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(4x) The certificate validity has expired",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -2235,6 +2231,10 @@
         "sha256": "384e9f98355a133565eb03083b79e71a46f00c21352ed7c06990d841228cbe88"
       },
       {
+        "name": "features.json",
+        "sha256": "4076bb6411e9d6308bb4153e5921c67323d004b8a71525a8f0261a677f2840cb"
+      },
+      {
         "name": "certificate.1.3",
         "sha256": "60e992275cc7503a3eba5d391db8aeaaab001402d49aea3f7f5da3706df97327"
       },
@@ -2261,10 +2261,6 @@
       {
         "name": "icon_5.ico.thumb",
         "sha256": "c8811111e4197acce2f3dd70dfb96cd69558e2904c346f495d43da1d853e872b"
-      },
-      {
-        "name": "features.json",
-        "sha256": "c9ff14e28859ce70574e009cbdb1da6a837588a22e9aefd2dfe69a34226b30d4"
       },
       {
         "name": "icon_3.ico",
@@ -2342,7 +2338,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "serialNumber=407950, ??=IE, ??=Private Organization, C=IE, ST=Donegal, O=Akeo Consulting, CN=Akeo Consulting"
+          "value": "serialNumber=407950, JURISDICTION_OF_INCORPORATION_C=IE, BUSINESS_CATEGORY=Private Organization, C=IE, ST=Donegal, O=Akeo Consulting, CN=Akeo Consulting"
         }
       ],
       "cert.thumbprint": [

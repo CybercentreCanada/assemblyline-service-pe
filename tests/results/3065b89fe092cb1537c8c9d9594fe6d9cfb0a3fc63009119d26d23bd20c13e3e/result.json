@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 650,
+    "score": 550,
     "sections": [
       {
         "auto_collapse": false,
@@ -840,30 +840,10 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 36,
-          "score": 100,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No languages found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
         "body": [
           [
             "Languages",
-            ""
+            "ENGLISH, KOREAN"
           ],
           [
             "Sublanguages",
@@ -880,6 +860,10 @@
           "file": {
             "pe": {
               "resources": {
+                "language": [
+                  "ENGLISH",
+                  "KOREAN"
+                ],
                 "name": [
                   "IDR_BINARY"
                 ]
@@ -1152,7 +1136,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Accelerator resources might be corrupted\nGroup icon type should be equal to 1 (vs 53133)",
+        "body": "Possibly corrupted accelerator resources\nGroup icon type should be 1 (got 53133)",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1165,7 +1149,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Accelerator resources might be corrupted",
+        "body": "Possibly corrupted accelerator resources",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1195,7 +1179,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "c8ef9c61ad1c4dbf9123dbbc4a121add27359c59650dde7e585698642825a0e5"
+        "sha256": "aaede6fda2836ba0e9fc8adf3b557f8baf94579b01ca955d5f103d089f40f924"
       }
     ]
   },
@@ -1224,11 +1208,6 @@
       {
         "attack_ids": [],
         "heur_id": 24,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 36,
         "signatures": []
       },
       {
@@ -1276,6 +1255,18 @@
           "heur_id": null,
           "signatures": [],
           "value": "2013-10-14 12:10:28 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ENGLISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "KOREAN"
         }
       ],
       "file.pe.resources.name": [

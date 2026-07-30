@@ -1362,7 +1362,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -1705,7 +1705,7 @@
           ],
           [
             "Subject",
-            "C=US, postalCode=19102, ST=PA, L=Philadelphia, ??=50 S 16TH ST STE 3575, O=Ascentive LLC, CN=Ascentive LLC"
+            "C=US, postalCode=19102, ST=PA, L=Philadelphia, STREET_ADDRESS=50 S 16TH ST STE 3575, O=Ascentive LLC, CN=Ascentive LLC"
           ],
           [
             "Issuer",
@@ -1743,7 +1743,7 @@
               "6a1ec0f7c3e18a988c53b8077d911faa"
             ],
             "subject": [
-              "C=US, postalCode=19102, ST=PA, L=Philadelphia, ??=50 S 16TH ST STE 3575, O=Ascentive LLC, CN=Ascentive LLC"
+              "C=US, postalCode=19102, ST=PA, L=Philadelphia, STREET_ADDRESS=50 S 16TH ST STE 3575, O=Ascentive LLC, CN=Ascentive LLC"
             ],
             "thumbprint": [
               "dbafc47c8922a5ee2de97b2703b85b79cdf9eb94",
@@ -1822,7 +1822,7 @@
           ],
           [
             "Subject",
-            "C=US, postalCode=19102, ST=PA, L=Philadelphia, ??=50 S 16TH ST STE 3575, O=Ascentive LLC, CN=Ascentive LLC"
+            "C=US, postalCode=19102, ST=PA, L=Philadelphia, STREET_ADDRESS=50 S 16TH ST STE 3575, O=Ascentive LLC, CN=Ascentive LLC"
           ],
           [
             "Issuer",
@@ -2110,10 +2110,6 @@
         "sha256": "9cc738a8079fbb4eac05544f046a750f187124cf155c958167f509d61b1ce8d4"
       },
       {
-        "name": "features.json",
-        "sha256": "af975424c261a5aa7ac6b1cda2a306b757f7a68bd61d62e115bc7fceb2713f90"
-      },
-      {
         "name": "certificate.1.2",
         "sha256": "b9520912bab80c549f0d7ee2689906d59f3d111b43290d8329f9bab115a1c17f"
       },
@@ -2128,6 +2124,10 @@
       {
         "name": "icon_2.ico.thumb",
         "sha256": "ea79b3daa3ab6abb2e36299f5abddbfe85e7e46c6b892c129545fe39aa78859a"
+      },
+      {
+        "name": "features.json",
+        "sha256": "f35b3531380fb2bf7baec16cadd7687a396cc34b76375dd787f2034d5faa3567"
       }
     ]
   },
@@ -2178,7 +2178,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "C=US, postalCode=19102, ST=PA, L=Philadelphia, ??=50 S 16TH ST STE 3575, O=Ascentive LLC, CN=Ascentive LLC"
+          "value": "C=US, postalCode=19102, ST=PA, L=Philadelphia, STREET_ADDRESS=50 S 16TH ST STE 3575, O=Ascentive LLC, CN=Ascentive LLC"
         }
       ],
       "cert.thumbprint": [

@@ -968,7 +968,7 @@
         "body": [
           [
             "Languages",
-            "RUSSIAN"
+            "NEUTRAL, RUSSIAN"
           ],
           [
             "Sublanguages",
@@ -986,6 +986,7 @@
             "pe": {
               "resources": {
                 "language": [
+                  "NEUTRAL",
                   "RUSSIAN"
                 ],
                 "name": [
@@ -1101,14 +1102,7 @@
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 13,
-          "score": 200,
-          "score_map": {},
-          "signatures": {}
-        },
+        "heuristic": null,
         "promote_to": null,
         "tags": {},
         "title_text": "Version",
@@ -1178,6 +1172,142 @@
         "promote_to": null,
         "tags": {},
         "title_text": "fixed_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "key",
+            "StringFileInfo"
+          ],
+          [
+            "type",
+            0
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "pe": {
+              "versions": {
+                "description": [
+                  "X.GgFatS2"
+                ],
+                "filename": [
+                  "M8pnE0gYM"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "string_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "key",
+            "I4g2SKL3"
+          ],
+          [
+            "type",
+            0
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 3,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 13,
+          "score": 200,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "langcode_items 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "CompanyName",
+            "KZ2rvcKCi"
+          ],
+          [
+            "FileDescription",
+            "X.GgFatS2"
+          ],
+          [
+            "FileVersion",
+            "WHXv6NUGr"
+          ],
+          [
+            "InternalName",
+            "cs1emcqCR"
+          ],
+          [
+            "LegalCopyright",
+            "VPc3ZhaO3"
+          ],
+          [
+            "OriginalFilename",
+            "M8pnE0gYM"
+          ],
+          [
+            "ProductName",
+            "uWqqVc0Ye"
+          ],
+          [
+            "ProductVersion",
+            "5jnxLpepP"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 4,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "items",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "key",
+            "VarFileInfo"
+          ],
+          [
+            "type",
+            0
+          ],
+          [
+            "translations",
+            "0"
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 2,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "var_file_info",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1333,19 +1463,6 @@
         "tags": {},
         "title_text": "No relocations found",
         "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": "Invalid hex-string for Lang ID: 'I4g2'\nInvalid hex-string for Code page: 'SKL3'",
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": null,
-        "promote_to": null,
-        "tags": {},
-        "title_text": "LIEF logging information.",
-        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -1366,16 +1483,16 @@
         "sha256": "7ae636b8ab35b1b47111b89337a099e1ec8f7bff2db643742a7d62237a64eca2"
       },
       {
+        "name": "features.json",
+        "sha256": "824cae45a8ef4b4957a77f5ae6a9f5069bcab758e498cbf63ed9f8a9157079e0"
+      },
+      {
         "name": "icon_0.ico",
         "sha256": "a1d95d3219cae212c5f36f3c2652c6798339c79f1fff2625ffb3ab82aa446b2a"
       },
       {
         "name": "icon_0.ico.thumb",
         "sha256": "a1d95d3219cae212c5f36f3c2652c6798339c79f1fff2625ffb3ab82aa446b2a"
-      },
-      {
-        "name": "features.json",
-        "sha256": "b991975b2f3faad25a5de96bcdeda5dea6979d31c795a43da996fda053816d9f"
       },
       {
         "name": "icon_1.ico",
@@ -1455,6 +1572,11 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "NEUTRAL"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "RUSSIAN"
         }
       ],
@@ -1514,6 +1636,20 @@
           "heur_id": null,
           "signatures": [],
           "value": ".text"
+        }
+      ],
+      "file.pe.versions.description": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "X.GgFatS2"
+        }
+      ],
+      "file.pe.versions.filename": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "M8pnE0gYM"
         }
       ]
     },

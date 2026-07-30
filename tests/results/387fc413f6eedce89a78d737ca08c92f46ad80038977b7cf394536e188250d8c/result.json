@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 550,
+    "score": 350,
     "sections": [
       {
         "auto_collapse": false,
@@ -825,7 +825,7 @@
         "body": [
           [
             "Languages",
-            "NEUTRAL"
+            "ENGLISH, NEUTRAL"
           ],
           [
             "Sublanguages",
@@ -843,38 +843,21 @@
             "pe": {
               "resources": {
                 "language": [
+                  "ENGLISH",
                   "NEUTRAL"
                 ]
               }
             },
             "string": {
               "extracted": [
-                "("
+                "\ue01d",
+                "\ub8d1\u1240\u2800\u6c00\u1860\ua101\ud076\ua605",
+                "None"
               ]
             }
           }
         },
         "title_text": "Resources",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": "Can't decode typeface of dialog",
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 1,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 13,
-          "score": 200,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "Corrupted resources",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1175,16 +1158,16 @@
     ],
     "supplementary": [
       {
+        "name": "features.json",
+        "sha256": "8b691634ed1e899134beca170986f5f910c99b8ff2b129fb95e65444c2d6cf0b"
+      },
+      {
         "name": "icon_0.ico",
         "sha256": "af0fe6617c8e1e49c5395e3e72940edb5a334f4ffc64c739bf9307aef763f590"
       },
       {
         "name": "icon_0.ico.thumb",
         "sha256": "af0fe6617c8e1e49c5395e3e72940edb5a334f4ffc64c739bf9307aef763f590"
-      },
-      {
-        "name": "features.json",
-        "sha256": "f0154afb8e32e2308f7a67e7ead1a9c5232d70beff906479b2c112a9c5742f5a"
       }
     ]
   },
@@ -1193,11 +1176,6 @@
       {
         "attack_ids": [],
         "heur_id": 4,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 13,
         "signatures": []
       },
       {
@@ -1266,6 +1244,11 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "ENGLISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "NEUTRAL"
         }
       ],
@@ -1314,7 +1297,17 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "("
+          "value": "None"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "\ub8d1\u1240\u2800\u6c00\u1860\ua101\ud076\ua605"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "\ue01d"
         }
       ]
     },

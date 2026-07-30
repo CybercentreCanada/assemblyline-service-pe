@@ -879,7 +879,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -1506,7 +1506,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "(9x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(9x) The certificate is not correctly signed by the trusted CA\n(5x) The certificate validity has expired",
+        "body": "(2x) Authenticated signature (counter signature) mismatch\n(9x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(9x) The certificate is not correctly signed by the trusted CA\n(5x) The certificate validity has expired",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1537,7 +1537,7 @@
       },
       {
         "name": "features.json",
-        "sha256": "e4b16f110222a5f3115cdda775052910fa76324b8e837fea488c55070d9f485c"
+        "sha256": "5a06cb8bad88ece663b1ef5eb194a70e37e317af4879e9121c3a634319cf0d1b"
       },
       {
         "name": "certificate.1.1",

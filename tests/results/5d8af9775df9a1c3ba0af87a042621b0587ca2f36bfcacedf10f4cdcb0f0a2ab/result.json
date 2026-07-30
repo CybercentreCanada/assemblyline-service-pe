@@ -1474,7 +1474,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -2065,7 +2065,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "(19x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(19x) The certificate validity has expired\n(15x) The certificate is not correctly signed by the trusted CA",
+        "body": "Failed to parse X509 cert pkcs7-signed-data.certificates (pos: 0, idx: 0)\n(19x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(19x) The certificate validity has expired\n(15x) The certificate is not correctly signed by the trusted CA",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -2099,12 +2099,12 @@
         "sha256": "534b9b1a31a38b4e0bf9a291f408337c25a2e011d460fdff495ce473fb168a8e"
       },
       {
-        "name": "features.json",
-        "sha256": "673e59c757ac848edc0bdb8847f8045dcfb3247dd3e158bcf86eb95a622308bb"
-      },
-      {
         "name": "certificate.1.4",
         "sha256": "d92bf8e9fa867dbd8b794c6a49e6ff1fcfac71f3d7f4ae55bb9587eb24ac6489"
+      },
+      {
+        "name": "features.json",
+        "sha256": "fcbb9012a6db03c2301b96687fca505f6a66f120a085f1121adcf3387ecf4b27"
       }
     ]
   },

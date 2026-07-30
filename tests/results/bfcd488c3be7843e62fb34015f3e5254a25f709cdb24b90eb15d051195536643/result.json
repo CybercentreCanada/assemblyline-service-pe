@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 150,
+    "score": 350,
     "sections": [
       {
         "auto_collapse": false,
@@ -1228,7 +1228,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Can't read the padding content of section '.rsrc'\nData of section section '/4' is too large (0xfffffe24)\n(2x) Node 1 empty",
+        "body": "Failed to read padding of section '.rsrc'\nCorrupted section #9 (/4)\nFailed to read padding of section '/4'\nCorrupted manifest node",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1237,6 +1237,26 @@
         "promote_to": null,
         "tags": {},
         "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Corrupted section #9 (/4)\nCorrupted manifest node",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 13,
+          "score": 200,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Corrupted resources",
         "zeroize_on_tag_safe": false
       }
     ]
@@ -1252,6 +1272,11 @@
   },
   "results": {
     "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 13,
+        "signatures": []
+      },
       {
         "attack_ids": [],
         "heur_id": 15,

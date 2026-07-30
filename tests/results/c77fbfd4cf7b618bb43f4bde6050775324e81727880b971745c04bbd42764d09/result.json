@@ -1503,6 +1503,7 @@
                 "Installation Information",
                 "Install / Update",
                 "Uninstall",
+                "101",
                 "Current Agent Status",
                 "Unknown",
                 "New Agent Version",
@@ -1737,7 +1738,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -2382,7 +2383,7 @@
       },
       {
         "name": "features.json",
-        "sha256": "b823ef21974df25417da170611db208a9ebdd74792e1ae6dc4cc2597f3d6d2d6"
+        "sha256": "df419592fe4bf5f6077f3c38649817e5d75072236104a992eefc85b3736181d1"
       }
     ]
   },
@@ -2630,6 +2631,11 @@
         }
       ],
       "file.string.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "101"
+        },
         {
           "heur_id": null,
           "signatures": [],

@@ -1022,7 +1022,7 @@
         "body": [
           [
             "Languages",
-            "ENGLISH, GERMAN"
+            "ENGLISH, GERMAN, NEUTRAL"
           ],
           [
             "Sublanguages",
@@ -1041,7 +1041,8 @@
               "resources": {
                 "language": [
                   "ENGLISH",
-                  "GERMAN"
+                  "GERMAN",
+                  "NEUTRAL"
                 ],
                 "name": [
                   "JPG1",
@@ -1236,7 +1237,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -1264,10 +1265,6 @@
       {
         "auto_collapse": false,
         "body": [
-          [
-            "",
-            ""
-          ],
           [
             "Comments",
             "CHIP Secured Installer"
@@ -1540,7 +1537,7 @@
           ],
           [
             "Subject",
-            "C=DE, postalCode=81541, ST=Bayern, L=Munich, ??=St.-Martin-Strasse 66, O=CHIP Digital GmbH, OU=Download Development, CN=CHIP Digital GmbH"
+            "C=DE, postalCode=81541, ST=Bayern, L=Munich, STREET_ADDRESS=St.-Martin-Strasse 66, O=CHIP Digital GmbH, OU=Download Development, CN=CHIP Digital GmbH"
           ],
           [
             "Issuer",
@@ -1578,7 +1575,7 @@
               "00dfe066d5acffad39c60aea807a45fa40"
             ],
             "subject": [
-              "C=DE, postalCode=81541, ST=Bayern, L=Munich, ??=St.-Martin-Strasse 66, O=CHIP Digital GmbH, OU=Download Development, CN=CHIP Digital GmbH"
+              "C=DE, postalCode=81541, ST=Bayern, L=Munich, STREET_ADDRESS=St.-Martin-Strasse 66, O=CHIP Digital GmbH, OU=Download Development, CN=CHIP Digital GmbH"
             ],
             "thumbprint": [
               "3de5685770fe3d345e78230a03fcdf27579ca034",
@@ -1607,7 +1604,7 @@
           ],
           [
             "Subject",
-            "C=DE, postalCode=81541, ST=Bayern, L=Munich, ??=St.-Martin-Strasse 66, O=CHIP Digital GmbH, OU=Download Development, CN=CHIP Digital GmbH"
+            "C=DE, postalCode=81541, ST=Bayern, L=Munich, STREET_ADDRESS=St.-Martin-Strasse 66, O=CHIP Digital GmbH, OU=Download Development, CN=CHIP Digital GmbH"
           ],
           [
             "Issuer",
@@ -1774,7 +1771,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Can't read String.wLength\nCan't read String.wValueLength\nCan't read String.wType\n(4x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(4x) The certificate validity has expired",
+        "body": "(4x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(4x) The certificate validity has expired",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1845,7 +1842,7 @@
       },
       {
         "name": "features.json",
-        "sha256": "891f170125f49863ae3a5022bbf55b7d1b1eca4ca432f4b20ee751e67900a849"
+        "sha256": "faaa84c8cde8ab5ff20fffc58b59bfcff872bd17476da07274f68d290fd811b5"
       }
     ]
   },
@@ -1901,7 +1898,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "C=DE, postalCode=81541, ST=Bayern, L=Munich, ??=St.-Martin-Strasse 66, O=CHIP Digital GmbH, OU=Download Development, CN=CHIP Digital GmbH"
+          "value": "C=DE, postalCode=81541, ST=Bayern, L=Munich, STREET_ADDRESS=St.-Martin-Strasse 66, O=CHIP Digital GmbH, OU=Download Development, CN=CHIP Digital GmbH"
         }
       ],
       "cert.thumbprint": [
@@ -1992,6 +1989,11 @@
           "heur_id": null,
           "signatures": [],
           "value": "GERMAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
         }
       ],
       "file.pe.resources.name": [

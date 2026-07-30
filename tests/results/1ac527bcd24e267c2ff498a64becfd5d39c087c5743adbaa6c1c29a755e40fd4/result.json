@@ -839,7 +839,7 @@
         "body": [
           [
             "Languages",
-            "ENGLISH, NEUTRAL"
+            "ARABIC, BASQUE, CATALAN, CHINESE, CROATIAN, CZECH, DANISH, DUTCH, ENGLISH, ESTONIAN, FINNISH, FRENCH, GERMAN, GREEK, HEBREW, HUNGARIAN, ITALIAN, JAPANESE, KOREAN, LATVIAN, LITHUANIAN, NEUTRAL, NORWEGIAN, POLISH, PORTUGUESE, ROMANIAN, RUSSIAN, SLOVAK, SLOVENIAN, SPANISH, SWEDISH, THAI, TURKISH, VIETNAMESE"
           ],
           [
             "Sublanguages",
@@ -857,8 +857,40 @@
             "pe": {
               "resources": {
                 "language": [
+                  "ARABIC",
+                  "BASQUE",
+                  "CATALAN",
+                  "CHINESE",
+                  "CROATIAN",
+                  "CZECH",
+                  "DANISH",
+                  "DUTCH",
                   "ENGLISH",
-                  "NEUTRAL"
+                  "ESTONIAN",
+                  "FINNISH",
+                  "FRENCH",
+                  "GERMAN",
+                  "GREEK",
+                  "HEBREW",
+                  "HUNGARIAN",
+                  "ITALIAN",
+                  "JAPANESE",
+                  "KOREAN",
+                  "LATVIAN",
+                  "LITHUANIAN",
+                  "NEUTRAL",
+                  "NORWEGIAN",
+                  "POLISH",
+                  "PORTUGUESE",
+                  "ROMANIAN",
+                  "RUSSIAN",
+                  "SLOVAK",
+                  "SLOVENIAN",
+                  "SPANISH",
+                  "SWEDISH",
+                  "THAI",
+                  "TURKISH",
+                  "VIETNAMESE"
                 ],
                 "name": [
                   "IDI_ICON3"
@@ -871,6 +903,7 @@
                 "&Cancel",
                 "InstallAWARE is extracting the files that will install this application. This may take a few seconds...",
                 "IDI_ICON3",
+                "None",
                 "InstallAWARE",
                 "This installation is password protected. Please &enter the password to start setup:",
                 "&OK"
@@ -1211,7 +1244,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -2016,7 +2049,7 @@
           ],
           [
             "Subject",
-            "C=US, postalCode=92612, ST=CA, L=Irvine, ??=3345 Michelson Dr \\#400, O=Alteryx\\, Inc, OU=Core Development, CN=Alteryx\\, Inc"
+            "C=US, postalCode=92612, ST=CA, L=Irvine, STREET_ADDRESS=3345 Michelson Dr \\#400, O=Alteryx\\, Inc, OU=Core Development, CN=Alteryx\\, Inc"
           ],
           [
             "Issuer",
@@ -2054,7 +2087,7 @@
               "666ea480a0f0a5ba6bbf2fc42195663a"
             ],
             "subject": [
-              "C=US, postalCode=92612, ST=CA, L=Irvine, ??=3345 Michelson Dr \\#400, O=Alteryx\\, Inc, OU=Core Development, CN=Alteryx\\, Inc"
+              "C=US, postalCode=92612, ST=CA, L=Irvine, STREET_ADDRESS=3345 Michelson Dr \\#400, O=Alteryx\\, Inc, OU=Core Development, CN=Alteryx\\, Inc"
             ],
             "thumbprint": [
               "414193f851264426b47a57b095f660ffb64d6124",
@@ -2083,7 +2116,7 @@
           ],
           [
             "Subject",
-            "C=US, postalCode=92612, ST=CA, L=Irvine, ??=3345 Michelson Dr \\#400, O=Alteryx\\, Inc, OU=Core Development, CN=Alteryx\\, Inc"
+            "C=US, postalCode=92612, ST=CA, L=Irvine, STREET_ADDRESS=3345 Michelson Dr \\#400, O=Alteryx\\, Inc, OU=Core Development, CN=Alteryx\\, Inc"
           ],
           [
             "Issuer",
@@ -2257,6 +2290,10 @@
         "sha256": "8226ca981d14e78264885150d17aef564ab6f5d37406ea33934f4c4c2303b665"
       },
       {
+        "name": "features.json",
+        "sha256": "90e13fef0c382909da46a5a2bec97a6d6f92da33ac3cab13b466eab7cb9e3a82"
+      },
+      {
         "name": "certificate.1.1",
         "sha256": "94c5edac9178c4b3b73d979f9ee722414c4622ba9b81a5faaffe6dea1c1d0a07"
       },
@@ -2283,10 +2320,6 @@
       {
         "name": "icon_1.ico.thumb",
         "sha256": "b108749ed9225ede9ffa214a90b9cc452b654c403e2d0a7c8ed36ebe8fb62eab"
-      },
-      {
-        "name": "features.json",
-        "sha256": "efe65293f63cfa4893a70ca6a97f2d8576dbfd15221a1559c55b551517899cd7"
       },
       {
         "name": "icon_4.ico",
@@ -2330,7 +2363,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "C=US, postalCode=92612, ST=CA, L=Irvine, ??=3345 Michelson Dr \\#400, O=Alteryx\\, Inc, OU=Core Development, CN=Alteryx\\, Inc"
+          "value": "C=US, postalCode=92612, ST=CA, L=Irvine, STREET_ADDRESS=3345 Michelson Dr \\#400, O=Alteryx\\, Inc, OU=Core Development, CN=Alteryx\\, Inc"
         }
       ],
       "cert.thumbprint": [
@@ -2415,12 +2448,172 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "ARABIC"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "BASQUE"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "CATALAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "CHINESE"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "CROATIAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "CZECH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "DANISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "DUTCH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "ENGLISH"
         },
         {
           "heur_id": null,
           "signatures": [],
+          "value": "ESTONIAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "FINNISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "FRENCH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "GERMAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "GREEK"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "HEBREW"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "HUNGARIAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ITALIAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "JAPANESE"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "KOREAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "LATVIAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "LITHUANIAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "NEUTRAL"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NORWEGIAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "POLISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "PORTUGUESE"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ROMANIAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "RUSSIAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "SLOVAK"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "SLOVENIAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "SPANISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "SWEDISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "THAI"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "TURKISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "VIETNAMESE"
         }
       ],
       "file.pe.resources.name": [
@@ -2513,6 +2706,11 @@
           "heur_id": null,
           "signatures": [],
           "value": "InstallAWARE is extracting the files that will install this application. This may take a few seconds..."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "None"
         },
         {
           "heur_id": null,

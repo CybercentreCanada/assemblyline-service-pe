@@ -1151,7 +1151,7 @@
           ],
           [
             "Subject",
-            "C=US, postalCode=32118, ST=FL, L=Daytona Beach, ??=3280C S. Atlantic Av. \\#50, O=AaaTeX Corp., CN=AaaTeX Corp."
+            "C=US, postalCode=32118, ST=FL, L=Daytona Beach, STREET_ADDRESS=3280C S. Atlantic Av. \\#50, O=AaaTeX Corp., CN=AaaTeX Corp."
           ],
           [
             "Issuer",
@@ -1189,7 +1189,7 @@
               "00abf2b91fafceebf697f6501322f3d213"
             ],
             "subject": [
-              "C=US, postalCode=32118, ST=FL, L=Daytona Beach, ??=3280C S. Atlantic Av. \\#50, O=AaaTeX Corp., CN=AaaTeX Corp."
+              "C=US, postalCode=32118, ST=FL, L=Daytona Beach, STREET_ADDRESS=3280C S. Atlantic Av. \\#50, O=AaaTeX Corp., CN=AaaTeX Corp."
             ],
             "thumbprint": [
               "bccb5cc674b43edb4abce395d464857203c64a32",
@@ -1368,7 +1368,7 @@
           ],
           [
             "Subject",
-            "C=US, postalCode=32118, ST=FL, L=Daytona Beach, ??=3280C S. Atlantic Av. \\#50, O=AaaTeX Corp., CN=AaaTeX Corp."
+            "C=US, postalCode=32118, ST=FL, L=Daytona Beach, STREET_ADDRESS=3280C S. Atlantic Av. \\#50, O=AaaTeX Corp., CN=AaaTeX Corp."
           ],
           [
             "Issuer",
@@ -1537,10 +1537,6 @@
     ],
     "supplementary": [
       {
-        "name": "features.json",
-        "sha256": "00162fe7f4943828427bf571cbf9f590691b2f604c9f9520ba9b85d7c49b02bc"
-      },
-      {
         "name": "certificate.1.4",
         "sha256": "04b4c3f1ad6b2bc1afe0eba7a587ccf7ae744f1e52a4fc4b1de6540ba603f85e"
       },
@@ -1551,6 +1547,10 @@
       {
         "name": "certificate.1.1",
         "sha256": "2cf1ec6ab594113bd538df6d5c940e3319b424f8756d975888072c6ab558b771"
+      },
+      {
+        "name": "features.json",
+        "sha256": "4450a571a802715360cf341ad92f6131f6055a5fc26acb80bd079ff6414883b5"
       },
       {
         "name": "certificate.1.3",
@@ -1611,7 +1611,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "C=US, postalCode=32118, ST=FL, L=Daytona Beach, ??=3280C S. Atlantic Av. \\#50, O=AaaTeX Corp., CN=AaaTeX Corp."
+          "value": "C=US, postalCode=32118, ST=FL, L=Daytona Beach, STREET_ADDRESS=3280C S. Atlantic Av. \\#50, O=AaaTeX Corp., CN=AaaTeX Corp."
         }
       ],
       "cert.thumbprint": [

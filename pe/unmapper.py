@@ -7,7 +7,7 @@ def is_mapped(pe: lief.PE.Binary, file_size_bytes: int) -> bool:
 
     # We're just hoping to align the sections to where we could perform a better static analysis.
     # Additional check added to filter out unmapped files
-    if pe.optional_header.checksum == pe.optional_header.computed_checksum:
+    if pe.optional_header.checksum == pe.compute_checksum():
         return False
 
     # Compute the anticipated static
@@ -57,16 +57,18 @@ def unmap(pe: lief.PE.Binary, in_data):
         section.sizeof_raw_data = new_size
 
     """Once we have realigned the PE file - We will build the unmapped 'equivalent'"""
-    builder = lief.PE.Builder(pe)
+    builder = lief.PE.Builder(pe, lief.PE.Builder.config_t())
     builder.build()
-    out_data = bytes(builder.get_build())
+    out_data = bytes(builder.raw_bytes())
     headers = out_data[:0x1000] + in_data[0x1000:]
 
-    unmapped = lief.parse(raw=headers)
+    unmapped = lief.parse(headers)
     unmapped.remove_all_relocations()
-    builder = lief.PE.Builder(unmapped).build_dos_stub(False)
+    config = lief.PE.Builder.config_t()
+    config.dos_stub = False
+    builder = lief.PE.Builder(unmapped, config)
     builder.build()
-    out_data = bytes(builder.get_build())
+    out_data = bytes(builder.raw_bytes())
     # Keep the DOS STUB from the original file.
     return out_data[:0x40] + in_data[0x40:0x80] + out_data[0x80:]
 
@@ -80,7 +82,7 @@ if __name__ == "__main__":
     parser.add_argument("mapped_filename")
     args = parser.parse_args()
     in_data = Path(args.mapped_filename).read_bytes()
-    pe_file = lief.parse(raw=in_data)
+    pe_file = lief.parse(in_data)
     if is_mapped(pe_file, os.path.getsize(args.mapped_filename)):
         out_data = unmap(pe_file, in_data)
         Path(f"{args.mapped_filename}_unmapped").write_bytes(out_data)
