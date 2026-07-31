@@ -62,7 +62,7 @@ def unmap(pe: lief.PE.Binary, in_data):
     out_data = bytes(builder.raw_bytes())
     headers = out_data[:0x1000] + in_data[0x1000:]
 
-    unmapped = lief.parse(headers)
+    unmapped = lief.PE.parse(headers)
     unmapped.remove_all_relocations()
     config = lief.PE.Builder.config_t()
     config.dos_stub = False
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     parser.add_argument("mapped_filename")
     args = parser.parse_args()
     in_data = Path(args.mapped_filename).read_bytes()
-    pe_file = lief.parse(in_data)
+    pe_file = lief.PE.parse(in_data)
     if is_mapped(pe_file, os.path.getsize(args.mapped_filename)):
         out_data = unmap(pe_file, in_data)
         Path(f"{args.mapped_filename}_unmapped").write_bytes(out_data)

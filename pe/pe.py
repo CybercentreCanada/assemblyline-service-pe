@@ -127,11 +127,17 @@ def get_powers(x):
     return powers
 
 
+def bytes_to_backslashreplace_utf8_str(value):
+    if isinstance(value, bytes):
+        return value.decode("utf-8", "backslashreplace")
+    return value
+
+
 def extract_cert_info(cert, trusted_certs):
     cert_struct = {
         "version": cert.version,
-        "subject": cert.subject,
-        "issuer": cert.issuer,
+        "subject": bytes_to_backslashreplace_utf8_str(cert.subject),
+        "issuer": bytes_to_backslashreplace_utf8_str(cert.issuer),
         "serial_number": cert.serial_number.hex(),
         "key_type": cert.key_type.name,
         "key_usage": [usage.name for usage in cert.key_usage],
@@ -1769,7 +1775,9 @@ class PE(ServiceBase):
             extra_certs = []
 
             def recurse_cert(issuer):
-                if issuer is None:
+                # find_crt_subject only accepts str: a bytes issuer (non-UTF-8 x509 name) can't
+                # be looked up, so treat it like an unresolvable issuer and stop the chain there
+                if issuer is None or isinstance(issuer, bytes):
                     return
                 issuer_cert = signature.find_crt_subject(issuer)
                 if issuer_cert is None or issuer_cert.subject == issuer_cert.issuer:
@@ -1801,7 +1809,7 @@ class PE(ServiceBase):
                 sub_sub_res = ResultOrderedKeyValueSection(f"Signer - {signer_index + 1}")
                 signer_dict = {
                     "version": signer.version,
-                    "issuer": signer.issuer,
+                    "issuer": bytes_to_backslashreplace_utf8_str(signer.issuer),
                     "serial_number": signer.serial_number.hex(),
                     "encryption_algorithm": get_lief_enum_name(signer.encryption_algorithm),
                     "digest_algorithm": get_lief_enum_name(signer.digest_algorithm),
@@ -2054,7 +2062,7 @@ class PE(ServiceBase):
                 heur_text_body.add_line("All issuers matching is usually a sign of it being self-signed")
                 heur_section.add_section_part(heur_text_body)
                 heur_kv_body = OrderedKVSectionBody()
-                heur_kv_body.add_item("Issuer", first_issuer)
+                heur_kv_body.add_item("Issuer", bytes_to_backslashreplace_utf8_str(first_issuer))
                 heur_section.add_section_part(heur_kv_body)
                 sub_res.add_subsection(heur_section)
                 signature_res.append(sub_res)
@@ -2149,7 +2157,7 @@ class PE(ServiceBase):
                 while True:
                     try:
                         pe_array = bytearray(pe.overlay)
-                        pe = lief.parse(BytesIO(pe_array))
+                        pe = lief.PE.parse(BytesIO(pe_array))
                         if pe is None:
                             break
                         pe_no_overlay = pe_array[: -len(pe.overlay)]
@@ -2223,11 +2231,7 @@ class PE(ServiceBase):
 
         lief_output_file = os.path.join(self.working_directory, "lief_output")
         lief.logging.set_path(lief_output_file)
-        try:
-            self.binary = lief.parse(self.file_path)
-        except Exception:  # (lief.bad_format, lief.read_out_of_bound):
-            raise
-            self.binary = None
+        self.binary = lief.PE.parse(self.file_path)
 
         if self.binary is None:
             res = ResultSection("This file looks like a PE but failed loading.", heuristic=Heuristic(7))
