@@ -40,6 +40,7 @@ from PIL import Image
 
 from . import unmapper
 from .code_pages import CODE_PAGES
+from .sublangs import sublang_name, sublang_pair_name
 
 # Disable logging from LIEF
 lief.logging.disable()
@@ -253,9 +254,11 @@ class TreeIcon:
     lief.PE.ResourceIcon that add_resources() uses, from a leaf's content alone.
     """
 
-    def __init__(self, icon_id, lang, pixels):
+    def __init__(self, icon_id, lang_id, pixels):
         self.id = icon_id
-        self.lang = lang
+        # Split the full 16-bit language identifier the way lief.PE.ResourceIcon does
+        self.lang = lang_id & 0x3FF
+        self.sublang = (lang_id >> 10) & 0x3F
         self.pixels = pixels
         self.width = 0
         self.height = 0
@@ -324,7 +327,7 @@ def icons_from_resource_tree(binary):
     Returns:
         list[TreeIcon]: one TreeIcon per non-empty RT_ICON data leaf, in resource tree
         order. Empty when the binary has no RT_ICON entries or all their leaves are
-        dataless. The icons carry the primary language (low 10 bits of the leaf id) and
+        dataless. The icons carry the primary language and sublanguage (split from the leaf id) and
         expose the same attributes add_resources() reads from lief.PE.ResourceIcon.
     """
     icons = []
@@ -334,9 +337,9 @@ def icons_from_resource_tree(binary):
         for icon_dir in top.childs:
             for leaf in icon_dir.childs:
                 if leaf.is_data and len(leaf.content) > 0:
-                    # The leaf id is the full language identifier; the manager exposes only the
-                    # primary language (low 10 bits), so do the same
-                    icons.append(TreeIcon(icon_dir.id, leaf.id & 0x3FF, bytes(leaf.content)))
+                    # The leaf id is the full language identifier; TreeIcon splits it into the
+                    # primary language and sublanguage, like the manager icons expose them
+                    icons.append(TreeIcon(icon_dir.id, leaf.id, bytes(leaf.content)))
     return icons
 
 
@@ -1406,7 +1409,7 @@ class PE(ServiceBase):
                         "height": icon.height,
                         "width": icon.width,
                         "lang": icon_lang,
-                        "sublang": "",  # icon.sublang.name,
+                        "sublang": sublang_pair_name(icon.lang, icon.sublang),
                         # TODO: Add hash as a structure with values similar to the authentihash
                         # "hash": {"sha256": hashlib.sha256(bytearray(icon.pixels)).hexdigest()},
                     }
@@ -1569,7 +1572,7 @@ class PE(ServiceBase):
                             lang_id = int(string_table.key[:4], 16)
                             code_page = int(string_table.key[4:8], 16)
                             lang = lief.PE.RESOURCE_LANGS(lang_id & 0x3FF).name
-                            sublang = ""
+                            sublang = sublang_name(lang_id)
                             langcodeitem_dict["lang"] = lang
                             sub_sub_sub_res.add_item("lang", lang)
                             # This language is declared inside the version data, independently from the
@@ -1579,6 +1582,7 @@ class PE(ServiceBase):
                             self.features["resources_manager"]["langs_available"].append(lang)
                             langcodeitem_dict["sublang"] = sublang
                             sub_sub_sub_res.add_item("sublang", sublang)
+                            self.features["resources_manager"]["sublangs_available"].append(sublang)
                             langcodeitem_dict["code_page"] = CODE_PAGES.get(code_page, str(code_page))
                             sub_sub_sub_res.add_item("code_page", langcodeitem_dict["code_page"])
                         except ValueError:
@@ -1716,6 +1720,7 @@ class PE(ServiceBase):
                         )
                     except ValueError:
                         self.features["resources_manager"]["langs_available"].append("???")
+                    self.features["resources_manager"]["sublangs_available"].append(sublang_name(node.id))
             else:
                 raise Exception("Binary with unknown ResourceNode")
 
@@ -1724,6 +1729,9 @@ class PE(ServiceBase):
         self.features["resources"] = get_node_data(self.binary.resources)
         self.features["resources_manager"]["langs_available"] = sorted(
             set(self.features["resources_manager"]["langs_available"])
+        )
+        self.features["resources_manager"]["sublangs_available"] = sorted(
+            set(self.features["resources_manager"]["sublangs_available"])
         )
         res.add_subsection(sub_res)
 
