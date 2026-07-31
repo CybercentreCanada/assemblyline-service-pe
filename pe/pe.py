@@ -711,17 +711,16 @@ class PE(ServiceBase):
         # Somehow, that is different from binary.entrypoint
         res.add_item("Entrypoint", hex(self.binary.optional_header.addressof_entrypoint))
         res.add_item("Machine", pe_machine)
-        try:
-            magic_name = self.binary.optional_header.magic.name
-        except ValueError:
-            magic_name = "???"
-        res.add_item("Magic", magic_name)
-        if magic_name == "???":
+        magic_name = get_lief_enum_name(self.binary.optional_header.magic)
+        if isinstance(magic_name, int):
+            res.add_item("Magic", "???")
             heur = Heuristic(18)
             heur_section = ResultOrderedKeyValueSection(heur.name, heuristic=heur)
-            heur_section.add_item("Magic Name", magic_name)
-            heur_section.add_item("Magic Value", self.binary.optional_header.magic.value)
+            heur_section.add_item("Magic Name", "???")
+            heur_section.add_item("Magic Value", magic_name)
             res.add_subsection(heur_section)
+        else:
+            res.add_item("Magic", magic_name)
         res.add_item(
             "Image version",
             f"{self.binary.optional_header.major_image_version}.{self.binary.optional_header.minor_image_version}",
