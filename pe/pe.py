@@ -808,15 +808,16 @@ class PE(ServiceBase):
 
         sub_res = ResultOrderedKeyValueSection("Authentihash")
         for i in range(1, 6):
-            try:
-                authentihash = lief.PE.ALGORITHMS(i).name.replace("_", "").lower()
-                authentihash_value = self.binary.authentihash(lief.PE.ALGORITHMS(i)).hex()
-                self.features["authentihash"][authentihash] = authentihash_value
-                sub_res.add_item(authentihash, authentihash_value)
-            except Exception:  # lief.bad_format:
-                raise
+            authentihash = lief.PE.ALGORITHMS(i).name.replace("_", "").lower()
+            authentihash_value = self.binary.authentihash(lief.PE.ALGORITHMS(i)).hex()
+            if not authentihash_value:
+                # LIEF returns no hash on some corrupted files (e.g. an overlay present while the
+                # data directories are truncated before the certificate table).
                 if sub_res.heuristic is None:
                     sub_res.set_heuristic(17)
+                continue
+            self.features["authentihash"][authentihash] = authentihash_value
+            sub_res.add_item(authentihash, authentihash_value)
         res.add_subsection(sub_res)
 
         res.add_item("Position Independent", self.binary.is_pie)
