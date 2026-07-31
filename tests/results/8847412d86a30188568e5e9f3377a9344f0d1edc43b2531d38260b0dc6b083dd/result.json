@@ -991,6 +991,96 @@
                   "ENGLISH"
                 ]
               }
+            },
+            "string": {
+              "extracted": [
+                "7-Zip: Browse",
+                "None",
+                "OK",
+                "Cancel",
+                "<--",
+                "+",
+                "List1",
+                "Copy",
+                "...",
+                "Progress",
+                "&Background",
+                "&Pause",
+                "Elapsed time:",
+                "Remaining time:",
+                "Files:",
+                "Compression ratio:",
+                "Errors:",
+                "Total size:",
+                "Speed:",
+                "Processed:",
+                "Compressed size:",
+                "Progress1",
+                "Combo",
+                "ListView",
+                "Language",
+                "Language:",
+                "Editor",
+                "&View:",
+                "&Editor:",
+                "&Diff:",
+                "System",
+                "Associate 7-Zip with:",
+                "7-Zip",
+                "Integrate 7-Zip to shell context menu",
+                "(32-bit)",
+                "Cascaded context menu",
+                "Icons in context menu",
+                "Eliminate duplication of root folder",
+                "Context menu items:",
+                "List",
+                "Folders",
+                "&Working folder",
+                "&System temp folder",
+                "&Current",
+                "Specified:",
+                "Use for removable drives only",
+                "Settings",
+                "Show \"..\" item",
+                "Show real file &icons",
+                "&Full row select",
+                "Show &grid lines",
+                "&Single-click to open an item",
+                "&Alternative selection mode",
+                "Show system &menu",
+                "Use &large memory pages",
+                "About 7-Zip",
+                "www.7-zip.org",
+                "100",
+                "Copyright (c) 1999-2016 Igor Pavlov",
+                "7-Zip is free software",
+                "Confirm File Replace",
+                "Destination folder already contains processed file.",
+                "Would you like to replace the existing file",
+                "with this one?",
+                "&Yes",
+                "Yes to &All",
+                "A&uto Rename",
+                "&No",
+                "No to A&ll",
+                "&Cancel",
+                "Enter password",
+                "&Enter password:",
+                "&Show password",
+                "7-Zip: Diagnostic messages",
+                "&Close",
+                "Split File",
+                "&Split to:",
+                "Split to &volumes,  bytes:",
+                "Link",
+                "Link from:",
+                "Link to:",
+                "Link Type",
+                "Hard Link",
+                "File Symbolic Link",
+                "Directory Symbolic Link",
+                "Directory Junction"
+              ]
             }
           }
         },
@@ -1185,7 +1275,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -1743,7 +1833,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Unable to find the icon associated with id: 2\nUnable to find the icon associated with id: 3\nUnable to find the icon associated with id: 4",
+        "body": "Icon with id 2 not found\nIcon with id 3 not found\nIcon with id 4 not found",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1761,7 +1851,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "1d51a4c2115fd632cb1c51dcdd672bef47350485f486b10cb938b7de87a4b1e4"
+        "sha256": "86262d17322090cb875b3dd54a1f52098e27e5925104104442523e4d0b5dc0a7"
       },
       {
         "name": "icon_0.ico",
@@ -1903,6 +1993,438 @@
           "heur_id": null,
           "signatures": [],
           "value": "7zFM.exe"
+        }
+      ],
+      "file.string.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Alternative selection mode"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Background"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Cancel"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Close"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Current"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Diff:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Editor:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Enter password:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Full row select"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&No"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Pause"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Show password"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Single-click to open an item"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Split to:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&System temp folder"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&View:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Working folder"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Yes"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "(32-bit)"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "+"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "..."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "100"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "7-Zip"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "7-Zip is free software"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "7-Zip: Browse"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "7-Zip: Diagnostic messages"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "<--"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "A&uto Rename"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "About 7-Zip"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Associate 7-Zip with:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Cancel"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Cascaded context menu"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Combo"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Compressed size:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Compression ratio:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Confirm File Replace"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Context menu items:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Copy"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Copyright (c) 1999-2016 Igor Pavlov"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Destination folder already contains processed file."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Directory Junction"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Directory Symbolic Link"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Editor"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Elapsed time:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Eliminate duplication of root folder"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Enter password"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Errors:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "File Symbolic Link"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Files:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Folders"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Hard Link"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Icons in context menu"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Integrate 7-Zip to shell context menu"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Language"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Language:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Link"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Link Type"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Link from:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Link to:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "List"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "List1"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ListView"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "No to A&ll"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "None"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "OK"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Processed:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Progress"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Progress1"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Remaining time:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Settings"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Show \"..\" item"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Show &grid lines"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Show real file &icons"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Show system &menu"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Specified:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Speed:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Split File"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Split to &volumes,  bytes:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "System"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Total size:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Use &large memory pages"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Use for removable drives only"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Would you like to replace the existing file"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Yes to &All"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "with this one?"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "www.7-zip.org"
         }
       ]
     },

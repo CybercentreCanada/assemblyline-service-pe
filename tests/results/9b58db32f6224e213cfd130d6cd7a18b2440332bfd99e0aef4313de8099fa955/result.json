@@ -981,13 +981,24 @@
                 "OK",
                 "Phone Dialer 1.50",
                 "Developed for Microsoft by Active Voice.  (C)1998 Active Voice Corporation.\nAll rights reserved.",
+                "None",
                 "Active Voice offers a full range of messaging and communications software designed for Microsoft Windows(R) and BackOffice(tm).",
                 "For more information, a free upgrade to the latest version of this program, or other software, visit: http://www.activevoice.com/dialer",
                 "Add ILS Server",
                 "&Server Address",
                 "Cancel",
+                "Confirm Phone Dialer Exit",
+                "102",
+                "&Yes",
+                "&Don't ask me again",
+                "If you close Phone Dialer, you will not be notified of incoming calls, and you will not be able to accept Internet calls.",
+                "Are you sure you want to close Phone Dialer?",
                 "Video",
+                "Animate1",
+                "Preview",
+                "Slider",
                 "More Speed Dial Entries",
+                "118",
                 "Select Entry to Dial",
                 "List1",
                 "Place &Call",
@@ -1014,13 +1025,27 @@
                 "&Source...",
                 "&Display...",
                 "&Take Picture",
-                "Preview",
+                "Dial Select Address",
+                "&Name:",
+                "&Address to Dial:",
+                "List2",
+                "&Browse",
+                "More information is needed to complete your call.  Please select the address to dial.",
                 "Add User",
                 "Enter the name of the user to add.  You must search the network directory to verify that the user exists.",
                 "&User:",
                 "&Search",
                 "Search &Results:",
-                "&Add"
+                "&Add",
+                "Phone Dialer Page",
+                "From:",
+                "Static",
+                "&For more information see:",
+                "Button1",
+                "Send Page",
+                "To:",
+                "&Send",
+                "&Website:"
               ]
             }
           }
@@ -1437,7 +1462,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -2442,19 +2467,6 @@
         "tags": {},
         "title_text": "No relocations found",
         "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": "Unable to find the section associated with BOUND_IMPORT",
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": null,
-        "promote_to": null,
-        "tags": {},
-        "title_text": "LIEF logging information.",
-        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -2486,16 +2498,16 @@
         "sha256": "362568c0beaad77462adf3fbcd14030f44b5b633e3769ec95a86337f9d5c9be0"
       },
       {
-        "name": "features.json",
-        "sha256": "3bcef6e1be95311ec976ea497275c29e95c997692f96676d724bc1ac47bb7031"
-      },
-      {
         "name": "icon_6.ico",
         "sha256": "418b40cf97a94b1f7e62c554072364c4643264d3c879c43b0c3d412670b78074"
       },
       {
         "name": "icon_6.ico.thumb",
         "sha256": "418b40cf97a94b1f7e62c554072364c4643264d3c879c43b0c3d412670b78074"
+      },
+      {
+        "name": "features.json",
+        "sha256": "45e07f632cecdefd424bf6a78fe9d06ec3870f7bd53882964c291c71da63f869"
       },
       {
         "name": "icon_9.ico",
@@ -2976,6 +2988,16 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "&Address to Dial:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Browse"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "&Cancel"
         },
         {
@@ -2991,7 +3013,17 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "&Don't ask me again"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "&Edit..."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&For more information see:"
         },
         {
           "heur_id": null,
@@ -3002,6 +3034,11 @@
           "heur_id": null,
           "signatures": [],
           "value": "&More Information"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Name:"
         },
         {
           "heur_id": null,
@@ -3031,6 +3068,11 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "&Send"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "&Server Address"
         },
         {
@@ -3056,6 +3098,26 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "&Website:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Yes"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "102"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "118"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "About Phone Dialer"
         },
         {
@@ -3076,12 +3138,37 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "Animate1"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Are you sure you want to close Phone Dialer?"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Button1"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "Cancel"
         },
         {
           "heur_id": null,
           "signatures": [],
+          "value": "Confirm Phone Dialer Exit"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "Developed for Microsoft by Active Voice.  (C)1998 Active Voice Corporation.\nAll rights reserved."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Dial Select Address"
         },
         {
           "heur_id": null,
@@ -3116,6 +3203,16 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "From:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "If you close Phone Dialer, you will not be notified of incoming calls, and you will not be able to accept Internet calls."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "Int&ernet call"
         },
         {
@@ -3131,7 +3228,17 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "List2"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "More Speed Dial Entries"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "More information is needed to complete your call.  Please select the address to dial."
         },
         {
           "heur_id": null,
@@ -3146,12 +3253,22 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "None"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "OK"
         },
         {
           "heur_id": null,
           "signatures": [],
           "value": "Phone Dialer 1.50"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Phone Dialer Page"
         },
         {
           "heur_id": null,
@@ -3176,12 +3293,32 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "Send Page"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Slider"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "Speed Dial"
         },
         {
           "heur_id": null,
           "signatures": [],
+          "value": "Static"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "Take Picture"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "To:"
         },
         {
           "heur_id": null,

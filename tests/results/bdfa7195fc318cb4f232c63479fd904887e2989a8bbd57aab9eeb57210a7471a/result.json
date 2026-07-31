@@ -1508,7 +1508,7 @@
           ],
           [
             "Subject",
-            "C=US, ST=North Carolina, L=High Point, O=d7xTech\\, Inc, serialNumber=1254817, CN=d7xTech\\, Inc, ??=Private Organization, ??=North Carolina, ??=US"
+            "C=US, ST=North Carolina, L=High Point, O=d7xTech\\, Inc, serialNumber=1254817, CN=d7xTech\\, Inc, BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_SP=North Carolina, JURISDICTION_OF_INCORPORATION_C=US"
           ],
           [
             "Issuer",
@@ -1546,7 +1546,7 @@
               "1877a57c210dbbd1cce4b4424f5d2f9f"
             ],
             "subject": [
-              "C=US, ST=North Carolina, L=High Point, O=d7xTech\\, Inc, serialNumber=1254817, CN=d7xTech\\, Inc, ??=Private Organization, ??=North Carolina, ??=US"
+              "C=US, ST=North Carolina, L=High Point, O=d7xTech\\, Inc, serialNumber=1254817, CN=d7xTech\\, Inc, BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_SP=North Carolina, JURISDICTION_OF_INCORPORATION_C=US"
             ],
             "thumbprint": [
               "bcb806e52d4e45c1a99a5101670e3de85f8b3714",
@@ -1575,7 +1575,7 @@
           ],
           [
             "Subject",
-            "C=US, ST=North Carolina, L=High Point, O=d7xTech\\, Inc, serialNumber=1254817, CN=d7xTech\\, Inc, ??=Private Organization, ??=North Carolina, ??=US"
+            "C=US, ST=North Carolina, L=High Point, O=d7xTech\\, Inc, serialNumber=1254817, CN=d7xTech\\, Inc, BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_SP=North Carolina, JURISDICTION_OF_INCORPORATION_C=US"
           ],
           [
             "Issuer",
@@ -1796,7 +1796,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Unable to find the section associated with BOUND_IMPORT\n(4x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(4x) The certificate validity has expired",
+        "body": "(4x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(4x) The certificate validity has expired",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1894,16 +1894,16 @@
         "sha256": "a8b56566baccacd4c32e65aed76cd676deff3d769fa59d9bc94fd5d4275c2e81"
       },
       {
+        "name": "features.json",
+        "sha256": "b05a7d4d9759f37a2eb09e2f719f80dd6fce00ab3b7ef502d77c576ef0fdc900"
+      },
+      {
         "name": "icon_4.ico",
         "sha256": "e193689ad68ca7962c6ace334039c41f6cfd03a18f3fe653e55982a5e4dfa2ce"
       },
       {
         "name": "icon_4.ico.thumb",
         "sha256": "e193689ad68ca7962c6ace334039c41f6cfd03a18f3fe653e55982a5e4dfa2ce"
-      },
-      {
-        "name": "features.json",
-        "sha256": "e3c0c37b38ed05d448dab48f89d1a7c849f4acb974ce4607e6e4e242d42056f2"
       },
       {
         "name": "certificate.1.2",
@@ -1963,7 +1963,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "C=US, ST=North Carolina, L=High Point, O=d7xTech\\, Inc, serialNumber=1254817, CN=d7xTech\\, Inc, ??=Private Organization, ??=North Carolina, ??=US"
+          "value": "C=US, ST=North Carolina, L=High Point, O=d7xTech\\, Inc, serialNumber=1254817, CN=d7xTech\\, Inc, BUSINESS_CATEGORY=Private Organization, JURISDICTION_OF_INCORPORATION_SP=North Carolina, JURISDICTION_OF_INCORPORATION_C=US"
         }
       ],
       "cert.thumbprint": [

@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 900,
+    "score": 800,
     "sections": [
       {
         "auto_collapse": false,
@@ -777,30 +777,10 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 36,
-          "score": 100,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No languages found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
         "body": [
           [
             "Languages",
-            ""
+            "CHINESE, NORWEGIAN"
           ],
           [
             "Sublanguages",
@@ -817,6 +797,10 @@
           "file": {
             "pe": {
               "resources": {
+                "language": [
+                  "CHINESE",
+                  "NORWEGIAN"
+                ],
                 "name": [
                   "QQ)9",
                   "H\u084cOO",
@@ -949,7 +933,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "(3x) The directory of the node id is corrupted",
+        "body": "(3x) Corrupted directory for node id",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -962,7 +946,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "(3x) The directory of the node id is corrupted\n2147484970, 2214593814, 8388618",
+        "body": "(3x) Corrupted directory for node id\n2147484970, 2214593814, 8388618",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -992,7 +976,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "b10e520d3eed9acad74a52bd32e739a76e143565574c8c05b10ae36b664b986e"
+        "sha256": "54e0016bd93d30789c7cad70a0b545f37fdc68b8a5ed4acbbafcebc20cc1e9ff"
       }
     ]
   },
@@ -1031,11 +1015,6 @@
       {
         "attack_ids": [],
         "heur_id": 24,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 36,
         "signatures": []
       },
       {
@@ -1083,6 +1062,18 @@
           "heur_id": null,
           "signatures": [],
           "value": "1992-06-19 22:22:17 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "CHINESE"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NORWEGIAN"
         }
       ],
       "file.pe.resources.name": [

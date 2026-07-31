@@ -1001,7 +1001,7 @@
         "body": [
           [
             "Languages",
-            "NEUTRAL"
+            "ENGLISH, NEUTRAL"
           ],
           [
             "Sublanguages",
@@ -1019,6 +1019,7 @@
             "pe": {
               "resources": {
                 "language": [
+                  "ENGLISH",
                   "NEUTRAL"
                 ]
               }
@@ -1156,7 +1157,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -1771,7 +1772,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "(18x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(18x) The certificate validity has expired\n(18x) The certificate is not correctly signed by the trusted CA",
+        "body": "(2x) Authenticated signature (counter signature) mismatch\n(18x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(18x) The certificate validity has expired\n(18x) The certificate is not correctly signed by the trusted CA",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1814,7 +1815,7 @@
       },
       {
         "name": "features.json",
-        "sha256": "dc63e0224e44d17f34417b56c35bf24c77cd2ba17e6b886d0012906c8ddda26f"
+        "sha256": "c311e5cff48a7d44fda1e8565b79d79469feba60bebbfa16ecf2627107e48d2e"
       }
     ]
   },
@@ -1946,6 +1947,11 @@
         }
       ],
       "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ENGLISH"
+        },
         {
           "heur_id": null,
           "signatures": [],

@@ -805,7 +805,7 @@
         "heuristic": null,
         "promote_to": null,
         "tags": {},
-        "title_text": "RESERVED",
+        "title_text": "RESERVED10",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1302,7 +1302,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -2016,7 +2016,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "(15x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(15x) The certificate validity has expired\n(15x) The certificate is not correctly signed by the trusted CA",
+        "body": "(2x) Authenticated signature (counter signature) mismatch\n(15x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(15x) The certificate validity has expired\n(15x) The certificate is not correctly signed by the trusted CA",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -2089,10 +2089,6 @@
         "sha256": "5584f76d728dd1f416be1620ef32ad41d4f98a8555b80e646d69a74896f33511"
       },
       {
-        "name": "features.json",
-        "sha256": "6371ffdd221e88f3c2221c8084287889fafd58606b2961d603f013990b23ac0a"
-      },
-      {
         "name": "certificate.1.4",
         "sha256": "6a3c4d89cd6297023831b9c4f718ce71cf8753a2be49e021245ec6ba5066ff00"
       },
@@ -2115,6 +2111,10 @@
       {
         "name": "icon_11.ico.thumb",
         "sha256": "b32d85c4457e48e1e667d97f7cea83eb6999099beefec9de6c1be5e946e6d174"
+      },
+      {
+        "name": "features.json",
+        "sha256": "bb066ee6d33763d68a5f848973af7336936265f133080b2ce15c28d03098246e"
       },
       {
         "name": "icon_6.ico",

@@ -1187,7 +1187,13 @@
             "string": {
               "extracted": [
                 "Setup  -  Samsung Magician",
-                "Please wait"
+                "Please wait",
+                "None",
+                "New",
+                "&New ",
+                "OK",
+                "Cancel",
+                "&Help"
               ]
             }
           }
@@ -1959,7 +1965,7 @@
           ],
           [
             "Subject",
-            "??=HK, ??=Private Organization, serialNumber=2770852, C=HK, L=Kowloon, O=ORANGE VIEW LIMITED, CN=ORANGE VIEW LIMITED"
+            "JURISDICTION_OF_INCORPORATION_C=HK, BUSINESS_CATEGORY=Private Organization, serialNumber=2770852, C=HK, L=Kowloon, O=ORANGE VIEW LIMITED, CN=ORANGE VIEW LIMITED"
           ],
           [
             "Issuer",
@@ -1997,7 +2003,7 @@
               "06675181e7b5e1030b3d40926e2a47d3"
             ],
             "subject": [
-              "??=HK, ??=Private Organization, serialNumber=2770852, C=HK, L=Kowloon, O=ORANGE VIEW LIMITED, CN=ORANGE VIEW LIMITED"
+              "JURISDICTION_OF_INCORPORATION_C=HK, BUSINESS_CATEGORY=Private Organization, serialNumber=2770852, C=HK, L=Kowloon, O=ORANGE VIEW LIMITED, CN=ORANGE VIEW LIMITED"
             ],
             "thumbprint": [
               "786849cb56562c94bc24e75ea6c2cef5aea3b93c",
@@ -2122,7 +2128,7 @@
           ],
           [
             "Subject",
-            "??=HK, ??=Private Organization, serialNumber=2770852, C=HK, L=Kowloon, O=ORANGE VIEW LIMITED, CN=ORANGE VIEW LIMITED"
+            "JURISDICTION_OF_INCORPORATION_C=HK, BUSINESS_CATEGORY=Private Organization, serialNumber=2770852, C=HK, L=Kowloon, O=ORANGE VIEW LIMITED, CN=ORANGE VIEW LIMITED"
           ],
           [
             "Issuer",
@@ -2446,10 +2452,6 @@
     ],
     "supplementary": [
       {
-        "name": "features.json",
-        "sha256": "15d1ea1dd02dff6a50b3d1084605ea6cf2642172c981e4729b165a9a8c9c678c"
-      },
-      {
         "name": "certificate.1.3",
         "sha256": "281734d4592d1291d27190709cb510b07e22c405d5e0d6119b70e73589f98acf"
       },
@@ -2506,6 +2508,10 @@
         "sha256": "d91877a154872bb11310ed44014ee1861a357cf933c478de9f5af090b912846b"
       },
       {
+        "name": "features.json",
+        "sha256": "e57f693211def32c83563024532e484527b6a83fb0d5ec52abd1c04cda102210"
+      },
+      {
         "name": "icon_4.ico",
         "sha256": "e7aca23d8d4b28aa266f5d4cb65f472a3e071e500e8dc3f8e0a5cdaf8ae72cf7"
       }
@@ -2550,7 +2556,7 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "??=HK, ??=Private Organization, serialNumber=2770852, C=HK, L=Kowloon, O=ORANGE VIEW LIMITED, CN=ORANGE VIEW LIMITED"
+          "value": "JURISDICTION_OF_INCORPORATION_C=HK, BUSINESS_CATEGORY=Private Organization, serialNumber=2770852, C=HK, L=Kowloon, O=ORANGE VIEW LIMITED, CN=ORANGE VIEW LIMITED"
         }
       ],
       "cert.thumbprint": [
@@ -2728,6 +2734,36 @@
         }
       ],
       "file.string.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Help"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&New "
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Cancel"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "New"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "None"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "OK"
+        },
         {
           "heur_id": null,
           "signatures": [],

@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 300,
+    "score": 200,
     "sections": [
       {
         "auto_collapse": false,
@@ -1028,30 +1028,10 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 36,
-          "score": 100,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No languages found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
         "body": [
           [
             "Languages",
-            ""
+            "ENGLISH"
           ],
           [
             "Sublanguages",
@@ -1064,7 +1044,17 @@
         "depth": 0,
         "heuristic": null,
         "promote_to": null,
-        "tags": {},
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "ENGLISH"
+                ]
+              }
+            }
+          }
+        },
         "title_text": "Resources",
         "zeroize_on_tag_safe": false
       },
@@ -1124,7 +1114,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "72a334309528cb8cf69327959f4e2edae7750d5ff4d8260166e535e00c05a108"
+        "sha256": "915f4b8d2f0eab045d6c9cee33ede2eb8442f1600a7a74888866d494e39db948"
       }
     ]
   },
@@ -1133,11 +1123,6 @@
       {
         "attack_ids": [],
         "heur_id": 24,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 36,
         "signatures": []
       },
       {
@@ -1199,6 +1184,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "C:\\Users\\\u6b66\u6c49\u5f6d\u4e8e\u664f\\Desktop\\advanced attack\\lab2\\c-project\\loader-project\\x64\\Release\\loader-project.pdb"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ENGLISH"
         }
       ],
       "file.pe.rich_header.hash": [

@@ -1048,7 +1048,7 @@
         "body": [
           [
             "Languages",
-            "ENGLISH"
+            "ENGLISH, NEUTRAL"
           ],
           [
             "Sublanguages",
@@ -1066,7 +1066,8 @@
             "pe": {
               "resources": {
                 "language": [
-                  "ENGLISH"
+                  "ENGLISH",
+                  "NEUTRAL"
                 ],
                 "name": [
                   "DVCLAL",
@@ -1476,6 +1477,19 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "Failed to parse VS_VERSIONINFO children",
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "LIEF logging information.",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -1484,7 +1498,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "409ae3cb6fd6389803fbbdef876d046bb82bf8d13a8f553fe328ea1392fe625b"
+        "sha256": "585957438b2a1be840edc7f7e94d90c616ca0d0f35c503cbbbffbdb28ab5c528"
       }
     ]
   },
@@ -1536,6 +1550,11 @@
           "heur_id": null,
           "signatures": [],
           "value": "ENGLISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
         }
       ],
       "file.pe.resources.name": [

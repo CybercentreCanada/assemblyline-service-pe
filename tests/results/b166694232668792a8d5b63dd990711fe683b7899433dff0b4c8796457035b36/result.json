@@ -1052,7 +1052,7 @@
         "body": [
           [
             "Languages",
-            "ENGLISH, NEUTRAL"
+            "DUTCH, ENGLISH, NEUTRAL"
           ],
           [
             "Sublanguages",
@@ -1070,6 +1070,7 @@
             "pe": {
               "resources": {
                 "language": [
+                  "DUTCH",
                   "ENGLISH",
                   "NEUTRAL"
                 ],
@@ -1321,7 +1322,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -1949,10 +1950,6 @@
         "sha256": "06e5baf59e3da805ce9f286df1baea93d2bd671f6d73728a25eb6ac697f204c1"
       },
       {
-        "name": "features.json",
-        "sha256": "27d64d97c905c7866960926bd7f29a6f7931c7fbbdacab6cd5c78fc1ffd02fac"
-      },
-      {
         "name": "icon_3.ico",
         "sha256": "2b287dab9aae2da52d5bfab74b430c50a05eca0942ac4338a100b64472a04b88"
       },
@@ -1967,6 +1964,10 @@
       {
         "name": "icon_0.ico.thumb",
         "sha256": "333bff6f1f83a7ccc0268af507eb62190bece4cb0769ed47b747f1e8cca52c6a"
+      },
+      {
+        "name": "features.json",
+        "sha256": "3ad957de60f38d331007e4bee4384fcdac09fb6f1d314be1223deb98faa96519"
       },
       {
         "name": "icon_2.ico",
@@ -2121,6 +2122,11 @@
         }
       ],
       "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "DUTCH"
+        },
         {
           "heur_id": null,
           "signatures": [],

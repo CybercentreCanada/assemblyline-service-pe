@@ -901,7 +901,7 @@
         "body": [
           [
             "Languages",
-            "ARABIC, ENGLISH, JAPANESE, THAI"
+            "ARABIC, CHINESE, CZECH, DANISH, DUTCH, ENGLISH, FINNISH, FRENCH, GERMAN, GREEK, HEBREW, HUNGARIAN, ITALIAN, JAPANESE, KOREAN, NORWEGIAN, POLISH, PORTUGUESE, RUSSIAN, SLOVAK, SLOVENIAN, SPANISH, SWEDISH, THAI, TURKISH"
           ],
           [
             "Sublanguages",
@@ -920,15 +920,37 @@
               "resources": {
                 "language": [
                   "ARABIC",
+                  "CHINESE",
+                  "CZECH",
+                  "DANISH",
+                  "DUTCH",
                   "ENGLISH",
+                  "FINNISH",
+                  "FRENCH",
+                  "GERMAN",
+                  "GREEK",
+                  "HEBREW",
+                  "HUNGARIAN",
+                  "ITALIAN",
                   "JAPANESE",
-                  "THAI"
+                  "KOREAN",
+                  "NORWEGIAN",
+                  "POLISH",
+                  "PORTUGUESE",
+                  "RUSSIAN",
+                  "SLOVAK",
+                  "SLOVENIAN",
+                  "SPANISH",
+                  "SWEDISH",
+                  "THAI",
+                  "TURKISH"
                 ]
               }
             },
             "string": {
               "extracted": [
                 "\u0625\u0632\u0627\u0644\u0629 \u0645\u0643\u0648\u0646\u0627\u062a NVIDIA",
+                "105",
                 "\u062d\u062f\u062f \u0625\u062d\u062f\u0649 \u0627\u0644\u062e\u064a\u0627\u0631\u0627\u062a \u0627\u0644\u0645\u062a\u0627\u062d\u0629 \u0644\u0625\u0632\u0627\u0644\u0629 \u0645\u0643\u0648\u0646\u0627\u062a NVIDIA \u0645\u0646 \u0627\u0644\u0646\u0638\u0627\u0645 \u0644\u062f\u064a\u0643.",
                 "\u0625\u0632\u0627\u0644\u0629 \u0643\u0627\u0641\u0629 &\u0628\u0631\u0627\u0645\u062c \u062a\u0634\u063a\u064a\u0644 NVIDIA \u0628\u0645\u0627 \u0641\u064a \u0630\u0644\u0643 \u062c\u0647\u0627\u0632 \u0627\u0644\u0639\u0631\u0636",
                 "\u0625\u0632\u0627\u0644\u0629 &\u0643\u0627\u0641\u0629 \u0628\u0631\u0627\u0645\u062c \u062a\u0634\u063a\u064a\u0644 NVIDIA \u0639\u062f\u0627 \u062c\u0647\u0627\u0632 \u0627\u0644\u0639\u0631\u0636",
@@ -937,6 +959,7 @@
                 "\u0625&\u0632\u0627\u0644\u0629",
                 "\u0625\u0644\u063a\u0627\u0621 \u0627\u0644\u0623\u0645\u0631",
                 "NVIDIA \u30b3\u30f3\u30dd\u30fc\u30cd\u30f3\u30c8\u306e\u524a\u9664",
+                "None",
                 "\u0e40\u0e2d\u0e32\u0e2d\u0e07\u0e04\u0e4c\u0e1b\u0e23\u0e30\u0e01\u0e2d\u0e1a\u0e02\u0e2d\u0e07 NVIDIA \u0e2d\u0e2d\u0e01",
                 "\u0e43\u0e2b\u0e49\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e15\u0e31\u0e27\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e15\u0e48\u0e2d\u0e44\u0e1b\u0e19\u0e35\u0e49\u0e2b\u0e19\u0e36\u0e48\u0e07\u0e15\u0e31\u0e27\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e40\u0e2d\u0e32\u0e2d\u0e07\u0e04\u0e4c\u0e1b\u0e23\u0e30\u0e01\u0e2d\u0e1a\u0e02\u0e2d\u0e07 NVIDIA \u0e2d\u0e2d\u0e01\u0e08\u0e32\u0e01\u0e23\u0e30\u0e1a\u0e1a\u0e02\u0e2d\u0e07\u0e04\u0e38\u0e13",
                 "\u0e40\u0e2d\u0e32\u0e44\u0e14\u0e23\u0e1f\u0e4c\u0e40\u0e27\u0e2d\u0e23\u0e4c\u0e02\u0e2d&\u0e07 NVIDIA \u0e2d\u0e2d\u0e01\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14 \u0e23\u0e27\u0e21\u0e16\u0e36\u0e07\u0e2b\u0e19\u0e48\u0e27\u0e22\u0e41\u0e2a\u0e14\u0e07\u0e1c\u0e25\u0e14\u0e49\u0e27\u0e22",
@@ -1120,7 +1143,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -1834,7 +1857,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Accelerator resources might be corrupted\nGroup icon type should be equal to 1 (vs 0)",
+        "body": "Possibly corrupted accelerator resources\nGroup icon type should be 1 (got 0)",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1847,7 +1870,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Accelerator resources might be corrupted",
+        "body": "Possibly corrupted accelerator resources",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1877,7 +1900,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "6f376e89943ee12886cc5c166a50e99a4064223e8c92acad60897318647abce4"
+        "sha256": "a3aa6429584870cead37fa505da4c211e0aa6d2c82df0ca92a643ffaa317d251"
       }
     ]
   },
@@ -1954,7 +1977,62 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "CHINESE"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "CZECH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "DANISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "DUTCH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "ENGLISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "FINNISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "FRENCH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "GERMAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "GREEK"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "HEBREW"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "HUNGARIAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ITALIAN"
         },
         {
           "heur_id": null,
@@ -1964,7 +2042,57 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "KOREAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NORWEGIAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "POLISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "PORTUGUESE"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "RUSSIAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "SLOVAK"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "SLOVENIAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "SPANISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "SWEDISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "THAI"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "TURKISH"
         }
       ],
       "file.pe.rich_header.hash": [
@@ -2034,12 +2162,22 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "105"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "List1"
         },
         {
           "heur_id": null,
           "signatures": [],
           "value": "NVIDIA \u30b3\u30f3\u30dd\u30fc\u30cd\u30f3\u30c8\u306e\u524a\u9664"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "None"
         },
         {
           "heur_id": null,

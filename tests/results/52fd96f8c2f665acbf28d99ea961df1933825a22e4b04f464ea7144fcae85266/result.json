@@ -641,7 +641,7 @@
         "body": [
           [
             "Languages",
-            "NEUTRAL"
+            "ENGLISH, NEUTRAL"
           ],
           [
             "Sublanguages",
@@ -659,6 +659,7 @@
             "pe": {
               "resources": {
                 "language": [
+                  "ENGLISH",
                   "NEUTRAL"
                 ],
                 "name": [
@@ -1161,6 +1162,10 @@
         "sha256": "3ad7494dd7dffe36ec130110ac72aa892be8c0fc125b658646356790c4aa9edb"
       },
       {
+        "name": "features.json",
+        "sha256": "423b1d07beb6c68c7b160f8f1cb871f08cea88327a5871552e68cc7dfe0981af"
+      },
+      {
         "name": "certificate.1.1",
         "sha256": "4c7e7ac08b96c9c0d46f20b17eb62f5ae91d499f87f8b64df1aed77c7b200e2c"
       },
@@ -1175,10 +1180,6 @@
       {
         "name": "certificate.1.2",
         "sha256": "aa2fb386ae0809d4ca16eefdf52bcf1beb37ac68e04f21625d316d09d82be735"
-      },
-      {
-        "name": "features.json",
-        "sha256": "c7f0247d20c829591d4273717727821d751c10998981e6cbe1cf52985e9723b4"
       }
     ]
   },
@@ -1310,6 +1311,11 @@
         }
       ],
       "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ENGLISH"
+        },
         {
           "heur_id": null,
           "signatures": [],

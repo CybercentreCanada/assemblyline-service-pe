@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 100,
+    "score": 300,
     "sections": [
       {
         "auto_collapse": false,
@@ -1000,7 +1000,7 @@
         "body": [
           [
             "Languages",
-            "ENGLISH"
+            "DANISH, ENGLISH, NEUTRAL"
           ],
           [
             "Sublanguages",
@@ -1018,7 +1018,9 @@
             "pe": {
               "resources": {
                 "language": [
-                  "ENGLISH"
+                  "DANISH",
+                  "ENGLISH",
+                  "NEUTRAL"
                 ],
                 "name": [
                   "KAFUSUCO",
@@ -1079,7 +1081,7 @@
           ],
           [
             "file_os",
-            5802129
+            "5802129"
           ],
           [
             "file_subtype",
@@ -1144,6 +1146,48 @@
         "promote_to": null,
         "tags": {},
         "title_text": "string_file_info",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": [
+          [
+            "key",
+            "4678323b0"
+          ],
+          [
+            "type",
+            0
+          ]
+        ],
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 3,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 13,
+          "score": 200,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "langcode_items 1",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_config": {},
+        "body_format": "ORDERED_KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 4,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "items",
         "zeroize_on_tag_safe": false
       },
       {
@@ -1296,19 +1340,6 @@
         "tags": {},
         "title_text": "Overlay",
         "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": "StringTable.szKey should be 8-wchars length\nFailed to parse StringFileInfo",
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": null,
-        "promote_to": null,
-        "tags": {},
-        "title_text": "LIEF logging information.",
-        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -1322,7 +1353,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "6ef70d80cd37fe62232d4df3b246e3623317658b0968313ab72c1aadec47226f"
+        "sha256": "a8322669ea1aa8facdc1676dda37e95c9df3fac75878752f5b900d1e4c75493b"
       }
     ]
   },
@@ -1331,6 +1362,11 @@
       {
         "attack_ids": [],
         "heur_id": 4,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 13,
         "signatures": []
       },
       {
@@ -1384,7 +1420,17 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "DANISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "ENGLISH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
         }
       ],
       "file.pe.resources.name": [

@@ -935,6 +935,11 @@
                   "ENGLISH"
                 ]
               }
+            },
+            "string": {
+              "extracted": [
+                "None"
+              ]
             }
           }
         },
@@ -1782,7 +1787,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "(2x) Can't find certificate for which the issuer is C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec Class 3 SHA256 Code Signing CA\n(2x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(2x) The certificate validity has expired\n(2x) The certificate is not correctly signed by the trusted CA",
+        "body": "Failed to parse X509 cert pkcs7-signed-data.certificates (pos: 1181, idx: 1)\n(2x) Failed to find certificate for issuer C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec Class 3 SHA256 Code Signing CA\n(2x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(2x) The certificate validity has expired\n(2x) The certificate is not correctly signed by the trusted CA",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1828,16 +1833,16 @@
         "sha256": "333bff6f1f83a7ccc0268af507eb62190bece4cb0769ed47b747f1e8cca52c6a"
       },
       {
+        "name": "features.json",
+        "sha256": "4dc4bb91243f523a4aecd3a52741a73ac2fa34d2b96da6d2b39869e2f29cd93a"
+      },
+      {
         "name": "icon_0.ico",
         "sha256": "94c3a40f65be2cd0ec2a74f44f3054eb711e700505c5614e060e233004d064dd"
       },
       {
         "name": "icon_0.ico.thumb",
         "sha256": "94c3a40f65be2cd0ec2a74f44f3054eb711e700505c5614e060e233004d064dd"
-      },
-      {
-        "name": "features.json",
-        "sha256": "c81fbcaccd99f52520cff43b6b5399157c0c4a5e68ffdfdf59edf23a399344ba"
       },
       {
         "name": "icon_4.ico",
@@ -2043,6 +2048,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "Downloader"
+        }
+      ],
+      "file.string.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "None"
         }
       ]
     },

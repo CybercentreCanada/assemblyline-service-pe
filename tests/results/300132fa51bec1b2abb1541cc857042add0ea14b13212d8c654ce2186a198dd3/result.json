@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 450,
+    "score": 350,
     "sections": [
       {
         "auto_collapse": false,
@@ -506,30 +506,10 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 36,
-          "score": 100,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No languages found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
         "body": [
           [
             "Languages",
-            ""
+            "NEUTRAL"
           ],
           [
             "Sublanguages",
@@ -546,6 +526,9 @@
           "file": {
             "pe": {
               "resources": {
+                "language": [
+                  "NEUTRAL"
+                ],
                 "name": [
                   "DVCLAL",
                   "PACKAGEINFO"
@@ -698,7 +681,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Address of new exe header is corrupted\nFail to parse DOS Stub",
+        "body": "Corrupted new exe header address\nFailed to parse DOS Stub",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -711,7 +694,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Address of new exe header is corrupted",
+        "body": "Corrupted new exe header address",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -741,7 +724,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "88afca79fc165e50ad0ebed8c8d49a2e46f030b64fe19558c12c0a2671d0abeb"
+        "sha256": "2a22c9e0af57f05fe4a1652794907b95fd4a28fe81a77e79c1dd47dfbb3f1ad9"
       }
     ]
   },
@@ -760,11 +743,6 @@
       {
         "attack_ids": [],
         "heur_id": 24,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 36,
         "signatures": []
       },
       {
@@ -812,6 +790,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "1970-01-01 00:00:00 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
         }
       ],
       "file.pe.resources.name": [

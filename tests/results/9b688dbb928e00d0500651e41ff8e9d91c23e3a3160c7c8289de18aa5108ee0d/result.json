@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 200,
+    "score": 100,
     "sections": [
       {
         "auto_collapse": false,
@@ -786,30 +786,10 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 36,
-          "score": 100,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No languages found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
         "body": [
           [
             "Languages",
-            ""
+            "NEUTRAL"
           ],
           [
             "Sublanguages",
@@ -826,6 +806,9 @@
           "file": {
             "pe": {
               "resources": {
+                "language": [
+                  "NEUTRAL"
+                ],
                 "name": [
                   "DVCLAL"
                 ]
@@ -962,7 +945,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "b3a72cb65a5fb3322e29882dae724a9bd578db27d571c688e9e885205a220f69"
+        "sha256": "a9f224bc7a4799e459978b909710218a51f20ee4e9012c9fe60ce2e2d01c7364"
       }
     ]
   },
@@ -981,11 +964,6 @@
       {
         "attack_ids": [],
         "heur_id": 24,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 36,
         "signatures": []
       }
     ],
@@ -1028,6 +1006,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "1970-01-01 00:00:00 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
         }
       ],
       "file.pe.resources.name": [

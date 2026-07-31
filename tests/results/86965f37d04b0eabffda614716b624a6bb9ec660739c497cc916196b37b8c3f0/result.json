@@ -959,7 +959,7 @@
         "body": [
           [
             "Languages",
-            "GERMAN"
+            "FRENCH, GERMAN, NEUTRAL"
           ],
           [
             "Sublanguages",
@@ -977,7 +977,9 @@
             "pe": {
               "resources": {
                 "language": [
-                  "GERMAN"
+                  "FRENCH",
+                  "GERMAN",
+                  "NEUTRAL"
                 ]
               }
             }
@@ -1287,7 +1289,7 @@
           ],
           [
             "file_os",
-            394356
+            "394356"
           ],
           [
             "file_subtype",
@@ -1554,7 +1556,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Child.szKey is neither VarFileInfo/StringFileInfo: 'StringFileInform'\nError while parsing VS_VERSION_INFO.children[0]",
+        "body": "Failed to parse first child",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1577,10 +1579,6 @@
       {
         "name": "icon_1.ico.thumb",
         "sha256": "0f3f47d33838758c0457c5b404d19b8d53f45f0d5559e050574ad4c1a9731819"
-      },
-      {
-        "name": "features.json",
-        "sha256": "31f32462edbf6c566e1d1eb718732f5f7e2222af23a41a3e6a07ecf67352cef3"
       },
       {
         "name": "icon_3.ico",
@@ -1637,6 +1635,10 @@
       {
         "name": "icon_8.ico.thumb",
         "sha256": "ae664dcb57d11d310651d58dce7f185a7712ae4a7c9581e81430733920208708"
+      },
+      {
+        "name": "features.json",
+        "sha256": "c3523aad01fdc397d9dd60b16edac7792a91604afdd4c9027072217f388f5c9f"
       },
       {
         "name": "icon_6.ico",
@@ -1754,7 +1756,17 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "FRENCH"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "GERMAN"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
         }
       ],
       "file.pe.rich_header.hash": [

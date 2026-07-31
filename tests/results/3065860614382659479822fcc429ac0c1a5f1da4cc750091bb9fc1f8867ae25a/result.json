@@ -873,6 +873,34 @@
                   "USRQCMD"
                 ]
               }
+            },
+            "string": {
+              "extracted": [
+                "License",
+                "Please read the following license agreement. Press the PAGE DOWN key to see the rest of the agreement.",
+                "None",
+                "Do you accept all of the terms of the preceding License Agreement? If you choose No, Install will close. To install you must accept this agreement.",
+                "&Yes",
+                "&No",
+                "Temporary folder",
+                "Please type the location where you want to place the extracted files.",
+                "&Browse...",
+                "OK",
+                "Cancel",
+                "Overwrite file",
+                "Do you want to overwrite the file:",
+                "Yes To &All",
+                "Extract",
+                "&Cancel",
+                "Extracting",
+                "Initializing... Please wait...",
+                "Generic1",
+                "User1",
+                "Warning",
+                "E&xit",
+                "&Continue",
+                "Do you want to continue?"
+              ]
             }
           }
         },
@@ -1193,7 +1221,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -1611,16 +1639,16 @@
         "sha256": "bf37a425ab6a3e25d43170019587b3e7f963ce7de4657fc75a45ba90c95a57e3"
       },
       {
-        "name": "features.json",
-        "sha256": "c8d231b912edc900af00e3706ebf2389e17ca63e5c45ba7fb246b4fcf6e553f5"
-      },
-      {
         "name": "icon_5.ico",
         "sha256": "e2f75210a46de1be0dec6f21e54a8c22e5c36b6ae55c4f20a1a4037e0e4d9237"
       },
       {
         "name": "icon_5.ico.thumb",
         "sha256": "e2f75210a46de1be0dec6f21e54a8c22e5c36b6ae55c4f20a1a4037e0e4d9237"
+      },
+      {
+        "name": "features.json",
+        "sha256": "ff20aabe42306d946359ef897dbf7081fd99b6e7635014ad1d17afedb45518f2"
       }
     ]
   },
@@ -1839,6 +1867,128 @@
           "heur_id": null,
           "signatures": [],
           "value": "WEXTRACT.EXE            "
+        }
+      ],
+      "file.string.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Browse..."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Cancel"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Continue"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&No"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "&Yes"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Cancel"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Do you accept all of the terms of the preceding License Agreement? If you choose No, Install will close. To install you must accept this agreement."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Do you want to continue?"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Do you want to overwrite the file:"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "E&xit"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Extract"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Extracting"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Generic1"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Initializing... Please wait..."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "License"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "None"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "OK"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Overwrite file"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Please read the following license agreement. Press the PAGE DOWN key to see the rest of the agreement."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Please type the location where you want to place the extracted files."
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Temporary folder"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "User1"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Warning"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Yes To &All"
         }
       ]
     },

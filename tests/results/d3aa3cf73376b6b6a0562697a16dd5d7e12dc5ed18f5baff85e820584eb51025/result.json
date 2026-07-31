@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 150,
+    "score": 250,
     "sections": [
       {
         "auto_collapse": false,
@@ -855,30 +855,10 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 36,
-          "score": 100,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No languages found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
         "body": [
           [
             "Languages",
-            ""
+            "ENGLISH"
           ],
           [
             "Sublanguages",
@@ -891,7 +871,22 @@
         "depth": 0,
         "heuristic": null,
         "promote_to": null,
-        "tags": {},
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "ENGLISH"
+                ]
+              }
+            },
+            "string": {
+              "extracted": [
+                "\b"
+              ]
+            }
+          }
+        },
         "title_text": "Resources",
         "zeroize_on_tag_safe": false
       },
@@ -921,17 +916,19 @@
       },
       {
         "auto_collapse": false,
-        "body": [
-          [
-            "Type",
-            0
-          ]
-        ],
+        "body": null,
         "body_config": {},
         "body_format": "ORDERED_KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 13,
+          "score": 200,
+          "score_map": {},
+          "signatures": {}
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Version",
@@ -1163,7 +1160,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Group icon type should be equal to 1 (vs 0)\nVS_VERSIONINFO.szKey should be equal to 'VS_VERSION_INFO' but is\nThe VS_VERSION_INFO.value contains an unknown structure",
+        "body": "Group icon type should be 1 (got 0)\nVS_VERSIONINFO.szKey should be 'VS_VERSION_INFO', got",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1186,7 +1183,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "6322296976fe0b5b5e0d3ad0eb4d627268b29600f69e46bc37debee8e6ff9308"
+        "sha256": "e1d9903663d40d88f25f3968e811769b7de16cd2a5427f01e6a70ba868ddc54a"
       }
     ]
   },
@@ -1194,12 +1191,12 @@
     "heuristics": [
       {
         "attack_ids": [],
-        "heur_id": 24,
+        "heur_id": 13,
         "signatures": []
       },
       {
         "attack_ids": [],
-        "heur_id": 36,
+        "heur_id": 24,
         "signatures": []
       },
       {
@@ -1247,6 +1244,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "2024-03-30 16:55:06 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "ENGLISH"
         }
       ],
       "file.pe.rich_header.hash": [
@@ -1308,6 +1312,13 @@
           "heur_id": null,
           "signatures": [],
           "value": ".text"
+        }
+      ],
+      "file.string.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "\b"
         }
       ]
     },

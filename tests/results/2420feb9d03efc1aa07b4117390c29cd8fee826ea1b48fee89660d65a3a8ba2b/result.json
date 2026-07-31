@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 500,
+    "score": 400,
     "sections": [
       {
         "auto_collapse": false,
@@ -762,30 +762,10 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 36,
-          "score": 100,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "No languages found",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
         "body": [
           [
             "Languages",
-            ""
+            "NEUTRAL"
           ],
           [
             "Sublanguages",
@@ -798,7 +778,17 @@
         "depth": 0,
         "heuristic": null,
         "promote_to": null,
-        "tags": {},
+        "tags": {
+          "file": {
+            "pe": {
+              "resources": {
+                "language": [
+                  "NEUTRAL"
+                ]
+              }
+            }
+          }
+        },
         "title_text": "Resources",
         "zeroize_on_tag_safe": false
       },
@@ -893,7 +883,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "4ebd5f4748af767d347dac3a5e0b409155fd1ac90c3a5fcda82c29f33956b810"
+        "sha256": "4e6375a4c914aaac1f5399e59952c12c7ad1dd46f537ab797c7ddc4a83989bd5"
       }
     ]
   },
@@ -907,11 +897,6 @@
       {
         "attack_ids": [],
         "heur_id": 11,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 36,
         "signatures": []
       },
       {
@@ -973,6 +958,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "2012-09-05 15:05:50 +00:00 (UTC)"
+        }
+      ],
+      "file.pe.resources.language": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
         }
       ],
       "file.pe.sections.hash": [

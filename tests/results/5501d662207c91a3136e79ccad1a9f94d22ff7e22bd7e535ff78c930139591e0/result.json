@@ -141,23 +141,23 @@
         "body": [
           [
             "sha512",
-            "40ab19fd9aa70274786055a0ccd1bcca650c48ee3a416474fdb120adfefa3644b366c255bfe70d901217641f74fb8f8a1834323cf16cefe9d4c50c53ba336b7a"
+            "56a8606dddde10ab5a1baf893b8c5ec8308d0f750eca3224f70cec2a8409ddd83b7c96601782db06762c1f235cbe31b497d881bdd1d9344d47f6388d3c5b2267"
           ],
           [
             "sha384",
-            "a46eefc304ef01c13edefcbc3d5637bcd8e8d0ea45678c9a7eacfe6b2b922a5dd308689dcbc2212e04e1bcb240eeb9dc"
+            "6875a76253da5ad3c6ae567f669617a386bd8f9a19e7e6293157459014f1a0a51d560e2b4deca54e3dd326c305fd748a"
           ],
           [
             "sha256",
-            "6e34bacc8b3d15be7c659181754a7942fa2a77101cd25dbf12cc292661486f55"
+            "e1da6f20a8a193d169f63fc185d03bd3ded0e76afb7d0da4a77d8a3670e92e03"
           ],
           [
             "sha1",
-            "c488b63367e94ad4fcd13870bd9a6053f45490eb"
+            "ebf0508e552d6ea2f992279d9d61d5a78390d02d"
           ],
           [
             "md5",
-            "5c0b62b0b5f73d440df4697e0979adde"
+            "c3c62282d92136597e13c9e2bc017fa9"
           ]
         ],
         "body_config": {},
@@ -199,11 +199,11 @@
               ],
               [
                 "Offset",
-                512
+                8192
               ],
               [
                 "Size",
-                168448
+                172032
               ],
               [
                 "Virtual Size",
@@ -317,19 +317,19 @@
             [
               [
                 "Entropy",
-                4.453077504187917
+                1.0816418099438818
               ],
               [
                 "Entropy without padding",
-                4.479983617195276
+                0.12727104609777604
               ],
               [
                 "Offset",
-                168960
+                180224
               ],
               [
                 "Size",
-                1536
+                8192
               ],
               [
                 "Virtual Size",
@@ -341,7 +341,7 @@
               ],
               [
                 "MD5",
-                "e3da2c71d4e553822ef9aaec680f1168"
+                "1cad6e26261f9a39292d11e0c299effc"
               ]
             ],
             {}
@@ -355,12 +355,12 @@
                   8
                 ],
                 "values": [
-                  4.26173,
-                  4.37758,
-                  4.07613,
-                  4.22427,
-                  4.21229,
-                  3.88648
+                  0.51889,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  3.6364
                 ]
               },
               "type": "colormap"
@@ -379,7 +379,7 @@
             "pe": {
               "sections": {
                 "hash": [
-                  "e3da2c71d4e553822ef9aaec680f1168"
+                  "1cad6e26261f9a39292d11e0c299effc"
                 ],
                 "name": [
                   ".rsrc"
@@ -407,11 +407,11 @@
               ],
               [
                 "Offset",
-                170496
+                188416
               ],
               [
                 "Size",
-                512
+                8192
               ],
               [
                 "Virtual Size",
@@ -655,7 +655,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Relocation corrupted: BlockSize is out of bound the binary's virtual size",
+        "body": "Corrupted relocation: BlockSize exceeds binary virtual size: 236783689 ( 0xe1d0849)",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -668,7 +668,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Relocation corrupted: BlockSize is out of bound the binary's virtual size",
+        "body": "Corrupted relocation: BlockSize exceeds binary virtual size: 236783689 ( 0xe1d0849)",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -693,12 +693,16 @@
       {
         "name": "overlay",
         "sha256": "1a1076705b8b311811866e60fb0a81e1ee59906001ffb8d2f66c8b7a8b7f7995"
+      },
+      {
+        "name": "5501d662207c91a3136e79ccad1a9f94d22ff7e22bd7e535ff78c930139591e0_unmapped",
+        "sha256": "8ca07f66d2e2e9368a7505beb65e3818f1cafc38b1fcbbbf42690666444727dc"
       }
     ],
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "7fa491892c44c7995a822ba5647f27a9aff9d87daed8f9f4d010c81822852185"
+        "sha256": "591732bdb7e9b6d706e3e3e977bb6af10193866aa6ffad927e7123757377c6ae"
       }
     ]
   },
@@ -757,17 +761,17 @@
         {
           "heur_id": null,
           "signatures": [],
+          "value": "1cad6e26261f9a39292d11e0c299effc"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
           "value": "5de8f7bb6164ce3087761d3b9d01819c"
         },
         {
           "heur_id": null,
           "signatures": [],
           "value": "b9745c431479b8f60bc8794eb73da877"
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "e3da2c71d4e553822ef9aaec680f1168"
         }
       ],
       "file.pe.sections.name": [

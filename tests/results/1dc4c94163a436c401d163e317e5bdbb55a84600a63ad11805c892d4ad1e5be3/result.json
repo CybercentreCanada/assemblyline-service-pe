@@ -731,7 +731,7 @@
         "body": [
           [
             "Languages",
-            "CHINESE"
+            "CHINESE, NEUTRAL"
           ],
           [
             "Sublanguages",
@@ -749,7 +749,8 @@
             "pe": {
               "resources": {
                 "language": [
-                  "CHINESE"
+                  "CHINESE",
+                  "NEUTRAL"
                 ]
               }
             }
@@ -907,7 +908,7 @@
           ],
           [
             "type",
-            1
+            0
           ],
           [
             "lang",
@@ -1142,7 +1143,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "Group icon type should be equal to 1 (vs 0)\nString.wLength should not be null.",
+        "body": "Group icon type should be 1 (got 0)\nFailed to parse StringFileInfo.Children[1]",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -1165,7 +1166,7 @@
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "00de40c7d1c2b911dca356d786e56db4c8bbab6cc2e963c79e2ac7c6d1af08e0"
+        "sha256": "b18bdeae791bef43f50ec5bc17bb6cbcf2d5f1e32ce90ed77fd15981edce328f"
       }
     ]
   },
@@ -1228,6 +1229,11 @@
           "heur_id": null,
           "signatures": [],
           "value": "CHINESE"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "NEUTRAL"
         }
       ],
       "file.pe.rich_header.hash": [

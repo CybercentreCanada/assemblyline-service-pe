@@ -9,6 +9,7 @@ import re
 import struct
 import subprocess
 import tempfile
+import warnings
 from collections import defaultdict
 from io import BytesIO
 
@@ -38,6 +39,7 @@ from assemblyline_v4_service.common.task import PARENT_RELATION
 from PIL import Image
 
 from . import unmapper
+from .code_pages import CODE_PAGES
 
 # Disable logging from LIEF
 lief.logging.disable()
@@ -60,7 +62,7 @@ ACCEPTED_ALGORITHMS = [
 ]
 cert_verification_entries = {entry.value: entry for entry in lief.PE.x509.VERIFICATION_FLAGS}
 
-accelerator_flags_entries = {entry.value: entry for entry in lief.PE.ACCELERATOR_FLAGS}
+accelerator_flags_entries = {entry.value: entry for entry in lief.PE.ResourceAccelerator.FLAGS}
 
 PACKED_SECTION_NAMES = ["UPX", "UPX0", "UPX1", "ASPack", "vmp0", "themida"]
 PACKED_SECTION_NAMES += [f".{x}" for x in PACKED_SECTION_NAMES]
@@ -239,6 +241,103 @@ def get_lief_enum_name(enum):
         return enum.name
     except (AttributeError, ValueError):
         return enum
+
+
+class TreeIcon:
+    """Icon rebuilt from a raw RT_ICON resource tree leaf.
+
+    LIEF's ResourcesManager.icons() only yields icons that are referenced from a parsable
+    RT_GROUP_ICON entry. On some corrupted/packed samples, LIEF 1.0.0 fails to keep the
+    GROUP_ICON data node (that LIEF 0.16.4 kept) and the manager then yields no icon at all,
+    even though the RT_ICON leaves and their pixel data are intact. This mimics the subset of
+    lief.PE.ResourceIcon that add_resources() uses, from a leaf's content alone.
+    """
+
+    def __init__(self, icon_id, lang, pixels):
+        self.id = icon_id
+        self.lang = lang
+        self.pixels = pixels
+        self.width = 0
+        self.height = 0
+        self.planes = 0
+        self.bit_count = 0
+        if pixels[:8] == b"\x89PNG\r\n\x1a\x0a":
+            # Vista+ icons can be PNG-compressed: dimensions are in the IHDR chunk
+            self.width, self.height = struct.unpack(">II", pixels[16:24])
+            self.planes = 1
+            self.bit_count = 32
+        elif len(pixels) >= 16:
+            # Otherwise the data starts with a BITMAPINFOHEADER, where the height covers
+            # both the XOR and AND masks (hence half of it is the real icon height)
+            _, self.width, height, self.planes, self.bit_count = struct.unpack("<IiiHH", pixels[:16])
+            self.height = abs(height) // 2
+
+    def save(self, path):
+        color_count = 2**self.bit_count if 0 < self.bit_count < 8 else 0
+        with open(path, "wb") as f:
+            f.write(struct.pack("<HHH", 0, 1, 1))
+            f.write(
+                struct.pack(
+                    "<BBBBHHII",
+                    self.width & 0xFF,
+                    self.height & 0xFF,
+                    color_count,
+                    0,
+                    self.planes,
+                    self.bit_count,
+                    len(self.pixels),
+                    22,
+                )
+            )
+            f.write(self.pixels)
+
+
+def group_icon_data_missing(binary):
+    """Detect RT_GROUP_ICON directories that exist without any data leaf.
+
+    This is the signature of LIEF 1.0.0's parser dropping the group data node on some
+    corrupted samples (that 0.16.4 kept). When the data leaves are present, the manager
+    had a legitimate, content-based reason to reject them (e.g. bad GRPICONDIR type),
+    and LIEF 0.16.4 would not have yielded icons either.
+
+    Returns:
+        bool: True when at least one RT_GROUP_ICON directory exists and none of them
+        contains a data leaf, meaning the icons should be rebuilt from the RT_ICON tree.
+        False when there is no RT_GROUP_ICON directory, or when at least one group data
+        leaf is present (the manager's empty result is then content-based and final).
+    """
+    found_group_dir = False
+    for top in binary.resources.childs:
+        if top.id != lief.PE.ResourcesManager.TYPE.GROUP_ICON.value:
+            continue
+        for group_dir in top.childs:
+            found_group_dir = True
+            for leaf in group_dir.childs:
+                if leaf.is_data:
+                    return False
+    return found_group_dir
+
+
+def icons_from_resource_tree(binary):
+    """Rebuild the icons directly from the RT_ICON resource tree leaves.
+
+    Returns:
+        list[TreeIcon]: one TreeIcon per non-empty RT_ICON data leaf, in resource tree
+        order. Empty when the binary has no RT_ICON entries or all their leaves are
+        dataless. The icons carry the primary language (low 10 bits of the leaf id) and
+        expose the same attributes add_resources() reads from lief.PE.ResourceIcon.
+    """
+    icons = []
+    for top in binary.resources.childs:
+        if top.id != lief.PE.ResourcesManager.TYPE.ICON.value:
+            continue
+        for icon_dir in top.childs:
+            for leaf in icon_dir.childs:
+                if leaf.is_data and len(leaf.content) > 0:
+                    # The leaf id is the full language identifier; the manager exposes only the
+                    # primary language (low 10 bits), so do the same
+                    icons.append(TreeIcon(icon_dir.id, leaf.id & 0x3FF, bytes(leaf.content)))
+    return icons
 
 
 def lookup_signer_family(database, family_index=-1, sha1=None, sha256=None, md5=None, serial=None):
@@ -1087,32 +1186,49 @@ class PE(ServiceBase):
             "reserved1": load_configuration.reserved1,
             "security_cookie": load_configuration.security_cookie,
             "timedatestamp": load_configuration.timedatestamp,
-            "version": load_configuration.version.name,
             "virtual_memory_threshold": load_configuration.virtual_memory_threshold,
+            "se_handler_count": load_configuration.se_handler_count,
+            "se_handler_table": load_configuration.se_handler_table,
+            "guard_cf_check_function_pointer": load_configuration.guard_cf_check_function_pointer,
+            "guard_cf_dispatch_function_pointer": load_configuration.guard_cf_dispatch_function_pointer,
+            "guard_cf_function_count": load_configuration.guard_cf_function_count,
+            "guard_cf_function_table": load_configuration.guard_cf_function_table,
+            "guard_address_taken_iat_entry_count": load_configuration.guard_address_taken_iat_entry_count,
+            "guard_address_taken_iat_entry_table": load_configuration.guard_address_taken_iat_entry_table,
+            "guard_long_jump_target_count": load_configuration.guard_long_jump_target_count,
+            "guard_long_jump_target_table": load_configuration.guard_long_jump_target_table,
+            "dynamic_value_reloc_table": load_configuration.dynamic_value_reloc_table,
+            "hybrid_metadata_pointer": load_configuration.hybrid_metadata_pointer,
+            "dynamic_value_reloctable_offset": load_configuration.dynamic_value_reloctable_offset,
+            "dynamic_value_reloctable_section": load_configuration.dynamic_value_reloctable_section,
+            "guard_rf_failure_routine": load_configuration.guard_rf_failure_routine,
+            "guard_rf_failure_routine_function_pointer": load_configuration.guard_rf_failure_routine_function_pointer,
+            "reserved2": load_configuration.reserved2,
+            "guard_rf_verify_stackpointer_function_pointer": (
+                load_configuration.guard_rf_verify_stackpointer_function_pointer
+            ),
+            "hotpatch_table_offset": load_configuration.hotpatch_table_offset,
+            "reserved3": load_configuration.reserved3,
         }
-
-        def set_config_v0():
-            load_configuration_dict["se_handler_count"] = load_configuration.se_handler_count
-            load_configuration_dict["se_handler_table"] = load_configuration.se_handler_table
-
-        def set_config_v1():
-            set_config_v0()
-
-            load_configuration_dict["guard_cf_check_function_pointer"] = (
-                load_configuration.guard_cf_check_function_pointer
-            )
-            load_configuration_dict["guard_cf_dispatch_function_pointer"] = (
-                load_configuration.guard_cf_dispatch_function_pointer
-            )
+        if load_configuration.guard_cf_flags_list is not None:
             load_configuration_dict["guard_cf_flags_list"] = [
                 guard_flag.name for guard_flag in load_configuration.guard_cf_flags_list
             ]
-            load_configuration_dict["guard_cf_function_count"] = load_configuration.guard_cf_function_count
-            load_configuration_dict["guard_cf_function_table"] = load_configuration.guard_cf_function_table
-            load_configuration_dict["guard_flags"] = get_lief_enum_name(load_configuration.guard_flags)
-
-        def set_config_v2():
-            set_config_v1()
+        if load_configuration.guard_flags is not None:
+            # report the known flag names and keep any undocumented bits as hex
+            # since IMAGE_GUARD is a strict flag that rejects unknown bits
+            guard_flags = load_configuration.guard_flags
+            image_guard = lief.PE.LoadConfiguration.IMAGE_GUARD
+            known_mask = 0
+            for flag in image_guard:
+                known_mask |= flag.value
+            parts = []
+            if guard_flags & known_mask:
+                parts.append(image_guard(guard_flags & known_mask).name)
+            if guard_flags & ~known_mask:
+                parts.append(hex(guard_flags & ~known_mask))
+            load_configuration_dict["guard_flags"] = "|".join(parts) if parts else str(guard_flags)
+        if load_configuration.code_integrity is not None:
             load_configuration_dict["code_integrity"] = {
                 "catalog": load_configuration.code_integrity.catalog,
                 "catalog_offset": load_configuration.code_integrity.catalog_offset,
@@ -1120,64 +1236,8 @@ class PE(ServiceBase):
                 "reserved": load_configuration.code_integrity.reserved,
             }
 
-        def set_config_v3():
-            set_config_v2()
-            load_configuration_dict["guard_address_taken_iat_entry_count"] = (
-                load_configuration.guard_address_taken_iat_entry_count
-            )
-            load_configuration_dict["guard_address_taken_iat_entry_table"] = (
-                load_configuration.guard_address_taken_iat_entry_table
-            )
-            load_configuration_dict["guard_long_jump_target_count"] = load_configuration.guard_long_jump_target_count
-            load_configuration_dict["guard_long_jump_target_table"] = load_configuration.guard_long_jump_target_table
-
-        def set_config_v4():
-            set_config_v3()
-            load_configuration_dict["dynamic_value_reloc_table"] = load_configuration.dynamic_value_reloc_table
-            load_configuration_dict["hybrid_metadata_pointer"] = load_configuration.hybrid_metadata_pointer
-
-        def set_config_v5():
-            set_config_v4()
-            load_configuration_dict["dynamic_value_reloctable_offset"] = (
-                load_configuration.dynamic_value_reloctable_offset
-            )
-            load_configuration_dict["dynamic_value_reloctable_section"] = (
-                load_configuration.dynamic_value_reloctable_section
-            )
-            load_configuration_dict["guard_rf_failure_routine"] = load_configuration.guard_rf_failure_routine
-            load_configuration_dict["guard_rf_failure_routine_function_pointer"] = (
-                load_configuration.guard_rf_failure_routine_function_pointer
-            )
-            load_configuration_dict["reserved2"] = load_configuration.reserved2
-
-        def set_config_v6():
-            set_config_v5()
-            load_configuration_dict["guard_rf_verify_stackpointer_function_pointer"] = (
-                load_configuration.guard_rf_verify_stackpointer_function_pointer
-            )
-            load_configuration_dict["hotpatch_table_offset"] = load_configuration.hotpatch_table_offset
-
-        def set_config_v7():
-            set_config_v6()
-            load_configuration_dict["addressof_unicode_string"] = load_configuration.addressof_unicode_string
-            load_configuration_dict["reserved3"] = load_configuration.reserved3
-
-        if isinstance(load_configuration, lief.PE.LoadConfigurationV7):
-            set_config_v7()
-        elif isinstance(load_configuration, lief.PE.LoadConfigurationV6):
-            set_config_v6()
-        elif isinstance(load_configuration, lief.PE.LoadConfigurationV5):
-            set_config_v5()
-        elif isinstance(load_configuration, lief.PE.LoadConfigurationV4):
-            set_config_v4()
-        elif isinstance(load_configuration, lief.PE.LoadConfigurationV3):
-            set_config_v3()
-        elif isinstance(load_configuration, lief.PE.LoadConfigurationV2):
-            set_config_v2()
-        elif isinstance(load_configuration, lief.PE.LoadConfigurationV1):
-            set_config_v1()
-        elif isinstance(load_configuration, lief.PE.LoadConfigurationV0):
-            set_config_v0()
+        # Fields that no longer exist in the PE format may be None; the ontology model marks them all Optional
+        load_configuration_dict = {k: v for k, v in load_configuration_dict.items() if v is not None}
 
         self.features["load_configuration"] = load_configuration_dict
 
@@ -1187,6 +1247,11 @@ class PE(ServiceBase):
             ResultSection(heur.name, heuristic=heur, parent=self.file_res)
             return
 
+        # Keep the manager alive for the whole method: in LIEF, objects handed out by the
+        # ResourcesManager (dialogs, icons, ...) are tied to its lifetime, and iterating
+        # them off a temporary manager crashes the interpreter.
+        resources_manager = self.binary.resources_manager
+
         # TODO: Find all the langs/sublangs
         self.features["resources_manager"] = {
             "langs_available": [],
@@ -1194,15 +1259,15 @@ class PE(ServiceBase):
         }
         res = ResultOrderedKeyValueSection("Resources")
 
-        if self.binary.resources_manager.has_accelerator:
+        if resources_manager.has_accelerator:
             self.features["resources_manager"]["accelerators"] = []
-            for accelerator in self.binary.resources_manager.accelerator:
+            for accelerator in resources_manager.accelerator:
                 accelerator_dict = {
                     "accelerator_id": accelerator.id,
                     "padding": accelerator.padding,
                 }
                 try:
-                    accelerator_dict["ansi"] = lief.PE.ACCELERATOR_VK_CODES(accelerator.ansi).name
+                    accelerator_dict["ansi"] = lief.PE.ACCELERATOR_CODES(accelerator.ansi).name
                 except ValueError:
                     accelerator_dict["ansi"] = "???"
                 except TypeError:
@@ -1215,44 +1280,39 @@ class PE(ServiceBase):
                     pass
                 self.features["resources_manager"]["accelerators"].append(accelerator_dict)
 
-        if self.binary.resources_manager.has_dialogs:
+        if resources_manager.has_dialogs:
             corrupted_dialog_section = None
             dialogs_list = []
-            for dialog in self.binary.resources_manager.dialogs:
-                try:
-                    dialog_lang = lief.PE.RESOURCE_LANGS(dialog.lang).name
-                    if dialog_lang not in self.features["resources_manager"]["langs_available"]:
-                        self.features["resources_manager"]["langs_available"] = sorted(
-                            self.features["resources_manager"]["langs_available"] + [dialog_lang]
-                        )
-                except ValueError:
-                    dialog_lang = "???"
+            for dialog in resources_manager.dialogs:
+                is_extended = dialog.type == lief.PE.ResourceDialog.TYPE.EXTENDED
                 dialog_dict = {
-                    "charset": dialog.charset,
                     "cx": dialog.cx,
                     "cy": dialog.cy,
-                    "dialogbox_style_list": sorted(
-                        [dialogbox_style.name for dialogbox_style in dialog.dialogbox_style_list]
-                    ),
-                    "extended_style": str(dialog.extended_style),  # .name
+                    "dialogbox_style_list": sorted([dialogbox_style.name for dialogbox_style in dialog.styles_list]),
+                    "extended_style": str(dialog.extended_style),
                     "extended_style_list": sorted(
-                        [extended_style.name for extended_style in dialog.extended_style_list]
+                        [extended_style.name for extended_style in dialog.windows_ext_styles_list]
                     ),
-                    "help_id": dialog.help_id,
                     "items": [],
-                    "lang": dialog_lang,
-                    "point_size": dialog.point_size,
-                    "signature": dialog.signature,
-                    "style": str(dialog.style),  # .name
-                    "style_list": sorted([style.name for style in dialog.style_list]),
-                    "sub_lang": "",  # dialog.sub_lang.name,
+                    "style": str(dialog.style),
+                    "style_list": sorted([style.name for style in dialog.windows_styles_list]),
                     "title": "",
-                    "typeface": "",
-                    "version": dialog.version,
-                    "weight": dialog.weight,
                     "x": dialog.x,
                     "y": dialog.y,
                 }
+                if is_extended:
+                    dialog_dict["help_id"] = dialog.help_id
+                    dialog_dict["signature"] = dialog.signature
+                    dialog_dict["version"] = dialog.version
+                font = dialog.font
+                if font is not None:
+                    dialog_dict["point_size"] = font.point_size
+                    if is_extended:
+                        dialog_dict["charset"] = font.charset
+                        dialog_dict["weight"] = font.weight
+                        dialog_dict["typeface"] = font.typeface
+                    else:
+                        dialog_dict["typeface"] = font.name
                 try:
                     dialog_dict["title"] = dialog.title
                     if dialog.title != "":
@@ -1264,32 +1324,24 @@ class PE(ServiceBase):
                         corrupted_dialog_section = ResultSection(heur.name, heuristic=heur, parent=res)
                     corrupted_dialog_section.add_line("Can't decode main title of dialog")
 
-                try:
-                    dialog_dict["typeface"] = dialog.typeface
-                except UnicodeDecodeError:
-                    del dialog_dict["typeface"]
-                    if corrupted_dialog_section is None:
-                        heur = Heuristic(13)
-                        corrupted_dialog_section = ResultSection(heur.name, heuristic=heur, parent=res)
-                    corrupted_dialog_section.add_line("Can't decode typeface of dialog")
-
                 for item in dialog.items:
                     item_dict = {
                         "cx": item.cx,
                         "cy": item.cy,
                         "extended_style": item.extended_style,
-                        "help_id": item.help_id,
                         "item_id": item.id,
-                        "is_extended": item.is_extended,
-                        "style": str(item.style),  # .name
+                        "is_extended": is_extended,
+                        "style": str(item.style),
                         "title": "",
                         "x": item.x,
                         "y": item.y,
                     }
+                    if is_extended:
+                        item_dict["help_id"] = item.help_id
                     try:
-                        item_dict["title"] = item.title
-                        if item.title != "":
-                            res.add_tag("file.string.extracted", item.title)
+                        item_dict["title"] = str(item.title)
+                        if item_dict["title"] != "":
+                            res.add_tag("file.string.extracted", item_dict["title"])
                     except UnicodeDecodeError:
                         if corrupted_dialog_section is None:
                             heur = Heuristic(13)
@@ -1305,9 +1357,9 @@ class PE(ServiceBase):
 
             self.features["resources_manager"]["dialogs"] = dialogs_list
 
-        if self.binary.resources_manager.has_html:
+        if resources_manager.has_html:
             try:
-                self.features["resources_manager"]["html"] = self.binary.resources_manager.html
+                self.features["resources_manager"]["html"] = resources_manager.html
             except UnicodeDecodeError:
                 heur = Heuristic(13)
                 heur_section = ResultSection(heur.name, heuristic=heur)
@@ -1329,152 +1381,168 @@ class PE(ServiceBase):
                                 "utf-8", "backslashreplace"
                             )
 
-        if self.binary.resources_manager.has_icons:
+        if resources_manager.has_icons:
             sub_res = ResultMultiSection("Icons")
             sub_res_table = TableSectionBody()
             sub_res_image = ImageSectionBody(self.request)
-            try:
-                icons = []
-                unshowable_icons = []
-                for idx, icon in enumerate(self.binary.resources_manager.icons):
-                    try:
-                        icon_lang = lief.PE.RESOURCE_LANGS(icon.lang).name
-                        if icon_lang not in self.features["resources_manager"]["langs_available"]:
-                            self.features["resources_manager"]["langs_available"] = sorted(
-                                self.features["resources_manager"]["langs_available"] + [icon_lang]
-                            )
-                    except ValueError:
-                        icon_lang = "???"
-                    icons.append(
-                        {
-                            "icon_id": icon.id,
-                            # "pixels": icon.pixels,
-                            "planes": icon.planes,
-                            "height": icon.height,
-                            "width": icon.width,
-                            "lang": icon_lang,
-                            "sublang": "",  # icon.sublang.name,
-                            # TODO: Add hash as a structure with values similar to the authentihash
-                            # "hash": {"sha256": hashlib.sha256(bytearray(icon.pixels)).hexdigest()},
+            manager_icons = list(resources_manager.icons)
+            if not manager_icons and group_icon_data_missing(self.binary):
+                # The manager found icons (has_icons) but the RT_GROUP_ICON data nodes were
+                # dropped by the parser, so it could not associate any icon with a group entry.
+                # Rebuild them from the RT_ICON tree leaves so they still get extracted.
+                manager_icons = icons_from_resource_tree(self.binary)
+            icons = []
+            unshowable_icons = []
+            for idx, icon in enumerate(manager_icons):
+                try:
+                    icon_lang = lief.PE.RESOURCE_LANGS(icon.lang).name
+                except ValueError:
+                    icon_lang = "???"
+                icons.append(
+                    {
+                        "icon_id": icon.id,
+                        # "pixels": icon.pixels,
+                        "planes": icon.planes,
+                        "height": icon.height,
+                        "width": icon.width,
+                        "lang": icon_lang,
+                        "sublang": "",  # icon.sublang.name,
+                        # TODO: Add hash as a structure with values similar to the authentihash
+                        # "hash": {"sha256": hashlib.sha256(bytearray(icon.pixels)).hexdigest()},
+                    }
+                )
+                sub_res_table.add_row(
+                    TableRow(
+                        **{
+                            "ID": icon.id,
+                            "Lang": icon_lang,
+                            "Size": f"{icon.height}x{icon.width}",
+                            "Size (bytes)": len(icon.pixels),
+                            "Saved as": f"icon_{idx}.ico",
                         }
                     )
-                    sub_res_table.add_row(
-                        TableRow(
-                            **{
-                                "ID": icon.id,
-                                "Lang": icon_lang,
-                                "Size": f"{icon.height}x{icon.width}",
-                                "Size (bytes)": len(icon.pixels),
-                                "Saved as": f"icon_{idx}.ico",
-                            }
-                        )
+                )
+                temp_path = os.path.join(self.working_directory, f"icon_{idx}.ico")
+                icon.save(temp_path)
+                try:
+                    sub_res_image.add_image(temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file")
+                except (OSError, ValueError):
+                    unshowable_icons.append(f"icon_{idx}.ico")
+                    self.request.add_supplementary(
+                        temp_path,
+                        f"icon_{idx}.ico",
+                        f"Icon {idx} extracted from the PE file",
+                        parent_relation=PARENT_RELATION.EXTRACTED,
                     )
-                    temp_path = os.path.join(self.working_directory, f"icon_{idx}.ico")
-                    icon.save(temp_path)
-                    try:
-                        sub_res_image.add_image(temp_path, f"icon_{idx}.ico", f"Icon {idx} extracted from the PE file")
-                    except (OSError, ValueError):
-                        unshowable_icons.append(f"icon_{idx}.ico")
-                        self.request.add_supplementary(
-                            temp_path,
-                            f"icon_{idx}.ico",
-                            f"Icon {idx} extracted from the PE file",
-                            parent_relation=PARENT_RELATION.EXTRACTED,
-                        )
-                    except Image.DecompressionBombError:
-                        heur = Heuristic(28)
-                        heur_section = ResultSection(heur.name, heuristic=heur)
-                        heur_section.add_line(f"icon_{idx}.ico")
-                        sub_res.add_subsection(heur_section)
-
-                        unshowable_icons.append(f"icon_{idx}.ico")
-                        self.request.add_supplementary(
-                            temp_path,
-                            f"icon_{idx}.ico",
-                            f"Icon {idx} extracted from the PE file",
-                            parent_relation=PARENT_RELATION.EXTRACTED,
-                        )
-
-                self.features["resources_manager"]["icons"] = icons
-                sub_res.add_section_part(sub_res_table)
-                sub_res.add_section_part(sub_res_image)
-                if unshowable_icons:
-                    heur = Heuristic(27)
+                except Image.DecompressionBombError:
+                    heur = Heuristic(28)
                     heur_section = ResultSection(heur.name, heuristic=heur)
-                    heur_section.add_lines(unshowable_icons)
+                    heur_section.add_line(f"icon_{idx}.ico")
                     sub_res.add_subsection(heur_section)
-                res.add_subsection(sub_res)
-            except Exception:
-                raise
+
+                    unshowable_icons.append(f"icon_{idx}.ico")
+                    self.request.add_supplementary(
+                        temp_path,
+                        f"icon_{idx}.ico",
+                        f"Icon {idx} extracted from the PE file",
+                        parent_relation=PARENT_RELATION.EXTRACTED,
+                    )
+
+            self.features["resources_manager"]["icons"] = icons
+            sub_res.add_section_part(sub_res_table)
+            sub_res.add_section_part(sub_res_image)
+            if unshowable_icons:
+                heur = Heuristic(27)
+                heur_section = ResultSection(heur.name, heuristic=heur)
+                heur_section.add_lines(unshowable_icons)
+                sub_res.add_subsection(heur_section)
+            res.add_subsection(sub_res)
+
+        if resources_manager.has_manifest:
+            manifest = resources_manager.manifest
+            if isinstance(manifest, str):
+                self.features["resources_manager"]["manifest"] = manifest
+            elif isinstance(manifest, bytes):
+                self.features["resources_manager"]["manifest"] = manifest.decode("utf-8", "backslashreplace")
+            else:
                 heur = Heuristic(13)
                 heur_section = ResultSection(heur.name, heuristic=heur)
-                heur_section.add_line("Found corrupted icons")
+                heur_section.add_line("Found corrupted manifest")
                 res.add_subsection(heur_section)
 
-        if self.binary.resources_manager.has_manifest:
-            try:
-                self.features["resources_manager"]["manifest"] = (
-                    self.binary.resources_manager.manifest
-                    if isinstance(self.binary.resources_manager.manifest, str)
-                    else self.binary.resources_manager.manifest.decode("utf-8", "backslashreplace")
-                )
-            except lief.not_found:
-                pass
-
-        if self.binary.resources_manager.has_string_table:
+        if resources_manager.has_string_table:
             self.features["resources_manager"]["string_table"] = []
-            for string_table in self.binary.resources_manager.string_table:
+            for string_table in resources_manager.string_table:
                 try:
-                    self.features["resources_manager"]["string_table"].append(string_table.name)
+                    self.features["resources_manager"]["string_table"].append(str(string_table))
                 except UnicodeDecodeError:
                     self.features["resources_manager"]["string_table"].append("AL_PE: UnicodeDecodeError")
 
-        if self.binary.resources_manager.has_version:
+        if resources_manager.has_version:
             sub_res = ResultOrderedKeyValueSection("Version")
             try:
-                version = self.binary.resources_manager.version
-                if isinstance(version, lief.lief_errors):
-                    raise ValueError(version)
+                versions = resources_manager.version
+                if isinstance(versions, lief.lief_errors):
+                    raise ValueError(versions)
+
+                if len(versions) > 1:
+                    ResultSection(f"Multiple ({len(versions)}) version resources found", parent=sub_res)
+
+                version = versions[0]
                 self.features["resources_manager"]["version"] = {"type": version.type}
                 sub_res.add_item("Type", version.type)
-                if version.has_fixed_file_info:
+                if version.file_info is not None:
+                    fixed_file_info = version.file_info
+                    fixed_file_info_t = lief.PE.ResourceVersion.fixed_file_info_t
+                    try:
+                        file_os = fixed_file_info_t.VERSION_OS(fixed_file_info.file_os).name
+                    except ValueError:
+                        file_os = str(fixed_file_info.file_os)
+                    try:
+                        # FILE_TYPE_DETAILS values combine file_type and file_subtype to disambiguate
+                        # driver from font subtypes; file_type_details does that combination for us.
+                        # On an invalid subtype, nanobind emits a RuntimeWarning on top of the
+                        # ValueError we handle, so silence it to keep it out of the service logs.
+                        with warnings.catch_warnings():
+                            warnings.simplefilter("ignore", RuntimeWarning)
+                            file_subtype = fixed_file_info.file_type_details.name
+                    except (ValueError, AttributeError):
+                        file_subtype = str(fixed_file_info.file_subtype)
+                    try:
+                        file_type = fixed_file_info_t.FILE_TYPE(fixed_file_info.file_type).name
+                    except ValueError:
+                        file_type = str(fixed_file_info.file_type)
                     self.features["resources_manager"]["version"]["fixed_file_info"] = {
-                        "file_date_ls": version.fixed_file_info.file_date_LS,
-                        "file_date_ms": version.fixed_file_info.file_date_MS,
-                        "file_flags": version.fixed_file_info.file_flags,
-                        "file_flags_mask": version.fixed_file_info.file_flags_mask,
-                        "file_os": get_lief_enum_name(version.fixed_file_info.file_os),
-                        "file_subtype": get_lief_enum_name(version.fixed_file_info.file_subtype),
-                        "file_type": get_lief_enum_name(version.fixed_file_info.file_type),
-                        "file_version_ls": version.fixed_file_info.file_version_LS,
-                        "file_version_ms": version.fixed_file_info.file_version_MS,
-                        "product_version_ls": version.fixed_file_info.product_version_LS,
-                        "product_version_ms": version.fixed_file_info.product_version_MS,
-                        "signature": version.fixed_file_info.signature,
-                        "struct_version": version.fixed_file_info.struct_version,
+                        "file_date_ls": fixed_file_info.file_date_ls,
+                        "file_date_ms": fixed_file_info.file_date_ms,
+                        "file_flags": fixed_file_info.file_flags,
+                        "file_flags_mask": fixed_file_info.file_flags_mask,
+                        "file_os": file_os,
+                        "file_subtype": file_subtype,
+                        "file_type": file_type,
+                        "file_version_ls": fixed_file_info.file_version_ls,
+                        "file_version_ms": fixed_file_info.file_version_ms,
+                        "product_version_ls": fixed_file_info.product_version_ls,
+                        "product_version_ms": fixed_file_info.product_version_ms,
+                        "signature": fixed_file_info.signature,
+                        "struct_version": fixed_file_info.struct_version,
                     }
                     sub_sub_res = ResultOrderedKeyValueSection("fixed_file_info")
-                    sub_sub_res.add_item("file_date_LS", version.fixed_file_info.file_date_LS)
-                    sub_sub_res.add_item("file_date_MS", version.fixed_file_info.file_date_MS)
-                    sub_sub_res.add_item("file_flags", version.fixed_file_info.file_flags)
-                    sub_sub_res.add_item("file_flags_mask", version.fixed_file_info.file_flags_mask)
-                    sub_sub_res.add_item(
-                        "file_os", self.features["resources_manager"]["version"]["fixed_file_info"]["file_os"]
-                    )
-                    sub_sub_res.add_item(
-                        "file_subtype", self.features["resources_manager"]["version"]["fixed_file_info"]["file_subtype"]
-                    )
-                    sub_sub_res.add_item(
-                        "file_type", self.features["resources_manager"]["version"]["fixed_file_info"]["file_type"]
-                    )
-                    sub_sub_res.add_item("file_version_LS", version.fixed_file_info.file_version_LS)
-                    sub_sub_res.add_item("file_version_MS", version.fixed_file_info.file_version_MS)
-                    sub_sub_res.add_item("product_version_LS", version.fixed_file_info.product_version_LS)
-                    sub_sub_res.add_item("product_version_MS", version.fixed_file_info.product_version_MS)
-                    sub_sub_res.add_item("signature", version.fixed_file_info.signature)
-                    sub_sub_res.add_item("struct_version", version.fixed_file_info.struct_version)
+                    sub_sub_res.add_item("file_date_LS", fixed_file_info.file_date_ls)
+                    sub_sub_res.add_item("file_date_MS", fixed_file_info.file_date_ms)
+                    sub_sub_res.add_item("file_flags", fixed_file_info.file_flags)
+                    sub_sub_res.add_item("file_flags_mask", fixed_file_info.file_flags_mask)
+                    sub_sub_res.add_item("file_os", file_os)
+                    sub_sub_res.add_item("file_subtype", file_subtype)
+                    sub_sub_res.add_item("file_type", file_type)
+                    sub_sub_res.add_item("file_version_LS", fixed_file_info.file_version_ls)
+                    sub_sub_res.add_item("file_version_MS", fixed_file_info.file_version_ms)
+                    sub_sub_res.add_item("product_version_LS", fixed_file_info.product_version_ls)
+                    sub_sub_res.add_item("product_version_MS", fixed_file_info.product_version_ms)
+                    sub_sub_res.add_item("signature", fixed_file_info.signature)
+                    sub_sub_res.add_item("struct_version", fixed_file_info.struct_version)
                     sub_res.add_subsection(sub_sub_res)
-                if version.has_string_file_info:
+                if version.string_file_info is not None:
                     self.features["resources_manager"]["version"]["string_file_info"] = {
                         "key": version.string_file_info.key,
                         "type": version.string_file_info.type,
@@ -1483,72 +1551,73 @@ class PE(ServiceBase):
                     sub_sub_res = ResultOrderedKeyValueSection("string_file_info")
                     sub_sub_res.add_item("key", version.string_file_info.key)
                     sub_sub_res.add_item("type", version.string_file_info.type)
-                    for item_index, langcodeitem in enumerate(version.string_file_info.langcode_items):
+                    for item_index, string_table in enumerate(version.string_file_info.children):
                         sub_sub_sub_res = ResultOrderedKeyValueSection(f"langcode_items {item_index + 1}")
-                        sub_sub_sub_res.add_item("key", langcodeitem.key)
-                        sub_sub_sub_res.add_item("type", langcodeitem.type)
+                        sub_sub_sub_res.add_item("key", string_table.key)
+                        sub_sub_sub_res.add_item("type", string_table.type)
                         langcodeitem_dict = {
-                            "key": langcodeitem.key,
-                            "type": langcodeitem.type,
+                            "key": string_table.key,
+                            "type": string_table.type,
                             "lang": None,
                             "sublang": None,
                             "code_page": None,
                             "items": {},
                         }
+                        # The string table key packs the language identifier and code page as two 4-digit
+                        # hex numbers (e.g. 040904b0), which LIEF used to decode on our behalf
                         try:
-                            lang = lief.PE.RESOURCE_LANGS(langcodeitem.lang).name
-                            sublang = ""  # langcodeitem.sublang.name
+                            lang_id = int(string_table.key[:4], 16)
+                            code_page = int(string_table.key[4:8], 16)
+                            lang = lief.PE.RESOURCE_LANGS(lang_id & 0x3FF).name
+                            sublang = ""
                             langcodeitem_dict["lang"] = lang
                             sub_sub_sub_res.add_item("lang", lang)
-                            if lang not in self.features["resources_manager"]["langs_available"]:
-                                self.features["resources_manager"]["langs_available"] = sorted(
-                                    self.features["resources_manager"]["langs_available"] + [lang]
-                                )
+                            # This language is declared inside the version data, independently from the
+                            # resource tree language that the get_node_data walk collects, so it can
+                            # genuinely differ from (and complements) the tree-based collection.
+                            # Deduplicated and sorted after the tree walk in get_node_data.
+                            self.features["resources_manager"]["langs_available"].append(lang)
                             langcodeitem_dict["sublang"] = sublang
                             sub_sub_sub_res.add_item("sublang", sublang)
-                            langcodeitem_dict["code_page"] = get_lief_enum_name(langcodeitem.code_page)
+                            langcodeitem_dict["code_page"] = CODE_PAGES.get(code_page, str(code_page))
                             sub_sub_sub_res.add_item("code_page", langcodeitem_dict["code_page"])
-                        except Exception:
-                            raise
+                        except ValueError:
                             sub_sub_sub_res.set_heuristic(13)
                             del langcodeitem_dict["lang"]
                             del langcodeitem_dict["sublang"]
                             del langcodeitem_dict["code_page"]
 
                         sub_sub_sub_sub_res = ResultOrderedKeyValueSection("items")
-                        for k, v in sorted(langcodeitem.items.items()):
-                            langcodeitem_dict["items"][k] = v.decode()
-                            sub_sub_sub_sub_res.add_item(k, v.decode())
-                            if k == "OriginalFilename":
-                                sub_sub_res.add_tag("file.pe.versions.filename", v.decode())
-                            elif k == "FileDescription":
-                                sub_sub_res.add_tag("file.pe.versions.description", v.decode())
+                        for entry in sorted(string_table.entries, key=lambda e: e.key):
+                            langcodeitem_dict["items"][entry.key] = entry.value
+                            sub_sub_sub_sub_res.add_item(entry.key, entry.value)
+                            if entry.key == "OriginalFilename":
+                                sub_sub_res.add_tag("file.pe.versions.filename", entry.value)
+                            elif entry.key == "FileDescription":
+                                sub_sub_res.add_tag("file.pe.versions.description", entry.value)
                         self.features["resources_manager"]["version"]["string_file_info"]["langcode_items"].append(
                             langcodeitem_dict
                         )
                         sub_sub_sub_res.add_subsection(sub_sub_sub_sub_res)
                         sub_sub_res.add_subsection(sub_sub_sub_res)
                     sub_res.add_subsection(sub_sub_res)
-                if version.has_var_file_info:
+                if version.var_file_info is not None:
+                    translations = [value for var in version.var_file_info.vars for value in var.values]
                     self.features["resources_manager"]["version"]["var_file_info"] = {
                         "key": version.var_file_info.key,
                         "type": version.var_file_info.type,
-                        "translations": version.var_file_info.translations,
+                        "translations": translations,
                     }
                     sub_sub_res = ResultOrderedKeyValueSection("var_file_info")
                     sub_sub_res.add_item("key", version.var_file_info.key)
                     sub_sub_res.add_item("type", version.var_file_info.type)
-                    sub_sub_res.add_item("translations", ", ".join(map(str, version.var_file_info.translations)))
+                    sub_sub_res.add_item("translations", ", ".join(map(str, translations)))
                     sub_res.add_subsection(sub_sub_res)
-            # except lief.not_found:
-            #    sub_res.set_heuristic(13)
-            # except lief.read_out_of_bound:
-            #    sub_res.set_heuristic(13)
-            except ValueError:
+            except (ValueError, IndexError):
                 sub_res.set_heuristic(13)
             res.add_subsection(sub_res)
 
-        if self.binary.resources_manager.has_type(self.binary.resources_manager.TYPE.RCDATA):
+        if resources_manager.has_type(resources_manager.TYPE.RCDATA):
 
             def recurse_rc_data(node, name):
                 if node.has_name:
@@ -1580,7 +1649,7 @@ class PE(ServiceBase):
                             "Extracted from binary's RT_RCDATA resources",
                         )
 
-            recurse_rc_data(self.binary.resources_manager.get_node_type(self.binary.resources_manager.TYPE.RCDATA), "")
+            recurse_rc_data(resources_manager.get_node_type(resources_manager.TYPE.RCDATA), "")
 
         sub_res = ResultTableSection("Summary")
         current_resource_type = ""
@@ -1597,7 +1666,7 @@ class PE(ServiceBase):
                 data["resource_id"] = node.id
                 if node.depth == 1:
                     try:
-                        data["resource_type"] = self.binary.resources_manager.TYPE(node.id).name
+                        data["resource_type"] = resources_manager.TYPE(node.id).name
                     except ValueError:
                         data["resource_type"] = "???"
                     nonlocal current_resource_type
@@ -1637,12 +1706,25 @@ class PE(ServiceBase):
                 data["is_directory"] = node.is_directory
                 data["offset"] = node.offset
                 data["reserved"] = node.reserved
+                # In the PE resource layout (type -> name/id -> language), the ID of a depth-3 data
+                # entry is its language identifier. Collecting it here covers every resource type,
+                # instead of only the ones the ResourcesManager helpers expose (icons, version, ...).
+                if node.depth == 3 and not node.has_name:
+                    try:
+                        self.features["resources_manager"]["langs_available"].append(
+                            lief.PE.RESOURCE_LANGS(node.id & 0x3FF).name
+                        )
+                    except ValueError:
+                        self.features["resources_manager"]["langs_available"].append("???")
             else:
                 raise Exception("Binary with unknown ResourceNode")
 
             return data
 
         self.features["resources"] = get_node_data(self.binary.resources)
+        self.features["resources_manager"]["langs_available"] = sorted(
+            set(self.features["resources_manager"]["langs_available"])
+        )
         res.add_subsection(sub_res)
 
         res.add_item("Languages", ", ".join(self.features["resources_manager"]["langs_available"]))
@@ -2059,7 +2141,7 @@ class PE(ServiceBase):
                 while True:
                     try:
                         pe_array = bytearray(pe.overlay)
-                        pe = lief.parse(io=BytesIO(pe_array))
+                        pe = lief.parse(BytesIO(pe_array))
                         if pe is None:
                             break
                         pe_no_overlay = pe_array[: -len(pe.overlay)]
@@ -2193,7 +2275,7 @@ class PE(ServiceBase):
                 if isinstance(line, bytes):
                     line = line.decode("utf-8", "backslashreplace")
                 line = line.rstrip()
-                if line.endswith(" (0x-2700)"):
+                if line.endswith(" (0x-2700)") or line.endswith(" (-0x2700)"):
                     line = line[:-10]
                 line = line.rstrip("\x00")
                 if not line:
@@ -2212,18 +2294,20 @@ class PE(ServiceBase):
 
             if lief_logging:
                 res = ResultSection("LIEF logging information.", parent=request.result)
+                corrupted_res = None
                 for line, count in lief_logging.items():
                     if count > 1:
                         output_line = f"({count}x) {line}"
                     else:
                         output_line = line
                     res.add_line(output_line)
-                    if "corrupted" in line:
-                        heur = Heuristic(13)
-                        heur_section = ResultSection(heur.name, heuristic=heur, parent=res)
-                        heur_section.add_line(output_line)
+                    if "corrupted" in line or "Corrupted" in line:
+                        if corrupted_res is None:
+                            heur = Heuristic(13)
+                            corrupted_res = ResultSection(heur.name, heuristic=heur, parent=res)
+                        corrupted_res.add_line(output_line)
                         if line in lief_logging_stripped:
-                            heur_section.add_line(", ".join(lief_logging_stripped[line]))
+                            corrupted_res.add_line(", ".join(lief_logging_stripped[line]))
 
         temp_path = os.path.join(self.working_directory, "features.json")
         with open(temp_path, "w") as f:
