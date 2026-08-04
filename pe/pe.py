@@ -1319,9 +1319,13 @@ class PE(ServiceBase):
                     if is_extended:
                         dialog_dict["charset"] = font.charset
                         dialog_dict["weight"] = font.weight
-                        dialog_dict["typeface"] = font.typeface
-                    else:
-                        dialog_dict["typeface"] = font.name
+                    try:
+                        dialog_dict["typeface"] = font.typeface if is_extended else font.name
+                    except UnicodeDecodeError:
+                        if corrupted_dialog_section is None:
+                            heur = Heuristic(13)
+                            corrupted_dialog_section = ResultSection(heur.name, heuristic=heur, parent=res)
+                        corrupted_dialog_section.add_line("Can't decode typeface of dialog")
                 try:
                     dialog_dict["title"] = dialog.title
                     if dialog.title != "":
