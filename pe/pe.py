@@ -710,6 +710,7 @@ class PE(ServiceBase):
         res.add_tag("file.pe.linker.timestamp", hr_timestamp)
         # Somehow, that is different from binary.entrypoint
         res.add_item("Entrypoint", hex(self.binary.optional_header.addressof_entrypoint))
+        res.add_tag("file.pe.oep.hexdump", hex(self.binary.optional_header.addressof_entrypoint))
         res.add_item("Machine", pe_machine)
         magic_name = get_lief_enum_name(self.binary.optional_header.magic)
         if isinstance(magic_name, int):
