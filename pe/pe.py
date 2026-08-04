@@ -1218,6 +1218,16 @@ class PE(ServiceBase):
             ),
             "hotpatch_table_offset": load_configuration.hotpatch_table_offset,
             "reserved3": load_configuration.reserved3,
+            "enclave_configuration_ptr": load_configuration.enclave_configuration_ptr,
+            "volatile_metadata_pointer": load_configuration.volatile_metadata_pointer,
+            "guard_eh_continuation_count": load_configuration.guard_eh_continuation_count,
+            "guard_eh_continuation_table": load_configuration.guard_eh_continuation_table,
+            "guard_xfg_check_function_pointer": load_configuration.guard_xfg_check_function_pointer,
+            "guard_xfg_dispatch_function_pointer": load_configuration.guard_xfg_dispatch_function_pointer,
+            "guard_xfg_table_dispatch_function_pointer": load_configuration.guard_xfg_table_dispatch_function_pointer,
+            "cast_guard_os_determined_failure_mode": load_configuration.cast_guard_os_determined_failure_mode,
+            "guard_memcpy_function_pointer": load_configuration.guard_memcpy_function_pointer,
+            "uma_function_pointers": load_configuration.uma_function_pointers,
         }
         if load_configuration.guard_cf_flags_list is not None:
             load_configuration_dict["guard_cf_flags_list"] = [
