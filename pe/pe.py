@@ -1495,13 +1495,32 @@ class PE(ServiceBase):
                     raise ValueError(versions)
 
                 if len(versions) > 1:
+                    # Usually one version resource per language leaf (MUI binaries); every string
+                    # table is merged below so no language's strings are lost
                     ResultSection(f"Multiple ({len(versions)}) version resources found", parent=sub_res)
 
-                version = versions[0]
-                self.features["resources_manager"]["version"] = {"type": version.type}
-                sub_res.add_item("Type", version.type)
-                if version.file_info is not None:
-                    fixed_file_info = version.file_info
+                    def version_language_priority(version):
+                        # Prefer English then French version resources for the reported values,
+                        # keeping the resource order as tie-breaker.
+                        langs = set()
+                        if version.string_file_info is not None:
+                            for string_table in version.string_file_info.children:
+                                try:
+                                    langs.add(int(string_table.key[:4], 16) & 0x3FF)
+                                except ValueError:
+                                    pass
+                        if lief.PE.RESOURCE_LANGS.ENGLISH.value in langs:
+                            return 0
+                        if lief.PE.RESOURCE_LANGS.FRENCH.value in langs:
+                            return 1
+                        return 2
+
+                    versions = sorted(versions, key=version_language_priority)
+
+                self.features["resources_manager"]["version"] = {"type": versions[0].type}
+                sub_res.add_item("Type", versions[0].type)
+
+                def fixed_file_info_dict(fixed_file_info):
                     fixed_file_info_t = lief.PE.ResourceVersion.fixed_file_info_t
                     try:
                         file_os = fixed_file_info_t.VERSION_OS(fixed_file_info.file_os).name
@@ -1521,7 +1540,7 @@ class PE(ServiceBase):
                         file_type = fixed_file_info_t.FILE_TYPE(fixed_file_info.file_type).name
                     except ValueError:
                         file_type = str(fixed_file_info.file_type)
-                    self.features["resources_manager"]["version"]["fixed_file_info"] = {
+                    return {
                         "file_date_ls": fixed_file_info.file_date_ls,
                         "file_date_ms": fixed_file_info.file_date_ms,
                         "file_flags": fixed_file_info.file_flags,
@@ -1536,32 +1555,71 @@ class PE(ServiceBase):
                         "signature": fixed_file_info.signature,
                         "struct_version": fixed_file_info.struct_version,
                     }
+
+                fixed_file_infos = [v.file_info for v in versions if v.file_info is not None]
+                if fixed_file_infos:
+                    # The first fixed file info is the reported one; the others should be identical
+                    # copies, so any difference between them is worth showing
+                    ffi_dict = fixed_file_info_dict(fixed_file_infos[0])
+                    self.features["resources_manager"]["version"]["fixed_file_info"] = ffi_dict
                     sub_sub_res = ResultOrderedKeyValueSection("fixed_file_info")
-                    sub_sub_res.add_item("file_date_LS", fixed_file_info.file_date_ls)
-                    sub_sub_res.add_item("file_date_MS", fixed_file_info.file_date_ms)
-                    sub_sub_res.add_item("file_flags", fixed_file_info.file_flags)
-                    sub_sub_res.add_item("file_flags_mask", fixed_file_info.file_flags_mask)
-                    sub_sub_res.add_item("file_os", file_os)
-                    sub_sub_res.add_item("file_subtype", file_subtype)
-                    sub_sub_res.add_item("file_type", file_type)
-                    sub_sub_res.add_item("file_version_LS", fixed_file_info.file_version_ls)
-                    sub_sub_res.add_item("file_version_MS", fixed_file_info.file_version_ms)
-                    sub_sub_res.add_item("product_version_LS", fixed_file_info.product_version_ls)
-                    sub_sub_res.add_item("product_version_MS", fixed_file_info.product_version_ms)
-                    sub_sub_res.add_item("signature", fixed_file_info.signature)
-                    sub_sub_res.add_item("struct_version", fixed_file_info.struct_version)
+                    sub_sub_res.add_item("file_date_LS", ffi_dict["file_date_ls"])
+                    sub_sub_res.add_item("file_date_MS", ffi_dict["file_date_ms"])
+                    sub_sub_res.add_item("file_flags", ffi_dict["file_flags"])
+                    sub_sub_res.add_item("file_flags_mask", ffi_dict["file_flags_mask"])
+                    sub_sub_res.add_item("file_os", ffi_dict["file_os"])
+                    sub_sub_res.add_item("file_subtype", ffi_dict["file_subtype"])
+                    sub_sub_res.add_item("file_type", ffi_dict["file_type"])
+                    sub_sub_res.add_item("file_version_LS", ffi_dict["file_version_ls"])
+                    sub_sub_res.add_item("file_version_MS", ffi_dict["file_version_ms"])
+                    sub_sub_res.add_item("product_version_LS", ffi_dict["product_version_ls"])
+                    sub_sub_res.add_item("product_version_MS", ffi_dict["product_version_ms"])
+                    sub_sub_res.add_item("signature", ffi_dict["signature"])
+                    sub_sub_res.add_item("struct_version", ffi_dict["struct_version"])
+                    conflict_section = None
+                    for index, other in enumerate(fixed_file_infos[1:], start=2):
+                        differing = {k: v for k, v in fixed_file_info_dict(other).items() if v != ffi_dict[k]}
+                        if differing:
+                            if conflict_section is None:
+                                conflict_section = ResultSection(
+                                    "Conflicting fixed_file_info between version resources",
+                                    parent=sub_sub_res,
+                                )
+                            for k, v in sorted(differing.items()):
+                                conflict_section.add_line(
+                                    f"Version resource {index} {k}: {v} (reported: {ffi_dict[k]})"
+                                )
                     sub_res.add_subsection(sub_sub_res)
-                if version.string_file_info is not None:
+
+                string_file_infos = [v.string_file_info for v in versions if v.string_file_info is not None]
+                if string_file_infos:
                     self.features["resources_manager"]["version"]["string_file_info"] = {
-                        "key": version.string_file_info.key,
-                        "type": version.string_file_info.type,
+                        "key": string_file_infos[0].key,
+                        "type": string_file_infos[0].type,
                         "langcode_items": [],
                     }
                     sub_sub_res = ResultOrderedKeyValueSection("string_file_info")
-                    sub_sub_res.add_item("key", version.string_file_info.key)
-                    sub_sub_res.add_item("type", version.string_file_info.type)
-                    for item_index, string_table in enumerate(version.string_file_info.children):
-                        sub_sub_sub_res = ResultOrderedKeyValueSection(f"langcode_items {item_index + 1}")
+                    sub_sub_res.add_item("key", string_file_infos[0].key)
+                    sub_sub_res.add_item("type", string_file_infos[0].type)
+                    # Merge the string tables of every version resource, skipping exact duplicates
+                    seen_tables = {}
+                    item_index = 0
+                    string_tables = [
+                        string_table
+                        for string_file_info in string_file_infos
+                        for string_table in string_file_info.children
+                    ]
+                    for string_table in string_tables:
+                        table_signature = (
+                            string_table.key,
+                            tuple(sorted((entry.key, entry.value) for entry in string_table.entries)),
+                        )
+                        if table_signature in seen_tables:
+                            seen_tables[table_signature] += 1
+                            continue
+                        seen_tables[table_signature] = 1
+                        item_index += 1
+                        sub_sub_sub_res = ResultOrderedKeyValueSection(f"langcode_items {item_index}")
                         sub_sub_sub_res.add_item("key", string_table.key)
                         sub_sub_sub_res.add_item("type", string_table.type)
                         langcodeitem_dict = {
@@ -1610,17 +1668,32 @@ class PE(ServiceBase):
                         )
                         sub_sub_sub_res.add_subsection(sub_sub_sub_sub_res)
                         sub_sub_res.add_subsection(sub_sub_sub_res)
+                    duplicated_tables = {sig[0]: count for sig, count in seen_tables.items() if count > 1}
+                    if duplicated_tables:
+                        duplicate_section = ResultSection("Duplicated string tables", parent=sub_sub_res)
+                        for table_key, count in sorted(duplicated_tables.items()):
+                            duplicate_section.add_line(f"String table {table_key} was seen {count} times")
                     sub_res.add_subsection(sub_sub_res)
-                if version.var_file_info is not None:
-                    translations = [value for var in version.var_file_info.vars for value in var.values]
+
+                var_file_infos = [v.var_file_info for v in versions if v.var_file_info is not None]
+                if var_file_infos:
+                    # Merge translations of every version resource, keeping their order without duplicates
+                    translations = list(
+                        dict.fromkeys(
+                            value
+                            for var_file_info in var_file_infos
+                            for var in var_file_info.vars
+                            for value in var.values
+                        )
+                    )
                     self.features["resources_manager"]["version"]["var_file_info"] = {
-                        "key": version.var_file_info.key,
-                        "type": version.var_file_info.type,
+                        "key": var_file_infos[0].key,
+                        "type": var_file_infos[0].type,
                         "translations": translations,
                     }
                     sub_sub_res = ResultOrderedKeyValueSection("var_file_info")
-                    sub_sub_res.add_item("key", version.var_file_info.key)
-                    sub_sub_res.add_item("type", version.var_file_info.type)
+                    sub_sub_res.add_item("key", var_file_infos[0].key)
+                    sub_sub_res.add_item("type", var_file_infos[0].type)
                     sub_sub_res.add_item("translations", ", ".join(map(str, translations)))
                     sub_res.add_subsection(sub_sub_res)
             except (ValueError, IndexError):
