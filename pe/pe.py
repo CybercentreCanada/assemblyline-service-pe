@@ -1069,6 +1069,41 @@ class PE(ServiceBase):
                     )
                     sub_sub_res.add_line(f"Name: {entry_name}, Size: {entry.size}")
                 sub_res.add_subsection(sub_sub_res)
+            if isinstance(debug, lief.PE.Repro):
+                # The common form of the repro entry has no payload: its presence means the PE
+                # timestamp is a reproducibility hash instead of a date. Some linkers add a
+                # hash payload, only reported when present.
+                repro_hash = bytes(debug.hash).hex()
+                if repro_hash:
+                    debug_dict["repro"] = {"hash": repro_hash}
+                    sub_res.add_item("Repro Hash", repro_hash)
+                else:
+                    sub_res.add_item("Repro", "Marker only (the PE timestamp is a reproducibility hash)")
+            if isinstance(debug, lief.PE.VCFeature):
+                debug_dict["vc_feature"] = {
+                    "c_cpp": debug.c_cpp,
+                    "pre_vcpp": debug.pre_vcpp,
+                    "gs": debug.gs,
+                    "sdl": debug.sdl,
+                    "guards": debug.guards,
+                }
+                sub_res.add_item("C/C++", debug.c_cpp)
+                sub_res.add_item("Pre-VC++ 11.00", debug.pre_vcpp)
+                sub_res.add_item("/GS", debug.gs)
+                sub_res.add_item("/sdl", debug.sdl)
+                sub_res.add_item("guardN", debug.guards)
+            if isinstance(debug, lief.PE.ExDllCharacteristics):
+                debug_dict["ex_dll_characteristics"] = [
+                    characteristic.name for characteristic in debug.ex_characteristics_list
+                ]
+                sub_res.add_item("Extended DLL Characteristics", ", ".join(debug_dict["ex_dll_characteristics"]))
+            if isinstance(debug, lief.PE.PDBChecksum):
+                debug_dict["pdb_checksum"] = {
+                    "algorithm": get_lief_enum_name(debug.algorithm),
+                    "hash": bytes(debug.hash).hex(),
+                }
+                sub_res.add_item("PDB Checksum Algorithm", debug_dict["pdb_checksum"]["algorithm"])
+                sub_res.add_item("PDB Checksum", debug_dict["pdb_checksum"]["hash"])
             self.features["debugs"].append(debug_dict)
             res.add_subsection(sub_res)
         self.file_res.add_section(res)
@@ -1106,6 +1141,7 @@ class PE(ServiceBase):
                 "forward_information": None,
                 "function_rva": entry.function_rva,
                 "is_extern": entry.is_extern,
+                "is_forwarded": entry.is_forwarded,
                 "name": entry_name,
                 "ordinal": entry.ordinal,
                 # "size": entry.size, #In the docs, but not in the dir()
