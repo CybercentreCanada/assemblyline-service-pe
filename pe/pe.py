@@ -449,26 +449,35 @@ class PE(ServiceBase):
         """
         timestamps = set()
         delphi = False
+        # In a reproducible build, the linker stamps a deterministic hash of the contents into
+        # the header/debug/export/load configuration timestamp fields instead of build dates,
+        # so those values cannot be compared or interpreted as dates. Resource timestamps are
+        # kept, as they are not rewritten by the reproducible build process.
+        repro = self.binary.is_reproducible_build
         if self.binary.header.time_date_stamps == 708992537:  # Likely a delphi binary
             delphi = True
+        elif repro:
+            pass
         elif self.binary.header.time_date_stamps != 0 and self.binary.header.time_date_stamps != 0xFFFFFFFF:
             timestamps.add(self.binary.header.time_date_stamps)
 
         if (
-            self.binary.has_configuration
+            not repro
+            and self.binary.has_configuration
             and self.binary.load_configuration.timedatestamp != 0
             and self.binary.load_configuration.timedatestamp != 0xFFFFFFFF
         ):
             timestamps.add(self.binary.load_configuration.timedatestamp)
 
         if (
-            self.binary.has_exports
+            not repro
+            and self.binary.has_exports
             and self.binary.get_export().timestamp != 0
             and self.binary.get_export().timestamp != 0xFFFFFFFF
         ):
             timestamps.add(self.binary.get_export().timestamp)
 
-        if self.binary.has_debug:
+        if not repro and self.binary.has_debug:
             for debug in self.binary.debug:
                 if debug.timestamp != 0 and debug.timestamp != 0xFFFFFFFF:
                     timestamps.add(debug.timestamp)
@@ -705,9 +714,13 @@ class PE(ServiceBase):
         hr_timestamp = datetime.datetime.utcfromtimestamp(self.binary.header.time_date_stamps).strftime(
             "%Y-%m-%d %H:%M:%S +00:00 (UTC)"
         )
-        res.add_item("Timestamp", f"{self.binary.header.time_date_stamps} ({hr_timestamp})")
         res.add_tag("file.pe.linker.timestamp", self.binary.header.time_date_stamps)
-        res.add_tag("file.pe.linker.timestamp", hr_timestamp)
+        if self.binary.is_reproducible_build:
+            # The linker of reproducible builds stamps a content hash instead of a build date
+            res.add_item("Timestamp", f"{self.binary.header.time_date_stamps} (reproducibility hash, not a build date)")
+        else:
+            res.add_item("Timestamp", f"{self.binary.header.time_date_stamps} ({hr_timestamp})")
+            res.add_tag("file.pe.linker.timestamp", hr_timestamp)
         # Somehow, that is different from binary.entrypoint
         res.add_item("Entrypoint", hex(self.binary.optional_header.addressof_entrypoint))
         res.add_tag("file.pe.oep.hexdump", hex(self.binary.optional_header.addressof_entrypoint))

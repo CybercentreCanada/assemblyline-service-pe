@@ -1,54 +1,14 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 751,
+    "score": 500,
     "sections": [
-      {
-        "auto_collapse": false,
-        "body": "2363646602 (2044-11-25 00:30:02 +00:00 (UTC))\n3923062860 (2094-04-25 19:41:00 +00:00 (UTC))",
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 11,
-          "score": 250,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "Multiple different non-zero timestamps",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": "2363646602 (2044-11-25 00:30:02 +00:00 (UTC))\n3923062860 (2094-04-25 19:41:00 +00:00 (UTC))",
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 26,
-          "score": 1,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "Future timestamp found",
-        "zeroize_on_tag_safe": false
-      },
       {
         "auto_collapse": false,
         "body": [
           [
             "Timestamp",
-            "2363646602 (2044-11-25 00:30:02 +00:00 (UTC))"
+            "2363646602 (reproducibility hash, not a build date)"
           ],
           [
             "Entrypoint",
@@ -106,8 +66,7 @@
             "pe": {
               "linker": {
                 "timestamp": [
-                  2363646602,
-                  "2044-11-25 00:30:02 +00:00 (UTC)"
+                  2363646602
                 ]
               },
               "oep": {
@@ -1598,16 +1557,6 @@
     "heuristics": [
       {
         "attack_ids": [],
-        "heur_id": 11,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
-        "heur_id": 26,
-        "signatures": []
-      },
-      {
-        "attack_ids": [],
         "heur_id": 29,
         "signatures": []
       }
@@ -1719,11 +1668,6 @@
           "heur_id": null,
           "signatures": [],
           "value": 2363646602
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "2044-11-25 00:30:02 +00:00 (UTC)"
         }
       ],
       "file.pe.oep.hexdump": [

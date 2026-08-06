@@ -1,34 +1,14 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 1,
+    "score": 0,
     "sections": [
-      {
-        "auto_collapse": false,
-        "body": "3739361701 (2088-06-29 15:35:01 +00:00 (UTC))",
-        "body_config": {},
-        "body_format": "TEXT",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 26,
-          "score": 1,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {},
-        "title_text": "Future timestamp found",
-        "zeroize_on_tag_safe": false
-      },
       {
         "auto_collapse": false,
         "body": [
           [
             "Timestamp",
-            "3739361701 (2088-06-29 15:35:01 +00:00 (UTC))"
+            "3739361701 (reproducibility hash, not a build date)"
           ],
           [
             "Entrypoint",
@@ -86,8 +66,7 @@
             "pe": {
               "linker": {
                 "timestamp": [
-                  3739361701,
-                  "2088-06-29 15:35:01 +00:00 (UTC)"
+                  3739361701
                 ]
               },
               "oep": {
@@ -1119,13 +1098,7 @@
     ]
   },
   "results": {
-    "heuristics": [
-      {
-        "attack_ids": [],
-        "heur_id": 26,
-        "signatures": []
-      }
-    ],
+    "heuristics": [],
     "tags": {
       "file.pe.imports.fuzzy": [
         {
@@ -1160,11 +1133,6 @@
           "heur_id": null,
           "signatures": [],
           "value": 3739361701
-        },
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "2088-06-29 15:35:01 +00:00 (UTC)"
         }
       ],
       "file.pe.oep.hexdump": [
