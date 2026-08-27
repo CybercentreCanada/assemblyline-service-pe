@@ -44,11 +44,12 @@ def unmap(pe: lief.PE.Binary, in_data):
     It is currently performing better when we don't try modifying the base image
     However, it will break when samples have absolute jump instructions in their code.
     """
+    alignment = pe.optional_header.section_alignment or 0x1000
+
     # Fix alignment
-    pe.optional_header.file_alignment = pe.optional_header.section_alignment
+    pe.optional_header.file_alignment = alignment
 
     # Fix sections
-    alignment = pe.optional_header.section_alignment
     for section in pe.sections:
         section.pointerto_raw_data = section.virtual_address
         new_size = section.virtual_size
