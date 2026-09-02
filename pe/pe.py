@@ -428,6 +428,26 @@ class PE(ServiceBase):
 
         self.identify = forge.get_identify(use_cache=os.environ.get("PRIVILEGED", "false").lower() == "true")
 
+    def is_dotnet(self):
+        clr = self.binary.data_directory(lief.PE.DataDirectory.TYPES.CLR_RUNTIME_HEADER)
+        return clr is not None and clr.rva != 0 and clr.size != 0
+
+    def debug_timestamp_is_content_hash(self, debug):
+        """Returns True when the debug entry's timestamp field holds a content hash instead of a build date.
+
+        Reproducible builds stamp a hash of the contents in every debug entry. Roslyn stamps the
+        CODEVIEW entry from the PDB content id even without /deterministic: Portable PDBs are
+        marked by minor_version 0x504D, and .NET hash stamps always have the high bit set
+        (BlobContentId.FromHash), so a high-bit stamp in a CLR binary is a hash, not a date.
+        """
+        if self.binary.is_reproducible_build:
+            return True
+        if not isinstance(debug, lief.PE.CodeViewPDB):
+            return False
+        if debug.minor_version == 0x504D:
+            return True
+        return bool(debug.timestamp & 0x80000000) and self.is_dotnet()
+
     def check_timestamps(self):
         """Compares timestamps that could be found in the binary.
 
@@ -447,7 +467,7 @@ class PE(ServiceBase):
         https://manalyzer.org/report/be94c9506333481084e5fa46ccaee06c
             e15040beca2635a66eb395162f39db9f23468e7bf9f00c9c62dd5913cd5f3850
         """
-        timestamps = set()
+        timestamps = defaultdict(set)
         delphi = False
         # In a reproducible build, the linker stamps a deterministic hash of the contents into
         # the header/debug/export/load configuration timestamp fields instead of build dates,
@@ -459,7 +479,7 @@ class PE(ServiceBase):
         elif repro:
             pass
         elif self.binary.header.time_date_stamps != 0 and self.binary.header.time_date_stamps != 0xFFFFFFFF:
-            timestamps.add(self.binary.header.time_date_stamps)
+            timestamps[self.binary.header.time_date_stamps].add("header")
 
         if (
             not repro
@@ -467,7 +487,7 @@ class PE(ServiceBase):
             and self.binary.load_configuration.timedatestamp != 0
             and self.binary.load_configuration.timedatestamp != 0xFFFFFFFF
         ):
-            timestamps.add(self.binary.load_configuration.timedatestamp)
+            timestamps[self.binary.load_configuration.timedatestamp].add("load configuration")
 
         if (
             not repro
@@ -475,23 +495,27 @@ class PE(ServiceBase):
             and self.binary.get_export().timestamp != 0
             and self.binary.get_export().timestamp != 0xFFFFFFFF
         ):
-            timestamps.add(self.binary.get_export().timestamp)
+            timestamps[self.binary.get_export().timestamp].add("export table")
 
-        if not repro and self.binary.has_debug:
+        if self.binary.has_debug:
             for debug in self.binary.debug:
-                if debug.timestamp != 0 and debug.timestamp != 0xFFFFFFFF:
-                    timestamps.add(debug.timestamp)
+                if (
+                    debug.timestamp != 0
+                    and debug.timestamp != 0xFFFFFFFF
+                    and not self.debug_timestamp_is_content_hash(debug)
+                ):
+                    timestamps[debug.timestamp].add(f"debug directory ({get_lief_enum_name(debug.type)})")
                 # Will never trigger, but taken from https://0xc0decafe.com/malware-analyst-guide-to-pe-timestamps/
                 if isinstance(debug, lief.PE.CodeViewPDB) and debug.cv_signature.name == "01BN":
-                    timestamps.add(debug.signature)
+                    timestamps[debug.signature].add("debug directory (CODEVIEW NB10 signature)")
 
         def recurse_resources(node):
             if isinstance(node, lief.PE.ResourceDirectory):
                 if node.time_date_stamp != 0 and node.time_date_stamp != 0xFFFFFFFF:
                     if delphi:
-                        timestamps.add(from_msdos(node.time_date_stamp))
+                        timestamps[from_msdos(node.time_date_stamp)].add("resources (MS-DOS format)")
                     else:
-                        timestamps.add(node.time_date_stamp)
+                        timestamps[node.time_date_stamp].add("resources")
                 for child in node.childs:
                     recurse_resources(child)
 
@@ -503,11 +527,11 @@ class PE(ServiceBase):
         ):
             heur = Heuristic(11)
             heur_section = ResultSection(heur.name, heuristic=heur)
-            for timestamp in timestamps:
+            for timestamp, sources in sorted(timestamps.items()):
                 hr_timestamp = datetime.datetime.fromtimestamp(timestamp, datetime.timezone.utc).strftime(
                     "%Y-%m-%d %H:%M:%S +00:00 (UTC)"
                 )
-                heur_section.add_line(f"{timestamp} ({hr_timestamp})")
+                heur_section.add_line(f"{timestamp} ({hr_timestamp}) found in: {', '.join(sorted(sources))}")
             self.file_res.add_section(heur_section)
         if len(timestamps) > 0:
             heur22_earliest_ts = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(
@@ -516,26 +540,32 @@ class PE(ServiceBase):
             heur22_latest_ts = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=2)
             recent_timestamps = []
             future_timestamps = []
-            for timestamp in sorted(timestamps):
+            for timestamp, sources in sorted(timestamps.items()):
                 ts = datetime.datetime.fromtimestamp(timestamp, datetime.timezone.utc)
                 if ts < heur22_earliest_ts:
                     continue
                 if ts > heur22_latest_ts:
-                    future_timestamps.append((timestamp, ts))
+                    future_timestamps.append((timestamp, ts, sources))
                     continue
-                recent_timestamps.append((timestamp, ts))
+                recent_timestamps.append((timestamp, ts, sources))
 
             if recent_timestamps:
                 heur = Heuristic(22)
                 heur_section = ResultSection(heur.name, heuristic=heur)
-                for timestamp, ts in recent_timestamps:
-                    heur_section.add_line(f"{timestamp} ({ts.strftime('%Y-%m-%d %H:%M:%S +00:00 (UTC)')})")
+                for timestamp, ts, sources in recent_timestamps:
+                    heur_section.add_line(
+                        f"{timestamp} ({ts.strftime('%Y-%m-%d %H:%M:%S +00:00 (UTC)')}) "
+                        f"found in: {', '.join(sorted(sources))}"
+                    )
                 self.file_res.add_section(heur_section)
             if future_timestamps:
                 heur = Heuristic(26)
                 heur_section = ResultSection(heur.name, heuristic=heur)
-                for timestamp, ts in future_timestamps:
-                    heur_section.add_line(f"{timestamp} ({ts.strftime('%Y-%m-%d %H:%M:%S +00:00 (UTC)')})")
+                for timestamp, ts, sources in future_timestamps:
+                    heur_section.add_line(
+                        f"{timestamp} ({ts.strftime('%Y-%m-%d %H:%M:%S +00:00 (UTC)')}) "
+                        f"found in: {', '.join(sorted(sources))}"
+                    )
                 self.file_res.add_section(heur_section)
 
     def recurse_resources(self, resource, parent_name):
@@ -993,11 +1023,13 @@ class PE(ServiceBase):
         self.file_res.add_section(res)
 
     def add_debug(self):
+        """Returns the indexes of debug directory entries whose timestamp field holds a content hash."""
+        content_hash_debug_indexes = set()
         if not self.binary.has_debug:
-            return
+            return content_hash_debug_indexes
         self.features["debugs"] = []
         res = ResultSection("Debugs")
-        for debug in self.binary.debug:
+        for debug_index, debug in enumerate(self.binary.debug):
             debug_dict = {
                 "addressof_rawdata": debug.addressof_rawdata,
                 "characteristics": debug.characteristics,
@@ -1009,10 +1041,14 @@ class PE(ServiceBase):
                 "type": get_lief_enum_name(debug.type),
             }
             sub_res = ResultOrderedKeyValueSection(f"{debug_dict['type']}")
-            hr_timestamp = datetime.datetime.utcfromtimestamp(debug.timestamp).strftime(
-                "%Y-%m-%d %H:%M:%S +00:00 (UTC)"
-            )
-            sub_res.add_item("Timestamp", f"{debug.timestamp} ({hr_timestamp})")
+            if self.debug_timestamp_is_content_hash(debug):
+                content_hash_debug_indexes.add(debug_index)
+                sub_res.add_item("Timestamp", f"{debug.timestamp} (content hash, not a timestamp)")
+            else:
+                hr_timestamp = datetime.datetime.utcfromtimestamp(debug.timestamp).strftime(
+                    "%Y-%m-%d %H:%M:%S +00:00 (UTC)"
+                )
+                sub_res.add_item("Timestamp", f"{debug.timestamp} ({hr_timestamp})")
             sub_res.add_item("Version", f"{debug.major_version}.{debug.minor_version}")
             if isinstance(debug, lief.PE.CodeViewPDB):
                 cv_dict = {
@@ -1107,6 +1143,7 @@ class PE(ServiceBase):
             self.features["debugs"].append(debug_dict)
             res.add_subsection(sub_res)
         self.file_res.add_section(res)
+        return content_hash_debug_indexes
 
     def add_exports(self):
         if not self.binary.has_exports:
@@ -2404,7 +2441,7 @@ class PE(ServiceBase):
         self.features = {}
         self.add_headers()
         self.add_sections()
-        self.add_debug()
+        content_hash_debug_indexes = self.add_debug()
         self.add_exports()
         self.add_imports()
         self.add_configuration()
@@ -2464,9 +2501,9 @@ class PE(ServiceBase):
         request.add_supplementary(temp_path, "features.json", "Features extracted from the PE file, as a JSON file")
 
         # generate_ontology will modify the self.features, which is why we save it upfront
-        self.generate_ontology()
+        self.generate_ontology(content_hash_debug_indexes)
 
-    def generate_ontology(self):
+    def generate_ontology(self, content_hash_debug_indexes):
         # Now that we're done processing, time to flatten the imports for storing in AL
         if "imports" in self.features:
             imports = []
@@ -2543,8 +2580,9 @@ class PE(ServiceBase):
             )
 
         if "debugs" in self.features:
-            for debug in self.features["debugs"]:
-                debug["hr_timestamp"] = datetime.datetime.utcfromtimestamp(debug["timestamp"])
+            for debug_index, debug in enumerate(self.features["debugs"]):
+                if debug_index not in content_hash_debug_indexes:
+                    debug["hr_timestamp"] = datetime.datetime.utcfromtimestamp(debug["timestamp"])
 
         if "resources" in self.features:
             for resource in self.features["resources"]:
