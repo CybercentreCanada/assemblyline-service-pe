@@ -1887,7 +1887,7 @@
           ],
           [
             "Verification",
-            "BADCERT_EXPIRED"
+            "BADCERT_EXPIRED | BADCERT_NOT_TRUSTED"
           ]
         ],
         "body_config": {},
@@ -2206,7 +2206,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "(4x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(4x) The certificate validity has expired",
+        "body": "(13x) X509 verify failed with: X509 - Certificate verification failed, e.g. CRL, CA or signature check failed\n(13x) The certificate is not correctly signed by the trusted CA\n(4x) The certificate validity has expired",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -2228,10 +2228,6 @@
     ],
     "supplementary": [
       {
-        "name": "features.json",
-        "sha256": "08888b820bfc9a1d868a3eae6dc697d5bdf1ce0c3f2fccbcaad70ab18a1b54ea"
-      },
-      {
         "name": "icon_6.ico.thumb",
         "sha256": "12d486ca0573847075f5a187614758749c662ac8cab9df83d78b4b6f78e61fd5"
       },
@@ -2250,6 +2246,10 @@
       {
         "name": "certificate.1.1",
         "sha256": "7db9f7402a523dd338663b33d55aad0dd08cb67e687df0d4d98e7c5fca27efd1"
+      },
+      {
+        "name": "features.json",
+        "sha256": "a5b8ada85eb05c591caad648728a2d2032592140be9b5a3a8e3b2c724c0032bd"
       },
       {
         "name": "icon_1.ico",

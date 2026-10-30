@@ -33,8 +33,6 @@ USER root
 # Always get the latest version of those files
 ADD --chmod=644 https://raw.githubusercontent.com/dishather/richprint/master/comp_id.txt /opt/al_service/pe/comp_id.txt
 
-ADD --chmod=644 https://bazaar.abuse.ch/export/csv/cscb/ /opt/al_service/pe/cscb.csv
-
 ADD --chmod=644 https://certgraveyard.org/api/download_csv /opt/al_service/pe/certcentral.csv
 
 RUN sed -i -e "s/\$SERVICE_TAG/$version/g" service_manifest.yml
