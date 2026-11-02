@@ -14,7 +14,6 @@ from collections import defaultdict
 from io import BytesIO
 
 import lief
-import ordlookup
 from assemblyline.common import forge
 from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline.odm.models.ontology.filetypes import PE as PE_ODM
@@ -38,7 +37,7 @@ from assemblyline_v4_service.common.result import (
 from assemblyline_v4_service.common.task import PARENT_RELATION
 from PIL import Image
 
-from . import unmapper
+from . import ordlookup, unmapper
 from .code_pages import CODE_PAGES
 from .sublangs import sublang_name, sublang_pair_name
 
